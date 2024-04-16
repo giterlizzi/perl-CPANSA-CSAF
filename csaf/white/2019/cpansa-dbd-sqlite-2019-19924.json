@@ -1,0 +1,176 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "SQLite 3.30.1 mishandles certain parser-tree rewriting, related to expr.c, vdbeaux.c, and window.c. This is caused by incorrect sqlite3WindowRewrite() error handling.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBD-SQLite-2019-19924 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2019-19924.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/sqlite/sqlite/commit/8654186b0236d556aa85528c2573ee0b6ab71be3",
+            "url" : "https://github.com/sqlite/sqlite/commit/8654186b0236d556aa85528c2573ee0b6ab71be3"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20200114-0003/",
+            "url" : "https://security.netapp.com/advisory/ntap-20200114-0003/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/4298-1/",
+            "url" : "https://usn.ubuntu.com/4298-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpuapr2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpuapr2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E",
+            "url" : "https://lists.apache.org/thread.html/rf4c02775860db415b4955778a131c2795223f61cb8c6a450893651e4@%3Cissues.bookkeeper.apache.org%3E"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E",
+            "url" : "https://lists.apache.org/thread.html/r58af02e294bd07f487e2c64ffc0a29b837db5600e33b6e698b9d696b@%3Cissues.bookkeeper.apache.org%3E"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf",
+            "url" : "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2019-19924 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-19924"
+         }
+      ],
+      "title" : "DBD-SQLite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-12-24T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBD-SQLite-2019-19924",
+         "initial_release_date" : "2019-12-24T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-12-24T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/=1.65_02",
+                  "product" : {
+                     "name" : "DBD-SQLite equal 1.65_02",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.65_03",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.65_03",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2019-19924",
+         "cwe" : {
+            "id" : "CWE-755",
+            "name" : "Improper Handling of Exceptional Conditions"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "SQLite 3.30.1 mishandles certain parser-tree rewriting, related to expr.c, vdbeaux.c, and window.c. This is caused by incorrect sqlite3WindowRewrite() error handling.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 5.3,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

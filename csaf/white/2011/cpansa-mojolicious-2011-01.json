@@ -1,0 +1,98 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Mojolicious is vulnerable to cross-site scripting, caused by improper validation of user-supplied input by link_to helper. A remote attacker could exploit this vulnerability using a specially-crafted URL to execute script in a victim's Web browser within the security context of the hosting Web site, once the URL is clicked. An attacker could use this vulnerability to steal the victim's cookie-based authentication credentials.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Mojolicious-2011-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mojolicious-2011-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.debian.org/security/2011/dsa-2239",
+            "url" : "https://www.debian.org/security/2011/dsa-2239"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60",
+            "url" : "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60"
+         }
+      ],
+      "title" : "Mojolicious vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-03-10T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Mojolicious-2011-01",
+         "initial_release_date" : "2011-03-10T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-03-10T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.12",
+                  "product" : {
+                     "name" : "Mojolicious less than 1.12",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SRI/Mojolicious"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Mojolicious"
+         }
+      ]
+   }
+}

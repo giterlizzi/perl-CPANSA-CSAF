@@ -1,0 +1,153 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The verify_SSL flag is missing from HTTP::Tiny, and allows a network attacker to MITM the connection if it is used by the CPAN client",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CPAN-2023-31484 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CPAN-2023-31484.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CPAN.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/andk/cpanpm/commit/9c98370287f4e709924aee7c58ef21c85289a7f0",
+            "url" : "https://github.com/andk/cpanpm/commit/9c98370287f4e709924aee7c58ef21c85289a7f0"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/",
+            "url" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/andk/cpanpm/pull/175",
+            "url" : "https://github.com/andk/cpanpm/pull/175"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.openwall.com/lists/oss-security/2023/04/18/14",
+            "url" : "https://www.openwall.com/lists/oss-security/2023/04/18/14"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2023-31484 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2023-31484"
+         }
+      ],
+      "title" : "CPAN vulnerability",
+      "tracking" : {
+         "current_release_date" : "2023-02-28T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CPAN-2023-31484",
+         "initial_release_date" : "2023-02-28T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2023-02-28T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.35",
+                  "product" : {
+                     "name" : "CPAN less than 2.35",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDK/CPAN"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.35",
+                  "product" : {
+                     "name" : "CPAN greater than or equal 2.35",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDK/CPAN"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CPAN"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2023-31484",
+         "cwe" : {
+            "id" : "CWE-295",
+            "name" : "Improper Certificate Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "CPAN.pm before 2.35 does not verify TLS certificates when downloading distributions over HTTPS.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 8.1,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

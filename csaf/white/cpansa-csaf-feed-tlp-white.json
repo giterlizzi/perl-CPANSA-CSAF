@@ -1,0 +1,20 @@
+{
+   "feed" : {
+      "category" : [
+         {
+            "scheme" : "urn:ietf:params:rolie:category:information-type",
+            "term" : "csaf"
+         }
+      ],
+      "entry" : [],
+      "id" : "cpansa-csaf-feed-tlp-white",
+      "link" : [
+         {
+            "href" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/cpansa-csaf-feed-tlp-white.json",
+            "rel" : "self"
+         }
+      ],
+      "title" : "CPANSA CSAF feed (TLP:WHITE)",
+      "updated" : "2024-04-17T01:21:03"
+   }
+}

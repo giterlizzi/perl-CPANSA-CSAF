@@ -1,0 +1,202 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Eval injection vulnerability in the Digest module before 1.17 for Perl allows context-dependent attackers to execute arbitrary commands via the new constructor.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Digest-2011-3597 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Digest-2011-3597.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Digest.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://aix.software.ibm.com/aix/efixes/security/perl_advisory2.asc",
+            "url" : "http://aix.software.ibm.com/aix/efixes/security/perl_advisory2.asc"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2011-1797.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2011-1797.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2011-1424.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2011-1424.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=743010",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=743010"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/49911",
+            "url" : "http://www.securityfocus.com/bid/49911"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/46279",
+            "url" : "http://secunia.com/advisories/46279"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://cpansearch.perl.org/src/GAAS/Digest-1.17/Changes",
+            "url" : "http://cpansearch.perl.org/src/GAAS/Digest-1.17/Changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2012:009",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2012:009"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2012:008",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2012:008"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/51457",
+            "url" : "http://secunia.com/advisories/51457"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-1643-1",
+            "url" : "http://www.ubuntu.com/usn/USN-1643-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A19446",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A19446"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-3597 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-3597"
+         }
+      ],
+      "title" : "Digest vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-01-13T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Digest-2011-3597",
+         "initial_release_date" : "2012-01-13T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-01-13T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.17",
+                  "product" : {
+                     "name" : "Digest less than 1.17",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GAAS/Digest"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.17",
+                  "product" : {
+                     "name" : "Digest greater than or equal 0.17",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GAAS/Digest"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Digest"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-3597",
+         "cwe" : {
+            "id" : "CWE-20",
+            "name" : "Improper Input Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Eval injection vulnerability in the Digest module before 1.17 for Perl allows context-dependent attackers to execute arbitrary commands via the new constructor.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

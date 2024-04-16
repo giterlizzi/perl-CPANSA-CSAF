@@ -1,0 +1,208 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Safe (aka Safe.pm) module before 2.25 for Perl allows context-dependent attackers to bypass intended (1) Safe::reval and (2) Safe::rdo access restrictions, and inject and execute arbitrary code, via vectors involving implicitly called methods and implicitly blessed objects, as demonstrated by the (a) DESTROY and (b) AUTOLOAD methods, related to \"automagic methods.\"",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Safe-2010-1168 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Safe-2010-1168.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Safe.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2010/05/20/5",
+            "url" : "http://www.openwall.com/lists/oss-security/2010/05/20/5"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2010-0457.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2010-0457.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2010-0458.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2010-0458.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/40049",
+            "url" : "http://secunia.com/advisories/40049"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://cpansearch.perl.org/src/RGARCIA/Safe-2.27/Changes",
+            "url" : "http://cpansearch.perl.org/src/RGARCIA/Safe-2.27/Changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:115",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:115"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://blogs.perl.org/users/rafael_garcia-suarez/2010/03/new-safepm-fixes-security-hole.html",
+            "url" : "http://blogs.perl.org/users/rafael_garcia-suarez/2010/03/new-safepm-fixes-security-hole.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:116",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:116"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=576508",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=576508"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/40052",
+            "url" : "http://secunia.com/advisories/40052"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://securitytracker.com/id?1024062",
+            "url" : "http://securitytracker.com/id?1024062"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/42402",
+            "url" : "http://secunia.com/advisories/42402"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://blogs.sun.com/security/entry/cve_2010_1168_vulnerability_in",
+            "url" : "http://blogs.sun.com/security/entry/cve_2010_1168_vulnerability_in"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2010/3075",
+            "url" : "http://www.vupen.com/english/advisories/2010/3075"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9807",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9807"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A7424",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A7424"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-1168 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-1168"
+         }
+      ],
+      "title" : "Safe vulnerability",
+      "tracking" : {
+         "current_release_date" : "2010-06-21T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Safe-2010-1168",
+         "initial_release_date" : "2010-06-21T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2010-06-21T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.25",
+                  "product" : {
+                     "name" : "Safe less than 2.25",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RGARCIA/Safe"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Safe"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-1168",
+         "cwe" : {
+            "id" : "CWE-264",
+            "name" : "Permissions, Privileges, and Access Controls"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Safe (aka Safe.pm) module before 2.25 for Perl allows context-dependent attackers to bypass intended (1) Safe::reval and (2) Safe::rdo access restrictions, and inject and execute arbitrary code, via vectors involving implicitly called methods and implicitly blessed objects, as demonstrated by the (a) DESTROY and (b) AUTOLOAD methods, related to \"automagic methods.\"",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

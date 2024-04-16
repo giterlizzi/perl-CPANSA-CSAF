@@ -1,0 +1,173 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The App::cpanminus package 1.7044 for Perl allows Signature Verification Bypass.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-App-cpanminus-2020-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-App-cpanminus-2020-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-App-cpanminus.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DENFY4CRTIZL5WYYUYUM4VKCJNXO4QIW/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DENFY4CRTIZL5WYYUYUM4VKCJNXO4QIW/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/pod/App::cpanminus",
+            "url" : "https://metacpan.org/pod/App::cpanminus"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/",
+            "url" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/security/cve/cve-2020-16154",
+            "url" : "https://access.redhat.com/security/cve/cve-2020-16154"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security-tracker.debian.org/tracker/CVE-2020-16154",
+            "url" : "https://security-tracker.debian.org/tracker/CVE-2020-16154"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blogs.perl.org/users/neilb/2021/11/addressing-cpan-vulnerabilities-related-to-checksums.html",
+            "url" : "https://blogs.perl.org/users/neilb/2021/11/addressing-cpan-vulnerabilities-related-to-checksums.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/miyagawa/cpanminus/pull/638",
+            "url" : "https://github.com/miyagawa/cpanminus/pull/638"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-16154 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-16154"
+         }
+      ],
+      "title" : "App-cpanminus vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-07-30T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-App-cpanminus-2020-01",
+         "initial_release_date" : "2020-07-30T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-07-30T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.7044",
+                  "product" : {
+                     "name" : "App-cpanminus less than or equal 1.7044",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MIYAGAWA/App-cpanminus"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.7045",
+                  "product" : {
+                     "name" : "App-cpanminus greater than or equal 1.7045",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MIYAGAWA/App-cpanminus"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "App-cpanminus"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-16154",
+         "cwe" : {
+            "id" : "CWE-347",
+            "name" : "Improper Verification of Cryptographic Signature"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The App::cpanminus package 1.7044 for Perl allows Signature Verification Bypass.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

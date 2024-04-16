@@ -1,0 +1,158 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Perl 5.10.x allows context-dependent attackers to cause a denial of service (NULL pointer dereference and application crash) by leveraging an ability to inject arguments into a (1) getpeername, (2) readdir, (3) closedir, (4) getsockname, (5) rewinddir, (6) tell, or (7) telldir function call.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2011-0761 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2011-0761.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/47766",
+            "url" : "http://www.securityfocus.com/bid/47766"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://securitytracker.com/id?1025507",
+            "url" : "http://securitytracker.com/id?1025507"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.toucan-system.com/advisories/tssa-2011-03.txt",
+            "url" : "http://www.toucan-system.com/advisories/tssa-2011-03.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://securityreason.com/securityalert/8248",
+            "url" : "http://securityreason.com/securityalert/8248"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67355",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67355"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/archive/1/517916/100/0/threaded",
+            "url" : "http://www.securityfocus.com/archive/1/517916/100/0/threaded"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-0761 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-0761"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-05-13T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-perl-2011-0761",
+         "initial_release_date" : "2011-05-13T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-05-13T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.10.0|<5.12.0",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.10.0 and less than 5.12.0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.12.0",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.12.0",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-0761",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Perl 5.10.x allows context-dependent attackers to cause a denial of service (NULL pointer dereference and application crash) by leveraging an ability to inject arguments into a (1) getpeername, (2) readdir, (3) closedir, (4) getsockname, (5) rewinddir, (6) tell, or (7) telldir function call.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

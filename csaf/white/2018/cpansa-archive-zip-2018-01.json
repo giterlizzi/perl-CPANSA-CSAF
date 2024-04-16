@@ -1,0 +1,137 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "perl-archive-zip is vulnerable to a directory traversal in Archive::Zip. It was found that the Archive::Zip module did not properly sanitize paths while extracting zip files. An attacker able to provide a specially crafted archive for processing could use this flaw to write or overwrite arbitrary files in the context of the perl interpreter.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Archive-Zip-2018-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Archive-Zip-2018-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Archive-Zip.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security-tracker.debian.org/tracker/CVE-2018-10860",
+            "url" : "https://security-tracker.debian.org/tracker/CVE-2018-10860"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/redhotpenguin/perl-Archive-Zip/pull/33",
+            "url" : "https://github.com/redhotpenguin/perl-Archive-Zip/pull/33"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2018-10860 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2018-10860"
+         }
+      ],
+      "title" : "Archive-Zip vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-06-28T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Archive-Zip-2018-01",
+         "initial_release_date" : "2018-06-28T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-06-28T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.61",
+                  "product" : {
+                     "name" : "Archive-Zip less than 1.61",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/PHRED/Archive-Zip"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Archive-Zip"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2018-10860",
+         "cwe" : {
+            "id" : "CWE-22",
+            "name" : "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "perl-archive-zip is vulnerable to a directory traversal in Archive::Zip. It was found that the Archive::Zip module did not properly sanitize paths while extracting zip files. An attacker able to provide a specially crafted archive for processing could use this flaw to write or overwrite arbitrary files in the context of the perl interpreter.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.4,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

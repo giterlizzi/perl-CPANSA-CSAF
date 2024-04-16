@@ -1,0 +1,163 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The CGI::Application module before 4.50_50 and 4.50_51 for Perl, when run modes are not specified, allows remote attackers to obtain sensitive information (web queries and environment details) via vectors related to the dump_html function.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CGI-Application-2013-7329 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CGI-Application-2013-7329.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI-Application.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/markstos/CGI--Application/pull/15",
+            "url" : "https://github.com/markstos/CGI--Application/pull/15"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://openwall.com/lists/oss-security/2014/02/19/11",
+            "url" : "http://openwall.com/lists/oss-security/2014/02/19/11"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-March/129436.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-March/129436.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-March/129444.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-March/129444.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=739505",
+            "url" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=739505"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/65687",
+            "url" : "http://www.securityfocus.com/bid/65687"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=84403",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=84403"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1067180",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1067180"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/91735",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/91735"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2013-7329 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2013-7329"
+         }
+      ],
+      "title" : "CGI-Application vulnerability",
+      "tracking" : {
+         "current_release_date" : "2014-10-06T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CGI-Application-2013-7329",
+         "initial_release_date" : "2014-10-06T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2014-10-06T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<4.50_51",
+                  "product" : {
+                     "name" : "CGI-Application less than 4.50_51",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MARKSTOS/CGI-Application"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CGI-Application"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2013-7329",
+         "cwe" : {
+            "id" : "CWE-200",
+            "name" : "Exposure of Sensitive Information to an Unauthorized Actor"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The CGI::Application module before 4.50_50 and 4.50_51 for Perl, when run modes are not specified, allows remote attackers to obtain sensitive information (web queries and environment details) via vectors related to the dump_html function.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

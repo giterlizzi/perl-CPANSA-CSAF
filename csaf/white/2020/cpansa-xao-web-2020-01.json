@@ -1,0 +1,101 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Embedded HTML in JSON data was not escaped.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-XAO-Web-2020-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-XAO-Web-2020-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-XAO-Web.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/amaltsev/XAO-Web/commit/20dd1d3bc5b811503f5722a16037b60197fe7ef4",
+            "url" : "https://github.com/amaltsev/XAO-Web/commit/20dd1d3bc5b811503f5722a16037b60197fe7ef4"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes",
+            "url" : "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes"
+         }
+      ],
+      "title" : "XAO-Web vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-09-18T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-XAO-Web-2020-01",
+         "initial_release_date" : "2020-09-18T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-09-18T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.84",
+                  "product" : {
+                     "name" : "XAO-Web less than 1.84",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/AMALTSEV/XAO-Web"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.84",
+                  "product" : {
+                     "name" : "XAO-Web greater than or equal 1.84",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/AMALTSEV/XAO-Web"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "XAO-Web"
+         }
+      ]
+   }
+}

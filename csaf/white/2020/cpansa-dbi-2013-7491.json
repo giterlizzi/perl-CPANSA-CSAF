@@ -1,0 +1,142 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "An issue was discovered in the DBI module before 1.628 for Perl. Stack corruption occurs when a user-defined function requires a non-trivial amount of memory and the Perl stack gets reallocated.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBI-2013-7491 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBI-2013-7491.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBI.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/perl5-dbi/dbi/commit/401f1221311c71f760e21c98772f0f7e3cbead1d",
+            "url" : "https://github.com/perl5-dbi/dbi/commit/401f1221311c71f760e21c98772f0f7e3cbead1d"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/pod/distribution/DBI/Changes#Changes-in-DBI-1.628-22nd-July-2013",
+            "url" : "https://metacpan.org/pod/distribution/DBI/Changes#Changes-in-DBI-1.628-22nd-July-2013"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=85562",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=85562"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2013-7491 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2013-7491"
+         }
+      ],
+      "title" : "DBI vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-09-11T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBI-2013-7491",
+         "initial_release_date" : "2020-09-11T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-09-11T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.628",
+                  "product" : {
+                     "name" : "DBI less than 1.628",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TIMB/DBI"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBI"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2013-7491",
+         "cwe" : {
+            "id" : "CWE-787",
+            "name" : "Out-of-bounds Write"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "An issue was discovered in the DBI module before 1.628 for Perl. Stack corruption occurs when a user-defined function requires a non-trivial amount of memory and the Perl stack gets reallocated.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 5.3,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

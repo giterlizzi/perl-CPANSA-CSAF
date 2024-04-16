@@ -1,0 +1,104 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "SQL injection when passing special column names.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBIx-Custom-2011-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBIx-Custom-2011-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBIx-Custom.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/DBIx-Custom",
+            "url" : "https://metacpan.org/changes/distribution/DBIx-Custom"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/yuki-kimoto/DBIx-Custom/commit/5b00b9f9a966e7abecabd91710c8fa893784d919",
+            "url" : "https://github.com/yuki-kimoto/DBIx-Custom/commit/5b00b9f9a966e7abecabd91710c8fa893784d919"
+         }
+      ],
+      "title" : "DBIx-Custom vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-01-27T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBIx-Custom-2011-01",
+         "initial_release_date" : "2011-01-27T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-01-27T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.1641",
+                  "product" : {
+                     "name" : "DBIx-Custom less than 0.1641",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/KIMOTO/DBIx-Custom"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.1641",
+                  "product" : {
+                     "name" : "DBIx-Custom greater than or equal 0.1641",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/KIMOTO/DBIx-Custom"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBIx-Custom"
+         }
+      ]
+   }
+}

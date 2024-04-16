@@ -1,0 +1,134 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "In LemonLDAP::NG (aka lemonldap-ng) through 2.0.8, validity of the X.509 certificate is not checked by default when connecting to remote LDAP backends, because the default configuration of the Net::LDAPS module for Perl is used.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Net-LDAPS-2020-16093 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-LDAPS-2020-16093.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-LDAPS.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lemonldap-ng.org/download",
+            "url" : "https://lemonldap-ng.org/download"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/2250",
+            "url" : "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/2250"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Ticket/Display.html?id=131045",
+            "url" : "https://rt.cpan.org/Ticket/Display.html?id=131045"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-16093 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-16093"
+         }
+      ],
+      "title" : "perl-ldap vulnerability",
+      "tracking" : {
+         "current_release_date" : "2022-07-18T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Net-LDAPS-2020-16093",
+         "initial_release_date" : "2022-07-18T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2022-07-18T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>0",
+                  "product" : {
+                     "name" : "perl-ldap greater than 0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GBARR/perl-ldap"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl-ldap"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-16093",
+         "cwe" : {
+            "id" : "CWE-295",
+            "name" : "Improper Certificate Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "In LemonLDAP::NG (aka lemonldap-ng) through 2.0.8, validity of the X.509 certificate is not checked by default when connecting to remote LDAP backends, because the default configuration of the Net::LDAPS module for Perl is used.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

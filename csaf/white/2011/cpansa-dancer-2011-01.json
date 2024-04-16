@@ -1,0 +1,142 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Directory traversal vulnerability (Mojolicious report, but Dancer was vulnerable as well).",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Dancer-2011-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Dancer-2011-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Dancer.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Dancer",
+            "url" : "https://metacpan.org/changes/distribution/Dancer"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/PerlDancer/Dancer/commit/91d0bf6a36705b0971b18f7d38fa2f3df8c7b994",
+            "url" : "https://github.com/PerlDancer/Dancer/commit/91d0bf6a36705b0971b18f7d38fa2f3df8c7b994"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-1589 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-1589"
+         }
+      ],
+      "title" : "Dancer vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-04-05T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Dancer-2011-01",
+         "initial_release_date" : "2011-04-05T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-04-05T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.3051",
+                  "product" : {
+                     "name" : "Dancer less than 1.3051",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/YANICK/Dancer"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.3051",
+                  "product" : {
+                     "name" : "Dancer greater than or equal 1.3051",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/YANICK/Dancer"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Dancer"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-1589",
+         "cwe" : {
+            "id" : "CWE-22",
+            "name" : "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Directory traversal vulnerability in Path.pm in Mojolicious before 1.16 allows remote attackers to read arbitrary files via a %2f..%2f (encoded slash dot dot slash) in a URI.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

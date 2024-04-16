@@ -1,0 +1,133 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The CPAN::Checksums package 2.12 for Perl does not uniquely define signed data.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CPAN-Checksums-2020-16155 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CPAN-Checksums-2020-16155.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CPAN-Checksums.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/pod/CPAN::Checksums",
+            "url" : "https://metacpan.org/pod/CPAN::Checksums"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/",
+            "url" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-16155 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-16155"
+         }
+      ],
+      "title" : "CPAN-Checksums vulnerability",
+      "tracking" : {
+         "current_release_date" : "2021-12-13T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CPAN-Checksums-2020-16155",
+         "initial_release_date" : "2021-12-13T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2021-12-13T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.12",
+                  "product" : {
+                     "name" : "CPAN-Checksums greater than or equal 2.12",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDK/CPAN-Checksums"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CPAN-Checksums"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-16155",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The CPAN::Checksums package 2.12 for Perl does not uniquely define signed data.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4,
+                  "vectorString" : "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 6.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

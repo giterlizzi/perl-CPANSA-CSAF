@@ -1,0 +1,171 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "An out-of-bounds read was discovered in PCRE before 10.34 when the pattern \\X is JIT compiled and used to match specially crafted subjects in non-UTF mode. Applications that use PCRE to parse untrusted input may be vulnerable to this flaw, which would allow an attacker to crash the application. The flaw occurs in do_extuni_no_utf in pcre2_jit_compile.c.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Alien-PCRE2-2019-20454 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Alien-PCRE2-2019-20454.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Alien-PCRE2.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.php.net/bug.php?id=78338",
+            "url" : "https://bugs.php.net/bug.php?id=78338"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.exim.org/show_bug.cgi?id=2421",
+            "url" : "https://bugs.exim.org/show_bug.cgi?id=2421"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1735494",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1735494"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://vcs.pcre.org/pcre2?view=revision&revision=1092",
+            "url" : "https://vcs.pcre.org/pcre2?view=revision&revision=1092"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.gentoo.org/glsa/202006-16",
+            "url" : "https://security.gentoo.org/glsa/202006-16"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQRAHYHLRNMBTPR3KXVM27NSZP3KTOPI/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQRAHYHLRNMBTPR3KXVM27NSZP3KTOPI/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2019-20454 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-20454"
+         }
+      ],
+      "title" : "Alien-PCRE2 vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-02-14T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Alien-PCRE2-2019-20454",
+         "initial_release_date" : "2020-02-14T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-02-14T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.016000",
+                  "product" : {
+                     "name" : "Alien-PCRE2 less than 0.016000",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/WBRASWELL/Alien-PCRE2"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.016000",
+                  "product" : {
+                     "name" : "Alien-PCRE2 greater than or equal 0.016000",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/WBRASWELL/Alien-PCRE2"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Alien-PCRE2"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2019-20454",
+         "cwe" : {
+            "id" : "CWE-125",
+            "name" : "Out-of-bounds Read"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "An out-of-bounds read was discovered in PCRE before 10.34 when the pattern \\X is JIT compiled and used to match specially crafted subjects in non-UTF mode. Applications that use PCRE to parse untrusted input may be vulnerable to this flaw, which would allow an attacker to crash the application. The flaw occurs in do_extuni_no_utf in pcre2_jit_compile.c.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

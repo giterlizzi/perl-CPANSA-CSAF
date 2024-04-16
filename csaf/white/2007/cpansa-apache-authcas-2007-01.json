@@ -1,0 +1,145 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "A tainted cookie could be sent by a malicious user and it would be used in an SQL query without protection against SQL injection.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Apache-AuthCAS-2007-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Apache-AuthCAS-2007-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-AuthCAS.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Apache-AuthCAS",
+            "url" : "https://metacpan.org/changes/distribution/Apache-AuthCAS"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://cxsecurity.com/issue/WLB-2007120031",
+            "url" : "https://cxsecurity.com/issue/WLB-2007120031"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2007-6342 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2007-6342"
+         }
+      ],
+      "title" : "Apache-AuthCAS vulnerability",
+      "tracking" : {
+         "current_release_date" : "2007-12-13T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Apache-AuthCAS-2007-01",
+         "initial_release_date" : "2007-12-13T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2007-12-13T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.5",
+                  "product" : {
+                     "name" : "Apache-AuthCAS less than 0.5",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DCASTRO/Apache-AuthCAS"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.5",
+                  "product" : {
+                     "name" : "Apache-AuthCAS greater than or equal 0.5",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DCASTRO/Apache-AuthCAS"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Apache-AuthCAS"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2007-6342",
+         "cwe" : {
+            "id" : "CWE-89",
+            "name" : "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "SQL injection vulnerability in the David Castro AuthCAS module (AuthCAS.pm) 0.4 for the Apache HTTP Server allows remote attackers to execute arbitrary SQL commands via the SESSION_COOKIE_NAME (session ID) in a cookie.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

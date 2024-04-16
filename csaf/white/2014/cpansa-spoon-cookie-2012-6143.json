@@ -1,0 +1,138 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Spoon::Cookie in the Spoon module 0.24 for Perl does not properly use the Storable::thaw function, which allows remote attackers to execute arbitrary code via a crafted request, which is not properly handled when it is deserialized.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Spoon-Cookie-2012-6143 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Spoon-Cookie-2012-6143.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Spoon-Cookie.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=85217",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=85217"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/59834",
+            "url" : "http://www.securityfocus.com/bid/59834"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/oss-sec/2013/q2/318",
+            "url" : "http://seclists.org/oss-sec/2013/q2/318"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/84197",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/84197"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2012-6143 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-6143"
+         }
+      ],
+      "title" : "Spoon vulnerability",
+      "tracking" : {
+         "current_release_date" : "2014-06-04T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Spoon-Cookie-2012-6143",
+         "initial_release_date" : "2014-06-04T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2014-06-04T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>0.24",
+                  "product" : {
+                     "name" : "Spoon greater than 0.24",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/INGY/Spoon"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Spoon"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2012-6143",
+         "cwe" : {
+            "id" : "CWE-94",
+            "name" : "Improper Control of Generation of Code ('Code Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Spoon::Cookie in the Spoon module 0.24 for Perl does not properly use the Storable::thaw function, which allows remote attackers to execute arbitrary code via a crafted request, which is not properly handled when it is deserialized.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

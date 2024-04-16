@@ -1,0 +1,208 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Off-by-one error in the inflate function in Zlib.xs in Compress::Raw::Zlib Perl module before 2.017, as used in AMaViS, SpamAssassin, and possibly other products, allows context-dependent attackers to cause a denial of service (hang or crash) via a crafted zlib compressed stream that triggers a heap-based buffer overflow, as exploited in the wild by Trojan.Downloader-71014 in June 2009.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Compress-Raw-Zlib-2009-1391 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Compress-Raw-Zlib-2009-1391.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Compress-Raw-Zlib.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://article.gmane.org/gmane.mail.virus.amavis.user/33635",
+            "url" : "http://article.gmane.org/gmane.mail.virus.amavis.user/33635"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://article.gmane.org/gmane.mail.virus.amavis.user/33638",
+            "url" : "http://article.gmane.org/gmane.mail.virus.amavis.user/33638"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/35307",
+            "url" : "http://www.securityfocus.com/bid/35307"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/35422",
+            "url" : "http://secunia.com/advisories/35422"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=504386",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=504386"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2009/1571",
+            "url" : "http://www.vupen.com/english/advisories/2009/1571"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://thread.gmane.org/gmane.mail.virus.amavis.user/33635",
+            "url" : "http://thread.gmane.org/gmane.mail.virus.amavis.user/33635"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/55041",
+            "url" : "http://osvdb.org/55041"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2009-07/msg00002.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2009-07/msg00002.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/35876",
+            "url" : "http://secunia.com/advisories/35876"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/35685",
+            "url" : "http://secunia.com/advisories/35685"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2009-July/msg00607.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2009-July/msg00607.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/35689",
+            "url" : "http://secunia.com/advisories/35689"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2009:157",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2009:157"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://security.gentoo.org/glsa/glsa-200908-07.xml",
+            "url" : "http://security.gentoo.org/glsa/glsa-200908-07.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.gentoo.org/show_bug.cgi?id=273141",
+            "url" : "https://bugs.gentoo.org/show_bug.cgi?id=273141"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/51062",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/51062"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/794-1/",
+            "url" : "https://usn.ubuntu.com/794-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2009-1391 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2009-1391"
+         }
+      ],
+      "title" : "Compress-Raw-Zlib vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-06-16T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Compress-Raw-Zlib-2009-1391",
+         "initial_release_date" : "2009-06-16T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-06-16T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.017",
+                  "product" : {
+                     "name" : "Compress-Raw-Zlib less than 2.017",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/PMQS/Compress-Raw-Zlib"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Compress-Raw-Zlib"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2009-1391",
+         "cwe" : {
+            "id" : "CWE-189",
+            "name" : "Numeric Errors"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Off-by-one error in the inflate function in Zlib.xs in Compress::Raw::Zlib Perl module before 2.017, as used in AMaViS, SpamAssassin, and possibly other products, allows context-dependent attackers to cause a denial of service (hang or crash) via a crafted zlib compressed stream that triggers a heap-based buffer overflow, as exploited in the wild by Trojan.Downloader-71014 in June 2009.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

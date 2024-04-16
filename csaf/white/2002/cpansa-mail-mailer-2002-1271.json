@@ -1,0 +1,163 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Mail::Mailer Perl module in the perl-MailTools package 1.47 and earlier uses mailx as the default mailer, which allows remote attackers to execute arbitrary commands by inserting them into the mail body, which is then processed by mailx.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Mail-Mailer-2002-1271 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mail-Mailer-2002-1271.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mail-Mailer.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.iss.net/security_center/static/10548.php",
+            "url" : "http://www.iss.net/security_center/static/10548.php"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2003/dsa-386",
+            "url" : "http://www.debian.org/security/2003/dsa-386"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-076.php",
+            "url" : "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-076.php"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.novell.com/linux/security/advisories/2002_041_perl_mailtools.html",
+            "url" : "http://www.novell.com/linux/security/advisories/2002_041_perl_mailtools.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/6104",
+            "url" : "http://www.securityfocus.com/bid/6104"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://marc.info/?l=bugtraq&m=103659723101369&w=2",
+            "url" : "http://marc.info/?l=bugtraq&m=103659723101369&w=2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://marc.info/?l=bugtraq&m=103679569705086&w=2",
+            "url" : "http://marc.info/?l=bugtraq&m=103679569705086&w=2"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2002-1271 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2002-1271"
+         }
+      ],
+      "title" : "MailTools vulnerability",
+      "tracking" : {
+         "current_release_date" : "2002-11-12T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Mail-Mailer-2002-1271",
+         "initial_release_date" : "2002-11-12T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2002-11-12T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.51",
+                  "product" : {
+                     "name" : "MailTools less than 1.51",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MARKOV/MailTools"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.51",
+                  "product" : {
+                     "name" : "MailTools greater than or equal 1.51",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MARKOV/MailTools"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "MailTools"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2002-1271",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Mail::Mailer Perl module in the perl-MailTools package 1.47 and earlier uses mailx as the default mailer, which allows remote attackers to execute arbitrary commands by inserting them into the mail body, which is then processed by mailx.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

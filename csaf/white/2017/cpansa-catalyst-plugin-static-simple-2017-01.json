@@ -1,0 +1,148 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Catalyst-Plugin-Static-Simple module before 0.34 for Perl allows remote attackers to read arbitrary files if there is a '.' character anywhere in the pathname, which differs from the intended policy of allowing access only when the filename itself has a '.' character.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Catalyst-Plugin-Static-Simple-2017-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Catalyst-Plugin-Static-Simple-2017-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Catalyst-Plugin-Static-Simple.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/",
+            "url" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/pod/CPAN::Checksums",
+            "url" : "https://metacpan.org/pod/CPAN::Checksums"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2017-16248 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2017-16248"
+         }
+      ],
+      "title" : "Catalyst-Plugin-Static-Simple vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-10-31T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Catalyst-Plugin-Static-Simple-2017-01",
+         "initial_release_date" : "2017-10-31T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-10-31T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.34",
+                  "product" : {
+                     "name" : "Catalyst-Plugin-Static-Simple less than 0.34",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ILMARI/Catalyst-Plugin-Static-Simple"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.34",
+                  "product" : {
+                     "name" : "Catalyst-Plugin-Static-Simple greater than or equal 0.34",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ILMARI/Catalyst-Plugin-Static-Simple"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Catalyst-Plugin-Static-Simple"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2017-16248",
+         "cwe" : {
+            "id" : "CWE-200",
+            "name" : "Exposure of Sensitive Information to an Unauthorized Actor"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Catalyst-Plugin-Static-Simple module before 0.34 for Perl allows remote attackers to read arbitrary files if there is a '.' character anywhere in the pathname, which differs from the intended policy of allowing access only when the filename itself has a '.' character.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

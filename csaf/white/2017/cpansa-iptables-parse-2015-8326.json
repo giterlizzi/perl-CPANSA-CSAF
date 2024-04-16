@@ -1,0 +1,147 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The IPTables-Parse module before 1.6 for Perl allows local users to write to arbitrary files owned by the current user.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-IPTables-Parse-2015-8326 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-IPTables-Parse-2015-8326.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-IPTables-Parse.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/source/MRASH/IPTables-Parse-1.6/Changes",
+            "url" : "https://metacpan.org/source/MRASH/IPTables-Parse-1.6/Changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mtrmac/IPTables-Parse/commit/b400b976d81140f6971132e94eb7657b5b0a2b87",
+            "url" : "https://github.com/mtrmac/IPTables-Parse/commit/b400b976d81140f6971132e94eb7657b5b0a2b87"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1267962",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1267962"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2015/11/24/10",
+            "url" : "http://www.openwall.com/lists/oss-security/2015/11/24/10"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2015-8326 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2015-8326"
+         }
+      ],
+      "title" : "IPTables-Parse vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-06-07T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-IPTables-Parse-2015-8326",
+         "initial_release_date" : "2017-06-07T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-06-07T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.6",
+                  "product" : {
+                     "name" : "IPTables-Parse less than 1.6",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MRASH/IPTables-Parse"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "IPTables-Parse"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2015-8326",
+         "cwe" : {
+            "id" : "CWE-59",
+            "name" : "Improper Link Resolution Before File Access ('Link Following')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The IPTables-Parse module before 1.6 for Perl allows local users to write to arbitrary files owned by the current user.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 3.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 5.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

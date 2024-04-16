@@ -1,0 +1,213 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Safe.pm 2.0.7 and earlier, when used in Perl 5.8.0 and earlier, may allow attackers to break out of safe compartments in (1) Safe::reval or (2) Safe::rdo using a redefined @_ variable, which is not reset between successive calls.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Safe-2002-1323 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Safe-2002-1323.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Safe.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://use.perl.org/articles/02/10/06/1118222.shtml?tid=5",
+            "url" : "http://use.perl.org/articles/02/10/06/1118222.shtml?tid=5"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/6111",
+            "url" : "http://www.securityfocus.com/bid/6111"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2002/dsa-208",
+            "url" : "http://www.debian.org/security/2002/dsa-208"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.iss.net/security_center/static/10574.php",
+            "url" : "http://www.iss.net/security_center/static/10574.php"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs6.perl.org/rt2/Ticket/Display.html?id=17744",
+            "url" : "http://bugs6.perl.org/rt2/Ticket/Display.html?id=17744"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://archives.neohapsis.com/archives/vulnwatch/2002-q4/0061.html",
+            "url" : "http://archives.neohapsis.com/archives/vulnwatch/2002-q4/0061.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2003-256.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2003-256.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2003-257.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2003-257.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "ftp://patches.sgi.com/support/free/security/advisories/20030606-01-A",
+            "url" : "ftp://patches.sgi.com/support/free/security/advisories/20030606-01-A"
+         },
+         {
+            "category" : "external",
+            "summary" : "ftp://ftp.caldera.com/pub/security/OpenLinux/CSSA-2004-007.0.txt",
+            "url" : "ftp://ftp.caldera.com/pub/security/OpenLinux/CSSA-2004-007.0.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "ftp://ftp.sco.com/pub/updates/UnixWare/SCOSA-2004.1/SCOSA-2004.1.txt",
+            "url" : "ftp://ftp.sco.com/pub/updates/UnixWare/SCOSA-2004.1/SCOSA-2004.1.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.osvdb.org/2183",
+            "url" : "http://www.osvdb.org/2183"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.osvdb.org/3814",
+            "url" : "http://www.osvdb.org/3814"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://marc.info/?l=bugtraq&m=104040175522502&w=2",
+            "url" : "http://marc.info/?l=bugtraq&m=104040175522502&w=2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://marc.info/?l=bugtraq&m=104033126305252&w=2",
+            "url" : "http://marc.info/?l=bugtraq&m=104033126305252&w=2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://marc.info/?l=bugtraq&m=104005919814869&w=2",
+            "url" : "http://marc.info/?l=bugtraq&m=104005919814869&w=2"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A1160",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A1160"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2002-1323 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2002-1323"
+         }
+      ],
+      "title" : "Safe vulnerability",
+      "tracking" : {
+         "current_release_date" : "2002-12-11T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Safe-2002-1323",
+         "initial_release_date" : "2002-12-11T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2002-12-11T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=2.07",
+                  "product" : {
+                     "name" : "Safe less than or equal 2.07",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RGARCIA/Safe"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.08",
+                  "product" : {
+                     "name" : "Safe greater than or equal 2.08",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RGARCIA/Safe"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Safe"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2002-1323",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Safe.pm 2.0.7 and earlier, when used in Perl 5.8.0 and earlier, may allow attackers to break out of safe compartments in (1) Safe::reval or (2) Safe::rdo using a redefined @_ variable, which is not reset between successive calls.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

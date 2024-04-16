@@ -1,0 +1,147 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "clipedit in the Clipboard module for Perl allows local users to delete arbitrary files via a symlink attack on /tmp/clipedit$$.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Clipboard-2014-5509 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Clipboard-2014-5509.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Clipboard.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=98435",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=98435"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1135624",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1135624"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/69473",
+            "url" : "http://www.securityfocus.com/bid/69473"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2014/08/30/2",
+            "url" : "http://www.openwall.com/lists/oss-security/2014/08/30/2"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2014-5509 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2014-5509"
+         }
+      ],
+      "title" : "Clipboard vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-01-08T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Clipboard-2014-5509",
+         "initial_release_date" : "2018-01-08T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-01-08T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.16",
+                  "product" : {
+                     "name" : "Clipboard less than 0.16",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SHLOMIF/Clipboard"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Clipboard"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2014-5509",
+         "cwe" : {
+            "id" : "CWE-59",
+            "name" : "Improper Link Resolution Before File Access ('Link Following')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "clipedit in the Clipboard module for Perl allows local users to delete arbitrary files via a symlink attack on /tmp/clipedit$$.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 3.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 5.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

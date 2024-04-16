@@ -1,0 +1,101 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Archive::Tar preserves permissions in the tarball; extracted file permissions will be set from users umask instead.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CPAN-2009-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CPAN-2009-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CPAN.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/andk/cpanpm/commit/079fa2e7ee77d626eab8bb06d0465c6a05f6c8b6",
+            "url" : "https://github.com/andk/cpanpm/commit/079fa2e7ee77d626eab8bb06d0465c6a05f6c8b6"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Ticket/Display.html?id=46384",
+            "url" : "https://rt.cpan.org/Ticket/Display.html?id=46384"
+         }
+      ],
+      "title" : "CPAN vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-09-23T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CPAN-2009-01",
+         "initial_release_date" : "2009-09-23T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-09-23T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.93",
+                  "product" : {
+                     "name" : "CPAN less than 1.93",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDK/CPAN"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.93",
+                  "product" : {
+                     "name" : "CPAN greater than or equal 1.93",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDK/CPAN"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CPAN"
+         }
+      ]
+   }
+}

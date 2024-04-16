@@ -1,0 +1,197 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Directory traversal vulnerability in dpkg-source in dpkg before 1.14.31 and 1.15.x allows user-assisted remote attackers to modify arbitrary files via directory traversal sequences in a patch for a source-format 3.0 package.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Dpkg-2010-1679 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Dpkg-2010-1679.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Dpkg.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0044",
+            "url" : "http://www.vupen.com/english/advisories/2011/0044"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/42831",
+            "url" : "http://secunia.com/advisories/42831"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/42826",
+            "url" : "http://secunia.com/advisories/42826"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-1038-1",
+            "url" : "http://www.ubuntu.com/usn/USN-1038-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2011/dsa-2142",
+            "url" : "http://www.debian.org/security/2011/dsa-2142"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0040",
+            "url" : "http://www.vupen.com/english/advisories/2011/0040"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/70368",
+            "url" : "http://osvdb.org/70368"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-January/053311.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-January/053311.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-January/053306.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-January/053306.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/43054",
+            "url" : "http://secunia.com/advisories/43054"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/45703",
+            "url" : "http://www.securityfocus.com/bid/45703"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0196",
+            "url" : "http://www.vupen.com/english/advisories/2011/0196"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/64615",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/64615"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-1679 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-1679"
+         }
+      ],
+      "title" : "Dpkg vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-01-11T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Dpkg-2010-1679",
+         "initial_release_date" : "2011-01-11T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-01-11T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.15.8.8",
+                  "product" : {
+                     "name" : "Dpkg less than 1.15.8.8",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GUILLEM/Dpkg"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.15.8.8",
+                  "product" : {
+                     "name" : "Dpkg greater than or equal 1.15.8.8",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GUILLEM/Dpkg"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Dpkg"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-1679",
+         "cwe" : {
+            "id" : "CWE-22",
+            "name" : "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Directory traversal vulnerability in dpkg-source in dpkg before 1.14.31 and 1.15.x allows user-assisted remote attackers to modify arbitrary files via directory traversal sequences in a patch for a source-format 3.0 package.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

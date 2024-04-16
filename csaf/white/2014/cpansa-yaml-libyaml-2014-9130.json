@@ -1,0 +1,287 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "scanner.c in LibYAML 0.1.5 and 0.1.6, as used in the YAML-LibYAML (aka YAML-XS) module for Perl, allows context-dependent attackers to cause a denial of service (assertion failure and crash) via vectors involving line-wrapping.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-YAML-LibYAML-2014-9130 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-YAML-LibYAML-2014-9130.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-YAML-LibYAML.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2014/11/29/3",
+            "url" : "http://www.openwall.com/lists/oss-security/2014/11/29/3"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2014/11/28/8",
+            "url" : "http://www.openwall.com/lists/oss-security/2014/11/28/8"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bitbucket.org/xi/libyaml/commits/2b9156756423e967cfd09a61d125d883fca6f4f2",
+            "url" : "https://bitbucket.org/xi/libyaml/commits/2b9156756423e967cfd09a61d125d883fca6f4f2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/71349",
+            "url" : "http://www.securityfocus.com/bid/71349"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/59947",
+            "url" : "http://secunia.com/advisories/59947"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bitbucket.org/xi/libyaml/issue/10/wrapped-strings-cause-assert-failure",
+            "url" : "https://bitbucket.org/xi/libyaml/issue/10/wrapped-strings-cause-assert-failure"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/60944",
+            "url" : "http://secunia.com/advisories/60944"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2014/11/28/1",
+            "url" : "http://www.openwall.com/lists/oss-security/2014/11/28/1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://linux.oracle.com/errata/ELSA-2015-0100.html",
+            "url" : "http://linux.oracle.com/errata/ELSA-2015-0100.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/62723",
+            "url" : "http://secunia.com/advisories/62723"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/62705",
+            "url" : "http://secunia.com/advisories/62705"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/62774",
+            "url" : "http://secunia.com/advisories/62774"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-2461-2",
+            "url" : "http://www.ubuntu.com/usn/USN-2461-2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-2461-3",
+            "url" : "http://www.ubuntu.com/usn/USN-2461-3"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-2461-1",
+            "url" : "http://www.ubuntu.com/usn/USN-2461-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rhn.redhat.com/errata/RHSA-2015-0100.html",
+            "url" : "http://rhn.redhat.com/errata/RHSA-2015-0100.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2014/dsa-3103",
+            "url" : "http://www.debian.org/security/2014/dsa-3103"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rhn.redhat.com/errata/RHSA-2015-0112.html",
+            "url" : "http://rhn.redhat.com/errata/RHSA-2015-0112.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2014/dsa-3102",
+            "url" : "http://www.debian.org/security/2014/dsa-3102"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2014/dsa-3115",
+            "url" : "http://www.debian.org/security/2014/dsa-3115"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rhn.redhat.com/errata/RHSA-2015-0260.html",
+            "url" : "http://rhn.redhat.com/errata/RHSA-2015-0260.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-updates/2015-02/msg00078.html",
+            "url" : "http://lists.opensuse.org/opensuse-updates/2015-02/msg00078.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2015:060",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2015:060"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2014:242",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2014:242"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://advisories.mageia.org/MGASA-2014-0508.html",
+            "url" : "http://advisories.mageia.org/MGASA-2014-0508.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-updates/2016-04/msg00050.html",
+            "url" : "http://lists.opensuse.org/opensuse-updates/2016-04/msg00050.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/62176",
+            "url" : "http://secunia.com/advisories/62176"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/62174",
+            "url" : "http://secunia.com/advisories/62174"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/62164",
+            "url" : "http://secunia.com/advisories/62164"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/99047",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/99047"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://puppet.com/security/cve/cve-2014-9130",
+            "url" : "https://puppet.com/security/cve/cve-2014-9130"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2014-9130 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2014-9130"
+         }
+      ],
+      "title" : "YAML-LibYAML vulnerability",
+      "tracking" : {
+         "current_release_date" : "2014-12-08T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-YAML-LibYAML-2014-9130",
+         "initial_release_date" : "2014-12-08T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2014-12-08T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.53",
+                  "product" : {
+                     "name" : "YAML-LibYAML less than 0.53",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TINITA/YAML-LibYAML"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.54",
+                  "product" : {
+                     "name" : "YAML-LibYAML greater than or equal 0.54",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TINITA/YAML-LibYAML"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "YAML-LibYAML"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2014-9130",
+         "cwe" : {
+            "id" : "CWE-20",
+            "name" : "Improper Input Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "scanner.c in LibYAML 0.1.5 and 0.1.6, as used in the YAML-LibYAML (aka YAML-XS) module for Perl, allows context-dependent attackers to cause a denial of service (assertion failure and crash) via vectors involving line-wrapping.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,232 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Safe (aka Safe.pm) module 2.26, and certain earlier versions, for Perl, as used in PostgreSQL 7.4 before 7.4.29, 8.0 before 8.0.25, 8.1 before 8.1.21, 8.2 before 8.2.17, 8.3 before 8.3.11, 8.4 before 8.4.4, and 9.0 Beta before 9.0 Beta 2, allows context-dependent attackers to bypass intended (1) Safe::reval and (2) Safe::rdo access restrictions, and inject and execute arbitrary code, via vectors involving subroutine references and delayed execution.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Safe-2010-1447 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Safe-2010-1447.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Safe.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.launchpad.net/bugs/cve/2010-1447",
+            "url" : "https://bugs.launchpad.net/bugs/cve/2010-1447"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2010/1167",
+            "url" : "http://www.vupen.com/english/advisories/2010/1167"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/39845",
+            "url" : "http://secunia.com/advisories/39845"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.postgresql.org/about/news.1203",
+            "url" : "http://www.postgresql.org/about/news.1203"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://security-tracker.debian.org/tracker/CVE-2010-1447",
+            "url" : "http://security-tracker.debian.org/tracker/CVE-2010-1447"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=588269",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=588269"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id?1023988",
+            "url" : "http://www.securitytracker.com/id?1023988"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/64756",
+            "url" : "http://osvdb.org/64756"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/40305",
+            "url" : "http://www.securityfocus.com/bid/40305"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/40052",
+            "url" : "http://secunia.com/advisories/40052"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2010-0458.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2010-0458.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2010/05/20/5",
+            "url" : "http://www.openwall.com/lists/oss-security/2010/05/20/5"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:116",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:116"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2010-0457.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2010-0457.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:115",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:115"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/40049",
+            "url" : "http://secunia.com/advisories/40049"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2011/dsa-2267",
+            "url" : "http://www.debian.org/security/2011/dsa-2267"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A7320",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A7320"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11530",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11530"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-1447 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-1447"
+         }
+      ],
+      "title" : "Safe vulnerability",
+      "tracking" : {
+         "current_release_date" : "2010-05-19T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Safe-2010-1447",
+         "initial_release_date" : "2010-05-19T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2010-05-19T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=2.26",
+                  "product" : {
+                     "name" : "Safe less than or equal 2.26",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RGARCIA/Safe"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.27",
+                  "product" : {
+                     "name" : "Safe greater than or equal 2.27",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RGARCIA/Safe"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Safe"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-1447",
+         "cwe" : {
+            "id" : "CWE-264",
+            "name" : "Permissions, Privileges, and Access Controls"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Safe (aka Safe.pm) module 2.26, and certain earlier versions, for Perl, as used in PostgreSQL 7.4 before 7.4.29, 8.0 before 8.0.25, 8.1 before 8.1.21, 8.2 before 8.2.17, 8.3 before 8.3.11, 8.4 before 8.4.4, and 9.0 Beta before 9.0 Beta 2, allows context-dependent attackers to bypass intended (1) Safe::reval and (2) Safe::rdo access restrictions, and inject and execute arbitrary code, via vectors involving subroutine references and delayed execution.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 8.5,
+                  "vectorString" : "AV:N/AC:M/Au:S/C:C/I:C/A:C",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

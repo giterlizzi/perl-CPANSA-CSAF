@@ -1,0 +1,187 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The rmtree function in lib/File/Path.pm in Perl 5.10 does not properly check permissions before performing a chmod, which allows local users to modify the permissions of arbitrary files via a symlink attack, a different vulnerability than CVE-2005-0448 and CVE-2004-0452.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-File-Path-2008-2827 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-File-Path-2008-2827.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-File-Path.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=487319",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=487319"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rt.cpan.org/Public/Bug/Display.html?id=36982",
+            "url" : "http://rt.cpan.org/Public/Bug/Display.html?id=36982"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/29902",
+            "url" : "http://www.securityfocus.com/bid/29902"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/30790",
+            "url" : "http://secunia.com/advisories/30790"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2008-08/msg00006.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2008-08/msg00006.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2008:165",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2008:165"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg01025.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg01025.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/30837",
+            "url" : "http://secunia.com/advisories/30837"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/31687",
+            "url" : "http://secunia.com/advisories/31687"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id?1020373",
+            "url" : "http://www.securitytracker.com/id?1020373"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/43308",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/43308"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2008-2827 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2008-2827"
+         }
+      ],
+      "title" : "File-Path vulnerability",
+      "tracking" : {
+         "current_release_date" : "2008-06-23T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-File-Path-2008-2827",
+         "initial_release_date" : "2008-06-23T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2008-06-23T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.04|<2.07",
+                  "product" : {
+                     "name" : "File-Path greater than or equal 2.04 and less than 2.07",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RICHE/File-Path"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.07",
+                  "product" : {
+                     "name" : "File-Path greater than or equal 2.07",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RICHE/File-Path"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "File-Path"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2008-2827",
+         "cwe" : {
+            "id" : "CWE-264",
+            "name" : "Permissions, Privileges, and Access Controls"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The rmtree function in lib/File/Path.pm in Perl 5.10 does not properly check permissions before performing a chmod, which allows local users to modify the permissions of arbitrary files via a symlink attack, a different vulnerability than CVE-2005-0448 and CVE-2004-0452.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,169 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Perl 5.10.1 allows context-dependent attackers to cause a denial of service (application crash) via a UTF-8 character with a large, invalid codepoint, which is not properly handled during a regular-expression match.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2009-3626 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2009-3626.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://securitytracker.com/id?1023077",
+            "url" : "http://securitytracker.com/id?1023077"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2009/3023",
+            "url" : "http://www.vupen.com/english/advisories/2009/3023"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://perl5.git.perl.org/perl.git/commit/0abd0d78a73da1c4d13b1c700526b7e5d03b32d4",
+            "url" : "http://perl5.git.perl.org/perl.git/commit/0abd0d78a73da1c4d13b1c700526b7e5d03b32d4"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/36812",
+            "url" : "http://www.securityfocus.com/bid/36812"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6225",
+            "url" : "https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6225"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rt.perl.org/rt3/Ticket/Attachment/617489/295383/",
+            "url" : "http://rt.perl.org/rt3/Ticket/Attachment/617489/295383/"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.osvdb.org/59283",
+            "url" : "http://www.osvdb.org/59283"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2009/10/23/8",
+            "url" : "http://www.openwall.com/lists/oss-security/2009/10/23/8"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/37144",
+            "url" : "http://secunia.com/advisories/37144"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rt.perl.org/rt3/Public/Bug/Display.html?id=69973",
+            "url" : "http://rt.perl.org/rt3/Public/Bug/Display.html?id=69973"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/53939",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/53939"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2009-3626 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2009-3626"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-10-29T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-perl-2009-3626",
+         "initial_release_date" : "2009-10-29T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-10-29T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=5.10.1",
+                  "product" : {
+                     "name" : "perl less than or equal 5.10.1",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2009-3626",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Perl 5.10.1 allows context-dependent attackers to cause a denial of service (application crash) via a UTF-8 character with a large, invalid codepoint, which is not properly handled during a regular-expression match.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

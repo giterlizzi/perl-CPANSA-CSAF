@@ -1,0 +1,133 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Multiple cross-site scripting (XSS) vulnerabilities in Six Apart Movable Type (MT) before 4.23 allow remote attackers to inject arbitrary web script or HTML via a (1) MTEntryAuthorUsername, (2) MTAuthorDisplayName, (3) MTEntryAuthorDisplayName, or (4) MTCommenterName field in a Profile View template; a (5) listing screen or (6) edit screen in the CMS app; (7) a TrackBack title, related to the HTML sanitization library; or (8) a user archive name (aka archive title) on a published Community Blog template.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-MT-2008-5845 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MT-2008-5845.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.movabletype.org/mt_423_change_log.html",
+            "url" : "http://www.movabletype.org/mt_423_change_log.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://jvndb.jvn.jp/ja/contents/2011/JVNDB-2011-000031.html",
+            "url" : "http://jvndb.jvn.jp/ja/contents/2011/JVNDB-2011-000031.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://jvn.jp/en/jp/JVN45658190/index.html",
+            "url" : "http://jvn.jp/en/jp/JVN45658190/index.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2008-5845 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2008-5845"
+         }
+      ],
+      "title" : "MT vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-01-05T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-MT-2008-5845",
+         "initial_release_date" : "2009-01-05T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-01-05T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<4.23",
+                  "product" : {
+                     "name" : "MT less than 4.23",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MT"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "MT"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2008-5845",
+         "cwe" : {
+            "id" : "CWE-79",
+            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Multiple cross-site scripting (XSS) vulnerabilities in Six Apart Movable Type (MT) before 4.23 allow remote attackers to inject arbitrary web script or HTML via a (1) MTEntryAuthorUsername, (2) MTAuthorDisplayName, (3) MTEntryAuthorDisplayName, or (4) MTCommenterName field in a Profile View template; a (5) listing screen or (6) edit screen in the CMS app; (7) a TrackBack title, related to the HTML sanitization library; or (8) a user archive name (aka archive title) on a published Community Blog template.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

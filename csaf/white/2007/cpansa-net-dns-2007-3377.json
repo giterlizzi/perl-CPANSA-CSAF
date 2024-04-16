@@ -1,0 +1,283 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Header.pm in Net::DNS before 0.60, a Perl module, (1) generates predictable sequence IDs with a fixed increment and (2) can use the same starting ID for all child processes of a forking server, which allows remote attackers to spoof DNS responses, as originally reported for qpsmtp and spamassassin.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Net-DNS-2007-3377 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-DNS-2007-3377.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-DNS.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.nntp.perl.org/group/perl.qpsmtpd/2006/03/msg4810.html",
+            "url" : "http://www.nntp.perl.org/group/perl.qpsmtpd/2006/03/msg4810.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rt.cpan.org/Public/Bug/Display.html?id=23961",
+            "url" : "http://rt.cpan.org/Public/Bug/Display.html?id=23961"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=245458",
+            "url" : "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=245458"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.net-dns.org/docs/Changes.html",
+            "url" : "http://www.net-dns.org/docs/Changes.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://support.avaya.com/elmodocs2/security/ASA-2007-351.htm",
+            "url" : "http://support.avaya.com/elmodocs2/security/ASA-2007-351.htm"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.gentoo.org/security/en/glsa/glsa-200708-06.xml",
+            "url" : "http://www.gentoo.org/security/en/glsa/glsa-200708-06.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDKSA-2007:146",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDKSA-2007:146"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2007-0674.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2007-0674.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2007-0675.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2007-0675.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "ftp://patches.sgi.com/support/free/security/advisories/20070701-01-P.asc",
+            "url" : "ftp://patches.sgi.com/support/free/security/advisories/20070701-01-P.asc"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.novell.com/linux/security/advisories/2007_17_sr.html",
+            "url" : "http://www.novell.com/linux/security/advisories/2007_17_sr.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.trustix.org/errata/2007/0023/",
+            "url" : "http://www.trustix.org/errata/2007/0023/"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/usn-483-1",
+            "url" : "http://www.ubuntu.com/usn/usn-483-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/24669",
+            "url" : "http://www.securityfocus.com/bid/24669"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id?1018377",
+            "url" : "http://www.securitytracker.com/id?1018377"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/25829",
+            "url" : "http://secunia.com/advisories/25829"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26014",
+            "url" : "http://secunia.com/advisories/26014"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26055",
+            "url" : "http://secunia.com/advisories/26055"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26012",
+            "url" : "http://secunia.com/advisories/26012"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26075",
+            "url" : "http://secunia.com/advisories/26075"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26211",
+            "url" : "http://secunia.com/advisories/26211"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26231",
+            "url" : "http://secunia.com/advisories/26231"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26417",
+            "url" : "http://secunia.com/advisories/26417"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26508",
+            "url" : "http://secunia.com/advisories/26508"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26543",
+            "url" : "http://secunia.com/advisories/26543"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2008/dsa-1515",
+            "url" : "http://www.debian.org/security/2008/dsa-1515"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/29354",
+            "url" : "http://secunia.com/advisories/29354"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/37053",
+            "url" : "http://osvdb.org/37053"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/35112",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/35112"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9904",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9904"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/archive/1/473871/100/0/threaded",
+            "url" : "http://www.securityfocus.com/archive/1/473871/100/0/threaded"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2007-3377 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2007-3377"
+         }
+      ],
+      "title" : "Net-DNS vulnerability",
+      "tracking" : {
+         "current_release_date" : "2007-06-25T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Net-DNS-2007-3377",
+         "initial_release_date" : "2007-06-25T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2007-06-25T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.60",
+                  "product" : {
+                     "name" : "Net-DNS less than 0.60",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/NLNETLABS/Net-DNS"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.60",
+                  "product" : {
+                     "name" : "Net-DNS greater than or equal 0.60",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/NLNETLABS/Net-DNS"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Net-DNS"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2007-3377",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Header.pm in Net::DNS before 0.60, a Perl module, (1) generates predictable sequence IDs with a fixed increment and (2) can use the same starting ID for all child processes of a forking server, which allows remote attackers to spoof DNS responses, as originally reported for qpsmtp and spamassassin.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

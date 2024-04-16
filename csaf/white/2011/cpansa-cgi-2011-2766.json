@@ -1,0 +1,142 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Usage of deprecated FCGI.pm API.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CGI-2011-2766 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CGI-2011-2766.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=68380",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=68380"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-2766",
+            "url" : "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-2766"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-2766 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-2766"
+         }
+      ],
+      "title" : "CGI vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-11-08T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CGI-2011-2766",
+         "initial_release_date" : "2011-11-08T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-11-08T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<3.56",
+                  "product" : {
+                     "name" : "CGI less than 3.56",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/LEEJO/CGI"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=3.56",
+                  "product" : {
+                     "name" : "CGI greater than or equal 3.56",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/LEEJO/CGI"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CGI"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-2766",
+         "cwe" : {
+            "id" : "CWE-287",
+            "name" : "Improper Authentication"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The FCGI (aka Fast CGI) module 0.70 through 0.73 for Perl, as used by CGI::Fast, uses environment variable values from one request during processing of a later request, which allows remote attackers to bypass authentication via crafted HTTP headers.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

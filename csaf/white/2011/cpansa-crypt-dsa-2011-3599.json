@@ -1,0 +1,153 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Crypt::DSA (aka Crypt-DSA) module 1.17 and earlier for Perl, when /dev/random is absent, uses the Data::Random module, which makes it easier for remote attackers to spoof a signature, or determine the signing key of a signed message, via a brute-force attack.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Crypt-DSA-2011-3599 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Crypt-DSA-2011-3599.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Crypt-DSA.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=71421",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=71421"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=743567",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=743567"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2011/10/05/9",
+            "url" : "http://www.openwall.com/lists/oss-security/2011/10/05/9"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2011/10/05/5",
+            "url" : "http://www.openwall.com/lists/oss-security/2011/10/05/5"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/46275",
+            "url" : "http://secunia.com/advisories/46275"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/49928",
+            "url" : "http://www.securityfocus.com/bid/49928"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/76025",
+            "url" : "http://osvdb.org/76025"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-3599 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-3599"
+         }
+      ],
+      "title" : "Crypt-DSA vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-10-10T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Crypt-DSA-2011-3599",
+         "initial_release_date" : "2011-10-10T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-10-10T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.17",
+                  "product" : {
+                     "name" : "Crypt-DSA less than or equal 1.17",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/BTROTT/Crypt-DSA"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Crypt-DSA"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-3599",
+         "cwe" : {
+            "id" : "CWE-310",
+            "name" : "Cryptographic Issues"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Crypt::DSA (aka Crypt-DSA) module 1.17 and earlier for Perl, when /dev/random is absent, uses the Data::Random module, which makes it easier for remote attackers to spoof a signature, or determine the signing key of a signed message, via a brute-force attack.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

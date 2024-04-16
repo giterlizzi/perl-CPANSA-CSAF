@@ -1,0 +1,331 @@
+#!perl
+
+use v5.34;
+
+use CSAF;
+
+use Carp;
+use Net::NVD;
+use CPAN::Meta::YAML;
+use URI::PackageURL;
+use Log::Any::Adapter ('Stderr');
+use Mojo::File qw(curfile);
+use Mojo::Util qw(trim);
+use MetaCPAN::Client;
+
+my $AUTHOR_CACHE = {};
+my $CVE_CACHE    = {};
+my @ERRORS       = ();
+
+my $nvd   = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
+my $mcpan = MetaCPAN::Client->new();
+
+my $cpansa_path    = Mojo::File->new(curfile->dirname->sibling('cpan-security-advisory/cpansa')->to_string);
+my $cpansa_baseurl = 'https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa';
+my $csaf_baseurl   = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
+
+my $operator_decode = {
+    '='  => 'equal',
+    '<'  => 'less than',
+    '<=' => 'less than or equal',
+    '>'  => 'greater than',
+    '>=' => 'greater than or equal',
+};
+
+foreach my $file ($cpansa_path->list_tree({max_depth => 10})->each) {
+
+    next unless $file =~ /\.yml$/;
+
+    my $yaml = CPAN::Meta::YAML::Load($file->slurp);
+
+ADVISORY:
+    foreach my $advisory (@{$yaml}) {
+
+        my @affected_packages = ();
+        my @fixed_packages    = ();
+        my @references        = ();
+
+        my $advisory_id       = $advisory->{id};
+        my $description       = trim($advisory->{description});
+        my $severity          = $advisory->{severity};
+        my $distribution      = $advisory->{distribution};
+        my $author            = undef;
+        my @cves              = @{$advisory->{cves}};
+        my @affected_versions = split ',', ($advisory->{affected_versions} || '');
+        my @fixed_versions    = split ',', ($advisory->{fixed_versions}    || '');
+        my $title             = join ' ', $distribution, 'vulnerability';
+        my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d')->epoch; };
+        my $cpansa_url        = join '/', $cpansa_baseurl, $file->basename;
+        my $csaf_url          = join '/', $csaf_baseurl,   "$advisory_id.json";
+
+        next if (!$advisory->{affected_versions} && !$advisory->{fixed_versions});
+        next unless $advisory->{reported};
+
+        # CPAN PURL Specification use this components:
+        #   type      --> cpan
+        #   namespace --> author
+        #   name      --> distribution
+        #
+        # TODO Get the AUTHOR of the vulnerable distribution version (not last author)
+
+        if (defined $AUTHOR_CACHE->{$distribution}) {
+            $author = $AUTHOR_CACHE->{$distribution};
+        }
+        else {
+
+            eval {
+
+                my $releases = $mcpan->release({all => [{distribution => $distribution}],});
+
+            AUTHOR:
+                foreach my $release ($releases->next) {
+                    $author = $release->author;
+                    $AUTHOR_CACHE->{$distribution} = $author;
+                    last AUTHOR if $author;
+                }
+
+            };
+
+            Carp::carp($@) if ($@);
+
+        }
+
+        my $csaf = CSAF->new;
+
+        $csaf->document->title($title);
+        $csaf->document->lang('en');
+
+        $csaf->document->category('csaf_security_advisory');
+        $csaf->document->category('csaf_informational_advisory') if (!@cves);
+
+        $csaf->document->aggregate_severity(text => $severity);
+
+        $csaf->document->notes->item(
+            category => 'description',
+            title    => 'Vulnerability Description',
+            text     => $description
+        );
+
+        # $csaf->document->publisher(
+        #     category        => 'other',
+        #     name            => 'CPAN Security WG',
+        #     namespace       => 'https://security.metacpan.org/',
+        #     contact_details => 'cpan-security@perl.org'
+        # );
+
+        $csaf->document->publisher(
+            category        => 'other',
+            name            => 'giterlizzi',
+            namespace       => 'https://github.com/giterlizzi/',
+            contact_details => 'gdt@cpan.org'
+        );
+
+        my $tracking = $csaf->document->tracking(
+            id                   => $advisory_id,
+            status               => 'final',
+            version              => '1',
+            current_release_date => $published_date,
+            initial_release_date => $published_date,
+        );
+
+        $tracking->revision_history->item(date => $published_date, summary => 'First release', number => '1');
+
+        $csaf->document->references->item(url => $csaf_url, category => 'self', summary => "$advisory_id JSON");
+
+        $csaf->document->references->item(
+            url      => $cpansa_url,
+            category => 'external',
+            summary  => 'CPAN Security Advisory (briandfoy)'
+        );
+
+        foreach my $reference (@{$advisory->{references}}) {
+            $csaf->document->references->item(url => $reference, summary => $reference, category => 'external');
+        }
+
+        if (@affected_versions || @fixed_versions) {
+
+            my $branches         = $csaf->product_tree->branches;
+            my $product_item     = $branches->item(category => 'product_name', name => $distribution);
+            my $product_branches = $product_item->branches;
+
+            my $product_idx = 1;
+
+            if (@affected_versions) {
+
+                my $vers_range   = join '|', @affected_versions;
+                my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
+                my $vers_to_name = vers_to_name(@affected_versions);
+
+                push @affected_packages, $product_id;
+
+                $product_branches->item(
+                    category => 'product_version_range',
+                    name     => "vers:cpan/$vers_range",
+                    product  => {
+                        product_id                    => $product_id,
+                        name                          => sprintf('%s %s', $distribution, $vers_to_name),
+                        product_identification_helper =>
+                            {purl => URI::PackageURL->new(type => 'cpan', namespace => $author, name => $distribution)}
+                    }
+                );
+            }
+
+            if (scalar @fixed_versions) {
+
+                my $vers_range   = join '|', @fixed_versions;
+                my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
+                my $vers_to_name = vers_to_name(@fixed_versions);
+
+                push @fixed_packages, $product_id;
+
+                $product_branches->item(
+                    category => 'product_version_range',
+                    name     => "vers:cpan/$vers_range",
+                    product  => {
+                        product_id                    => $product_id,
+                        name                          => sprintf('%s %s', $distribution, $vers_to_name),
+                        product_identification_helper =>
+                            {purl => URI::PackageURL->new(type => 'cpan', namespace => $author, name => $distribution)}
+                    }
+                );
+            }
+
+        }
+
+        my $vulns = $csaf->vulnerabilities;
+
+        foreach my $cve (@cves) {
+
+            # Add CVE link
+            $csaf->document->references->item(
+                url      => "https://nvd.nist.gov/vuln/detail/$cve",
+                category => 'external',
+                summary  => "$cve (NVD)"
+            );
+
+            my $cve_data = eval { $nvd->get($cve) };
+
+            if ($@) {
+                push @ERRORS, {type => 'Error in Net::NVD', message => $@, file => $file, id => $advisory_id};
+            }
+
+            my $weakness = $cve_data->{weaknesses} ? $cve_data->{weaknesses}[0]->{description}[0]->{value} : undef;
+
+            my $vuln = $vulns->item(cve => $cve);
+
+            $vuln->cwe(id => $weakness) if $weakness =~ /CWE-\d{2,}/;
+
+            $vuln->product_status->fixed(\@fixed_packages);
+            $vuln->product_status->known_affected(\@affected_packages);
+
+            $vuln->notes->item(
+                category => 'description',
+                title    => 'Vulnerability Description',
+                text     => trim($cve_data->{descriptions}[0]{value})
+            );
+
+            my $cvss2  = $cve_data->{metrics}->{cvssMetricV2};
+            my $cvss30 = $cve_data->{metrics}->{cvssMetricV30};
+            my $cvss31 = $cve_data->{metrics}->{cvssMetricV31};
+
+            if (($cvss2 || $cvss30 || $cvss31) && @affected_packages) {
+
+                my $scores = {products => \@affected_packages};
+
+                if ($cvss2) {
+                    my $cvss2_base_score    = $cvss2->[0]->{cvssData}->{baseScore};
+                    my $cvss2_vector_string = $cvss2->[0]->{cvssData}->{vectorString};
+                    my $cvss2_base_severity = $cvss2->[0]->{baseSeverity};
+
+                    $scores->{cvss_v2} = {
+                        baseSeverity => $cvss2_base_severity,
+                        baseScore    => $cvss2_base_score,
+                        vectorString => $cvss2_vector_string
+                    };
+                }
+
+                if ($cvss30) {
+                    my $cvss30_base_score    = $cvss30->[0]->{cvssData}->{baseScore};
+                    my $cvss30_vector_string = $cvss30->[0]->{cvssData}->{vectorString};
+                    my $cvss30_version       = $cvss30->[0]->{cvssData}->{version};
+                    my $cvss30_base_severity = $cvss30->[0]->{cvssData}->{baseSeverity};
+
+                    $scores->{cvss_v3} = {
+                        version      => $cvss30_version,
+                        baseSeverity => $cvss30_base_severity,
+                        baseScore    => $cvss30_base_score,
+                        vectorString => $cvss30_vector_string
+                    };
+                }
+
+                if ($cvss31) {
+                    my $cvss31_base_score    = $cvss31->[0]->{cvssData}->{baseScore};
+                    my $cvss31_vector_string = $cvss31->[0]->{cvssData}->{vectorString};
+                    my $cvss31_version       = $cvss31->[0]->{cvssData}->{version};
+                    my $cvss31_base_severity = $cvss31->[0]->{cvssData}->{baseSeverity};
+
+                    $scores->{cvss_v3} = {
+                        version      => $cvss31_version,
+                        baseSeverity => $cvss31_base_severity,
+                        baseScore    => $cvss31_base_score,
+                        vectorString => $cvss31_vector_string
+                    };
+                }
+
+                $vuln->scores->item(%{$scores});
+
+            }
+
+            sleep 6 unless defined $ENV{NVD_API_KEY};
+            sleep 1;
+
+        }
+
+        # say "$file => $advisory_id";
+
+        eval {
+            my $writer = $csaf->writer(directory => curfile->dirname->sibling('csaf/white')->to_string);
+            $writer->write;
+        };
+
+        if ($@) {
+            push @ERRORS, {type => 'Error in CSAF::Write', message => $@, file => $file, id => $advisory_id};
+            Carp::carp($@);
+        }
+
+    }
+}
+
+if (@ERRORS) {
+
+    say "\n\nErrors:";
+
+    foreach my $error (@ERRORS) {
+        say sprintf '- %s -- %s (%s => %s)', $error->{type}, $error->{message}, $error->{file}, $error->{id};
+    }
+
+}
+
+
+sub vers_to_name {
+
+    my @output = ();
+
+    foreach my $version (@_) {
+
+        if ($version =~ /^(>=|<=|=|<|>)(.*)/) {
+
+            my $operator = $1;
+            my $version  = $2;
+
+            my $operator_string = $operator_decode->{$operator};
+
+            push @output, "$operator_string $version";
+
+        }
+
+    }
+
+    return join ' and ', @output;
+
+}

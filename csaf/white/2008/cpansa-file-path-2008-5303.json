@@ -1,0 +1,223 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Race condition in the rmtree function in File::Path 1.08 (lib/File/Path.pm) in Perl 5.8.8 allows local users to to delete arbitrary files via a symlink attack, a different vulnerability than CVE-2005-0448, CVE-2004-0452, and CVE-2008-2827. NOTE: this is a regression error related to CVE-2005-0448. It is different from CVE-2008-5302 due to affected versions.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-File-Path-2008-5303 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-File-Path-2008-5303.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-File-Path.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286905",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286905"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2008/11/28/2",
+            "url" : "http://www.openwall.com/lists/oss-security/2008/11/28/2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286922#36",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286922#36"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.gossamer-threads.com/lists/perl/porters/233695#233695",
+            "url" : "http://www.gossamer-threads.com/lists/perl/porters/233695#233695"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2008/dsa-1678",
+            "url" : "http://www.debian.org/security/2008/dsa-1678"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/usn-700-1",
+            "url" : "http://www.ubuntu.com/usn/usn-700-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/33314",
+            "url" : "http://secunia.com/advisories/33314"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://wiki.rpath.com/Advisories:rPSA-2009-0011",
+            "url" : "http://wiki.rpath.com/Advisories:rPSA-2009-0011"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/usn-700-2",
+            "url" : "http://www.ubuntu.com/usn/usn-700-2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/32980",
+            "url" : "http://secunia.com/advisories/32980"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://support.apple.com/kb/HT4077",
+            "url" : "http://support.apple.com/kb/HT4077"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.apple.com/archives/security-announce/2010//Mar/msg00001.html",
+            "url" : "http://lists.apple.com/archives/security-announce/2010//Mar/msg00001.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2010-0458.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2010-0458.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/40052",
+            "url" : "http://secunia.com/advisories/40052"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:116",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2010:116"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/47044",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/47044"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9699",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9699"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6680",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A6680"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/archive/1/500210/100/0/threaded",
+            "url" : "http://www.securityfocus.com/archive/1/500210/100/0/threaded"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2008-5303 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2008-5303"
+         }
+      ],
+      "title" : "File-Path vulnerability",
+      "tracking" : {
+         "current_release_date" : "2008-12-01T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-File-Path-2008-5303",
+         "initial_release_date" : "2008-12-01T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2008-12-01T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.08",
+                  "product" : {
+                     "name" : "File-Path less than or equal 1.08",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RICHE/File-Path"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "File-Path"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2008-5303",
+         "cwe" : {
+            "id" : "CWE-362",
+            "name" : "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Race condition in the rmtree function in File::Path 1.08 (lib/File/Path.pm) in Perl 5.8.8 allows local users to to delete arbitrary files via a symlink attack, a different vulnerability than CVE-2005-0448, CVE-2004-0452, and CVE-2008-2827. NOTE: this is a regression error related to CVE-2005-0448. It is different from CVE-2008-5302 due to affected versions.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.9,
+                  "vectorString" : "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,88 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "critical"
+      },
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "This release reverts the addition of stream classes (added in 7.83), which have unfortunately resulted in many Mojolicious applications becoming unstable. While there are no known exploits yet, we've chosen to err on the side of cautiousness and will classify this as a security issue.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Mojolicious-2018-04 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mojolicious-2018-04.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mojolicious/mojo/commit/61f6cbf22c7bf8eb4787bd1014d91ee2416c73e7",
+            "url" : "https://github.com/mojolicious/mojo/commit/61f6cbf22c7bf8eb4787bd1014d91ee2416c73e7"
+         }
+      ],
+      "title" : "Mojolicious vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-08-09T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Mojolicious-2018-04",
+         "initial_release_date" : "2018-08-09T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-08-09T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>7.83|<7.92",
+                  "product" : {
+                     "name" : "Mojolicious greater than 7.83 and less than 7.92",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SRI/Mojolicious"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Mojolicious"
+         }
+      ]
+   }
+}

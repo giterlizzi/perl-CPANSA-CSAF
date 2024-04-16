@@ -1,0 +1,251 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "SQLite 3.25.2, when queries are run on a table with a malformed PRIMARY KEY, allows remote attackers to cause a denial of service (application crash) by leveraging the ability to run arbitrary SQL statements (such as in certain WebSQL use cases).",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBD-SQLite-2018-20505 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2018-20505.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209451",
+            "url" : "https://support.apple.com/kb/HT209451"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209450",
+            "url" : "https://support.apple.com/kb/HT209450"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209448",
+            "url" : "https://support.apple.com/kb/HT209448"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209447",
+            "url" : "https://support.apple.com/kb/HT209447"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209446",
+            "url" : "https://support.apple.com/kb/HT209446"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209443",
+            "url" : "https://support.apple.com/kb/HT209443"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://sqlite.org/src/info/1a84668dcfdebaf12415d",
+            "url" : "https://sqlite.org/src/info/1a84668dcfdebaf12415d"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/39",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/39"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/33",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/33"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/32",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/32"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/31",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/31"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/29",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/29"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/28",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/28"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/106698",
+            "url" : "http://www.securityfocus.com/bid/106698"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/69",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/69"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/68",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/68"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/67",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/67"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/66",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/66"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/64",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/64"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/62",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/62"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20190502-0004/",
+            "url" : "https://security.netapp.com/advisory/ntap-20190502-0004/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/4019-1/",
+            "url" : "https://usn.ubuntu.com/4019-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2018-20505 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2018-20505"
+         }
+      ],
+      "title" : "DBD-SQLite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-04-03T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBD-SQLite-2018-20505",
+         "initial_release_date" : "2019-04-03T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-04-03T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/=1.59_02",
+                  "product" : {
+                     "name" : "DBD-SQLite equal 1.59_02",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.59_03",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.59_03",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2018-20505",
+         "cwe" : {
+            "id" : "CWE-89",
+            "name" : "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "SQLite 3.25.2, when queries are run on a table with a malformed PRIMARY KEY, allows remote attackers to cause a denial of service (application crash) by leveraging the ability to run arbitrary SQL statements (such as in certain WebSQL use cases).",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

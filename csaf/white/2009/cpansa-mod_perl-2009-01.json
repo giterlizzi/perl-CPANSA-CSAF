@@ -1,0 +1,137 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "XSS in Apache::Status.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-mod_perl-2009-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-mod_perl-2009-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-mod_perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/mod_perl",
+            "url" : "https://metacpan.org/changes/distribution/mod_perl"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2009-0796 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2009-0796"
+         }
+      ],
+      "title" : "mod_perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-05-11T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-mod_perl-2009-01",
+         "initial_release_date" : "2009-05-11T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-05-11T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.31",
+                  "product" : {
+                     "name" : "mod_perl less than 1.31",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SHAY/mod_perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.31",
+                  "product" : {
+                     "name" : "mod_perl greater than or equal 1.31",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SHAY/mod_perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "mod_perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2009-0796",
+         "cwe" : {
+            "id" : "CWE-79",
+            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Cross-site scripting (XSS) vulnerability in Status.pm in Apache::Status and Apache2::Status in mod_perl1 and mod_perl2 for the Apache HTTP Server, when /perl-status is accessible, allows remote attackers to inject arbitrary web script or HTML via the URI.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 2.6,
+                  "vectorString" : "AV:N/AC:H/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

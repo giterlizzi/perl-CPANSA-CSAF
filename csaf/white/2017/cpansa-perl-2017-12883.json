@@ -1,0 +1,191 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "critical"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Buffer overflow in the S_grok_bslash_N function in regcomp.c in Perl 5 before 5.24.3-RC1 and 5.26.x before 5.26.1-RC1 allows remote attackers to disclose sensitive information or cause a denial of service (application crash) via a crafted regular expression with an invalid '\\\\N{U+...}' escape.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2017-12883 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2017-12883.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.26.1-RC1",
+            "url" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.26.1-RC1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.24.3-RC1",
+            "url" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.24.3-RC1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perl5.git.perl.org/perl.git/commitdiff/2be4edede4ae226e2eebd4eff28cedd2041f300f#patch1",
+            "url" : "https://perl5.git.perl.org/perl.git/commitdiff/2be4edede4ae226e2eebd4eff28cedd2041f300f#patch1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1492093",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1492093"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/100852",
+            "url" : "http://www.securityfocus.com/bid/100852"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://mirror.cucumberlinux.com/cucumber/cucumber-1.0/source/lang-base/perl/patches/CVE-2017-12883.patch",
+            "url" : "http://mirror.cucumberlinux.com/cucumber/cucumber-1.0/source/lang-base/perl/patches/CVE-2017-12883.patch"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.perl.org/Public/Bug/Display.html?id=131598",
+            "url" : "https://rt.perl.org/Public/Bug/Display.html?id=131598"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2017/dsa-3982",
+            "url" : "http://www.debian.org/security/2017/dsa-3982"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20180426-0001/",
+            "url" : "https://security.netapp.com/advisory/ntap-20180426-0001/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpujul2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2017-12883 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2017-12883"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-09-19T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-perl-2017-12883",
+         "initial_release_date" : "2017-09-19T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-09-19T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<5.26.1",
+                  "product" : {
+                     "name" : "perl less than 5.26.1",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.26.1",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.26.1",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2017-12883",
+         "cwe" : {
+            "id" : "CWE-119",
+            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Buffer overflow in the S_grok_bslash_N function in regcomp.c in Perl 5 before 5.24.3-RC1 and 5.26.x before 5.26.1-RC1 allows remote attackers to disclose sensitive information or cause a denial of service (application crash) via a crafted regular expression with an invalid '\\N{U+...}' escape.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.4,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 9.1,
+                  "baseSeverity" : "CRITICAL",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

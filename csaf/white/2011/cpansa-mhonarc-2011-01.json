@@ -1,0 +1,137 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Improper escaping of certain HTML sequences (XSS).",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-MHonArc-2011-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MHonArc-2011-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MHonArc.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/MHonArc",
+            "url" : "https://metacpan.org/changes/distribution/MHonArc"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-4524 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-4524"
+         }
+      ],
+      "title" : "MHonArc vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-01-09T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-MHonArc-2011-01",
+         "initial_release_date" : "2011-01-09T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-01-09T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.6.17",
+                  "product" : {
+                     "name" : "MHonArc less than 2.6.17",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/EHOOD/MHonArc"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.6.17",
+                  "product" : {
+                     "name" : "MHonArc greater than or equal 2.6.17",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/EHOOD/MHonArc"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "MHonArc"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-4524",
+         "cwe" : {
+            "id" : "CWE-79",
+            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Cross-site scripting (XSS) vulnerability in lib/mhtxthtml.pl in MHonArc 2.6.16 allows remote attackers to inject arbitrary web script or HTML via a malformed start tag and end tag for a SCRIPT element, as demonstrated by <scr<body>ipt> and </scr<body>ipt> sequences.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

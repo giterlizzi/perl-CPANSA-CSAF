@@ -1,0 +1,149 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Movable Type before 4.38, 5.0x before 5.07, and 5.1x before 5.13 allows remote attackers to take control of sessions via unspecified vectors related to the (1) commenting feature and (2) community script.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-MT-2012-0320 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MT-2012-0320.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.movabletype.org/2012/02/movable_type_513_507_and_438_security_updates.html",
+            "url" : "http://www.movabletype.org/2012/02/movable_type_513_507_and_438_security_updates.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.movabletype.org/documentation/appendices/release-notes/513.html",
+            "url" : "http://www.movabletype.org/documentation/appendices/release-notes/513.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://jvndb.jvn.jp/jvndb/JVNDB-2012-000018",
+            "url" : "http://jvndb.jvn.jp/jvndb/JVNDB-2012-000018"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://jvn.jp/en/jp/JVN20083397/index.html",
+            "url" : "http://jvn.jp/en/jp/JVN20083397/index.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id?1026738",
+            "url" : "http://www.securitytracker.com/id?1026738"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/52138",
+            "url" : "http://www.securityfocus.com/bid/52138"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2012/dsa-2423",
+            "url" : "http://www.debian.org/security/2012/dsa-2423"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2012-0320 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-0320"
+         }
+      ],
+      "title" : "MT vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-03-03T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-MT-2012-0320",
+         "initial_release_date" : "2012-03-03T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-03-03T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/ARRAY(0x6e8d110)",
+                  "product" : {
+                     "name" : "MT ",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MT"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "MT"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2012-0320",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Movable Type before 4.38, 5.0x before 5.07, and 5.1x before 5.13 allows remote attackers to take control of sessions via unspecified vectors related to the (1) commenting feature and (2) community script.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

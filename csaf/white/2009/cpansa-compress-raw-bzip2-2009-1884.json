@@ -1,0 +1,177 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Off-by-one error in the bzinflate function in Bzip2.xs in the Compress-Raw-Bzip2 module before 2.018 for Perl allows context-dependent attackers to cause a denial of service (application hang or crash) via a crafted bzip2 compressed stream that triggers a buffer overflow, a related issue to CVE-2009-1391.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Compress-Raw-Bzip2-2009-1884 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Compress-Raw-Bzip2-2009-1884.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Compress-Raw-Bzip2.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://security.gentoo.org/glsa/glsa-200908-07.xml",
+            "url" : "http://security.gentoo.org/glsa/glsa-200908-07.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.gentoo.org/show_bug.cgi?id=281955",
+            "url" : "https://bugs.gentoo.org/show_bug.cgi?id=281955"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2009-August/msg00999.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2009-August/msg00999.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2009-August/msg00982.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2009-August/msg00982.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/36082",
+            "url" : "http://www.securityfocus.com/bid/36082"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/36386",
+            "url" : "http://secunia.com/advisories/36386"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=518278",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=518278"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/36415",
+            "url" : "http://secunia.com/advisories/36415"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/52628",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/52628"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2009-1884 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2009-1884"
+         }
+      ],
+      "title" : "Compress-Raw-Bzip2 vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-08-19T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Compress-Raw-Bzip2-2009-1884",
+         "initial_release_date" : "2009-08-19T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-08-19T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.018",
+                  "product" : {
+                     "name" : "Compress-Raw-Bzip2 less than 2.018",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/PMQS/Compress-Raw-Bzip2"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.018",
+                  "product" : {
+                     "name" : "Compress-Raw-Bzip2 greater than or equal 2.018",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/PMQS/Compress-Raw-Bzip2"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Compress-Raw-Bzip2"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2009-1884",
+         "cwe" : {
+            "id" : "CWE-189",
+            "name" : "Numeric Errors"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Off-by-one error in the bzinflate function in Bzip2.xs in the Compress-Raw-Bzip2 module before 2.018 for Perl allows context-dependent attackers to cause a denial of service (application hang or crash) via a crafted bzip2 compressed stream that triggers a buffer overflow, a related issue to CVE-2009-1391.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

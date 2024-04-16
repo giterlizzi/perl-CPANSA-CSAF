@@ -1,0 +1,208 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Format string vulnerability in the log function in Net::Server 0.87 and earlier, as used in Postfix Greylisting Policy Server (Postgrey) 1.18 and earlier, and possibly other products, allows remote attackers to cause a denial of service (crash) via format string specifiers that are not properly handled before being sent to syslog, as demonstrated using sender addresses to Postgrey.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Net-Server-2005-1127 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-Server-2005-1127.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-Server.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.ee.ethz.ch/postgrey/msg00627.html",
+            "url" : "http://lists.ee.ethz.ch/postgrey/msg00627.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.ee.ethz.ch/postgrey/msg00630.html",
+            "url" : "http://lists.ee.ethz.ch/postgrey/msg00630.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.ee.ethz.ch/postgrey/msg00647.html",
+            "url" : "http://lists.ee.ethz.ch/postgrey/msg00647.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.osvdb.org/15517",
+            "url" : "http://www.osvdb.org/15517"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/14958",
+            "url" : "http://secunia.com/advisories/14958"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2006/dsa-1121",
+            "url" : "http://www.debian.org/security/2006/dsa-1121"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2006/dsa-1122",
+            "url" : "http://www.debian.org/security/2006/dsa-1122"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/21164",
+            "url" : "http://secunia.com/advisories/21164"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/21152",
+            "url" : "http://secunia.com/advisories/21152"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/21149",
+            "url" : "http://secunia.com/advisories/21149"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.gentoo.org/security/en/glsa/glsa-200608-18.xml",
+            "url" : "http://www.gentoo.org/security/en/glsa/glsa-200608-18.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/13193",
+            "url" : "http://www.securityfocus.com/bid/13193"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/21452",
+            "url" : "http://secunia.com/advisories/21452"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDKSA-2006:131",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDKSA-2006:131"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://marc.info/?l=full-disclosure&m=111354538331167&w=2",
+            "url" : "http://marc.info/?l=full-disclosure&m=111354538331167&w=2"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/20108",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/20108"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2005-1127 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2005-1127"
+         }
+      ],
+      "title" : "Net-Server vulnerability",
+      "tracking" : {
+         "current_release_date" : "2005-05-02T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Net-Server-2005-1127",
+         "initial_release_date" : "2005-05-02T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2005-05-02T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=0.87",
+                  "product" : {
+                     "name" : "Net-Server less than or equal 0.87",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RHANDOM/Net-Server"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>0.87",
+                  "product" : {
+                     "name" : "Net-Server greater than 0.87",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RHANDOM/Net-Server"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Net-Server"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2005-1127",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Format string vulnerability in the log function in Net::Server 0.87 and earlier, as used in Postfix Greylisting Policy Server (Postgrey) 1.18 and earlier, and possibly other products, allows remote attackers to cause a denial of service (crash) via format string specifiers that are not properly handled before being sent to syslog, as demonstrated using sender addresses to Postgrey.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

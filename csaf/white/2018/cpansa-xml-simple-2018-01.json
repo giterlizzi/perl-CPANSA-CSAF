@@ -1,0 +1,101 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The No. 4 item on the OWASP top 10 is external XML entities. When using XML::Parser, XML::Simple is currently vulnerable by default.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-XML-Simple-2018-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-XML-Simple-2018-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-XML-Simple.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/XML-Simple/changes",
+            "url" : "https://metacpan.org/dist/XML-Simple/changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/grantm/xml-simple/pull/8",
+            "url" : "https://github.com/grantm/xml-simple/pull/8"
+         }
+      ],
+      "title" : "XML-Simple vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-02-18T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-XML-Simple-2018-01",
+         "initial_release_date" : "2018-02-18T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-02-18T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.25",
+                  "product" : {
+                     "name" : "XML-Simple less than 2.25",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GRANTM/XML-Simple"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.25",
+                  "product" : {
+                     "name" : "XML-Simple greater than or equal 2.25",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GRANTM/XML-Simple"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "XML-Simple"
+         }
+      ]
+   }
+}

@@ -1,0 +1,138 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Directory traversal vulnerability in the _serve_request_multiple function in lib/Perlbal/ClientHTTPBase.pm in Perlbal before 1.70, when concat get is enabled, allows remote attackers to read arbitrary files in a parent directory via a directory traversal sequence in an unspecified parameter.  NOTE: some of these details are obtained from third party information.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Perlbal-2008-1652 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Perlbal-2008-1652.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Perlbal.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://search.cpan.org/src/BRADFITZ/Perlbal-1.70/CHANGES",
+            "url" : "http://search.cpan.org/src/BRADFITZ/Perlbal-1.70/CHANGES"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/29565",
+            "url" : "http://secunia.com/advisories/29565"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2008/1045/references",
+            "url" : "http://www.vupen.com/english/advisories/2008/1045/references"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/41540",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/41540"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2008-1652 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2008-1652"
+         }
+      ],
+      "title" : "Perlbal vulnerability",
+      "tracking" : {
+         "current_release_date" : "2008-04-02T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Perlbal-2008-1652",
+         "initial_release_date" : "2008-04-02T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2008-04-02T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.70",
+                  "product" : {
+                     "name" : "Perlbal less than 1.70",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/BRADFITZ/Perlbal"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Perlbal"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2008-1652",
+         "cwe" : {
+            "id" : "CWE-22",
+            "name" : "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Directory traversal vulnerability in the _serve_request_multiple function in lib/Perlbal/ClientHTTPBase.pm in Perlbal before 1.70, when concat get is enabled, allows remote attackers to read arbitrary files in a parent directory via a directory traversal sequence in an unspecified parameter.  NOTE: some of these details are obtained from third party information.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

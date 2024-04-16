@@ -1,0 +1,263 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Net::DNS before 0.60, a Perl module, allows remote attackers to cause a denial of service (stack consumption) via a malformed compressed DNS packet with self-referencing pointers, which triggers an infinite loop.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Net-DNS-2007-3409 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-DNS-2007-3409.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-DNS.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rt.cpan.org/Public/Bug/Display.html?id=27285",
+            "url" : "http://rt.cpan.org/Public/Bug/Display.html?id=27285"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.net-dns.org/docs/Changes.html",
+            "url" : "http://www.net-dns.org/docs/Changes.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.gentoo.org/security/en/glsa/glsa-200708-06.xml",
+            "url" : "http://www.gentoo.org/security/en/glsa/glsa-200708-06.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDKSA-2007:146",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDKSA-2007:146"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2007-0674.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2007-0674.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "ftp://patches.sgi.com/support/free/security/advisories/20070701-01-P.asc",
+            "url" : "ftp://patches.sgi.com/support/free/security/advisories/20070701-01-P.asc"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.novell.com/linux/security/advisories/2007_17_sr.html",
+            "url" : "http://www.novell.com/linux/security/advisories/2007_17_sr.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.trustix.org/errata/2007/0023/",
+            "url" : "http://www.trustix.org/errata/2007/0023/"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/usn-483-1",
+            "url" : "http://www.ubuntu.com/usn/usn-483-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/24669",
+            "url" : "http://www.securityfocus.com/bid/24669"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id?1018376",
+            "url" : "http://www.securitytracker.com/id?1018376"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/25829",
+            "url" : "http://secunia.com/advisories/25829"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26014",
+            "url" : "http://secunia.com/advisories/26014"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26055",
+            "url" : "http://secunia.com/advisories/26055"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26012",
+            "url" : "http://secunia.com/advisories/26012"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26075",
+            "url" : "http://secunia.com/advisories/26075"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26211",
+            "url" : "http://secunia.com/advisories/26211"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26231",
+            "url" : "http://secunia.com/advisories/26231"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26417",
+            "url" : "http://secunia.com/advisories/26417"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/26543",
+            "url" : "http://secunia.com/advisories/26543"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2008/dsa-1515",
+            "url" : "http://www.debian.org/security/2008/dsa-1515"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/29354",
+            "url" : "http://secunia.com/advisories/29354"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/37054",
+            "url" : "http://osvdb.org/37054"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10595",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10595"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/archive/1/473871/100/0/threaded",
+            "url" : "http://www.securityfocus.com/archive/1/473871/100/0/threaded"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2007-3409 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2007-3409"
+         }
+      ],
+      "title" : "Net-DNS vulnerability",
+      "tracking" : {
+         "current_release_date" : "2007-06-26T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Net-DNS-2007-3409",
+         "initial_release_date" : "2007-06-26T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2007-06-26T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.60",
+                  "product" : {
+                     "name" : "Net-DNS less than 0.60",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/NLNETLABS/Net-DNS"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.60",
+                  "product" : {
+                     "name" : "Net-DNS greater than or equal 0.60",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/NLNETLABS/Net-DNS"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Net-DNS"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2007-3409",
+         "cwe" : {
+            "id" : "CWE-674",
+            "name" : "Uncontrolled Recursion"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Net::DNS before 0.60, a Perl module, allows remote attackers to cause a denial of service (stack consumption) via a malformed compressed DNS packet with self-referencing pointers, which triggers an infinite loop.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,167 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Buffer overflow in the skip-scan optimization in SQLite 3.8.2 allows remote attackers to cause a denial of service (crash) via crafted SQL statements.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBD-SQLite-2013-7443 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2013-7443.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.sqlite.org/src/info/520070ec7fbaac73eda0e0123596b7bb3e9a6897",
+            "url" : "https://www.sqlite.org/src/info/520070ec7fbaac73eda0e0123596b7bb3e9a6897"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.launchpad.net/ubuntu/+source/sqlite3/+bug/1448758",
+            "url" : "https://bugs.launchpad.net/ubuntu/+source/sqlite3/+bug/1448758"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.sqlite.org/src/info/ac5852d6403c9c9628ca0aa7be135c702f000698",
+            "url" : "https://www.sqlite.org/src/info/ac5852d6403c9c9628ca0aa7be135c702f000698"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://ubuntu.com/usn/usn-2698-1",
+            "url" : "http://ubuntu.com/usn/usn-2698-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2015/07/14/5",
+            "url" : "http://www.openwall.com/lists/oss-security/2015/07/14/5"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2015/07/15/4",
+            "url" : "http://www.openwall.com/lists/oss-security/2015/07/15/4"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/76089",
+            "url" : "http://www.securityfocus.com/bid/76089"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2013-7443 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2013-7443"
+         }
+      ],
+      "title" : "DBD-SQLite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2015-08-12T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBD-SQLite-2013-7443",
+         "initial_release_date" : "2015-08-12T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2015-08-12T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/=1.47_01",
+                  "product" : {
+                     "name" : "DBD-SQLite equal 1.47_01",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.47_02",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.47_02",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2013-7443",
+         "cwe" : {
+            "id" : "CWE-119",
+            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Buffer overflow in the skip-scan optimization in SQLite 3.8.2 allows remote attackers to cause a denial of service (crash) via crafted SQL statements.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

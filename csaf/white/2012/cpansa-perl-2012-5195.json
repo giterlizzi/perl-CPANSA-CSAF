@@ -1,0 +1,212 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Heap-based buffer overflow in the Perl_repeatcpy function in util.c in Perl 5.12.x before 5.12.5, 5.14.x before 5.14.3, and 5.15.x before 15.15.5 allows context-dependent attackers to cause a denial of service (memory consumption and crash) or possibly execute arbitrary code via the 'x' string repeat operator.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2012-5195 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2012-5195.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://perl5.git.perl.org/perl.git/commit/2709980d5a193ce6f3a16f0d19879a6560dcde44",
+            "url" : "http://perl5.git.perl.org/perl.git/commit/2709980d5a193ce6f3a16f0d19879a6560dcde44"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.nntp.perl.org/group/perl.perl5.porters/2012/10/msg193886.html",
+            "url" : "http://www.nntp.perl.org/group/perl.perl5.porters/2012/10/msg193886.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/56287",
+            "url" : "http://www.securityfocus.com/bid/56287"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2012/10/27/1",
+            "url" : "http://www.openwall.com/lists/oss-security/2012/10/27/1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/51457",
+            "url" : "http://secunia.com/advisories/51457"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2012/10/26/2",
+            "url" : "http://www.openwall.com/lists/oss-security/2012/10/26/2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-1643-1",
+            "url" : "http://www.ubuntu.com/usn/USN-1643-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2012/dsa-2586",
+            "url" : "http://www.debian.org/security/2012/dsa-2586"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rhn.redhat.com/errata/RHSA-2013-0685.html",
+            "url" : "http://rhn.redhat.com/errata/RHSA-2013-0685.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/55314",
+            "url" : "http://secunia.com/advisories/55314"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2013:113",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2013:113"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://wiki.mageia.org/en/Support/Advisories/MGASA-2012-0352",
+            "url" : "https://wiki.mageia.org/en/Support/Advisories/MGASA-2012-0352"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html",
+            "url" : "http://www.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10673",
+            "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10673"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2012-5195 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-5195"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-12-18T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-perl-2012-5195",
+         "initial_release_date" : "2012-12-18T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-12-18T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<5.16.0",
+                  "product" : {
+                     "name" : "perl less than 5.16.0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.16.0",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.16.0",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2012-5195",
+         "cwe" : {
+            "id" : "CWE-119",
+            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Heap-based buffer overflow in the Perl_repeatcpy function in util.c in Perl 5.12.x before 5.12.5, 5.14.x before 5.14.3, and 5.15.x before 15.15.5 allows context-dependent attackers to cause a denial of service (memory consumption and crash) or possibly execute arbitrary code via the 'x' string repeat operator.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

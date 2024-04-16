@@ -1,0 +1,142 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Insecure dependency on Email::Address.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-App-Github-Email-2018-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-App-Github-Email-2018-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-App-Github-Email.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/App-Github-Email",
+            "url" : "https://metacpan.org/changes/distribution/App-Github-Email"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/faraco/App-Github-Email/commit/b7f052280d1c8ae97bdefc106ca3cbba4aea7213",
+            "url" : "https://github.com/faraco/App-Github-Email/commit/b7f052280d1c8ae97bdefc106ca3cbba4aea7213"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2015-7686 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2015-7686"
+         }
+      ],
+      "title" : "App-Github-Email vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-01-20T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-App-Github-Email-2018-01",
+         "initial_release_date" : "2018-01-20T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-01-20T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.3.3",
+                  "product" : {
+                     "name" : "App-Github-Email less than 0.3.3",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/FARACO/App-Github-Email"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.3.3",
+                  "product" : {
+                     "name" : "App-Github-Email greater than or equal 0.3.3",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/FARACO/App-Github-Email"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "App-Github-Email"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2015-7686",
+         "cwe" : {
+            "id" : "CWE-20",
+            "name" : "Improper Input Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Algorithmic complexity vulnerability in Address.pm in the Email-Address module 1.908 and earlier for Perl allows remote attackers to cause a denial of service (CPU consumption) via a crafted string containing a list of e-mail addresses in conjunction with parenthesis characters that can be associated with nested comments. NOTE: the default configuration in 1.908 mitigates this vulnerability but misparses certain realistic comments.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.8,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

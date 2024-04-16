@@ -1,0 +1,148 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The gen_class_pod implementation in lib/Config/Model/Utils/GenClassPod.pm in Config-Model (aka libconfig-model-perl) before 2.102 has a dangerous \"use lib\" line, which allows remote attackers to have an unspecified impact via a crafted Debian package file.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Config-Model-2017-03 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Config-Model-2017-03.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Config-Model.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Config-Model",
+            "url" : "https://metacpan.org/changes/distribution/Config-Model"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/dod38fr/config-model/commit/9bd64d9ec6c0939166a2216a37d58dd19a725951",
+            "url" : "https://github.com/dod38fr/config-model/commit/9bd64d9ec6c0939166a2216a37d58dd19a725951"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2017-0373 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2017-0373"
+         }
+      ],
+      "title" : "Config-Model vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-05-10T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Config-Model-2017-03",
+         "initial_release_date" : "2017-05-10T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-05-10T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.102",
+                  "product" : {
+                     "name" : "Config-Model less than 2.102",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DDUMONT/Config-Model"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.102",
+                  "product" : {
+                     "name" : "Config-Model greater than or equal 2.102",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DDUMONT/Config-Model"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Config-Model"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2017-0373",
+         "cwe" : {
+            "id" : "CWE-20",
+            "name" : "Improper Input Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The gen_class_pod implementation in lib/Config/Model/Utils/GenClassPod.pm in Config-Model (aka libconfig-model-perl) before 2.102 has a dangerous \"use lib\" line, which allows remote attackers to have an unspecified impact via a crafted Debian package file.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.3,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

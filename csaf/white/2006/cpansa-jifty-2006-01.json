@@ -1,0 +1,96 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Jifty did not protect users against a class of remote data access vulnerability. If an attacker knew the structure of your local filesystem and you were using the \"standalone\" webserver in production, the attacker could gain read only access to local files.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Jifty-2006-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Jifty-2006-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Jifty.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/Jifty/changes",
+            "url" : "https://metacpan.org/dist/Jifty/changes"
+         }
+      ],
+      "title" : "Jifty vulnerability",
+      "tracking" : {
+         "current_release_date" : "2006-07-06T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Jifty-2006-01",
+         "initial_release_date" : "2006-07-06T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2006-07-06T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.60706",
+                  "product" : {
+                     "name" : "Jifty less than 0.60706",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ALEXMV/Jifty"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.60706",
+                  "product" : {
+                     "name" : "Jifty greater than or equal 0.60706",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ALEXMV/Jifty"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Jifty"
+         }
+      ]
+   }
+}

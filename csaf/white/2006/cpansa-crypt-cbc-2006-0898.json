@@ -1,0 +1,203 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Crypt::CBC Perl module 2.16 and earlier, when running in RandomIV mode, uses an initialization vector (IV) of 8 bytes, which results in weaker encryption when used with a cipher that requires a larger block size than 8 bytes, such as Rijndael.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Crypt-CBC-2006-0898 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Crypt-CBC-2006-0898.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Crypt-CBC.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Crypt-CBC",
+            "url" : "https://metacpan.org/changes/distribution/Crypt-CBC"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/16802",
+            "url" : "http://www.securityfocus.com/bid/16802"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/18755",
+            "url" : "http://secunia.com/advisories/18755"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2006/dsa-996",
+            "url" : "http://www.debian.org/security/2006/dsa-996"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/19187",
+            "url" : "http://secunia.com/advisories/19187"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.gentoo.org/security/en/glsa/glsa-200603-15.xml",
+            "url" : "http://www.gentoo.org/security/en/glsa/glsa-200603-15.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/19303",
+            "url" : "http://secunia.com/advisories/19303"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.novell.com/linux/security/advisories/2006_38_security.html",
+            "url" : "http://www.novell.com/linux/security/advisories/2006_38_security.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/20899",
+            "url" : "http://secunia.com/advisories/20899"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://securityreason.com/securityalert/488",
+            "url" : "http://securityreason.com/securityalert/488"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2008-0261.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2008-0261.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/31493",
+            "url" : "http://secunia.com/advisories/31493"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rhn.redhat.com/errata/RHSA-2008-0630.html",
+            "url" : "http://rhn.redhat.com/errata/RHSA-2008-0630.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/24954",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/24954"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/archive/1/425966/100/0/threaded",
+            "url" : "http://www.securityfocus.com/archive/1/425966/100/0/threaded"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2006-0898 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2006-0898"
+         }
+      ],
+      "title" : "Crypt-CBC vulnerability",
+      "tracking" : {
+         "current_release_date" : "2006-02-25T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Crypt-CBC-2006-0898",
+         "initial_release_date" : "2006-02-25T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2006-02-25T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.17",
+                  "product" : {
+                     "name" : "Crypt-CBC less than 2.17",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/LDS/Crypt-CBC"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.17",
+                  "product" : {
+                     "name" : "Crypt-CBC greater than or equal 2.17",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/LDS/Crypt-CBC"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Crypt-CBC"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2006-0898",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Crypt::CBC Perl module 2.16 and earlier, when running in RandomIV mode, uses an initialization vector (IV) of 8 bytes, which results in weaker encryption when used with a cipher that requires a larger block size than 8 bytes, such as Rijndael.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 2.6,
+                  "vectorString" : "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

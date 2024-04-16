@@ -1,0 +1,187 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Heap-based buffer overflow in the BMP reader (bmp.c) in Imager perl module (libimager-perl) 0.45 through 0.56 allows remote attackers to cause a denial of service (application crash) and possibly execute arbitrary code via crafted 8-bit/pixel compressed BMP files.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Imager-2007-2459 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Imager-2007-2459.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Imager.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://imager.perl.org/a/65.html",
+            "url" : "http://imager.perl.org/a/65.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rt.cpan.org/Public/Bug/Display.html?id=26811",
+            "url" : "http://rt.cpan.org/Public/Bug/Display.html?id=26811"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=421582",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=421582"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2008/dsa-1498",
+            "url" : "http://www.debian.org/security/2008/dsa-1498"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/23711",
+            "url" : "http://www.securityfocus.com/bid/23711"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/25038",
+            "url" : "http://secunia.com/advisories/25038"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/28868",
+            "url" : "http://secunia.com/advisories/28868"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/39846",
+            "url" : "http://osvdb.org/39846"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2007/1587",
+            "url" : "http://www.vupen.com/english/advisories/2007/1587"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/35470",
+            "url" : "http://osvdb.org/35470"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/34010",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/34010"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2007-2459 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2007-2459"
+         }
+      ],
+      "title" : "Imager vulnerability",
+      "tracking" : {
+         "current_release_date" : "2007-05-02T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Imager-2007-2459",
+         "initial_release_date" : "2007-05-02T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2007-05-02T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.21|<=0.56",
+                  "product" : {
+                     "name" : "Imager greater than or equal 0.21 and less than or equal 0.56",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TONYC/Imager"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.57",
+                  "product" : {
+                     "name" : "Imager greater than or equal 0.57",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TONYC/Imager"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Imager"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2007-2459",
+         "cwe" : {
+            "id" : "CWE-119",
+            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Heap-based buffer overflow in the BMP reader (bmp.c) in Imager perl module (libimager-perl) 0.45 through 0.56 allows remote attackers to cause a denial of service (application crash) and possibly execute arbitrary code via crafted 8-bit/pixel compressed BMP files.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.8,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

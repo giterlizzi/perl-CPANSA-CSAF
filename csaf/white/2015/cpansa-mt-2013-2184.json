@@ -1,0 +1,138 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Movable Type before 5.2.6 does not properly use the Storable::thaw function, which allows remote attackers to execute arbitrary code via the comment_state parameter.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-MT-2013-2184 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MT-2013-2184.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://movabletype.org/documentation/appendices/release-notes/movable-type-526-release-notes.html",
+            "url" : "https://movabletype.org/documentation/appendices/release-notes/movable-type-526-release-notes.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2015/dsa-3183",
+            "url" : "http://www.debian.org/security/2015/dsa-3183"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/oss-sec/2013/q2/568",
+            "url" : "http://seclists.org/oss-sec/2013/q2/568"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/oss-sec/2013/q2/560",
+            "url" : "http://seclists.org/oss-sec/2013/q2/560"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2013-2184 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2013-2184"
+         }
+      ],
+      "title" : "MT vulnerability",
+      "tracking" : {
+         "current_release_date" : "2015-03-27T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-MT-2013-2184",
+         "initial_release_date" : "2015-03-27T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2015-03-27T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<5.2.6",
+                  "product" : {
+                     "name" : "MT less than 5.2.6",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MT"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "MT"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2013-2184",
+         "cwe" : {
+            "id" : "CWE-17",
+            "name" : "DEPRECATED: Code"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Movable Type before 5.2.6 does not properly use the Storable::thaw function, which allows remote attackers to execute arbitrary code via the comment_state parameter.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

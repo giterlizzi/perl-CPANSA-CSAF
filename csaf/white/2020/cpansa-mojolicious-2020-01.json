@@ -1,0 +1,107 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Mojo::Util secure_compare can leak the string length. By immediately returning when the two strings are not the same length, the function allows an attacker to guess the length of the secret string using timing attacks.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Mojolicious-2020-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mojolicious-2020-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mojolicious/mojo/pull/1601",
+            "url" : "https://github.com/mojolicious/mojo/pull/1601"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-36829 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-36829"
+         }
+      ],
+      "title" : "Mojolicious vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-11-10T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Mojolicious-2020-01",
+         "initial_release_date" : "2020-11-10T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-11-10T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>1.74|<8.65",
+                  "product" : {
+                     "name" : "Mojolicious greater than 1.74 and less than 8.65",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SRI/Mojolicious"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Mojolicious"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-36829",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Mojolicious module before 8.65 for Perl is vulnerable to secure_compare timing attacks that allow an attacker to guess the length of a secret string. Only versions after 1.74 are affected.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

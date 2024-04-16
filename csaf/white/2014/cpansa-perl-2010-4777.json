@@ -1,0 +1,167 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Perl_reg_numbered_buff_fetch function in Perl 5.10.0, 5.12.0, 5.14.0, and other versions, when running with debugging enabled, allows context-dependent attackers to cause a denial of service (assertion failure and application exit) via crafted input that is not properly handled when using certain regular expressions, as demonstrated by causing SpamAssassin and OCSInventory to crash.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2010-4777 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2010-4777.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-updates/2011-05/msg00025.html",
+            "url" : "http://lists.opensuse.org/opensuse-updates/2011-05/msg00025.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=694166",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=694166"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=628836",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=628836"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.perl.org/Public/Bug/Display.html?id=76538",
+            "url" : "https://rt.perl.org/Public/Bug/Display.html?id=76538"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://listi.jpberlin.de/pipermail/postfixbuch-users/2011-February/055885.html",
+            "url" : "https://listi.jpberlin.de/pipermail/postfixbuch-users/2011-February/055885.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2011-05/msg00005.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2011-05/msg00005.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://forums.ocsinventory-ng.org/viewtopic.php?id=7215",
+            "url" : "http://forums.ocsinventory-ng.org/viewtopic.php?id=7215"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-4777 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-4777"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2014-02-10T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-perl-2010-4777",
+         "initial_release_date" : "2014-02-10T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2014-02-10T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=5.14.0",
+                  "product" : {
+                     "name" : "perl less than or equal 5.14.0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>5.14.0",
+                  "product" : {
+                     "name" : "perl greater than 5.14.0",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-4777",
+         "cwe" : {
+            "id" : "CWE-20",
+            "name" : "Improper Input Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Perl_reg_numbered_buff_fetch function in Perl 5.10.0, 5.12.0, 5.14.0, and other versions, when running with debugging enabled, allows context-dependent attackers to cause a denial of service (assertion failure and application exit) via crafted input that is not properly handled when using certain regular expressions, as demonstrated by causing SpamAssassin and OCSInventory to crash.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

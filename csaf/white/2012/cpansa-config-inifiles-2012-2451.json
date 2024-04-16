@@ -1,0 +1,169 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Config::IniFiles module before 2.71 for Perl creates temporary files with predictable names, which allows local users to overwrite arbitrary files via a symlink attack.  NOTE: some of these details are obtained from third party information.  NOTE: it has been reported that this might only be exploitable by writing in the same directory as the .ini file. If this is the case, then this issue might not cross privilege boundaries.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Config-IniFiles-2012-2451 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Config-IniFiles-2012-2451.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Config-IniFiles.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2012/05/02/6",
+            "url" : "http://www.openwall.com/lists/oss-security/2012/05/02/6"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.osvdb.org/81671",
+            "url" : "http://www.osvdb.org/81671"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/48990",
+            "url" : "http://secunia.com/advisories/48990"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bitbucket.org/shlomif/perl-config-inifiles/changeset/a08fa26f4f59",
+            "url" : "https://bitbucket.org/shlomif/perl-config-inifiles/changeset/a08fa26f4f59"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=818386",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=818386"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2012-May/080713.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2012-May/080713.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2012-May/080716.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2012-May/080716.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2012-May/081207.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2012-May/081207.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/53361",
+            "url" : "http://www.securityfocus.com/bid/53361"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-1543-1",
+            "url" : "http://www.ubuntu.com/usn/USN-1543-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/75328",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/75328"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2012-2451 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-2451"
+         }
+      ],
+      "title" : "Config-IniFiles vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-06-27T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Config-IniFiles-2012-2451",
+         "initial_release_date" : "2012-06-27T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-06-27T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.71",
+                  "product" : {
+                     "name" : "Config-IniFiles less than 2.71",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SHLOMIF/Config-IniFiles"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Config-IniFiles"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2012-2451",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Config::IniFiles module before 2.71 for Perl creates temporary files with predictable names, which allows local users to overwrite arbitrary files via a symlink attack.  NOTE: some of these details are obtained from third party information.  NOTE: it has been reported that this might only be exploitable by writing in the same directory as the .ini file. If this is the case, then this issue might not cross privilege boundaries.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 3.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

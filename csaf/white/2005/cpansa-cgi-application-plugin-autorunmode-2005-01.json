@@ -1,0 +1,96 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Non-word characters are allowed in runmode name.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CGI-Application-Plugin-AutoRunmode-2005-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CGI-Application-Plugin-AutoRunmode-2005-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI-Application-Plugin-AutoRunmode.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/CGI-Application-Plugin-AutoRunmode",
+            "url" : "https://metacpan.org/changes/distribution/CGI-Application-Plugin-AutoRunmode"
+         }
+      ],
+      "title" : "CGI-Application-Plugin-AutoRunmode vulnerability",
+      "tracking" : {
+         "current_release_date" : "2005-03-04T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CGI-Application-Plugin-AutoRunmode-2005-01",
+         "initial_release_date" : "2005-03-04T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2005-03-04T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.04",
+                  "product" : {
+                     "name" : "CGI-Application-Plugin-AutoRunmode less than 0.04",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/THILO/CGI-Application-Plugin-AutoRunmode"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.04",
+                  "product" : {
+                     "name" : "CGI-Application-Plugin-AutoRunmode greater than or equal 0.04",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/THILO/CGI-Application-Plugin-AutoRunmode"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CGI-Application-Plugin-AutoRunmode"
+         }
+      ]
+   }
+}

@@ -1,0 +1,136 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Net::CIDR::Lite module before 0.22 for Perl does not properly consider extraneous zero characters at the beginning of an IP address string, which (in some situations) allows attackers to bypass access control that is based on IP addresses.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Net-CIDR-Lite-2021-47154 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-CIDR-Lite-2021-47154.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-CIDR-Lite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.urth.org/2021/03/29/security-issues-in-perl-ip-address-distros/",
+            "url" : "https://blog.urth.org/2021/03/29/security-issues-in-perl-ip-address-distros/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/stigtsp/Net-CIDR-Lite/commit/23b6ff0590dc279521863a502e890ef19a5a76fc",
+            "url" : "https://github.com/stigtsp/Net-CIDR-Lite/commit/23b6ff0590dc279521863a502e890ef19a5a76fc"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/Net-CIDR-Lite/changes",
+            "url" : "https://metacpan.org/dist/Net-CIDR-Lite/changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/pod/Net::CIDR::Lite",
+            "url" : "https://metacpan.org/pod/Net::CIDR::Lite"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2021-47154 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2021-47154"
+         }
+      ],
+      "title" : "Net-CIDR-Lite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2024-03-18T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Net-CIDR-Lite-2021-47154",
+         "initial_release_date" : "2024-03-18T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2024-03-18T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.22",
+                  "product" : {
+                     "name" : "Net-CIDR-Lite less than 0.22",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DOUGW/Net-CIDR-Lite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.22",
+                  "product" : {
+                     "name" : "Net-CIDR-Lite greater than or equal 0.22",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DOUGW/Net-CIDR-Lite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Net-CIDR-Lite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2021-47154",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Net::CIDR::Lite module before 0.22 for Perl does not properly consider extraneous zero characters at the beginning of an IP address string, which (in some situations) allows attackers to bypass access control that is based on IP addresses.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

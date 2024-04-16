@@ -1,0 +1,207 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "SQLite before 3.8.9 does not properly implement the dequoting of collation-sequence names, which allows context-dependent attackers to cause a denial of service (uninitialized memory access and application crash) or possibly have unspecified other impact via a crafted COLLATE clause, as demonstrated by COLLATE\"\"\"\"\"\"\"\" at the end of a SELECT statement.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBD-SQLite-2015-3414 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2015-3414.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.sqlite.org/src/info/eddc05e7bb31fae74daa86e0504a3478b99fa0f2",
+            "url" : "https://www.sqlite.org/src/info/eddc05e7bb31fae74daa86e0504a3478b99fa0f2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2015/Apr/31",
+            "url" : "http://seclists.org/fulldisclosure/2015/Apr/31"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2015/dsa-3252",
+            "url" : "http://www.debian.org/security/2015/dsa-3252"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2015:217",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2015:217"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-2698-1",
+            "url" : "http://www.ubuntu.com/usn/USN-2698-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/HT205267",
+            "url" : "https://support.apple.com/HT205267"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.apple.com/archives/security-announce/2015/Sep/msg00008.html",
+            "url" : "http://lists.apple.com/archives/security-announce/2015/Sep/msg00008.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.apple.com/archives/security-announce/2015/Sep/msg00005.html",
+            "url" : "http://lists.apple.com/archives/security-announce/2015/Sep/msg00005.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/HT205213",
+            "url" : "https://support.apple.com/HT205213"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.oracle.com/technetwork/topics/security/bulletinapr2016-2952098.html",
+            "url" : "http://www.oracle.com/technetwork/topics/security/bulletinapr2016-2952098.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id/1033703",
+            "url" : "http://www.securitytracker.com/id/1033703"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.gentoo.org/glsa/201507-05",
+            "url" : "https://security.gentoo.org/glsa/201507-05"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rhn.redhat.com/errata/RHSA-2015-1635.html",
+            "url" : "http://rhn.redhat.com/errata/RHSA-2015-1635.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/74228",
+            "url" : "http://www.securityfocus.com/bid/74228"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html",
+            "url" : "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2015-3414 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2015-3414"
+         }
+      ],
+      "title" : "DBD-SQLite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2015-04-24T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBD-SQLite-2015-3414",
+         "initial_release_date" : "2015-04-24T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2015-04-24T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.47_01",
+                  "product" : {
+                     "name" : "DBD-SQLite less than or equal 1.47_01",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.47_02",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.47_02",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2015-3414",
+         "cwe" : {
+            "id" : "CWE-908",
+            "name" : "Use of Uninitialized Resource"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "SQLite before 3.8.9 does not properly implement the dequoting of collation-sequence names, which allows context-dependent attackers to cause a denial of service (uninitialized memory access and application crash) or possibly have unspecified other impact via a crafted COLLATE clause, as demonstrated by COLLATE\"\"\"\"\"\"\"\" at the end of a SELECT statement.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

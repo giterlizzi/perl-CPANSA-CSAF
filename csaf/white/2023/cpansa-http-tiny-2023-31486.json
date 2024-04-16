@@ -1,0 +1,188 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "HTTP::Tiny v0.082, a Perl core module since v5.13.9 and available standalone on CPAN, does not verify TLS certs by default. Users must opt-in with the verify_SSL=>1 flag to verify certs when using HTTPS. Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-HTTP-Tiny-2023-31486 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTTP-Tiny-2023-31486.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTTP-Tiny.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/",
+            "url" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/chansen/p5-http-tiny/issues/152",
+            "url" : "https://github.com/chansen/p5-http-tiny/issues/152"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/chansen/p5-http-tiny/pull/151",
+            "url" : "https://github.com/chansen/p5-http-tiny/pull/151"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://hackeriet.github.io/cpan-http-tiny-overview/",
+            "url" : "https://hackeriet.github.io/cpan-http-tiny-overview/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.reddit.com/r/perl/comments/111tadi/psa_httptiny_disabled_ssl_verification_by_default/",
+            "url" : "https://www.reddit.com/r/perl/comments/111tadi/psa_httptiny_disabled_ssl_verification_by_default/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/NixOS/nixpkgs/pull/187480",
+            "url" : "https://github.com/NixOS/nixpkgs/pull/187480"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=962407",
+            "url" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=962407"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=954089",
+            "url" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=954089"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://salsa.debian.org/perl-team/interpreter/perl/-/commit/1490431e40e22052f75a0b3449f1f53cbd27ba92.patch",
+            "url" : "https://salsa.debian.org/perl-team/interpreter/perl/-/commit/1490431e40e22052f75a0b3449f1f53cbd27ba92.patch"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/chansen/p5-http-tiny/issues/134",
+            "url" : "https://github.com/chansen/p5-http-tiny/issues/134"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/chansen/p5-http-tiny/issues/68",
+            "url" : "https://github.com/chansen/p5-http-tiny/issues/68"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2023-31486 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2023-31486"
+         }
+      ],
+      "title" : "HTTP-Tiny vulnerability",
+      "tracking" : {
+         "current_release_date" : "2023-02-14T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-HTTP-Tiny-2023-31486",
+         "initial_release_date" : "2023-02-14T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2023-02-14T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.083",
+                  "product" : {
+                     "name" : "HTTP-Tiny less than 0.083",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DAGOLDEN/HTTP-Tiny"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.083",
+                  "product" : {
+                     "name" : "HTTP-Tiny greater than or equal 0.083",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DAGOLDEN/HTTP-Tiny"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "HTTP-Tiny"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2023-31486",
+         "cwe" : {
+            "id" : "CWE-295",
+            "name" : "Improper Certificate Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "HTTP::Tiny before 0.083, a Perl core module since 5.13.9 and available standalone on CPAN, has an insecure default TLS configuration where users must opt in to verify certificates.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 8.1,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

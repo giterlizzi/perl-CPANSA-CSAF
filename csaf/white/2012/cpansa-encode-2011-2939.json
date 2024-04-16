@@ -1,0 +1,202 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Off-by-one error in the decode_xs function in Unicode/Unicode.xs in the Encode module before 2.44, as used in Perl before 5.15.6, might allow context-dependent attackers to cause a denial of service (memory corruption) via a crafted Unicode string, which triggers a heap-based buffer overflow.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Encode-2011-2939 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Encode-2011-2939.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Encode.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://perl5.git.perl.org/perl.git/commitdiff/e46d973584785af1f445c4dedbee4243419cb860#patch5",
+            "url" : "http://perl5.git.perl.org/perl.git/commitdiff/e46d973584785af1f445c4dedbee4243419cb860#patch5"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=731246",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=731246"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2011/08/19/17",
+            "url" : "http://www.openwall.com/lists/oss-security/2011/08/19/17"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2011-1424.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2011-1424.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2011/08/18/8",
+            "url" : "http://www.openwall.com/lists/oss-security/2011/08/18/8"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/46989",
+            "url" : "http://secunia.com/advisories/46989"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2012:008",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2012:008"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/51457",
+            "url" : "http://secunia.com/advisories/51457"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-1643-1",
+            "url" : "http://www.ubuntu.com/usn/USN-1643-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/49858",
+            "url" : "http://www.securityfocus.com/bid/49858"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/46172",
+            "url" : "http://secunia.com/advisories/46172"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://cpansearch.perl.org/src/FLORA/perl-5.14.2/pod/perldelta.pod",
+            "url" : "http://cpansearch.perl.org/src/FLORA/perl-5.14.2/pod/perldelta.pod"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/55314",
+            "url" : "http://secunia.com/advisories/55314"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://search.cpan.org/~flora/perl-5.14.2/pod/perldelta.pod#Encode_decode_xs_n-byte_heap-overflow_(CVE-2011-2939)",
+            "url" : "http://search.cpan.org/~flora/perl-5.14.2/pod/perldelta.pod#Encode_decode_xs_n-byte_heap-overflow_(CVE-2011-2939)"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-2939 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-2939"
+         }
+      ],
+      "title" : "Encode vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-01-13T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Encode-2011-2939",
+         "initial_release_date" : "2012-01-13T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-01-13T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.44",
+                  "product" : {
+                     "name" : "Encode less than 2.44",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DANKOGAI/Encode"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.44",
+                  "product" : {
+                     "name" : "Encode greater than or equal 2.44",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DANKOGAI/Encode"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Encode"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-2939",
+         "cwe" : {
+            "id" : "CWE-189",
+            "name" : "Numeric Errors"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Off-by-one error in the decode_xs function in Unicode/Unicode.xs in the Encode module before 2.44, as used in Perl before 5.15.6, might allow context-dependent attackers to cause a denial of service (memory corruption) via a crafted Unicode string, which triggers a heap-based buffer overflow.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5.1,
+                  "vectorString" : "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

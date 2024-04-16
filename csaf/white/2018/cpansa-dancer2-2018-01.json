@@ -1,0 +1,109 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "critical"
+      },
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "There is a potential RCE with regards to Storable. We have added session ID validation to the session engine so that session backends based on Storable can reject malformed session IDs that may lead to exploitation of the RCE.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Dancer2-2018-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Dancer2-2018-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Dancer2.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Dancer2",
+            "url" : "https://metacpan.org/changes/distribution/Dancer2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.preshweb.co.uk/pipermail/dancer-users/2018-April/005952.html",
+            "url" : "http://lists.preshweb.co.uk/pipermail/dancer-users/2018-April/005952.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/PerlDancer/Dancer2/commit/3580f5d0874a9abf5483528f73bda9a7fd9ec7f1",
+            "url" : "https://github.com/PerlDancer/Dancer2/commit/3580f5d0874a9abf5483528f73bda9a7fd9ec7f1"
+         }
+      ],
+      "title" : "Dancer2 vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-01-30T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Dancer2-2018-01",
+         "initial_release_date" : "2018-01-30T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-01-30T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.206000",
+                  "product" : {
+                     "name" : "Dancer2 less than 0.206000",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/XSAWYERX/Dancer2"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.206000",
+                  "product" : {
+                     "name" : "Dancer2 greater than or equal 0.206000",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/XSAWYERX/Dancer2"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Dancer2"
+         }
+      ]
+   }
+}

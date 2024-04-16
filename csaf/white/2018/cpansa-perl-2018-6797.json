@@ -1,0 +1,181 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "critical"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "An issue was discovered in Perl 5.18 through 5.26. A crafted regular expression can cause a heap-based buffer overflow, with control over the bytes written.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2018-6797 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2018-6797.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.debian.org/security/2018/dsa-4172",
+            "url" : "https://www.debian.org/security/2018/dsa-4172"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.perl.org/Public/Bug/Display.html?id=132227",
+            "url" : "https://rt.perl.org/Public/Bug/Display.html?id=132227"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id/1040681",
+            "url" : "http://www.securitytracker.com/id/1040681"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/errata/RHSA-2018:1192",
+            "url" : "https://access.redhat.com/errata/RHSA-2018:1192"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/3625-1/",
+            "url" : "https://usn.ubuntu.com/3625-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id/1042004",
+            "url" : "http://www.securitytracker.com/id/1042004"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.gentoo.org/glsa/201909-01",
+            "url" : "https://security.gentoo.org/glsa/201909-01"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpujul2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2018-6797 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2018-6797"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-04-17T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-perl-2018-6797",
+         "initial_release_date" : "2018-04-17T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-04-17T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.18.0|<5.28.0",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.18.0 and less than 5.28.0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.28.0",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.28.0",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2018-6797",
+         "cwe" : {
+            "id" : "CWE-787",
+            "name" : "Out-of-bounds Write"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "An issue was discovered in Perl 5.18 through 5.26. A crafted regular expression can cause a heap-based buffer overflow, with control over the bytes written.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 9.8,
+                  "baseSeverity" : "CRITICAL",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,172 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "ProcessTable.pm in the Proc::ProcessTable module 0.45 for Perl, when TTY information caching is enabled, allows local users to overwrite arbitrary files via a symlink attack on /tmp/TTYDEVS.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Proc-ProcessTable-2011-4363 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Proc-ProcessTable-2011-4363.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Proc-ProcessTable.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=650500",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=650500"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.osvdb.org/77428",
+            "url" : "http://www.osvdb.org/77428"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2011/11/30/2",
+            "url" : "http://www.openwall.com/lists/oss-security/2011/11/30/2"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/50868",
+            "url" : "http://www.securityfocus.com/bid/50868"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=72862",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=72862"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2011/11/30/3",
+            "url" : "http://www.openwall.com/lists/oss-security/2011/11/30/3"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/47015",
+            "url" : "http://secunia.com/advisories/47015"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2011-4363",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2011-4363"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-4363 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-4363"
+         }
+      ],
+      "title" : "Proc-ProcessTable vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-10-07T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Proc-ProcessTable-2011-4363",
+         "initial_release_date" : "2012-10-07T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-10-07T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.45|<0.47",
+                  "product" : {
+                     "name" : "Proc-ProcessTable greater than or equal 0.45 and less than 0.47",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/JWB/Proc-ProcessTable"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.47",
+                  "product" : {
+                     "name" : "Proc-ProcessTable greater than or equal 0.47",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/JWB/Proc-ProcessTable"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Proc-ProcessTable"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-4363",
+         "cwe" : {
+            "id" : "CWE-59",
+            "name" : "Improper Link Resolution Before File Access ('Link Following')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "ProcessTable.pm in the Proc::ProcessTable module 0.45 for Perl, when TTY information caching is enabled, allows local users to overwrite arbitrary files via a symlink attack on /tmp/TTYDEVS.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 2.6,
+                  "vectorString" : "AV:L/AC:H/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

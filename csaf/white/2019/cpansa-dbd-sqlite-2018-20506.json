@@ -1,0 +1,276 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "SQLite before 3.25.3, when the FTS3 extension is enabled, encounters an integer overflow (and resultant buffer overflow) for FTS3 queries in a \"merge\" operation that occurs after crafted changes to FTS3 shadow tables, allowing remote attackers to execute arbitrary code by leveraging the ability to run arbitrary SQL statements (such as in certain WebSQL use cases). This is a different vulnerability than CVE-2018-20346.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBD-SQLite-2018-20506 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2018-20506.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209451",
+            "url" : "https://support.apple.com/kb/HT209451"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209450",
+            "url" : "https://support.apple.com/kb/HT209450"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209448",
+            "url" : "https://support.apple.com/kb/HT209448"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209447",
+            "url" : "https://support.apple.com/kb/HT209447"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209446",
+            "url" : "https://support.apple.com/kb/HT209446"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT209443",
+            "url" : "https://support.apple.com/kb/HT209443"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://sqlite.org/src/info/940f2adc8541a838",
+            "url" : "https://sqlite.org/src/info/940f2adc8541a838"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/39",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/39"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/33",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/33"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/32",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/32"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/31",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/31"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/29",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/29"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://seclists.org/bugtraq/2019/Jan/28",
+            "url" : "https://seclists.org/bugtraq/2019/Jan/28"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/106698",
+            "url" : "http://www.securityfocus.com/bid/106698"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/69",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/69"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/68",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/68"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/67",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/67"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/66",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/66"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/64",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/64"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2019/Jan/62",
+            "url" : "http://seclists.org/fulldisclosure/2019/Jan/62"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00070.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00070.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20190502-0004/",
+            "url" : "https://security.netapp.com/advisory/ntap-20190502-0004/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/4019-1/",
+            "url" : "https://usn.ubuntu.com/4019-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/4019-2/",
+            "url" : "https://usn.ubuntu.com/4019-2/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpuapr2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpuapr2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.debian.org/debian-lts-announce/2020/08/msg00037.html",
+            "url" : "https://lists.debian.org/debian-lts-announce/2020/08/msg00037.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://kc.mcafee.com/corporate/index?page=content&id=SB10365",
+            "url" : "https://kc.mcafee.com/corporate/index?page=content&id=SB10365"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2018-20506 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2018-20506"
+         }
+      ],
+      "title" : "DBD-SQLite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-04-03T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBD-SQLite-2018-20506",
+         "initial_release_date" : "2019-04-03T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-04-03T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.61_01",
+                  "product" : {
+                     "name" : "DBD-SQLite less than 1.61_01",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.61_01",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.61_01",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2018-20506",
+         "cwe" : {
+            "id" : "CWE-190",
+            "name" : "Integer Overflow or Wraparound"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "SQLite before 3.25.3, when the FTS3 extension is enabled, encounters an integer overflow (and resultant buffer overflow) for FTS3 queries in a \"merge\" operation that occurs after crafted changes to FTS3 shadow tables, allowing remote attackers to execute arbitrary code by leveraging the ability to run arbitrary SQL statements (such as in certain WebSQL use cases). This is a different vulnerability than CVE-2018-20346.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 8.1,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

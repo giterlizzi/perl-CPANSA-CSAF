@@ -1,0 +1,186 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "HTTP::Daemon is a simple http server class written in perl. Versions prior to 6.15 are subject to a vulnerability which could potentially be exploited to gain privileged access to APIs or poison intermediate caches. It is uncertain how large the risks are, most Perl based applications are served on top of Nginx or Apache, not on the `HTTP::Daemon`. This library is commonly used for local development and tests. Users are advised to update to resolve this issue. Users unable to upgrade may add additional request handling logic as a mitigation. After calling `my $rqst = $conn->get_request()` one could inspect the returned `HTTP::Request` object. Querying the 'Content-Length' (`my $cl = $rqst->header('Content-Length')`) will show any abnormalities that should be dealt with by a `400` response. Expected strings of 'Content-Length' SHOULD consist of either a single non-negative integer, or, a comma separated repetition of that number. (that is `42` or `42, 42, 42`). Anything else MUST be rejected.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-HTTP-Daemon-2022-31081 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTTP-Daemon-2022-31081.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTTP-Daemon.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/libwww-perl/HTTP-Daemon/commit/e84475de51d6fd7b29354a997413472a99db70b2",
+            "url" : "https://github.com/libwww-perl/HTTP-Daemon/commit/e84475de51d6fd7b29354a997413472a99db70b2"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/libwww-perl/HTTP-Daemon/commit/8dc5269d59e2d5d9eb1647d82c449ccd880f7fd0",
+            "url" : "https://github.com/libwww-perl/HTTP-Daemon/commit/8dc5269d59e2d5d9eb1647d82c449ccd880f7fd0"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn",
+            "url" : "https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://datatracker.ietf.org/doc/html/rfc7230#section-9.5",
+            "url" : "https://datatracker.ietf.org/doc/html/rfc7230#section-9.5"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/libwww-perl/HTTP-Daemon/security/advisories/GHSA-cg8c-pxmv-w7cf",
+            "url" : "https://github.com/libwww-perl/HTTP-Daemon/security/advisories/GHSA-cg8c-pxmv-w7cf"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://metacpan.org/release/HTTP-Daemon/",
+            "url" : "http://metacpan.org/release/HTTP-Daemon/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://cwe.mitre.org/data/definitions/444.html",
+            "url" : "https://cwe.mitre.org/data/definitions/444.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/libwww-perl/HTTP-Daemon/issues/56",
+            "url" : "https://github.com/libwww-perl/HTTP-Daemon/issues/56"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/NixOS/nixpkgs/pull/181632",
+            "url" : "https://github.com/NixOS/nixpkgs/pull/181632"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2022-31081 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2022-31081"
+         }
+      ],
+      "title" : "HTTP-Daemon vulnerability",
+      "tracking" : {
+         "current_release_date" : "2022-06-27T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-HTTP-Daemon-2022-31081",
+         "initial_release_date" : "2022-06-27T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2022-06-27T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<6.15",
+                  "product" : {
+                     "name" : "HTTP-Daemon less than 6.15",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/OALDERS/HTTP-Daemon"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=6.15",
+                  "product" : {
+                     "name" : "HTTP-Daemon greater than or equal 6.15",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/OALDERS/HTTP-Daemon"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "HTTP-Daemon"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2022-31081",
+         "cwe" : {
+            "id" : "CWE-444",
+            "name" : "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "HTTP::Daemon is a simple http server class written in perl. Versions prior to 6.15 are subject to a vulnerability which could potentially be exploited to gain privileged access to APIs or poison intermediate caches. It is uncertain how large the risks are, most Perl based applications are served on top of Nginx or Apache, not on the `HTTP::Daemon`. This library is commonly used for local development and tests. Users are advised to update to resolve this issue. Users unable to upgrade may add additional request handling logic as a mitigation. After calling `my $rqst = $conn->get_request()` one could inspect the returned `HTTP::Request` object. Querying the 'Content-Length' (`my $cl = $rqst->header('Content-Length')`) will show any abnormalities that should be dealt with by a `400` response. Expected strings of 'Content-Length' SHOULD consist of either a single non-negative integer, or, a comma separated repetition of that number. (that is `42` or `42, 42, 42`). Anything else MUST be rejected.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.4,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 6.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

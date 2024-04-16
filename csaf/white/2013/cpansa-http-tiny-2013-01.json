@@ -1,0 +1,96 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Temporary file creating during mirror()  not opened exclusively.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-HTTP-Tiny-2013-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTTP-Tiny-2013-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTTP-Tiny.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/HTTP-Tiny/changes",
+            "url" : "https://metacpan.org/dist/HTTP-Tiny/changes"
+         }
+      ],
+      "title" : "HTTP-Tiny vulnerability",
+      "tracking" : {
+         "current_release_date" : "2013-11-27T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-HTTP-Tiny-2013-01",
+         "initial_release_date" : "2013-11-27T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2013-11-27T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.039",
+                  "product" : {
+                     "name" : "HTTP-Tiny less than 0.039",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DAGOLDEN/HTTP-Tiny"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.039",
+                  "product" : {
+                     "name" : "HTTP-Tiny greater than or equal 0.039",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DAGOLDEN/HTTP-Tiny"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "HTTP-Tiny"
+         }
+      ]
+   }
+}

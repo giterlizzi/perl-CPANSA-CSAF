@@ -1,0 +1,133 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The HTML-StripScripts module through 1.06 for Perl allows _hss_attval_style ReDoS because of catastrophic backtracking for HTML content with certain style attributes.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-HTML-StripScripts-2023-24038 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTML-StripScripts-2023-24038.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTML-StripScripts.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/clintongormley/perl-html-stripscripts/issues/3",
+            "url" : "https://github.com/clintongormley/perl-html-stripscripts/issues/3"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.debian.org/debian-lts-announce/2023/01/msg00036.html",
+            "url" : "https://lists.debian.org/debian-lts-announce/2023/01/msg00036.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.debian.org/security/2023/dsa-5339",
+            "url" : "https://www.debian.org/security/2023/dsa-5339"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2023-24038 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2023-24038"
+         }
+      ],
+      "title" : "HTML-StripScripts vulnerability",
+      "tracking" : {
+         "current_release_date" : "2023-01-21T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-HTML-StripScripts-2023-24038",
+         "initial_release_date" : "2023-01-21T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2023-01-21T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.06",
+                  "product" : {
+                     "name" : "HTML-StripScripts less than or equal 1.06",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DRTECH/HTML-StripScripts"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "HTML-StripScripts"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2023-24038",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The HTML-StripScripts module through 1.06 for Perl allows _hss_attval_style ReDoS because of catastrophic backtracking for HTML content with certain style attributes.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

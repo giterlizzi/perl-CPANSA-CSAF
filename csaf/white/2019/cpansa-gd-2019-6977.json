@@ -1,0 +1,241 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "gdImageColorMatch in gd_color_match.c in the GD Graphics Library (aka LibGD) 2.2.5, as used in the imagecolormatch function in PHP before 5.6.40, 7.x before 7.1.26, 7.2.x before 7.2.14, and 7.3.x before 7.3.1, has a heap-based buffer overflow. This can be exploited by an attacker who is able to trigger imagecolormatch calls with crafted image data.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-GD-2019-6977 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-GD-2019-6977.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-GD.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://nvd.nist.gov/vuln/detail/CVE-2019-6977",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-6977"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.php.net/bug.php?id=77270",
+            "url" : "https://bugs.php.net/bug.php?id=77270"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://php.net/ChangeLog-7.php",
+            "url" : "http://php.net/ChangeLog-7.php"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://php.net/ChangeLog-5.php",
+            "url" : "http://php.net/ChangeLog-5.php"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/106731",
+            "url" : "http://www.securityfocus.com/bid/106731"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.debian.org/debian-lts-announce/2019/01/msg00028.html",
+            "url" : "https://lists.debian.org/debian-lts-announce/2019/01/msg00028.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.debian.org/security/2019/dsa-4384",
+            "url" : "https://www.debian.org/security/2019/dsa-4384"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/3900-1/",
+            "url" : "https://usn.ubuntu.com/3900-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20190315-0003/",
+            "url" : "https://security.netapp.com/advisory/ntap-20190315-0003/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.gentoo.org/glsa/201903-18",
+            "url" : "https://security.gentoo.org/glsa/201903-18"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00025.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00025.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00031.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00031.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://packetstormsecurity.com/files/152459/PHP-7.2-imagecolormatch-Out-Of-Band-Heap-Write.html",
+            "url" : "http://packetstormsecurity.com/files/152459/PHP-7.2-imagecolormatch-Out-Of-Band-Heap-Write.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.exploit-db.com/exploits/46677/",
+            "url" : "https://www.exploit-db.com/exploits/46677/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/errata/RHSA-2019:2519",
+            "url" : "https://access.redhat.com/errata/RHSA-2019:2519"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/errata/RHSA-2019:3299",
+            "url" : "https://access.redhat.com/errata/RHSA-2019:3299"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TEYUUOW75YD3DENIPYMO263E6NL2NFHI/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TEYUUOW75YD3DENIPYMO263E6NL2NFHI/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3WRUPZVT2MWFUEMVGTRAGDOBHLNMGK5R/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3WRUPZVT2MWFUEMVGTRAGDOBHLNMGK5R/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TTXSLRZI5BCQT3H5KALG3DHUWUMNPDX2/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TTXSLRZI5BCQT3H5KALG3DHUWUMNPDX2/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3CZ2QADQTKRHTGB2AHD7J4QQNDLBEMM6/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3CZ2QADQTKRHTGB2AHD7J4QQNDLBEMM6/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2019-6977 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-6977"
+         }
+      ],
+      "title" : "GD vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-01-27T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-GD-2019-6977",
+         "initial_release_date" : "2019-01-27T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-01-27T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.72",
+                  "product" : {
+                     "name" : "GD less than 2.72",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RURBAN/GD"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.72",
+                  "product" : {
+                     "name" : "GD greater than or equal 2.72",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RURBAN/GD"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "GD"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2019-6977",
+         "cwe" : {
+            "id" : "CWE-787",
+            "name" : "Out-of-bounds Write"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "gdImageColorMatch in gd_color_match.c in the GD Graphics Library (aka LibGD) 2.2.5, as used in the imagecolormatch function in PHP before 5.6.40, 7.x before 7.1.26, 7.2.x before 7.2.14, and 7.3.x before 7.3.1, has a heap-based buffer overflow. This can be exploited by an attacker who is able to trigger imagecolormatch calls with crafted image data.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 8.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

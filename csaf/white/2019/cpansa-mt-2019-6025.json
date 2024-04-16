@@ -1,0 +1,137 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Open redirect vulnerability in Movable Type series Movable Type 7 r.4602 (7.1.3) and earlier (Movable Type 7), Movable Type 6.5.0 and 6.5.1 (Movable Type 6.5), Movable Type 6.3.9 and earlier (Movable Type 6.3.x, 6.2.x, 6.1.x, 6.0.x), Movable Type Advanced 7 r.4602 (7.1.3) and earlier (Movable Type 7), Movable Type Advanced 6.5.0 and 6.5.1 (Movable Type 6.5), Movable Type Advanced 6.3.9 and earlier (Movable Type 6.3.x, 6.2.x, 6.1.x, 6.0.x), Movable Type Premium 1.24 and earlier (Movable Type Premium), and Movable Type Premium (Advanced Edition) 1.24 and earlier (Movable Type Premium) allows remote attackers to redirect users to arbitrary web sites and conduct phishing attacks via a specially crafted URL.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-MT-2019-6025 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MT-2019-6025.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://movabletype.org/news/2019/11/movable_type_r4603_v714_v652_and_v6310_released.html",
+            "url" : "https://movabletype.org/news/2019/11/movable_type_r4603_v714_v652_and_v6310_released.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://jvn.jp/en/jp/JVN65280626/index.html",
+            "url" : "http://jvn.jp/en/jp/JVN65280626/index.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2019-6025 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-6025"
+         }
+      ],
+      "title" : "MT vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-12-26T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-MT-2019-6025",
+         "initial_release_date" : "2019-12-26T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-12-26T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/ARRAY(0x6f56740)",
+                  "product" : {
+                     "name" : "MT ",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MT"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "MT"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2019-6025",
+         "cwe" : {
+            "id" : "CWE-601",
+            "name" : "URL Redirection to Untrusted Site ('Open Redirect')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Open redirect vulnerability in Movable Type series Movable Type 7 r.4602 (7.1.3) and earlier (Movable Type 7), Movable Type 6.5.0 and 6.5.1 (Movable Type 6.5), Movable Type 6.3.9 and earlier (Movable Type 6.3.x, 6.2.x, 6.1.x, 6.0.x), Movable Type Advanced 7 r.4602 (7.1.3) and earlier (Movable Type 7), Movable Type Advanced 6.5.0 and 6.5.1 (Movable Type 6.5), Movable Type Advanced 6.3.9 and earlier (Movable Type 6.3.x, 6.2.x, 6.1.x, 6.0.x), Movable Type Premium 1.24 and earlier (Movable Type Premium), and Movable Type Premium (Advanced Edition) 1.24 and earlier (Movable Type Premium) allows remote attackers to redirect users to arbitrary web sites and conduct phishing attacks via a specially crafted URL.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 6.1,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

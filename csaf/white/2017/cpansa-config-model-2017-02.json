@@ -1,0 +1,144 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Loads models from a local directory, making it possible to substitute the model.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Config-Model-2017-02 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Config-Model-2017-02.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Config-Model.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Config-Model",
+            "url" : "https://metacpan.org/changes/distribution/Config-Model"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/dod38fr/config-model/commit/4d37c75b0c4f9633b67999f8260b08027a6bc524",
+            "url" : "https://github.com/dod38fr/config-model/commit/4d37c75b0c4f9633b67999f8260b08027a6bc524"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2017-0374 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2017-0374"
+         }
+      ],
+      "title" : "Config-Model vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-05-10T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Config-Model-2017-02",
+         "initial_release_date" : "2017-05-10T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-05-10T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.102",
+                  "product" : {
+                     "name" : "Config-Model less than 2.102",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DDUMONT/Config-Model"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.102",
+                  "product" : {
+                     "name" : "Config-Model greater than or equal 2.102",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DDUMONT/Config-Model"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Config-Model"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2017-0374",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "lib/Config/Model.pm in Config-Model (aka libconfig-model-perl) before 2.102 allows local users to gain privileges via a crafted model in the current working directory, related to use of . with the INC array.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,282 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Buffer overflow in the __snprint_value function in snmp_get in Net-SNMP 5.1.4, 5.2.4, and 5.4.1, as used in SNMP.xs for Perl, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a large OCTETSTRING in an attribute value pair (AVP).",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Net-SNMP-2008-2292 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-SNMP-2008-2292.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-SNMP.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://sourceforge.net/tracker/index.php?func=detail&aid=1826174&group_id=12694&atid=112694",
+            "url" : "http://sourceforge.net/tracker/index.php?func=detail&aid=1826174&group_id=12694&atid=112694"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/29212",
+            "url" : "http://www.securityfocus.com/bid/29212"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/30187",
+            "url" : "http://secunia.com/advisories/30187"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00459.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00459.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vmware.com/security/advisories/VMSA-2008-0013.html",
+            "url" : "http://www.vmware.com/security/advisories/VMSA-2008-0013.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/31334",
+            "url" : "http://secunia.com/advisories/31334"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/30647",
+            "url" : "http://secunia.com/advisories/30647"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2008-08/msg00000.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2008-08/msg00000.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00363.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00363.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/31155",
+            "url" : "http://secunia.com/advisories/31155"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/31351",
+            "url" : "http://secunia.com/advisories/31351"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://security.gentoo.org/glsa/glsa-200808-02.xml",
+            "url" : "http://security.gentoo.org/glsa/glsa-200808-02.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://sunsolve.sun.com/search/document.do?assetkey=1-26-239785-1",
+            "url" : "http://sunsolve.sun.com/search/document.do?assetkey=1-26-239785-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2008:118",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2008:118"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/31467",
+            "url" : "http://secunia.com/advisories/31467"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00380.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00380.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://support.avaya.com/elmodocs2/security/ASA-2008-282.htm",
+            "url" : "http://support.avaya.com/elmodocs2/security/ASA-2008-282.htm"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/31568",
+            "url" : "http://secunia.com/advisories/31568"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2008/dsa-1663",
+            "url" : "http://www.debian.org/security/2008/dsa-1663"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/30615",
+            "url" : "http://secunia.com/advisories/30615"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2008-0529.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2008-0529.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/32664",
+            "url" : "http://secunia.com/advisories/32664"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/usn-685-1",
+            "url" : "http://www.ubuntu.com/usn/usn-685-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/33003",
+            "url" : "http://secunia.com/advisories/33003"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2008/2361",
+            "url" : "http://www.vupen.com/english/advisories/2008/2361"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2008/2141/references",
+            "url" : "http://www.vupen.com/english/advisories/2008/2141/references"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2008/1528/references",
+            "url" : "http://www.vupen.com/english/advisories/2008/1528/references"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securitytracker.com/id?1020527",
+            "url" : "http://www.securitytracker.com/id?1020527"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/42430",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/42430"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11261",
+            "url" : "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11261"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2008-2292 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2008-2292"
+         }
+      ],
+      "title" : "Net-SNMP vulnerability",
+      "tracking" : {
+         "current_release_date" : "2008-05-18T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Net-SNMP-2008-2292",
+         "initial_release_date" : "2008-05-18T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2008-05-18T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.1.4|<6.0.0",
+                  "product" : {
+                     "name" : "Net-SNMP greater than or equal 5.1.4 and less than 6.0.0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DTOWN/Net-SNMP"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=6.0.0",
+                  "product" : {
+                     "name" : "Net-SNMP greater than or equal 6.0.0",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DTOWN/Net-SNMP"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Net-SNMP"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2008-2292",
+         "cwe" : {
+            "id" : "CWE-119",
+            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Buffer overflow in the __snprint_value function in snmp_get in Net-SNMP 5.1.4, 5.2.4, and 5.4.1, as used in SNMP.xs for Perl, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a large OCTETSTRING in an attribute value pair (AVP).",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

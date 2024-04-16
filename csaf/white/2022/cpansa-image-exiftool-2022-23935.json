@@ -1,0 +1,151 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "critical"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "lib/Image/ExifTool.pm in ExifTool before 12.38 mishandles a $file =~ /\\|$/ check, leading to command injection.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Image-ExifTool-2022-23935 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Image-ExifTool-2022-23935.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Image-ExifTool.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/exiftool/exiftool/commit/74dbab1d2766d6422bb05b033ac6634bf8d1f582",
+            "url" : "https://github.com/exiftool/exiftool/commit/74dbab1d2766d6422bb05b033ac6634bf8d1f582"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://gist.github.com/ert-plus/1414276e4cb5d56dd431c2f0429e4429",
+            "url" : "https://gist.github.com/ert-plus/1414276e4cb5d56dd431c2f0429e4429"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2022-23935 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2022-23935"
+         }
+      ],
+      "title" : "Image-ExifTool vulnerability",
+      "tracking" : {
+         "current_release_date" : "2022-01-25T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Image-ExifTool-2022-23935",
+         "initial_release_date" : "2022-01-25T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2022-01-25T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=12.37",
+                  "product" : {
+                     "name" : "Image-ExifTool less than or equal 12.37",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/EXIFTOOL/Image-ExifTool"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>12.38",
+                  "product" : {
+                     "name" : "Image-ExifTool greater than 12.38",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/EXIFTOOL/Image-ExifTool"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Image-ExifTool"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2022-23935",
+         "cwe" : {
+            "id" : "CWE-78",
+            "name" : "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "lib/Image/ExifTool.pm in ExifTool before 12.38 mishandles a $file =~ /\\|$/ check, leading to command injection.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.6,
+                  "vectorString" : "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

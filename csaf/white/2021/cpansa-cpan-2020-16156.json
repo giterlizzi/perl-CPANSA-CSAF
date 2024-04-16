@@ -1,0 +1,166 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "CPAN 2.28 allows Signature Verification Bypass.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CPAN-2020-16156 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CPAN-2020-16156.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CPAN.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/pod/distribution/CPAN/scripts/cpan",
+            "url" : "https://metacpan.org/pod/distribution/CPAN/scripts/cpan"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/",
+            "url" : "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://blogs.perl.org/users/neilb/2021/11/addressing-cpan-vulnerabilities-related-to-checksums.html",
+            "url" : "http://blogs.perl.org/users/neilb/2021/11/addressing-cpan-vulnerabilities-related-to-checksums.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SZ32AJIV4RHJMLWLU5QULGKMMIHYOMDC/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SZ32AJIV4RHJMLWLU5QULGKMMIHYOMDC/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SD6RYOJII7HRJ6WVORFNVTYNOFY5JDXN/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SD6RYOJII7HRJ6WVORFNVTYNOFY5JDXN/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-16156 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-16156"
+         }
+      ],
+      "title" : "CPAN vulnerability",
+      "tracking" : {
+         "current_release_date" : "2021-12-13T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CPAN-2020-16156",
+         "initial_release_date" : "2021-12-13T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2021-12-13T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<2.28",
+                  "product" : {
+                     "name" : "CPAN less than 2.28",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDK/CPAN"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.29",
+                  "product" : {
+                     "name" : "CPAN greater than or equal 2.29",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDK/CPAN"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CPAN"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-16156",
+         "cwe" : {
+            "id" : "CWE-347",
+            "name" : "Improper Verification of Cryptographic Signature"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "CPAN 2.28 allows Signature Verification Bypass.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

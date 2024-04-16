@@ -1,0 +1,101 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Possible overflows in av and hv length types.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Cpanel-JSON-XS-2016-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Cpanel-JSON-XS-2016-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Cpanel-JSON-XS.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Cpanel-JSON-XS",
+            "url" : "https://metacpan.org/changes/distribution/Cpanel-JSON-XS"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/rurban/Cpanel-JSON-XS/commit/6554531b39fac236321d8601d35eaaa75ae45e20",
+            "url" : "https://github.com/rurban/Cpanel-JSON-XS/commit/6554531b39fac236321d8601d35eaaa75ae45e20"
+         }
+      ],
+      "title" : "Cpanel-JSON-XS vulnerability",
+      "tracking" : {
+         "current_release_date" : "2016-10-06T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Cpanel-JSON-XS-2016-01",
+         "initial_release_date" : "2016-10-06T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2016-10-06T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<3.0218",
+                  "product" : {
+                     "name" : "Cpanel-JSON-XS less than 3.0218",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RURBAN/Cpanel-JSON-XS"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=3.0218",
+                  "product" : {
+                     "name" : "Cpanel-JSON-XS greater than or equal 3.0218",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RURBAN/Cpanel-JSON-XS"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Cpanel-JSON-XS"
+         }
+      ]
+   }
+}

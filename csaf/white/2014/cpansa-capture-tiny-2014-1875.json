@@ -1,0 +1,183 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Capture::Tiny module before 0.24 for Perl allows local users to write to arbitrary files via a symlink attack on a temporary file.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Capture-Tiny-2014-1875 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Capture-Tiny-2014-1875.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Capture-Tiny.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/102963",
+            "url" : "http://osvdb.org/102963"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1062424",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1062424"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/65475",
+            "url" : "http://www.securityfocus.com/bid/65475"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737835",
+            "url" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737835"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/dagolden/Capture-Tiny/issues/16",
+            "url" : "https://github.com/dagolden/Capture-Tiny/issues/16"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128882.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128882.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/dagolden/Capture-Tiny/commit/635c9eabd52ab8042b0c841823bd6e692de87924",
+            "url" : "https://github.com/dagolden/Capture-Tiny/commit/635c9eabd52ab8042b0c841823bd6e692de87924"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://cpansearch.perl.org/src/DAGOLDEN/Capture-Tiny-0.24/Changes",
+            "url" : "http://cpansearch.perl.org/src/DAGOLDEN/Capture-Tiny-0.24/Changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128823.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128823.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/oss-sec/2014/q1/272",
+            "url" : "http://seclists.org/oss-sec/2014/q1/272"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/oss-sec/2014/q1/267",
+            "url" : "http://seclists.org/oss-sec/2014/q1/267"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/56823",
+            "url" : "http://secunia.com/advisories/56823"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/91464",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/91464"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2014-1875 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2014-1875"
+         }
+      ],
+      "title" : "Capture-Tiny vulnerability",
+      "tracking" : {
+         "current_release_date" : "2014-10-06T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Capture-Tiny-2014-1875",
+         "initial_release_date" : "2014-10-06T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2014-10-06T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.24",
+                  "product" : {
+                     "name" : "Capture-Tiny less than 0.24",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DAGOLDEN/Capture-Tiny"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Capture-Tiny"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2014-1875",
+         "cwe" : {
+            "id" : "CWE-59",
+            "name" : "Improper Link Resolution Before File Access ('Link Following')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Capture::Tiny module before 0.24 for Perl allows local users to write to arbitrary files via a symlink attack on a temporary file.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 3.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

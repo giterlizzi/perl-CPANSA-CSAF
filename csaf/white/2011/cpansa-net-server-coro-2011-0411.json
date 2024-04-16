@@ -1,0 +1,142 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Remaining contents of the read buffer could allow plaintext injection attacks wherein attackers could cause nominally SSL-only commands to be executed by appending them to the end of a STARTTLS.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Net-Server-Coro-2011-0411 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-Server-Coro-2011-0411.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-Server-Coro.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.itsecdb.com/oval/definition/oval/org.opensuse.security/def/20110411/CVE-2011-0411.html",
+            "url" : "https://www.itsecdb.com/oval/definition/oval/org.opensuse.security/def/20110411/CVE-2011-0411.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/Net-Server-Coro/changes",
+            "url" : "https://metacpan.org/dist/Net-Server-Coro/changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-0411 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-0411"
+         }
+      ],
+      "title" : "Net-Server-Coro vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-03-16T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Net-Server-Coro-2011-0411",
+         "initial_release_date" : "2011-03-16T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-03-16T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.0",
+                  "product" : {
+                     "name" : "Net-Server-Coro less than 1.0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ALEXMV/Net-Server-Coro"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.0",
+                  "product" : {
+                     "name" : "Net-Server-Coro greater than or equal 1.0",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ALEXMV/Net-Server-Coro"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Net-Server-Coro"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-0411",
+         "cwe" : {
+            "id" : "CWE-264",
+            "name" : "Permissions, Privileges, and Access Controls"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The STARTTLS implementation in Postfix 2.4.x before 2.4.16, 2.5.x before 2.5.12, 2.6.x before 2.6.9, and 2.7.x before 2.7.3 does not properly restrict I/O buffering, which allows man-in-the-middle attackers to insert commands into encrypted SMTP sessions by sending a cleartext command that is processed after TLS is in place, related to a \"plaintext command injection\" attack.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

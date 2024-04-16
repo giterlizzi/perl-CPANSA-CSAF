@@ -1,0 +1,137 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Newlines in headers, which could lead to header injection attacks.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CGI-Simple-2010-02 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CGI-Simple-2010-02.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI-Simple.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/CGI-Simple",
+            "url" : "https://metacpan.org/changes/distribution/CGI-Simple"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-4410 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-4410"
+         }
+      ],
+      "title" : "CGI-Simple vulnerability",
+      "tracking" : {
+         "current_release_date" : "2010-12-27T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CGI-Simple-2010-02",
+         "initial_release_date" : "2010-12-27T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2010-12-27T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.113",
+                  "product" : {
+                     "name" : "CGI-Simple less than 1.113",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDYA/CGI-Simple"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.113",
+                  "product" : {
+                     "name" : "CGI-Simple greater than or equal 1.113",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ANDYA/CGI-Simple"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CGI-Simple"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-4410",
+         "cwe" : {
+            "id" : "CWE-94",
+            "name" : "Improper Control of Generation of Code ('Code Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "CRLF injection vulnerability in the header function in (1) CGI.pm before 3.50 and (2) Simple.pm in CGI::Simple 1.112 and earlier allows remote attackers to inject arbitrary HTTP headers and conduct HTTP response splitting attacks via vectors related to non-whitespace characters preceded by newline characters, a different vulnerability than CVE-2010-2761 and CVE-2010-3172.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

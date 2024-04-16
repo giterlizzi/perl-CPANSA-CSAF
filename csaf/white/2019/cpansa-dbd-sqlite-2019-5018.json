@@ -1,0 +1,171 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "An exploitable use after free vulnerability exists in the window function functionality of Sqlite3 3.26.0. A specially crafted SQL command can cause a use after free vulnerability, potentially resulting in remote code execution. An attacker can send a malicious SQL command to trigger this vulnerability.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBD-SQLite-2019-5018 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2019-5018.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://talosintelligence.com/vulnerability_reports/TALOS-2019-0777",
+            "url" : "https://talosintelligence.com/vulnerability_reports/TALOS-2019-0777"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/108294",
+            "url" : "http://www.securityfocus.com/bid/108294"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://packetstormsecurity.com/files/152809/Sqlite3-Window-Function-Remote-Code-Execution.html",
+            "url" : "http://packetstormsecurity.com/files/152809/Sqlite3-Window-Function-Remote-Code-Execution.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20190521-0001/",
+            "url" : "https://security.netapp.com/advisory/ntap-20190521-0001/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.gentoo.org/glsa/201908-09",
+            "url" : "https://security.gentoo.org/glsa/201908-09"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/4205-1/",
+            "url" : "https://usn.ubuntu.com/4205-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2019-5018 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-5018"
+         }
+      ],
+      "title" : "DBD-SQLite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-05-10T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBD-SQLite-2019-5018",
+         "initial_release_date" : "2019-05-10T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-05-10T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.61_03|<1.63_03",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.61_03 and less than 1.63_03",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.63_04",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.63_04",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2019-5018",
+         "cwe" : {
+            "id" : "CWE-416",
+            "name" : "Use After Free"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "An exploitable use after free vulnerability exists in the window function functionality of Sqlite3 3.26.0. A specially crafted SQL command can cause a use after free vulnerability, potentially resulting in remote code execution. An attacker can send a malicious SQL command to trigger this vulnerability.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 8.1,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

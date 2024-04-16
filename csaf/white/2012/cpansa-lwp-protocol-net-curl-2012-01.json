@@ -1,0 +1,101 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Misconfiguration with libcurl v7.28.1 causes a HTTPS validation issues.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-LWP-Protocol-Net-Curl-2012-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-LWP-Protocol-Net-Curl-2012-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-LWP-Protocol-Net-Curl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/LWP-Protocol-Net-Curl",
+            "url" : "https://metacpan.org/changes/distribution/LWP-Protocol-Net-Curl"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/creaktive/LWP-Protocol-Net-Curl/commit/dc8b183c6520a2b6bcde685de635675ee4a7e019",
+            "url" : "https://github.com/creaktive/LWP-Protocol-Net-Curl/commit/dc8b183c6520a2b6bcde685de635675ee4a7e019"
+         }
+      ],
+      "title" : "LWP-Protocol-Net-Curl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-11-28T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-LWP-Protocol-Net-Curl-2012-01",
+         "initial_release_date" : "2012-11-28T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-11-28T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.009",
+                  "product" : {
+                     "name" : "LWP-Protocol-Net-Curl less than 0.009",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SYP/LWP-Protocol-Net-Curl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.009",
+                  "product" : {
+                     "name" : "LWP-Protocol-Net-Curl greater than or equal 0.009",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SYP/LWP-Protocol-Net-Curl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "LWP-Protocol-Net-Curl"
+         }
+      ]
+   }
+}

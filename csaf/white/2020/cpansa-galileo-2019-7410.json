@@ -1,0 +1,161 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "There is stored cross site scripting (XSS) in Galileo CMS v0.042. Remote authenticated users could inject arbitrary web script or HTML via $page_title in /lib/Galileo/files/templates/page/show.html.ep (aka the PAGE TITLE Field).",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Galileo-2019-7410 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Galileo-2019-7410.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Galileo.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metamorfosec.com/Files/Commits/METC-2020-002-Escape_banner_in_Galileo_CMS_v0.042.txt",
+            "url" : "https://metamorfosec.com/Files/Commits/METC-2020-002-Escape_banner_in_Galileo_CMS_v0.042.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/Galileo",
+            "url" : "https://metacpan.org/changes/distribution/Galileo"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/jberger/Galileo/pull/55/files",
+            "url" : "https://github.com/jberger/Galileo/pull/55/files"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metamorfosec.com/Files/Advisories/METS-2020-002-A_Stored_XSS_Vulnerability_in_Galileo_CMS_v0.042.txt",
+            "url" : "https://metamorfosec.com/Files/Advisories/METS-2020-002-A_Stored_XSS_Vulnerability_in_Galileo_CMS_v0.042.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2019-7410 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-7410"
+         }
+      ],
+      "title" : "Galileo vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-08-14T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Galileo-2019-7410",
+         "initial_release_date" : "2020-08-14T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-08-14T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.043",
+                  "product" : {
+                     "name" : "Galileo less than 0.043",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/JBERGER/Galileo"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.043",
+                  "product" : {
+                     "name" : "Galileo greater than or equal 0.043",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/JBERGER/Galileo"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Galileo"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2019-7410",
+         "cwe" : {
+            "id" : "CWE-79",
+            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "There is stored cross site scripting (XSS) in Galileo CMS v0.042. Remote authenticated users could inject arbitrary web script or HTML via $page_title in /lib/Galileo/files/templates/page/show.html.ep (aka the PAGE TITLE Field).",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 6.1,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

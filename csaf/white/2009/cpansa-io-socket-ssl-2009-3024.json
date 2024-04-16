@@ -1,0 +1,172 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The verify_hostname_of_cert function in the certificate checking feature in IO-Socket-SSL (IO::Socket::SSL) 1.14 through 1.25 only matches the prefix of a hostname when no wildcard is used, which allows remote attackers to bypass the hostname check for a certificate.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-IO-Socket-SSL-2009-3024 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-IO-Socket-SSL-2009-3024.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-IO-Socket-SSL.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2009/08/31/4",
+            "url" : "http://www.openwall.com/lists/oss-security/2009/08/31/4"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2009/08/28/1",
+            "url" : "http://www.openwall.com/lists/oss-security/2009/08/28/1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://cpansearch.perl.org/src/SULLR/IO-Socket-SSL-1.30/Changes",
+            "url" : "http://cpansearch.perl.org/src/SULLR/IO-Socket-SSL-1.30/Changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2009/08/29/1",
+            "url" : "http://www.openwall.com/lists/oss-security/2009/08/29/1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2009-09/msg00001.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2009-09/msg00001.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0118",
+            "url" : "http://www.vupen.com/english/advisories/2011/0118"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.gentoo.org/security/en/glsa/glsa-201101-06.xml",
+            "url" : "http://www.gentoo.org/security/en/glsa/glsa-201101-06.xml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/42893",
+            "url" : "http://secunia.com/advisories/42893"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2009-3024 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2009-3024"
+         }
+      ],
+      "title" : "IO-Socket-SSL vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-08-31T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-IO-Socket-SSL-2009-3024",
+         "initial_release_date" : "2009-08-31T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-08-31T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.14|<=1.15",
+                  "product" : {
+                     "name" : "IO-Socket-SSL greater than or equal 1.14 and less than or equal 1.15",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SULLR/IO-Socket-SSL"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.26",
+                  "product" : {
+                     "name" : "IO-Socket-SSL greater than or equal 1.26",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SULLR/IO-Socket-SSL"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "IO-Socket-SSL"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2009-3024",
+         "cwe" : {
+            "id" : "CWE-310",
+            "name" : "Cryptographic Issues"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The verify_hostname_of_cert function in the certificate checking feature in IO-Socket-SSL (IO::Socket::SSL) 1.14 through 1.25 only matches the prefix of a hostname when no wildcard is used, which allows remote attackers to bypass the hostname check for a certificate.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

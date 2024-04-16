@@ -1,0 +1,186 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Heap-based buffer overflow in the S_regatom function in regcomp.c in Perl 5 before 5.24.3-RC1 and 5.26.x before 5.26.1-RC1 allows remote attackers to cause a denial of service (out-of-bounds write) via a regular expression with a '\\\\N{}' escape and the case-insensitive modifier.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2017-12837 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2017-12837.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.26.1-RC1",
+            "url" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.26.1-RC1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.24.3-RC1",
+            "url" : "https://perl5.git.perl.org/perl.git/log/refs/tags/v5.24.3-RC1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perl5.git.perl.org/perl.git/commitdiff/96c83ed78aeea1a0496dd2b2d935869a822dc8a5",
+            "url" : "https://perl5.git.perl.org/perl.git/commitdiff/96c83ed78aeea1a0496dd2b2d935869a822dc8a5"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1492091",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1492091"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/100860",
+            "url" : "http://www.securityfocus.com/bid/100860"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.perl.org/Public/Bug/Display.html?id=131582",
+            "url" : "https://rt.perl.org/Public/Bug/Display.html?id=131582"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2017/dsa-3982",
+            "url" : "http://www.debian.org/security/2017/dsa-3982"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20180426-0001/",
+            "url" : "https://security.netapp.com/advisory/ntap-20180426-0001/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpujul2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2017-12837 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2017-12837"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-09-19T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-perl-2017-12837",
+         "initial_release_date" : "2017-09-19T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-09-19T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<5.26.1",
+                  "product" : {
+                     "name" : "perl less than 5.26.1",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.28.1",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.28.1",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2017-12837",
+         "cwe" : {
+            "id" : "CWE-119",
+            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Heap-based buffer overflow in the S_regatom function in regcomp.c in Perl 5 before 5.24.3-RC1 and 5.26.x before 5.26.1-RC1 allows remote attackers to cause a denial of service (out-of-bounds write) via a regular expression with a '\\N{}' escape and the case-insensitive modifier.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

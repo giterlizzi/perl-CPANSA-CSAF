@@ -1,0 +1,112 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "A bug in format detection can potentially be exploited for a DoS attack.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Mojolicious-2021-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mojolicious-2021-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mojolicious/mojo/issues/1736",
+            "url" : "https://github.com/mojolicious/mojo/issues/1736"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mojolicious/mojo/commit/a0c4576ffb11c235088550de9ba7ac4196e1953c",
+            "url" : "https://github.com/mojolicious/mojo/commit/a0c4576ffb11c235088550de9ba7ac4196e1953c"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2021-47208 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2021-47208"
+         }
+      ],
+      "title" : "Mojolicious vulnerability",
+      "tracking" : {
+         "current_release_date" : "2021-03-16T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Mojolicious-2021-01",
+         "initial_release_date" : "2021-03-16T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2021-03-16T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<9.11",
+                  "product" : {
+                     "name" : "Mojolicious less than 9.11",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SRI/Mojolicious"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Mojolicious"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2021-47208",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Mojolicious module before 9.11 for Perl has a bug in format detection that can potentially be exploited for denial of service.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

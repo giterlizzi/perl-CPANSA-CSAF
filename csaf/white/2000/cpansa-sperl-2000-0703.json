@@ -1,0 +1,164 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "suidperl (aka sperl) does not properly cleanse the escape sequence \"~!\" before calling /bin/mail to send an error report, which allows local users to gain privileges by setting the \"interactive\" environmental variable and calling suidperl with a filename that contains the escape sequence.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-sperl-2000-0703 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-sperl-2000-0703.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-sperl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0022.html",
+            "url" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0022.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.calderasystems.com/support/security/advisories/CSSA-2000-026.0.txt",
+            "url" : "http://www.calderasystems.com/support/security/advisories/CSSA-2000-026.0.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/1547",
+            "url" : "http://www.securityfocus.com/bid/1547"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.novell.com/linux/security/advisories/suse_security_announce_59.html",
+            "url" : "http://www.novell.com/linux/security/advisories/suse_security_announce_59.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.redhat.com/support/errata/RHSA-2000-048.html",
+            "url" : "http://www.redhat.com/support/errata/RHSA-2000-048.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.turbolinux.com/pipermail/tl-security-announce/2000-August/000017.html",
+            "url" : "http://www.turbolinux.com/pipermail/tl-security-announce/2000-August/000017.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0153.html",
+            "url" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0153.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0086.html",
+            "url" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0086.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0113.html",
+            "url" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0113.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.cpan.org/src/5.0/sperl-2000-08-05/sperl-2000-08-05.txt",
+            "url" : "https://www.cpan.org/src/5.0/sperl-2000-08-05/sperl-2000-08-05.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2000-0703 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2000-0703"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2000-10-20T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-sperl-2000-0703",
+         "initial_release_date" : "2000-10-20T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2000-10-20T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<5.6.1",
+                  "product" : {
+                     "name" : "perl less than 5.6.1",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2000-0703",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "suidperl (aka sperl) does not properly cleanse the escape sequence \"~!\" before calling /bin/mail to send an error report, which allows local users to gain privileges by setting the \"interactive\" environmental variable and calling suidperl with a filename that contains the escape sequence.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.2,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

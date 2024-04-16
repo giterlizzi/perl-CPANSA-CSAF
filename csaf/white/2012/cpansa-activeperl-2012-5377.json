@@ -1,0 +1,124 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Untrusted search path vulnerability in the installation functionality in ActivePerl 5.16.1.1601, when installed in the top-level C:\\ directory, allows local users to gain privileges via a Trojan horse DLL in the C:\\Perl\\Site\\bin directory, which is added to the PATH system environment variable, as demonstrated by a Trojan horse wlbsctrl.dll file used by the \"IKE and AuthIP IPsec Keying Modules\" system service in Windows Vista SP1, Windows Server 2008 SP2, Windows 7 SP1, and Windows 8 Release Preview.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-ActivePerl-2012-5377 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-ActivePerl-2012-5377.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-ActivePerl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.htbridge.com/advisory/HTB23108",
+            "url" : "https://www.htbridge.com/advisory/HTB23108"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/86177",
+            "url" : "http://osvdb.org/86177"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2012-5377 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-5377"
+         }
+      ],
+      "title" : "ActivePerl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-10-11T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-ActivePerl-2012-5377",
+         "initial_release_date" : "2012-10-11T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-10-11T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/=5.16.1.1601",
+                  "product" : {
+                     "name" : "ActivePerl equal 5.16.1.1601",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ActivePerl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "ActivePerl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2012-5377",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Untrusted search path vulnerability in the installation functionality in ActivePerl 5.16.1.1601, when installed in the top-level C:\\ directory, allows local users to gain privileges via a Trojan horse DLL in the C:\\Perl\\Site\\bin directory, which is added to the PATH system environment variable, as demonstrated by a Trojan horse wlbsctrl.dll file used by the \"IKE and AuthIP IPsec Keying Modules\" system service in Windows Vista SP1, Windows Server 2008 SP2, Windows 7 SP1, and Windows 8 Release Preview.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6,
+                  "vectorString" : "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,96 @@
+{
+   "document" : {
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "YAML loader can run DESTROY method of object created with perl/* tag.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-YAML-2017-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-YAML-2017-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-YAML.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/ingydotnet/yaml-pm/issues/176",
+            "url" : "https://github.com/ingydotnet/yaml-pm/issues/176"
+         }
+      ],
+      "title" : "YAML vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-05-10T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-YAML-2017-01",
+         "initial_release_date" : "2017-05-10T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-05-10T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.25",
+                  "product" : {
+                     "name" : "YAML less than 1.25",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TINITA/YAML"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.25",
+                  "product" : {
+                     "name" : "YAML greater than or equal 1.25",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TINITA/YAML"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "YAML"
+         }
+      ]
+   }
+}

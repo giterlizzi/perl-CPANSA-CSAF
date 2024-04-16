@@ -1,0 +1,162 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Cross-site scripting (XSS) vulnerability in the HTML-Scrubber module before 0.15 for Perl, when the comment feature is enabled, allows remote attackers to inject arbitrary web script or HTML via a crafted comment.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-HTML-Scrubber-2015-5667 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTML-Scrubber-2015-5667.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTML-Scrubber.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://jvn.jp/en/jp/JVN53973084/index.html",
+            "url" : "http://jvn.jp/en/jp/JVN53973084/index.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://jvndb.jvn.jp/jvndb/JVNDB-2015-000171",
+            "url" : "http://jvndb.jvn.jp/jvndb/JVNDB-2015-000171"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/release/HTML-Scrubber",
+            "url" : "https://metacpan.org/release/HTML-Scrubber"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172997.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172997.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172983.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172983.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172934.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172934.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2015-5667 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2015-5667"
+         }
+      ],
+      "title" : "HTML-Scrubber vulnerability",
+      "tracking" : {
+         "current_release_date" : "2015-10-31T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-HTML-Scrubber-2015-5667",
+         "initial_release_date" : "2015-10-31T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2015-10-31T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.15",
+                  "product" : {
+                     "name" : "HTML-Scrubber less than 0.15",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/PODMASTER/HTML-Scrubber"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.15",
+                  "product" : {
+                     "name" : "HTML-Scrubber greater than or equal 0.15",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/PODMASTER/HTML-Scrubber"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "HTML-Scrubber"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2015-5667",
+         "cwe" : {
+            "id" : "CWE-79",
+            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Cross-site scripting (XSS) vulnerability in the HTML-Scrubber module before 0.15 for Perl, when the comment feature is enabled, allows remote attackers to inject arbitrary web script or HTML via a crafted comment.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 2.6,
+                  "vectorString" : "AV:N/AC:H/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

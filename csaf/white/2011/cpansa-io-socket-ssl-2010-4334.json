@@ -1,0 +1,187 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The IO::Socket::SSL module 1.35 for Perl, when verify_mode is not VERIFY_NONE, fails open to VERIFY_NONE instead of throwing an error when a ca_file/ca_path cannot be verified, which allows remote attackers to bypass intended certificate restrictions.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-IO-Socket-SSL-2010-4334 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-IO-Socket-SSL-2010-4334.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-IO-Socket-SSL.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://osvdb.org/69626",
+            "url" : "http://osvdb.org/69626"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=606058",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=606058"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/45189",
+            "url" : "http://www.securityfocus.com/bid/45189"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://cpansearch.perl.org/src/SULLR/IO-Socket-SSL-1.35/Changes",
+            "url" : "http://cpansearch.perl.org/src/SULLR/IO-Socket-SSL-1.35/Changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/42508",
+            "url" : "http://secunia.com/advisories/42508"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/42757",
+            "url" : "http://secunia.com/advisories/42757"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2010/12/09/8",
+            "url" : "http://www.openwall.com/lists/oss-security/2010/12/09/8"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052594.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052594.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2010/12/24/1",
+            "url" : "http://www.openwall.com/lists/oss-security/2010/12/24/1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052601.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052601.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2011:092",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2011:092"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-4334 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-4334"
+         }
+      ],
+      "title" : "IO-Socket-SSL vulnerability",
+      "tracking" : {
+         "current_release_date" : "2011-01-14T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-IO-Socket-SSL-2010-4334",
+         "initial_release_date" : "2011-01-14T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2011-01-14T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.35",
+                  "product" : {
+                     "name" : "IO-Socket-SSL less than 1.35",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SULLR/IO-Socket-SSL"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.35",
+                  "product" : {
+                     "name" : "IO-Socket-SSL greater than or equal 1.35",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/SULLR/IO-Socket-SSL"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "IO-Socket-SSL"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-4334",
+         "cwe" : {
+            "id" : "CWE-310",
+            "name" : "Cryptographic Issues"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The IO::Socket::SSL module 1.35 for Perl, when verify_mode is not VERIFY_NONE, fails open to VERIFY_NONE instead of throwing an error when a ca_file/ca_path cannot be verified, which allows remote attackers to bypass intended certificate restrictions.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4,
+                  "vectorString" : "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

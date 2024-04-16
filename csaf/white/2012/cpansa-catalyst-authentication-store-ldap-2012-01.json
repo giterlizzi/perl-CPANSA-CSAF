@@ -1,0 +1,99 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_informational_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Incorrect password check binds to the unauthenticated user.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Catalyst-Authentication-Store-LDAP-2012-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Catalyst-Authentication-Store-LDAP-2012-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Catalyst-Authentication-Store-LDAP.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=81908",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=81908"
+         }
+      ],
+      "title" : "Catalyst-Authentication-Store-LDAP vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-12-11T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Catalyst-Authentication-Store-LDAP-2012-01",
+         "initial_release_date" : "2012-12-11T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-12-11T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.013",
+                  "product" : {
+                     "name" : "Catalyst-Authentication-Store-LDAP less than 1.013",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/KARMAN/Catalyst-Authentication-Store-LDAP"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.013",
+                  "product" : {
+                     "name" : "Catalyst-Authentication-Store-LDAP greater than or equal 1.013",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/KARMAN/Catalyst-Authentication-Store-LDAP"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Catalyst-Authentication-Store-LDAP"
+         }
+      ]
+   }
+}

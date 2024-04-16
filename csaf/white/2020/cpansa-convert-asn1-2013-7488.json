@@ -1,0 +1,142 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "perl-Convert-ASN1 (aka the Convert::ASN1 module for Perl) through 0.27 allows remote attackers to cause an infinite loop via unexpected input.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Convert-ASN1-2013-7488 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Convert-ASN1-2013-7488.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Convert-ASN1.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/gbarr/perl-Convert-ASN1/issues/14",
+            "url" : "https://github.com/gbarr/perl-Convert-ASN1/issues/14"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ONNQSW4SSKMG5RUEFZJZA5T5R2WXEGQF/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ONNQSW4SSKMG5RUEFZJZA5T5R2WXEGQF/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6V3PJEQOT47ZO77263XPGS3Y3AJROI4X/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6V3PJEQOT47ZO77263XPGS3Y3AJROI4X/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2013-7488 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2013-7488"
+         }
+      ],
+      "title" : "Convert-ASN1 vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-04-07T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Convert-ASN1-2013-7488",
+         "initial_release_date" : "2020-04-07T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-04-07T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.27",
+                  "product" : {
+                     "name" : "Convert-ASN1 less than 0.27",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GBARR/Convert-ASN1"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Convert-ASN1"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2013-7488",
+         "cwe" : {
+            "id" : "CWE-835",
+            "name" : "Loop with Unreachable Exit Condition ('Infinite Loop')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "perl-Convert-ASN1 (aka the Convert::ASN1 module for Perl) through 0.27 allows remote attackers to cause an infinite loop via unexpected input.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,203 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Unspecified vulnerability in CGI.pm 3.50 and earlier allows remote attackers to inject arbitrary HTTP headers and conduct HTTP response splitting attacks via unknown vectors.  NOTE: this issue exists because of an incomplete fix for CVE-2010-2761.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CGI-2010-4411 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CGI-2010-4411.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://openwall.com/lists/oss-security/2010/12/01/3",
+            "url" : "http://openwall.com/lists/oss-security/2010/12/01/3"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.mandriva.com/security/advisories?name=MDVSA-2011:008",
+            "url" : "http://www.mandriva.com/security/advisories?name=MDVSA-2011:008"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0106",
+            "url" : "http://www.vupen.com/english/advisories/2011/0106"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.bugzilla.org/security/3.2.9/",
+            "url" : "http://www.bugzilla.org/security/3.2.9/"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/43033",
+            "url" : "http://secunia.com/advisories/43033"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.mozilla.org/show_bug.cgi?id=591165",
+            "url" : "https://bugzilla.mozilla.org/show_bug.cgi?id=591165"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0207",
+            "url" : "http://www.vupen.com/english/advisories/2011/0207"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0271",
+            "url" : "http://www.vupen.com/english/advisories/2011/0271"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2011/0212",
+            "url" : "http://www.vupen.com/english/advisories/2011/0212"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-February/053665.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-February/053665.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/43068",
+            "url" : "http://secunia.com/advisories/43068"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2011-01/msg00006.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2011-01/msg00006.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/43165",
+            "url" : "http://secunia.com/advisories/43165"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-February/053678.html",
+            "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-February/053678.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2011-04/msg00000.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2011-04/msg00000.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-4411 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-4411"
+         }
+      ],
+      "title" : "CGI vulnerability",
+      "tracking" : {
+         "current_release_date" : "2010-12-06T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CGI-2010-4411",
+         "initial_release_date" : "2010-12-06T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2010-12-06T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<3.50",
+                  "product" : {
+                     "name" : "CGI less than 3.50",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/LEEJO/CGI"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=3.50",
+                  "product" : {
+                     "name" : "CGI greater than or equal 3.50",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/LEEJO/CGI"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CGI"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-4411",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Unspecified vulnerability in CGI.pm 3.50 and earlier allows remote attackers to inject arbitrary HTTP headers and conduct HTTP response splitting attacks via unknown vectors.  NOTE: this issue exists because of an incomplete fix for CVE-2010-2761.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

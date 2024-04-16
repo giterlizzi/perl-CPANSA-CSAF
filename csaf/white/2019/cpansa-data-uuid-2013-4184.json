@@ -1,0 +1,176 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Perl module Data::UUID from CPAN version 1.219 vulnerable to symlink attacks",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Data-UUID-2013-4184 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Data-UUID-2013-4184.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Data-UUID.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2013-4184",
+            "url" : "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2013-4184"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2013/07/31/4",
+            "url" : "http://www.openwall.com/lists/oss-security/2013/07/31/4"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/61534",
+            "url" : "http://www.securityfocus.com/bid/61534"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/86103",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/86103"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security-tracker.debian.org/tracker/CVE-2013-4184",
+            "url" : "https://security-tracker.debian.org/tracker/CVE-2013-4184"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/security/cve/cve-2013-4184",
+            "url" : "https://access.redhat.com/security/cve/cve-2013-4184"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.gentoo.org/show_bug.cgi?id=CVE-2013-4184",
+            "url" : "https://bugs.gentoo.org/show_bug.cgi?id=CVE-2013-4184"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2013-4184 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2013-4184"
+         }
+      ],
+      "title" : "Data-UUID vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-12-10T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Data-UUID-2013-4184",
+         "initial_release_date" : "2019-12-10T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-12-10T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>1.219|<1.227",
+                  "product" : {
+                     "name" : "Data-UUID greater than 1.219 and less than 1.227",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/Data-UUID"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.227",
+                  "product" : {
+                     "name" : "Data-UUID greater than or equal 1.227",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/Data-UUID"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Data-UUID"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2013-4184",
+         "cwe" : {
+            "id" : "CWE-59",
+            "name" : "Improper Link Resolution Before File Access ('Link Following')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Perl module Data::UUID from CPAN version 1.219 vulnerable to symlink attacks",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 3.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 5.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

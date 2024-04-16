@@ -1,0 +1,177 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Buffer overflow in Imager 0.42 through 0.63 allows attackers to cause a denial of service (crash) via an image based fill in which the number of input channels is different from the number of output channels.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Imager-2008-1928 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Imager-2008-1928.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Imager.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/Imager/changes",
+            "url" : "https://metacpan.org/dist/Imager/changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://rt.cpan.org/Public/Bug/Display.html?id=35324",
+            "url" : "http://rt.cpan.org/Public/Bug/Display.html?id=35324"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://imager.perl.org/i/release064/Imager_0_64",
+            "url" : "http://imager.perl.org/i/release064/Imager_0_64"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.redhat.com/archives/fedora-package-announce/2008-April/msg00569.html",
+            "url" : "https://www.redhat.com/archives/fedora-package-announce/2008-April/msg00569.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/28980",
+            "url" : "http://www.securityfocus.com/bid/28980"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/30030",
+            "url" : "http://secunia.com/advisories/30030"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/30011",
+            "url" : "http://secunia.com/advisories/30011"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2008/1387/references",
+            "url" : "http://www.vupen.com/english/advisories/2008/1387/references"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/41986",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/41986"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2008-1928 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2008-1928"
+         }
+      ],
+      "title" : "Imager vulnerability",
+      "tracking" : {
+         "current_release_date" : "2008-04-24T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Imager-2008-1928",
+         "initial_release_date" : "2008-04-24T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2008-04-24T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.42|<=0.63",
+                  "product" : {
+                     "name" : "Imager greater than or equal 0.42 and less than or equal 0.63",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TONYC/Imager"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.64",
+                  "product" : {
+                     "name" : "Imager greater than or equal 0.64",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TONYC/Imager"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Imager"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2008-1928",
+         "cwe" : {
+            "id" : "CWE-119",
+            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Buffer overflow in Imager 0.42 through 0.63 allows attackers to cause a denial of service (crash) via an image based fill in which the number of input channels is different from the number of output channels.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

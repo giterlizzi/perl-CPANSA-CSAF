@@ -1,0 +1,133 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Allows local users to overwrite arbitrary files via a symlink attack on a temporary PID file.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBI-2005-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBI-2005-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBI.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/DBI",
+            "url" : "https://metacpan.org/changes/distribution/DBI"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2005-0077 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2005-0077"
+         }
+      ],
+      "title" : "DBI vulnerability",
+      "tracking" : {
+         "current_release_date" : "2005-05-02T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBI-2005-01",
+         "initial_release_date" : "2005-05-02T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2005-05-02T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.47",
+                  "product" : {
+                     "name" : "DBI less than 1.47",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TIMB/DBI"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.47",
+                  "product" : {
+                     "name" : "DBI greater than or equal 1.47",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/TIMB/DBI"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBI"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2005-0077",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The DBI library (libdbi-perl) for Perl allows local users to overwrite arbitrary files via a symlink attack on a temporary PID file.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 2.1,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

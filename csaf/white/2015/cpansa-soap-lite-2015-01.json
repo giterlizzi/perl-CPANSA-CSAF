@@ -1,0 +1,153 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "An example attack consists of defining 10 or more XML entities, each defined as consisting of 10 of the previous entity, with the document consisting of a single instance of the largest entity, which expands to one billion copies of the first entity. The amount of computer memory used for handling an external SOAP call would likely exceed that available to the process parsing the XML.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-SOAP-Lite-2015-01 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-SOAP-Lite-2015-01.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-SOAP-Lite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/changes/distribution/SOAP-Lite",
+            "url" : "https://metacpan.org/changes/distribution/SOAP-Lite"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.securityfocus.com/bid/94487",
+            "url" : "https://www.securityfocus.com/bid/94487"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/redhotpenguin/perl-soaplite/commit/6942fe0d281be1c32c5117605f9c4e8d44f51124",
+            "url" : "https://github.com/redhotpenguin/perl-soaplite/commit/6942fe0d281be1c32c5117605f9c4e8d44f51124"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2015-8978 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2015-8978"
+         }
+      ],
+      "title" : "SOAP-Lite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2015-07-21T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-SOAP-Lite-2015-01",
+         "initial_release_date" : "2015-07-21T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2015-07-21T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.15",
+                  "product" : {
+                     "name" : "SOAP-Lite less than 1.15",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/KULCHENKO/SOAP-Lite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.15",
+                  "product" : {
+                     "name" : "SOAP-Lite greater than or equal 1.15",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/KULCHENKO/SOAP-Lite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "SOAP-Lite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2015-8978",
+         "cwe" : {
+            "id" : "CWE-399",
+            "name" : "Resource Management Errors"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "In Soap Lite (aka the SOAP::Lite extension for Perl) 1.14 and earlier, an example attack consists of defining 10 or more XML entities, each defined as consisting of 10 of the previous entity, with the document consisting of a single instance of the largest entity, which expands to one billion copies of the first entity. The amount of computer memory used for handling an external SOAP call would likely exceed that available to the process parsing the XML.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

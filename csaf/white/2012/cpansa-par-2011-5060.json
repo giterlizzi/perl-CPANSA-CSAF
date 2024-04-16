@@ -1,0 +1,152 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The par_mktmpdir function in the PAR module before 1.003 for Perl creates temporary files in a directory with a predictable name without verifying ownership and permissions of this directory, which allows local users to overwrite files when another user extracts a PAR packed program, a different vulnerability in a different package than CVE-2011-4114.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-PAR-2011-5060 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-PAR-2011-5060.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-PAR.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://cpansearch.perl.org/src/RSCHUPP/PAR-1.003/ChangeLog",
+            "url" : "http://cpansearch.perl.org/src/RSCHUPP/PAR-1.003/ChangeLog"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=753955",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=753955"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=69560",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=69560"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/72435",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/72435"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-5060 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-5060"
+         }
+      ],
+      "title" : "PAR vulnerability",
+      "tracking" : {
+         "current_release_date" : "2012-01-13T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-PAR-2011-5060",
+         "initial_release_date" : "2012-01-13T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2012-01-13T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.003",
+                  "product" : {
+                     "name" : "PAR less than 1.003",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RSCHUPP/PAR"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.003",
+                  "product" : {
+                     "name" : "PAR greater than or equal 1.003",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RSCHUPP/PAR"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "PAR"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-5060",
+         "cwe" : {
+            "id" : "CWE-264",
+            "name" : "Permissions, Privileges, and Access Controls"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The par_mktmpdir function in the PAR module before 1.003 for Perl creates temporary files in a directory with a predictable name without verifying ownership and permissions of this directory, which allows local users to overwrite files when another user extracts a PAR packed program, a different vulnerability in a different package than CVE-2011-4114.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 3.3,
+                  "vectorString" : "AV:L/AC:M/Au:N/C:N/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

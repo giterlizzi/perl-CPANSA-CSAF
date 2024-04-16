@@ -1,0 +1,144 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "CGI::Session 4.03-1 allows local users to overwrite arbitrary files via a symlink attack on temporary files used by (1) Driver::File, (2) Driver::db_file, and possibly (3) Driver::sqlite.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-CGI-Session-2006-1279 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CGI-Session-2006-1279.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI-Session.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=356555",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=356555"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/19211",
+            "url" : "http://secunia.com/advisories/19211"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/17177",
+            "url" : "http://www.securityfocus.com/bid/17177"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.osvdb.org/23865",
+            "url" : "http://www.osvdb.org/23865"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2006/0946",
+            "url" : "http://www.vupen.com/english/advisories/2006/0946"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/25285",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/25285"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2006-1279 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2006-1279"
+         }
+      ],
+      "title" : "CGI-Session vulnerability",
+      "tracking" : {
+         "current_release_date" : "2006-03-19T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-CGI-Session-2006-1279",
+         "initial_release_date" : "2006-03-19T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2006-03-19T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<4.10",
+                  "product" : {
+                     "name" : "CGI-Session less than 4.10",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MARKSTOS/CGI-Session"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "CGI-Session"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2006-1279",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "CGI::Session 4.03-1 allows local users to overwrite arbitrary files via a symlink attack on temporary files used by (1) Driver::File, (2) Driver::db_file, and possibly (3) Driver::sqlite.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,143 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "In Apache::Session::Browseable before 1.3.6, validity of the X.509 certificate is not checked by default when connecting to remote LDAP backends, because the default configuration of the Net::LDAPS module for Perl is used. NOTE: this can, for example, be fixed in conjunction with the CVE-2020-16093 fix.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Apache-Session-Browseable-2020-36659 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Apache-Session-Browseable-2020-36659.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-Session-Browseable.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/LemonLDAPNG/Apache-Session-Browseable/commit/fdf393235140b293cae5578ef136055a78f3574f",
+            "url" : "https://github.com/LemonLDAPNG/Apache-Session-Browseable/commit/fdf393235140b293cae5578ef136055a78f3574f"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.debian.org/debian-lts-announce/2023/01/msg00025.html",
+            "url" : "https://lists.debian.org/debian-lts-announce/2023/01/msg00025.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-36659 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-36659"
+         }
+      ],
+      "title" : "Apache-Session-Browseable vulnerability",
+      "tracking" : {
+         "current_release_date" : "2023-01-27T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Apache-Session-Browseable-2020-36659",
+         "initial_release_date" : "2023-01-27T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2023-01-27T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.3.6",
+                  "product" : {
+                     "name" : "Apache-Session-Browseable less than 1.3.6",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GUIMARD/Apache-Session-Browseable"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.3.6",
+                  "product" : {
+                     "name" : "Apache-Session-Browseable greater than or equal 1.3.6",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GUIMARD/Apache-Session-Browseable"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Apache-Session-Browseable"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-36659",
+         "cwe" : {
+            "id" : "CWE-295",
+            "name" : "Improper Certificate Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "In Apache::Session::Browseable before 1.3.6, validity of the X.509 certificate is not checked by default when connecting to remote LDAP backends, because the default configuration of the Net::LDAPS module for Perl is used. NOTE: this can, for example, be fixed in conjunction with the CVE-2020-16093 fix.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 8.1,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

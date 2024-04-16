@@ -1,0 +1,158 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The decode_entities function in util.c in HTML-Parser before 3.63 allows context-dependent attackers to cause a denial of service (infinite loop) via an incomplete SGML numeric character reference, which triggers generation of an invalid UTF-8 character.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-HTML-Parser-2009-3627 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTML-Parser-2009-3627.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTML-Parser.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6225",
+            "url" : "https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6225"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2009/10/23/9",
+            "url" : "http://www.openwall.com/lists/oss-security/2009/10/23/9"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://secunia.com/advisories/37155",
+            "url" : "http://secunia.com/advisories/37155"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/36807",
+            "url" : "http://www.securityfocus.com/bid/36807"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=530604",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=530604"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.vupen.com/english/advisories/2009/3022",
+            "url" : "http://www.vupen.com/english/advisories/2009/3022"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://github.com/gisle/html-parser/commit/b9aae1e43eb2c8e989510187cff0ba3e996f9a4c",
+            "url" : "http://github.com/gisle/html-parser/commit/b9aae1e43eb2c8e989510187cff0ba3e996f9a4c"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/53941",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/53941"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2009-3627 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2009-3627"
+         }
+      ],
+      "title" : "HTML-Parser vulnerability",
+      "tracking" : {
+         "current_release_date" : "2009-10-29T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-HTML-Parser-2009-3627",
+         "initial_release_date" : "2009-10-29T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2009-10-29T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<3.63",
+                  "product" : {
+                     "name" : "HTML-Parser less than 3.63",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/OALDERS/HTML-Parser"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "HTML-Parser"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2009-3627",
+         "cwe" : {
+            "id" : "CWE-20",
+            "name" : "Improper Input Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The decode_entities function in util.c in HTML-Parser before 3.63 allows context-dependent attackers to cause a denial of service (infinite loop) via an incomplete SGML numeric character reference, which triggers generation of an invalid UTF-8 character.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,139 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "GitLab::API::v4 is missing the verify_SSL=>1 flag in HTTP::Tiny, allowing a network attacker to MITM connections to the GitLab server.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-GitLab-API-v4-2023-31485 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-GitLab-API-v4-2023-31485.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-GitLab-API-v4.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/bluefeet/GitLab-API-v4/pull/57",
+            "url" : "https://github.com/bluefeet/GitLab-API-v4/pull/57"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/",
+            "url" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.openwall.com/lists/oss-security/2023/04/18/14",
+            "url" : "https://www.openwall.com/lists/oss-security/2023/04/18/14"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/chansen/p5-http-tiny/pull/151",
+            "url" : "https://github.com/chansen/p5-http-tiny/pull/151"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2023-31485 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2023-31485"
+         }
+      ],
+      "title" : "GitLab-API-v4 vulnerability",
+      "tracking" : {
+         "current_release_date" : "2023-02-28T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-GitLab-API-v4-2023-31485",
+         "initial_release_date" : "2023-02-28T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2023-02-28T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.26",
+                  "product" : {
+                     "name" : "GitLab-API-v4 greater than or equal 0.26",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/BLUEFEET/GitLab-API-v4"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "GitLab-API-v4"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2023-31485",
+         "cwe" : {
+            "id" : "CWE-295",
+            "name" : "Improper Certificate Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "GitLab::API::v4 through 0.26 does not verify TLS certificates when connecting to a GitLab server, enabling machine-in-the-middle attacks.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 5.9,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,251 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "medium"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "In SQLite before 3.32.3, select.c mishandles query-flattener optimization, leading to a multiSelectOrderBy heap overflow because of misuse of transitive properties for constant propagation.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-DBD-SQLite-2020-15358 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2020-15358.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.sqlite.org/src/info/10fa79d00f8091e5",
+            "url" : "https://www.sqlite.org/src/info/10fa79d00f8091e5"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.sqlite.org/src/timeline?p=version-3.32.3&bt=version-3.32.2",
+            "url" : "https://www.sqlite.org/src/timeline?p=version-3.32.3&bt=version-3.32.2"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.sqlite.org/src/tktview?name=8f157e8010",
+            "url" : "https://www.sqlite.org/src/tktview?name=8f157e8010"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.netapp.com/advisory/ntap-20200709-0001/",
+            "url" : "https://security.netapp.com/advisory/ntap-20200709-0001/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.gentoo.org/glsa/202007-26",
+            "url" : "https://security.gentoo.org/glsa/202007-26"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/4438-1/",
+            "url" : "https://usn.ubuntu.com/4438-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpuoct2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpuoct2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT211931",
+            "url" : "https://support.apple.com/kb/HT211931"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT211844",
+            "url" : "https://support.apple.com/kb/HT211844"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT211850",
+            "url" : "https://support.apple.com/kb/HT211850"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT211843",
+            "url" : "https://support.apple.com/kb/HT211843"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT211847",
+            "url" : "https://support.apple.com/kb/HT211847"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2020/Nov/19",
+            "url" : "http://seclists.org/fulldisclosure/2020/Nov/19"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2020/Nov/22",
+            "url" : "http://seclists.org/fulldisclosure/2020/Nov/22"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2020/Nov/20",
+            "url" : "http://seclists.org/fulldisclosure/2020/Nov/20"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2020/Dec/32",
+            "url" : "http://seclists.org/fulldisclosure/2020/Dec/32"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpujan2021.html",
+            "url" : "https://www.oracle.com/security-alerts/cpujan2021.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://support.apple.com/kb/HT212147",
+            "url" : "https://support.apple.com/kb/HT212147"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2021/Feb/14",
+            "url" : "http://seclists.org/fulldisclosure/2021/Feb/14"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "url" : "https://www.oracle.com/security-alerts/cpuApr2021.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf",
+            "url" : "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "url" : "https://www.oracle.com/security-alerts/cpuapr2022.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-15358 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-15358"
+         }
+      ],
+      "title" : "DBD-SQLite vulnerability",
+      "tracking" : {
+         "current_release_date" : "2020-06-27T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-DBD-SQLite-2020-15358",
+         "initial_release_date" : "2020-06-27T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2020-06-27T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.65_03",
+                  "product" : {
+                     "name" : "DBD-SQLite less than 1.65_03",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.65_03",
+                  "product" : {
+                     "name" : "DBD-SQLite greater than or equal 1.65_03",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-15358",
+         "cwe" : {
+            "id" : "CWE-787",
+            "name" : "Out-of-bounds Write"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "In SQLite before 3.32.3, select.c mishandles query-flattener optimization, leading to a multiSelectOrderBy heap overflow because of misuse of transitive properties for constant propagation.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 2.1,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 5.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

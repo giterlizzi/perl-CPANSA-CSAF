@@ -1,0 +1,124 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Buffer overflow in suidperl (sperl), Perl 4.x and 5.x.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-sperl-1999-0034 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-sperl-1999-0034.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-sperl.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/448",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/448"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.cpan.org/src/5.0/CA-97.17.sperl",
+            "url" : "https://www.cpan.org/src/5.0/CA-97.17.sperl"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-1999-0034 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-1999-0034"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "1997-05-29T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-sperl-1999-0034",
+         "initial_release_date" : "1997-05-29T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "1997-05-29T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=4.0|<5.4.0",
+                  "product" : {
+                     "name" : "perl greater than or equal 4.0 and less than 5.4.0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RJBS/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-1999-0034",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Buffer overflow in suidperl (sperl), Perl 4.x and 5.x.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 7.2,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

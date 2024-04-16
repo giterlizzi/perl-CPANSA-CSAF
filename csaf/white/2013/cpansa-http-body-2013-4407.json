@@ -1,0 +1,146 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "moderate"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "HTTP::Body::Multipart in the HTTP-Body 1.08, 1.22, and earlier module for Perl uses the part of the uploaded file's name after the first \".\" character as the suffix of a temporary file, which makes it easier for remote attackers to conduct attacks by leveraging subsequent behavior that may assume the suffix is well-formed.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-HTTP-Body-2013-4407 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTTP-Body-2013-4407.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTTP-Body.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.openwall.com/lists/oss-security/2024/04/07/1",
+            "url" : "https://www.openwall.com/lists/oss-security/2024/04/07/1"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security-tracker.debian.org/tracker/CVE-2013-4407",
+            "url" : "https://security-tracker.debian.org/tracker/CVE-2013-4407"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=721634",
+            "url" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=721634"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2013-4407 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2013-4407"
+         }
+      ],
+      "title" : "HTTP-Body vulnerability",
+      "tracking" : {
+         "current_release_date" : "2013-09-02T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-HTTP-Body-2013-4407",
+         "initial_release_date" : "2013-09-02T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2013-09-02T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.08|<1.23",
+                  "product" : {
+                     "name" : "HTTP-Body greater than or equal 1.08 and less than 1.23",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/AGRUNDMA/HTTP-Body"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.23",
+                  "product" : {
+                     "name" : "HTTP-Body greater than or equal 1.23",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/AGRUNDMA/HTTP-Body"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "HTTP-Body"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2013-4407",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "HTTP::Body::Multipart in the HTTP-Body module for Perl (1.07 through 1.22, before 1.23) uses the part of the uploaded file's name after the first \".\" character as the suffix of a temporary file, which makes it easier for remote attackers to conduct attacks by leveraging subsequent behavior that may assume the suffix is well-formed.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

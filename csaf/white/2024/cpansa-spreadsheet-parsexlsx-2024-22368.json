@@ -1,0 +1,159 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "The Spreadsheet::ParseXLSX package before 0.28 for Perl can encounter an out-of-memory condition during parsing of a crafted XLSX document. This occurs because the memoize implementation does not have appropriate constraints on merged cells.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Spreadsheet-ParseXLSX-2024-22368 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Spreadsheet-ParseXLSX-2024-22368.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Spreadsheet-ParseXLSX.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/haile01/perl_spreadsheet_excel_rce_poc/blob/main/parse_xlsx_bomb.md",
+            "url" : "https://github.com/haile01/perl_spreadsheet_excel_rce_poc/blob/main/parse_xlsx_bomb.md"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/briandfoy/cpan-security-advisory/issues/131",
+            "url" : "https://github.com/briandfoy/cpan-security-advisory/issues/131"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://nvd.nist.gov/vuln/detail/CVE-2024-22368",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2024-22368"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/haile01/perl_spreadsheet_excel_rce_poc/blob/main/parse_xlsx_bomb.md",
+            "url" : "https://github.com/haile01/perl_spreadsheet_excel_rce_poc/blob/main/parse_xlsx_bomb.md"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/Spreadsheet-ParseXLSX/changes",
+            "url" : "https://metacpan.org/dist/Spreadsheet-ParseXLSX/changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/advisories/GHSA-x2hg-844v-frvh",
+            "url" : "https://github.com/advisories/GHSA-x2hg-844v-frvh"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2024-22368 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2024-22368"
+         }
+      ],
+      "title" : "Spreadsheet-ParseXLSX vulnerability",
+      "tracking" : {
+         "current_release_date" : "2024-01-03T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Spreadsheet-ParseXLSX-2024-22368",
+         "initial_release_date" : "2024-01-03T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2024-01-03T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<0.28",
+                  "product" : {
+                     "name" : "Spreadsheet-ParseXLSX less than 0.28",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DOY/Spreadsheet-ParseXLSX"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=0.28",
+                  "product" : {
+                     "name" : "Spreadsheet-ParseXLSX greater than or equal 0.28",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DOY/Spreadsheet-ParseXLSX"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Spreadsheet-ParseXLSX"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2024-22368",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Spreadsheet::ParseXLSX package before 0.28 for Perl can encounter an out-of-memory condition during parsing of a crafted XLSX document. This occurs because the memoize implementation does not have appropriate constraints on merged cells.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 5.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

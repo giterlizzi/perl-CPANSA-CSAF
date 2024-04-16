@@ -1,0 +1,142 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "critical"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "libapache-authenhook-perl 2.00-04 stores usernames and passwords in plaintext in the vhost error log.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Apache-AuthenHook-2010-3845 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Apache-AuthenHook-2010-3845.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-AuthenHook.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=62040",
+            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=62040"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=599712",
+            "url" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=599712"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/oss-sec/2010/q4/63",
+            "url" : "http://seclists.org/oss-sec/2010/q4/63"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2010-3845 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-3845"
+         }
+      ],
+      "title" : "Apache-AuthenHook vulnerability",
+      "tracking" : {
+         "current_release_date" : "2017-08-08T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.21"
+            }
+         },
+         "id" : "CPANSA-Apache-AuthenHook-2010-3845",
+         "initial_release_date" : "2017-08-08T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2017-08-08T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.00_04",
+                  "product" : {
+                     "name" : "Apache-AuthenHook greater than or equal 2.00_04",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GEOFF/Apache-AuthenHook"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Apache-AuthenHook"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2010-3845",
+         "cwe" : {
+            "id" : "CWE-200",
+            "name" : "Exposure of Sensitive Information to an Unauthorized Actor"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "libapache-authenhook-perl 2.00-04 stores usernames and passwords in plaintext in the vhost error log.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 9.8,
+                  "baseSeverity" : "CRITICAL",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
