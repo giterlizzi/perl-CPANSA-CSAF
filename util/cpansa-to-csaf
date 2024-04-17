@@ -51,12 +51,30 @@ ADVISORY:
         my $distribution      = $advisory->{distribution};
         my $author            = undef;
         my @cves              = @{$advisory->{cves}};
-        my @affected_versions = split ',', ($advisory->{affected_versions} || '');
-        my @fixed_versions    = split ',', ($advisory->{fixed_versions}    || '');
+        my @affected_versions = ();
+        my @fixed_versions    = ();
         my $title             = join ' ', $distribution, 'vulnerability';
         my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d')->epoch; };
         my $cpansa_url        = join '/', $cpansa_baseurl, $file->basename;
         my $csaf_url          = join '/', $csaf_baseurl,   "$advisory_id.json";
+
+        if ($advisory->{affected_versions}) {
+            if (ref($advisory->{affected_versions}) ne 'ARRAY') {
+                @affected_versions = ($advisory->{affected_versions});
+            }
+            else {
+                @affected_versions = @{$advisory->{affected_versions}};
+            }
+        }
+
+        if ($advisory->{fixed_versions}) {
+            if (ref($advisory->{fixed_versions}) ne 'ARRAY') {
+                @fixed_versions = ($advisory->{fixed_versions});
+            }
+            else {
+                @fixed_versions = @{$advisory->{fixed_versions}};
+            }
+        }
 
         next if (!$advisory->{affected_versions} && !$advisory->{fixed_versions});
         next unless $advisory->{reported};
@@ -150,11 +168,13 @@ ADVISORY:
 
             my $product_idx = 1;
 
-            if (@affected_versions) {
+            foreach my $affected_version (@affected_versions) {
 
-                my $vers_range   = join '|', @affected_versions;
+                my $vers_range = $affected_version;
+                $vers_range =~ s/\,/\|/g;
+
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
-                my $vers_to_name = vers_to_name(@affected_versions);
+                my $vers_to_name = vers_to_name(split(',', $affected_version));
 
                 push @affected_packages, $product_id;
 
@@ -168,13 +188,16 @@ ADVISORY:
                             {purl => URI::PackageURL->new(type => 'cpan', namespace => $author, name => $distribution)}
                     }
                 );
+
             }
 
-            if (scalar @fixed_versions) {
+            foreach my $fixed_version (@fixed_versions) {
 
-                my $vers_range   = join '|', @fixed_versions;
+                my $vers_range = $fixed_version;
+                $vers_range =~ s/\,/\|/g;
+
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
-                my $vers_to_name = vers_to_name(@fixed_versions);
+                my $vers_to_name = vers_to_name(split(',', $fixed_version));
 
                 push @fixed_packages, $product_id;
 
