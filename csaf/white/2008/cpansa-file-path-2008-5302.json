@@ -177,10 +177,21 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/ARRAY(0x69c1e48)",
+                  "name" : "vers:cpan/=1.08",
                   "product" : {
-                     "name" : "File-Path ",
+                     "name" : "File-Path equal 1.08",
                      "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/RICHE/File-Path"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/=2.07",
+                  "product" : {
+                     "name" : "File-Path equal 2.07",
+                     "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/RICHE/File-Path"
                      }
@@ -208,7 +219,8 @@
          ],
          "product_status" : {
             "known_affected" : [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002"
             ]
          },
          "scores" : [
@@ -219,7 +231,8 @@
                   "version" : "2.0"
                },
                "products" : [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
                ]
             }
          ]

@@ -87,10 +87,32 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/ARRAY(0x6ebea90)",
+                  "name" : "vers:cpan/<5.18",
                   "product" : {
-                     "name" : "MT ",
+                     "name" : "MT less than 5.18",
                      "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.2.0|<5.2.11",
+                  "product" : {
+                     "name" : "MT greater than or equal 5.2.0 and less than 5.2.11",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=6|<6.0.6",
+                  "product" : {
+                     "name" : "MT greater than or equal 6 and less than 6.0.6",
+                     "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/MT"
                      }
@@ -118,7 +140,9 @@
          ],
          "product_status" : {
             "known_affected" : [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002",
+               "CSAFPID-0003"
             ]
          },
          "scores" : [
@@ -129,7 +153,9 @@
                   "version" : "2.0"
                },
                "products" : [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002",
+                  "CSAFPID-0003"
                ]
             }
          ]

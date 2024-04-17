@@ -150,10 +150,21 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/ARRAY(0x66fac18)",
+                  "name" : "vers:cpan/=1.55_06",
                   "product" : {
-                     "name" : "DBD-SQLite ",
+                     "name" : "DBD-SQLite equal 1.55_06",
                      "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.55_03",
+                  "product" : {
+                     "name" : "DBD-SQLite less than or equal 1.55_03",
+                     "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
                      }
@@ -164,7 +175,7 @@
                   "name" : "vers:cpan/>=1.55_07",
                   "product" : {
                      "name" : "DBD-SQLite greater than or equal 1.55_07",
-                     "product_id" : "CSAFPID-0002",
+                     "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
                      }
@@ -192,10 +203,11 @@
          ],
          "product_status" : {
             "fixed" : [
-               "CSAFPID-0002"
+               "CSAFPID-0003"
             ],
             "known_affected" : [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002"
             ]
          },
          "scores" : [
@@ -212,7 +224,8 @@
                   "version" : "3.0"
                },
                "products" : [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
                ]
             }
          ]

@@ -80,9 +80,9 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/ARRAY(0x6f84dd8)",
+                  "name" : "vers:cpan/>=7|<7.8.0",
                   "product" : {
-                     "name" : "MT ",
+                     "name" : "MT greater than or equal 7 and less than 7.8.0",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/MT"

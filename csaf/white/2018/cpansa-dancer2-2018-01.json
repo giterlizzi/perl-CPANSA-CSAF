@@ -85,7 +85,7 @@
                      "name" : "Dancer2 less than 0.206000",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/XSAWYERX/Dancer2"
+                        "purl" : "pkg:cpan/CROMEDOME/Dancer2"
                      }
                   }
                },
@@ -96,7 +96,7 @@
                      "name" : "Dancer2 greater than or equal 0.206000",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/XSAWYERX/Dancer2"
+                        "purl" : "pkg:cpan/CROMEDOME/Dancer2"
                      }
                   }
                }

@@ -97,10 +97,21 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/ARRAY(0x6fa47f8)",
+                  "name" : "vers:cpan/>=3|<=3.38",
                   "product" : {
-                     "name" : "MT ",
+                     "name" : "MT greater than or equal 3 and less than or equal 3.38",
                      "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=4|<4.23",
+                  "product" : {
+                     "name" : "MT greater than or equal 4 and less than 4.23",
+                     "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/MT"
                      }
@@ -128,7 +139,8 @@
          ],
          "product_status" : {
             "known_affected" : [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002"
             ]
          },
          "scores" : [
@@ -139,7 +151,8 @@
                   "version" : "2.0"
                },
                "products" : [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
                ]
             }
          ]
