@@ -85,7 +85,7 @@
                      "name" : "XML-Atom less than 0.39",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/BTROTT/XML-Atom"
+                        "purl" : "pkg:cpan/XML::Atom"
                      }
                   }
                }

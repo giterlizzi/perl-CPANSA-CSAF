@@ -92,7 +92,7 @@
                      "name" : "Net-SSLeay less than 1.25",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CHRISN/Net-SSLeay"
+                        "purl" : "pkg:cpan/Net::SSLeay"
                      }
                   }
                },
@@ -103,7 +103,7 @@
                      "name" : "Net-SSLeay greater than or equal 1.25",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CHRISN/Net-SSLeay"
+                        "purl" : "pkg:cpan/Net::SSLeay"
                      }
                   }
                }

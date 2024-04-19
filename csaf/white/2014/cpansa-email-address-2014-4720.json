@@ -82,7 +82,7 @@
                      "name" : "Email-Address less than 1.904",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJBS/Email-Address"
+                        "purl" : "pkg:cpan/Email::Address"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "Email-Address greater than or equal 1.904",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJBS/Email-Address"
+                        "purl" : "pkg:cpan/Email::Address"
                      }
                   }
                }

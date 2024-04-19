@@ -90,7 +90,7 @@
                      "name" : "Module-Metadata less than 1.000015",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DAGOLDEN/Module-Metadata"
+                        "purl" : "pkg:cpan/Module::Metadata"
                      }
                   }
                },
@@ -101,7 +101,7 @@
                      "name" : "Module-Metadata greater than or equal 1.000015",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DAGOLDEN/Module-Metadata"
+                        "purl" : "pkg:cpan/Module::Metadata"
                      }
                   }
                }

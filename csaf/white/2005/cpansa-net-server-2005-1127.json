@@ -152,7 +152,7 @@
                      "name" : "Net-Server less than or equal 0.87",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RHANDOM/Net-Server"
+                        "purl" : "pkg:cpan/Net::Server"
                      }
                   }
                },
@@ -163,7 +163,7 @@
                      "name" : "Net-Server greater than 0.87",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RHANDOM/Net-Server"
+                        "purl" : "pkg:cpan/Net::Server"
                      }
                   }
                }

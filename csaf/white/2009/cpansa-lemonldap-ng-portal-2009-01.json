@@ -72,7 +72,7 @@
                      "name" : "Lemonldap-NG-Portal less than 0.87",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/COUDOT/Lemonldap-NG-Portal"
+                        "purl" : "pkg:cpan/Lemonldap::NG::Portal"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Lemonldap-NG-Portal greater than or equal 0.87",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/COUDOT/Lemonldap-NG-Portal"
+                        "purl" : "pkg:cpan/Lemonldap::NG::Portal"
                      }
                   }
                }

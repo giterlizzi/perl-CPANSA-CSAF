@@ -72,7 +72,7 @@
                      "name" : "Catalyst-Controller-Combine less than 0.12",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/WKI/Catalyst-Controller-Combine"
+                        "purl" : "pkg:cpan/Catalyst::Controller::Combine"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Catalyst-Controller-Combine greater than or equal 0.12",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/WKI/Catalyst-Controller-Combine"
+                        "purl" : "pkg:cpan/Catalyst::Controller::Combine"
                      }
                   }
                }

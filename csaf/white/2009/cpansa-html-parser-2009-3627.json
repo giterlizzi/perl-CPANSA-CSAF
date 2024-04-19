@@ -112,7 +112,7 @@
                      "name" : "HTML-Parser less than 3.63",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/OALDERS/HTML-Parser"
+                        "purl" : "pkg:cpan/HTML::Parser"
                      }
                   }
                }

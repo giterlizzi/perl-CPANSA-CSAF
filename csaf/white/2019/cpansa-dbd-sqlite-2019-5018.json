@@ -105,7 +105,7 @@
                      "name" : "DBD-SQLite greater than or equal 1.61_03 and less than 1.63_03",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                        "purl" : "pkg:cpan/DBD::SQLite"
                      }
                   }
                },
@@ -116,7 +116,7 @@
                      "name" : "DBD-SQLite greater than or equal 1.63_04",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ISHIGAKI/DBD-SQLite"
+                        "purl" : "pkg:cpan/DBD::SQLite"
                      }
                   }
                }

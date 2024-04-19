@@ -337,7 +337,7 @@
                      "name" : "perl less than or equal 5.8.8",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJBS/perl"
+                        "purl" : "pkg:generic/perl"
                      }
                   }
                }

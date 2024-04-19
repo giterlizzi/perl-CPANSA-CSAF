@@ -72,7 +72,7 @@
                      "name" : "CGI-Application-Dispatch less than 1.02",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/WONKO/CGI-Application-Dispatch"
+                        "purl" : "pkg:cpan/CGI::Application::Dispatch"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "CGI-Application-Dispatch greater than or equal 1.02",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/WONKO/CGI-Application-Dispatch"
+                        "purl" : "pkg:cpan/CGI::Application::Dispatch"
                      }
                   }
                }

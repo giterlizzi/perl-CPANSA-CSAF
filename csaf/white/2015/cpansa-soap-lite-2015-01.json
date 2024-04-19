@@ -87,7 +87,7 @@
                      "name" : "SOAP-Lite less than 1.15",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KULCHENKO/SOAP-Lite"
+                        "purl" : "pkg:cpan/SOAP::Lite"
                      }
                   }
                },
@@ -98,7 +98,7 @@
                      "name" : "SOAP-Lite greater than or equal 1.15",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KULCHENKO/SOAP-Lite"
+                        "purl" : "pkg:cpan/SOAP::Lite"
                      }
                   }
                }

@@ -90,7 +90,7 @@
                      "name" : "Parallel-ForkManager less than 1.0.0",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/SZABGAB/Parallel-ForkManager"
+                        "purl" : "pkg:cpan/Parallel::ForkManager"
                      }
                   }
                }

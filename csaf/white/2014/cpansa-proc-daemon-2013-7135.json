@@ -97,7 +97,7 @@
                      "name" : "Proc-Daemon less than 0.14",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DETI/Proc-Daemon"
+                        "purl" : "pkg:cpan/Proc::Daemon"
                      }
                   }
                }

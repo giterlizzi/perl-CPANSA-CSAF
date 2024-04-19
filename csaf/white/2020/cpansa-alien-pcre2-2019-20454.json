@@ -105,7 +105,7 @@
                      "name" : "Alien-PCRE2 less than 0.016000",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/WBRASWELL/Alien-PCRE2"
+                        "purl" : "pkg:cpan/Alien::PCRE2"
                      }
                   }
                },
@@ -116,7 +116,7 @@
                      "name" : "Alien-PCRE2 greater than or equal 0.016000",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/WBRASWELL/Alien-PCRE2"
+                        "purl" : "pkg:cpan/Alien::PCRE2"
                      }
                   }
                }

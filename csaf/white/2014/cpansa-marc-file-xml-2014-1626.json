@@ -112,7 +112,7 @@
                      "name" : "MARC-File-XML less than 1.0.2",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/GMCHARLT/MARC-File-XML"
+                        "purl" : "pkg:cpan/MARC::File::XML"
                      }
                   }
                }

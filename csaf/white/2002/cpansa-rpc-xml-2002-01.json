@@ -72,7 +72,7 @@
                      "name" : "RPC-XML less than 0.45",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJRAY/RPC-XML"
+                        "purl" : "pkg:cpan/RPC::XML"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "RPC-XML greater than or equal 0.45",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJRAY/RPC-XML"
+                        "purl" : "pkg:cpan/RPC::XML"
                      }
                   }
                }

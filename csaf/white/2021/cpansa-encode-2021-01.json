@@ -112,7 +112,7 @@
                      "name" : "Encode greater than or equal 3.05 and less than or equal 3.11",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DANKOGAI/Encode"
+                        "purl" : "pkg:cpan/Encode"
                      }
                   }
                },
@@ -123,7 +123,7 @@
                      "name" : "Encode greater than 3.11",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DANKOGAI/Encode"
+                        "purl" : "pkg:cpan/Encode"
                      }
                   }
                }

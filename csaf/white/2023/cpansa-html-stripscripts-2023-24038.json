@@ -90,7 +90,7 @@
                      "name" : "HTML-StripScripts less than or equal 1.06",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DRTECH/HTML-StripScripts"
+                        "purl" : "pkg:cpan/HTML::StripScripts"
                      }
                   }
                }

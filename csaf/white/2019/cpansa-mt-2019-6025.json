@@ -85,7 +85,7 @@
                      "name" : "MT greater than or equal 7 and less than 7.1.3",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MT"
+                        "purl" : "pkg:generic/MT"
                      }
                   }
                },
@@ -96,7 +96,7 @@
                      "name" : "MT greater than or equal 6.5.0 and less than or equal 6.5.1",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MT"
+                        "purl" : "pkg:generic/MT"
                      }
                   }
                },
@@ -107,7 +107,7 @@
                      "name" : "MT greater than or equal 6 and less than or equal 6.3.9",
                      "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MT"
+                        "purl" : "pkg:generic/MT"
                      }
                   }
                }

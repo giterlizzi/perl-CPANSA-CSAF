@@ -97,7 +97,7 @@
                      "name" : "Filesys-SmbClientParser less than or equal 2.7",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ALIAN/Filesys-SmbClientParser"
+                        "purl" : "pkg:cpan/Filesys::SmbClientParser"
                      }
                   }
                }

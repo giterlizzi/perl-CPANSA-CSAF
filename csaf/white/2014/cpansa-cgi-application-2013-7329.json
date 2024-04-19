@@ -117,7 +117,7 @@
                      "name" : "CGI-Application less than 4.50_51",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MARKSTOS/CGI-Application"
+                        "purl" : "pkg:cpan/CGI::Application"
                      }
                   }
                }

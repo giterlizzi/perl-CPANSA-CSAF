@@ -85,7 +85,7 @@
                      "name" : "Apache-AuthCAS less than 0.5",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DCASTRO/Apache-AuthCAS"
+                        "purl" : "pkg:cpan/Apache::CAS"
                      }
                   }
                },
@@ -96,7 +96,7 @@
                      "name" : "Apache-AuthCAS greater than or equal 0.5",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DCASTRO/Apache-AuthCAS"
+                        "purl" : "pkg:cpan/Apache::CAS"
                      }
                   }
                }

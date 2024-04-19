@@ -82,7 +82,7 @@
                      "name" : "FCGI less than 0.74",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ETHER/FCGI"
+                        "purl" : "pkg:cpan/FCGI"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "FCGI greater than or equal 0.74",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ETHER/FCGI"
+                        "purl" : "pkg:cpan/FCGI"
                      }
                   }
                }

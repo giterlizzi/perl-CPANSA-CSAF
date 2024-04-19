@@ -85,7 +85,7 @@
                      "name" : "Win32-File-Summary greater than 0",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RPAGITSCH/Win32-File-Summary"
+                        "purl" : "pkg:cpan/Win32::File::Summary"
                      }
                   }
                }

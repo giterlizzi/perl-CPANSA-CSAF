@@ -120,7 +120,7 @@
                      "name" : "HTTP-Daemon less than 6.15",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/OALDERS/HTTP-Daemon"
+                        "purl" : "pkg:cpan/HTTP::Daemon"
                      }
                   }
                },
@@ -131,7 +131,7 @@
                      "name" : "HTTP-Daemon greater than or equal 6.15",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/OALDERS/HTTP-Daemon"
+                        "purl" : "pkg:cpan/HTTP::Daemon"
                      }
                   }
                }

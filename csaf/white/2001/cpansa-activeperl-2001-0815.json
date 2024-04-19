@@ -97,7 +97,7 @@
                      "name" : "ActivePerl less than or equal 5.6.1.629",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ActivePerl"
+                        "purl" : "pkg:generic/ActivePerl"
                      }
                   }
                }

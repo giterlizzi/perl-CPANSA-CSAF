@@ -82,7 +82,7 @@
                      "name" : "App-Context greater than or equal 0.01 and less than or equal 0.968",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/SPADKINS/App-Context"
+                        "purl" : "pkg:cpan/App::Context"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "App-Context greater than 0.968",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/SPADKINS/App-Context"
+                        "purl" : "pkg:cpan/App::Context"
                      }
                   }
                }

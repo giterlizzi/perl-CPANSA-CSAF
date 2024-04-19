@@ -110,7 +110,7 @@
                      "name" : "perl greater than or equal 5.22.0 and less than 5.28.0",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJBS/perl"
+                        "purl" : "pkg:generic/perl"
                      }
                   }
                },
@@ -121,7 +121,7 @@
                      "name" : "perl greater than or equal 5.28.0",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJBS/perl"
+                        "purl" : "pkg:generic/perl"
                      }
                   }
                }

@@ -142,7 +142,7 @@
                      "name" : "File-Path greater than or equal 1.06 and less than or equal 1.404",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RICHE/File-Path"
+                        "purl" : "pkg:cpan/File::Path"
                      }
                   }
                }

@@ -82,7 +82,7 @@
                      "name" : "Config-Model less than 2.102",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DDUMONT/Config-Model"
+                        "purl" : "pkg:cpan/Config::Model"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "Config-Model greater than or equal 2.102",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DDUMONT/Config-Model"
+                        "purl" : "pkg:cpan/Config::Model"
                      }
                   }
                }

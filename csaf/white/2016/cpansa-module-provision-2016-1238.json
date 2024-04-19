@@ -150,7 +150,7 @@
                      "name" : "Module-Provision less than 0.42.1",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/PJFL/Module-Provision"
+                        "purl" : "pkg:cpan/Module::Provision"
                      }
                   }
                },
@@ -161,7 +161,7 @@
                      "name" : "Module-Provision greater than or equal 0.42.1",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/PJFL/Module-Provision"
+                        "purl" : "pkg:cpan/Module::Provision"
                      }
                   }
                }

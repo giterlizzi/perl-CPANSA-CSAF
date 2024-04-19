@@ -92,7 +92,7 @@
                      "name" : "Spoon greater than 0.24",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/INGY/Spoon"
+                        "purl" : "pkg:cpan/Spoon"
                      }
                   }
                }

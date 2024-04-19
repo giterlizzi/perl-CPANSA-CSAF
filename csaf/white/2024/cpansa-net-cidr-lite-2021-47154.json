@@ -92,7 +92,7 @@
                      "name" : "Net-CIDR-Lite less than 0.22",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DOUGW/Net-CIDR-Lite"
+                        "purl" : "pkg:cpan/Net::CIDR::Lite"
                      }
                   }
                },
@@ -103,7 +103,7 @@
                      "name" : "Net-CIDR-Lite greater than or equal 0.22",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DOUGW/Net-CIDR-Lite"
+                        "purl" : "pkg:cpan/Net::CIDR::Lite"
                      }
                   }
                }

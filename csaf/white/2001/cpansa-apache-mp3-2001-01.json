@@ -72,7 +72,7 @@
                      "name" : "Apache-MP3 less than 2.15",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/LDS/Apache-MP3"
+                        "purl" : "pkg:cpan/Apache::MP3"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Apache-MP3 greater than or equal 2.15",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/LDS/Apache-MP3"
+                        "purl" : "pkg:cpan/Apache::MP3"
                      }
                   }
                }

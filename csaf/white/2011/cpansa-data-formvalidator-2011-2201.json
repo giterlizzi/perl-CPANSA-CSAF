@@ -112,7 +112,7 @@
                      "name" : "Data-FormValidator less than or equal 4.66",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MARKSTOS/Data-FormValidator"
+                        "purl" : "pkg:cpan/Data::FormValidator"
                      }
                   }
                },
@@ -123,7 +123,7 @@
                      "name" : "Data-FormValidator greater than 4.66",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MARKSTOS/Data-FormValidator"
+                        "purl" : "pkg:cpan/Data::FormValidator"
                      }
                   }
                }

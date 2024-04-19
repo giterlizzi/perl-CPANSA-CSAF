@@ -72,7 +72,7 @@
                      "name" : "CGI-Simple less than 1.113",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ANDYA/CGI-Simple"
+                        "purl" : "pkg:cpan/CGI::Simple"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "CGI-Simple greater than or equal 1.113",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ANDYA/CGI-Simple"
+                        "purl" : "pkg:cpan/CGI::Simple"
                      }
                   }
                }

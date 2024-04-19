@@ -72,7 +72,7 @@
                      "name" : "Catalyst-Runtime less than 5.90020",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/JJNAPIORK/Catalyst-Runtime"
+                        "purl" : "pkg:cpan/Catalyst::Runtime"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Catalyst-Runtime greater than or equal 5.90020",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/JJNAPIORK/Catalyst-Runtime"
+                        "purl" : "pkg:cpan/Catalyst::Runtime"
                      }
                   }
                }

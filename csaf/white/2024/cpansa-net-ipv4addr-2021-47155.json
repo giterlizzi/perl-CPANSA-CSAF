@@ -87,7 +87,7 @@
                      "name" : "Net-IPv4Addr greater than or equal 0.10",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/FRAJULAC/Net-IPv4Addr"
+                        "purl" : "pkg:cpan/Net::IPv4Addr"
                      }
                   }
                }

@@ -107,7 +107,7 @@
                      "name" : "MailTools less than 1.51",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/GBARR/MailTools"
+                        "purl" : "pkg:cpan/Mail::Cap"
                      }
                   }
                },
@@ -118,7 +118,7 @@
                      "name" : "MailTools greater than or equal 1.51",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/GBARR/MailTools"
+                        "purl" : "pkg:cpan/Mail::Cap"
                      }
                   }
                }

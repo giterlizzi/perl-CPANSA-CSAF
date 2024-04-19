@@ -72,7 +72,7 @@
                      "name" : "YAML-LibYAML less than 0.69",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TINITA/YAML-LibYAML"
+                        "purl" : "pkg:cpan/YAML::LibYAML"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "YAML-LibYAML greater than or equal 0.69",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TINITA/YAML-LibYAML"
+                        "purl" : "pkg:cpan/YAML::LibYAML"
                      }
                   }
                }

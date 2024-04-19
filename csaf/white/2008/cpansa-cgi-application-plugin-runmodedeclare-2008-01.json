@@ -72,7 +72,7 @@
                      "name" : "CGI-Application-Plugin-RunmodeDeclare less than 0.03",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RHESA/CGI-Application-Plugin-RunmodeDeclare"
+                        "purl" : "pkg:cpan/CGI::Application::Plugin::RunmodeDeclare"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "CGI-Application-Plugin-RunmodeDeclare greater than or equal 0.03",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RHESA/CGI-Application-Plugin-RunmodeDeclare"
+                        "purl" : "pkg:cpan/CGI::Application::Plugin::RunmodeDeclare"
                      }
                   }
                }

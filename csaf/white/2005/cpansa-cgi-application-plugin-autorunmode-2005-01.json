@@ -72,7 +72,7 @@
                      "name" : "CGI-Application-Plugin-AutoRunmode less than 0.04",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/THILO/CGI-Application-Plugin-AutoRunmode"
+                        "purl" : "pkg:cpan/CGI::Application::Plugin::AutoRunmode"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "CGI-Application-Plugin-AutoRunmode greater than or equal 0.04",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/THILO/CGI-Application-Plugin-AutoRunmode"
+                        "purl" : "pkg:cpan/CGI::Application::Plugin::AutoRunmode"
                      }
                   }
                }

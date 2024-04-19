@@ -102,7 +102,7 @@
                      "name" : "HTML-Scrubber less than 0.15",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/NIGELM/HTML-Scrubber"
+                        "purl" : "pkg:cpan/HTML::Scrubber"
                      }
                   }
                },
@@ -113,7 +113,7 @@
                      "name" : "HTML-Scrubber greater than or equal 0.15",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/NIGELM/HTML-Scrubber"
+                        "purl" : "pkg:cpan/HTML::Scrubber"
                      }
                   }
                }

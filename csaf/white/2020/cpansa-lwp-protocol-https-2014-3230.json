@@ -100,7 +100,7 @@
                      "name" : "LWP-Protocol-https greater than or equal 6.04 and less than or equal 6.06",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/GAAS/LWP-Protocol-https"
+                        "purl" : "pkg:cpan/LWP::Protocol::https"
                      }
                   }
                }

@@ -87,7 +87,7 @@
                      "name" : "XML-LibXML less than 2.0129",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/PAJAS/XML-LibXML"
+                        "purl" : "pkg:cpan/XML::LibXML"
                      }
                   }
                },
@@ -98,7 +98,7 @@
                      "name" : "XML-LibXML greater than or equal 2.0129",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/PAJAS/XML-LibXML"
+                        "purl" : "pkg:cpan/XML::LibXML"
                      }
                   }
                }

@@ -150,7 +150,7 @@
                      "name" : "Archive-Tar less than 2.10",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/BINGOS/Archive-Tar"
+                        "purl" : "pkg:cpan/Archive::Tar"
                      }
                   }
                },
@@ -161,7 +161,7 @@
                      "name" : "Archive-Tar greater than or equal 2.10",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/BINGOS/Archive-Tar"
+                        "purl" : "pkg:cpan/Archive::Tar"
                      }
                   }
                }

@@ -10,12 +10,13 @@ use CPAN::Meta::YAML;
 use URI::PackageURL;
 use Log::Any::Adapter ('Stderr');
 use Mojo::File qw(curfile);
-use Mojo::Util qw(trim);
+use Mojo::Util qw(trim dumper);
 use MetaCPAN::Client;
 
-my $AUTHOR_CACHE = {};
-my $CVE_CACHE    = {};
-my @ERRORS       = ();
+my $MAIN_MODULE_DIST_CACHE = {};
+my $MAIN_MODULE_SKIP       = {perl => 1};
+my $CVE_CACHE              = {};
+my @ERRORS                 = ();
 
 my $nvd   = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
 my $mcpan = MetaCPAN::Client->new();
@@ -86,20 +87,15 @@ ADVISORY:
         #
         # TODO Get the AUTHOR of the vulnerable distribution version (not last author)
 
-        if (defined $AUTHOR_CACHE->{$distribution}) {
-            $author = $AUTHOR_CACHE->{$distribution};
-        }
-        else {
-
+        if (!defined $MAIN_MODULE_DIST_CACHE->{$distribution} && !$MAIN_MODULE_SKIP->{$distribution}) {
             eval {
 
-                my $releases = $mcpan->release({all => [{distribution => $distribution}],});
+                my $releases = $mcpan->release({all => [{distribution => $distribution}]});
 
-            AUTHOR:
-                foreach my $release ($releases->next) {
-                    $author = $release->author;
-                    $AUTHOR_CACHE->{$distribution} = $author;
-                    last AUTHOR if $author;
+            MAIN_MODULE:
+                while (my $release = $releases->next) {
+                    $MAIN_MODULE_DIST_CACHE->{$distribution} = $release->main_module;
+                    last MAIN_MODULE;
                 }
 
             };
@@ -107,6 +103,17 @@ ADVISORY:
             Carp::carp($@) if ($@);
 
         }
+
+        my %purl_components = ();
+
+        if (my $module = $MAIN_MODULE_DIST_CACHE->{$distribution}) {
+            %purl_components = (type => 'cpan', name => $module);
+        }
+        else {
+            %purl_components = (type => 'generic', name => $distribution);    # TODO
+        }
+
+        my $purl = URI::PackageURL->new(%purl_components);
 
         my $csaf = CSAF->new;
 
@@ -184,8 +191,7 @@ ADVISORY:
                     product  => {
                         product_id                    => $product_id,
                         name                          => sprintf('%s %s', $distribution, $vers_to_name),
-                        product_identification_helper =>
-                            {purl => URI::PackageURL->new(type => 'cpan', namespace => $author, name => $distribution)}
+                        product_identification_helper => {purl => $purl}
                     }
                 );
 
@@ -207,8 +213,7 @@ ADVISORY:
                     product  => {
                         product_id                    => $product_id,
                         name                          => sprintf('%s %s', $distribution, $vers_to_name),
-                        product_identification_helper =>
-                            {purl => URI::PackageURL->new(type => 'cpan', namespace => $author, name => $distribution)}
+                        product_identification_helper => {purl => $purl}
                     }
                 );
             }
@@ -352,3 +357,4 @@ sub vers_to_name {
     return join ' and ', @output;
 
 }
+

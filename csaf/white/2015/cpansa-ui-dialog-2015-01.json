@@ -72,7 +72,7 @@
                      "name" : "UI-Dialog less than 1.11",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KCK/UI-Dialog"
+                        "purl" : "pkg:cpan/UI::Dialog"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "UI-Dialog greater than or equal 1.11",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KCK/UI-Dialog"
+                        "purl" : "pkg:cpan/UI::Dialog"
                      }
                   }
                }

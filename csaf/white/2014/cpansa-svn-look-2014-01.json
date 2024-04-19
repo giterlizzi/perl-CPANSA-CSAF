@@ -82,7 +82,7 @@
                      "name" : "SVN-Look less than 0.40",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/GNUSTAVO/SVN-Look"
+                        "purl" : "pkg:cpan/SVN::Look"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "SVN-Look greater than or equal 0.40",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/GNUSTAVO/SVN-Look"
+                        "purl" : "pkg:cpan/SVN::Look"
                      }
                   }
                }

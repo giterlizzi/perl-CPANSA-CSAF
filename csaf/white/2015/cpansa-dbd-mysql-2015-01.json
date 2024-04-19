@@ -77,7 +77,7 @@
                      "name" : "DBD-mysql less than 4.041",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CAPTTOFU/DBD-mysql"
+                        "purl" : "pkg:cpan/DBD::mysql"
                      }
                   }
                },
@@ -88,7 +88,7 @@
                      "name" : "DBD-mysql greater than or equal 4.041",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CAPTTOFU/DBD-mysql"
+                        "purl" : "pkg:cpan/DBD::mysql"
                      }
                   }
                }

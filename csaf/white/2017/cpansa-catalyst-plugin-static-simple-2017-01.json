@@ -82,7 +82,7 @@
                      "name" : "Catalyst-Plugin-Static-Simple less than 0.34",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ILMARI/Catalyst-Plugin-Static-Simple"
+                        "purl" : "pkg:cpan/Catalyst::Plugin::Static::Simple"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "Catalyst-Plugin-Static-Simple greater than or equal 0.34",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ILMARI/Catalyst-Plugin-Static-Simple"
+                        "purl" : "pkg:cpan/Catalyst::Plugin::Static::Simple"
                      }
                   }
                }

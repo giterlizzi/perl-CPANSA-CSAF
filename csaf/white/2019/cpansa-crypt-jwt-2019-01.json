@@ -80,7 +80,7 @@
                      "name" : "Crypt-JWT less than 0.022",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MIK/Crypt-JWT"
+                        "purl" : "pkg:cpan/Crypt::JWT"
                      }
                   }
                },
@@ -91,7 +91,7 @@
                      "name" : "Crypt-JWT greater than or equal 0.022",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MIK/Crypt-JWT"
+                        "purl" : "pkg:cpan/Crypt::JWT"
                      }
                   }
                }

@@ -67,7 +67,7 @@
                      "name" : "Catalyst-Plugin-Static less than 0.10",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MRAMBERG/Catalyst-Plugin-Static"
+                        "purl" : "pkg:cpan/Catalyst::Plugin::Static"
                      }
                   }
                },
@@ -78,7 +78,7 @@
                      "name" : "Catalyst-Plugin-Static greater than or equal 0.10",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MRAMBERG/Catalyst-Plugin-Static"
+                        "purl" : "pkg:cpan/Catalyst::Plugin::Static"
                      }
                   }
                }

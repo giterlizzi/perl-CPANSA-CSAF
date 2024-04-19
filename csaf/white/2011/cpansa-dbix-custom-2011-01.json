@@ -80,7 +80,7 @@
                      "name" : "DBIx-Custom less than 0.1641",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KIMOTO/DBIx-Custom"
+                        "purl" : "pkg:cpan/DBIx::Custom"
                      }
                   }
                },
@@ -91,7 +91,7 @@
                      "name" : "DBIx-Custom greater than or equal 0.1641",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KIMOTO/DBIx-Custom"
+                        "purl" : "pkg:cpan/DBIx::Custom"
                      }
                   }
                }

@@ -107,7 +107,7 @@
                      "name" : "Spreadsheet-ParseExcel less than 0.66",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KWITKNR/Spreadsheet-ParseExcel"
+                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel::Workbook"
                      }
                   }
                },
@@ -118,7 +118,7 @@
                      "name" : "Spreadsheet-ParseExcel greater than or equal 0.66",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KWITKNR/Spreadsheet-ParseExcel"
+                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel::Workbook"
                      }
                   }
                }

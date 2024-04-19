@@ -72,7 +72,7 @@
                      "name" : "RTMP-Client less than 0.04",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CHENGANG/RTMP-Client"
+                        "purl" : "pkg:cpan/RTMP::Client"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "RTMP-Client greater than or equal 0.04",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CHENGANG/RTMP-Client"
+                        "purl" : "pkg:cpan/RTMP::Client"
                      }
                   }
                }

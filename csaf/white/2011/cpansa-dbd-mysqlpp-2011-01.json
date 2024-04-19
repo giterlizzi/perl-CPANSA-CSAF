@@ -80,7 +80,7 @@
                      "name" : "DBD-mysqlPP less than 0.93",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/OYAMA/DBD-mysqlPP"
+                        "purl" : "pkg:cpan/DBD::mysqlPP"
                      }
                   }
                },
@@ -91,7 +91,7 @@
                      "name" : "DBD-mysqlPP greater than or equal 0.03",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/OYAMA/DBD-mysqlPP"
+                        "purl" : "pkg:cpan/DBD::mysqlPP"
                      }
                   }
                }

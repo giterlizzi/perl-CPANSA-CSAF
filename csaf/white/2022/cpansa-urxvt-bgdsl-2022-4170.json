@@ -82,7 +82,7 @@
                      "name" : "urxvt-bgdsl greater than or equal 9.25 and less than or equal 9.26",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/urxvt-bgdsl"
+                        "purl" : "pkg:generic/urxvt-bgdsl"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "urxvt-bgdsl greater than or equal 9.29",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/urxvt-bgdsl"
+                        "purl" : "pkg:generic/urxvt-bgdsl"
                      }
                   }
                }

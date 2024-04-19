@@ -150,7 +150,7 @@
                      "name" : "App-japerl less than 0.09",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/INA/App-japerl"
+                        "purl" : "pkg:cpan/App::japerl"
                      }
                   }
                },
@@ -161,7 +161,7 @@
                      "name" : "App-japerl greater than or equal 0.09",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/INA/App-japerl"
+                        "purl" : "pkg:cpan/App::japerl"
                      }
                   }
                }

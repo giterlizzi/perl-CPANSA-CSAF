@@ -92,7 +92,7 @@
                      "name" : "MDK-Common equal 1.1.11",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TVIGNAUD/MDK-Common"
+                        "purl" : "pkg:cpan/MDK::Common"
                      }
                   }
                },
@@ -103,7 +103,7 @@
                      "name" : "MDK-Common equal 1.1.24",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TVIGNAUD/MDK-Common"
+                        "purl" : "pkg:cpan/MDK::Common"
                      }
                   }
                },
@@ -114,7 +114,7 @@
                      "name" : "MDK-Common greater than or equal 1.2.9 and less than or equal 1.2.14",
                      "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TVIGNAUD/MDK-Common"
+                        "purl" : "pkg:cpan/MDK::Common"
                      }
                   }
                }

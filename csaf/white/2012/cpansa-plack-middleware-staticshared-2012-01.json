@@ -72,7 +72,7 @@
                      "name" : "Plack-Middleware-StaticShared less than 0.04",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/SATOH/Plack-Middleware-StaticShared"
+                        "purl" : "pkg:cpan/Plack::Middleware::StaticShared"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Plack-Middleware-StaticShared greater than or equal 0.04",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/SATOH/Plack-Middleware-StaticShared"
+                        "purl" : "pkg:cpan/Plack::Middleware::StaticShared"
                      }
                   }
                }

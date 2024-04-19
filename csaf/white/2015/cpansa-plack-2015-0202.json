@@ -67,7 +67,7 @@
                      "name" : "Plack less than 1.0034",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MIYAGAWA/Plack"
+                        "purl" : "pkg:cpan/Plack"
                      }
                   }
                },
@@ -78,7 +78,7 @@
                      "name" : "Plack greater than or equal 1.0034",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MIYAGAWA/Plack"
+                        "purl" : "pkg:cpan/Plack"
                      }
                   }
                }

@@ -95,7 +95,7 @@
                      "name" : "Galileo less than 0.043",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/JBERGER/Galileo"
+                        "purl" : "pkg:cpan/Galileo"
                      }
                   }
                },
@@ -106,7 +106,7 @@
                      "name" : "Galileo greater than or equal 0.043",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/JBERGER/Galileo"
+                        "purl" : "pkg:cpan/Galileo"
                      }
                   }
                }

@@ -110,7 +110,7 @@
                      "name" : "Data-UUID greater than 1.219 and less than 1.227",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJBS/Data-UUID"
+                        "purl" : "pkg:cpan/Data::UUID"
                      }
                   }
                },
@@ -121,7 +121,7 @@
                      "name" : "Data-UUID greater than or equal 1.227",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RJBS/Data-UUID"
+                        "purl" : "pkg:cpan/Data::UUID"
                      }
                   }
                }

@@ -97,7 +97,7 @@
                      "name" : "Convert-UUlib less than 1.051",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MLEHMANN/Convert-UUlib"
+                        "purl" : "pkg:cpan/Convert::UUlib"
                      }
                   }
                }

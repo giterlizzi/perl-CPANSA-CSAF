@@ -90,7 +90,7 @@
                      "name" : "DBI less than 1.628",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TIMB/DBI"
+                        "purl" : "pkg:cpan/DBI"
                      }
                   }
                }

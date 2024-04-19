@@ -127,7 +127,7 @@
                      "name" : "Config-IniFiles less than 2.71",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/SHLOMIF/Config-IniFiles"
+                        "purl" : "pkg:cpan/Config::IniFiles"
                      }
                   }
                }

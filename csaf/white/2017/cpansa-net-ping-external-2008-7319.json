@@ -95,7 +95,7 @@
                      "name" : "Net-Ping-External less than or equal 0.15",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/COLINM/Net-Ping-External"
+                        "purl" : "pkg:cpan/Net::Ping::External"
                      }
                   }
                }

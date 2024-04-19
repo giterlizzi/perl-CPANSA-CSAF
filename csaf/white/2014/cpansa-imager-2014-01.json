@@ -72,7 +72,7 @@
                      "name" : "Imager less than 0.98",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TONYC/Imager"
+                        "purl" : "pkg:cpan/Imager"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Imager greater than or equal 0.98",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/TONYC/Imager"
+                        "purl" : "pkg:cpan/Imager"
                      }
                   }
                }

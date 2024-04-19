@@ -82,7 +82,7 @@
                      "name" : "Apache-Session-LDAP less than 0.5",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/COUDOT/Apache-Session-LDAP"
+                        "purl" : "pkg:cpan/Apache::Session::LDAP"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "Apache-Session-LDAP greater than or equal 0.5",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/COUDOT/Apache-Session-LDAP"
+                        "purl" : "pkg:cpan/Apache::Session::LDAP"
                      }
                   }
                }

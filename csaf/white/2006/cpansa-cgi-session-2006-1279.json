@@ -102,7 +102,7 @@
                      "name" : "CGI-Session less than 4.10",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MARKSTOS/CGI-Session"
+                        "purl" : "pkg:cpan/CGI::Session"
                      }
                   }
                }

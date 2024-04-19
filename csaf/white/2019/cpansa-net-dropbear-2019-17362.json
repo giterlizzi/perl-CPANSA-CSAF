@@ -110,7 +110,7 @@
                      "name" : "Net-Dropbear less than 0",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ATRODO/Net-Dropbear"
+                        "purl" : "pkg:cpan/Net::Dropbear"
                      }
                   }
                },
@@ -121,7 +121,7 @@
                      "name" : "Net-Dropbear greater than 0",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ATRODO/Net-Dropbear"
+                        "purl" : "pkg:cpan/Net::Dropbear"
                      }
                   }
                }

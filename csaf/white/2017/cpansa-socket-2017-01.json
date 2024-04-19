@@ -72,7 +72,7 @@
                      "name" : "Socket less than 2.026",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RURBAN/Socket"
+                        "purl" : "pkg:cpan/Socket"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Socket greater than or equal 2.027",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RURBAN/Socket"
+                        "purl" : "pkg:cpan/Socket"
                      }
                   }
                }

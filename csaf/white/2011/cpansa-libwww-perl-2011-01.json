@@ -82,7 +82,7 @@
                      "name" : "libwww-perl less than 6.00",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/OALDERS/libwww-perl"
+                        "purl" : "pkg:cpan/LWP"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "libwww-perl greater than or equal 6.00",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/OALDERS/libwww-perl"
+                        "purl" : "pkg:cpan/LWP"
                      }
                   }
                }

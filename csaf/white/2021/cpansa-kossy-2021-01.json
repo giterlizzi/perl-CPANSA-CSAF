@@ -82,7 +82,7 @@
                      "name" : "Kossy less than 0.60",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KAZEBURO/Kossy"
+                        "purl" : "pkg:cpan/Kossy"
                      }
                   }
                },
@@ -93,7 +93,7 @@
                      "name" : "Kossy greater than or equal 0.60",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/KAZEBURO/Kossy"
+                        "purl" : "pkg:cpan/Kossy"
                      }
                   }
                }

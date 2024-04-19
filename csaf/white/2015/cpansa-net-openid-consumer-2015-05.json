@@ -72,7 +72,7 @@
                      "name" : "Net-OpenID-Consumer less than 0.06",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/BRADFITZ/Net-OpenID-Consumer"
+                        "purl" : "pkg:cpan/Net::OpenID::Consumer"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "Net-OpenID-Consumer greater than or equal 0.06",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/BRADFITZ/Net-OpenID-Consumer"
+                        "purl" : "pkg:cpan/Net::OpenID::Consumer"
                      }
                   }
                }

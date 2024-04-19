@@ -95,7 +95,7 @@
                      "name" : "IPTables-Parse less than 1.6",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MRASH/IPTables-Parse"
+                        "purl" : "pkg:cpan/IPTables::Parse"
                      }
                   }
                }

@@ -102,7 +102,7 @@
                      "name" : "Data-Validate-IP less than or equal 0.29",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DROLSKY/Data-Validate-IP"
+                        "purl" : "pkg:cpan/Data::Validate::IP"
                      }
                   }
                },
@@ -113,7 +113,7 @@
                      "name" : "Data-Validate-IP greater than 0.29",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DROLSKY/Data-Validate-IP"
+                        "purl" : "pkg:cpan/Data::Validate::IP"
                      }
                   }
                }

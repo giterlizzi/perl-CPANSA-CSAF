@@ -87,7 +87,7 @@
                      "name" : "HTML-EP greater than or equal 0.2011",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/JWIED/HTML-EP"
+                        "purl" : "pkg:cpan/HTML::EP"
                      }
                   }
                }

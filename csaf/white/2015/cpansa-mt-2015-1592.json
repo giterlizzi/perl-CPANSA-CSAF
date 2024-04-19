@@ -107,7 +107,7 @@
                      "name" : "MT less than 5.2.12",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MT"
+                        "purl" : "pkg:generic/MT"
                      }
                   }
                },
@@ -118,7 +118,7 @@
                      "name" : "MT greater than or equal 6.0.0 and less than or equal 6.0.7",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MT"
+                        "purl" : "pkg:generic/MT"
                      }
                   }
                }

@@ -72,7 +72,7 @@
                      "name" : "MIME-tools less than 4.109",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DONEILL/MIME-tools"
+                        "purl" : "pkg:cpan/MIME::Head"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "MIME-tools greater than or equal 4.109",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DONEILL/MIME-tools"
+                        "purl" : "pkg:cpan/MIME::Head"
                      }
                   }
                }

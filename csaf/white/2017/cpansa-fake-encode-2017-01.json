@@ -77,7 +77,7 @@
                      "name" : "Fake-Encode less than 0.08",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/INA/Fake-Encode"
+                        "purl" : "pkg:cpan/Fake::Encode"
                      }
                   }
                },
@@ -88,7 +88,7 @@
                      "name" : "Fake-Encode greater than or equal 0.08",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/INA/Fake-Encode"
+                        "purl" : "pkg:cpan/Fake::Encode"
                      }
                   }
                }

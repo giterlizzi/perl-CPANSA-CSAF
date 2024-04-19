@@ -112,7 +112,7 @@
                      "name" : "Proc-ProcessTable greater than or equal 0.45 and less than 0.47",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/JWB/Proc-ProcessTable"
+                        "purl" : "pkg:cpan/Proc::ProcessTable"
                      }
                   }
                },
@@ -123,7 +123,7 @@
                      "name" : "Proc-ProcessTable greater than or equal 0.47",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/JWB/Proc-ProcessTable"
+                        "purl" : "pkg:cpan/Proc::ProcessTable"
                      }
                   }
                }

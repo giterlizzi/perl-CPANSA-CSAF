@@ -87,7 +87,7 @@
                      "name" : "MT less than 4.23",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/MT"
+                        "purl" : "pkg:generic/MT"
                      }
                   }
                }

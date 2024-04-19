@@ -77,7 +77,7 @@
                      "name" : "Compress-Raw-Bzip2 less than 2.031",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/PMQS/Compress-Raw-Bzip2"
+                        "purl" : "pkg:cpan/Compress::Raw::Bzip2"
                      }
                   }
                },
@@ -88,7 +88,7 @@
                      "name" : "Compress-Raw-Bzip2 greater than or equal 2.031",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/PMQS/Compress-Raw-Bzip2"
+                        "purl" : "pkg:cpan/Compress::Raw::Bzip2"
                      }
                   }
                }

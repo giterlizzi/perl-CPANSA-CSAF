@@ -100,7 +100,7 @@
                      "name" : "CPAN less than 2.28",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ANDK/CPAN"
+                        "purl" : "pkg:cpan/CPAN"
                      }
                   }
                },
@@ -111,7 +111,7 @@
                      "name" : "CPAN greater than or equal 2.29",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/ANDK/CPAN"
+                        "purl" : "pkg:cpan/CPAN"
                      }
                   }
                }

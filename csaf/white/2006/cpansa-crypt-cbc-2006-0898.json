@@ -147,7 +147,7 @@
                      "name" : "Crypt-CBC less than 2.17",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/LDS/Crypt-CBC"
+                        "purl" : "pkg:cpan/Crypt::CBC"
                      }
                   }
                },
@@ -158,7 +158,7 @@
                      "name" : "Crypt-CBC greater than or equal 2.17",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/LDS/Crypt-CBC"
+                        "purl" : "pkg:cpan/Crypt::CBC"
                      }
                   }
                }
