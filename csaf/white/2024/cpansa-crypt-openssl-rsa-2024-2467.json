@@ -1,0 +1,139 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "A timing-based side-channel flaw exists in the perl-Crypt-OpenSSL-RSA package, which could be sufficient to recover plaintext across a network in a Bleichenbacher-style attack. To achieve successful decryption, an attacker would have to be able to send a large number of trial messages. The vulnerability affects the legacy PKCS#1v1.5 RSA encryption padding mode.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Crypt-OpenSSL-RSA-2024-2467 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Crypt-OpenSSL-RSA-2024-2467.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "CPAN Security Advisory (briandfoy)",
+            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Crypt-OpenSSL-RSA.yml"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/security/cve/CVE-2024-2467",
+            "url" : "https://access.redhat.com/security/cve/CVE-2024-2467"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=2269567",
+            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=2269567"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/toddr/Crypt-OpenSSL-RSA/issues/42",
+            "url" : "https://github.com/toddr/Crypt-OpenSSL-RSA/issues/42"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://people.redhat.com/~hkario/marvin/",
+            "url" : "https://people.redhat.com/~hkario/marvin/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2024-2467 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2024-2467"
+         }
+      ],
+      "title" : "Crypt-OpenSSL-RSA vulnerability",
+      "tracking" : {
+         "current_release_date" : "2024-04-25T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.22"
+            }
+         },
+         "id" : "CPANSA-Crypt-OpenSSL-RSA-2024-2467",
+         "initial_release_date" : "2024-04-25T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2024-04-25T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>0",
+                  "product" : {
+                     "name" : "Crypt-OpenSSL-RSA greater than 0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Crypt::OpenSSL::RSA"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Crypt-OpenSSL-RSA"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2024-2467",
+         "cwe" : {
+            "id" : "CWE-203",
+            "name" : "Observable Discrepancy"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "A timing-based side-channel flaw exists in the perl-Crypt-OpenSSL-RSA package, which could be sufficient to recover plaintext across a network in a Bleichenbacher-style attack. To achieve successful decryption, an attacker would have to be able to send a large number of trial messages. The vulnerability affects the legacy PKCS#1v1.5 RSA encryption padding mode.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 5.9,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
