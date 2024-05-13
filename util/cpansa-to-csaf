@@ -3,44 +3,39 @@
 use v5.34;
 
 use CSAF;
-
 use Carp;
 use Net::NVD;
-use CPAN::Meta::YAML;
+use CPAN::Audit::DB;
 use URI::PackageURL;
+use URI::VersionRange;
 use Log::Any::Adapter ('Stderr');
 use Mojo::File qw(curfile);
 use Mojo::Util qw(trim dumper);
 use MetaCPAN::Client;
 
 my $MAIN_MODULE_DIST_CACHE = {};
-my $MAIN_MODULE_SKIP       = {perl => 1};
+my $MAIN_MODULE_SKIP       = {perl => 1, ActivePerl => 1};
 my $CVE_CACHE              = {};
 my @ERRORS                 = ();
-
-my $nvd   = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
-my $mcpan = MetaCPAN::Client->new();
-
-my $cpansa_path    = Mojo::File->new(curfile->dirname->sibling('cpan-security-advisory/cpansa')->to_string);
-my $cpansa_baseurl = 'https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa';
-my $csaf_baseurl   = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
-
-my $operator_decode = {
+my %COMPARATOR_DECODE      = (
     '='  => 'equal',
     '<'  => 'less than',
     '<=' => 'less than or equal',
     '>'  => 'greater than',
     '>=' => 'greater than or equal',
-};
+);
 
-foreach my $file ($cpansa_path->list_tree({max_depth => 10})->each) {
+my $nvd          = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
+my $mcpan        = MetaCPAN::Client->new();
+my $csaf_baseurl = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
+my $db           = CPAN::Audit::DB->db();
 
-    next unless $file =~ /\.yml$/;
+foreach my $dist (keys %{$db->{dists}}) {
+    foreach my $advisory (@{$db->{dists}{$dist}{advisories}}) {
 
-    my $yaml = CPAN::Meta::YAML::Load($file->slurp);
+        say dumper($dist);
 
-ADVISORY:
-    foreach my $advisory (@{$yaml}) {
+        my $file = Mojo::File->new;
 
         my @affected_packages = ();
         my @fixed_packages    = ();
@@ -49,15 +44,14 @@ ADVISORY:
         my $advisory_id       = $advisory->{id};
         my $description       = trim($advisory->{description});
         my $severity          = $advisory->{severity};
-        my $distribution      = $advisory->{distribution};
+        my $distribution      = $dist;
         my $author            = undef;
         my @cves              = @{$advisory->{cves}};
         my @affected_versions = ();
         my @fixed_versions    = ();
         my $title             = join ' ', $distribution, 'vulnerability';
         my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d')->epoch; };
-        my $cpansa_url        = join '/', $cpansa_baseurl, $file->basename;
-        my $csaf_url          = join '/', $csaf_baseurl,   "$advisory_id.json";
+        my $csaf_url          = join '/', $csaf_baseurl, "$advisory_id.json";
 
         if ($advisory->{affected_versions}) {
             if (ref($advisory->{affected_versions}) ne 'ARRAY') {
@@ -157,12 +151,6 @@ ADVISORY:
 
         $csaf->document->references->item(url => $csaf_url, category => 'self', summary => "$advisory_id JSON");
 
-        $csaf->document->references->item(
-            url      => $cpansa_url,
-            category => 'external',
-            summary  => 'CPAN Security Advisory (briandfoy)'
-        );
-
         foreach my $reference (@{$advisory->{references}}) {
             $csaf->document->references->item(url => $reference, summary => $reference, category => 'external');
         }
@@ -177,9 +165,6 @@ ADVISORY:
 
             foreach my $affected_version (@affected_versions) {
 
-                my $vers_range = $affected_version;
-                $vers_range =~ s/\,/\|/g;
-
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
                 my $vers_to_name = vers_to_name(split(',', $affected_version));
 
@@ -187,8 +172,8 @@ ADVISORY:
 
                 $product_branches->item(
                     category => 'product_version_range',
-                    name     => "vers:cpan/$vers_range",
-                    product  => {
+                    name    => URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $affected_version)]),
+                    product => {
                         product_id                    => $product_id,
                         name                          => sprintf('%s %s', $distribution, $vers_to_name),
                         product_identification_helper => {purl => $purl}
@@ -199,9 +184,6 @@ ADVISORY:
 
             foreach my $fixed_version (@fixed_versions) {
 
-                my $vers_range = $fixed_version;
-                $vers_range =~ s/\,/\|/g;
-
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
                 my $vers_to_name = vers_to_name(split(',', $fixed_version));
 
@@ -209,7 +191,7 @@ ADVISORY:
 
                 $product_branches->item(
                     category => 'product_version_range',
-                    name     => "vers:cpan/$vers_range",
+                    name     => URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $fixed_version)]),
                     product  => {
                         product_id                    => $product_id,
                         name                          => sprintf('%s %s', $distribution, $vers_to_name),
@@ -234,7 +216,7 @@ ADVISORY:
             my $cve_data = eval { $nvd->get($cve) };
 
             if ($@) {
-                push @ERRORS, {type => 'Error in Net::NVD', message => $@, file => $file, id => $advisory_id};
+                push @ERRORS, {type => 'Error in Net::NVD', message => $@, file => $distribution, id => $advisory_id};
             }
 
             my $weakness = $cve_data->{weaknesses} ? $cve_data->{weaknesses}[0]->{description}[0]->{value} : undef;
@@ -343,12 +325,12 @@ sub vers_to_name {
 
         if ($version =~ /^(>=|<=|=|<|>)(.*)/) {
 
-            my $operator = $1;
-            my $version  = $2;
+            my $comparator = $1;
+            my $version    = $2;
 
-            my $operator_string = $operator_decode->{$operator};
+            my $comparator_name = $COMPARATOR_DECODE{$comparator};
 
-            push @output, "$operator_string $version";
+            push @output, "$comparator_name $version";
 
         }
 
