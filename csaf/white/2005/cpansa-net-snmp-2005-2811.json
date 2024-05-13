@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-SNMP.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.gentoo.org/security/en/glsa/glsa-200509-05.xml",
             "url" : "http://www.gentoo.org/security/en/glsa/glsa-200509-05.xml"
          },
@@ -50,7 +45,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Net-SNMP-2005-2811",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/AndyA/CGI--Simple/commit/e4942b871a26c1317a175a91ebb7262eea59b380",
             "url" : "https://github.com/AndyA/CGI--Simple/commit/e4942b871a26c1317a175a91ebb7262eea59b380"
          },
@@ -220,7 +215,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-CGI-2010-2761",

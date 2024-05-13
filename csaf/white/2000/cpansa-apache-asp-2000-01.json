@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-ASP.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/release/CHAMAS/Apache-ASP-2.63/source/README",
             "url" : "https://metacpan.org/release/CHAMAS/Apache-ASP-2.63/source/README"
          }
@@ -45,7 +40,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Apache-ASP-2000-01",

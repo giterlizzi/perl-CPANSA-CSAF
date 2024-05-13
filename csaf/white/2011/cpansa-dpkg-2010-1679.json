@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Dpkg.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.vupen.com/english/advisories/2011/0044",
             "url" : "http://www.vupen.com/english/advisories/2011/0044"
          },
@@ -110,7 +105,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Dpkg-2010-1679",

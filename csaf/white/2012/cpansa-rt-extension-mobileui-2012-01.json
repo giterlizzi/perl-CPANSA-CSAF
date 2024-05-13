@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-RT-Extension-MobileUI.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/changes/distribution/RT-Extension-MobileUI",
             "url" : "https://metacpan.org/changes/distribution/RT-Extension-MobileUI"
          },
@@ -50,7 +45,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-RT-Extension-MobileUI-2012-01",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes",
             "url" : "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes"
          },
@@ -60,7 +55,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Mojolicious-2010-4803",

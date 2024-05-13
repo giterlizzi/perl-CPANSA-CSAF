@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CGI-Session.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=356555",
             "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=356555"
          },
@@ -75,7 +70,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-CGI-Session-2006-1279",

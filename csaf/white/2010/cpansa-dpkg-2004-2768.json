@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Dpkg.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.hackinglinuxexposed.com/articles/20031214.html",
             "url" : "http://www.hackinglinuxexposed.com/articles/20031214.html"
          },
@@ -70,7 +65,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Dpkg-2004-2768",

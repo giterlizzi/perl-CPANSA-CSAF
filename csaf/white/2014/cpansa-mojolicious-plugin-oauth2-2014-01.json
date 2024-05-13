@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious-Plugin-OAuth2.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/changes/distribution/Mojolicious-Plugin-OAuth2",
             "url" : "https://metacpan.org/changes/distribution/Mojolicious-Plugin-OAuth2"
          },
@@ -50,7 +45,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Mojolicious-Plugin-OAuth2-2014-01",

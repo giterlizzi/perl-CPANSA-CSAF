@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.securityfocus.com/bid/47766",
             "url" : "http://www.securityfocus.com/bid/47766"
          },
@@ -75,7 +70,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-perl-2011-0761",

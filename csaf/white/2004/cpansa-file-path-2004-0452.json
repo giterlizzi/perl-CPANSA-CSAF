@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-File-Path.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.debian.org/security/2004/dsa-620",
             "url" : "http://www.debian.org/security/2004/dsa-620"
          },
@@ -115,7 +110,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-File-Path-2004-0452",

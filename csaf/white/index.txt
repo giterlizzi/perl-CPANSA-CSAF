@@ -3,6 +3,7 @@
 2024/cpansa-net-ipv4addr-2021-47155.json
 2024/cpansa-net-ipaddress-util-2021-47156.json
 2024/cpansa-net-cidr-lite-2021-47154.json
+2024/cpansa-email-mime-2024-4140.json
 2024/cpansa-crypt-openssl-rsa-2024-2467.json
 2023/cpansa-spreadsheet-parseexcel-2023-7101.json
 2023/cpansa-plack-middleware-xsrfblock-20230714-01.json

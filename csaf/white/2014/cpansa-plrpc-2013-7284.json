@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-PlRPC.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1051108",
             "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1051108"
          },
@@ -75,7 +70,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-PlRPC-2013-7284",

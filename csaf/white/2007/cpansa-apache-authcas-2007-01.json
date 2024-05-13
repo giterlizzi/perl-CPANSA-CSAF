@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-AuthCAS.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/changes/distribution/Apache-AuthCAS",
             "url" : "https://metacpan.org/changes/distribution/Apache-AuthCAS"
          },
@@ -58,7 +53,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Apache-AuthCAS-2007-01",

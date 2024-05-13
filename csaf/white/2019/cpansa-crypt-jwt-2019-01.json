@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Crypt-JWT.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/DCIT/perl-Crypt-JWT/issues/3#issuecomment-417947483",
             "url" : "https://github.com/DCIT/perl-Crypt-JWT/issues/3#issuecomment-417947483"
          },
@@ -53,7 +48,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Crypt-JWT-2019-01",

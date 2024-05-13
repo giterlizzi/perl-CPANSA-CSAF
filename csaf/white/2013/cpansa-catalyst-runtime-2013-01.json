@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Catalyst-Runtime.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Catalyst-Runtime.git;a=commitdiff;h=7af54927870a7c6f89323ac1876d49f92e7841f5",
             "url" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=catagits/Catalyst-Runtime.git;a=commitdiff;h=7af54927870a7c6f89323ac1876d49f92e7841f5"
          }
@@ -45,7 +40,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Catalyst-Runtime-2013-01",

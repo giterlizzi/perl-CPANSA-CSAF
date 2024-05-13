@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-Dropbear.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/atrodo/Net-Dropbear/issues/6",
             "url" : "https://github.com/atrodo/Net-Dropbear/issues/6"
          },
@@ -83,7 +78,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Net-Dropbear-2019-17362",

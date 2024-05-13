@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-GitLab-API-v4.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/bluefeet/GitLab-API-v4/pull/57",
             "url" : "https://github.com/bluefeet/GitLab-API-v4/pull/57"
          },
@@ -65,7 +60,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-GitLab-API-v4-2023-31485",

@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-AuthenHook.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=62040",
             "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=62040"
          },
@@ -63,7 +58,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Apache-AuthenHook-2010-3845",

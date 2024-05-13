@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-mod_perl.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/changes/distribution/mod_perl",
             "url" : "https://metacpan.org/changes/distribution/mod_perl"
          },
@@ -50,7 +45,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-mod_perl-2009-01",
@@ -77,7 +72,7 @@
                      "name" : "mod_perl less than 1.31",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/mod_perl2"
+                        "purl" : "pkg:cpan/mod_perl"
                      }
                   }
                },
@@ -88,7 +83,7 @@
                      "name" : "mod_perl greater than or equal 1.31",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/mod_perl2"
+                        "purl" : "pkg:cpan/mod_perl"
                      }
                   }
                }

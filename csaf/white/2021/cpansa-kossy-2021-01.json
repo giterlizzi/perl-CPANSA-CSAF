@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Kossy.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/kazeburo/Kossy/pull/16",
             "url" : "https://github.com/kazeburo/Kossy/pull/16"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Kossy-2021-01",

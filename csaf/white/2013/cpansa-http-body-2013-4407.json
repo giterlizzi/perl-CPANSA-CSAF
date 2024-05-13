@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTTP-Body.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://www.openwall.com/lists/oss-security/2024/04/07/1",
             "url" : "https://www.openwall.com/lists/oss-security/2024/04/07/1"
          },
@@ -63,7 +58,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-HTTP-Body-2013-4407",

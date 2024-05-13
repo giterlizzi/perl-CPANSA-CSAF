@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-YAML-LibYAML.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/ingydotnet/yaml-libyaml-pm/issues/45",
             "url" : "https://github.com/ingydotnet/yaml-libyaml-pm/issues/45"
          }
@@ -45,7 +40,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-YAML-LibYAML-2016-01",

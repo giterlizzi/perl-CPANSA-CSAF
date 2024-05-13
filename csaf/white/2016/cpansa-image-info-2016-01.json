@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Image-Info.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.securityfocus.com/bid/94220",
             "url" : "http://www.securityfocus.com/bid/94220"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Image-Info-2016-01",

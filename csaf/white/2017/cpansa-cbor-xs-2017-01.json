@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CBOR-XS.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/dist/CBOR-XS/changes",
             "url" : "https://metacpan.org/dist/CBOR-XS/changes"
          }
@@ -45,7 +40,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-CBOR-XS-2017-01",

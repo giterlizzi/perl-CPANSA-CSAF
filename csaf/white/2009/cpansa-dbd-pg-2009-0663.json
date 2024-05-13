@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-Pg.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://security.debian.org/pool/updates/main/libd/libdbd-pg-perl/libdbd-pg-perl_1.49-2+etch1.diff.gz",
             "url" : "http://security.debian.org/pool/updates/main/libd/libdbd-pg-perl/libdbd-pg-perl_1.49-2+etch1.diff.gz"
          },
@@ -105,7 +100,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-DBD-Pg-2009-0663",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Locale-Maketext.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://perl5.git.perl.org/perl.git/commit/1735f6f53ca19f99c6e9e39496c486af323ba6a8",
             "url" : "http://perl5.git.perl.org/perl.git/commit/1735f6f53ca19f99c6e9e39496c486af323ba6a8"
          },
@@ -130,7 +125,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Locale-Maketext-2012-6329",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Archive-Zip.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.securityfocus.com/bid/11448",
             "url" : "http://www.securityfocus.com/bid/11448"
          },
@@ -80,7 +75,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Archive-Zip-2004-1096",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Digest.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://aix.software.ibm.com/aix/efixes/security/perl_advisory2.asc",
             "url" : "http://aix.software.ibm.com/aix/efixes/security/perl_advisory2.asc"
          },
@@ -115,7 +110,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Digest-2011-3597",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CPAN.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/andk/cpanpm/commit/9c98370287f4e709924aee7c58ef21c85289a7f0",
             "url" : "https://github.com/andk/cpanpm/commit/9c98370287f4e709924aee7c58ef21c85289a7f0"
          },
@@ -65,7 +60,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-CPAN-2023-31484",

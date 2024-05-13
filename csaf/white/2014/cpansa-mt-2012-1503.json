@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.cloudscan.me/2012/10/cve-2012-1503-movable-type-pro-513en.html",
             "url" : "http://www.cloudscan.me/2012/10/cve-2012-1503-movable-type-pro-513en.html"
          },
@@ -75,7 +70,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-MT-2012-1503",

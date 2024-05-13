@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-perl.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2016-May/183592.html",
             "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2016-May/183592.html"
          },
@@ -113,7 +108,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-perl-2015-8853",

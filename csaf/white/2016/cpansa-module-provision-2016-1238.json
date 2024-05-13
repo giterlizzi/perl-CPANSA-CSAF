@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Module-Provision.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.nntp.perl.org/group/perl.perl5.porters/2016/07/msg238271.html",
             "url" : "http://www.nntp.perl.org/group/perl.perl5.porters/2016/07/msg238271.html"
          },
@@ -123,7 +118,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Module-Provision-2016-1238",

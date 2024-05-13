@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Plack-Middleware-Session.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://gist.github.com/miyagawa/2b8764af908a0dacd43d",
             "url" : "https://gist.github.com/miyagawa/2b8764af908a0dacd43d"
          },
@@ -53,7 +48,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Plack-Middleware-Session-2014-01",

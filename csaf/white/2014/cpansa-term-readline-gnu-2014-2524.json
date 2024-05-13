@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Term-ReadLine-Gnu.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=1077023",
             "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1077023"
          },
@@ -90,7 +85,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Term-ReadLine-Gnu-2014-2524",

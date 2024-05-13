@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/kraih/mojo/commit/b3a1fb453eda447c0bb082cd9eed81bb75a7564a",
             "url" : "https://github.com/kraih/mojo/commit/b3a1fb453eda447c0bb082cd9eed81bb75a7564a"
          },
@@ -70,7 +65,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Mojolicious-2010-4802",

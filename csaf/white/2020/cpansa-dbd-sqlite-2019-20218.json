@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-SQLite.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/sqlite/sqlite/commit/a6c1a71cde082e09750465d5675699062922e387",
             "url" : "https://github.com/sqlite/sqlite/commit/a6c1a71cde082e09750465d5675699062922e387"
          },
@@ -78,7 +73,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-DBD-SQLite-2019-20218",

@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-XML-Atom.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://seclists.org/oss-sec/2012/q1/549",
             "url" : "https://seclists.org/oss-sec/2012/q1/549"
          },
@@ -58,7 +53,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-XML-Atom-2012-1102",

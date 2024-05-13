@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-DNS.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.nntp.perl.org/group/perl.qpsmtpd/2006/03/msg4810.html",
             "url" : "http://www.nntp.perl.org/group/perl.qpsmtpd/2006/03/msg4810.html"
          },
@@ -200,7 +195,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Net-DNS-2007-3377",

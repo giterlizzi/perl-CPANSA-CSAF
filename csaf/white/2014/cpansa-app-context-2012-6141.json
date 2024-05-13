@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-App-Context.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://seclists.org/oss-sec/2013/q2/318",
             "url" : "http://seclists.org/oss-sec/2013/q2/318"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-App-Context-2012-6141",

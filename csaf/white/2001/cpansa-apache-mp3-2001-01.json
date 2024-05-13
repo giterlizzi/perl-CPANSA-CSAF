@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-MP3.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/dist/Apache-MP3/changes",
             "url" : "https://metacpan.org/dist/Apache-MP3/changes"
          }
@@ -45,7 +40,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Apache-MP3-2001-01",

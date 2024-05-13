@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Archive-Zip.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://security-tracker.debian.org/tracker/CVE-2018-10860",
             "url" : "https://security-tracker.debian.org/tracker/CVE-2018-10860"
          },
@@ -58,7 +53,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Archive-Zip-2018-01",

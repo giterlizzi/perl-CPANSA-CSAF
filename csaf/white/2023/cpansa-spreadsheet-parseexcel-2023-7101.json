@@ -12,7 +12,7 @@
       "notes" : [
          {
             "category" : "description",
-            "text" : "Spreadsheet::ParseExcel version 0.65 is a Perl module used for parsing Excel files. Spreadsheet::ParseExcel is vulnerable to an arbitrary code execution (ACE) vulnerability due to passing unvalidated input from a file into a string-type âevalâ. Specifically, the issue stems from the evaluation of Number format strings (not to be confused with printf-style format strings) within the Excel parsing logic.",
+            "text" : "Spreadsheet::ParseExcel version 0.65 is a Perl module used for parsing Excel files. Spreadsheet::ParseExcel is vulnerable to an arbitrary code execution (ACE) vulnerability due to passing unvalidated input from a file into a string-type “eval”. Specifically, the issue stems from the evaluation of Number format strings (not to be confused with printf-style format strings) within the Excel parsing logic.",
             "title" : "Vulnerability Description"
          }
       ],
@@ -27,11 +27,6 @@
             "category" : "self",
             "summary" : "CPANSA-Spreadsheet-ParseExcel-2023-7101 JSON",
             "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Spreadsheet-ParseExcel-2023-7101.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Spreadsheet-ParseExcel.yml"
          },
          {
             "category" : "external",
@@ -80,7 +75,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Spreadsheet-ParseExcel-2023-7101",
@@ -107,7 +102,7 @@
                      "name" : "Spreadsheet-ParseExcel less than 0.66",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel::Workbook"
+                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel"
                      }
                   }
                },
@@ -118,7 +113,7 @@
                      "name" : "Spreadsheet-ParseExcel greater than or equal 0.66",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel::Workbook"
+                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel"
                      }
                   }
                }

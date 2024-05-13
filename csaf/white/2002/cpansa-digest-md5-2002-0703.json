@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Digest-MD5.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-035.php",
             "url" : "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-035.php"
          },
@@ -65,7 +60,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Digest-MD5-2002-0703",

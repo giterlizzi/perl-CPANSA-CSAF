@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-CPAN.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/pod/distribution/CPAN/scripts/cpan",
             "url" : "https://metacpan.org/pod/distribution/CPAN/scripts/cpan"
          },
@@ -73,7 +68,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-CPAN-2020-16156",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-YAML.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/ingydotnet/yaml-pm/issues/212",
             "url" : "https://github.com/ingydotnet/yaml-pm/issues/212"
          }
@@ -45,7 +40,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-YAML-2019-01",

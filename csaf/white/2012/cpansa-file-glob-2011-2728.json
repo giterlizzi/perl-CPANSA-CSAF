@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-File-Glob.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-November/069752.html",
             "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2011-November/069752.html"
          },
@@ -80,7 +75,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-File-Glob-2011-2728",
@@ -107,7 +102,7 @@
                      "name" : "perl less than 1.13",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/utf8"
+                        "purl" : "pkg:generic/perl"
                      }
                   }
                }

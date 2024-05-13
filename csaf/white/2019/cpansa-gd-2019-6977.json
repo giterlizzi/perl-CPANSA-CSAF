@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-GD.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://nvd.nist.gov/vuln/detail/CVE-2019-6977",
             "url" : "https://nvd.nist.gov/vuln/detail/CVE-2019-6977"
          },
@@ -148,7 +143,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-GD-2019-6977",

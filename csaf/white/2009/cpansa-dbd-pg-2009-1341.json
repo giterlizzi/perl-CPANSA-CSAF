@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBD-Pg.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://rt.cpan.org/Public/Bug/Display.html?id=21392",
             "url" : "http://rt.cpan.org/Public/Bug/Display.html?id=21392"
          },
@@ -115,7 +110,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-DBD-Pg-2009-1341",

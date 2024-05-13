@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTTP-Tiny.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/",
             "url" : "https://blog.hackeriet.no/perl-http-tiny-insecure-tls-default-affects-cpan-modules/"
          },
@@ -100,7 +95,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-HTTP-Tiny-2023-31486",

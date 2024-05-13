@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-Session-LDAP.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/LemonLDAPNG/Apache-Session-LDAP/commit/490722b71eed1ed1ab33d58c78578f23e043561f",
             "url" : "https://github.com/LemonLDAPNG/Apache-Session-LDAP/commit/490722b71eed1ed1ab33d58c78578f23e043561f"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Apache-Session-LDAP-2020-36658",

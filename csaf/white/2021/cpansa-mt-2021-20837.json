@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://jvn.jp/en/jp/JVN41119755/index.html",
             "url" : "https://jvn.jp/en/jp/JVN41119755/index.html"
          },
@@ -68,7 +63,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-MT-2021-20837",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MHonArc.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/changes/distribution/MHonArc",
             "url" : "https://metacpan.org/changes/distribution/MHonArc"
          },
@@ -50,7 +45,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-MHonArc-2011-02",

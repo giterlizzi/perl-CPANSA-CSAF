@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Filesys-SmbClientParser.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.securityfocus.com/bid/30290",
             "url" : "http://www.securityfocus.com/bid/30290"
          },
@@ -70,7 +65,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Filesys-SmbClientParser-2008-3285",

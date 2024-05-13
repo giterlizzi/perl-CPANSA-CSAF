@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mojolicious.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257",
             "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257"
          },
@@ -58,7 +53,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Mojolicious-2011-01",

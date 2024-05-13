@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTML-StripScripts.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/clintongormley/perl-html-stripscripts/issues/3",
             "url" : "https://github.com/clintongormley/perl-html-stripscripts/issues/3"
          },
@@ -63,7 +58,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-HTML-StripScripts-2023-24038",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Email-Address.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/rjbs/Email-Address/blob/master/Changes",
             "url" : "https://github.com/rjbs/Email-Address/blob/master/Changes"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Email-Address-2014-4720",

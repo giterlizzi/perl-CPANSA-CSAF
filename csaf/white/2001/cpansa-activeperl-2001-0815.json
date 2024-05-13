@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-ActivePerl.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://bugs.activestate.com/show_bug.cgi?id=18062",
             "url" : "http://bugs.activestate.com/show_bug.cgi?id=18062"
          },
@@ -70,7 +65,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-ActivePerl-2001-0815",

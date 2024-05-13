@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://movabletype.org/news/2022/11/mt-796-688-released.html",
             "url" : "https://movabletype.org/news/2022/11/mt-796-688-released.html"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-MT-2022-43660",

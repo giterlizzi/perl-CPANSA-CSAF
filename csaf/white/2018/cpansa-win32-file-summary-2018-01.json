@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Win32-File-Summary.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://security-tracker.debian.org/tracker/CVE-2018-12015",
             "url" : "https://security-tracker.debian.org/tracker/CVE-2018-12015"
          },
@@ -58,7 +53,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Win32-File-Summary-2018-01",

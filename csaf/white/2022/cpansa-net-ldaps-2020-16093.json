@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-LDAPS.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://lemonldap-ng.org/download",
             "url" : "https://lemonldap-ng.org/download"
          },
@@ -60,7 +55,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Net-LDAPS-2020-16093",
@@ -87,7 +82,7 @@
                      "name" : "perl-ldap greater than 0",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/URI::ldap"
+                        "purl" : "pkg:cpan/Net::LDAP"
                      }
                   }
                }

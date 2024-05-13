@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Otogiri.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/ytnobody/Otogiri/commit/fac1592b3d153a6871ff1aed8016a6888cff9095",
             "url" : "https://github.com/ytnobody/Otogiri/commit/fac1592b3d153a6871ff1aed8016a6888cff9095"
          },
@@ -50,7 +45,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Otogiri-2014-01",

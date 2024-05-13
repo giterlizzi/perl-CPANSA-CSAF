@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Cmd-Dwarf.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/seagirl/dwarf/commit/14cf7a1d55db635a07f4838e16f3d9a28e63f529",
             "url" : "https://github.com/seagirl/dwarf/commit/14cf7a1d55db635a07f4838e16f3d9a28e63f529"
          },
@@ -50,7 +45,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Cmd-Dwarf-2014-01",

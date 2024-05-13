@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-IPv4Addr.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://blog.urth.org/2021/03/29/security-issues-in-perl-ip-address-distros/",
             "url" : "https://blog.urth.org/2021/03/29/security-issues-in-perl-ip-address-distros/"
          },
@@ -60,7 +55,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Net-IPV4Addr-2021-47155",

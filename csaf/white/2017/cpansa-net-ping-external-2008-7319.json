@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-Ping-External.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=33230",
             "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=33230"
          },
@@ -68,7 +63,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Net-Ping-External-2008-7319",

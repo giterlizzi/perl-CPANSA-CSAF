@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Devel-StackTrace.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://lists.bestpractical.com/pipermail/rt-announce/2008-June/000158.html",
             "url" : "http://lists.bestpractical.com/pipermail/rt-announce/2008-June/000158.html"
          },
@@ -65,7 +60,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Devel-StackTrace-2008-3502",

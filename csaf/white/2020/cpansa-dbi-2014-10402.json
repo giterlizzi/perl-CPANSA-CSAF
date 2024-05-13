@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-DBI.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=99508#txn-1911590",
             "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=99508#txn-1911590"
          },
@@ -53,7 +48,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-DBI-2014-10402",

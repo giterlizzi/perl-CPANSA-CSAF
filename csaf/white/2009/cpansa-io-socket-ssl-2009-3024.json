@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-IO-Socket-SSL.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.openwall.com/lists/oss-security/2009/08/31/4",
             "url" : "http://www.openwall.com/lists/oss-security/2009/08/31/4"
          },
@@ -85,7 +80,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-IO-Socket-SSL-2009-3024",

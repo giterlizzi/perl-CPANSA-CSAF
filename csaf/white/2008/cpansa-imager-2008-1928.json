@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Imager.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/dist/Imager/changes",
             "url" : "https://metacpan.org/dist/Imager/changes"
          },
@@ -90,7 +85,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Imager-2008-1928",

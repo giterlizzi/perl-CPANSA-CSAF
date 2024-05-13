@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Apache-Session-Browseable.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/LemonLDAPNG/Apache-Session-Browseable/commit/fdf393235140b293cae5578ef136055a78f3574f",
             "url" : "https://github.com/LemonLDAPNG/Apache-Session-Browseable/commit/fdf393235140b293cae5578ef136055a78f3574f"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Apache-Session-Browseable-2020-36659",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Net-Server.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://lists.ee.ethz.ch/postgrey/msg00627.html",
             "url" : "http://lists.ee.ethz.ch/postgrey/msg00627.html"
          },
@@ -125,7 +120,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Net-Server-2005-1127",

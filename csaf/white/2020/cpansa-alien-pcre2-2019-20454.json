@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Alien-PCRE2.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://bugs.php.net/bug.php?id=78338",
             "url" : "https://bugs.php.net/bug.php?id=78338"
          },
@@ -78,7 +73,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Alien-PCRE2-2019-20454",

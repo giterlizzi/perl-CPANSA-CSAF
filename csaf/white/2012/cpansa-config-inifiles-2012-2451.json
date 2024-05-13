@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Config-IniFiles.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.openwall.com/lists/oss-security/2012/05/02/6",
             "url" : "http://www.openwall.com/lists/oss-security/2012/05/02/6"
          },
@@ -100,7 +95,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Config-IniFiles-2012-2451",

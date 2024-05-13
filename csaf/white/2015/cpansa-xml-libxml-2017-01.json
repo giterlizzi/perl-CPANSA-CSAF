@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-XML-LibXML.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://www.debian.org/security/2017/dsa-4042",
             "url" : "https://www.debian.org/security/2017/dsa-4042"
          },
@@ -60,7 +55,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-XML-LibXML-2017-01",

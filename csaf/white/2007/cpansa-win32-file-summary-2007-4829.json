@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Win32-File-Summary.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://rt.cpan.org/Public/Bug/Display.html?id=29517",
             "url" : "http://rt.cpan.org/Public/Bug/Display.html?id=29517"
          },
@@ -120,7 +115,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Win32-File-Summary-2007-4829",

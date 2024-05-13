@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Galileo.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metamorfosec.com/Files/Commits/METC-2020-002-Escape_banner_in_Galileo_CMS_v0.042.txt",
             "url" : "https://metamorfosec.com/Files/Commits/METC-2020-002-Escape_banner_in_Galileo_CMS_v0.042.txt"
          },
@@ -68,7 +63,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Galileo-2019-7410",

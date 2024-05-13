@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Dpkg.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.debian.org/security/2014/dsa-2915",
             "url" : "http://www.debian.org/security/2014/dsa-2915"
          },
@@ -60,7 +55,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Dpkg-2014-0471",

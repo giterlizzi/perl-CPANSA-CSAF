@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Mail-Mailer.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://www.iss.net/security_center/static/10548.php",
             "url" : "http://www.iss.net/security_center/static/10548.php"
          },
@@ -80,7 +75,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Mail-Mailer-2002-1271",

@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Plack-Middleware-XSRFBlock.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/dist/Plack-Middleware-XSRFBlock/changes",
             "url" : "https://metacpan.org/dist/Plack-Middleware-XSRFBlock/changes"
          },
@@ -60,7 +55,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Plack-Middleware-XSRFBlock-20230714-01",

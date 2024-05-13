@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-libwww-perl.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://vttynotes.blogspot.com/2010/12/man-in-middle-fun-with-perl-lwp.html",
             "url" : "http://vttynotes.blogspot.com/2010/12/man-in-middle-fun-with-perl-lwp.html"
          },
@@ -55,7 +50,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-libwww-perl-2011-01",

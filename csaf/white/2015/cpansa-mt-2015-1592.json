@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-MT.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://movabletype.org/news/2015/02/movable_type_607_and_5212_released_to_close_security_vulnera.html",
             "url" : "https://movabletype.org/news/2015/02/movable_type_607_and_5212_released_to_close_security_vulnera.html"
          },
@@ -80,7 +75,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-MT-2015-1592",

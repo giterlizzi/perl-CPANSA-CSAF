@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Spoon-Cookie.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=85217",
             "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=85217"
          },
@@ -65,7 +60,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Spoon-Cookie-2012-6143",

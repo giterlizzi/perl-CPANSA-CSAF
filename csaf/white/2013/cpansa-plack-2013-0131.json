@@ -27,11 +27,6 @@
             "category" : "self",
             "summary" : "CPANSA-Plack-2013-0131 JSON",
             "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Plack-2013-0131.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Plack.yml"
          }
       ],
       "title" : "Plack vulnerability",
@@ -40,7 +35,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Plack-2013-0131",

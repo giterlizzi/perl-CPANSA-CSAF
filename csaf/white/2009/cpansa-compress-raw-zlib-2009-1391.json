@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Compress-Raw-Zlib.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://article.gmane.org/gmane.mail.virus.amavis.user/33635",
             "url" : "http://article.gmane.org/gmane.mail.virus.amavis.user/33635"
          },
@@ -135,7 +130,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Compress-Raw-Zlib-2009-1391",

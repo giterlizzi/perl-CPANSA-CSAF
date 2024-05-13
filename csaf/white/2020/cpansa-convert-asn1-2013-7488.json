@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Convert-ASN1.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/gbarr/perl-Convert-ASN1/issues/14",
             "url" : "https://github.com/gbarr/perl-Convert-ASN1/issues/14"
          },
@@ -63,7 +58,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Convert-ASN1-2013-7488",

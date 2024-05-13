@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Spreadsheet-ParseXLSX.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://metacpan.org/release/NUDDLEGG/Spreadsheet-ParseXLSX-0.30/changes",
             "url" : "https://metacpan.org/release/NUDDLEGG/Spreadsheet-ParseXLSX-0.30/changes"
          },
@@ -75,7 +70,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Spreadsheet-ParseXLSX-2024-23525",

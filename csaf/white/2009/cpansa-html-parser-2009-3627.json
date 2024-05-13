@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-HTML-Parser.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6225",
             "url" : "https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6225"
          },
@@ -85,7 +80,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-HTML-Parser-2009-3627",

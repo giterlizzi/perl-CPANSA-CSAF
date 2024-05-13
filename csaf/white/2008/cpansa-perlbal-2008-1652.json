@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Perlbal.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://search.cpan.org/src/BRADFITZ/Perlbal-1.70/CHANGES",
             "url" : "http://search.cpan.org/src/BRADFITZ/Perlbal-1.70/CHANGES"
          },
@@ -65,7 +60,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Perlbal-2008-1652",

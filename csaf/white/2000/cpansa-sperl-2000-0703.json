@@ -30,11 +30,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-sperl.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0022.html",
             "url" : "http://archives.neohapsis.com/archives/bugtraq/2000-08/0022.html"
          },
@@ -95,7 +90,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-sperl-2000-0703",
@@ -122,7 +117,7 @@
                      "name" : "perl less than 5.6.1",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/utf8"
+                        "purl" : "pkg:generic/perl"
                      }
                   }
                }

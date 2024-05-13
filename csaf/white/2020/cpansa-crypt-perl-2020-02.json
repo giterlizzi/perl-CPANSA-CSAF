@@ -33,11 +33,6 @@
          },
          {
             "category" : "external",
-            "summary" : "CPAN Security Advisory (briandfoy)",
-            "url" : "https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/master/cpansa/CPANSA-Crypt-Perl.yml"
-         },
-         {
-            "category" : "external",
             "summary" : "https://github.com/FGasper/p5-Crypt-Perl/commit/f960ce75502acf7404187231a706672f8369acb2",
             "url" : "https://github.com/FGasper/p5-Crypt-Perl/commit/f960ce75502acf7404187231a706672f8369acb2"
          },
@@ -58,7 +53,7 @@
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.21"
+               "version" : "0.22"
             }
          },
          "id" : "CPANSA-Crypt-Perl-2020-02",
