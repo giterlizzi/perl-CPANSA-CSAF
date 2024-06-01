@@ -98,7 +98,7 @@
          "notes" : [
             {
                "category" : "description",
-               "text" : "A vulnerability was found in perl. This issue occurs when a crafted regular expression is compiled by perl, which can allow an attacker controlled byte buffer overflow in a heap allocated buffer.",
+               "text" : "A vulnerability was found in perl 5.30.0 through 5.38.0. This issue occurs when a crafted regular expression is compiled by perl, which can allow an attacker controlled byte buffer overflow in a heap allocated buffer.",
                "title" : "Vulnerability Description"
             }
          ],
