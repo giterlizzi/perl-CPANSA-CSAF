@@ -14,7 +14,7 @@ use Mojo::Util qw(trim dumper);
 use MetaCPAN::Client;
 
 my $MAIN_MODULE_DIST_CACHE = {};
-my $MAIN_MODULE_SKIP       = {perl => 1, ActivePerl => 1};
+my $MAIN_MODULE_SKIP       = {perl => 1, ActivePerl => 1, libapreq2 => 1};
 my $CVE_CACHE              = {};
 my @ERRORS                 = ();
 my %COMPARATOR_DECODE      = (
@@ -25,15 +25,21 @@ my %COMPARATOR_DECODE      = (
     '>=' => 'greater than or equal',
 );
 
+my $user_dist    = shift;
 my $nvd          = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
 my $mcpan        = MetaCPAN::Client->new();
 my $csaf_baseurl = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
 my $db           = CPAN::Audit::DB->db();
 
-foreach my $dist (keys %{$db->{dists}}) {
-    foreach my $advisory (@{$db->{dists}{$dist}{advisories}}) {
+DIST: foreach my $dist (keys %{$db->{dists}}) {
 
-        say dumper($dist);
+    if ($user_dist) {
+        next DIST if ($dist ne $user_dist);
+    }
+
+    say STDERR "Process $dist";
+
+    foreach my $advisory (@{$db->{dists}{$dist}{advisories}}) {
 
         my $file = Mojo::File->new;
 
@@ -287,7 +293,7 @@ foreach my $dist (keys %{$db->{dists}}) {
             }
 
             sleep 6 unless defined $ENV{NVD_API_KEY};
-            sleep 1;
+            sleep 2;
 
         }
 
