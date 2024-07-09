@@ -1,0 +1,135 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "pdoc provides API Documentation for Python Projects. Documentation generated with `pdoc --math` linked to JavaScript files from polyfill.io. The polyfill.io CDN has been sold and now serves malicious code. This issue has been fixed in pdoc 14.5.1.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Mojolicious-Plugin-LazyImage-2024-38526 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mojolicious-Plugin-LazyImage-2024-38526.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mitmproxy/pdoc/pull/703",
+            "url" : "https://github.com/mitmproxy/pdoc/pull/703"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/mitmproxy/pdoc/security/advisories/GHSA-5vgj-ggm4-fg62",
+            "url" : "https://github.com/mitmproxy/pdoc/security/advisories/GHSA-5vgj-ggm4-fg62"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://sansec.io/research/polyfill-supply-chain-attack",
+            "url" : "https://sansec.io/research/polyfill-supply-chain-attack"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/briandfoy/cpan-security-advisory/issues/155",
+            "url" : "https://github.com/briandfoy/cpan-security-advisory/issues/155"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://stackdiary.com/polyfill-compromise-hits-100000-sites-in-a-supply-chain-attack/",
+            "url" : "https://stackdiary.com/polyfill-compromise-hits-100000-sites-in-a-supply-chain-attack/"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2024-38526 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2024-38526"
+         }
+      ],
+      "title" : "Mojolicious-Plugin-LazyImage vulnerability",
+      "tracking" : {
+         "current_release_date" : "2024-06-26T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.22"
+            }
+         },
+         "id" : "CPANSA-Mojolicious-Plugin-LazyImage-2024-38526",
+         "initial_release_date" : "2024-06-26T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2024-06-26T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=0.01",
+                  "product" : {
+                     "name" : "Mojolicious-Plugin-LazyImage less than or equal 0.01",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Mojolicious::Plugin::LazyImage"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Mojolicious-Plugin-LazyImage"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2024-38526",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "pdoc provides API Documentation for Python Projects. Documentation generated with `pdoc --math` linked to JavaScript files from polyfill.io. The polyfill.io CDN has been sold and now serves malicious code. This issue has been fixed in pdoc 14.5.1.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 7.2,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:L",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
