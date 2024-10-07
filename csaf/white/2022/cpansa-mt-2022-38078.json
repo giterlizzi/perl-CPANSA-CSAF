@@ -108,9 +108,9 @@
                },
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/7.9.5",
+                  "name" : "vers:cpan/>=7.9.5",
                   "product" : {
-                     "name" : "MT ",
+                     "name" : "MT greater than or equal 7.9.5",
                      "product_id" : "CSAFPID-0004",
                      "product_identification_helper" : {
                         "purl" : "pkg:generic/MT"
@@ -119,9 +119,9 @@
                },
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/6.8.7",
+                  "name" : "vers:cpan/>=6.8.7|<7",
                   "product" : {
-                     "name" : "MT ",
+                     "name" : "MT greater than or equal 6.8.7 and less than 7",
                      "product_id" : "CSAFPID-0005",
                      "product_identification_helper" : {
                         "purl" : "pkg:generic/MT"

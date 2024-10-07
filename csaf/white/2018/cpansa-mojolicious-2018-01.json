@@ -98,6 +98,10 @@
    "vulnerabilities" : [
       {
          "cve" : "CVE-2018-25100",
+         "cwe" : {
+            "id" : "CWE-400",
+            "name" : "Uncontrolled Resource Consumption"
+         },
          "notes" : [
             {
                "category" : "description",
@@ -109,7 +113,20 @@
             "known_affected" : [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 5.3,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

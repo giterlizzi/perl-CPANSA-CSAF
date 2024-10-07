@@ -95,6 +95,10 @@
    "vulnerabilities" : [
       {
          "cve" : "CVE-2021-47155",
+         "cwe" : {
+            "id" : "CWE-284",
+            "name" : "Improper Access Control"
+         },
          "notes" : [
             {
                "category" : "description",
@@ -106,7 +110,20 @@
             "known_affected" : [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 9.1,
+                  "baseSeverity" : "CRITICAL",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

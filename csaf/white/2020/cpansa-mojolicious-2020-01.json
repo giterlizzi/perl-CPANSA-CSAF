@@ -96,7 +96,20 @@
             "known_affected" : [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

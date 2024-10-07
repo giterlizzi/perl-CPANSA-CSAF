@@ -102,10 +102,21 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.14|<=1.15",
+                  "name" : "vers:cpan/>=1.14",
                   "product" : {
-                     "name" : "IO-Socket-SSL greater than or equal 1.14 and less than or equal 1.15",
+                     "name" : "IO-Socket-SSL greater than or equal 1.14",
                      "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/IO::Socket::SSL"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.25",
+                  "product" : {
+                     "name" : "IO-Socket-SSL less than or equal 1.25",
+                     "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/IO::Socket::SSL"
                      }
@@ -116,7 +127,7 @@
                   "name" : "vers:cpan/>=1.26",
                   "product" : {
                      "name" : "IO-Socket-SSL greater than or equal 1.26",
-                     "product_id" : "CSAFPID-0002",
+                     "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/IO::Socket::SSL"
                      }
@@ -144,10 +155,11 @@
          ],
          "product_status" : {
             "fixed" : [
-               "CSAFPID-0002"
+               "CSAFPID-0003"
             ],
             "known_affected" : [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002"
             ]
          },
          "scores" : [
@@ -158,7 +170,8 @@
                   "version" : "2.0"
                },
                "products" : [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
                ]
             }
          ]

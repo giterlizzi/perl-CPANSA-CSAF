@@ -117,9 +117,9 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.35",
+                  "name" : "vers:cpan/<=1.35",
                   "product" : {
-                     "name" : "IO-Socket-SSL less than 1.35",
+                     "name" : "IO-Socket-SSL less than or equal 1.35",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/IO::Socket::SSL"
@@ -128,9 +128,9 @@
                },
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.35",
+                  "name" : "vers:cpan/>1.35",
                   "product" : {
-                     "name" : "IO-Socket-SSL greater than or equal 1.35",
+                     "name" : "IO-Socket-SSL greater than 1.35",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/IO::Socket::SSL"

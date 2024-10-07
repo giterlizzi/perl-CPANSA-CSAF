@@ -3,7 +3,7 @@
       "aggregate_severity" : {
          "text" : "high"
       },
-      "category" : "csaf_informational_advisory",
+      "category" : "csaf_security_advisory",
       "csaf_version" : "2.0",
       "distribution" : {
          "tlp" : {
@@ -45,6 +45,11 @@
             "category" : "external",
             "summary" : "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60",
             "url" : "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-1841 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-1841"
          }
       ],
       "title" : "Mojolicious vulnerability",
@@ -89,5 +94,38 @@
             "name" : "Mojolicious"
          }
       ]
-   }
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-1841",
+         "cwe" : {
+            "id" : "CWE-79",
+            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Cross-site scripting (XSS) vulnerability in the link_to helper in Mojolicious before 1.12 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.3,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
 }

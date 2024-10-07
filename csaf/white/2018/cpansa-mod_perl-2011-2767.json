@@ -1,0 +1,182 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "critical"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "mod_perl 2.0 through 2.0.10 allows attackers to execute arbitrary Perl code by placing it in a user-owned .htaccess file, because (contrary to the documentation) there is no configuration option that permits Perl code for the administrator's control of HTTP request processing without also permitting unprivileged users to run Perl code in the context of the user account that runs Apache HTTP Server processes.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-mod_perl-2011-2767 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-mod_perl-2011-2767.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://mail-archives.apache.org/mod_mbox/perl-modperl/201110.mbox/raw/%3C20111004084343.GA21290%40ktnx.net%3E",
+            "url" : "https://mail-archives.apache.org/mod_mbox/perl-modperl/201110.mbox/raw/%3C20111004084343.GA21290%40ktnx.net%3E"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://bugs.debian.org/644169",
+            "url" : "https://bugs.debian.org/644169"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.debian.org/debian-lts-announce/2018/09/msg00018.html",
+            "url" : "https://lists.debian.org/debian-lts-announce/2018/09/msg00018.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/errata/RHSA-2018:2737",
+            "url" : "https://access.redhat.com/errata/RHSA-2018:2737"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/errata/RHSA-2018:2826",
+            "url" : "https://access.redhat.com/errata/RHSA-2018:2826"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://access.redhat.com/errata/RHSA-2018:2825",
+            "url" : "https://access.redhat.com/errata/RHSA-2018:2825"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/105195",
+            "url" : "http://www.securityfocus.com/bid/105195"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/3825-1/",
+            "url" : "https://usn.ubuntu.com/3825-1/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://usn.ubuntu.com/3825-2/",
+            "url" : "https://usn.ubuntu.com/3825-2/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.apache.org/thread.html/c8ebe8aad147a3ad2e7b0e8b2da45263171ab5d0fc7f8c100feaa94d@%3Cmodperl-cvs.perl.apache.org%3E",
+            "url" : "https://lists.apache.org/thread.html/c8ebe8aad147a3ad2e7b0e8b2da45263171ab5d0fc7f8c100feaa94d@%3Cmodperl-cvs.perl.apache.org%3E"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00063.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00063.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00065.html",
+            "url" : "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00065.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2011-2767 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-2767"
+         }
+      ],
+      "title" : "mod_perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2018-08-26T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.22"
+            }
+         },
+         "id" : "CPANSA-mod_perl-2011-2767",
+         "initial_release_date" : "2018-08-26T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2018-08-26T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=2.0|<=2.0.10",
+                  "product" : {
+                     "name" : "mod_perl greater than or equal 2.0 and less than or equal 2.0.10",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/mod_perl2"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "mod_perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2011-2767",
+         "cwe" : {
+            "id" : "CWE-94",
+            "name" : "Improper Control of Generation of Code ('Code Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "mod_perl 2.0 through 2.0.10 allows attackers to execute arbitrary Perl code by placing it in a user-owned .htaccess file, because (contrary to the documentation) there is no configuration option that permits Perl code for the administrator's control of HTTP request processing without also permitting unprivileged users to run Perl code in the context of the user account that runs Apache HTTP Server processes.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 10,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 9.8,
+                  "baseSeverity" : "CRITICAL",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

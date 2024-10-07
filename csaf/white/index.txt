@@ -3,10 +3,12 @@
 2024/cpansa-net-ipv4addr-2021-47155.json
 2024/cpansa-net-ipaddress-util-2021-47156.json
 2024/cpansa-net-cidr-lite-2021-47154.json
+2024/cpansa-mozilla-ca-2024-39689.json
 2024/cpansa-mojolicious-plugin-lazyimage-2024-38526.json
 2024/cpansa-mojo-dom-role-analyzer-2024-38526.json
 2024/cpansa-email-mime-2024-4140.json
 2024/cpansa-crypt-openssl-rsa-2024-2467.json
+2024/cpansa-app-cpanminus-2024-45321.json
 2023/cpansa-spreadsheet-parseexcel-2023-7101.json
 2023/cpansa-plack-middleware-xsrfblock-20230714-01.json
 2023/cpansa-perl-2023-47039.json
@@ -39,9 +41,11 @@
 2021/cpansa-mt-2021-20810.json
 2021/cpansa-mt-2021-20809.json
 2021/cpansa-mt-2021-20808.json
+2021/cpansa-mt-2020-5669.json
 2021/cpansa-mojolicious-2021-02.json
 2021/cpansa-mojolicious-2021-01.json
 2021/cpansa-kossy-2021-01.json
+2021/cpansa-image-exiftool-2021-22204.json
 2021/cpansa-encode-2021-01.json
 2021/cpansa-data-validate-ip-2021-01.json
 2021/cpansa-cpan-checksums-2020-16155.json
@@ -89,6 +93,7 @@
 2019/cpansa-poe-component-irc-2010-3438.json
 2019/cpansa-net-dropbear-2019-17362.json
 2019/cpansa-mt-2019-6025.json
+2019/cpansa-image-exiftool-2018-20211.json
 2019/cpansa-gd-2019-6977.json
 2019/cpansa-dbd-sqlite-2019-8457.json
 2019/cpansa-dbd-sqlite-2019-5018.json
@@ -122,6 +127,7 @@
 2018/cpansa-mojolicious-2018-03.json
 2018/cpansa-mojolicious-2018-02.json
 2018/cpansa-mojolicious-2018-01.json
+2018/cpansa-mod_perl-2011-2767.json
 2018/cpansa-http-session2-2018-01.json
 2018/cpansa-email-address-2014-01.json
 2018/cpansa-dbd-sqlite-2018-8740.json
@@ -166,10 +172,12 @@
 2017/cpansa-catalyst-plugin-static-simple-2017-01.json
 2017/cpansa-apache-authenhook-2010-3845.json
 2016/cpansa-yaml-libyaml-2016-01.json
+2016/cpansa-xml-twig-2016-9180.json
 2016/cpansa-win32-file-summary-2016-1238.json
 2016/cpansa-sys-syslog-2016-1238.json
 2016/cpansa-pod-perldoc-2016-1238.json
 2016/cpansa-perl-2016-6185.json
+2016/cpansa-perl-2016-2381.json
 2016/cpansa-perl-2015-8853.json
 2016/cpansa-pathtools-2016-02.json
 2016/cpansa-pathtools-2016-01.json
@@ -381,6 +389,7 @@
 2007/cpansa-archive-tar-2007-4829.json
 2007/cpansa-apache-authcas-2007-01.json
 2006/cpansa-jifty-2006-01.json
+2006/cpansa-gpib-2006-1565.json
 2006/cpansa-crypt-cbc-2006-0898.json
 2006/cpansa-cgi-session-2006-1279.json
 2006/cpansa-cgi-session-2006-01.json
@@ -391,6 +400,7 @@
 2005/cpansa-net-ssleay-2005-0106.json
 2005/cpansa-net-snmp-2005-2811.json
 2005/cpansa-net-server-2005-1127.json
+2005/cpansa-mail-audit-2005-4536.json
 2005/cpansa-file-path-2005-0448.json
 2005/cpansa-dbi-2005-01.json
 2005/cpansa-convert-uulib-2005-1349.json
@@ -404,7 +414,9 @@
 2004/cpansa-ui-dialog-2004-01.json
 2004/cpansa-gbrowse-2004-01.json
 2004/cpansa-file-path-2004-0452.json
+2004/cpansa-activeperl-2004-2286.json
 2004/cpansa-activeperl-2004-2022.json
+2004/cpansa-activeperl-2004-0377.json
 2003/cpansa-perl-2003-0900.json
 2003/cpansa-gbrowse-2003-01.json
 2002/cpansa-soap-lite-2002-01.json

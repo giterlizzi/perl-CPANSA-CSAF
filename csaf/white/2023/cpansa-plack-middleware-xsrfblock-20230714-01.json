@@ -106,6 +106,10 @@
    "vulnerabilities" : [
       {
          "cve" : "CVE-2023-52431",
+         "cwe" : {
+            "id" : "CWE-269",
+            "name" : "Improper Privilege Management"
+         },
          "notes" : [
             {
                "category" : "description",
@@ -120,7 +124,20 @@
             "known_affected" : [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 8.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

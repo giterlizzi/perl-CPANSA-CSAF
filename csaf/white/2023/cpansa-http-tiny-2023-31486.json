@@ -12,7 +12,7 @@
       "notes" : [
          {
             "category" : "description",
-            "text" : "HTTP::Tiny v0.082, a Perl core module since v5.13.9 and available standalone on CPAN, does not verify TLS certs by default. Users must opt-in with the verify_SSL=>1 flag to verify certs when using HTTPS. Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.",
+            "text" : "HTTP::Tiny v0.082, a Perl core module since v5.13.9 and available standalone on CPAN, does not verify TLS certs by default. Users must opt-in with the verify_SSL=>1 flag to verify certs when using HTTPS.\nResulting in a CWE-1188: Insecure Default Initialization of Resource weakness.",
             "title" : "Vulnerability Description"
          }
       ],

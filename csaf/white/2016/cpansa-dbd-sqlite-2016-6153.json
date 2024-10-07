@@ -125,9 +125,9 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.51_04",
+                  "name" : "vers:cpan/<=1.51_04",
                   "product" : {
-                     "name" : "DBD-SQLite greater than or equal 1.51_04",
+                     "name" : "DBD-SQLite less than or equal 1.51_04",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
                         "purl" : "pkg:cpan/DBD::SQLite"

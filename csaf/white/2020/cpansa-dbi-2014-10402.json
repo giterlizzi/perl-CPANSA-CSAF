@@ -38,6 +38,11 @@
          },
          {
             "category" : "external",
+            "summary" : "https://metacpan.org/release/HMBRAND/DBI-1.643_01/view/Changes",
+            "url" : "https://metacpan.org/release/HMBRAND/DBI-1.643_01/view/Changes"
+         },
+         {
+            "category" : "external",
             "summary" : "CVE-2014-10402 (NVD)",
             "url" : "https://nvd.nist.gov/vuln/detail/CVE-2014-10402"
          }
@@ -78,6 +83,17 @@
                         "purl" : "pkg:cpan/DBI"
                      }
                   }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.644",
+                  "product" : {
+                     "name" : "DBI greater than or equal 1.644",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/DBI"
+                     }
+                  }
                }
             ],
             "category" : "product_name",
@@ -100,6 +116,9 @@
             }
          ],
          "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
             "known_affected" : [
                "CSAFPID-0001"
             ]

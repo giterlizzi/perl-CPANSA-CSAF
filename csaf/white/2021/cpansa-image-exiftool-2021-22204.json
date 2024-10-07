@@ -1,0 +1,203 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Improper neutralization of user data in the DjVu file format in ExifTool versions 7.44 and up allows arbitrary code execution when parsing the malicious image",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Image-ExifTool-2021-22204 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Image-ExifTool-2021-22204.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://packetstormsecurity.com/files/162558/ExifTool-DjVu-ANT-Perl-Injection.html",
+            "url" : "http://packetstormsecurity.com/files/162558/ExifTool-DjVu-ANT-Perl-Injection.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://packetstormsecurity.com/files/164768/GitLab-Unauthenticated-Remote-ExifTool-Command-Injection.html",
+            "url" : "http://packetstormsecurity.com/files/164768/GitLab-Unauthenticated-Remote-ExifTool-Command-Injection.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://packetstormsecurity.com/files/164994/GitLab-13.10.2-Remote-Code-Execution.html",
+            "url" : "http://packetstormsecurity.com/files/164994/GitLab-13.10.2-Remote-Code-Execution.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://packetstormsecurity.com/files/167038/ExifTool-12.23-Arbitrary-Code-Execution.html",
+            "url" : "http://packetstormsecurity.com/files/167038/ExifTool-12.23-Arbitrary-Code-Execution.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2021/05/09/1",
+            "url" : "http://www.openwall.com/lists/oss-security/2021/05/09/1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.openwall.com/lists/oss-security/2021/05/10/5",
+            "url" : "http://www.openwall.com/lists/oss-security/2021/05/10/5"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/exiftool/exiftool/commit/cf0f4e7dcd024ca99615bfd1102a841a25dde031#diff-fa0d652d10dbcd246e6b1df16c1e992931d3bb717a7e36157596b76bdadb3800",
+            "url" : "https://github.com/exiftool/exiftool/commit/cf0f4e7dcd024ca99615bfd1102a841a25dde031#diff-fa0d652d10dbcd246e6b1df16c1e992931d3bb717a7e36157596b76bdadb3800"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-22204.json",
+            "url" : "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-22204.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://hackerone.com/reports/1154542",
+            "url" : "https://hackerone.com/reports/1154542"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.debian.org/debian-lts-announce/2021/05/msg00018.html",
+            "url" : "https://lists.debian.org/debian-lts-announce/2021/05/msg00018.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DDKDLJLBTBBR66OOPXSXCG2PQRM5KCZL/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DDKDLJLBTBBR66OOPXSXCG2PQRM5KCZL/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/F6UOBPU3LSHAPRRJNISNVXZ5DSUIALLV/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/F6UOBPU3LSHAPRRJNISNVXZ5DSUIALLV/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/U4RF6PJCJ6NQOVJJJF6HN6BORUQVIXY6/",
+            "url" : "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/U4RF6PJCJ6NQOVJJJF6HN6BORUQVIXY6/"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.debian.org/security/2021/dsa-4910",
+            "url" : "https://www.debian.org/security/2021/dsa-4910"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2021-22204 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2021-22204"
+         }
+      ],
+      "title" : "Image-ExifTool vulnerability",
+      "tracking" : {
+         "current_release_date" : "2021-04-23T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.22"
+            }
+         },
+         "id" : "CPANSA-Image-ExifTool-2021-22204",
+         "initial_release_date" : "2021-04-23T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2021-04-23T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=7.44|<=12.23",
+                  "product" : {
+                     "name" : "Image-ExifTool greater than or equal 7.44 and less than or equal 12.23",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Image::ExifTool"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>12.23",
+                  "product" : {
+                     "name" : "Image-ExifTool greater than 12.23",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Image::ExifTool"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Image-ExifTool"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2021-22204",
+         "cwe" : {
+            "id" : "CWE-94",
+            "name" : "Improper Control of Generation of Code ('Code Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Improper neutralization of user data in the DjVu file format in ExifTool versions 7.44 and up allows arbitrary code execution when parsing the malicious image",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

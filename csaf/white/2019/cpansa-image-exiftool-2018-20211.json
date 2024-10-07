@@ -1,0 +1,143 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "ExifTool 8.32 allows local users to gain privileges by creating a %TEMP%\\\\par-%username%\\\\cache-exiftool-8.32 folder with a victim's username, and then copying a Trojan horse ws32_32.dll file into this new folder, aka DLL Hijacking. NOTE: 8.32 is an obsolete version from 2010 (9.x was released starting in 2012, and 10.x was released starting in 2015).",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Image-ExifTool-2018-20211 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Image-ExifTool-2018-20211.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://packetstormsecurity.com/files/150892/Exiftool-8.3.2.0-DLL-Hijacking.html",
+            "url" : "http://packetstormsecurity.com/files/150892/Exiftool-8.3.2.0-DLL-Hijacking.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://seclists.org/fulldisclosure/2018/Dec/44",
+            "url" : "http://seclists.org/fulldisclosure/2018/Dec/44"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2018-20211 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2018-20211"
+         }
+      ],
+      "title" : "Image-ExifTool vulnerability",
+      "tracking" : {
+         "current_release_date" : "2019-01-02T01:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.22"
+            }
+         },
+         "id" : "CPANSA-Image-ExifTool-2018-20211",
+         "initial_release_date" : "2019-01-02T01:00:00",
+         "revision_history" : [
+            {
+               "date" : "2019-01-02T01:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/=8.32",
+                  "product" : {
+                     "name" : "Image-ExifTool equal 8.32",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Image::ExifTool"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>8",
+                  "product" : {
+                     "name" : "Image-ExifTool greater than 8",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Image::ExifTool"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Image-ExifTool"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2018-20211",
+         "cwe" : {
+            "id" : "CWE-427",
+            "name" : "Uncontrolled Search Path Element"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "ExifTool 8.32 allows local users to gain privileges by creating a %TEMP%\\par-%username%\\cache-exiftool-8.32 folder with a victim's username, and then copying a Trojan horse ws32_32.dll file into this new folder, aka DLL Hijacking.  NOTE: 8.32 is an obsolete version from 2010 (9.x was released starting in 2012, and 10.x was released starting in 2015).",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 6.8,
+                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.8,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version" : "3.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

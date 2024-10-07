@@ -121,6 +121,10 @@
    "vulnerabilities" : [
       {
          "cve" : "CVE-2022-48623",
+         "cwe" : {
+            "id" : "CWE-125",
+            "name" : "Out-of-bounds Read"
+         },
          "notes" : [
             {
                "category" : "description",
@@ -135,7 +139,20 @@
             "known_affected" : [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 9.1,
+                  "baseSeverity" : "CRITICAL",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

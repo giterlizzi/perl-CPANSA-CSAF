@@ -1,0 +1,124 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Untrusted search path vulnerability in libgpib-perl 3.2.06-2 in Debian GNU/Linux includes an RPATH value under the /tmp/buildd directory for the LinuxGpib.so module, which might allow local users to gain privileges by installing malicious libraries in that directory.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-GPIB-2006-1565 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-GPIB-2006-1565.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=359239",
+            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=359239"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/17288",
+            "url" : "http://www.securityfocus.com/bid/17288"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/25681",
+            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/25681"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2006-1565 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2006-1565"
+         }
+      ],
+      "title" : "GPIB vulnerability",
+      "tracking" : {
+         "current_release_date" : "2006-03-31T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.22"
+            }
+         },
+         "id" : "CPANSA-GPIB-2006-1565",
+         "initial_release_date" : "2006-03-31T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2006-03-31T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>0",
+                  "product" : {
+                     "name" : "GPIB greater than 0",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/GPIB"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "GPIB"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2006-1565",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Untrusted search path vulnerability in libgpib-perl 3.2.06-2 in Debian GNU/Linux includes an RPATH value under the /tmp/buildd directory for the LinuxGpib.so module, which might allow local users to gain privileges by installing malicious libraries in that directory.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 4.6,
+                  "vectorString" : "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                  "version" : "2.0"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

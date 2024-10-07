@@ -1,0 +1,201 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "high"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Perl might allow context-dependent attackers to bypass the taint protection mechanism in a child process via duplicate environment variables in envp.",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-perl-2016-2381 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2016-2381.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.gossamer-threads.com/lists/perl/porters/326387",
+            "url" : "http://www.gossamer-threads.com/lists/perl/porters/326387"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.debian.org/security/2016/dsa-3501",
+            "url" : "http://www.debian.org/security/2016/dsa-3501"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://perl5.git.perl.org/perl.git/commitdiff/ae37b791a73a9e78dedb89fb2429d2628cf58076",
+            "url" : "http://perl5.git.perl.org/perl.git/commitdiff/ae37b791a73a9e78dedb89fb2429d2628cf58076"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05240731",
+            "url" : "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05240731"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.oracle.com/technetwork/topics/security/bulletinjul2016-3090568.html",
+            "url" : "http://www.oracle.com/technetwork/topics/security/bulletinjul2016-3090568.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.securityfocus.com/bid/83802",
+            "url" : "http://www.securityfocus.com/bid/83802"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.ubuntu.com/usn/USN-2916-1",
+            "url" : "http://www.ubuntu.com/usn/USN-2916-1"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://lists.opensuse.org/opensuse-updates/2016-03/msg00112.html",
+            "url" : "http://lists.opensuse.org/opensuse-updates/2016-03/msg00112.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://security.gentoo.org/glsa/201701-75",
+            "url" : "https://security.gentoo.org/glsa/201701-75"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html",
+            "url" : "http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html",
+            "url" : "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpuapr2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpuapr2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "url" : "https://www.oracle.com/security-alerts/cpujul2020.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2016-2381 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2016-2381"
+         }
+      ],
+      "title" : "perl vulnerability",
+      "tracking" : {
+         "current_release_date" : "2016-04-08T02:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.22"
+            }
+         },
+         "id" : "CPANSA-perl-2016-2381",
+         "initial_release_date" : "2016-04-08T02:00:00",
+         "revision_history" : [
+            {
+               "date" : "2016-04-08T02:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<5.22.1",
+                  "product" : {
+                     "name" : "perl less than 5.22.1",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:generic/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.22.1",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.22.1",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:generic/perl"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "perl"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2016-2381",
+         "cwe" : {
+            "id" : "CWE-20",
+            "name" : "Improper Input Validation"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Perl might allow context-dependent attackers to bypass the taint protection mechanism in a child process via duplicate environment variables in envp.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v2" : {
+                  "baseScore" : 5,
+                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                  "version" : "2.0"
+               },
+               "cvss_v3" : {
+                  "baseScore" : 7.5,
+                  "baseSeverity" : "HIGH",
+                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
