@@ -87,5 +87,76 @@ foreach (@csaf) {
     say STDERR "    Save in $csaf_html_file";
 
     $csaf_html_file->spew($csaf_html_content);
+    last;
 
 }
+
+my $mt = Mojo::Template->new(vars => 1);
+
+$index_file->spew(
+    $mt->render(
+        <<'EOF', {items => Mojo::Collection->new(@items)->sort(sub { $b->{current_date}->datetime cmp $a->{current_date}->datetime })}));
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/gutenberg-css" charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/gutenberg-css/dist/themes/modern.min.css" charset="utf-8">
+  <meta charset="utf-8" />
+  <title>CPAN Security Advisories</title>
+  <style>
+    .severity {
+        color: #fff;
+        font-weight: bold;
+        padding-left: .20em;
+        padding-right: .20em; 
+        display: inline-block;
+        border-radius: 5px;
+    }
+    .severity-critical { background-color: #343a40 !important; }
+    .severity-high { background-color: #dc3545 !important; }
+    .severity-medium { background-color: #fd7e14 !important; }
+    .severity-low { background-color: #ffc107 !important; }
+  </style>
+</head>
+<body>
+  <h1>CPAN Security Advisories</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th># CPANSA ID</th>
+        <th>Severity</th>
+        <th>Date</th>
+        <th>CVEs</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+    % foreach my $item ($items->each) {
+      <tr>
+        <th>
+            <a href="<%= $item->{csaf_html_path} %>"><%= $item->{csaf_id} %></a>
+        </th>
+        <td>
+        % if ($item->{severity}) {
+            <span class="severity severity-<%= lc $item->{severity} %>"><%= ucfirst $item->{severity} %></span>
+        % }
+        </td>
+        <td>
+            <%= $item->{current_date}->date %>
+        </td>
+        <td>
+        % foreach my $cve ($item->{cves}->each) {
+            <a href="https://nvd.nist.gov/vuln/detail/<%= $cve %>"><%= $cve %></a>
+        % }
+        </td>
+        <td>
+            <a href="<%= $item->{csaf_url} %>">CSAF</a>
+        </td>
+      </tr>
+    % }
+    </tbody>
+  </table>
+</body>
+</html>
+EOF
