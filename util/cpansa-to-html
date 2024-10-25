@@ -1,0 +1,91 @@
+#!perl
+
+use v5.10;
+use strict;
+use warnings;
+
+use Carp;
+use Getopt::Long qw( GetOptions :config gnu_compat );
+
+use Mojo::File qw(curfile);
+use Mojo::Template;
+use Mojo::Collection;
+
+use CSAF::Parser;
+
+my %options = ();
+
+GetOptions(
+    \%options, qw(
+        csaf-index-file|f=s
+        output-directory|o=s
+    )
+) or Carp::croak 'Specify an option';
+
+Carp::croak "Missing CSAF index.txt file" unless $options{'csaf-index-file'};
+Carp::croak "Missing output directory"    unless $options{'output-directory'};
+
+my $csaf_index_file = Mojo::File->new($options{'csaf-index-file'});
+my $csaf_base_dir   = $csaf_index_file->dirname;
+
+my $index_file = Mojo::File->new($options{'output-directory'})->path('index.html');
+
+my @csaf  = split /\n/, $csaf_index_file->slurp;
+my @items = ();
+
+foreach (@csaf) {
+
+    my $csaf_file = Mojo::File->new($csaf_base_dir)->child($_);
+
+    say STDERR "[*] Process $csaf_file";
+
+    my $csaf = eval { CSAF::Parser->new(file => $csaf_file)->parse };
+
+    if ($@) {
+        say STDERR "    ERROR - $@";
+        next;
+    }
+
+    my $csaf_id        = $csaf->document->tracking->id;
+    my $csaf_url       = undef;
+    my $csaf_html_path = ($csaf_file->basename('.json') . '.html');
+    my $current_date   = $csaf->document->tracking->current_release_date;
+    my $severity       = $csaf->document->aggregate_severity->text;
+    my @cves           = ();
+
+    foreach my $vulnerability ($csaf->vulnerabilities->each) {
+        push @cves, $vulnerability->cve;
+    }
+
+    foreach my $reference ($csaf->document->references->each) {
+        $csaf_url = $reference->url if $reference->category eq 'self';
+        last                        if $csaf_url;
+    }
+
+    my $item = {
+        csaf_id        => $csaf_id,
+        current_date   => $current_date,
+        severity       => $severity,
+        csaf_html_path => $csaf_html_path,
+        csaf_url       => $csaf_url,
+        cves           => Mojo::Collection->new(@cves)
+    };
+
+    push @items, $item;
+
+    say STDERR "    Render CSAF document in HTML";
+
+    my $csaf_html_content = eval { $csaf->render(format => 'html') };
+
+    if ($@) {
+        say STDERR "    ERROR - $@";
+        next;
+    }
+
+    my $csaf_html_file = Mojo::File->new($options{'output-directory'})->child($csaf_html_path);
+
+    say STDERR "    Save in $csaf_html_file";
+
+    $csaf_html_file->spew($csaf_html_content);
+
+}
