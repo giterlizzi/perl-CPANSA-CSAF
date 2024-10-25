@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Mozilla-CA-2024-39689 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mozilla-CA-2024-39689.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2024/cpansa-mozilla-ca-2024-39689.json"
          },
          {
             "category" : "external",
@@ -59,18 +59,18 @@
       ],
       "title" : "Mozilla-CA vulnerability",
       "tracking" : {
-         "current_release_date" : "2024-06-11T02:00:00",
+         "current_release_date" : "2024-06-11T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Mozilla-CA-2024-39689",
-         "initial_release_date" : "2024-06-11T02:00:00",
+         "initial_release_date" : "2024-06-11T00:00:00",
          "revision_history" : [
             {
-               "date" : "2024-06-11T02:00:00",
+               "date" : "2024-06-11T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

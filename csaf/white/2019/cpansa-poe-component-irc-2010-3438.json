@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Poe-Component-IRC-2010-3438 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Poe-Component-IRC-2010-3438.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2019/cpansa-poe-component-irc-2010-3438.json"
          },
          {
             "category" : "external",
@@ -54,18 +54,18 @@
       ],
       "title" : "POE-Component-IRC vulnerability",
       "tracking" : {
-         "current_release_date" : "2019-11-12T01:00:00",
+         "current_release_date" : "2019-11-12T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Poe-Component-IRC-2010-3438",
-         "initial_release_date" : "2019-11-12T01:00:00",
+         "initial_release_date" : "2019-11-12T00:00:00",
          "revision_history" : [
             {
-               "date" : "2019-11-12T01:00:00",
+               "date" : "2019-11-12T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }
@@ -98,14 +98,10 @@
    "vulnerabilities" : [
       {
          "cve" : "CVE-2010-3438",
-         "cwe" : {
-            "id" : "CWE-134",
-            "name" : "Use of Externally-Controlled Format String"
-         },
          "notes" : [
             {
                "category" : "description",
-               "text" : "libpoe-component-irc-perl before v6.32 does not remove carriage returns and line feeds. This can be used to execute arbitrary IRC commands by passing an argument such as \"some text\\rQUIT\" to the 'privmsg' handler, which would cause the client to disconnect from the server.",
+               "text" : null,
                "title" : "Vulnerability Description"
             }
          ],
@@ -113,25 +109,7 @@
             "known_affected" : [
                "CSAFPID-0001"
             ]
-         },
-         "scores" : [
-            {
-               "cvss_v2" : {
-                  "baseScore" : 7.5,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-                  "version" : "2.0"
-               },
-               "cvss_v3" : {
-                  "baseScore" : 9.8,
-                  "baseSeverity" : "CRITICAL",
-                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                  "version" : "3.1"
-               },
-               "products" : [
-                  "CSAFPID-0001"
-               ]
-            }
-         ]
+         }
       }
    ]
 }

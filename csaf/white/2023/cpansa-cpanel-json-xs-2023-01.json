@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Cpanel-JSON-XS-2023-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Cpanel-JSON-XS-2023-01.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2023/cpansa-cpanel-json-xs-2023-01.json"
          },
          {
             "category" : "external",
@@ -66,18 +66,18 @@
       ],
       "title" : "Cpanel-JSON-XS vulnerability",
       "tracking" : {
-         "current_release_date" : "2023-02-21T01:00:00",
+         "current_release_date" : "2023-02-21T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Cpanel-JSON-XS-2023-01",
-         "initial_release_date" : "2023-02-21T01:00:00",
+         "initial_release_date" : "2023-02-21T00:00:00",
          "revision_history" : [
             {
-               "date" : "2023-02-21T01:00:00",
+               "date" : "2023-02-21T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

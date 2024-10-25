@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-MARC-File-XML-2014-1626 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MARC-File-XML-2014-1626.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2014/cpansa-marc-file-xml-2014-1626.json"
          },
          {
             "category" : "external",
@@ -76,18 +76,18 @@
       ],
       "title" : "MARC-File-XML vulnerability",
       "tracking" : {
-         "current_release_date" : "2014-01-26T01:00:00",
+         "current_release_date" : "2014-01-26T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-MARC-File-XML-2014-1626",
-         "initial_release_date" : "2014-01-26T01:00:00",
+         "initial_release_date" : "2014-01-26T00:00:00",
          "revision_history" : [
             {
-               "date" : "2014-01-26T01:00:00",
+               "date" : "2014-01-26T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

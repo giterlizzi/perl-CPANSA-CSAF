@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-libwww-perl-2011-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-libwww-perl-2011-01.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-libwww-perl-2011-01.json"
          },
          {
             "category" : "external",
@@ -46,18 +46,18 @@
       ],
       "title" : "libwww-perl vulnerability",
       "tracking" : {
-         "current_release_date" : "2011-01-20T01:00:00",
+         "current_release_date" : "2011-01-20T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-libwww-perl-2011-01",
-         "initial_release_date" : "2011-01-20T01:00:00",
+         "initial_release_date" : "2011-01-20T00:00:00",
          "revision_history" : [
             {
-               "date" : "2011-01-20T01:00:00",
+               "date" : "2011-01-20T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

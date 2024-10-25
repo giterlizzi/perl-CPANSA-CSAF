@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-CGI-Application-Dispatch-2005-001 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CGI-Application-Dispatch-2005-001.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-cgi-application-dispatch-2005-001.json"
          },
          {
             "category" : "external",
@@ -36,18 +36,18 @@
       ],
       "title" : "CGI-Application-Dispatch vulnerability",
       "tracking" : {
-         "current_release_date" : "2005-01-20T01:00:00",
+         "current_release_date" : "2005-01-20T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-CGI-Application-Dispatch-2005-001",
-         "initial_release_date" : "2005-01-20T01:00:00",
+         "initial_release_date" : "2005-01-20T00:00:00",
          "revision_history" : [
             {
-               "date" : "2005-01-20T01:00:00",
+               "date" : "2005-01-20T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

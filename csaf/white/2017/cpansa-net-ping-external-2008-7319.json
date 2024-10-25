@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Net-Ping-External-2008-7319 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-Ping-External-2008-7319.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2017/cpansa-net-ping-external-2008-7319.json"
          },
          {
             "category" : "external",
@@ -59,18 +59,18 @@
       ],
       "title" : "Net-Ping-External vulnerability",
       "tracking" : {
-         "current_release_date" : "2017-11-07T01:00:00",
+         "current_release_date" : "2017-11-07T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Net-Ping-External-2008-7319",
-         "initial_release_date" : "2017-11-07T01:00:00",
+         "initial_release_date" : "2017-11-07T00:00:00",
          "revision_history" : [
             {
-               "date" : "2017-11-07T01:00:00",
+               "date" : "2017-11-07T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

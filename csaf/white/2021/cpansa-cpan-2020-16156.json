@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-CPAN-2020-16156 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CPAN-2020-16156.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-cpan-2020-16156.json"
          },
          {
             "category" : "external",
@@ -64,18 +64,18 @@
       ],
       "title" : "CPAN vulnerability",
       "tracking" : {
-         "current_release_date" : "2021-12-13T01:00:00",
+         "current_release_date" : "2021-12-13T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-CPAN-2020-16156",
-         "initial_release_date" : "2021-12-13T01:00:00",
+         "initial_release_date" : "2021-12-13T00:00:00",
          "revision_history" : [
             {
-               "date" : "2021-12-13T01:00:00",
+               "date" : "2021-12-13T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

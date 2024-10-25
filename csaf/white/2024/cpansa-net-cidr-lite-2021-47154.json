@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Net-CIDR-Lite-2021-47154 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-CIDR-Lite-2021-47154.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2024/cpansa-net-cidr-lite-2021-47154.json"
          },
          {
             "category" : "external",
@@ -56,18 +56,18 @@
       ],
       "title" : "Net-CIDR-Lite vulnerability",
       "tracking" : {
-         "current_release_date" : "2024-03-18T01:00:00",
+         "current_release_date" : "2024-03-18T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Net-CIDR-Lite-2021-47154",
-         "initial_release_date" : "2024-03-18T01:00:00",
+         "initial_release_date" : "2024-03-18T00:00:00",
          "revision_history" : [
             {
-               "date" : "2024-03-18T01:00:00",
+               "date" : "2024-03-18T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

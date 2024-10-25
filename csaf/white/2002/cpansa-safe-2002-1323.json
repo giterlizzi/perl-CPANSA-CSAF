@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Safe-2002-1323 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Safe-2002-1323.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2002/cpansa-safe-2002-1323.json"
          },
          {
             "category" : "external",
@@ -121,18 +121,18 @@
       ],
       "title" : "Safe vulnerability",
       "tracking" : {
-         "current_release_date" : "2002-12-11T01:00:00",
+         "current_release_date" : "2002-12-11T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Safe-2002-1323",
-         "initial_release_date" : "2002-12-11T01:00:00",
+         "initial_release_date" : "2002-12-11T00:00:00",
          "revision_history" : [
             {
-               "date" : "2002-12-11T01:00:00",
+               "date" : "2002-12-11T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

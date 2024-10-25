@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Digest-2011-3597 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Digest-2011-3597.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-digest-2011-3597.json"
          },
          {
             "category" : "external",
@@ -106,18 +106,18 @@
       ],
       "title" : "Digest vulnerability",
       "tracking" : {
-         "current_release_date" : "2012-01-13T01:00:00",
+         "current_release_date" : "2012-01-13T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Digest-2011-3597",
-         "initial_release_date" : "2012-01-13T01:00:00",
+         "initial_release_date" : "2012-01-13T00:00:00",
          "revision_history" : [
             {
-               "date" : "2012-01-13T01:00:00",
+               "date" : "2012-01-13T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

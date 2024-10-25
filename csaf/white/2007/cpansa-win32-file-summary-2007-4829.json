@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Win32-File-Summary-2007-4829 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Win32-File-Summary-2007-4829.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2007/cpansa-win32-file-summary-2007-4829.json"
          },
          {
             "category" : "external",
@@ -111,18 +111,18 @@
       ],
       "title" : "Win32-File-Summary vulnerability",
       "tracking" : {
-         "current_release_date" : "2007-11-02T01:00:00",
+         "current_release_date" : "2007-11-02T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Win32-File-Summary-2007-4829",
-         "initial_release_date" : "2007-11-02T01:00:00",
+         "initial_release_date" : "2007-11-02T00:00:00",
          "revision_history" : [
             {
-               "date" : "2007-11-02T01:00:00",
+               "date" : "2007-11-02T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-App-cpanminus-2024-45321 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-App-cpanminus-2024-45321.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2024/cpansa-app-cpanminus-2024-45321.json"
          },
          {
             "category" : "external",
@@ -51,18 +51,18 @@
       ],
       "title" : "App-cpanminus vulnerability",
       "tracking" : {
-         "current_release_date" : "2024-08-27T02:00:00",
+         "current_release_date" : "2024-08-27T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-App-cpanminus-2024-45321",
-         "initial_release_date" : "2024-08-27T02:00:00",
+         "initial_release_date" : "2024-08-27T00:00:00",
          "revision_history" : [
             {
-               "date" : "2024-08-27T02:00:00",
+               "date" : "2024-08-27T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

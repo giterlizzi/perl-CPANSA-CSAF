@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Net-SSLeay-2005-0106 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-SSLeay-2005-0106.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-net-ssleay-2005-0106.json"
          },
          {
             "category" : "external",
@@ -56,18 +56,18 @@
       ],
       "title" : "Net-SSLeay vulnerability",
       "tracking" : {
-         "current_release_date" : "2005-05-03T02:00:00",
+         "current_release_date" : "2005-05-03T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Net-SSLeay-2005-0106",
-         "initial_release_date" : "2005-05-03T02:00:00",
+         "initial_release_date" : "2005-05-03T00:00:00",
          "revision_history" : [
             {
-               "date" : "2005-05-03T02:00:00",
+               "date" : "2005-05-03T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

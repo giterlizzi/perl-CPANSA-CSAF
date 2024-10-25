@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-PAR-2011-5060 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-PAR-2011-5060.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-par-2011-5060.json"
          },
          {
             "category" : "external",
@@ -56,18 +56,18 @@
       ],
       "title" : "PAR vulnerability",
       "tracking" : {
-         "current_release_date" : "2012-01-13T01:00:00",
+         "current_release_date" : "2012-01-13T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-PAR-2011-5060",
-         "initial_release_date" : "2012-01-13T01:00:00",
+         "initial_release_date" : "2012-01-13T00:00:00",
          "revision_history" : [
             {
-               "date" : "2012-01-13T01:00:00",
+               "date" : "2012-01-13T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

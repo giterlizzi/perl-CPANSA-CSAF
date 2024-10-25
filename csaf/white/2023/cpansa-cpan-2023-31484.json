@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-CPAN-2023-31484 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-CPAN-2023-31484.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2023/cpansa-cpan-2023-31484.json"
          },
          {
             "category" : "external",
@@ -56,18 +56,18 @@
       ],
       "title" : "CPAN vulnerability",
       "tracking" : {
-         "current_release_date" : "2023-02-28T01:00:00",
+         "current_release_date" : "2023-02-28T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-CPAN-2023-31484",
-         "initial_release_date" : "2023-02-28T01:00:00",
+         "initial_release_date" : "2023-02-28T00:00:00",
          "revision_history" : [
             {
-               "date" : "2023-02-28T01:00:00",
+               "date" : "2023-02-28T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

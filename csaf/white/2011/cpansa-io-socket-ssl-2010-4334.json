@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-IO-Socket-SSL-2010-4334 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-IO-Socket-SSL-2010-4334.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-io-socket-ssl-2010-4334.json"
          },
          {
             "category" : "external",
@@ -91,18 +91,18 @@
       ],
       "title" : "IO-Socket-SSL vulnerability",
       "tracking" : {
-         "current_release_date" : "2011-01-14T01:00:00",
+         "current_release_date" : "2011-01-14T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-IO-Socket-SSL-2010-4334",
-         "initial_release_date" : "2011-01-14T01:00:00",
+         "initial_release_date" : "2011-01-14T00:00:00",
          "revision_history" : [
             {
-               "date" : "2011-01-14T01:00:00",
+               "date" : "2011-01-14T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

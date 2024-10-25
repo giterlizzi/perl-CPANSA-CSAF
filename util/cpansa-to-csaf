@@ -2,16 +2,17 @@
 
 use v5.34;
 
-use CSAF;
 use Carp;
-use Net::NVD;
 use CPAN::Audit::DB;
-use URI::PackageURL;
-use URI::VersionRange;
+use CSAF::Util qw(tracking_id_to_well_filename);
+use CSAF;
 use Log::Any::Adapter ('Stderr');
+use MetaCPAN::Client;
 use Mojo::File qw(curfile);
 use Mojo::Util qw(trim dumper);
-use MetaCPAN::Client;
+use Net::NVD;
+use URI::PackageURL;
+use URI::VersionRange;
 
 my $MAIN_MODULE_DIST_CACHE = {};
 my $MAIN_MODULE_SKIP       = {perl => 1, ActivePerl => 1, libapreq2 => 1};
@@ -31,13 +32,13 @@ my $mcpan        = MetaCPAN::Client->new();
 my $csaf_baseurl = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
 my $db           = CPAN::Audit::DB->db();
 
-DIST: foreach my $dist (keys %{$db->{dists}}) {
+DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
     if ($user_dist) {
-        next DIST if ($dist ne $user_dist);
+        next DIST if ($dist !~ /$user_dist/i);
     }
 
-    say STDERR "Process $dist";
+    say STDERR qq{Process "$dist"};
 
     foreach my $advisory (@{$db->{dists}{$dist}{advisories}}) {
 
@@ -56,8 +57,8 @@ DIST: foreach my $dist (keys %{$db->{dists}}) {
         my @affected_versions = ();
         my @fixed_versions    = ();
         my $title             = join ' ', $distribution, 'vulnerability';
-        my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d')->epoch; };
-        my $csaf_url          = join '/', $csaf_baseurl, "$advisory_id.json";
+        my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d') };
+        my $csaf_url = join '/', $csaf_baseurl, $published_date->year, tracking_id_to_well_filename($advisory_id);
 
         if ($advisory->{affected_versions}) {
             if (ref($advisory->{affected_versions}) ne 'ARRAY') {
@@ -249,7 +250,7 @@ DIST: foreach my $dist (keys %{$db->{dists}}) {
                 my $scores = {products => \@affected_packages};
 
                 if ($cvss2) {
-                    my $cvss2_base_score    = $cvss2->[0]->{cvssData}->{baseScore};
+                    my $cvss2_base_score    = sprintf('%.1f', $cvss2->[0]->{cvssData}->{baseScore});
                     my $cvss2_vector_string = $cvss2->[0]->{cvssData}->{vectorString};
                     my $cvss2_base_severity = $cvss2->[0]->{baseSeverity};
 
@@ -261,7 +262,7 @@ DIST: foreach my $dist (keys %{$db->{dists}}) {
                 }
 
                 if ($cvss30) {
-                    my $cvss30_base_score    = $cvss30->[0]->{cvssData}->{baseScore};
+                    my $cvss30_base_score    = sprintf('%.1f', $cvss30->[0]->{cvssData}->{baseScore});
                     my $cvss30_vector_string = $cvss30->[0]->{cvssData}->{vectorString};
                     my $cvss30_version       = $cvss30->[0]->{cvssData}->{version};
                     my $cvss30_base_severity = $cvss30->[0]->{cvssData}->{baseSeverity};
@@ -275,7 +276,7 @@ DIST: foreach my $dist (keys %{$db->{dists}}) {
                 }
 
                 if ($cvss31) {
-                    my $cvss31_base_score    = $cvss31->[0]->{cvssData}->{baseScore};
+                    my $cvss31_base_score    = sprintf('%.1f', $cvss31->[0]->{cvssData}->{baseScore});
                     my $cvss31_vector_string = $cvss31->[0]->{cvssData}->{vectorString};
                     my $cvss31_version       = $cvss31->[0]->{cvssData}->{version};
                     my $cvss31_base_severity = $cvss31->[0]->{cvssData}->{baseSeverity};

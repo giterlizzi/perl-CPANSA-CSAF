@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Parallel-ForkManager-2011-4115 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Parallel-ForkManager-2011-4115.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-parallel-forkmanager-2011-4115.json"
          },
          {
             "category" : "external",
@@ -54,18 +54,18 @@
       ],
       "title" : "Parallel-ForkManager vulnerability",
       "tracking" : {
-         "current_release_date" : "2020-01-31T01:00:00",
+         "current_release_date" : "2020-01-31T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Parallel-ForkManager-2011-4115",
-         "initial_release_date" : "2020-01-31T01:00:00",
+         "initial_release_date" : "2020-01-31T00:00:00",
          "revision_history" : [
             {
-               "date" : "2020-01-31T01:00:00",
+               "date" : "2020-01-31T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }
@@ -101,7 +101,7 @@
          "notes" : [
             {
                "category" : "description",
-               "text" : "Parallel::ForkManager module before 1.0.0 for Perl does not properly handle temporary files.",
+               "text" : null,
                "title" : "Vulnerability Description"
             }
          ],
@@ -109,25 +109,7 @@
             "known_affected" : [
                "CSAFPID-0001"
             ]
-         },
-         "scores" : [
-            {
-               "cvss_v2" : {
-                  "baseScore" : 6.4,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:P/A:P",
-                  "version" : "2.0"
-               },
-               "cvss_v3" : {
-                  "baseScore" : 7.5,
-                  "baseSeverity" : "HIGH",
-                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-                  "version" : "3.1"
-               },
-               "products" : [
-                  "CSAFPID-0001"
-               ]
-            }
-         ]
+         }
       }
    ]
 }

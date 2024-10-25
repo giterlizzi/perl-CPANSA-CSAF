@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-DBD-mysql-2016-03 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-mysql-2016-03.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2016/cpansa-dbd-mysql-2016-03.json"
          },
          {
             "category" : "external",
@@ -41,18 +41,18 @@
       ],
       "title" : "DBD-mysql vulnerability",
       "tracking" : {
-         "current_release_date" : "2016-11-16T01:00:00",
+         "current_release_date" : "2016-11-16T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-DBD-mysql-2016-03",
-         "initial_release_date" : "2016-11-16T01:00:00",
+         "initial_release_date" : "2016-11-16T00:00:00",
          "revision_history" : [
             {
-               "date" : "2016-11-16T01:00:00",
+               "date" : "2016-11-16T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

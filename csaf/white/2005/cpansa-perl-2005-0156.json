@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-perl-2005-0156 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2005-0156.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-perl-2005-0156.json"
          },
          {
             "category" : "external",
@@ -111,18 +111,18 @@
       ],
       "title" : "perl vulnerability",
       "tracking" : {
-         "current_release_date" : "2005-02-07T01:00:00",
+         "current_release_date" : "2005-02-07T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-perl-2005-0156",
-         "initial_release_date" : "2005-02-07T01:00:00",
+         "initial_release_date" : "2005-02-07T00:00:00",
          "revision_history" : [
             {
-               "date" : "2005-02-07T01:00:00",
+               "date" : "2005-02-07T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

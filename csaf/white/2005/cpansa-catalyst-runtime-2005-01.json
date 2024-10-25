@@ -26,23 +26,23 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Catalyst-Runtime-2005-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Catalyst-Runtime-2005-01.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-catalyst-runtime-2005-01.json"
          }
       ],
       "title" : "Catalyst-Runtime vulnerability",
       "tracking" : {
-         "current_release_date" : "2005-11-24T01:00:00",
+         "current_release_date" : "2005-11-24T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Catalyst-Runtime-2005-01",
-         "initial_release_date" : "2005-11-24T01:00:00",
+         "initial_release_date" : "2005-11-24T00:00:00",
          "revision_history" : [
             {
-               "date" : "2005-11-24T01:00:00",
+               "date" : "2005-11-24T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

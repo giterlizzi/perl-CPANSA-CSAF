@@ -26,23 +26,23 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Plack-2013-0131 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Plack-2013-0131.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2013/cpansa-plack-2013-0131.json"
          }
       ],
       "title" : "Plack vulnerability",
       "tracking" : {
-         "current_release_date" : "2013-01-31T01:00:00",
+         "current_release_date" : "2013-01-31T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Plack-2013-0131",
-         "initial_release_date" : "2013-01-31T01:00:00",
+         "initial_release_date" : "2013-01-31T00:00:00",
          "revision_history" : [
             {
-               "date" : "2013-01-31T01:00:00",
+               "date" : "2013-01-31T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

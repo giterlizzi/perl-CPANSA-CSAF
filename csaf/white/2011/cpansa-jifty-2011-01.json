@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Jifty-2011-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Jifty-2011-01.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-jifty-2011-01.json"
          },
          {
             "category" : "external",
@@ -36,18 +36,18 @@
       ],
       "title" : "Jifty vulnerability",
       "tracking" : {
-         "current_release_date" : "2011-03-17T01:00:00",
+         "current_release_date" : "2011-03-17T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Jifty-2011-01",
-         "initial_release_date" : "2011-03-17T01:00:00",
+         "initial_release_date" : "2011-03-17T00:00:00",
          "revision_history" : [
             {
-               "date" : "2011-03-17T01:00:00",
+               "date" : "2011-03-17T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

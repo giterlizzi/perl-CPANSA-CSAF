@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Net-Server-Coro-2011-0411 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Net-Server-Coro-2011-0411.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-net-server-coro-2011-0411.json"
          },
          {
             "category" : "external",
@@ -46,18 +46,18 @@
       ],
       "title" : "Net-Server-Coro vulnerability",
       "tracking" : {
-         "current_release_date" : "2011-03-16T01:00:00",
+         "current_release_date" : "2011-03-16T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Net-Server-Coro-2011-0411",
-         "initial_release_date" : "2011-03-16T01:00:00",
+         "initial_release_date" : "2011-03-16T00:00:00",
          "revision_history" : [
             {
-               "date" : "2011-03-16T01:00:00",
+               "date" : "2011-03-16T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-MT-2021-20837 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MT-2021-20837.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-mt-2021-20837.json"
          },
          {
             "category" : "external",
@@ -59,18 +59,18 @@
       ],
       "title" : "MT vulnerability",
       "tracking" : {
-         "current_release_date" : "2021-10-26T02:00:00",
+         "current_release_date" : "2021-10-26T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-MT-2021-20837",
-         "initial_release_date" : "2021-10-26T02:00:00",
+         "initial_release_date" : "2021-10-26T00:00:00",
          "revision_history" : [
             {
-               "date" : "2021-10-26T02:00:00",
+               "date" : "2021-10-26T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

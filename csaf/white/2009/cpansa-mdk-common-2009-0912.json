@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-MDK-Common-2009-0912 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MDK-Common-2009-0912.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2009/cpansa-mdk-common-2009-0912.json"
          },
          {
             "category" : "external",
@@ -56,18 +56,18 @@
       ],
       "title" : "MDK-Common vulnerability",
       "tracking" : {
-         "current_release_date" : "2009-03-16T01:00:00",
+         "current_release_date" : "2009-03-16T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-MDK-Common-2009-0912",
-         "initial_release_date" : "2009-03-16T01:00:00",
+         "initial_release_date" : "2009-03-16T00:00:00",
          "revision_history" : [
             {
-               "date" : "2009-03-16T01:00:00",
+               "date" : "2009-03-16T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

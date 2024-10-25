@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Spreadsheet-ParseExcel-2023-7101 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Spreadsheet-ParseExcel-2023-7101.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2023/cpansa-spreadsheet-parseexcel-2023-7101.json"
          },
          {
             "category" : "external",
@@ -71,18 +71,18 @@
       ],
       "title" : "Spreadsheet-ParseExcel vulnerability",
       "tracking" : {
-         "current_release_date" : "2023-12-24T01:00:00",
+         "current_release_date" : "2023-12-24T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Spreadsheet-ParseExcel-2023-7101",
-         "initial_release_date" : "2023-12-24T01:00:00",
+         "initial_release_date" : "2023-12-24T00:00:00",
          "revision_history" : [
             {
-               "date" : "2023-12-24T01:00:00",
+               "date" : "2023-12-24T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }
@@ -102,7 +102,7 @@
                      "name" : "Spreadsheet-ParseExcel less than 0.66",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel"
+                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel::Workbook"
                      }
                   }
                },
@@ -113,7 +113,7 @@
                      "name" : "Spreadsheet-ParseExcel greater than or equal 0.66",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel"
+                        "purl" : "pkg:cpan/Spreadsheet::ParseExcel::Workbook"
                      }
                   }
                }

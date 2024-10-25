@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Filesys-SmbClientParser-2008-3285 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Filesys-SmbClientParser-2008-3285.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2008/cpansa-filesys-smbclientparser-2008-3285.json"
          },
          {
             "category" : "external",
@@ -61,18 +61,18 @@
       ],
       "title" : "Filesys-SmbClientParser vulnerability",
       "tracking" : {
-         "current_release_date" : "2008-07-24T02:00:00",
+         "current_release_date" : "2008-07-24T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Filesys-SmbClientParser-2008-3285",
-         "initial_release_date" : "2008-07-24T02:00:00",
+         "initial_release_date" : "2008-07-24T00:00:00",
          "revision_history" : [
             {
-               "date" : "2008-07-24T02:00:00",
+               "date" : "2008-07-24T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

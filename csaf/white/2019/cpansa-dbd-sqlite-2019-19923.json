@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-DBD-SQLite-2019-19923 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-DBD-SQLite-2019-19923.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2019/cpansa-dbd-sqlite-2019-19923.json"
          },
          {
             "category" : "external",
@@ -89,18 +89,18 @@
       ],
       "title" : "DBD-SQLite vulnerability",
       "tracking" : {
-         "current_release_date" : "2019-12-24T01:00:00",
+         "current_release_date" : "2019-12-24T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-DBD-SQLite-2019-19923",
-         "initial_release_date" : "2019-12-24T01:00:00",
+         "initial_release_date" : "2019-12-24T00:00:00",
          "revision_history" : [
             {
-               "date" : "2019-12-24T01:00:00",
+               "date" : "2019-12-24T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

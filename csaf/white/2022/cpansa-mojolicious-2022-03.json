@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Mojolicious-2022-03 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Mojolicious-2022-03.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2022/cpansa-mojolicious-2022-03.json"
          },
          {
             "category" : "external",
@@ -46,18 +46,18 @@
       ],
       "title" : "Mojolicious vulnerability",
       "tracking" : {
-         "current_release_date" : "2022-12-10T01:00:00",
+         "current_release_date" : "2022-12-10T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Mojolicious-2022-03",
-         "initial_release_date" : "2022-12-10T01:00:00",
+         "initial_release_date" : "2022-12-10T00:00:00",
          "revision_history" : [
             {
-               "date" : "2022-12-10T01:00:00",
+               "date" : "2022-12-10T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

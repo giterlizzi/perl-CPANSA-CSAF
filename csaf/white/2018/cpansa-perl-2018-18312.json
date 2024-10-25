@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-perl-2018-18312 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-perl-2018-18312.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-perl-2018-18312.json"
          },
          {
             "category" : "external",
@@ -109,18 +109,18 @@
       ],
       "title" : "perl vulnerability",
       "tracking" : {
-         "current_release_date" : "2018-12-05T01:00:00",
+         "current_release_date" : "2018-12-05T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-perl-2018-18312",
-         "initial_release_date" : "2018-12-05T01:00:00",
+         "initial_release_date" : "2018-12-05T00:00:00",
          "revision_history" : [
             {
-               "date" : "2018-12-05T01:00:00",
+               "date" : "2018-12-05T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

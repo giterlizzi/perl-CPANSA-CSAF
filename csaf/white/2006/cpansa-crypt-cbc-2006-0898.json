@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-Crypt-CBC-2006-0898 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-Crypt-CBC-2006-0898.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2006/cpansa-crypt-cbc-2006-0898.json"
          },
          {
             "category" : "external",
@@ -111,18 +111,18 @@
       ],
       "title" : "Crypt-CBC vulnerability",
       "tracking" : {
-         "current_release_date" : "2006-02-25T01:00:00",
+         "current_release_date" : "2006-02-25T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-Crypt-CBC-2006-0898",
-         "initial_release_date" : "2006-02-25T01:00:00",
+         "initial_release_date" : "2006-02-25T00:00:00",
          "revision_history" : [
             {
-               "date" : "2006-02-25T01:00:00",
+               "date" : "2006-02-25T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

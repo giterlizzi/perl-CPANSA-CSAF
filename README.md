@@ -5,7 +5,6 @@
 
 Repository structure:
 
-- `cpan-security-advisory/*` - CPAN Security Advisory Database (briandfoy) - https://github.com/briandfoy/cpan-security-advisory
 - `csaf/white` - CPANSA CSAF directory
 	- `index.txt` - Index of CSAF documents
 	- `changes.csv` - List of changes

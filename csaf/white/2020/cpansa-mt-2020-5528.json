@@ -29,7 +29,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-MT-2020-5528 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-MT-2020-5528.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-mt-2020-5528.json"
          },
          {
             "category" : "external",
@@ -49,18 +49,18 @@
       ],
       "title" : "MT vulnerability",
       "tracking" : {
-         "current_release_date" : "2020-02-06T01:00:00",
+         "current_release_date" : "2020-02-06T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-MT-2020-5528",
-         "initial_release_date" : "2020-02-06T01:00:00",
+         "initial_release_date" : "2020-02-06T00:00:00",
          "revision_history" : [
             {
-               "date" : "2020-02-06T01:00:00",
+               "date" : "2020-02-06T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

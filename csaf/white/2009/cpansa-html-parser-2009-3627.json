@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-HTML-Parser-2009-3627 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-HTML-Parser-2009-3627.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2009/cpansa-html-parser-2009-3627.json"
          },
          {
             "category" : "external",
@@ -76,18 +76,18 @@
       ],
       "title" : "HTML-Parser vulnerability",
       "tracking" : {
-         "current_release_date" : "2009-10-29T01:00:00",
+         "current_release_date" : "2009-10-29T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-HTML-Parser-2009-3627",
-         "initial_release_date" : "2009-10-29T01:00:00",
+         "initial_release_date" : "2009-10-29T00:00:00",
          "revision_history" : [
             {
-               "date" : "2009-10-29T01:00:00",
+               "date" : "2009-10-29T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }

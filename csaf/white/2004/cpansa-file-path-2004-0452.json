@@ -26,7 +26,7 @@
          {
             "category" : "self",
             "summary" : "CPANSA-File-Path-2004-0452 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/CPANSA-File-Path-2004-0452.json"
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2004/cpansa-file-path-2004-0452.json"
          },
          {
             "category" : "external",
@@ -106,18 +106,18 @@
       ],
       "title" : "File-Path vulnerability",
       "tracking" : {
-         "current_release_date" : "2004-12-21T01:00:00",
+         "current_release_date" : "2004-12-21T00:00:00",
          "generator" : {
             "engine" : {
                "name" : "CSAF Perl Toolkit",
-               "version" : "0.22"
+               "version" : "0.24"
             }
          },
          "id" : "CPANSA-File-Path-2004-0452",
-         "initial_release_date" : "2004-12-21T01:00:00",
+         "initial_release_date" : "2004-12-21T00:00:00",
          "revision_history" : [
             {
-               "date" : "2004-12-21T01:00:00",
+               "date" : "2004-12-21T00:00:00",
                "number" : "1",
                "summary" : "First release"
             }
