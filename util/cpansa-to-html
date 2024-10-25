@@ -87,7 +87,6 @@ foreach (@csaf) {
     say STDERR "    Save in $csaf_html_file";
 
     $csaf_html_file->spew($csaf_html_content);
-    last;
 
 }
 
