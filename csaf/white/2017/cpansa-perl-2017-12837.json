@@ -78,6 +78,26 @@
          },
          {
             "category" : "external",
+            "summary" : "https://github.com/Perl/perl5/issues/16021",
+            "url" : "https://github.com/Perl/perl5/issues/16021"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5243delta",
+            "url" : "https://perldoc.perl.org/perl5243delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5261delta",
+            "url" : "https://perldoc.perl.org/perl5261delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5280delta",
+            "url" : "https://perldoc.perl.org/perl5280delta"
+         },
+         {
+            "category" : "external",
             "summary" : "CVE-2017-12837 (NVD)",
             "url" : "https://nvd.nist.gov/vuln/detail/CVE-2017-12837"
          }
@@ -110,9 +130,9 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/<5.26.1",
+                  "name" : "vers:cpan/>=5.18.0|<5.24.3",
                   "product" : {
-                     "name" : "perl less than 5.26.1",
+                     "name" : "perl greater than or equal 5.18.0 and less than 5.24.3",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
                         "purl" : "pkg:generic/perl"
@@ -121,10 +141,21 @@
                },
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5.28.1",
+                  "name" : "vers:cpan/==5.26.0",
                   "product" : {
-                     "name" : "perl greater than or equal 5.28.1",
+                     "name" : "perl equal =5.26.0",
                      "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:generic/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.26.1",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.26.1",
+                     "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
                         "purl" : "pkg:generic/perl"
                      }
@@ -152,16 +183,17 @@
          ],
          "product_status" : {
             "fixed" : [
-               "CSAFPID-0002"
+               "CSAFPID-0003"
             ],
             "known_affected" : [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002"
             ]
          },
          "scores" : [
             {
                "cvss_v2" : {
-                  "baseScore" : 5,
+                  "baseScore" : 5.0,
                   "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
                   "version" : "2.0"
                },
@@ -172,7 +204,8 @@
                   "version" : "3.0"
                },
                "products" : [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
                ]
             }
          ]

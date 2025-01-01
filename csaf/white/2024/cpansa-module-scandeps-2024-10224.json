@@ -1,0 +1,153 @@
+{
+   "document" : {
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "Qualys discovered that if unsanitized input was used with the library Modules::ScanDeps, before version 1.36 a local attacker could possibly execute arbitrary shell commands by open()ing a \"pesky pipe\" (such as passing \"commands|\" as a filename) or by passing arbitrary strings to eval().",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Module-ScanDeps-2024-10224 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2024/cpansa-module-scandeps-2024-10224.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/rschupp/Module-ScanDeps/security/advisories/GHSA-g597-359q-v529",
+            "url" : "https://github.com/rschupp/Module-ScanDeps/security/advisories/GHSA-g597-359q-v529"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.cve.org/CVERecord?id=CVE-2024-10224",
+            "url" : "https://www.cve.org/CVERecord?id=CVE-2024-10224"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://www.qualys.com/2024/11/19/needrestart/needrestart.txt",
+            "url" : "https://www.qualys.com/2024/11/19/needrestart/needrestart.txt"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://lists.debian.org/debian-lts-announce/2024/11/msg00015.html",
+            "url" : "https://lists.debian.org/debian-lts-announce/2024/11/msg00015.html"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://ubuntu.com/security/CVE-2024-10224",
+            "url" : "https://ubuntu.com/security/CVE-2024-10224"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2024-10224 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2024-10224"
+         }
+      ],
+      "title" : "Module-ScanDeps vulnerability",
+      "tracking" : {
+         "current_release_date" : "2024-11-19T00:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.24"
+            }
+         },
+         "id" : "CPANSA-Module-ScanDeps-2024-10224",
+         "initial_release_date" : "2024-11-19T00:00:00",
+         "revision_history" : [
+            {
+               "date" : "2024-11-19T00:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<1.36",
+                  "product" : {
+                     "name" : "Module-ScanDeps less than 1.36",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Module::ScanDeps"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=1.36",
+                  "product" : {
+                     "name" : "Module-ScanDeps greater than or equal 1.36",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Module::ScanDeps"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Module-ScanDeps"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2024-10224",
+         "cwe" : {
+            "id" : "CWE-78",
+            "name" : "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "Qualys discovered that if unsanitized input was used with the library Modules::ScanDeps, before version 1.36 a local attacker could possibly execute arbitrary shell commands by open()ing a \"pesky pipe\" (such as passing \"commands|\" as a filename) or by passing arbitrary strings to eval().",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 5.3,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

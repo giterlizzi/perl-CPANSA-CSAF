@@ -168,7 +168,7 @@
          "scores" : [
             {
                "cvss_v2" : {
-                  "baseScore" : 4,
+                  "baseScore" : 4.0,
                   "vectorString" : "AV:N/AC:H/Au:N/C:P/I:P/A:N",
                   "version" : "2.0"
                },

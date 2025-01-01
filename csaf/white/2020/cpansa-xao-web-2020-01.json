@@ -1,6 +1,6 @@
 {
    "document" : {
-      "category" : "csaf_informational_advisory",
+      "category" : "csaf_security_advisory",
       "csaf_version" : "2.0",
       "distribution" : {
          "tlp" : {
@@ -37,6 +37,11 @@
             "category" : "external",
             "summary" : "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes",
             "url" : "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2020-36827 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-36827"
          }
       ],
       "title" : "XAO-Web vulnerability",
@@ -92,5 +97,25 @@
             "name" : "XAO-Web"
          }
       ]
-   }
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2020-36827",
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The XAO::Web module before 1.84 for Perl mishandles < and > characters in JSON output during use of json-embed in Web::Action.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
 }

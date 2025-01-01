@@ -1,0 +1,141 @@
+{
+   "document" : {
+      "aggregate_severity" : {
+         "text" : "moderate"
+      },
+      "category" : "csaf_security_advisory",
+      "csaf_version" : "2.0",
+      "distribution" : {
+         "tlp" : {
+            "label" : "WHITE",
+            "url" : "https://www.first.org/tlp/"
+         }
+      },
+      "lang" : "en",
+      "notes" : [
+         {
+            "category" : "description",
+            "text" : "\"invalid next size\" backtrace on use of trim on certain images",
+            "title" : "Vulnerability Description"
+         }
+      ],
+      "publisher" : {
+         "category" : "other",
+         "contact_details" : "gdt@cpan.org",
+         "name" : "giterlizzi",
+         "namespace" : "https://github.com/giterlizzi/"
+      },
+      "references" : [
+         {
+            "category" : "self",
+            "summary" : "CPANSA-Imager-2024-001 JSON",
+            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2024/cpansa-imager-2024-001.json"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://metacpan.org/dist/Imager/changes",
+            "url" : "https://metacpan.org/dist/Imager/changes"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://github.com/tonycoz/imager/issues/534",
+            "url" : "https://github.com/tonycoz/imager/issues/534"
+         },
+         {
+            "category" : "external",
+            "summary" : "CVE-2024-53901 (NVD)",
+            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2024-53901"
+         }
+      ],
+      "title" : "Imager vulnerability",
+      "tracking" : {
+         "current_release_date" : "2024-11-17T00:00:00",
+         "generator" : {
+            "engine" : {
+               "name" : "CSAF Perl Toolkit",
+               "version" : "0.24"
+            }
+         },
+         "id" : "CPANSA-Imager-2024-001",
+         "initial_release_date" : "2024-11-17T00:00:00",
+         "revision_history" : [
+            {
+               "date" : "2024-11-17T00:00:00",
+               "number" : "1",
+               "summary" : "First release"
+            }
+         ],
+         "status" : "final",
+         "version" : "1"
+      }
+   },
+   "product_tree" : {
+      "branches" : [
+         {
+            "branches" : [
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/<=1.024",
+                  "product" : {
+                     "name" : "Imager less than or equal 1.024",
+                     "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Imager"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>1.024",
+                  "product" : {
+                     "name" : "Imager greater than 1.024",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:cpan/Imager"
+                     }
+                  }
+               }
+            ],
+            "category" : "product_name",
+            "name" : "Imager"
+         }
+      ]
+   },
+   "vulnerabilities" : [
+      {
+         "cve" : "CVE-2024-53901",
+         "cwe" : {
+            "id" : "CWE-787",
+            "name" : "Out-of-bounds Write"
+         },
+         "notes" : [
+            {
+               "category" : "description",
+               "text" : "The Imager package before 1.025 for Perl has a heap-based buffer overflow leading to denial of service, or possibly unspecified other impact, when the trim() method is called on a crafted input image.",
+               "title" : "Vulnerability Description"
+            }
+         ],
+         "product_status" : {
+            "fixed" : [
+               "CSAFPID-0002"
+            ],
+            "known_affected" : [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores" : [
+            {
+               "cvss_v3" : {
+                  "baseScore" : 5.5,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                  "version" : "3.1"
+               },
+               "products" : [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

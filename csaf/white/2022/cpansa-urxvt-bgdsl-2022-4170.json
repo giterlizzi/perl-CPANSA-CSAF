@@ -101,6 +101,10 @@
    "vulnerabilities" : [
       {
          "cve" : "CVE-2022-4170",
+         "cwe" : {
+            "id" : "CWE-74",
+            "name" : "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
+         },
          "notes" : [
             {
                "category" : "description",

@@ -30,6 +30,31 @@
          },
          {
             "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5342delta",
+            "url" : "https://perldoc.perl.org/perl5342delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5363delta",
+            "url" : "https://perldoc.perl.org/perl5363delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5381delta",
+            "url" : "https://perldoc.perl.org/perl5381delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5382delta",
+            "url" : "https://perldoc.perl.org/perl5382delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5400delta",
+            "url" : "https://perldoc.perl.org/perl5400delta"
+         },
+         {
+            "category" : "external",
             "summary" : "CVE-2023-47038 (NVD)",
             "url" : "https://nvd.nist.gov/vuln/detail/CVE-2023-47038"
          }
@@ -84,9 +109,9 @@
                },
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5.38.0|<5.38.2",
+                  "name" : "vers:cpan/==5.38.0",
                   "product" : {
-                     "name" : "perl greater than or equal 5.38.0 and less than 5.38.2",
+                     "name" : "perl equal =5.38.0",
                      "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
                         "purl" : "pkg:generic/perl"
@@ -117,7 +142,7 @@
                },
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/5.38.2",
+                  "name" : "vers:cpan/5.38.1",
                   "product" : {
                      "name" : "perl ",
                      "product_id" : "CSAFPID-0006",
@@ -136,8 +161,8 @@
       {
          "cve" : "CVE-2023-47038",
          "cwe" : {
-            "id" : "CWE-787",
-            "name" : "Out-of-bounds Write"
+            "id" : "CWE-122",
+            "name" : "Heap-based Buffer Overflow"
          },
          "notes" : [
             {
@@ -161,9 +186,9 @@
          "scores" : [
             {
                "cvss_v3" : {
-                  "baseScore" : 7.8,
+                  "baseScore" : 7.0,
                   "baseSeverity" : "HIGH",
-                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "vectorString" : "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
                   "version" : "3.1"
                },
                "products" : [

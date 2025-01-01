@@ -135,8 +135,8 @@
       {
          "cve" : "CVE-2020-14392",
          "cwe" : {
-            "id" : "CWE-119",
-            "name" : "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+            "id" : "CWE-822",
+            "name" : "Untrusted Pointer Dereference"
          },
          "notes" : [
             {

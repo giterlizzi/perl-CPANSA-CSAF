@@ -117,9 +117,9 @@
                   "version" : "2.0"
                },
                "cvss_v3" : {
-                  "baseScore" : 7.5,
-                  "baseSeverity" : "HIGH",
-                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "baseScore" : 5.4,
+                  "baseSeverity" : "MEDIUM",
+                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L",
                   "version" : "3.0"
                },
                "products" : [

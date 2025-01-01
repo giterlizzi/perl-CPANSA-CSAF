@@ -105,8 +105,8 @@
       {
          "cve" : "CVE-2020-14393",
          "cwe" : {
-            "id" : "CWE-787",
-            "name" : "Out-of-bounds Write"
+            "id" : "CWE-121",
+            "name" : "Stack-based Buffer Overflow"
          },
          "notes" : [
             {

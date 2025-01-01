@@ -129,7 +129,7 @@
          "scores" : [
             {
                "cvss_v2" : {
-                  "baseScore" : 4,
+                  "baseScore" : 4.0,
                   "vectorString" : "AV:N/AC:L/Au:S/C:N/I:N/A:P",
                   "version" : "2.0"
                },

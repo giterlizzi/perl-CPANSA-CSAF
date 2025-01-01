@@ -30,6 +30,36 @@
          },
          {
             "category" : "external",
+            "summary" : "https://github.com/ycdxsb/WindowsPrivilegeEscalation",
+            "url" : "https://github.com/ycdxsb/WindowsPrivilegeEscalation"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5342delta",
+            "url" : "https://perldoc.perl.org/perl5342delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5363delta",
+            "url" : "https://perldoc.perl.org/perl5363delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5381delta",
+            "url" : "https://perldoc.perl.org/perl5381delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5382delta",
+            "url" : "https://perldoc.perl.org/perl5382delta"
+         },
+         {
+            "category" : "external",
+            "summary" : "https://perldoc.perl.org/perl5400delta",
+            "url" : "https://perldoc.perl.org/perl5400delta"
+         },
+         {
+            "category" : "external",
             "summary" : "CVE-2023-47039 (NVD)",
             "url" : "https://nvd.nist.gov/vuln/detail/CVE-2023-47039"
          }
@@ -62,10 +92,32 @@
             "branches" : [
                {
                   "category" : "product_version_range",
-                  "name" : "vers:cpan/<=5.38.0",
+                  "name" : "vers:cpan/<5.34.2",
                   "product" : {
-                     "name" : "perl less than or equal 5.38.0",
+                     "name" : "perl less than 5.34.2",
                      "product_id" : "CSAFPID-0001",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:generic/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/>=5.36.0|<5.36.3",
+                  "product" : {
+                     "name" : "perl greater than or equal 5.36.0 and less than 5.36.3",
+                     "product_id" : "CSAFPID-0002",
+                     "product_identification_helper" : {
+                        "purl" : "pkg:generic/perl"
+                     }
+                  }
+               },
+               {
+                  "category" : "product_version_range",
+                  "name" : "vers:cpan/==5.38.0",
+                  "product" : {
+                     "name" : "perl equal =5.38.0",
+                     "product_id" : "CSAFPID-0003",
                      "product_identification_helper" : {
                         "purl" : "pkg:generic/perl"
                      }
@@ -81,8 +133,8 @@
       {
          "cve" : "CVE-2023-47039",
          "cwe" : {
-            "id" : "CWE-787",
-            "name" : "Out-of-bounds Write"
+            "id" : "CWE-122",
+            "name" : "Heap-based Buffer Overflow"
          },
          "notes" : [
             {
@@ -93,7 +145,9 @@
          ],
          "product_status" : {
             "known_affected" : [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002",
+               "CSAFPID-0003"
             ]
          },
          "scores" : [
@@ -105,7 +159,9 @@
                   "version" : "3.1"
                },
                "products" : [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002",
+                  "CSAFPID-0003"
                ]
             }
          ]

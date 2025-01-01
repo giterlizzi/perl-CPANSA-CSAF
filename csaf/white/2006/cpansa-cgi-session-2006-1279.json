@@ -97,7 +97,7 @@
                      "name" : "CGI-Session less than 4.10",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CGI::Session"
+                        "purl" : "pkg:generic/CGI-Session"
                      }
                   }
                }
@@ -125,7 +125,7 @@
          "scores" : [
             {
                "cvss_v2" : {
-                  "baseScore" : 5,
+                  "baseScore" : 5.0,
                   "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
                   "version" : "2.0"
                },

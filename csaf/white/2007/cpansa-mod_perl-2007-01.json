@@ -72,7 +72,7 @@
                      "name" : "mod_perl less than 1.30",
                      "product_id" : "CSAFPID-0001",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/mod_perl2"
+                        "purl" : "pkg:cpan/mod_perl"
                      }
                   }
                },
@@ -83,7 +83,7 @@
                      "name" : "mod_perl greater than or equal 1.30",
                      "product_id" : "CSAFPID-0002",
                      "product_identification_helper" : {
-                        "purl" : "pkg:cpan/mod_perl2"
+                        "purl" : "pkg:cpan/mod_perl"
                      }
                   }
                }
@@ -118,7 +118,7 @@
          "scores" : [
             {
                "cvss_v2" : {
-                  "baseScore" : 5,
+                  "baseScore" : 5.0,
                   "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
                   "version" : "2.0"
                },

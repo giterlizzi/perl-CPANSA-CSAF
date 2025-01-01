@@ -6,6 +6,8 @@
 2024/cpansa-mozilla-ca-2024-39689.json
 2024/cpansa-mojolicious-plugin-lazyimage-2024-38526.json
 2024/cpansa-mojo-dom-role-analyzer-2024-38526.json
+2024/cpansa-module-scandeps-2024-10224.json
+2024/cpansa-imager-2024-001.json
 2024/cpansa-email-mime-2024-4140.json
 2024/cpansa-crypt-openssl-rsa-2024-2467.json
 2024/cpansa-app-cpanminus-2024-45321.json
@@ -48,6 +50,7 @@
 2021/cpansa-image-exiftool-2021-22204.json
 2021/cpansa-encode-2021-01.json
 2021/cpansa-data-validate-ip-2021-01.json
+2021/cpansa-crypt-cbc-2021-0001.json
 2021/cpansa-cpan-checksums-2020-16155.json
 2021/cpansa-cpan-2020-16156.json
 2020/cpansa-xao-web-2020-01.json
@@ -190,6 +193,7 @@
 2016/cpansa-image-info-2016-01.json
 2016/cpansa-http-tiny-2016-1238.json
 2016/cpansa-file-keepass-2016-01.json
+2016/cpansa-extutils-parsexs-2016-1238.json
 2016/cpansa-extutils-makemaker-2016-01.json
 2016/cpansa-encode-2016-01.json
 2016/cpansa-dpkg-2016-1238.json
@@ -389,6 +393,7 @@
 2007/cpansa-archive-tar-2007-4829.json
 2007/cpansa-apache-authcas-2007-01.json
 2006/cpansa-jifty-2006-01.json
+2006/cpansa-imager-2006-0053.json
 2006/cpansa-gpib-2006-1565.json
 2006/cpansa-crypt-cbc-2006-0898.json
 2006/cpansa-cgi-session-2006-1279.json
