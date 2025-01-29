@@ -1,156 +1,150 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Movable Type Pro, Open Source, and Advanced before 5.2.12 and Pro and Advanced 6.0.x before 6.0.7 does not properly use the Perl Storable::thaw function, which allows remote attackers to include and execute arbitrary local Perl files and possibly execute arbitrary code via unspecified vectors.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Movable Type Pro, Open Source, and Advanced before 5.2.12 and Pro and Advanced 6.0.x before 6.0.7 does not properly use the Perl Storable::thaw function, which allows remote attackers to include and execute arbitrary local Perl files and possibly execute arbitrary code via unspecified vectors.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-MT-2015-1592 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2015/cpansa-mt-2015-1592.json"
+            "category": "self",
+            "summary": "CPANSA-MT-2015-1592 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2015/cpansa-mt-2015-1592.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://movabletype.org/news/2015/02/movable_type_607_and_5212_released_to_close_security_vulnera.html",
-            "url" : "https://movabletype.org/news/2015/02/movable_type_607_and_5212_released_to_close_security_vulnera.html"
+            "category": "external",
+            "summary": "https://movabletype.org/news/2015/02/movable_type_607_and_5212_released_to_close_security_vulnera.html",
+            "url": "https://movabletype.org/news/2015/02/movable_type_607_and_5212_released_to_close_security_vulnera.html"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.securityfocus.com/bid/72606",
-            "url" : "http://www.securityfocus.com/bid/72606"
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/72606",
+            "url": "http://www.securityfocus.com/bid/72606"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.openwall.com/lists/oss-security/2015/02/12/17",
-            "url" : "http://www.openwall.com/lists/oss-security/2015/02/12/17"
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2015/02/12/17",
+            "url": "http://www.openwall.com/lists/oss-security/2015/02/12/17"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.openwall.com/lists/oss-security/2015/02/12/2",
-            "url" : "http://www.openwall.com/lists/oss-security/2015/02/12/2"
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2015/02/12/2",
+            "url": "http://www.openwall.com/lists/oss-security/2015/02/12/2"
          },
          {
-            "category" : "external",
-            "summary" : "https://www.debian.org/security/2015/dsa-3183",
-            "url" : "https://www.debian.org/security/2015/dsa-3183"
+            "category": "external",
+            "summary": "https://www.debian.org/security/2015/dsa-3183",
+            "url": "https://www.debian.org/security/2015/dsa-3183"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.securitytracker.com/id/1031777",
-            "url" : "http://www.securitytracker.com/id/1031777"
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id/1031777",
+            "url": "http://www.securitytracker.com/id/1031777"
          },
          {
-            "category" : "external",
-            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/100912",
-            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/100912"
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/100912",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/100912"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2015-1592 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2015-1592"
+            "category": "external",
+            "summary": "CVE-2015-1592 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1592"
          }
       ],
-      "title" : "MT vulnerability",
-      "tracking" : {
-         "current_release_date" : "2015-02-19T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "MT vulnerability",
+      "tracking": {
+         "current_release_date": "2015-02-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-MT-2015-1592",
-         "initial_release_date" : "2015-02-19T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-MT-2015-1592",
+         "initial_release_date": "2015-02-19T00:00:00",
+         "revision_history": [
             {
-               "date" : "2015-02-19T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2015-02-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<5.2.12",
-                  "product" : {
-                     "name" : "MT less than 5.2.12",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<5.2.12",
+                  "product": {
+                     "name": "MT less than 5.2.12",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=6.0.0|<=6.0.7",
-                  "product" : {
-                     "name" : "MT greater than or equal 6.0.0 and less than or equal 6.0.7",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.0.0|<=6.0.7",
+                  "product": {
+                     "name": "MT greater than or equal 6.0.0 and less than or equal 6.0.7",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "MT"
+            "category": "product_name",
+            "name": "MT"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2015-1592",
-         "cwe" : {
-            "id" : "CWE-74",
-            "name" : "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
+         "cve": "CVE-2015-1592",
+         "cwe": {
+            "id": "CWE-74",
+            "name": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Movable Type Pro, Open Source, and Advanced before 5.2.12 and Pro and Advanced 6.0.x before 6.0.7 does not properly use the Perl Storable::thaw function, which allows remote attackers to include and execute arbitrary local Perl files and possibly execute arbitrary code via unspecified vectors.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Movable Type Pro, Open Source, and Advanced before 5.2.12 and Pro and Advanced 6.0.x before 6.0.7 does not properly use the Perl Storable::thaw function, which allows remote attackers to include and execute arbitrary local Perl files and possibly execute arbitrary code via unspecified vectors.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001",
                "CSAFPID-0002"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 7.5,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001",
                   "CSAFPID-0002"
                ]

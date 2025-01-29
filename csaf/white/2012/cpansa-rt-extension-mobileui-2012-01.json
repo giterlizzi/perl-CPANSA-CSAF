@@ -1,128 +1,122 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Multiple cross-site scripting (XSS) vulnerabilities in the topic administration page.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Multiple cross-site scripting (XSS) vulnerabilities in the topic administration page.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-RT-Extension-MobileUI-2012-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-rt-extension-mobileui-2012-01.json"
+            "category": "self",
+            "summary": "CPANSA-RT-Extension-MobileUI-2012-01 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-rt-extension-mobileui-2012-01.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://metacpan.org/changes/distribution/RT-Extension-MobileUI",
-            "url" : "https://metacpan.org/changes/distribution/RT-Extension-MobileUI"
+            "category": "external",
+            "summary": "https://metacpan.org/changes/distribution/RT-Extension-MobileUI",
+            "url": "https://metacpan.org/changes/distribution/RT-Extension-MobileUI"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2012-2769 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-2769"
+            "category": "external",
+            "summary": "CVE-2012-2769 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-2769"
          }
       ],
-      "title" : "RT-Extension-MobileUI vulnerability",
-      "tracking" : {
-         "current_release_date" : "2012-05-18T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "RT-Extension-MobileUI vulnerability",
+      "tracking": {
+         "current_release_date": "2012-05-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-RT-Extension-MobileUI-2012-01",
-         "initial_release_date" : "2012-05-18T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-RT-Extension-MobileUI-2012-01",
+         "initial_release_date": "2012-05-18T00:00:00",
+         "revision_history": [
             {
-               "date" : "2012-05-18T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2012-05-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.02",
-                  "product" : {
-                     "name" : "RT-Extension-MobileUI less than 1.02",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RT::Extension::MobileUI"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.02",
+                  "product": {
+                     "name": "RT-Extension-MobileUI less than 1.02",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.02",
-                  "product" : {
-                     "name" : "RT-Extension-MobileUI greater than or equal 1.02",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/RT::Extension::MobileUI"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.02",
+                  "product": {
+                     "name": "RT-Extension-MobileUI greater than or equal 1.02",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "RT-Extension-MobileUI"
+            "category": "product_name",
+            "name": "RT-Extension-MobileUI"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2012-2769",
-         "cwe" : {
-            "id" : "CWE-79",
-            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         "cve": "CVE-2012-2769",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Multiple cross-site scripting (XSS) vulnerabilities in the topic administration page in the Extension::MobileUI extension before 1.02 for Best Practical Solutions RT 3.8.x and in Best Practical Solutions RT before 4.0.6 allow remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Multiple cross-site scripting (XSS) vulnerabilities in the topic administration page in the Extension::MobileUI extension before 1.02 for Best Practical Solutions RT 3.8.x and in Best Practical Solutions RT before 4.0.6 allow remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 4.3,
-                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

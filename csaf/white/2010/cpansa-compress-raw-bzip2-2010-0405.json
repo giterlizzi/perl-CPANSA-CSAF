@@ -1,128 +1,122 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Integer overflow in the BZ2_decompress function in decompress.c in bzip2 and libbzip2 before 1.0.6 allows context-dependent attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted compressed file.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Integer overflow in the BZ2_decompress function in decompress.c in bzip2 and libbzip2 before 1.0.6 allows context-dependent attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted compressed file.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-Compress-Raw-Bzip2-2010-0405 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-compress-raw-bzip2-2010-0405.json"
+            "category": "self",
+            "summary": "CPANSA-Compress-Raw-Bzip2-2010-0405 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-compress-raw-bzip2-2010-0405.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://metacpan.org/changes/distribution/Compress-Raw-Bzip2",
-            "url" : "https://metacpan.org/changes/distribution/Compress-Raw-Bzip2"
+            "category": "external",
+            "summary": "https://metacpan.org/changes/distribution/Compress-Raw-Bzip2",
+            "url": "https://metacpan.org/changes/distribution/Compress-Raw-Bzip2"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2010-0405 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-0405"
+            "category": "external",
+            "summary": "CVE-2010-0405 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0405"
          }
       ],
-      "title" : "Compress-Raw-Bzip2 vulnerability",
-      "tracking" : {
-         "current_release_date" : "2010-01-27T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "Compress-Raw-Bzip2 vulnerability",
+      "tracking": {
+         "current_release_date": "2010-01-27T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Compress-Raw-Bzip2-2010-0405",
-         "initial_release_date" : "2010-01-27T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Compress-Raw-Bzip2-2010-0405",
+         "initial_release_date": "2010-01-27T00:00:00",
+         "revision_history": [
             {
-               "date" : "2010-01-27T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2010-01-27T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<2.031",
-                  "product" : {
-                     "name" : "Compress-Raw-Bzip2 less than 2.031",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Compress::Raw::Bzip2"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.031",
+                  "product": {
+                     "name": "Compress-Raw-Bzip2 less than 2.031",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=2.031",
-                  "product" : {
-                     "name" : "Compress-Raw-Bzip2 greater than or equal 2.031",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Compress::Raw::Bzip2"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.031",
+                  "product": {
+                     "name": "Compress-Raw-Bzip2 greater than or equal 2.031",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Compress-Raw-Bzip2"
+            "category": "product_name",
+            "name": "Compress-Raw-Bzip2"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2010-0405",
-         "cwe" : {
-            "id" : "CWE-189",
-            "name" : "Numeric Errors"
+         "cve": "CVE-2010-0405",
+         "cwe": {
+            "id": "CWE-189",
+            "name": "Numeric Errors"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Integer overflow in the BZ2_decompress function in decompress.c in bzip2 and libbzip2 before 1.0.6 allows context-dependent attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted compressed file.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Integer overflow in the BZ2_decompress function in decompress.c in bzip2 and libbzip2 before 1.0.6 allows context-dependent attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted compressed file.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 5.1,
-                  "vectorString" : "AV:N/AC:H/Au:N/C:P/I:P/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 5.1,
+                  "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

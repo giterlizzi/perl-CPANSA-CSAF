@@ -1,125 +1,122 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "An interaction between the Perl MD5 module (perl-Digest-MD5) and Perl could produce incorrect MD5 checksums for UTF-8 data, which could prevent a system from properly verifying the integrity of the data.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "An interaction between the Perl MD5 module (perl-Digest-MD5) and Perl could produce incorrect MD5 checksums for UTF-8 data, which could prevent a system from properly verifying the integrity of the data.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-Digest-MD5-2002-0703 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2002/cpansa-digest-md5-2002-0703.json"
+            "category": "self",
+            "summary": "CPANSA-Digest-MD5-2002-0703 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2002/cpansa-digest-md5-2002-0703.json"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-035.php",
-            "url" : "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-035.php"
+            "category": "external",
+            "summary": "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-035.php",
+            "url": "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-035.php"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.iss.net/security_center/static/9051.php",
-            "url" : "http://www.iss.net/security_center/static/9051.php"
+            "category": "external",
+            "summary": "http://www.iss.net/security_center/static/9051.php",
+            "url": "http://www.iss.net/security_center/static/9051.php"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.securityfocus.com/bid/4716",
-            "url" : "http://www.securityfocus.com/bid/4716"
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/4716",
+            "url": "http://www.securityfocus.com/bid/4716"
          },
          {
-            "category" : "external",
-            "summary" : "http://rhn.redhat.com/errata/RHSA-2002-081.html",
-            "url" : "http://rhn.redhat.com/errata/RHSA-2002-081.html"
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2002-081.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2002-081.html"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2002-0703 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2002-0703"
+            "category": "external",
+            "summary": "CVE-2002-0703 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0703"
          }
       ],
-      "title" : "Digest-MD5 vulnerability",
-      "tracking" : {
-         "current_release_date" : "2002-07-26T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "Digest-MD5 vulnerability",
+      "tracking": {
+         "current_release_date": "2002-07-26T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Digest-MD5-2002-0703",
-         "initial_release_date" : "2002-07-26T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Digest-MD5-2002-0703",
+         "initial_release_date": "2002-07-26T00:00:00",
+         "revision_history": [
             {
-               "date" : "2002-07-26T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2002-07-26T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<2.25",
-                  "product" : {
-                     "name" : "Digest-MD5 less than 2.25",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Digest::MD5"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.25",
+                  "product": {
+                     "name": "Digest-MD5 less than 2.25",
+                     "product_id": "CSAFPID-0001"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Digest-MD5"
+            "category": "product_name",
+            "name": "Digest-MD5"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2002-0703",
-         "notes" : [
+         "cve": "CVE-2002-0703",
+         "notes": [
             {
-               "category" : "description",
-               "text" : "An interaction between the Perl MD5 module (perl-Digest-MD5) and Perl could produce incorrect MD5 checksums for UTF-8 data, which could prevent a system from properly verifying the integrity of the data.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "An interaction between the Perl MD5 module (perl-Digest-MD5) and Perl could produce incorrect MD5 checksums for UTF-8 data, which could prevent a system from properly verifying the integrity of the data.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 7.5,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

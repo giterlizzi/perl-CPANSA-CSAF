@@ -1,98 +1,92 @@
 {
-   "document" : {
-      "aggregate_severity" : {
-         "text" : "high"
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
       },
-      "category" : "csaf_informational_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+      "category": "csaf_informational_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "SQL injection.",
-            "title" : "Vulnerability Description"
-         }
-      ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
-      },
-      "references" : [
-         {
-            "category" : "self",
-            "summary" : "CPANSA-DBD-mysqlPP-2011-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-dbd-mysqlpp-2011-01.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://metacpan.org/changes/distribution/DBD-mysqlPP",
-            "url" : "https://metacpan.org/changes/distribution/DBD-mysqlPP"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://jvn.jp/en/jp/JVN51216285/index.html",
-            "url" : "https://jvn.jp/en/jp/JVN51216285/index.html"
+            "category": "description",
+            "text": "SQL injection.",
+            "title": "Vulnerability Description"
          }
       ],
-      "title" : "DBD-mysqlPP vulnerability",
-      "tracking" : {
-         "current_release_date" : "2011-10-14T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBD-mysqlPP-2011-01 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-dbd-mysqlpp-2011-01.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/changes/distribution/DBD-mysqlPP",
+            "url": "https://metacpan.org/changes/distribution/DBD-mysqlPP"
+         },
+         {
+            "category": "external",
+            "summary": "https://jvn.jp/en/jp/JVN51216285/index.html",
+            "url": "https://jvn.jp/en/jp/JVN51216285/index.html"
+         }
+      ],
+      "title": "DBD-mysqlPP vulnerability",
+      "tracking": {
+         "current_release_date": "2011-10-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-DBD-mysqlPP-2011-01",
-         "initial_release_date" : "2011-10-14T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-DBD-mysqlPP-2011-01",
+         "initial_release_date": "2011-10-14T00:00:00",
+         "revision_history": [
             {
-               "date" : "2011-10-14T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2011-10-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<0.93",
-                  "product" : {
-                     "name" : "DBD-mysqlPP less than 0.93",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DBD::mysqlPP"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.93",
+                  "product": {
+                     "name": "DBD-mysqlPP less than 0.93",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=0.03",
-                  "product" : {
-                     "name" : "DBD-mysqlPP greater than or equal 0.03",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DBD::mysqlPP"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.03",
+                  "product": {
+                     "name": "DBD-mysqlPP greater than or equal 0.03",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "DBD-mysqlPP"
+            "category": "product_name",
+            "name": "DBD-mysqlPP"
          }
       ]
    }

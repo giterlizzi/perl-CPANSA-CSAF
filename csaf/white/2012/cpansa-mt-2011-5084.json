@@ -1,131 +1,125 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Cross-site scripting (XSS) vulnerability in Movable Type 4.x before 4.36 and 5.x before 5.05 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Cross-site scripting (XSS) vulnerability in Movable Type 4.x before 4.36 and 5.x before 5.05 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-MT-2011-5084 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-mt-2011-5084.json"
+            "category": "self",
+            "summary": "CPANSA-MT-2011-5084 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-mt-2011-5084.json"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.movabletype.org/2011/05/movable_type_51_and_505_436_security_update.html",
-            "url" : "http://www.movabletype.org/2011/05/movable_type_51_and_505_436_security_update.html"
+            "category": "external",
+            "summary": "http://www.movabletype.org/2011/05/movable_type_51_and_505_436_security_update.html",
+            "url": "http://www.movabletype.org/2011/05/movable_type_51_and_505_436_security_update.html"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.debian.org/security/2012/dsa-2423",
-            "url" : "http://www.debian.org/security/2012/dsa-2423"
+            "category": "external",
+            "summary": "http://www.debian.org/security/2012/dsa-2423",
+            "url": "http://www.debian.org/security/2012/dsa-2423"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2011-5084 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-5084"
+            "category": "external",
+            "summary": "CVE-2011-5084 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-5084"
          }
       ],
-      "title" : "MT vulnerability",
-      "tracking" : {
-         "current_release_date" : "2012-04-02T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "MT vulnerability",
+      "tracking": {
+         "current_release_date": "2012-04-02T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-MT-2011-5084",
-         "initial_release_date" : "2012-04-02T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-MT-2011-5084",
+         "initial_release_date": "2012-04-02T00:00:00",
+         "revision_history": [
             {
-               "date" : "2012-04-02T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2012-04-02T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=4|<4.36",
-                  "product" : {
-                     "name" : "MT greater than or equal 4 and less than 4.36",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4|<4.36",
+                  "product": {
+                     "name": "MT greater than or equal 4 and less than 4.36",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5|<5.05",
-                  "product" : {
-                     "name" : "MT greater than or equal 5 and less than 5.05",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5|<5.05",
+                  "product": {
+                     "name": "MT greater than or equal 5 and less than 5.05",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "MT"
+            "category": "product_name",
+            "name": "MT"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2011-5084",
-         "cwe" : {
-            "id" : "CWE-79",
-            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         "cve": "CVE-2011-5084",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Cross-site scripting (XSS) vulnerability in Movable Type 4.x before 4.36 and 5.x before 5.05 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Cross-site scripting (XSS) vulnerability in Movable Type 4.x before 4.36 and 5.x before 5.05 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001",
                "CSAFPID-0002"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 4.3,
-                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001",
                   "CSAFPID-0002"
                ]

@@ -1,153 +1,147 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Integer overflow in the regular expression engine in Perl 5.8.x allows context-dependent attackers to cause a denial of service (stack consumption and application crash) by matching a crafted regular expression against a long string.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Integer overflow in the regular expression engine in Perl 5.8.x allows context-dependent attackers to cause a denial of service (stack consumption and application crash) by matching a crafted regular expression against a long string.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-perl-2010-1158 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-perl-2010-1158.json"
+            "category": "self",
+            "summary": "CPANSA-perl-2010-1158 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-perl-2010-1158.json"
          },
          {
-            "category" : "external",
-            "summary" : "http://bugs.gentoo.org/show_bug.cgi?id=313565",
-            "url" : "http://bugs.gentoo.org/show_bug.cgi?id=313565"
+            "category": "external",
+            "summary": "http://bugs.gentoo.org/show_bug.cgi?id=313565",
+            "url": "http://bugs.gentoo.org/show_bug.cgi?id=313565"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.openwall.com/lists/oss-security/2010/04/14/3",
-            "url" : "http://www.openwall.com/lists/oss-security/2010/04/14/3"
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2010/04/14/3",
+            "url": "http://www.openwall.com/lists/oss-security/2010/04/14/3"
          },
          {
-            "category" : "external",
-            "summary" : "http://perldoc.perl.org/perl5100delta.html",
-            "url" : "http://perldoc.perl.org/perl5100delta.html"
+            "category": "external",
+            "summary": "http://perldoc.perl.org/perl5100delta.html",
+            "url": "http://perldoc.perl.org/perl5100delta.html"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.openwall.com/lists/oss-security/2010/04/08/9",
-            "url" : "http://www.openwall.com/lists/oss-security/2010/04/08/9"
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2010/04/08/9",
+            "url": "http://www.openwall.com/lists/oss-security/2010/04/08/9"
          },
          {
-            "category" : "external",
-            "summary" : "https://bugzilla.redhat.com/show_bug.cgi?id=580605",
-            "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=580605"
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=580605",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=580605"
          },
          {
-            "category" : "external",
-            "summary" : "http://secunia.com/advisories/55314",
-            "url" : "http://secunia.com/advisories/55314"
+            "category": "external",
+            "summary": "http://secunia.com/advisories/55314",
+            "url": "http://secunia.com/advisories/55314"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2010-1158 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-1158"
+            "category": "external",
+            "summary": "CVE-2010-1158 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-1158"
          }
       ],
-      "title" : "perl vulnerability",
-      "tracking" : {
-         "current_release_date" : "2010-04-20T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "perl vulnerability",
+      "tracking": {
+         "current_release_date": "2010-04-20T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-perl-2010-1158",
-         "initial_release_date" : "2010-04-20T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-perl-2010-1158",
+         "initial_release_date": "2010-04-20T00:00:00",
+         "revision_history": [
             {
-               "date" : "2010-04-20T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2010-04-20T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<5.10.0",
-                  "product" : {
-                     "name" : "perl less than 5.10.0",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<5.10.0",
+                  "product": {
+                     "name": "perl less than 5.10.0",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5.10.0",
-                  "product" : {
-                     "name" : "perl greater than or equal 5.10.0",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.10.0",
+                  "product": {
+                     "name": "perl greater than or equal 5.10.0",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "perl"
+            "category": "product_name",
+            "name": "perl"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2010-1158",
-         "cwe" : {
-            "id" : "CWE-189",
-            "name" : "Numeric Errors"
+         "cve": "CVE-2010-1158",
+         "cwe": {
+            "id": "CWE-189",
+            "name": "Numeric Errors"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Integer overflow in the regular expression engine in Perl 5.8.x allows context-dependent attackers to cause a denial of service (stack consumption and application crash) by matching a crafted regular expression against a long string.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Integer overflow in the regular expression engine in Perl 5.8.x allows context-dependent attackers to cause a denial of service (stack consumption and application crash) by matching a crafted regular expression against a long string.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 5.0,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

@@ -1,197 +1,179 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "A crafted regular expression when compiled by perl 5.30.0 through 5.38.0 can cause a one attacker controlled byte buffer overflow in a heap allocated buffer",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "A crafted regular expression when compiled by perl 5.30.0 through 5.38.0 can cause a one attacker controlled byte buffer overflow in a heap allocated buffer",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-perl-2023-47038 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2023/cpansa-perl-2023-47038.json"
+            "category": "self",
+            "summary": "CPANSA-perl-2023-47038 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2023/cpansa-perl-2023-47038.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://perldoc.perl.org/perl5342delta",
-            "url" : "https://perldoc.perl.org/perl5342delta"
+            "category": "external",
+            "summary": "https://perldoc.perl.org/perl5342delta",
+            "url": "https://perldoc.perl.org/perl5342delta"
          },
          {
-            "category" : "external",
-            "summary" : "https://perldoc.perl.org/perl5363delta",
-            "url" : "https://perldoc.perl.org/perl5363delta"
+            "category": "external",
+            "summary": "https://perldoc.perl.org/perl5363delta",
+            "url": "https://perldoc.perl.org/perl5363delta"
          },
          {
-            "category" : "external",
-            "summary" : "https://perldoc.perl.org/perl5381delta",
-            "url" : "https://perldoc.perl.org/perl5381delta"
+            "category": "external",
+            "summary": "https://perldoc.perl.org/perl5381delta",
+            "url": "https://perldoc.perl.org/perl5381delta"
          },
          {
-            "category" : "external",
-            "summary" : "https://perldoc.perl.org/perl5382delta",
-            "url" : "https://perldoc.perl.org/perl5382delta"
+            "category": "external",
+            "summary": "https://perldoc.perl.org/perl5382delta",
+            "url": "https://perldoc.perl.org/perl5382delta"
          },
          {
-            "category" : "external",
-            "summary" : "https://perldoc.perl.org/perl5400delta",
-            "url" : "https://perldoc.perl.org/perl5400delta"
+            "category": "external",
+            "summary": "https://perldoc.perl.org/perl5400delta",
+            "url": "https://perldoc.perl.org/perl5400delta"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2023-47038 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2023-47038"
+            "category": "external",
+            "summary": "CVE-2023-47038 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47038"
          }
       ],
-      "title" : "perl vulnerability",
-      "tracking" : {
-         "current_release_date" : "2023-10-30T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "perl vulnerability",
+      "tracking": {
+         "current_release_date": "2023-10-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-perl-2023-47038",
-         "initial_release_date" : "2023-10-30T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-perl-2023-47038",
+         "initial_release_date": "2023-10-30T00:00:00",
+         "revision_history": [
             {
-               "date" : "2023-10-30T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2023-10-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5.30.0|<5.34.3",
-                  "product" : {
-                     "name" : "perl greater than or equal 5.30.0 and less than 5.34.3",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.30.0|<5.34.3",
+                  "product": {
+                     "name": "perl greater than or equal 5.30.0 and less than 5.34.3",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5.36.0|<5.36.3",
-                  "product" : {
-                     "name" : "perl greater than or equal 5.36.0 and less than 5.36.3",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.36.0|<5.36.3",
+                  "product": {
+                     "name": "perl greater than or equal 5.36.0 and less than 5.36.3",
+                     "product_id": "CSAFPID-0002"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/==5.38.0",
-                  "product" : {
-                     "name" : "perl equal =5.38.0",
-                     "product_id" : "CSAFPID-0003",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/==5.38.0",
+                  "product": {
+                     "name": "perl equal =5.38.0",
+                     "product_id": "CSAFPID-0003"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/5.34.3",
-                  "product" : {
-                     "name" : "perl ",
-                     "product_id" : "CSAFPID-0004",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/5.34.3",
+                  "product": {
+                     "name": "perl ",
+                     "product_id": "CSAFPID-0004"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/5.36.3",
-                  "product" : {
-                     "name" : "perl ",
-                     "product_id" : "CSAFPID-0005",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/5.36.3",
+                  "product": {
+                     "name": "perl ",
+                     "product_id": "CSAFPID-0005"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/5.38.1",
-                  "product" : {
-                     "name" : "perl ",
-                     "product_id" : "CSAFPID-0006",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/5.38.1",
+                  "product": {
+                     "name": "perl ",
+                     "product_id": "CSAFPID-0006"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "perl"
+            "category": "product_name",
+            "name": "perl"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2023-47038",
-         "cwe" : {
-            "id" : "CWE-122",
-            "name" : "Heap-based Buffer Overflow"
+         "cve": "CVE-2023-47038",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "A vulnerability was found in perl 5.30.0 through 5.38.0. This issue occurs when a crafted regular expression is compiled by perl, which can allow an attacker controlled byte buffer overflow in a heap allocated buffer.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "A vulnerability was found in perl 5.30.0 through 5.38.0. This issue occurs when a crafted regular expression is compiled by perl, which can allow an attacker controlled byte buffer overflow in a heap allocated buffer.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0004",
                "CSAFPID-0005",
                "CSAFPID-0006"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001",
                "CSAFPID-0002",
                "CSAFPID-0003"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v3" : {
-                  "baseScore" : 7.0,
-                  "baseSeverity" : "HIGH",
-                  "vectorString" : "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                  "version" : "3.1"
+               "cvss_v3": {
+                  "baseScore": 7.0,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001",
                   "CSAFPID-0002",
                   "CSAFPID-0003"

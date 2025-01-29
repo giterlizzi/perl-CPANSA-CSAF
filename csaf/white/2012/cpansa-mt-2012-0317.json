@@ -1,168 +1,159 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Multiple cross-site request forgery (CSRF) vulnerabilities in Movable Type before 4.38, 5.0x before 5.07, and 5.1x before 5.13 allow remote attackers to hijack the authentication of arbitrary users for requests that modify data via the (1) commenting feature or (2) community script.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Multiple cross-site request forgery (CSRF) vulnerabilities in Movable Type before 4.38, 5.0x before 5.07, and 5.1x before 5.13 allow remote attackers to hijack the authentication of arbitrary users for requests that modify data via the (1) commenting feature or (2) community script.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-MT-2012-0317 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-mt-2012-0317.json"
+            "category": "self",
+            "summary": "CPANSA-MT-2012-0317 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-mt-2012-0317.json"
          },
          {
-            "category" : "external",
-            "summary" : "http://jvn.jp/en/jp/JVN70683217/index.html",
-            "url" : "http://jvn.jp/en/jp/JVN70683217/index.html"
+            "category": "external",
+            "summary": "http://jvn.jp/en/jp/JVN70683217/index.html",
+            "url": "http://jvn.jp/en/jp/JVN70683217/index.html"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.movabletype.org/documentation/appendices/release-notes/513.html",
-            "url" : "http://www.movabletype.org/documentation/appendices/release-notes/513.html"
+            "category": "external",
+            "summary": "http://www.movabletype.org/documentation/appendices/release-notes/513.html",
+            "url": "http://www.movabletype.org/documentation/appendices/release-notes/513.html"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.movabletype.org/2012/02/movable_type_513_507_and_438_security_updates.html",
-            "url" : "http://www.movabletype.org/2012/02/movable_type_513_507_and_438_security_updates.html"
+            "category": "external",
+            "summary": "http://www.movabletype.org/2012/02/movable_type_513_507_and_438_security_updates.html",
+            "url": "http://www.movabletype.org/2012/02/movable_type_513_507_and_438_security_updates.html"
          },
          {
-            "category" : "external",
-            "summary" : "http://jvndb.jvn.jp/jvndb/JVNDB-2012-000015",
-            "url" : "http://jvndb.jvn.jp/jvndb/JVNDB-2012-000015"
+            "category": "external",
+            "summary": "http://jvndb.jvn.jp/jvndb/JVNDB-2012-000015",
+            "url": "http://jvndb.jvn.jp/jvndb/JVNDB-2012-000015"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.securitytracker.com/id?1026738",
-            "url" : "http://www.securitytracker.com/id?1026738"
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id?1026738",
+            "url": "http://www.securitytracker.com/id?1026738"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.securityfocus.com/bid/52138",
-            "url" : "http://www.securityfocus.com/bid/52138"
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/52138",
+            "url": "http://www.securityfocus.com/bid/52138"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.debian.org/security/2012/dsa-2423",
-            "url" : "http://www.debian.org/security/2012/dsa-2423"
+            "category": "external",
+            "summary": "http://www.debian.org/security/2012/dsa-2423",
+            "url": "http://www.debian.org/security/2012/dsa-2423"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2012-0317 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-0317"
+            "category": "external",
+            "summary": "CVE-2012-0317 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-0317"
          }
       ],
-      "title" : "MT vulnerability",
-      "tracking" : {
-         "current_release_date" : "2012-03-03T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "MT vulnerability",
+      "tracking": {
+         "current_release_date": "2012-03-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-MT-2012-0317",
-         "initial_release_date" : "2012-03-03T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-MT-2012-0317",
+         "initial_release_date": "2012-03-03T00:00:00",
+         "revision_history": [
             {
-               "date" : "2012-03-03T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2012-03-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<4.38",
-                  "product" : {
-                     "name" : "MT less than 4.38",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<4.38",
+                  "product": {
+                     "name": "MT less than 4.38",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5|<5.07",
-                  "product" : {
-                     "name" : "MT greater than or equal 5 and less than 5.07",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5|<5.07",
+                  "product": {
+                     "name": "MT greater than or equal 5 and less than 5.07",
+                     "product_id": "CSAFPID-0002"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=5.10|<5.13",
-                  "product" : {
-                     "name" : "MT greater than or equal 5.10 and less than 5.13",
-                     "product_id" : "CSAFPID-0003",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.10|<5.13",
+                  "product": {
+                     "name": "MT greater than or equal 5.10 and less than 5.13",
+                     "product_id": "CSAFPID-0003"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "MT"
+            "category": "product_name",
+            "name": "MT"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2012-0317",
-         "cwe" : {
-            "id" : "CWE-352",
-            "name" : "Cross-Site Request Forgery (CSRF)"
+         "cve": "CVE-2012-0317",
+         "cwe": {
+            "id": "CWE-352",
+            "name": "Cross-Site Request Forgery (CSRF)"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Multiple cross-site request forgery (CSRF) vulnerabilities in Movable Type before 4.38, 5.0x before 5.07, and 5.1x before 5.13 allow remote attackers to hijack the authentication of arbitrary users for requests that modify data via the (1) commenting feature or (2) community script.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Multiple cross-site request forgery (CSRF) vulnerabilities in Movable Type before 4.38, 5.0x before 5.07, and 5.1x before 5.13 allow remote attackers to hijack the authentication of arbitrary users for requests that modify data via the (1) commenting feature or (2) community script.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001",
                "CSAFPID-0002",
                "CSAFPID-0003"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 6.8,
-                  "vectorString" : "AV:N/AC:M/Au:N/C:P/I:P/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001",
                   "CSAFPID-0002",
                   "CSAFPID-0003"

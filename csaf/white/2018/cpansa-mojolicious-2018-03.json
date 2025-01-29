@@ -1,87 +1,84 @@
 {
-   "document" : {
-      "aggregate_severity" : {
-         "text" : "high"
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
       },
-      "category" : "csaf_informational_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+      "category": "csaf_informational_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Mojo::UserAgent was not checking peer SSL certificates by default.",
-            "title" : "Vulnerability Description"
-         }
-      ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
-      },
-      "references" : [
-         {
-            "category" : "self",
-            "summary" : "CPANSA-Mojolicious-2018-03 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-mojolicious-2018-03.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://github.com/mojolicious/mojo/pull/1226",
-            "url" : "https://github.com/mojolicious/mojo/pull/1226"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://github.com/mojolicious/mojo/commit/d3cbbad890673612fdbdea63fdd522b516f6104c",
-            "url" : "https://github.com/mojolicious/mojo/commit/d3cbbad890673612fdbdea63fdd522b516f6104c"
+            "category": "description",
+            "text": "Mojo::UserAgent was not checking peer SSL certificates by default.",
+            "title": "Vulnerability Description"
          }
       ],
-      "title" : "Mojolicious vulnerability",
-      "tracking" : {
-         "current_release_date" : "2018-05-19T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Mojolicious-2018-03 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-mojolicious-2018-03.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/mojolicious/mojo/pull/1226",
+            "url": "https://github.com/mojolicious/mojo/pull/1226"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/mojolicious/mojo/commit/d3cbbad890673612fdbdea63fdd522b516f6104c",
+            "url": "https://github.com/mojolicious/mojo/commit/d3cbbad890673612fdbdea63fdd522b516f6104c"
+         }
+      ],
+      "title": "Mojolicious vulnerability",
+      "tracking": {
+         "current_release_date": "2018-05-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Mojolicious-2018-03",
-         "initial_release_date" : "2018-05-19T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Mojolicious-2018-03",
+         "initial_release_date": "2018-05-19T00:00:00",
+         "revision_history": [
             {
-               "date" : "2018-05-19T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2018-05-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<7.80",
-                  "product" : {
-                     "name" : "Mojolicious less than 7.80",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Mojolicious"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<7.80",
+                  "product": {
+                     "name": "Mojolicious less than 7.80",
+                     "product_id": "CSAFPID-0001"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Mojolicious"
+            "category": "product_name",
+            "name": "Mojolicious"
          }
       ]
    }

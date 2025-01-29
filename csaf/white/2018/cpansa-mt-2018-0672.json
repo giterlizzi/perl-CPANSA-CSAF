@@ -1,123 +1,120 @@
 {
-   "document" : {
-      "aggregate_severity" : {
-         "text" : "medium"
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
       },
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Cross-site scripting vulnerability in Movable Type versions prior to Ver. 6.3.1 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
-            "title" : "Vulnerability Description"
-         }
-      ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
-      },
-      "references" : [
-         {
-            "category" : "self",
-            "summary" : "CPANSA-MT-2018-0672 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-mt-2018-0672.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "http://jvn.jp/en/jp/JVN89550319/index.html",
-            "url" : "http://jvn.jp/en/jp/JVN89550319/index.html"
-         },
-         {
-            "category" : "external",
-            "summary" : "CVE-2018-0672 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2018-0672"
+            "category": "description",
+            "text": "Cross-site scripting vulnerability in Movable Type versions prior to Ver. 6.3.1 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+            "title": "Vulnerability Description"
          }
       ],
-      "title" : "MT vulnerability",
-      "tracking" : {
-         "current_release_date" : "2018-09-04T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-MT-2018-0672 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-mt-2018-0672.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://jvn.jp/en/jp/JVN89550319/index.html",
+            "url": "http://jvn.jp/en/jp/JVN89550319/index.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2018-0672 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0672"
+         }
+      ],
+      "title": "MT vulnerability",
+      "tracking": {
+         "current_release_date": "2018-09-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-MT-2018-0672",
-         "initial_release_date" : "2018-09-04T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-MT-2018-0672",
+         "initial_release_date": "2018-09-04T00:00:00",
+         "revision_history": [
             {
-               "date" : "2018-09-04T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2018-09-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/=6.3.1",
-                  "product" : {
-                     "name" : "MT equal 6.3.1",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/=6.3.1",
+                  "product": {
+                     "name": "MT equal 6.3.1",
+                     "product_id": "CSAFPID-0001"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "MT"
+            "category": "product_name",
+            "name": "MT"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2018-0672",
-         "cwe" : {
-            "id" : "CWE-79",
-            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         "cve": "CVE-2018-0672",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Cross-site scripting vulnerability in Movable Type versions prior to Ver. 6.3.1 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Cross-site scripting vulnerability in Movable Type versions prior to Ver. 6.3.1 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 4.3,
-                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
                },
-               "cvss_v3" : {
-                  "baseScore" : 6.1,
-                  "baseSeverity" : "MEDIUM",
-                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
-                  "version" : "3.0"
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

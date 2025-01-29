@@ -1,124 +1,121 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Mojolicious before 0.999927 does not properly implement HMAC-MD5 checksums, which has unspecified impact and remote attack vectors.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Mojolicious before 0.999927 does not properly implement HMAC-MD5 checksums, which has unspecified impact and remote attack vectors.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-Mojolicious-2010-4803 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-mojolicious-2010-4803.json"
+            "category": "self",
+            "summary": "CPANSA-Mojolicious-2010-4803 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-mojolicious-2010-4803.json"
          },
          {
-            "category" : "external",
-            "summary" : "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes",
-            "url" : "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes"
+            "category": "external",
+            "summary": "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes",
+            "url": "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes"
          },
          {
-            "category" : "external",
-            "summary" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=622952",
-            "url" : "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=622952"
+            "category": "external",
+            "summary": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=622952",
+            "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=622952"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.debian.org/security/2011/dsa-2239",
-            "url" : "http://www.debian.org/security/2011/dsa-2239"
+            "category": "external",
+            "summary": "http://www.debian.org/security/2011/dsa-2239",
+            "url": "http://www.debian.org/security/2011/dsa-2239"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2010-4803 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2010-4803"
+            "category": "external",
+            "summary": "CVE-2010-4803 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-4803"
          }
       ],
-      "title" : "Mojolicious vulnerability",
-      "tracking" : {
-         "current_release_date" : "2011-05-03T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "Mojolicious vulnerability",
+      "tracking": {
+         "current_release_date": "2011-05-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Mojolicious-2010-4803",
-         "initial_release_date" : "2011-05-03T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Mojolicious-2010-4803",
+         "initial_release_date": "2011-05-03T00:00:00",
+         "revision_history": [
             {
-               "date" : "2011-05-03T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2011-05-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<0.999927",
-                  "product" : {
-                     "name" : "Mojolicious less than 0.999927",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Mojolicious"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.999927",
+                  "product": {
+                     "name": "Mojolicious less than 0.999927",
+                     "product_id": "CSAFPID-0001"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Mojolicious"
+            "category": "product_name",
+            "name": "Mojolicious"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2010-4803",
-         "cwe" : {
-            "id" : "CWE-20",
-            "name" : "Improper Input Validation"
+         "cve": "CVE-2010-4803",
+         "cwe": {
+            "id": "CWE-20",
+            "name": "Improper Input Validation"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Mojolicious before 0.999927 does not properly implement HMAC-MD5 checksums, which has unspecified impact and remote attack vectors.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Mojolicious before 0.999927 does not properly implement HMAC-MD5 checksums, which has unspecified impact and remote attack vectors.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 10.0,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:C/I:C/A:C",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 10,
+                  "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

@@ -1,130 +1,127 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Buffer overflow in Convert-UUlib (Convert::UUlib) before 1.051 allows remote attackers to execute arbitrary code via a malformed parameter to a read operation.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Buffer overflow in Convert-UUlib (Convert::UUlib) before 1.051 allows remote attackers to execute arbitrary code via a malformed parameter to a read operation.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-Convert-UUlib-2005-1349 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-convert-uulib-2005-1349.json"
+            "category": "self",
+            "summary": "CPANSA-Convert-UUlib-2005-1349 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-convert-uulib-2005-1349.json"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.gentoo.org/security/en/glsa/glsa-200504-26.xml",
-            "url" : "http://www.gentoo.org/security/en/glsa/glsa-200504-26.xml"
+            "category": "external",
+            "summary": "http://www.gentoo.org/security/en/glsa/glsa-200504-26.xml",
+            "url": "http://www.gentoo.org/security/en/glsa/glsa-200504-26.xml"
          },
          {
-            "category" : "external",
-            "summary" : "http://secunia.com/advisories/15130",
-            "url" : "http://secunia.com/advisories/15130"
+            "category": "external",
+            "summary": "http://secunia.com/advisories/15130",
+            "url": "http://secunia.com/advisories/15130"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.securityfocus.com/bid/13401",
-            "url" : "http://www.securityfocus.com/bid/13401"
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/13401",
+            "url": "http://www.securityfocus.com/bid/13401"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.mandriva.com/security/advisories?name=MDKSA-2006:022",
-            "url" : "http://www.mandriva.com/security/advisories?name=MDKSA-2006:022"
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:022",
+            "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:022"
          },
          {
-            "category" : "external",
-            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/20275",
-            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/20275"
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/20275",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/20275"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2005-1349 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2005-1349"
+            "category": "external",
+            "summary": "CVE-2005-1349 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-1349"
          }
       ],
-      "title" : "Convert-UUlib vulnerability",
-      "tracking" : {
-         "current_release_date" : "2005-05-02T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "Convert-UUlib vulnerability",
+      "tracking": {
+         "current_release_date": "2005-05-02T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Convert-UUlib-2005-1349",
-         "initial_release_date" : "2005-05-02T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Convert-UUlib-2005-1349",
+         "initial_release_date": "2005-05-02T00:00:00",
+         "revision_history": [
             {
-               "date" : "2005-05-02T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2005-05-02T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.051",
-                  "product" : {
-                     "name" : "Convert-UUlib less than 1.051",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Convert::UUlib"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.051",
+                  "product": {
+                     "name": "Convert-UUlib less than 1.051",
+                     "product_id": "CSAFPID-0001"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Convert-UUlib"
+            "category": "product_name",
+            "name": "Convert-UUlib"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2005-1349",
-         "notes" : [
+         "cve": "CVE-2005-1349",
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Buffer overflow in Convert-UUlib (Convert::UUlib) before 1.051 allows remote attackers to execute arbitrary code via a malformed parameter to a read operation.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Buffer overflow in Convert-UUlib (Convert::UUlib) before 1.051 allows remote attackers to execute arbitrary code via a malformed parameter to a read operation.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 7.5,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

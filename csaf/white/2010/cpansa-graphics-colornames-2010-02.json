@@ -1,134 +1,128 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "A specially-named file may lead to HTML injection attacks.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "A specially-named file may lead to HTML injection attacks.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-Graphics-ColorNames-2010-02 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-graphics-colornames-2010-02.json"
+            "category": "self",
+            "summary": "CPANSA-Graphics-ColorNames-2010-02 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-graphics-colornames-2010-02.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://metacpan.org/changes/distribution/Graphics-ColorNames",
-            "url" : "https://metacpan.org/changes/distribution/Graphics-ColorNames"
+            "category": "external",
+            "summary": "https://metacpan.org/changes/distribution/Graphics-ColorNames",
+            "url": "https://metacpan.org/changes/distribution/Graphics-ColorNames"
          },
          {
-            "category" : "external",
-            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=54500",
-            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=54500"
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=54500",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=54500"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2024-55918 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2024-55918"
+            "category": "external",
+            "summary": "CVE-2024-55918 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55918"
          }
       ],
-      "title" : "Graphics-ColorNames vulnerability",
-      "tracking" : {
-         "current_release_date" : "2010-02-11T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "Graphics-ColorNames vulnerability",
+      "tracking": {
+         "current_release_date": "2010-02-11T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Graphics-ColorNames-2010-02",
-         "initial_release_date" : "2010-02-11T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Graphics-ColorNames-2010-02",
+         "initial_release_date": "2010-02-11T00:00:00",
+         "revision_history": [
             {
-               "date" : "2010-02-11T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2010-02-11T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=2.0_01|<=3.1.2",
-                  "product" : {
-                     "name" : "Graphics-ColorNames greater than or equal 2.0_01 and less than or equal 3.1.2",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Graphics::ColorNames"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.0_01|<=3.1.2",
+                  "product": {
+                     "name": "Graphics-ColorNames greater than or equal 2.0_01 and less than or equal 3.1.2",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>3.1.2",
-                  "product" : {
-                     "name" : "Graphics-ColorNames greater than 3.1.2",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Graphics::ColorNames"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>3.1.2",
+                  "product": {
+                     "name": "Graphics-ColorNames greater than 3.1.2",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Graphics-ColorNames"
+            "category": "product_name",
+            "name": "Graphics-ColorNames"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2024-55918",
-         "cwe" : {
-            "id" : "CWE-94",
-            "name" : "Improper Control of Generation of Code ('Code Injection')"
+         "cve": "CVE-2024-55918",
+         "cwe": {
+            "id": "CWE-94",
+            "name": "Improper Control of Generation of Code ('Code Injection')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "An issue was discovered in the Graphics::ColorNames package before 3.2.0 for Perl. There is an ambiguity between modules and filenames that can lead to HTML injection by an attacker who can create a file in the current working directory.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "An issue was discovered in the Graphics::ColorNames package before 3.2.0 for Perl. There is an ambiguity between modules and filenames that can lead to HTML injection by an attacker who can create a file in the current working directory.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v3" : {
-                  "baseScore" : 5.3,
-                  "baseSeverity" : "MEDIUM",
-                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
-                  "version" : "3.1"
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "version": "3.1"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

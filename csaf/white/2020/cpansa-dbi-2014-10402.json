@@ -1,142 +1,136 @@
 {
-   "document" : {
-      "aggregate_severity" : {
-         "text" : "medium"
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
       },
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "An issue was discovered in the DBI module through 1.643 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute in the data source name (DSN). NOTE: this issue exists because of an incomplete fix for CVE-2014-10401.",
-            "title" : "Vulnerability Description"
-         }
-      ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
-      },
-      "references" : [
-         {
-            "category" : "self",
-            "summary" : "CPANSA-DBI-2014-10402 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-dbi-2014-10402.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://rt.cpan.org/Public/Bug/Display.html?id=99508#txn-1911590",
-            "url" : "https://rt.cpan.org/Public/Bug/Display.html?id=99508#txn-1911590"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://metacpan.org/release/HMBRAND/DBI-1.643_01/view/Changes",
-            "url" : "https://metacpan.org/release/HMBRAND/DBI-1.643_01/view/Changes"
-         },
-         {
-            "category" : "external",
-            "summary" : "CVE-2014-10402 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2014-10402"
+            "category": "description",
+            "text": "An issue was discovered in the DBI module through 1.643 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute in the data source name (DSN). NOTE: this issue exists because of an incomplete fix for CVE-2014-10401.",
+            "title": "Vulnerability Description"
          }
       ],
-      "title" : "DBI vulnerability",
-      "tracking" : {
-         "current_release_date" : "2020-09-16T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBI-2014-10402 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-dbi-2014-10402.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=99508#txn-1911590",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=99508#txn-1911590"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/DBI-1.643_01/view/Changes",
+            "url": "https://metacpan.org/release/HMBRAND/DBI-1.643_01/view/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2014-10402 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-10402"
+         }
+      ],
+      "title": "DBI vulnerability",
+      "tracking": {
+         "current_release_date": "2020-09-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-DBI-2014-10402",
-         "initial_release_date" : "2020-09-16T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-DBI-2014-10402",
+         "initial_release_date": "2020-09-16T00:00:00",
+         "revision_history": [
             {
-               "date" : "2020-09-16T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2020-09-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.643",
-                  "product" : {
-                     "name" : "DBI less than 1.643",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DBI"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.643",
+                  "product": {
+                     "name": "DBI less than 1.643",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.644",
-                  "product" : {
-                     "name" : "DBI greater than or equal 1.644",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DBI"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.644",
+                  "product": {
+                     "name": "DBI greater than or equal 1.644",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "DBI"
+            "category": "product_name",
+            "name": "DBI"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2014-10402",
-         "cwe" : {
-            "id" : "CWE-732",
-            "name" : "Incorrect Permission Assignment for Critical Resource"
+         "cve": "CVE-2014-10402",
+         "cwe": {
+            "id": "CWE-732",
+            "name": "Incorrect Permission Assignment for Critical Resource"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "An issue was discovered in the DBI module through 1.643 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute in the data source name (DSN). NOTE: this issue exists because of an incomplete fix for CVE-2014-10401.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "An issue was discovered in the DBI module through 1.643 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute in the data source name (DSN). NOTE: this issue exists because of an incomplete fix for CVE-2014-10401.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 3.6,
-                  "vectorString" : "AV:L/AC:L/Au:N/C:P/I:N/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 3.6,
+                  "vectorString": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+                  "version": "2.0"
                },
-               "cvss_v3" : {
-                  "baseScore" : 6.1,
-                  "baseSeverity" : "MEDIUM",
-                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
-                  "version" : "3.1"
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+                  "version": "3.1"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

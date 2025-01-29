@@ -1,130 +1,127 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Perl 5.004_04 and earlier follows symbolic links when running with the -e option, which allows local users to overwrite arbitrary files via a symlink attack on the /tmp/perl-eaXXXXX file.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Perl 5.004_04 and earlier follows symbolic links when running with the -e option, which allows local users to overwrite arbitrary files via a symlink attack on the /tmp/perl-eaXXXXX file.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-perl-1999-1386 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/1999/cpansa-perl-1999-1386.json"
+            "category": "self",
+            "summary": "CPANSA-perl-1999-1386 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/1999/cpansa-perl-1999-1386.json"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.redhat.com/support/errata/rh50-errata-general.html#perl",
-            "url" : "http://www.redhat.com/support/errata/rh50-errata-general.html#perl"
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/rh50-errata-general.html#perl",
+            "url": "http://www.redhat.com/support/errata/rh50-errata-general.html#perl"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.iss.net/security_center/static/7243.php",
-            "url" : "http://www.iss.net/security_center/static/7243.php"
+            "category": "external",
+            "summary": "http://www.iss.net/security_center/static/7243.php",
+            "url": "http://www.iss.net/security_center/static/7243.php"
          },
          {
-            "category" : "external",
-            "summary" : "http://marc.info/?l=bugtraq&m=88932165406213&w=2",
-            "url" : "http://marc.info/?l=bugtraq&m=88932165406213&w=2"
+            "category": "external",
+            "summary": "http://marc.info/?l=bugtraq&m=88932165406213&w=2",
+            "url": "http://marc.info/?l=bugtraq&m=88932165406213&w=2"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-1999-1386 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-1999-1386"
+            "category": "external",
+            "summary": "CVE-1999-1386 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1386"
          }
       ],
-      "title" : "perl vulnerability",
-      "tracking" : {
-         "current_release_date" : "1999-12-31T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "perl vulnerability",
+      "tracking": {
+         "current_release_date": "1999-12-31T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-perl-1999-1386",
-         "initial_release_date" : "1999-12-31T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-perl-1999-1386",
+         "initial_release_date": "1999-12-31T00:00:00",
+         "revision_history": [
             {
-               "date" : "1999-12-31T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "1999-12-31T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<5.4.4",
-                  "product" : {
-                     "name" : "perl less than 5.4.4",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/perl"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<5.4.4",
+                  "product": {
+                     "name": "perl less than 5.4.4",
+                     "product_id": "CSAFPID-0001"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "perl"
+            "category": "product_name",
+            "name": "perl"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-1999-1386",
-         "cwe" : {
-            "id" : "CWE-59",
-            "name" : "Improper Link Resolution Before File Access ('Link Following')"
+         "cve": "CVE-1999-1386",
+         "cwe": {
+            "id": "CWE-59",
+            "name": "Improper Link Resolution Before File Access ('Link Following')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Perl 5.004_04 and earlier follows symbolic links when running with the -e option, which allows local users to overwrite arbitrary files via a symlink attack on the /tmp/perl-eaXXXXX file.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Perl 5.004_04 and earlier follows symbolic links when running with the -e option, which allows local users to overwrite arbitrary files via a symlink attack on the /tmp/perl-eaXXXXX file.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 2.1,
-                  "vectorString" : "AV:L/AC:L/Au:N/C:N/I:P/A:N",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 2.1,
+                  "vectorString": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
                },
-               "cvss_v3" : {
-                  "baseScore" : 5.5,
-                  "baseSeverity" : "MEDIUM",
-                  "vectorString" : "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
-                  "version" : "3.1"
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                  "version": "3.1"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

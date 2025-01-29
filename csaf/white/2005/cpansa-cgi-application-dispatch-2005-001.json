@@ -1,90 +1,84 @@
 {
-   "document" : {
-      "category" : "csaf_informational_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_informational_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Untainted module names.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Untainted module names.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-CGI-Application-Dispatch-2005-001 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-cgi-application-dispatch-2005-001.json"
+            "category": "self",
+            "summary": "CPANSA-CGI-Application-Dispatch-2005-001 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2005/cpansa-cgi-application-dispatch-2005-001.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://metacpan.org/changes/distribution/CGI-Application-Dispatch",
-            "url" : "https://metacpan.org/changes/distribution/CGI-Application-Dispatch"
+            "category": "external",
+            "summary": "https://metacpan.org/changes/distribution/CGI-Application-Dispatch",
+            "url": "https://metacpan.org/changes/distribution/CGI-Application-Dispatch"
          }
       ],
-      "title" : "CGI-Application-Dispatch vulnerability",
-      "tracking" : {
-         "current_release_date" : "2005-01-20T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "CGI-Application-Dispatch vulnerability",
+      "tracking": {
+         "current_release_date": "2005-01-20T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-CGI-Application-Dispatch-2005-001",
-         "initial_release_date" : "2005-01-20T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-CGI-Application-Dispatch-2005-001",
+         "initial_release_date": "2005-01-20T00:00:00",
+         "revision_history": [
             {
-               "date" : "2005-01-20T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2005-01-20T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.02",
-                  "product" : {
-                     "name" : "CGI-Application-Dispatch less than 1.02",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CGI::Application::Dispatch"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.02",
+                  "product": {
+                     "name": "CGI-Application-Dispatch less than 1.02",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.02",
-                  "product" : {
-                     "name" : "CGI-Application-Dispatch greater than or equal 1.02",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CGI::Application::Dispatch"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.02",
+                  "product": {
+                     "name": "CGI-Application-Dispatch greater than or equal 1.02",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "CGI-Application-Dispatch"
+            "category": "product_name",
+            "name": "CGI-Application-Dispatch"
          }
       ]
    }

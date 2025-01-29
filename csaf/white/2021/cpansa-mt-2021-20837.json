@@ -1,162 +1,153 @@
 {
-   "document" : {
-      "aggregate_severity" : {
-         "text" : "critical"
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
       },
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Movable Type 7 r.5002 and earlier (Movable Type 7 Series), Movable Type 6.8.2 and earlier (Movable Type 6 Series), Movable Type Advanced 7 r.5002 and earlier (Movable Type Advanced 7 Series), Movable Type Advanced 6.8.2 and earlier (Movable Type Advanced 6 Series), Movable Type Premium 1.46 and earlier, and Movable Type Premium Advanced 1.46 and earlier allow remote attackers to execute arbitrary OS commands via unspecified vectors. Note that all versions of Movable Type 4.0 or later including unsupported (End-of-Life, EOL) versions are also affected by this vulnerability.",
-            "title" : "Vulnerability Description"
-         }
-      ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
-      },
-      "references" : [
-         {
-            "category" : "self",
-            "summary" : "CPANSA-MT-2021-20837 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-mt-2021-20837.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://jvn.jp/en/jp/JVN41119755/index.html",
-            "url" : "https://jvn.jp/en/jp/JVN41119755/index.html"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://movabletype.org/news/2021/10/mt-782-683-released.html",
-            "url" : "https://movabletype.org/news/2021/10/mt-782-683-released.html"
-         },
-         {
-            "category" : "external",
-            "summary" : "http://packetstormsecurity.com/files/164818/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html",
-            "url" : "http://packetstormsecurity.com/files/164818/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html"
-         },
-         {
-            "category" : "external",
-            "summary" : "http://packetstormsecurity.com/files/164705/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html",
-            "url" : "http://packetstormsecurity.com/files/164705/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html"
-         },
-         {
-            "category" : "external",
-            "summary" : "CVE-2021-20837 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2021-20837"
+            "category": "description",
+            "text": "Movable Type 7 r.5002 and earlier (Movable Type 7 Series), Movable Type 6.8.2 and earlier (Movable Type 6 Series), Movable Type Advanced 7 r.5002 and earlier (Movable Type Advanced 7 Series), Movable Type Advanced 6.8.2 and earlier (Movable Type Advanced 6 Series), Movable Type Premium 1.46 and earlier, and Movable Type Premium Advanced 1.46 and earlier allow remote attackers to execute arbitrary OS commands via unspecified vectors. Note that all versions of Movable Type 4.0 or later including unsupported (End-of-Life, EOL) versions are also affected by this vulnerability.",
+            "title": "Vulnerability Description"
          }
       ],
-      "title" : "MT vulnerability",
-      "tracking" : {
-         "current_release_date" : "2021-10-26T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-MT-2021-20837 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-mt-2021-20837.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://jvn.jp/en/jp/JVN41119755/index.html",
+            "url": "https://jvn.jp/en/jp/JVN41119755/index.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://movabletype.org/news/2021/10/mt-782-683-released.html",
+            "url": "https://movabletype.org/news/2021/10/mt-782-683-released.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/164818/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html",
+            "url": "http://packetstormsecurity.com/files/164818/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/164705/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html",
+            "url": "http://packetstormsecurity.com/files/164705/Movable-Type-7-r.5002-XMLRPC-API-Remote-Command-Injection.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2021-20837 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20837"
+         }
+      ],
+      "title": "MT vulnerability",
+      "tracking": {
+         "current_release_date": "2021-10-26T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-MT-2021-20837",
-         "initial_release_date" : "2021-10-26T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-MT-2021-20837",
+         "initial_release_date": "2021-10-26T00:00:00",
+         "revision_history": [
             {
-               "date" : "2021-10-26T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2021-10-26T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=7|<=7.8.1",
-                  "product" : {
-                     "name" : "MT greater than or equal 7 and less than or equal 7.8.1",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=7|<=7.8.1",
+                  "product": {
+                     "name": "MT greater than or equal 7 and less than or equal 7.8.1",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=6|<=6.8.2",
-                  "product" : {
-                     "name" : "MT greater than or equal 6 and less than or equal 6.8.2",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6|<=6.8.2",
+                  "product": {
+                     "name": "MT greater than or equal 6 and less than or equal 6.8.2",
+                     "product_id": "CSAFPID-0002"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<6",
-                  "product" : {
-                     "name" : "MT less than 6",
-                     "product_id" : "CSAFPID-0003",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:generic/MT"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<6",
+                  "product": {
+                     "name": "MT less than 6",
+                     "product_id": "CSAFPID-0003"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "MT"
+            "category": "product_name",
+            "name": "MT"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2021-20837",
-         "cwe" : {
-            "id" : "CWE-78",
-            "name" : "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+         "cve": "CVE-2021-20837",
+         "cwe": {
+            "id": "CWE-78",
+            "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Movable Type 7 r.5002 and earlier (Movable Type 7 Series), Movable Type 6.8.2 and earlier (Movable Type 6 Series), Movable Type Advanced 7 r.5002 and earlier (Movable Type Advanced 7 Series), Movable Type Advanced 6.8.2 and earlier (Movable Type Advanced 6 Series), Movable Type Premium 1.46 and earlier, and Movable Type Premium Advanced 1.46 and earlier allow remote attackers to execute arbitrary OS commands via unspecified vectors. Note that all versions of Movable Type 4.0 or later including unsupported (End-of-Life, EOL) versions are also affected by this vulnerability.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Movable Type 7 r.5002 and earlier (Movable Type 7 Series), Movable Type 6.8.2 and earlier (Movable Type 6 Series), Movable Type Advanced 7 r.5002 and earlier (Movable Type Advanced 7 Series), Movable Type Advanced 6.8.2 and earlier (Movable Type Advanced 6 Series), Movable Type Premium 1.46 and earlier, and Movable Type Premium Advanced 1.46 and earlier allow remote attackers to execute arbitrary OS commands via unspecified vectors. Note that all versions of Movable Type 4.0 or later including unsupported (End-of-Life, EOL) versions are also affected by this vulnerability.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001",
                "CSAFPID-0002",
                "CSAFPID-0003"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 7.5,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
                },
-               "cvss_v3" : {
-                  "baseScore" : 9.8,
-                  "baseSeverity" : "CRITICAL",
-                  "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                  "version" : "3.1"
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001",
                   "CSAFPID-0002",
                   "CSAFPID-0003"

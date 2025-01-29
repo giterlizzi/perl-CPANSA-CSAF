@@ -1,132 +1,110 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "The crypt_des (aka DES-based crypt) function does not process the complete cleartext password if this password contains a 0x80 character, which makes it easier for context-dependent attackers to obtain access via an authentication attempt with an initial substring of the intended password, as demonstrated by a Unicode password.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "The crypt_des (aka DES-based crypt) function does not process the complete cleartext password if this password contains a 0x80 character, which makes it easier for context-dependent attackers to obtain access via an authentication attempt with an initial substring of the intended password, as demonstrated by a Unicode password.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-Crypt-Passwd-XS-2012-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-crypt-passwd-xs-2012-01.json"
+            "category": "self",
+            "summary": "CPANSA-Crypt-Passwd-XS-2012-01 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2012/cpansa-crypt-passwd-xs-2012-01.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://metacpan.org/changes/distribution/Crypt-Passwd-XS",
-            "url" : "https://metacpan.org/changes/distribution/Crypt-Passwd-XS"
+            "category": "external",
+            "summary": "https://metacpan.org/changes/distribution/Crypt-Passwd-XS",
+            "url": "https://metacpan.org/changes/distribution/Crypt-Passwd-XS"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2012-2143 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2012-2143"
+            "category": "external",
+            "summary": "CVE-2012-2143 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-2143"
          }
       ],
-      "title" : "Crypt-Passwd-XS vulnerability",
-      "tracking" : {
-         "current_release_date" : "2012-05-07T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "Crypt-Passwd-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2012-05-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Crypt-Passwd-XS-2012-01",
-         "initial_release_date" : "2012-05-07T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Crypt-Passwd-XS-2012-01",
+         "initial_release_date": "2012-05-07T00:00:00",
+         "revision_history": [
             {
-               "date" : "2012-05-07T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2012-05-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<0.601",
-                  "product" : {
-                     "name" : "Crypt-Passwd-XS less than 0.601",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Crypt::Passwd::XS"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.601",
+                  "product": {
+                     "name": "Crypt-Passwd-XS less than 0.601",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=0.601",
-                  "product" : {
-                     "name" : "Crypt-Passwd-XS greater than or equal 0.601",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Crypt::Passwd::XS"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.601",
+                  "product": {
+                     "name": "Crypt-Passwd-XS greater than or equal 0.601",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Crypt-Passwd-XS"
+            "category": "product_name",
+            "name": "Crypt-Passwd-XS"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2012-2143",
-         "cwe" : {
-            "id" : "CWE-310",
-            "name" : "Cryptographic Issues"
-         },
-         "notes" : [
+         "cve": "CVE-2012-2143",
+         "notes": [
             {
-               "category" : "description",
-               "text" : "The crypt_des (aka DES-based crypt) function in FreeBSD before 9.0-RELEASE-p2, as used in PHP, PostgreSQL, and other products, does not process the complete cleartext password if this password contains a 0x80 character, which makes it easier for context-dependent attackers to obtain access via an authentication attempt with an initial substring of the intended password, as demonstrated by a Unicode password.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": null,
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
-         },
-         "scores" : [
-            {
-               "cvss_v2" : {
-                  "baseScore" : 4.3,
-                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
-                  "version" : "2.0"
-               },
-               "products" : [
-                  "CSAFPID-0001"
-               ]
-            }
-         ]
+         }
       }
    ]
 }

@@ -1,148 +1,142 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "dpkg 1.15.9 on Debian squeeze introduces support for the \"C-style encoded filenames\" feature without recognizing that the squeeze patch program lacks this feature, which triggers an interaction error that allows remote attackers to conduct directory traversal attacks and modify files outside of the intended directories via a crafted source package. NOTE: this can be considered a release engineering problem in the effort to fix CVE-2014-0471.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "dpkg 1.15.9 on Debian squeeze introduces support for the \"C-style encoded filenames\" feature without recognizing that the squeeze patch program lacks this feature, which triggers an interaction error that allows remote attackers to conduct directory traversal attacks and modify files outside of the intended directories via a crafted source package. NOTE: this can be considered a release engineering problem in the effort to fix CVE-2014-0471.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-Dpkg-2014-3127 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2014/cpansa-dpkg-2014-3127.json"
+            "category": "self",
+            "summary": "CPANSA-Dpkg-2014-3127 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2014/cpansa-dpkg-2014-3127.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=746306",
-            "url" : "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=746306"
+            "category": "external",
+            "summary": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=746306",
+            "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=746306"
          },
          {
-            "category" : "external",
-            "summary" : "http://www.securityfocus.com/bid/67181",
-            "url" : "http://www.securityfocus.com/bid/67181"
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/67181",
+            "url": "http://www.securityfocus.com/bid/67181"
          },
          {
-            "category" : "external",
-            "summary" : "http://seclists.org/oss-sec/2014/q2/227",
-            "url" : "http://seclists.org/oss-sec/2014/q2/227"
+            "category": "external",
+            "summary": "http://seclists.org/oss-sec/2014/q2/227",
+            "url": "http://seclists.org/oss-sec/2014/q2/227"
          },
          {
-            "category" : "external",
-            "summary" : "http://seclists.org/oss-sec/2014/q2/191",
-            "url" : "http://seclists.org/oss-sec/2014/q2/191"
+            "category": "external",
+            "summary": "http://seclists.org/oss-sec/2014/q2/191",
+            "url": "http://seclists.org/oss-sec/2014/q2/191"
          },
          {
-            "category" : "external",
-            "summary" : "http://metadata.ftp-master.debian.org/changelogs//main/d/dpkg/dpkg_1.15.10_changelog",
-            "url" : "http://metadata.ftp-master.debian.org/changelogs//main/d/dpkg/dpkg_1.15.10_changelog"
+            "category": "external",
+            "summary": "http://metadata.ftp-master.debian.org/changelogs//main/d/dpkg/dpkg_1.15.10_changelog",
+            "url": "http://metadata.ftp-master.debian.org/changelogs//main/d/dpkg/dpkg_1.15.10_changelog"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2014-3127 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2014-3127"
+            "category": "external",
+            "summary": "CVE-2014-3127 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-3127"
          }
       ],
-      "title" : "Dpkg vulnerability",
-      "tracking" : {
-         "current_release_date" : "2014-05-14T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "Dpkg vulnerability",
+      "tracking": {
+         "current_release_date": "2014-05-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Dpkg-2014-3127",
-         "initial_release_date" : "2014-05-14T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Dpkg-2014-3127",
+         "initial_release_date": "2014-05-14T00:00:00",
+         "revision_history": [
             {
-               "date" : "2014-05-14T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2014-05-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.17.9",
-                  "product" : {
-                     "name" : "Dpkg less than 1.17.9",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Dpkg"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.17.9",
+                  "product": {
+                     "name": "Dpkg less than 1.17.9",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.17.9",
-                  "product" : {
-                     "name" : "Dpkg greater than or equal 1.17.9",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Dpkg"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.17.9",
+                  "product": {
+                     "name": "Dpkg greater than or equal 1.17.9",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Dpkg"
+            "category": "product_name",
+            "name": "Dpkg"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2014-3127",
-         "cwe" : {
-            "id" : "CWE-22",
-            "name" : "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         "cve": "CVE-2014-3127",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "dpkg 1.15.9 on Debian squeeze introduces support for the \"C-style encoded filenames\" feature without recognizing that the squeeze patch program lacks this feature, which triggers an interaction error that allows remote attackers to conduct directory traversal attacks and modify files outside of the intended directories via a crafted source package.  NOTE: this can be considered a release engineering problem in the effort to fix CVE-2014-0471.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "dpkg 1.15.9 on Debian squeeze introduces support for the \"C-style encoded filenames\" feature without recognizing that the squeeze patch program lacks this feature, which triggers an interaction error that allows remote attackers to conduct directory traversal attacks and modify files outside of the intended directories via a crafted source package.  NOTE: this can be considered a release engineering problem in the effort to fix CVE-2014-0471.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 7.1,
-                  "vectorString" : "AV:N/AC:H/Au:N/C:N/I:C/A:C",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 7.1,
+                  "vectorString": "AV:N/AC:H/Au:N/C:N/I:C/A:C",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

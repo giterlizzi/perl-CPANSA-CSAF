@@ -1,90 +1,84 @@
 {
-   "document" : {
-      "category" : "csaf_informational_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_informational_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Path traversal.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Path traversal.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-GBrowse-2003-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2003/cpansa-gbrowse-2003-01.json"
+            "category": "self",
+            "summary": "CPANSA-GBrowse-2003-01 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2003/cpansa-gbrowse-2003-01.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://metacpan.org/changes/distribution/GBrowse",
-            "url" : "https://metacpan.org/changes/distribution/GBrowse"
+            "category": "external",
+            "summary": "https://metacpan.org/changes/distribution/GBrowse",
+            "url": "https://metacpan.org/changes/distribution/GBrowse"
          }
       ],
-      "title" : "GBrowse vulnerability",
-      "tracking" : {
-         "current_release_date" : "2003-08-23T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "GBrowse vulnerability",
+      "tracking": {
+         "current_release_date": "2003-08-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-GBrowse-2003-01",
-         "initial_release_date" : "2003-08-23T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-GBrowse-2003-01",
+         "initial_release_date": "2003-08-23T00:00:00",
+         "revision_history": [
             {
-               "date" : "2003-08-23T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2003-08-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.54",
-                  "product" : {
-                     "name" : "GBrowse less than 1.54",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CGI::Toggle"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.54",
+                  "product": {
+                     "name": "GBrowse less than 1.54",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.54",
-                  "product" : {
-                     "name" : "GBrowse greater than or equal 1.54",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/CGI::Toggle"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.54",
+                  "product": {
+                     "name": "GBrowse greater than or equal 1.54",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "GBrowse"
+            "category": "product_name",
+            "name": "GBrowse"
          }
       ]
    }

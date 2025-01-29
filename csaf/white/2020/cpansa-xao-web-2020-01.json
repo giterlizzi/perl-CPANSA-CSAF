@@ -1,118 +1,112 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Embedded HTML in JSON data was not escaped.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Embedded HTML in JSON data was not escaped.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-XAO-Web-2020-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-xao-web-2020-01.json"
+            "category": "self",
+            "summary": "CPANSA-XAO-Web-2020-01 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-xao-web-2020-01.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://github.com/amaltsev/XAO-Web/commit/20dd1d3bc5b811503f5722a16037b60197fe7ef4",
-            "url" : "https://github.com/amaltsev/XAO-Web/commit/20dd1d3bc5b811503f5722a16037b60197fe7ef4"
+            "category": "external",
+            "summary": "https://github.com/amaltsev/XAO-Web/commit/20dd1d3bc5b811503f5722a16037b60197fe7ef4",
+            "url": "https://github.com/amaltsev/XAO-Web/commit/20dd1d3bc5b811503f5722a16037b60197fe7ef4"
          },
          {
-            "category" : "external",
-            "summary" : "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes",
-            "url" : "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes"
+            "category": "external",
+            "summary": "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes",
+            "url": "https://metacpan.org/release/AMALTSEV/XAO-Web-1.84/changes"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2020-36827 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-36827"
+            "category": "external",
+            "summary": "CVE-2020-36827 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-36827"
          }
       ],
-      "title" : "XAO-Web vulnerability",
-      "tracking" : {
-         "current_release_date" : "2020-09-18T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "XAO-Web vulnerability",
+      "tracking": {
+         "current_release_date": "2020-09-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-XAO-Web-2020-01",
-         "initial_release_date" : "2020-09-18T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-XAO-Web-2020-01",
+         "initial_release_date": "2020-09-18T00:00:00",
+         "revision_history": [
             {
-               "date" : "2020-09-18T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2020-09-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.84",
-                  "product" : {
-                     "name" : "XAO-Web less than 1.84",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/XAO::Web"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.84",
+                  "product": {
+                     "name": "XAO-Web less than 1.84",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=1.84",
-                  "product" : {
-                     "name" : "XAO-Web greater than or equal 1.84",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/XAO::Web"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.84",
+                  "product": {
+                     "name": "XAO-Web greater than or equal 1.84",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "XAO-Web"
+            "category": "product_name",
+            "name": "XAO-Web"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2020-36827",
-         "notes" : [
+         "cve": "CVE-2020-36827",
+         "notes": [
             {
-               "category" : "description",
-               "text" : "The XAO::Web module before 1.84 for Perl mishandles < and > characters in JSON output during use of json-embed in Web::Action.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "The XAO::Web module before 1.84 for Perl mishandles < and > characters in JSON output during use of json-embed in Web::Action.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          }

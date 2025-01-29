@@ -1,127 +1,124 @@
 {
-   "document" : {
-      "aggregate_severity" : {
-         "text" : "high"
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
       },
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Mojolicious is vulnerable to cross-site scripting, caused by improper validation of user-supplied input by link_to helper. A remote attacker could exploit this vulnerability using a specially-crafted URL to execute script in a victim's Web browser within the security context of the hosting Web site, once the URL is clicked. An attacker could use this vulnerability to steal the victim's cookie-based authentication credentials.",
-            "title" : "Vulnerability Description"
-         }
-      ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
-      },
-      "references" : [
-         {
-            "category" : "self",
-            "summary" : "CPANSA-Mojolicious-2011-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-mojolicious-2011-01.json"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257",
-            "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://www.debian.org/security/2011/dsa-2239",
-            "url" : "https://www.debian.org/security/2011/dsa-2239"
-         },
-         {
-            "category" : "external",
-            "summary" : "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60",
-            "url" : "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60"
-         },
-         {
-            "category" : "external",
-            "summary" : "CVE-2011-1841 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2011-1841"
+            "category": "description",
+            "text": "Mojolicious is vulnerable to cross-site scripting, caused by improper validation of user-supplied input by link_to helper. A remote attacker could exploit this vulnerability using a specially-crafted URL to execute script in a victim's Web browser within the security context of the hosting Web site, once the URL is clicked. An attacker could use this vulnerability to steal the victim's cookie-based authentication credentials.",
+            "title": "Vulnerability Description"
          }
       ],
-      "title" : "Mojolicious vulnerability",
-      "tracking" : {
-         "current_release_date" : "2011-03-10T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Mojolicious-2011-01 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2011/cpansa-mojolicious-2011-01.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/67257"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2011/dsa-2239",
+            "url": "https://www.debian.org/security/2011/dsa-2239"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60",
+            "url": "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2011-1841 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-1841"
+         }
+      ],
+      "title": "Mojolicious vulnerability",
+      "tracking": {
+         "current_release_date": "2011-03-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-Mojolicious-2011-01",
-         "initial_release_date" : "2011-03-10T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-Mojolicious-2011-01",
+         "initial_release_date": "2011-03-10T00:00:00",
+         "revision_history": [
             {
-               "date" : "2011-03-10T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2011-03-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<1.12",
-                  "product" : {
-                     "name" : "Mojolicious less than 1.12",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/Mojolicious"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.12",
+                  "product": {
+                     "name": "Mojolicious less than 1.12",
+                     "product_id": "CSAFPID-0001"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "Mojolicious"
+            "category": "product_name",
+            "name": "Mojolicious"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2011-1841",
-         "cwe" : {
-            "id" : "CWE-79",
-            "name" : "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         "cve": "CVE-2011-1841",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Cross-site scripting (XSS) vulnerability in the link_to helper in Mojolicious before 1.12 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Cross-site scripting (XSS) vulnerability in the link_to helper in Mojolicious before 1.12 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "known_affected" : [
+         "product_status": {
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 4.3,
-                  "vectorString" : "AV:N/AC:M/Au:N/C:N/I:P/A:N",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

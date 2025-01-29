@@ -1,134 +1,128 @@
 {
-   "document" : {
-      "category" : "csaf_security_advisory",
-      "csaf_version" : "2.0",
-      "distribution" : {
-         "tlp" : {
-            "label" : "WHITE",
-            "url" : "https://www.first.org/tlp/"
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
          }
       },
-      "lang" : "en",
-      "notes" : [
+      "lang": "en",
+      "notes": [
          {
-            "category" : "description",
-            "text" : "Use-after-free vulnerability in the my_login function in DBD::mysql before 4.033_01 allows attackers to have unspecified impact by leveraging a call to mysql_errno after a failure of my_login.",
-            "title" : "Vulnerability Description"
+            "category": "description",
+            "text": "Use-after-free vulnerability in the my_login function in DBD::mysql before 4.033_01 allows attackers to have unspecified impact by leveraging a call to mysql_errno after a failure of my_login.",
+            "title": "Vulnerability Description"
          }
       ],
-      "publisher" : {
-         "category" : "other",
-         "contact_details" : "gdt@cpan.org",
-         "name" : "giterlizzi",
-         "namespace" : "https://github.com/giterlizzi/"
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
       },
-      "references" : [
+      "references": [
          {
-            "category" : "self",
-            "summary" : "CPANSA-DBD-mysql-2016-01 JSON",
-            "url" : "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2016/cpansa-dbd-mysql-2016-01.json"
+            "category": "self",
+            "summary": "CPANSA-DBD-mysql-2016-01 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2016/cpansa-dbd-mysql-2016-01.json"
          },
          {
-            "category" : "external",
-            "summary" : "https://github.com/perl5-dbi/DBD-mysql/commit/cf0aa7751f6ef8445e9310a64b14dc81460ca156",
-            "url" : "https://github.com/perl5-dbi/DBD-mysql/commit/cf0aa7751f6ef8445e9310a64b14dc81460ca156"
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/DBD-mysql/commit/cf0aa7751f6ef8445e9310a64b14dc81460ca156",
+            "url": "https://github.com/perl5-dbi/DBD-mysql/commit/cf0aa7751f6ef8445e9310a64b14dc81460ca156"
          },
          {
-            "category" : "external",
-            "summary" : "CVE-2015-8949 (NVD)",
-            "url" : "https://nvd.nist.gov/vuln/detail/CVE-2015-8949"
+            "category": "external",
+            "summary": "CVE-2015-8949 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8949"
          }
       ],
-      "title" : "DBD-mysql vulnerability",
-      "tracking" : {
-         "current_release_date" : "2016-08-19T00:00:00",
-         "generator" : {
-            "engine" : {
-               "name" : "CSAF Perl Toolkit",
-               "version" : "0.24"
+      "title": "DBD-mysql vulnerability",
+      "tracking": {
+         "current_release_date": "2016-08-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
             }
          },
-         "id" : "CPANSA-DBD-mysql-2016-01",
-         "initial_release_date" : "2016-08-19T00:00:00",
-         "revision_history" : [
+         "id": "CPANSA-DBD-mysql-2016-01",
+         "initial_release_date": "2016-08-19T00:00:00",
+         "revision_history": [
             {
-               "date" : "2016-08-19T00:00:00",
-               "number" : "1",
-               "summary" : "First release"
+               "date": "2016-08-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
             }
          ],
-         "status" : "final",
-         "version" : "1"
+         "status": "final",
+         "version": "1"
       }
    },
-   "product_tree" : {
-      "branches" : [
+   "product_tree": {
+      "branches": [
          {
-            "branches" : [
+            "branches": [
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/<4.034",
-                  "product" : {
-                     "name" : "DBD-mysql less than 4.034",
-                     "product_id" : "CSAFPID-0001",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DBD::mysql"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<4.034",
+                  "product": {
+                     "name": "DBD-mysql less than 4.034",
+                     "product_id": "CSAFPID-0001"
                   }
                },
                {
-                  "category" : "product_version_range",
-                  "name" : "vers:cpan/>=4.034",
-                  "product" : {
-                     "name" : "DBD-mysql greater than or equal 4.034",
-                     "product_id" : "CSAFPID-0002",
-                     "product_identification_helper" : {
-                        "purl" : "pkg:cpan/DBD::mysql"
-                     }
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.034",
+                  "product": {
+                     "name": "DBD-mysql greater than or equal 4.034",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
-            "category" : "product_name",
-            "name" : "DBD-mysql"
+            "category": "product_name",
+            "name": "DBD-mysql"
          }
       ]
    },
-   "vulnerabilities" : [
+   "vulnerabilities": [
       {
-         "cve" : "CVE-2015-8949",
-         "cwe" : {
-            "id" : "CWE-416",
-            "name" : "Use After Free"
+         "cve": "CVE-2015-8949",
+         "cwe": {
+            "id": "CWE-416",
+            "name": "Use After Free"
          },
-         "notes" : [
+         "notes": [
             {
-               "category" : "description",
-               "text" : "Use-after-free vulnerability in the my_login function in DBD::mysql before 4.033_01 allows attackers to have unspecified impact by leveraging a call to mysql_errno after a failure of my_login.",
-               "title" : "Vulnerability Description"
+               "category": "description",
+               "text": "Use-after-free vulnerability in the my_login function in DBD::mysql before 4.033_01 allows attackers to have unspecified impact by leveraging a call to mysql_errno after a failure of my_login.",
+               "title": "Vulnerability Description"
             }
          ],
-         "product_status" : {
-            "fixed" : [
+         "product_status": {
+            "fixed": [
                "CSAFPID-0002"
             ],
-            "known_affected" : [
+            "known_affected": [
                "CSAFPID-0001"
             ]
          },
-         "scores" : [
+         "scores": [
             {
-               "cvss_v2" : {
-                  "baseScore" : 10.0,
-                  "vectorString" : "AV:N/AC:L/Au:N/C:C/I:C/A:C",
-                  "version" : "2.0"
+               "cvss_v2": {
+                  "baseScore": 10,
+                  "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                  "version": "2.0"
                },
-               "cvss_v3" : {
-                  "baseScore" : 9.8,
-                  "baseSeverity" : "CRITICAL",
-                  "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                  "version" : "3.0"
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.0"
                },
-               "products" : [
+               "products": [
                   "CSAFPID-0001"
                ]
             }

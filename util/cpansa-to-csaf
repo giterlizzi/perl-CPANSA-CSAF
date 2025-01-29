@@ -13,12 +13,11 @@ use Mojo::Util qw(trim dumper);
 use Net::NVD;
 use URI::PackageURL;
 use URI::VersionRange;
+use Data::Dumper;
 
-my $MAIN_MODULE_DIST_CACHE = {};
-my $MAIN_MODULE_SKIP       = {perl => 1, ActivePerl => 1, libapreq2 => 1};
-my $CVE_CACHE              = {};
-my @ERRORS                 = ();
-my %COMPARATOR_DECODE      = (
+my $CVE_CACHE         = {};
+my @ERRORS            = ();
+my %COMPARATOR_DECODE = (
     '='  => 'equal',
     '<'  => 'less than',
     '<=' => 'less than or equal',
@@ -39,6 +38,8 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
     }
 
     say STDERR qq{Process "$dist"};
+
+    my $main_module = $db->{dists}{$dist}{main_module};
 
     foreach my $advisory (@{$db->{dists}{$dist}{advisories}}) {
 
@@ -81,40 +82,6 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
         next if (!$advisory->{affected_versions} && !$advisory->{fixed_versions});
         next unless $advisory->{reported};
 
-        # CPAN PURL Specification use this components:
-        #   type      --> cpan
-        #   namespace --> author
-        #   name      --> distribution
-        #
-        # TODO Get the AUTHOR of the vulnerable distribution version (not last author)
-
-        if (!defined $MAIN_MODULE_DIST_CACHE->{$distribution} && !$MAIN_MODULE_SKIP->{$distribution}) {
-            eval {
-
-                my $releases = $mcpan->release({all => [{distribution => $distribution}]});
-
-            MAIN_MODULE:
-                while (my $release = $releases->next) {
-                    $MAIN_MODULE_DIST_CACHE->{$distribution} = $release->main_module;
-                    last MAIN_MODULE;
-                }
-
-            };
-
-            Carp::carp($@) if ($@);
-
-        }
-
-        my %purl_components = ();
-
-        if (my $module = $MAIN_MODULE_DIST_CACHE->{$distribution}) {
-            %purl_components = (type => 'cpan', name => $module);
-        }
-        else {
-            %purl_components = (type => 'generic', name => $distribution);    # TODO
-        }
-
-        my $purl = URI::PackageURL->new(%purl_components);
 
         my $csaf = CSAF->new;
 
@@ -172,6 +139,8 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
             foreach my $affected_version (@affected_versions) {
 
+                my $vers_range = URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $affected_version)]);
+
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
                 my $vers_to_name = vers_to_name(split(',', $affected_version));
 
@@ -179,17 +148,18 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
                 $product_branches->item(
                     category => 'product_version_range',
-                    name    => URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $affected_version)]),
-                    product => {
-                        product_id                    => $product_id,
-                        name                          => sprintf('%s %s', $distribution, $vers_to_name),
-                        product_identification_helper => {purl => $purl}
+                    name     => $vers_range,
+                    product  => {
+                        product_id => $product_id,
+                        name => sprintf('%s %s', $distribution, $vers_to_name)
                     }
                 );
 
             }
 
             foreach my $fixed_version (@fixed_versions) {
+
+                my $vers_range = URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $fixed_version)]);
 
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
                 my $vers_to_name = vers_to_name(split(',', $fixed_version));
@@ -198,13 +168,13 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
                 $product_branches->item(
                     category => 'product_version_range',
-                    name     => URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $fixed_version)]),
+                    name     => $vers_range,
                     product  => {
-                        product_id                    => $product_id,
-                        name                          => sprintf('%s %s', $distribution, $vers_to_name),
-                        product_identification_helper => {purl => $purl}
+                        product_id => $product_id,
+                        name => sprintf('%s %s', $distribution, $vers_to_name)
                     }
                 );
+
             }
 
         }
@@ -224,6 +194,7 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
             if ($@) {
                 push @ERRORS, {type => 'Error in Net::NVD', message => $@, file => $distribution, id => $advisory_id};
+                next;
             }
 
             my $weakness = $cve_data->{weaknesses} ? $cve_data->{weaknesses}[0]->{description}[0]->{value} : undef;
@@ -346,4 +317,3 @@ sub vers_to_name {
     return join ' and ', @output;
 
 }
-
