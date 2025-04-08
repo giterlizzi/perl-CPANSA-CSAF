@@ -1,0 +1,137 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Sub::HandlesVia for Perl before 0.050002 allows untrusted code from the current working directory ('.') to be loaded similar to CVE-2016-1238.  If an attacker can place a malicious file in current working directory, it may be loaded instead of the intended file, potentially leading to arbitrary code execution.  Sub::HandlesVia uses Mite to produce the affected code section due to CVE-2025-30672",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Sub-HandlesVia-2025-30673 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-sub-handlesvia-2025-30673.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://blogs.perl.org/users/todd_rinaldo/2016/11/what-happened-to-dot-in-inc.html",
+            "url": "https://blogs.perl.org/users/todd_rinaldo/2016/11/what-happened-to-dot-in-inc.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/dist/Sub-HandlesVia/changes#L12",
+            "url": "https://metacpan.org/dist/Sub-HandlesVia/changes#L12"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TOBYINK/Sub-HandlesVia-0.050001/source/lib/Sub/HandlesVia/Mite.pm#L114",
+            "url": "https://metacpan.org/release/TOBYINK/Sub-HandlesVia-0.050001/source/lib/Sub/HandlesVia/Mite.pm#L114"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-30673 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30673"
+         }
+      ],
+      "title": "Sub-HandlesVia vulnerability",
+      "tracking": {
+         "current_release_date": "2025-04-01T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Sub-HandlesVia-2025-30673",
+         "initial_release_date": "2025-04-01T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-04-01T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.050002",
+                  "product": {
+                     "name": "Sub-HandlesVia less than 0.050002",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.050002",
+                  "product": {
+                     "name": "Sub-HandlesVia greater than or equal 0.050002",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Sub-HandlesVia"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-30673",
+         "cwe": {
+            "id": "CWE-427",
+            "name": "Uncontrolled Search Path Element"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Sub::HandlesVia for Perl before 0.050002 allows untrusted code from the current working directory ('.') to be loaded similar to CVE-2016-1238.\n\nIf an attacker can place a malicious file in current working directory, it may be loaded instead of the intended file, potentially leading to arbitrary code execution.\n\nSub::HandlesVia uses Mite to produce the affected code section due to CVE-2025-30672",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

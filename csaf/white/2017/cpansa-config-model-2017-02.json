@@ -98,7 +98,7 @@
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "lib/Config/Model.pm in Config-Model (aka libconfig-model-perl) before 2.102 allows local users to gain privileges via a crafted model in the current working directory, related to use of . with the INC array.",
                "title": "Vulnerability Description"
             }
          ],
@@ -109,7 +109,25 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.6,
+                  "vectorString": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.8,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

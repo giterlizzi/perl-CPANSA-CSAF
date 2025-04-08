@@ -176,10 +176,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2017-10989",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "The getNodeSize function in ext/rtree/rtree.c in SQLite through 3.19.3, as used in GDAL and other products, mishandles undersized RTree blobs in a crafted database, leading to a heap-based buffer over-read or possibly unspecified other impact.",
                "title": "Vulnerability Description"
             }
          ],
@@ -191,7 +195,26 @@
                "CSAFPID-0001",
                "CSAFPID-0002"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
+               ]
+            }
+         ]
       }
    ]
 }

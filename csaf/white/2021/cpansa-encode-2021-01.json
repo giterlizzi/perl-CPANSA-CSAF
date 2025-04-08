@@ -133,10 +133,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2021-36770",
+         "cwe": {
+            "id": "CWE-427",
+            "name": "Uncontrolled Search Path Element"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "Encode.pm, as distributed in Perl through 5.34.0, allows local users to gain privileges via a Trojan horse Encode::ConfigLocal library (in the current working directory) that preempts dynamic module loading. Exploitation requires an unusual configuration, and certain 2021 versions of Encode.pm (3.05 through 3.11). This issue occurs because the || operator evaluates @INC in a scalar context, and thus @INC has only an integer value.",
                "title": "Vulnerability Description"
             }
          ],
@@ -148,7 +152,26 @@
                "CSAFPID-0001",
                "CSAFPID-0002"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.8,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
+               ]
+            }
+         ]
       }
    ]
 }

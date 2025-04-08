@@ -1,0 +1,131 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Amon2::Auth::Site::LINE uses the String::Random module to generate nonce values.   String::Random defaults to Perl's built-in predictable random number generator, the rand() function, which is not cryptographically secure",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Amon2-Auth-Site-LINE-2024-57835 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-amon2-auth-site-line-2024-57835.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SHLOMIF/String-Random-0.32/source/lib/String/Random.pm#L377",
+            "url": "https://metacpan.org/release/SHLOMIF/String-Random-0.32/source/lib/String/Random.pm#L377"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TANIGUCHI/Amon2-Auth-Site-LINE-0.04/source/lib/Amon2/Auth/Site/LINE.pm#L235",
+            "url": "https://metacpan.org/release/TANIGUCHI/Amon2-Auth-Site-LINE-0.04/source/lib/Amon2/Auth/Site/LINE.pm#L235"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TANIGUCHI/Amon2-Auth-Site-LINE-0.04/source/lib/Amon2/Auth/Site/LINE.pm#L255",
+            "url": "https://metacpan.org/release/TANIGUCHI/Amon2-Auth-Site-LINE-0.04/source/lib/Amon2/Auth/Site/LINE.pm#L255"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2024-57835 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57835"
+         }
+      ],
+      "title": "Amon2-Auth-Site-LINE vulnerability",
+      "tracking": {
+         "current_release_date": "2025-04-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Amon2-Auth-Site-LINE-2024-57835",
+         "initial_release_date": "2025-04-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-04-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Amon2-Auth-Site-LINE greater than 0",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Amon2-Auth-Site-LINE"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2024-57835",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Amon2::Auth::Site::LINE uses the String::Random module to generate nonce values. \n\nString::Random defaults to Perl's built-in predictable random number generator, the rand() function, which is not cryptographically secure",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

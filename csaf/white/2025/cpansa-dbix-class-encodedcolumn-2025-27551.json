@@ -1,0 +1,132 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBIx::Class::EncodedColumn use the rand() function, which is not cryptographically secure to salt password hashes.  This vulnerability is associated with program files lib/DBIx/Class/EncodedColumn/Digest.pm.  This issue affects DBIx::Class::EncodedColumn until 0.00032.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBIx-Class-EncodedColumn-2025-27551 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-dbix-class-encodedcolumn-2025-27551.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/WREIS/DBIx-Class-EncodedColumn-0.00032/changes",
+            "url": "https://metacpan.org/release/WREIS/DBIx-Class-EncodedColumn-0.00032/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-27551 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27551"
+         }
+      ],
+      "title": "DBIx-Class-EncodedColumn vulnerability",
+      "tracking": {
+         "current_release_date": "2025-03-26T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-DBIx-Class-EncodedColumn-2025-27551",
+         "initial_release_date": "2025-03-26T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-03-26T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.11",
+                  "product": {
+                     "name": "DBIx-Class-EncodedColumn less than 0.11",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.11",
+                  "product": {
+                     "name": "DBIx-Class-EncodedColumn greater than or equal 0.11",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBIx-Class-EncodedColumn"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-27551",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBIx::Class::EncodedColumn use the rand() function, which is not cryptographically secure to salt password hashes.\n\nThis vulnerability is associated with program files lib/DBIx/Class/EncodedColumn/Digest.pm.\n\nThis issue affects DBIx::Class::EncodedColumn until 0.00032.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 4.0,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

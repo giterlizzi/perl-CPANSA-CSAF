@@ -95,10 +95,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2011-1589",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "Directory traversal vulnerability in Path.pm in Mojolicious before 1.16 allows remote attackers to read arbitrary files via a %2f..%2f (encoded slash dot dot slash) in a URI.",
                "title": "Vulnerability Description"
             }
          ],
@@ -109,7 +113,19 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

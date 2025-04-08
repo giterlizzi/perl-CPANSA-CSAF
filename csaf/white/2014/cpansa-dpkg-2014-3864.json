@@ -110,10 +110,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2014-3864",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "Directory traversal vulnerability in dpkg-source in dpkg-dev 1.3.0 allows remote attackers to modify files outside of the intended directories via a crafted source package that lacks a --- header line.",
                "title": "Vulnerability Description"
             }
          ],
@@ -124,7 +128,19 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.4,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

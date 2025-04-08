@@ -93,6 +93,16 @@
          },
          {
             "category": "external",
+            "summary": "https://github.com/briandfoy/cpan-security-advisory/issues/187",
+            "url": "https://github.com/briandfoy/cpan-security-advisory/issues/187"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=118395",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=118395"
+         },
+         {
+            "category": "external",
             "summary": "CVE-2016-6153 (NVD)",
             "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6153"
          }
@@ -125,17 +135,17 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/<=1.51_04",
+                  "name": "vers:cpan/<=1.55_01",
                   "product": {
-                     "name": "DBD-SQLite less than or equal 1.51_04",
+                     "name": "DBD-SQLite less than or equal 1.55_01",
                      "product_id": "CSAFPID-0001"
                   }
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=1.51_05",
+                  "name": "vers:cpan/>=1.55_01",
                   "product": {
-                     "name": "DBD-SQLite greater than or equal 1.51_05",
+                     "name": "DBD-SQLite greater than or equal 1.55_01",
                      "product_id": "CSAFPID-0002"
                   }
                }

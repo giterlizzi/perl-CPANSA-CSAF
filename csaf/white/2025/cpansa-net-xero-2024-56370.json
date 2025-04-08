@@ -1,0 +1,123 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::Xero 0.044 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.  Specifically Net::Xero uses the Data::Random library which specifically states that it is \"Useful mostly for test programs\". Data::Random uses the rand() function.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-Xero-2024-56370 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-xero-2024-56370.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BAREFOOT/Data-Random-0.13/source/lib/Data/Random.pm#L537",
+            "url": "https://metacpan.org/release/BAREFOOT/Data-Random-0.13/source/lib/Data/Random.pm#L537"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L58",
+            "url": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L58"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L9",
+            "url": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L9"
+         },
+         {
+            "category": "external",
+            "summary": "https://perldoc.perl.org/functions/rand",
+            "url": "https://perldoc.perl.org/functions/rand"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2024-56370 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-56370"
+         }
+      ],
+      "title": "Net-Xero vulnerability",
+      "tracking": {
+         "current_release_date": "2025-04-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Net-Xero-2024-56370",
+         "initial_release_date": "2025-04-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-04-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Net-Xero greater than 0",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-Xero"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2024-56370",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::Xero 0.044 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.\n\nSpecifically Net::Xero uses the Data::Random library which specifically states that it is \"Useful mostly for test programs\". Data::Random uses the rand() function.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

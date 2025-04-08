@@ -1,0 +1,146 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "WebService::Xero 0.11 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.  Specifically WebService::Xero uses the Data::Random library which specifically states that it is \"Useful mostly for test programs\". Data::Random uses the rand() function.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-WebService-Xero-2024-52322 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-webservice-xero-2024-52322.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BAREFOOT/Data-Random-0.13/source/lib/Data/Random.pm#L537",
+            "url": "https://metacpan.org/release/BAREFOOT/Data-Random-0.13/source/lib/Data/Random.pm#L537"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent.pm#L17",
+            "url": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent.pm#L17"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent.pm#L178",
+            "url": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent.pm#L178"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent/PublicApplication.pm#L13",
+            "url": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent/PublicApplication.pm#L13"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent/PublicApplication.pm#L93",
+            "url": "https://metacpan.org/release/LOCALSHOP/WebService-Xero-0.11/source/lib/WebService/Xero/Agent/PublicApplication.pm#L93"
+         },
+         {
+            "category": "external",
+            "summary": "https://perldoc.perl.org/functions/rand",
+            "url": "https://perldoc.perl.org/functions/rand"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2024-52322 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52322"
+         }
+      ],
+      "title": "WebService-Xero vulnerability",
+      "tracking": {
+         "current_release_date": "2025-04-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-WebService-Xero-2024-52322",
+         "initial_release_date": "2025-04-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-04-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "WebService-Xero greater than 0",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "WebService-Xero"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2024-52322",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "WebService::Xero 0.11 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.\n\nSpecifically WebService::Xero uses the Data::Random library which specifically states that it is \"Useful mostly for test programs\". Data::Random uses the rand() function.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -150,10 +150,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2010-1679",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "Directory traversal vulnerability in dpkg-source in dpkg before 1.14.31 and 1.15.x allows user-assisted remote attackers to modify arbitrary files via directory traversal sequences in a patch for a source-format 3.0 package.",
                "title": "Vulnerability Description"
             }
          ],
@@ -164,7 +168,19 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

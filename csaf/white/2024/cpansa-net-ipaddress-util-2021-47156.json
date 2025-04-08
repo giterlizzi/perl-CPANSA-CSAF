@@ -100,6 +100,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2021-47156",
+         "cwe": {
+            "id": "CWE-1287",
+            "name": "Improper Validation of Specified Type of Input"
+         },
          "notes": [
             {
                "category": "description",
@@ -114,7 +118,20 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

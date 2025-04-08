@@ -1,0 +1,135 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "In Net::OAuth::Client in the Net::OAuth package before 0.29 for Perl, the default nonce is a 32-bit integer generated from the built-in rand() function, which is not cryptographically strong.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-OAuth-2025-22376 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-oauth-2025-22376.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/KGRENNAN/Net-OAuth-0.28/source/lib/Net/OAuth/Client.pm#L260",
+            "url": "https://metacpan.org/release/KGRENNAN/Net-OAuth-0.28/source/lib/Net/OAuth/Client.pm#L260"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Net-OAuth-0.29/changes",
+            "url": "https://metacpan.org/release/RRWO/Net-OAuth-0.29/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-22376 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-22376"
+         }
+      ],
+      "title": "Net-OAuth vulnerability",
+      "tracking": {
+         "current_release_date": "2025-01-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Net-OAuth-2025-22376",
+         "initial_release_date": "2025-01-03T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-01-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.29",
+                  "product": {
+                     "name": "Net-OAuth less than 0.29",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.29",
+                  "product": {
+                     "name": "Net-OAuth greater than or equal 0.29",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-OAuth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-22376",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "In Net::OAuth::Client in the Net::OAuth package before 0.29 for Perl, the default nonce is a 32-bit integer generated from the built-in rand() function, which is not cryptographically strong.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

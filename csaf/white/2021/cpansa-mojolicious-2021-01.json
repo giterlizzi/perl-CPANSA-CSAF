@@ -87,6 +87,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2021-47208",
+         "cwe": {
+            "id": "CWE-400",
+            "name": "Uncontrolled Resource Consumption"
+         },
          "notes": [
             {
                "category": "description",

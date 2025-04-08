@@ -153,10 +153,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2018-8740",
+         "cwe": {
+            "id": "CWE-476",
+            "name": "NULL Pointer Dereference"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "In SQLite through 3.22.0, databases whose schema is corrupted using a CREATE TABLE AS statement could cause a NULL pointer dereference, related to build.c and prepare.c.",
                "title": "Vulnerability Description"
             }
          ],
@@ -167,7 +171,25 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

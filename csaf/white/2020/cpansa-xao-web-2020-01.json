@@ -95,6 +95,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2020-36827",
+         "cwe": {
+            "id": "CWE-791",
+            "name": "Incomplete Filtering of Special Elements"
+         },
          "notes": [
             {
                "category": "description",
@@ -109,7 +113,20 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.4,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

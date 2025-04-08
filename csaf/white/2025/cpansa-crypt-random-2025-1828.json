@@ -1,0 +1,137 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Crypt::Random Perl package 1.05 through 1.55 may use rand() function, which is not cryptographically strong, for cryptographic functions.  If the Provider is not specified and /dev/urandom or an Entropy Gathering Daemon (egd) service is not available Crypt::Random will default to use the insecure Crypt::Random::rand provider.  In particular, Windows versions of perl will encounter this issue by default.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-Random-2025-1828 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-crypt-random-2025-1828.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-Crypt-OpenPGP/Crypt-Random/commit/1f8b29e9e89d8d083fd025152e76ec918136cc05",
+            "url": "https://github.com/perl-Crypt-OpenPGP/Crypt-Random/commit/1f8b29e9e89d8d083fd025152e76ec918136cc05"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-Crypt-OpenPGP/Crypt-Random/pull/1",
+            "url": "https://github.com/perl-Crypt-OpenPGP/Crypt-Random/pull/1"
+         },
+         {
+            "category": "external",
+            "summary": "https://perldoc.perl.org/functions/rand",
+            "url": "https://perldoc.perl.org/functions/rand"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-1828 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1828"
+         }
+      ],
+      "title": "Crypt-Random vulnerability",
+      "tracking": {
+         "current_release_date": "2025-03-11T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Crypt-Random-2025-1828",
+         "initial_release_date": "2025-03-11T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-03-11T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.05|<=1.55",
+                  "product": {
+                     "name": "Crypt-Random greater than or equal 1.05 and less than or equal 1.55",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>1.55",
+                  "product": {
+                     "name": "Crypt-Random greater than 1.55",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-Random"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-1828",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Crypt::Random Perl package 1.05 through 1.55 may use rand() function, which is not cryptographically strong, for cryptographic functions.\n\nIf the Provider is not specified and /dev/urandom or an Entropy Gathering Daemon (egd) service is not available Crypt::Random will default to use the insecure Crypt::Random::rand provider.\n\nIn particular, Windows versions of perl will encounter this issue by default.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.8,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

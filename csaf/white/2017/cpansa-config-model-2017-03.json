@@ -95,10 +95,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2017-0373",
+         "cwe": {
+            "id": "CWE-20",
+            "name": "Improper Input Validation"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "The gen_class_pod implementation in lib/Config/Model/Utils/GenClassPod.pm in Config-Model (aka libconfig-model-perl) before 2.102 has a dangerous \"use lib\" line, which allows remote attackers to have an unspecified impact via a crafted Debian package file.",
                "title": "Vulnerability Description"
             }
          ],
@@ -109,7 +113,25 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.3,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

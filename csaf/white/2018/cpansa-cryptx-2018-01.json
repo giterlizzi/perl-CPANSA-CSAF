@@ -87,6 +87,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2018-25099",
+         "cwe": {
+            "id": "CWE-347",
+            "name": "Improper Verification of Cryptographic Signature"
+         },
          "notes": [
             {
                "category": "description",
