@@ -2,18 +2,18 @@
 
 use v5.34;
 
-use Carp;
-use CPAN::Audit::DB;
+use CPANSA::DB;
 use CSAF::Util qw(tracking_id_to_well_filename);
 use CSAF;
+use Carp;
+use Log::Any qw($log);
 use Log::Any::Adapter ('Stderr');
 use MetaCPAN::Client;
 use Mojo::File qw(curfile);
-use Mojo::Util qw(trim dumper);
+use Mojo::Util qw(trim);
 use Net::NVD;
 use URI::PackageURL;
 use URI::VersionRange;
-use Data::Dumper;
 
 my $CVE_CACHE         = {};
 my @ERRORS            = ();
@@ -29,15 +29,27 @@ my $user_dist    = shift;
 my $nvd          = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
 my $mcpan        = MetaCPAN::Client->new();
 my $csaf_baseurl = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
-my $db           = CPAN::Audit::DB->db();
+my $db           = CPANSA::DB->db();
+
+$log->info('- CSAF', $CSAF::VERSION);
+$log->info('- CPANSA::DB', $CPANSA::DB::VERSION);
+$log->info('- URI::PackageURL', $URI::PackageURL::VERSION);
+
+my $TOTAL = scalar(keys %{$db->{dists}});
+
+$log->info('- Distributions in CPANSA::DB', $TOTAL);
 
 DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
+    state $idx;
+    
+    $idx++;
+
     if ($user_dist) {
-        next DIST if ($dist !~ /$user_dist/i);
+        next DIST if ($dist !~ /^$user_dist$/i);
     }
 
-    say STDERR qq{Process "$dist"};
+    $log->info(qq{[$idx/$TOTAL] Process "$dist" distribution});
 
     my $main_module = $db->{dists}{$dist}{main_module};
 
