@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Net::Xero 0.044 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.  Specifically Net::Xero uses the Data::Random library which specifically states that it is \"Useful mostly for test programs\". Data::Random uses the rand() function.",
+            "text": "Crypt::CBC versions between 1.21 and 3.04 for Perl may use the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.  This issue affects operating systems where \"/dev/urandom'\" is unavailable.  In that case, Crypt::CBC will fallback to use the insecure rand() function.",
             "title": "Vulnerability Description"
          }
       ],
@@ -25,23 +25,13 @@
       "references": [
          {
             "category": "self",
-            "summary": "CPANSA-Net-Xero-2024-56370 JSON",
-            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-xero-2024-56370.json"
+            "summary": "CPANSA-Crypt-CBC-2025-2814 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-crypt-cbc-2025-2814.json"
          },
          {
             "category": "external",
-            "summary": "https://metacpan.org/release/BAREFOOT/Data-Random-0.13/source/lib/Data/Random.pm#L537",
-            "url": "https://metacpan.org/release/BAREFOOT/Data-Random-0.13/source/lib/Data/Random.pm#L537"
-         },
-         {
-            "category": "external",
-            "summary": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L58",
-            "url": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L58"
-         },
-         {
-            "category": "external",
-            "summary": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L9",
-            "url": "https://metacpan.org/release/ELLIOTT/Net-Xero-0.44/source/lib/Net/Xero.pm#L9"
+            "summary": "https://metacpan.org/dist/Crypt-CBC/source/lib/Crypt/CBC.pm#L777",
+            "url": "https://metacpan.org/dist/Crypt-CBC/source/lib/Crypt/CBC.pm#L777"
          },
          {
             "category": "external",
@@ -55,24 +45,24 @@
          },
          {
             "category": "external",
-            "summary": "CVE-2024-56370 (NVD)",
-            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-56370"
+            "summary": "CVE-2025-2814 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2814"
          }
       ],
-      "title": "Net-Xero vulnerability",
+      "title": "Crypt-CBC vulnerability",
       "tracking": {
-         "current_release_date": "2025-04-05T00:00:00",
+         "current_release_date": "2025-04-13T00:00:00",
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
                "version": "0.25"
             }
          },
-         "id": "CPANSA-Net-Xero-2024-56370",
-         "initial_release_date": "2025-04-05T00:00:00",
+         "id": "CPANSA-Crypt-CBC-2025-2814",
+         "initial_release_date": "2025-04-13T00:00:00",
          "revision_history": [
             {
-               "date": "2025-04-05T00:00:00",
+               "date": "2025-04-13T00:00:00",
                "number": "1",
                "summary": "First release"
             }
@@ -87,21 +77,21 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/>=1.21",
                   "product": {
-                     "name": "Net-Xero greater than 0",
+                     "name": "Crypt-CBC greater than or equal 1.21",
                      "product_id": "CSAFPID-0001"
                   }
                }
             ],
             "category": "product_name",
-            "name": "Net-Xero"
+            "name": "Crypt-CBC"
          }
       ]
    },
    "vulnerabilities": [
       {
-         "cve": "CVE-2024-56370",
+         "cve": "CVE-2025-2814",
          "cwe": {
             "id": "CWE-338",
             "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
@@ -109,7 +99,7 @@
          "notes": [
             {
                "category": "description",
-               "text": "Net::Xero 0.044 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.\n\nSpecifically Net::Xero uses the Data::Random library which specifically states that it is \"Useful mostly for test programs\". Data::Random uses the rand() function.",
+               "text": "Crypt::CBC versions between 1.21 and 3.04 for Perl may use the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.\n\nThis issue affects operating systems where \"/dev/urandom'\" is unavailable.  In that case, Crypt::CBC will fallback to use the insecure rand() function.",
                "title": "Vulnerability Description"
             }
          ],
@@ -121,9 +111,9 @@
          "scores": [
             {
                "cvss_v3": {
-                  "baseScore": 6.5,
+                  "baseScore": 4.0,
                   "baseSeverity": "MEDIUM",
-                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
                   "version": "3.1"
                },
                "products": [

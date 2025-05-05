@@ -75,10 +75,18 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=2.12",
+                  "name": "vers:cpan/<=2.12",
                   "product": {
-                     "name": "CPAN-Checksums greater than or equal 2.12",
+                     "name": "CPAN-Checksums less than or equal 2.12",
                      "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.13",
+                  "product": {
+                     "name": "CPAN-Checksums greater than or equal 2.13",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
@@ -98,6 +106,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

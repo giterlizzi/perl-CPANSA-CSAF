@@ -88,9 +88,9 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.|15",
+                  "name": "vers:cpan/>=0.15",
                   "product": {
-                     "name": "EasyTCP greater than or equal 0.",
+                     "name": "EasyTCP greater than or equal 0.15",
                      "product_id": "CSAFPID-0002"
                   }
                }

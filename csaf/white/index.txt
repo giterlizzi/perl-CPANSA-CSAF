@@ -2,6 +2,7 @@
 2025/cpansa-web-api-2024-57868.json
 2025/cpansa-sub-handlesvia-2025-30673.json
 2025/cpansa-string-compare-constanttime-2024-13939.json
+2025/cpansa-perl-2024-56406.json
 2025/cpansa-net-xero-2024-56370.json
 2025/cpansa-net-oauth-2025-22376.json
 2025/cpansa-net-dropbox-api-2024-58036.json
@@ -14,6 +15,7 @@
 2025/cpansa-data-entropy-2025-1860.json
 2025/cpansa-crypt-salt-2025-1805.json
 2025/cpansa-crypt-random-2025-1828.json
+2025/cpansa-crypt-cbc-2025-2814.json
 2025/cpansa-amon2-auth-site-line-2024-57835.json
 2024/cpansa-spreadsheet-parsexlsx-2024-23525.json
 2024/cpansa-spreadsheet-parsexlsx-2024-22368.json
