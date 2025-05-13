@@ -72,6 +72,14 @@
                      "name": "Mojolicious greater than 1.74 and less than 8.65",
                      "product_id": "CSAFPID-0001"
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=8.65",
+                  "product": {
+                     "name": "Mojolicious greater than or equal 8.65",
+                     "product_id": "CSAFPID-0002"
+                  }
                }
             ],
             "category": "product_name",
@@ -90,6 +98,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

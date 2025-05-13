@@ -9,6 +9,62 @@
       "entry": [
          {
             "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58135.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Mojolicious-2024-58135",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58135.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58135.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58135.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-05-03T00:00:00",
+            "title": "Mojolicious vulnerability",
+            "updated": "2025-05-03T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58134.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Mojolicious-2024-58134",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58134.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58134.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-2024-58134.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-05-03T00:00:00",
+            "title": "Mojolicious vulnerability",
+            "updated": "2025-05-03T00:00:00"
+         },
+         {
+            "content": {
                "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-perl-2024-56406.json",
                "type": "application/json"
             },
@@ -12952,6 +13008,6 @@
          }
       ],
       "title": "CPANSA CSAF feed (TLP:WHITE)",
-      "updated": "2025-05-05T23:43:16"
+      "updated": "2025-05-09T17:51:08"
    }
 }
