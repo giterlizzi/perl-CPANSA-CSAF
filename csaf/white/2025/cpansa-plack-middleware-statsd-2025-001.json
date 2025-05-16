@@ -1,0 +1,95 @@
+{
+   "document": {
+      "category": "csaf_informational_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Stats for request methods are only counted for ASCII words, anything else is counted as 'other'. Stats for content types are only counted for well-formed types.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Plack-Middleware-Statsd-2025-001 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-plack-middleware-statsd-2025-001.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Plack-Middleware-Statsd/security/advisories/GHSA-m5mc-hhfv-6rjf",
+            "url": "https://github.com/robrwo/Plack-Middleware-Statsd/security/advisories/GHSA-m5mc-hhfv-6rjf"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/briandfoy/cpan-security-advisory/issues/198",
+            "url": "https://github.com/briandfoy/cpan-security-advisory/issues/198"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/dist/Plack-Middleware-Statsd/changes",
+            "url": "https://metacpan.org/dist/Plack-Middleware-Statsd/changes"
+         }
+      ],
+      "title": "Plack-Middleware-Statsd vulnerability",
+      "tracking": {
+         "current_release_date": "2025-05-13T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Plack-Middleware-Statsd-2025-001",
+         "initial_release_date": "2025-05-13T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-05-13T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.8.0",
+                  "product": {
+                     "name": "Plack-Middleware-Statsd less than 0.8.0",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.8.0",
+                  "product": {
+                     "name": "Plack-Middleware-Statsd greater than or equal 0.8.0",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Plack-Middleware-Statsd"
+         }
+      ]
+   }
+}
