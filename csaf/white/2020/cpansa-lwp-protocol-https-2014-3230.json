@@ -95,6 +95,14 @@
                      "name": "LWP-Protocol-https greater than or equal 6.04 and less than or equal 6.06",
                      "product_id": "CSAFPID-0001"
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>6.06",
+                  "product": {
+                     "name": "LWP-Protocol-https greater than 6.06",
+                     "product_id": "CSAFPID-0002"
+                  }
                }
             ],
             "category": "product_name",
@@ -117,6 +125,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

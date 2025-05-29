@@ -132,6 +132,14 @@
                      "name": "Capture-Tiny less than 0.24",
                      "product_id": "CSAFPID-0001"
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.24",
+                  "product": {
+                     "name": "Capture-Tiny greater than or equal 0.24",
+                     "product_id": "CSAFPID-0002"
+                  }
                }
             ],
             "category": "product_name",
@@ -154,6 +162,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

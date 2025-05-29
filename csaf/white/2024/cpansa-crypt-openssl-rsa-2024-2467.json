@@ -82,10 +82,18 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<0.35",
                   "product": {
-                     "name": "Crypt-OpenSSL-RSA greater than 0",
+                     "name": "Crypt-OpenSSL-RSA less than 0.35",
                      "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.35",
+                  "product": {
+                     "name": "Crypt-OpenSSL-RSA greater than or equal 0.35",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
@@ -109,6 +117,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

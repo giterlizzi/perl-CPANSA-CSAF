@@ -1,0 +1,356 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "BSON::XS versions 0.8.4 and earlier for Perl includes a bundled libbson 1.1.7, which has several vulnerabilities. Those include CVE-2017-14227, CVE-2018-16790, CVE-2023-0437, CVE-2024-6381, CVE-2024-6383, and CVE-2025-0755. BSON-XS was the official Perl XS implementation of MongoDB's BSON serialization, but this distribution has reached its end of life as of August 13, 2020 and is no longer supported.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-BSON-XS-2025-40906 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-bson-xs-2025-40906.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2025/05/msg00012.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2025/05/msg00012.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.mongodb.com/community/forums/t/mongodb-perl-driver-end-of-life/7890",
+            "url": "https://www.mongodb.com/community/forums/t/mongodb-perl-driver-end-of-life/7890"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40906 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40906"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2017-14227 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14227"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2018-16790 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-16790"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2023-0437 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0437"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2024-6381 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6381"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2024-6383 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6383"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-0755 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0755"
+         }
+      ],
+      "title": "BSON-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2025-05-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-BSON-XS-2025-40906",
+         "initial_release_date": "2025-05-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-05-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=0.8.4",
+                  "product": {
+                     "name": "BSON-XS less than or equal 0.8.4",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "BSON-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40906",
+         "cwe": {
+            "id": "CWE-1104",
+            "name": "Use of Unmaintained Third Party Components"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "BSON::XS versions 0.8.4 and earlier for Perl includes a bundled libbson 1.1.7, which has several vulnerabilities.\n\nThose include CVE-2017-14227, CVE-2018-16790, CVE-2023-0437, CVE-2024-6381, CVE-2024-6383, and CVE-2025-0755. \n\nBSON-XS was the official Perl XS implementation of MongoDB's BSON serialization, but this distribution has reached its end of life as of August 13, 2020 and is no longer supported.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      },
+      {
+         "cve": "CVE-2017-14227",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "In MongoDB libbson 1.7.0, the bson_iter_codewscope function in bson-iter.c miscalculates a bson_utf8_validate length argument, which allows remote attackers to cause a denial of service (heap-based buffer over-read in the bson_utf8_validate function in bson-utf8.c), as demonstrated by bson-to-json.c.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      },
+      {
+         "cve": "CVE-2018-16790",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "_bson_iter_next_internal in bson-iter.c in libbson 1.12.0, as used in MongoDB mongo-c-driver and other products, has a heap-based buffer over-read via a crafted bson buffer.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 8.1,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      },
+      {
+         "cve": "CVE-2023-0437",
+         "cwe": {
+            "id": "CWE-835",
+            "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "When calling bson_utf8_validate on some inputs a loop with an exit condition that cannot be reached may occur, i.e. an infinite loop. This issue affects All MongoDB C Driver versions prior to versions 1.25.0.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      },
+      {
+         "cve": "CVE-2024-6381",
+         "cwe": {
+            "id": "CWE-680",
+            "name": "Integer Overflow to Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "The bson_strfreev function in the MongoDB C driver library may be susceptible to an integer overflow where the function will try to free memory at a negative offset. This may result in memory corruption. This issue affected libbson versions prior to 1.26.2",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 4.0,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      },
+      {
+         "cve": "CVE-2024-6383",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "The bson_string_append function in MongoDB C Driver may be vulnerable to a buffer overflow where the function might attempt to allocate too small of buffer and may lead to memory corruption of neighbouring heap memory. This issue affects libbson versions prior to 1.27.1",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      },
+      {
+         "cve": "CVE-2025-0755",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "The various bson_append functions in the MongoDB C driver library may be susceptible to buffer overflow when performing operations that could result in a final BSON document which exceeds the maximum allowable size (INT32_MAX), resulting in a segmentation fault and possible application crash. This issue affected libbson versions prior to 1.27.5, MongoDB Server v8.0 versions prior to 8.0.1 and MongoDB Server v7.0 versions prior to 7.0.16",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.4,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

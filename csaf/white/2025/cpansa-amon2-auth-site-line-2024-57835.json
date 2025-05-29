@@ -1,5 +1,8 @@
 {
    "document": {
+      "aggregate_severity": {
+         "text": "moderate"
+      },
       "category": "csaf_security_advisory",
       "csaf_version": "2.0",
       "distribution": {
@@ -50,6 +53,11 @@
          },
          {
             "category": "external",
+            "summary": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-003449.html",
+            "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-003449.html"
+         },
+         {
+            "category": "external",
             "summary": "CVE-2024-57835 (NVD)",
             "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57835"
          }
@@ -82,10 +90,18 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<0.05",
                   "product": {
-                     "name": "Amon2-Auth-Site-LINE greater than 0",
+                     "name": "Amon2-Auth-Site-LINE less than 0.05",
                      "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.05",
+                  "product": {
+                     "name": "Amon2-Auth-Site-LINE greater than or equal 0.05",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
@@ -109,6 +125,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]
