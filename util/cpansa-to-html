@@ -117,6 +117,7 @@ $index_file->spew(
         .severity-medium { background-color: #fd7e14 !important; }
         .severity-moderate { background-color: #fd7e14 !important; }
         .severity-low { background-color: #ffc107 !important; }
+        .severity-minor { background-color: #ffc107 !important; }
         
         .navbar-brand img {
             height: 30px;
