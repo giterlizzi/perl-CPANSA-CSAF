@@ -47,6 +47,7 @@ jobs:
         run: |
           mkdir _site
           perl util/cpansa-to-html --csaf-index-file csaf/white/index.txt --output-directory _site
+          cp util/templates/app.* _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

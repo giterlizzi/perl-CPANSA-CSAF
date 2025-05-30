@@ -101,30 +101,13 @@ $index_file->spew(
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" charset="utf-8">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css" charset="utf-8">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css" charset="utf-8">    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css" charset="utf-8"> 
+    <link rel="stylesheet" href="app.css" charset="utf-8"> 
+    <meta charset="utf-8" />
     <title>CPAN Security Advisories</title>
-    <style>
-        .severity {
-            color: #fff;
-            font-weight: bold;
-            padding-left: .20em;
-            padding-right: .20em; 
-            display: inline-block;
-            border-radius: 5px;
-        }
-        .severity-critical { background-color: #343a40 !important; }
-        .severity-high { background-color: #dc3545 !important; }
-        .severity-medium { background-color: #fd7e14 !important; }
-        .severity-moderate { background-color: #fd7e14 !important; }
-        .severity-low { background-color: #ffc107 !important; }
-        .severity-minor { background-color: #ffc107 !important; }
-        
-        .navbar-brand img {
-            height: 30px;
-        }
-    </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
     <nav class="navbar sticky-top bg-light border-bottom shadow-sm mb-5">
@@ -169,7 +152,17 @@ $index_file->spew(
             </li>
         </ul>
 
-        <table class="table table-striped" data-order='[[2,"desc"]]' data-page-length="25">
+        <h4>Advisories</h4>
+        <div class="row">
+            <div class="col-sm-9">
+                <div id="date-chart" class="chart-container"></div>
+            </div>
+            <div class="col-sm-3">
+                <div id="severity-chart" class="chart-container"></div>
+            </div>
+        </div>
+
+        <table id="cpansa-table" class="table table-striped" data-order='[[2,"desc"]]' data-page-length="25">
             <thead>
                 <tr>
                     <th># CPANSA ID</th>
@@ -214,11 +207,6 @@ $index_file->spew(
             </svg> CPANSA-CSAF - <a href="https://github.com/giterlizzi/perl-CPANSA-CSAF" target="_blank" rel="nofollow noopener" class="link-underline-light">https://github.com/giterlizzi/perl-CPANSA-CSAF</a>
         </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            new DataTable('table');
-        });
-    </script>
 </body>
 </html>
 EOF
