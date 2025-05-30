@@ -261,7 +261,7 @@
       h5 { margin-top: 1em; }
   </style>
 <body>
-  <nav class="navbar sticky-top bg-white border-bottom shadow-sm mb-5">
+  <nav class="navbar sticky-top bg-light border-bottom shadow-sm mb-5">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         CPAN <strong class="text-danger">::</strong> Security Advisories
