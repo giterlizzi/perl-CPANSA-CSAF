@@ -18,7 +18,8 @@ Repository structure:
 - https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html
 - https://github.com/briandfoy/cpan-security-advisory
 - https://github.com/giterlizzi/perl-CSAF
+- https://giterlizzi.github.io
 
 ## Copyright
 
-- Copyright 2023-2024 © Giuseppe Di Terlizzi
+- Copyright 2023-2025 © Giuseppe Di Terlizzi
