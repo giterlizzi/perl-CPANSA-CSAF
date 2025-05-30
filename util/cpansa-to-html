@@ -75,7 +75,7 @@ foreach (@csaf) {
 
     say STDERR "    Render CSAF document in HTML";
 
-    my $csaf_html_content = eval { $csaf->render(format => 'html') };
+    my $csaf_html_content = eval { $csaf->render(format => 'html', template => 'util/templates/cpansec.tt2') };
 
     if ($@) {
         say STDERR "    ERROR - $@";
@@ -98,64 +98,126 @@ $index_file->spew(
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/gutenberg-css" charset="utf-8">
-  <link rel="stylesheet" href="https://unpkg.com/gutenberg-css/dist/themes/modern.min.css" charset="utf-8">
-  <meta charset="utf-8" />
-  <title>CPAN Security Advisories</title>
-  <style>
-    .severity {
-        color: #fff;
-        font-weight: bold;
-        padding-left: .20em;
-        padding-right: .20em; 
-        display: inline-block;
-        border-radius: 5px;
-    }
-    .severity-critical { background-color: #343a40 !important; }
-    .severity-high { background-color: #dc3545 !important; }
-    .severity-medium { background-color: #fd7e14 !important; }
-    .severity-low { background-color: #ffc107 !important; }
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css" charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css" charset="utf-8">    <meta charset="utf-8" />
+    <title>CPAN Security Advisories</title>
+    <style>
+        .severity {
+            color: #fff;
+            font-weight: bold;
+            padding-left: .20em;
+            padding-right: .20em; 
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .severity-critical { background-color: #343a40 !important; }
+        .severity-high { background-color: #dc3545 !important; }
+        .severity-medium { background-color: #fd7e14 !important; }
+        .severity-moderate { background-color: #fd7e14 !important; }
+        .severity-low { background-color: #ffc107 !important; }
+        
+        .navbar-brand img {
+            height: 30px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
 </head>
 <body>
-  <h1>CPAN Security Advisories</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th># CPANSA ID</th>
-        <th>Severity</th>
-        <th>Date</th>
-        <th>CVEs</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
-    % foreach my $item ($items->each) {
-      <tr>
-        <th>
-            <a href="<%= $item->{csaf_html_path} %>"><%= $item->{csaf_id} %></a>
-        </th>
-        <td>
-        % if ($item->{severity}) {
-            <span class="severity severity-<%= lc $item->{severity} %>"><%= ucfirst $item->{severity} %></span>
-        % }
-        </td>
-        <td>
-            <%= $item->{current_date}->date %>
-        </td>
-        <td>
-        % foreach my $cve ($item->{cves}->each) {
-            <a href="https://nvd.nist.gov/vuln/detail/<%= $cve %>"><%= $cve %></a>
-        % }
-        </td>
-        <td>
-            <a href="<%= $item->{csaf_url} %>">CSAF</a>
-        </td>
-      </tr>
-    % }
-    </tbody>
-  </table>
+    <nav class="navbar sticky-top bg-white border-bottom shadow-sm mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                CPAN <strong class="text-danger">::</strong> Security Advisories
+            </a>
+        </div>
+    </nav>
+    <main class="container">
+        <h1>CPAN Security Advisories</h1>
+        <p>
+            This site provides human-readable HTML access to all <em>CPAN Security Advisories (CPANSA)</em>, converted from the <strong>CSAF 2.0</strong> standard (<a href="https://www.csaf.io" target="_blank" rel="nofollow noopener">https://www.csaf.io</a>). Each advisory includes detailed information about vulnerabilities affecting CPAN modules, along with associated CVEs, CVSS scores, and links to external resources for further context.
+        </p>
+        <p>
+            Each advisory includes:
+            <ul>
+                <li>A description of the vulnerability</li>
+                <li>The affected CPAN distribution</li>
+                <li>Related CVEs with CVSS severity scores</li>
+                <li>Links to official sources and references</li>
+                <li>Direct access to the original CSAF <samp class="border rounded p-1">.json</samp> file</li>
+            </ul>
+        </p>
+        <p>All data is automatically extracted and updated from the <a href="https://metacpan.org/pod/CPANSA::DB" target="_blank" rel="nofollow noopener" class="font-monospace">CPANSA::DB</a> distribution database.</p>
+        
+        <h4>OASIS CSAF 2.0 Standard</h4>
+        <p>
+            CSAF is a standard for machine-readable security advisories developed by the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=csaf" target="_blank" rel="nofollow noopener">OASIS CSAF Technical Committee</a>). CSAF enables individuals and organizations to successfully disclose and consume security advisories in machine-readable format. The standard also specifies the distribution and discovery of CSAF documents. The CSAF Security Advisory files found in this repository were designed following the CSAF v2.0 standard published by (<a href="https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html" target="_blank" rel="nofollow noopener">OASIS Open</a>).
+        </p>
+
+        <h4>CPANSA CSAF Feed</h4>
+        <ul>
+            <li>
+                <a href="https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/refs/heads/develop/csaf/white/cpansa-csaf-feed-tlp-white.json" target="_blank" rel="nofollow noopener"><span class="font-monospace">cpansa-csaf-feed-tlp-white.json</span> - <abbr title="Resource-Oriented Lightweight Information Exchange">ROLIE</abbr> feed
+            </li>
+            <li>
+                <a href="https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/refs/heads/develop/csaf/white/index.txt"><span class="font-monospace">index.txt</span> - Index of CSAF documents</a>
+            </li>
+            <li>
+                <a href="https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/refs/heads/develop/csaf/white/changes.csv" target="_blank" rel="nofollow noopener"><span class="font-monospace">changes.csv</span> - List of changes</a>
+            </li>
+        </ul>
+
+        <table class="table table-striped" data-order='[[2,"desc"]]' data-page-length="25">
+            <thead>
+                <tr>
+                    <th># CPANSA ID</th>
+                    <th>Severity</th>
+                    <th>Date</th>
+                    <th>CVEs</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+            % foreach my $item ($items->each) {
+                <tr>
+                    <th>
+                        <a href="<%= $item->{csaf_html_path} %>"><%= $item->{csaf_id} %></a>
+                    </th>
+                    <td>
+                    % if ($item->{severity}) {
+                        <span class="severity severity-<%= lc $item->{severity} %>"><%= ucfirst $item->{severity} %></span>
+                    % }
+                    </td>
+                    <td>
+                        <%= $item->{current_date}->date %>
+                    </td>
+                    <td>
+                    % foreach my $cve ($item->{cves}->each) {
+                        <a href="https://nvd.nist.gov/vuln/detail/<%= $cve %>" target="_blank" rel="nofollow noopener"><%= $cve %></a>
+                    % }
+                    </td>
+                    <td>
+                        <a href="<%= $item->{csaf_url} %>">CSAF</a>
+                    </td>
+                </tr>
+            % }
+            </tbody>
+        </table>
+    </main>
+    <footer class="border bg-light mt-5 py-4">
+        <div class="container">
+      
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg> CPANSA-CSAF - <a href="https://github.com/giterlizzi/perl-CPANSA-CSAF" target="_blank" rel="nofollow noopener" class="link-underline-light">https://github.com/giterlizzi/perl-CPANSA-CSAF</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            new DataTable('table');
+        });
+    </script>
 </body>
 </html>
 EOF
