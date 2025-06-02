@@ -40,45 +40,44 @@
         <tbody>
         [% FOREACH score IN vulnerability.scores.each %]
           [% FOREACH score_product_id IN score.products %]
-
             [% IF score_product_id == product_id %]
-            <tr>
-              <td>[% score.cvss_v3.version %]</td>
-              <td>
-                <a href="https://www.first.org/cvss/calculator/[% score.cvss_v3.version %]#[% score.cvss_v3.vectorString %]" target="_blank" rel="nofollow noopener"><span class="font-monospace">[% score.cvss_v3.vectorString %]</span></a>
-              </td>
-              <td>
-                <span class="severity severity-[% score.cvss_v3.baseSeverity.lower %]">
-                  [% score.cvss_v3.baseScore | format('%.1f') %]
-                </span>
-              </td>
-              <td>
-                <span class="severity severity-[% score.cvss_v3.baseSeverity.lower %]">
-                  [% score.cvss_v3.baseSeverity.lower.ucfirst %]
-                </span>
-              </td>
-            </tr>
+              [% IF score.cvss_v3.version %]
+              <tr>
+                <td>[% score.cvss_v3.version %]</td>
+                <td>
+                  <a href="https://www.first.org/cvss/calculator/[% score.cvss_v3.version %]#[% score.cvss_v3.vectorString %]" target="_blank" rel="nofollow noopener"><span class="font-monospace">[% score.cvss_v3.vectorString %]</span></a>
+                </td>
+                <td>
+                  <span class="severity severity-[% score.cvss_v3.baseSeverity.lower %]">
+                    [% score.cvss_v3.baseScore | format('%.1f') %]
+                  </span>
+                </td>
+                <td>
+                  <span class="severity severity-[% score.cvss_v3.baseSeverity.lower %]">
+                    [% score.cvss_v3.baseSeverity.lower.ucfirst %]
+                  </span>
+                </td>
+              </tr>
+              [% END %]
+              [% IF score.cvss_v2.version %]
+              <tr>
+                <td>[% score.cvss_v2.version %]</td>
+                <td>
+                  <span class="font-monospace">[% score.cvss_v2.vectorString %]</span>
+                </td>
+                <td>
+                  <span class="severity severity-[% PROCESS cvss2_severity base_score=score.cvss_v2.baseScore FILTER lower %]">
+                    [% score.cvss_v2.baseScore | format('%.1f') %]
+                  </span>
+                </td>
+                <td>
+                  <span class="severity severity-[% PROCESS cvss2_severity base_score=score.cvss_v2.baseScore FILTER lower %]">
+                    [% PROCESS cvss2_severity base_score=score.cvss_v2.baseScore FILTER lower FILTER ucfirst %]
+                  </span>
+                </td>
+              </tr>
+              [% END %]
             [% END %]
-
-            [% IF score.cvss_v2.version %]
-            <tr>
-              <td>[% score.cvss_v2.version %]</td>
-              <td>
-                <span class="font-monospace">[% score.cvss_v2.vectorString %]</span>
-              </td>
-              <td>
-                <span class="severity severity-[% PROCESS cvss2_severity base_score=score.cvss_v2.baseScore FILTER lower %]">
-                  [% score.cvss_v2.baseScore | format('%.1f') %]
-                </span>
-              </td>
-              <td>
-                <span class="severity severity-[% PROCESS cvss2_severity base_score=score.cvss_v2.baseScore FILTER lower %]">
-                  [% PROCESS cvss2_severity base_score=score.cvss_v2.baseScore FILTER lower FILTER ucfirst %]
-                </span>
-              </td>
-            </tr>
-            [% END %]
-
           [% END %]
         [% END %]
         </tbody>
