@@ -1,0 +1,397 @@
+{
+   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+   "bomFormat": "CycloneDX",
+   "components": [
+      {
+         "authors": [
+            {
+               "email": "swartz@pobox.com",
+               "name": "Jonathan Swartz"
+            },
+            {
+               "email": "dagolden@cpan.org",
+               "name": "David Golden"
+            },
+            {
+               "email": "preaction@cpan.org",
+               "name": "Doug Bell"
+            },
+            {
+               "email": "daniel@rimspace.net",
+               "name": "Daniel Pittman"
+            },
+            {
+               "email": "sdt@cpan.org",
+               "name": "Stephen Thirlwall"
+            }
+         ],
+         "bom-ref": "pkg:cpan/PREACTION/Log-Any@1.718",
+         "description": "Bringing loggers and listeners together",
+         "externalReferences": [
+            {
+               "type": "vcs",
+               "url": "https://github.com/preaction/Log-Any.git"
+            },
+            {
+               "type": "issue-tracker",
+               "url": "https://github.com/preaction/Log-Any/issues"
+            }
+         ],
+         "hashes": [
+            {
+               "alg": "SHA-256",
+               "content": "b65b7dd0f7d29e05f49a8bba6ad41083d9647ed7c2b60d8b0115b06e796ee19a"
+            },
+            {
+               "alg": "MD5",
+               "content": "27d0f3a1e0ce7d1bdfdf652eae00af72"
+            }
+         ],
+         "licenses": [
+            {
+               "license": {
+                  "id": "Artistic-1.0-Perl"
+               }
+            }
+         ],
+         "name": "Log-Any",
+         "purl": "pkg:cpan/PREACTION/Log-Any@1.718",
+         "type": "library",
+         "version": "1.718"
+      },
+      {
+         "authors": [
+            {
+               "email": "xsawyerx@cpan.org",
+               "name": "Sawyer X"
+            },
+            {
+               "email": "mickey@cpan.org",
+               "name": "Mickey Nasriachi"
+            }
+         ],
+         "bom-ref": "pkg:cpan/MICKEY/MetaCPAN-Client@2.033000",
+         "description": "A comprehensive, DWIM-featured client to the MetaCPAN API",
+         "externalReferences": [
+            {
+               "type": "vcs",
+               "url": "https://github.com/metacpan/metacpan-client.git"
+            },
+            {
+               "type": "issue-tracker",
+               "url": "https://github.com/metacpan/metacpan-client/issues"
+            }
+         ],
+         "hashes": [
+            {
+               "alg": "SHA-256",
+               "content": "6574147140119c114d1a9f5b92c34a0c2421ff69968137329afd1353b7a11323"
+            },
+            {
+               "alg": "MD5",
+               "content": "6ba883c9eb88d662c4711e1150816bd6"
+            }
+         ],
+         "licenses": [
+            {
+               "license": {
+                  "id": "Artistic-1.0-Perl"
+               }
+            }
+         ],
+         "name": "MetaCPAN-Client",
+         "purl": "pkg:cpan/MICKEY/MetaCPAN-Client@2.033000",
+         "type": "library",
+         "version": "2.033000"
+      },
+      {
+         "authors": [
+            {
+               "email": "gdt@cpan.org",
+               "name": "Giuseppe Di Terlizzi"
+            }
+         ],
+         "bom-ref": "pkg:cpan/GDT/URI-PackageURL@2.20",
+         "description": "Perl extension for Package URL (aka \"purl\")",
+         "externalReferences": [
+            {
+               "type": "vcs",
+               "url": "git://github.com/giterlizzi/perl-URI-PackageURL"
+            },
+            {
+               "type": "issue-tracker",
+               "url": "https://github.com/giterlizzi/perl-URI-PackageURL/issues"
+            }
+         ],
+         "hashes": [
+            {
+               "alg": "SHA-256",
+               "content": "d32362f1db89bec1af20f06d4e6ef026dbce767f0dae6e5212b702b3e27cb340"
+            },
+            {
+               "alg": "MD5",
+               "content": "23888aac4de74335ea7959ceeb07dcc8"
+            }
+         ],
+         "licenses": [
+            {
+               "license": {
+                  "id": "Artistic-2.0"
+               }
+            }
+         ],
+         "name": "URI-PackageURL",
+         "purl": "pkg:cpan/GDT/URI-PackageURL@2.20",
+         "type": "library",
+         "version": "2.20"
+      },
+      {
+         "authors": [
+            {
+               "email": "briandfoy@pobox.com",
+               "name": "brian d foy"
+            }
+         ],
+         "bom-ref": "pkg:cpan/BRIANDFOY/CPANSA-DB@20250521.001",
+         "description": "the CPAN Security Advisory data as a Perl data structure, mostly for CPAN::Audit",
+         "externalReferences": [
+            {
+               "type": "vcs",
+               "url": "https://github.com/briandfoy/cpan-security-advisory"
+            },
+            {
+               "type": "issue-tracker",
+               "url": "https://github.com/briandfoy/cpan-security-advisory/issues"
+            }
+         ],
+         "hashes": [
+            {
+               "alg": "SHA-256",
+               "content": "1047f62b87b6c01f41c14560e00968fa6c7b53f66843a2c5aa27725fffcbd342"
+            },
+            {
+               "alg": "MD5",
+               "content": "8420bd595aa18269ec9bbe124f16c921"
+            }
+         ],
+         "licenses": [
+            {
+               "license": {
+                  "id": "Artistic-2.0"
+               }
+            }
+         ],
+         "name": "CPANSA-DB",
+         "purl": "pkg:cpan/BRIANDFOY/CPANSA-DB@20250521.001",
+         "type": "library",
+         "version": "20250521.001"
+      },
+      {
+         "authors": [
+            {
+               "email": "garu@cpan.org",
+               "name": "Breno G. de Oliveira"
+            }
+         ],
+         "bom-ref": "pkg:cpan/GARU/Net-NVD@v0.0.3",
+         "description": "query CVE data from NIST's NVD (National Vulnerability Database)",
+         "externalReferences": [
+            {
+               "type": "vcs",
+               "url": "https://github.com/garu/Net-NVD"
+            },
+            {
+               "type": "issue-tracker",
+               "url": "https://github.com/garu/Net-NVD/issues/"
+            }
+         ],
+         "hashes": [
+            {
+               "alg": "SHA-256",
+               "content": "b8a657120f94b0eed1d8ebdb0388bc3360d28fa5f0f8236b9cd8cdae8befe418"
+            },
+            {
+               "alg": "MD5",
+               "content": "eacd8d6b45dada5de579dac6c61c3c3e"
+            }
+         ],
+         "licenses": [
+            {
+               "license": {
+                  "id": "Artistic-1.0-Perl"
+               }
+            }
+         ],
+         "name": "Net-NVD",
+         "purl": "pkg:cpan/GARU/Net-NVD@v0.0.3",
+         "type": "library",
+         "version": "v0.0.3"
+      },
+      {
+         "authors": [
+            {
+               "email": "gdt@cpan.org",
+               "name": "Giuseppe Di Terlizzi"
+            }
+         ],
+         "bom-ref": "pkg:cpan/GDT/CSAF@0.25",
+         "description": "Common Security Advisory Framework",
+         "externalReferences": [
+            {
+               "type": "vcs",
+               "url": "git://github.com/giterlizzi/perl-CSAF"
+            },
+            {
+               "type": "issue-tracker",
+               "url": "https://github.com/giterlizzi/perl-CSAF/issues"
+            }
+         ],
+         "hashes": [
+            {
+               "alg": "SHA-256",
+               "content": "a91eb3407622e6358d146d5f69c3d0883ed06a63aa3913bbc6a82c3c6e8ff68a"
+            },
+            {
+               "alg": "MD5",
+               "content": "46201f73770af396a1666b71f808f87b"
+            }
+         ],
+         "licenses": [
+            {
+               "license": {
+                  "id": "Artistic-2.0"
+               }
+            }
+         ],
+         "name": "CSAF",
+         "purl": "pkg:cpan/GDT/CSAF@0.25",
+         "type": "library",
+         "version": "0.25"
+      },
+      {
+         "authors": [
+            {
+               "email": "sri@cpan.org",
+               "name": "Sebastian Riedel"
+            }
+         ],
+         "bom-ref": "pkg:cpan/SRI/Mojolicious@9.40",
+         "description": "Real-time web framework",
+         "externalReferences": [
+            {
+               "type": "vcs",
+               "url": "https://github.com/mojolicious/mojo.git"
+            },
+            {
+               "type": "issue-tracker",
+               "url": "https://github.com/mojolicious/mojo/issues"
+            }
+         ],
+         "hashes": [
+            {
+               "alg": "SHA-256",
+               "content": "4d45f4b51cce46b3896f2e27b2447e52a8efccb1ebea5e6b3885ea211c08480b"
+            },
+            {
+               "alg": "MD5",
+               "content": "7e446932dfeaa956e61292362696cda8"
+            }
+         ],
+         "licenses": [
+            {
+               "license": {
+                  "id": "Artistic-2.0"
+               }
+            }
+         ],
+         "name": "Mojolicious",
+         "purl": "pkg:cpan/SRI/Mojolicious@9.40",
+         "type": "library",
+         "version": "9.40"
+      }
+   ],
+   "dependencies": [
+      {
+         "dependsOn": [
+            "pkg:cpan/PREACTION/Log-Any@1.718",
+            "pkg:cpan/MICKEY/MetaCPAN-Client@2.033000",
+            "pkg:cpan/GDT/URI-PackageURL@2.20",
+            "pkg:cpan/BRIANDFOY/CPANSA-DB@20250521.001",
+            "pkg:cpan/GARU/Net-NVD@v0.0.3",
+            "pkg:cpan/GDT/CSAF@0.25",
+            "pkg:cpan/SRI/Mojolicious@9.40"
+         ],
+         "ref": "perl-CPANSA-CSAF@develop"
+      },
+      {
+         "ref": "pkg:cpan/PREACTION/Log-Any@1.718"
+      },
+      {
+         "ref": "pkg:cpan/MICKEY/MetaCPAN-Client@2.033000"
+      },
+      {
+         "ref": "pkg:cpan/GDT/URI-PackageURL@2.20"
+      },
+      {
+         "ref": "pkg:cpan/BRIANDFOY/CPANSA-DB@20250521.001"
+      },
+      {
+         "ref": "pkg:cpan/GARU/Net-NVD@v0.0.3"
+      },
+      {
+         "ref": "pkg:cpan/GDT/CSAF@0.25"
+      },
+      {
+         "ref": "pkg:cpan/SRI/Mojolicious@9.40"
+      }
+   ],
+   "metadata": {
+      "component": {
+         "bom-ref": "perl-CPANSA-CSAF@develop",
+         "name": "perl-CPANSA-CSAF",
+         "type": "library",
+         "version": "develop"
+      },
+      "tools": [
+         {
+            "externalReferences": [
+               {
+                  "type": "website",
+                  "url": "https://metacpan.org/pod/SBOM::CycloneDX"
+               },
+               {
+                  "type": "documentation",
+                  "url": "https://metacpan.org/dist/SBOM-CycloneDX"
+               },
+               {
+                  "type": "vcs",
+                  "url": "https://github.com/giterlizzi/perl-SBOM-CycloneDX"
+               },
+               {
+                  "type": "issue-tracker",
+                  "url": "https://github.com/giterlizzi/perl-SBOM-CycloneDX/issues"
+               },
+               {
+                  "type": "license",
+                  "url": "https://github.com/giterlizzi/perl-SBOM-CycloneDX/blob/main/LICENSE"
+               },
+               {
+                  "type": "release-notes",
+                  "url": "https://github.com/giterlizzi/perl-SBOM-CycloneDX/blob/main/Changes"
+               },
+               {
+                  "type": "distribution",
+                  "url": "https://metacpan.org/dist/SBOM-CycloneDX"
+               }
+            ],
+            "name": "SBOM-CycloneDX",
+            "vendor": "CPAN",
+            "version": "1.0301"
+         }
+      ]
+   },
+   "serialNumber": "urn:uuid:fcfc9500-b81d-4508-889b-f895789a1264",
+   "specVersion": "1.6",
+   "version": 1
+}
+
