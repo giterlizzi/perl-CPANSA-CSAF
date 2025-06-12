@@ -2,21 +2,25 @@
 
 use v5.34;
 
-use CPANSA::DB;
+use Carp;
 use CSAF::Util qw(tracking_id_to_well_filename);
 use CSAF;
-use Carp;
-use Log::Any qw($log);
 use Log::Any::Adapter ('Stderr');
-use MetaCPAN::Client;
 use Mojo::File qw(curfile);
+use Mojo::Log;
+use Mojo::UserAgent;
 use Mojo::Util qw(trim);
 use Net::NVD;
 use URI::PackageURL;
 use URI::VersionRange;
 
-my $CVE_CACHE         = {};
-my @ERRORS            = ();
+my $CPANSA_URL
+    = q{https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/refs/heads/master/cpan-security-advisory.json};
+
+my $CSAF_BASEURL = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
+
+my @ERRORS = ();
+
 my %COMPARATOR_DECODE = (
     '='  => 'equal',
     '<'  => 'less than',
@@ -25,24 +29,25 @@ my %COMPARATOR_DECODE = (
     '>=' => 'greater than or equal',
 );
 
-my $user_dist    = shift;
-my $nvd          = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
-my $mcpan        = MetaCPAN::Client->new();
-my $csaf_baseurl = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
-my $db           = CPANSA::DB->db();
+my $log = Mojo::Log->new;
 
-$log->info('- CSAF', $CSAF::VERSION);
-$log->info('- CPANSA::DB', $CPANSA::DB::VERSION);
-$log->info('- URI::PackageURL', $URI::PackageURL::VERSION);
+my $nvd = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
 
-my $TOTAL = scalar(keys %{$db->{dists}});
+my $cpansa = cpan_security_advisories();
 
-$log->info('- Distributions in CPANSA::DB', $TOTAL);
+my $TOTAL = scalar(keys %{$cpansa->{dists}});
 
-DIST: foreach my $dist (sort keys %{$db->{dists}}) {
+$log->info('CSAF version:',            $CSAF::VERSION);
+$log->info('URI::PackageURL version:', $URI::PackageURL::VERSION);
+$log->info('CPANSA release:',          $cpansa->{meta}->{date});
+$log->info('Distributions in CPANSA:', $TOTAL);
+
+my $user_dist = shift;
+
+DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
 
     state $idx;
-    
+
     $idx++;
 
     if ($user_dist) {
@@ -51,11 +56,9 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
     $log->info(qq{[$idx/$TOTAL] Process "$dist" distribution});
 
-    my $main_module = $db->{dists}{$dist}{main_module};
+    my $main_module = $cpansa->{dists}{$dist}{main_module};
 
-    foreach my $advisory (@{$db->{dists}{$dist}{advisories}}) {
-
-        my $file = Mojo::File->new;
+    foreach my $advisory (@{$cpansa->{dists}{$dist}{advisories}}) {
 
         my @affected_packages = ();
         my @fixed_packages    = ();
@@ -71,7 +74,7 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
         my @fixed_versions    = ();
         my $title             = join ' ', $distribution, 'vulnerability';
         my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d') };
-        my $csaf_url = join '/', $csaf_baseurl, $published_date->year, tracking_id_to_well_filename($advisory_id);
+        my $csaf_url = join '/', $CSAF_BASEURL, $published_date->year, tracking_id_to_well_filename($advisory_id);
 
         if ($advisory->{affected_versions}) {
             if (ref($advisory->{affected_versions}) ne 'ARRAY') {
@@ -151,7 +154,8 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
             foreach my $affected_version (@affected_versions) {
 
-                my $vers_range = URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $affected_version)]);
+                my $vers_range
+                    = URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $affected_version)]);
 
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
                 my $vers_to_name = vers_to_name(split(',', $affected_version));
@@ -161,10 +165,7 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
                 $product_branches->item(
                     category => 'product_version_range',
                     name     => $vers_range,
-                    product  => {
-                        product_id => $product_id,
-                        name => sprintf('%s %s', $distribution, $vers_to_name)
-                    }
+                    product  => {product_id => $product_id, name => sprintf('%s %s', $distribution, $vers_to_name)}
                 );
 
             }
@@ -181,10 +182,7 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
                 $product_branches->item(
                     category => 'product_version_range',
                     name     => $vers_range,
-                    product  => {
-                        product_id => $product_id,
-                        name => sprintf('%s %s', $distribution, $vers_to_name)
-                    }
+                    product  => {product_id => $product_id, name => sprintf('%s %s', $distribution, $vers_to_name)}
                 );
 
             }
@@ -281,15 +279,13 @@ DIST: foreach my $dist (sort keys %{$db->{dists}}) {
 
         }
 
-        # say "$file => $advisory_id";
-
         eval {
             my $writer = $csaf->writer(directory => curfile->dirname->sibling('csaf/white')->to_string);
             $writer->write;
         };
 
         if ($@) {
-            push @ERRORS, {type => 'Error in CSAF::Write', message => $@, file => $file, id => $advisory_id};
+            push @ERRORS, {type => 'Error in CSAF::Write', message => $@, file => $csaf_url, id => $advisory_id};
             Carp::carp($@);
         }
 
@@ -327,5 +323,22 @@ sub vers_to_name {
     }
 
     return join ' and ', @output;
+
+}
+
+
+sub cpan_security_advisories {
+
+    $log->debug("Fetch CPANSA from $CPANSA_URL");
+
+    my $res = Mojo::UserAgent->new->get($CPANSA_URL)->res;
+
+    if (!$res->is_success) {
+        $log->error("Failed to fetch CPANSA. Fallback to CPANSA::DB");
+        require CPANSA::DB;
+        return CPANSA::DB->db();
+    }
+
+    return $res->json;
 
 }
