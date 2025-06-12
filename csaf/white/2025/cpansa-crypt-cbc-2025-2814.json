@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Crypt::CBC versions between 1.21 and 3.04 for Perl may use the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.  This issue affects operating systems where \"/dev/urandom'\" is unavailable.  In that case, Crypt::CBC will fallback to use the insecure rand() function.",
+            "text": "Crypt::CBC versions between 1.21 and 3.04 for Perl may use the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.  This issue affects operating systems where \"/dev/urandom'\" is unavailable.Â  In that case, Crypt::CBC will fallback to use the insecure rand() function.",
             "title": "Vulnerability Description"
          }
       ],

@@ -1,0 +1,139 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Cross-site Scripting (XSS) - DOM in GitHub repository hakimel/reveal.js prior to 4.3.0.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-App-revealup-2022-0776-revealjs JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2022/cpansa-app-revealup-2022-0776-revealjs.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/hakimel/reveal.js/commit/32cdd3b1872ba8e2267c9e87ae216cb55f40f4d2",
+            "url": "https://github.com/hakimel/reveal.js/commit/32cdd3b1872ba8e2267c9e87ae216cb55f40f4d2"
+         },
+         {
+            "category": "external",
+            "summary": "https://huntr.dev/bounties/be2b7ee4-f487-42e1-874a-6bcc410e4001",
+            "url": "https://huntr.dev/bounties/be2b7ee4-f487-42e1-874a-6bcc410e4001"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/yusukebe/App-revealup/issues/12#issuecomment-1169417411",
+            "url": "https://github.com/yusukebe/App-revealup/issues/12#issuecomment-1169417411"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/yusukebe/App-revealup/commit/c8fea67994b1aa6d734066bff9ada4e834b09cb7",
+            "url": "https://github.com/yusukebe/App-revealup/commit/c8fea67994b1aa6d734066bff9ada4e834b09cb7"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2022-0776 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0776"
+         }
+      ],
+      "title": "App-revealup vulnerability",
+      "tracking": {
+         "current_release_date": "2022-03-01T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-App-revealup-2022-0776-revealjs",
+         "initial_release_date": "2022-03-01T00:00:00",
+         "revision_history": [
+            {
+               "date": "2022-03-01T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/==0.22",
+                  "product": {
+                     "name": "App-revealup equal =0.22",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "App-revealup"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2022-0776",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Cross-site Scripting (XSS) - DOM in GitHub repository hakimel/reveal.js prior to 4.3.0.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

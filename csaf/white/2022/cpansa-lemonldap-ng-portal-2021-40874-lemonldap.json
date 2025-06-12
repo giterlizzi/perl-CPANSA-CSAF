@@ -1,0 +1,121 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "An issue was discovered in LemonLDAP::NG (aka lemonldap-ng) 2.0.13. When using the RESTServer plug-in to operate a REST password validation service (for another LemonLDAP::NG instance, for example) and using the Kerberos authentication method combined with another method with the Combination authentication plug-in, any password will be recognized as valid for an existing user.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Lemonldap-NG-Portal-2021-40874-lemonldap JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2022/cpansa-lemonldap-ng-portal-2021-40874-lemonldap.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/2612",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/2612"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/blob/master/changelog",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/blob/master/changelog"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2021-40874 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40874"
+         }
+      ],
+      "title": "Lemonldap-NG-Portal vulnerability",
+      "tracking": {
+         "current_release_date": "2022-07-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Lemonldap-NG-Portal-2021-40874-lemonldap",
+         "initial_release_date": "2022-07-18T00:00:00",
+         "revision_history": [
+            {
+               "date": "2022-07-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/2.0.13",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal ",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Lemonldap-NG-Portal"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2021-40874",
+         "cwe": {
+            "id": "CWE-287",
+            "name": "Improper Authentication"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "An issue was discovered in LemonLDAP::NG (aka lemonldap-ng) 2.0.13. When using the RESTServer plug-in to operate a REST password validation service (for another LemonLDAP::NG instance, for example) and using the Kerberos authentication method combined with another method with the Combination authentication plug-in, any password will be recognized as valid for an existing user.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

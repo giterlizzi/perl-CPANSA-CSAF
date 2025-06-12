@@ -1,0 +1,201 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Cross-site scripting (XSS) vulnerability in jquery.ui.dialog.js in the Dialog widget in jQuery UI before 1.10.0 allows remote attackers to inject arbitrary web script or HTML via the title option.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Yukki-2010-5312-jqueryui JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2014/cpansa-yukki-2010-5312-jqueryui.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jquery/jquery-ui/commit/7e9060c109b928769a664dbcc2c17bd21231b6f3",
+            "url": "https://github.com/jquery/jquery-ui/commit/7e9060c109b928769a664dbcc2c17bd21231b6f3"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/oss-sec/2014/q4/616",
+            "url": "http://seclists.org/oss-sec/2014/q4/616"
+         },
+         {
+            "category": "external",
+            "summary": "http://bugs.jqueryui.com/ticket/6016",
+            "url": "http://bugs.jqueryui.com/ticket/6016"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/oss-sec/2014/q4/613",
+            "url": "http://seclists.org/oss-sec/2014/q4/613"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-0442.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-0442.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2015/dsa-3249",
+            "url": "http://www.debian.org/security/2015/dsa-3249"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/71106",
+            "url": "http://www.securityfocus.com/bid/71106"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html",
+            "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-1462.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-1462.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id/1037035",
+            "url": "http://www.securitytracker.com/id/1037035"
+         },
+         {
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/98696",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/98696"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20190416-0007/",
+            "url": "https://security.netapp.com/advisory/ntap-20190416-0007/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.drupal.org/sa-core-2022-002",
+            "url": "https://www.drupal.org/sa-core-2022-002"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2010-5312 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-5312"
+         }
+      ],
+      "title": "Yukki vulnerability",
+      "tracking": {
+         "current_release_date": "2014-11-24T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Yukki-2010-5312-jqueryui",
+         "initial_release_date": "2014-11-24T00:00:00",
+         "revision_history": [
+            {
+               "date": "2014-11-24T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.0.121700|<=0.140290",
+                  "product": {
+                     "name": "Yukki greater than or equal 0.0.121700 and less than or equal 0.140290",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Yukki"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2010-5312",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Cross-site scripting (XSS) vulnerability in jquery.ui.dialog.js in the Dialog widget in jQuery UI before 1.10.0 allows remote attackers to inject arbitrary web script or HTML via the title option.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

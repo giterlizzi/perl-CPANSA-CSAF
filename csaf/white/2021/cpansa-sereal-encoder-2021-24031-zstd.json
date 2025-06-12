@@ -1,0 +1,134 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "In the Zstandard command-line utility prior to v1.4.1, output files were created with default permissions. Correct file permissions (matching the input) would only be set at completion time. Output files could therefore be readable or writable to unintended parties.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Sereal-Encoder-2021-24031-zstd JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-sereal-encoder-2021-24031-zstd.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.facebook.com/security/advisories/cve-2021-24031",
+            "url": "https://www.facebook.com/security/advisories/cve-2021-24031"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/facebook/zstd/issues/1630",
+            "url": "https://github.com/facebook/zstd/issues/1630"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=981404",
+            "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=981404"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2021-24031 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-24031"
+         }
+      ],
+      "title": "Sereal-Encoder vulnerability",
+      "tracking": {
+         "current_release_date": "2021-03-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Sereal-Encoder-2021-24031-zstd",
+         "initial_release_date": "2021-03-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2021-03-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.001_001|<4.009_002",
+                  "product": {
+                     "name": "Sereal-Encoder greater than or equal 4.001_001 and less than 4.009_002",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Sereal-Encoder"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2021-24031",
+         "cwe": {
+            "id": "CWE-277",
+            "name": "Insecure Inherited Permissions"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "In the Zstandard command-line utility prior to v1.4.1, output files were created with default permissions. Correct file permissions (matching the input) would only be set at completion time. Output files could therefore be readable or writable to unintended parties.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 2.1,
+                  "vectorString": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

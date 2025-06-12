@@ -1,0 +1,129 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "jquery prior to 1.9.0 allows Cross-site Scripting attacks via the load method. The load method fails to recognize and remove \"<script>\" HTML tags that contain a whitespace character, i.e: \"</script >\", which results in the enclosed script logic to be executed.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Ukigumo-Server-2020-7656-jquery JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-ukigumo-server-2020-7656-jquery.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://snyk.io/vuln/SNYK-JS-JQUERY-569619",
+            "url": "https://snyk.io/vuln/SNYK-JS-JQUERY-569619"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20200528-0001/",
+            "url": "https://security.netapp.com/advisory/ntap-20200528-0001/"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2020-7656 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7656"
+         }
+      ],
+      "title": "Ukigumo-Server vulnerability",
+      "tracking": {
+         "current_release_date": "2020-05-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Ukigumo-Server-2020-7656-jquery",
+         "initial_release_date": "2020-05-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-05-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.01|<=2.1.2",
+                  "product": {
+                     "name": "Ukigumo-Server greater than or equal 0.01 and less than or equal 2.1.2",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Ukigumo-Server"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2020-7656",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "jquery prior to 1.9.0 allows Cross-site Scripting attacks via the load method. The load method fails to recognize and remove \"<script>\" HTML tags that contain a whitespace character, i.e: \"</script >\", which results in the enclosed script logic to be executed.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

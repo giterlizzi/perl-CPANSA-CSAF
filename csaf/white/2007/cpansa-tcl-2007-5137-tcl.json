@@ -1,0 +1,210 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Buffer overflow in the ReadImage function in generic/tkImgGIF.c in Tcl (Tcl/Tk) 8.4.13 through 8.4.15 allows remote attackers to execute arbitrary code via multi-frame interlaced GIF files in which later frames are smaller than the first. NOTE: this issue is due to an incorrect patch for CVE-2007-5378.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Tcl-2007-5137-tcl JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2007/cpansa-tcl-2007-5137-tcl.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://sourceforge.net/project/shownotes.php?release_id=541207",
+            "url": "http://sourceforge.net/project/shownotes.php?release_id=541207"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/26942",
+            "url": "http://secunia.com/advisories/26942"
+         },
+         {
+            "category": "external",
+            "summary": "http://bugs.gentoo.org/show_bug.cgi?id=192539",
+            "url": "http://bugs.gentoo.org/show_bug.cgi?id=192539"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2007-October/msg00261.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2007-October/msg00261.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200710-07.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200710-07.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:200",
+            "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:200"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.novell.com/linux/security/advisories/2007_20_sr.html",
+            "url": "http://www.novell.com/linux/security/advisories/2007_20_sr.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/usn-529-1",
+            "url": "http://www.ubuntu.com/usn/usn-529-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.attrition.org/pipermail/vim/2007-October/001826.html",
+            "url": "http://www.attrition.org/pipermail/vim/2007-October/001826.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/25826",
+            "url": "http://www.securityfocus.com/bid/25826"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27086",
+            "url": "http://secunia.com/advisories/27086"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27207",
+            "url": "http://secunia.com/advisories/27207"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27182",
+            "url": "http://secunia.com/advisories/27182"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27295",
+            "url": "http://secunia.com/advisories/27295"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27229",
+            "url": "http://secunia.com/advisories/27229"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2008-0136.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0136.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/29069",
+            "url": "http://secunia.com/advisories/29069"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2009/dsa-1743",
+            "url": "http://www.debian.org/security/2009/dsa-1743"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34297",
+            "url": "http://secunia.com/advisories/34297"
+         },
+         {
+            "category": "external",
+            "summary": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9540",
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A9540"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2007-5137 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-5137"
+         }
+      ],
+      "title": "Tcl vulnerability",
+      "tracking": {
+         "current_release_date": "2007-09-28T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Tcl-2007-5137-tcl",
+         "initial_release_date": "2007-09-28T00:00:00",
+         "revision_history": [
+            {
+               "date": "2007-09-28T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.89|<=1.27",
+                  "product": {
+                     "name": "Tcl greater than or equal 0.89 and less than or equal 1.27",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Tcl"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2007-5137",
+         "cwe": {
+            "id": "CWE-119",
+            "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Buffer overflow in the ReadImage function in generic/tkImgGIF.c in Tcl (Tcl/Tk) 8.4.13 through 8.4.15 allows remote attackers to execute arbitrary code via multi-frame interlaced GIF files in which later frames are smaller than the first.  NOTE: this issue is due to an incorrect patch for CVE-2007-5378.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

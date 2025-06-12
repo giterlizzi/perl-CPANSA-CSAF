@@ -1,0 +1,139 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. This problem is patched in 2.29.2, and the patch can be applied to all affected versions. As a workaround, sanitize the user-provided locale name before passing it to Moment.js.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-App-Netdisco-2022-24785-momentjs JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2022/cpansa-app-netdisco-2022-24785-momentjs.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5",
+            "url": "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4",
+            "url": "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.tenable.com/security/tns-2022-09",
+            "url": "https://www.tenable.com/security/tns-2022-09"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20220513-0006/",
+            "url": "https://security.netapp.com/advisory/ntap-20220513-0006/"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2022-24785 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24785"
+         }
+      ],
+      "title": "App-Netdisco vulnerability",
+      "tracking": {
+         "current_release_date": "2022-04-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-App-Netdisco-2022-24785-momentjs",
+         "initial_release_date": "2022-04-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2022-04-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.028008|<=2.052002",
+                  "product": {
+                     "name": "App-Netdisco greater than or equal 2.028008 and less than or equal 2.052002",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "App-Netdisco"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2022-24785",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. This problem is patched in 2.29.2, and the patch can be applied to all affected versions. As a workaround, sanitize the user-provided locale name before passing it to Moment.js.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,144 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "This affects the package chart.js before 2.9.4. The options parameter is not properly sanitized when it is processed. When the options are processed, the existing options (or the defaults options) are deeply merged with provided options. However, during this operation, the keys of the object being set are not checked, leading to a prototype pollution.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Wight-Chart-2020-7746-chartjs JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-wight-chart-2020-7746-chartjs.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBCHARTJS-1019376",
+            "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBCHARTJS-1019376"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/chartjs/Chart.js/pull/7920",
+            "url": "https://github.com/chartjs/Chart.js/pull/7920"
+         },
+         {
+            "category": "external",
+            "summary": "https://snyk.io/vuln/SNYK-JS-CHARTJS-1018716",
+            "url": "https://snyk.io/vuln/SNYK-JS-CHARTJS-1018716"
+         },
+         {
+            "category": "external",
+            "summary": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1019375",
+            "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1019375"
+         },
+         {
+            "category": "external",
+            "summary": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1019374",
+            "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1019374"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2020-7746 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7746"
+         }
+      ],
+      "title": "Wight-Chart vulnerability",
+      "tracking": {
+         "current_release_date": "2020-10-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Wight-Chart-2020-7746-chartjs",
+         "initial_release_date": "2020-10-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-10-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/==0.003",
+                  "product": {
+                     "name": "Wight-Chart equal =0.003",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Wight-Chart"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2020-7746",
+         "cwe": {
+            "id": "CWE-1321",
+            "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "This affects the package chart.js before 2.9.4. The options parameter is not properly sanitized when it is processed. When the options are processed, the existing options (or the defaults options) are deeply merged with provided options. However, during this operation, the keys of the object being set are not checked, leading to a prototype pollution.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

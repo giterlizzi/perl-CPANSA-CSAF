@@ -1,0 +1,179 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "jQuery-UI is the official jQuery user interface library. Prior to version 1.13.0, accepting the value of the `altField` option of the Datepicker widget from untrusted sources may execute untrusted code. The issue is fixed in jQuery UI 1.13.0. Any string value passed to the `altField` option is now treated as a CSS selector. A workaround is to not accept the value of the `altField` option from untrusted sources.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Yukki-2021-41182-jqueryui JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-yukki-2021-41182-jqueryui.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc",
+            "url": "https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jquery/jquery-ui/pull/1954/commits/6809ce843e5ac4128108ea4c15cbc100653c2b63",
+            "url": "https://github.com/jquery/jquery-ui/pull/1954/commits/6809ce843e5ac4128108ea4c15cbc100653c2b63"
+         },
+         {
+            "category": "external",
+            "summary": "https://blog.jqueryui.com/2021/10/jquery-ui-1-13-0-released/",
+            "url": "https://blog.jqueryui.com/2021/10/jquery-ui-1-13-0-released/"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20211118-0004/",
+            "url": "https://security.netapp.com/advisory/ntap-20211118-0004/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O74SXYY7RGXREQDQUDQD4BPJ4QQTD2XQ/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SNXA7XRKGINWSUIPIZ6ZBCTV6N3KSHES/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NXIUUBRVLA4E7G7MMIKCEN75YN7UFERW/"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.drupal.org/sa-contrib-2022-004",
+            "url": "https://www.drupal.org/sa-contrib-2022-004"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.drupal.org/sa-core-2022-002",
+            "url": "https://www.drupal.org/sa-core-2022-002"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2022/01/msg00014.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.tenable.com/security/tns-2022-09",
+            "url": "https://www.tenable.com/security/tns-2022-09"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2021-41182 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41182"
+         }
+      ],
+      "title": "Yukki vulnerability",
+      "tracking": {
+         "current_release_date": "2021-10-26T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Yukki-2021-41182-jqueryui",
+         "initial_release_date": "2021-10-26T00:00:00",
+         "revision_history": [
+            {
+               "date": "2021-10-26T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.99_01|<=0.991_006",
+                  "product": {
+                     "name": "Yukki greater than or equal 0.99_01 and less than or equal 0.991_006",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Yukki"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2021-41182",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "jQuery-UI is the official jQuery user interface library. Prior to version 1.13.0, accepting the value of the `altField` option of the Datepicker widget from untrusted sources may execute untrusted code. The issue is fixed in jQuery UI 1.13.0. Any string value passed to the `altField` option is now treated as a CSS selector. A workaround is to not accept the value of the `altField` option from untrusted sources.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

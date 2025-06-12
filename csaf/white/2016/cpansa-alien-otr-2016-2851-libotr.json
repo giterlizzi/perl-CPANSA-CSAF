@@ -1,0 +1,174 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Integer overflow in proto.c in libotr before 4.1.1 on 64-bit platforms allows remote attackers to cause a denial of service (memory corruption and application crash) or execute arbitrary code via a series of large OTR messages, which triggers a heap-based buffer overflow.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Alien-OTR-2016-2851-libotr JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2016/cpansa-alien-otr-2016-2851-libotr.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.x41-dsec.de/lab/advisories/x41-2016-001-libotr/",
+            "url": "https://www.x41-dsec.de/lab/advisories/x41-2016-001-libotr/"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2016/dsa-3512",
+            "url": "http://www.debian.org/security/2016/dsa-3512"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2016-03/msg00021.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2016-03/msg00021.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.cypherpunks.ca/pipermail/otr-users/2016-March/002581.html",
+            "url": "https://lists.cypherpunks.ca/pipermail/otr-users/2016-March/002581.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2016/Mar/21",
+            "url": "http://seclists.org/fulldisclosure/2016/Mar/21"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/84285",
+            "url": "http://www.securityfocus.com/bid/84285"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/USN-2926-1",
+            "url": "http://www.ubuntu.com/usn/USN-2926-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2016-03/msg00030.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2016-03/msg00030.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/201701-10",
+            "url": "https://security.gentoo.org/glsa/201701-10"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.exploit-db.com/exploits/39550/",
+            "url": "https://www.exploit-db.com/exploits/39550/"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/537745/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/537745/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2016-2851 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-2851"
+         }
+      ],
+      "title": "Alien-OTR vulnerability",
+      "tracking": {
+         "current_release_date": "2016-04-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Alien-OTR-2016-2851-libotr",
+         "initial_release_date": "2016-04-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2016-04-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/==4.1.0.0",
+                  "product": {
+                     "name": "Alien-OTR equal =4.1.0.0",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Alien-OTR"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2016-2851",
+         "cwe": {
+            "id": "CWE-119",
+            "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Integer overflow in proto.c in libotr before 4.1.1 on 64-bit platforms allows remote attackers to cause a denial of service (memory corruption and application crash) or execute arbitrary code via a series of large OTR messages, which triggers a heap-based buffer overflow.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

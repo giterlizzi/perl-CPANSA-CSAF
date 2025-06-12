@@ -1,0 +1,234 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Git-Raw-2018-25032-zlib JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2022/cpansa-git-raw-2018-25032-zlib.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Ticket/Display.html?id=143579",
+            "url": "https://rt.cpan.org/Ticket/Display.html?id=143579"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2022/03/24/1",
+            "url": "https://www.openwall.com/lists/oss-security/2022/03/24/1"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/madler/zlib/commit/5c44459c3b28a9bd3283aaceab7c615f8020c531",
+            "url": "https://github.com/madler/zlib/commit/5c44459c3b28a9bd3283aaceab7c615f8020c531"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2022/03/25/2",
+            "url": "http://www.openwall.com/lists/oss-security/2022/03/25/2"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2022/03/26/1",
+            "url": "http://www.openwall.com/lists/oss-security/2022/03/26/1"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2022/03/28/1",
+            "url": "https://www.openwall.com/lists/oss-security/2022/03/28/1"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/madler/zlib/compare/v1.2.11...v1.2.12",
+            "url": "https://github.com/madler/zlib/compare/v1.2.11...v1.2.12"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2022/03/28/3",
+            "url": "https://www.openwall.com/lists/oss-security/2022/03/28/3"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/madler/zlib/issues/605",
+            "url": "https://github.com/madler/zlib/issues/605"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2022/dsa-5111",
+            "url": "https://www.debian.org/security/2022/dsa-5111"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2022/04/msg00000.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2022/04/msg00000.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NS2D2GFPFGOJUL4WQ3DUAY7HF4VWQ77F/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NS2D2GFPFGOJUL4WQ3DUAY7HF4VWQ77F/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XOKFMSNQ5D5WGMALBNBXU3GE442V74WU/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XOKFMSNQ5D5WGMALBNBXU3GE442V74WU/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOKNP2L734AEL47NRYGVZIKEFOUBQY5Y/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOKNP2L734AEL47NRYGVZIKEFOUBQY5Y/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2022/05/msg00008.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00008.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.apple.com/kb/HT213255",
+            "url": "https://support.apple.com/kb/HT213255"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.apple.com/kb/HT213256",
+            "url": "https://support.apple.com/kb/HT213256"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.apple.com/kb/HT213257",
+            "url": "https://support.apple.com/kb/HT213257"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2022/May/33",
+            "url": "http://seclists.org/fulldisclosure/2022/May/33"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2022/May/35",
+            "url": "http://seclists.org/fulldisclosure/2022/May/35"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2022/May/38",
+            "url": "http://seclists.org/fulldisclosure/2022/May/38"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20220526-0009/",
+            "url": "https://security.netapp.com/advisory/ntap-20220526-0009/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DF62MVMH3QUGMBDCB3DY2ERQ6EBHTADB/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DF62MVMH3QUGMBDCB3DY2ERQ6EBHTADB/"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2018-25032 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25032"
+         }
+      ],
+      "title": "Git-Raw vulnerability",
+      "tracking": {
+         "current_release_date": "2022-03-25T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Git-Raw-2018-25032-zlib",
+         "initial_release_date": "2022-03-25T00:00:00",
+         "revision_history": [
+            {
+               "date": "2022-03-25T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.76|<=0.88",
+                  "product": {
+                     "name": "Git-Raw greater than or equal 0.76 and less than or equal 0.88",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Git-Raw"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2018-25032",
+         "cwe": {
+            "id": "CWE-787",
+            "name": "Out-of-bounds Write"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

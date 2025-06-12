@@ -1,0 +1,139 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "bootstrap-select before 1.13.6 allows Cross-Site Scripting (XSS). It does not escape title values in OPTION elements. This may allow attackers to execute arbitrary JavaScript in a victim's browser.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-MySQL-Admin-2019-20921-bootstrap-select JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-mysql-admin-2019-20921-bootstrap-select.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/advisories/GHSA-9r7h-6639-v5mw",
+            "url": "https://github.com/advisories/GHSA-9r7h-6639-v5mw"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/snapappointments/bootstrap-select/issues/2199",
+            "url": "https://github.com/snapappointments/bootstrap-select/issues/2199"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.npmjs.com/advisories/1522",
+            "url": "https://www.npmjs.com/advisories/1522"
+         },
+         {
+            "category": "external",
+            "summary": "https://snyk.io/vuln/SNYK-JS-BOOTSTRAPSELECT-570457",
+            "url": "https://snyk.io/vuln/SNYK-JS-BOOTSTRAPSELECT-570457"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2019-20921 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20921"
+         }
+      ],
+      "title": "MySQL-Admin vulnerability",
+      "tracking": {
+         "current_release_date": "2020-09-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-MySQL-Admin-2019-20921-bootstrap-select",
+         "initial_release_date": "2020-09-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-09-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.16|<=1.18",
+                  "product": {
+                     "name": "MySQL-Admin greater than or equal 1.16 and less than or equal 1.18",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "MySQL-Admin"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2019-20921",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "bootstrap-select before 1.13.6 allows Cross-Site Scripting (XSS). It does not escape title values in OPTION elements. This may allow attackers to execute arbitrary JavaScript in a victim's browser.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

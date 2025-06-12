@@ -15,7 +15,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Amon2::Auth::Site::LINE uses the String::Random module to generate nonce values.   String::Random defaults to Perl's built-in predictable random number generator, the rand() function, which is not cryptographically secure",
+            "text": "Amon2::Auth::Site::LINE uses the String::Random moduleÂ to generate nonce values.Â   String::RandomÂ defaults to Perl's built-in predictableÂ random number generator,Â the rand() function, which is not cryptographically secure",
             "title": "Vulnerability Description"
          }
       ],

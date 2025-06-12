@@ -1,0 +1,250 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Perl-Compatible Regular Expression (PCRE) library before 7.0 does not properly calculate the amount of memory needed for a compiled regular expression pattern when the (1) -x or (2) -i UTF-8 options change within the pattern, which allows context-dependent attackers to cause a denial of service (PCRE or glibc crash) via crafted regular expressions.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Perl6-Pugs-2006-7230-libpcre JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2007/cpansa-perl6-pugs-2006-7230-libpcre.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.pcre.org/changelog.txt",
+            "url": "http://www.pcre.org/changelog.txt"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=384801",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=384801"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200711-30.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200711-30.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2007-1059.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2007-1059.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2007-1068.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2007-1068.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.novell.com/linux/security/advisories/2007_62_pcre.html",
+            "url": "http://www.novell.com/linux/security/advisories/2007_62_pcre.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/26550",
+            "url": "http://www.securityfocus.com/bid/26550"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27741",
+            "url": "http://secunia.com/advisories/27741"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27773",
+            "url": "http://secunia.com/advisories/27773"
+         },
+         {
+            "category": "external",
+            "summary": "http://support.avaya.com/elmodocs2/security/ASA-2007-505.htm",
+            "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-505.htm"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28041",
+            "url": "http://secunia.com/advisories/28041"
+         },
+         {
+            "category": "external",
+            "summary": "http://bugs.gentoo.org/show_bug.cgi?id=198976",
+            "url": "http://bugs.gentoo.org/show_bug.cgi?id=198976"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200801-02.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200801-02.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28406",
+            "url": "http://secunia.com/advisories/28406"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28414",
+            "url": "http://secunia.com/advisories/28414"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200801-18.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200801-18.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200801-19.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200801-19.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:030",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:030"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2008-01/msg00006.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2008-01/msg00006.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28658",
+            "url": "http://secunia.com/advisories/28658"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28714",
+            "url": "http://secunia.com/advisories/28714"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28720",
+            "url": "http://secunia.com/advisories/28720"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200805-11.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200805-11.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30155",
+            "url": "http://secunia.com/advisories/30155"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30219",
+            "url": "http://secunia.com/advisories/30219"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30106",
+            "url": "http://secunia.com/advisories/30106"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2008/dsa-1570",
+            "url": "http://www.debian.org/security/2008/dsa-1570"
+         },
+         {
+            "category": "external",
+            "summary": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10911",
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10911"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2006-7230 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-7230"
+         }
+      ],
+      "title": "Perl6-Pugs vulnerability",
+      "tracking": {
+         "current_release_date": "2007-11-15T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Perl6-Pugs-2006-7230-libpcre",
+         "initial_release_date": "2007-11-15T00:00:00",
+         "revision_history": [
+            {
+               "date": "2007-11-15T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.0.12|<=6.2.9",
+                  "product": {
+                     "name": "Perl6-Pugs greater than or equal 6.0.12 and less than or equal 6.2.9",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Perl6-Pugs"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2006-7230",
+         "cwe": {
+            "id": "CWE-189",
+            "name": "Numeric Errors"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Perl-Compatible Regular Expression (PCRE) library before 7.0 does not properly calculate the amount of memory needed for a compiled regular expression pattern when the (1) -x or (2) -i UTF-8 options change within the pattern, which allows context-dependent attackers to cause a denial of service (PCRE or glibc crash) via crafted regular expressions.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

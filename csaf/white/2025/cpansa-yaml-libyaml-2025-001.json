@@ -1,0 +1,145 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "YAML-LibYAML prior to 0.903.0 for Perl uses 2-args open, allowing existing files to be modified",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-YAML-LibYAML-2025-001 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-yaml-libyaml-2025-001.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-40908",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-40908"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-libyaml-pm/issues/120",
+            "url": "https://github.com/ingydotnet/yaml-libyaml-pm/issues/120"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-libyaml-pm/pull/121",
+            "url": "https://github.com/ingydotnet/yaml-libyaml-pm/pull/121"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-libyaml-pm/pull/122",
+            "url": "https://github.com/ingydotnet/yaml-libyaml-pm/pull/122"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40908 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40908"
+         }
+      ],
+      "title": "YAML-LibYAML vulnerability",
+      "tracking": {
+         "current_release_date": "2025-06-01T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-YAML-LibYAML-2025-001",
+         "initial_release_date": "2025-06-01T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-06-01T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.903.0",
+                  "product": {
+                     "name": "YAML-LibYAML less than 0.903.0",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.903.0",
+                  "product": {
+                     "name": "YAML-LibYAML greater than or equal 0.903.0",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "YAML-LibYAML"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40908",
+         "cwe": {
+            "id": "CWE-552",
+            "name": "Files or Directories Accessible to External Parties"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "YAML-LibYAML prior to 0.903.0 for Perl uses 2-args open, allowing existing files to be modified",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

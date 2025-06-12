@@ -1,0 +1,159 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Cross-site scripting (XSS) vulnerability in plupload.flash.swf in Plupload before 2.1.9, as used in WordPress before 4.5.2, allows remote attackers to inject arbitrary web script or HTML via a Same-Origin Method Execution (SOME) attack.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Yukki-2016-4566-plupload JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2016/cpansa-yukki-2016-4566-plupload.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.plupload.com/punbb/viewtopic.php?pid=28690",
+            "url": "http://www.plupload.com/punbb/viewtopic.php?pid=28690"
+         },
+         {
+            "category": "external",
+            "summary": "https://wordpress.org/news/2016/05/wordpress-4-5-2/",
+            "url": "https://wordpress.org/news/2016/05/wordpress-4-5-2/"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2016/05/07/2",
+            "url": "http://www.openwall.com/lists/oss-security/2016/05/07/2"
+         },
+         {
+            "category": "external",
+            "summary": "https://codex.wordpress.org/Version_4.5.2",
+            "url": "https://codex.wordpress.org/Version_4.5.2"
+         },
+         {
+            "category": "external",
+            "summary": "https://core.trac.wordpress.org/changeset/37382/",
+            "url": "https://core.trac.wordpress.org/changeset/37382/"
+         },
+         {
+            "category": "external",
+            "summary": "https://gist.github.com/cure53/09a81530a44f6b8173f545accc9ed07e",
+            "url": "https://gist.github.com/cure53/09a81530a44f6b8173f545accc9ed07e"
+         },
+         {
+            "category": "external",
+            "summary": "https://wpvulndb.com/vulnerabilities/8489",
+            "url": "https://wpvulndb.com/vulnerabilities/8489"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id/1035818",
+            "url": "http://www.securitytracker.com/id/1035818"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2016-4566 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-4566"
+         }
+      ],
+      "title": "Yukki vulnerability",
+      "tracking": {
+         "current_release_date": "2016-05-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Yukki-2016-4566-plupload",
+         "initial_release_date": "2016-05-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2016-05-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.121700|<=0.140290",
+                  "product": {
+                     "name": "Yukki greater than or equal 0.121700 and less than or equal 0.140290",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Yukki"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2016-4566",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Cross-site scripting (XSS) vulnerability in plupload.flash.swf in Plupload before 2.1.9, as used in WordPress before 4.5.2, allows remote attackers to inject arbitrary web script or HTML via a Same-Origin Method Execution (SOME) attack.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

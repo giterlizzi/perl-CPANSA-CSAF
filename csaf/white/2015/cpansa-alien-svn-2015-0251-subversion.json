@@ -1,0 +1,180 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "The mod_dav_svn server in Subversion 1.5.0 through 1.7.19 and 1.8.0 through 1.8.11 allows remote authenticated users to spoof the svn:author property via a crafted v1 HTTP protocol request sequences.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Alien-SVN-2015-0251-subversion JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2015/cpansa-alien-svn-2015-0251-subversion.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://subversion.apache.org/security/CVE-2015-0251-advisory.txt",
+            "url": "http://subversion.apache.org/security/CVE-2015-0251-advisory.txt"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:192",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:192"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2015-04/msg00008.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2015-04/msg00008.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-1633.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-1633.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.apple.com/HT205217",
+            "url": "https://support.apple.com/HT205217"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.apple.com/archives/security-announce/2015/Sep/msg00002.html",
+            "url": "http://lists.apple.com/archives/security-announce/2015/Sep/msg00002.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+            "url": "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/74259",
+            "url": "http://www.securityfocus.com/bid/74259"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-1742.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-1742.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/USN-2721-1",
+            "url": "http://www.ubuntu.com/usn/USN-2721-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2015/Jun/32",
+            "url": "http://seclists.org/fulldisclosure/2015/Jun/32"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2015/dsa-3231",
+            "url": "http://www.debian.org/security/2015/dsa-3231"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/201610-05",
+            "url": "https://security.gentoo.org/glsa/201610-05"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id/1033214",
+            "url": "http://www.securitytracker.com/id/1033214"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2015-0251 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-0251"
+         }
+      ],
+      "title": "Alien-SVN vulnerability",
+      "tracking": {
+         "current_release_date": "2015-04-08T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Alien-SVN-2015-0251-subversion",
+         "initial_release_date": "2015-04-08T00:00:00",
+         "revision_history": [
+            {
+               "date": "2015-04-08T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/==1.8.11.0",
+                  "product": {
+                     "name": "Alien-SVN equal =1.8.11.0",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Alien-SVN"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2015-0251",
+         "cwe": {
+            "id": "CWE-345",
+            "name": "Insufficient Verification of Data Authenticity"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "The mod_dav_svn server in Subversion 1.5.0 through 1.7.19 and 1.8.0 through 1.8.11 allows remote authenticated users to spoof the svn:author property via a crafted v1 HTTP protocol request sequences.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4,
+                  "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

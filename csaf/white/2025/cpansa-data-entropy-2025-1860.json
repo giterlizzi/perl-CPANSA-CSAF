@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Data::Entropy for Perl 0.007 and earlier use the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.",
+            "text": "Data::Entropy for Perl 0.007 and earlier use the rand() function as the default source of entropy, which is notÂ cryptographically secure,Â for cryptographic functions.",
             "title": "Vulnerability Description"
          }
       ],

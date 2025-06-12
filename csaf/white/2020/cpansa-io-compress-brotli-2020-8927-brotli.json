@@ -1,0 +1,189 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "A buffer overflow exists in the Brotli library versions prior to 1.0.8 where an attacker controlling the input length of a \"one-shot\" decompression request to a script can trigger a crash, which happens when copying over chunks of data larger than 2 GiB. It is recommended to update your Brotli library to 1.0.8 or later. If one cannot update, we recommend to use the \"streaming\" API as opposed to the \"one-shot\" API, and impose chunk size limits.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-IO-Compress-Brotli-2020-8927-brotli JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-io-compress-brotli-2020-8927-brotli.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/google/brotli/releases/tag/v1.0.9",
+            "url": "https://github.com/google/brotli/releases/tag/v1.0.9"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2020-09/msg00108.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2020-09/msg00108.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MMBKACMLSRX7JJSKBTR35UOEP2WFR6QP/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MMBKACMLSRX7JJSKBTR35UOEP2WFR6QP/"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/4568-1/",
+            "url": "https://usn.ubuntu.com/4568-1/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WW62OZEY2GHJL4JCOLJRBSRETXDHMWRK/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WW62OZEY2GHJL4JCOLJRBSRETXDHMWRK/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M4VCDOJGL6BK3HB4XRD2WETBPYX2ITF6/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M4VCDOJGL6BK3HB4XRD2WETBPYX2ITF6/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/J4E265WKWKYMK2RYYSIXBEGZTDY5IQE6/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/J4E265WKWKYMK2RYYSIXBEGZTDY5IQE6/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W23CUADGMVMQQNFKHPHXVP7RPZJZNN6I/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W23CUADGMVMQQNFKHPHXVP7RPZJZNN6I/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/356JOYTWW4BWSZ42SEFLV7NYHL3S3AEH/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/356JOYTWW4BWSZ42SEFLV7NYHL3S3AEH/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2020/12/msg00003.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2020/12/msg00003.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2020/dsa-4801",
+            "url": "https://www.debian.org/security/2020/dsa-4801"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZXEQ3GQVELA2T4HNZG7VPMS2HDVXMJRG/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZXEQ3GQVELA2T4HNZG7VPMS2HDVXMJRG/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MQLM7ABVCYJLF6JRPF3M3EBXW63GNC27/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MQLM7ABVCYJLF6JRPF3M3EBXW63GNC27/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4TOGTZ2ZWDH662ZNFFSZVL3M5AJXV6JF/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4TOGTZ2ZWDH662ZNFFSZVL3M5AJXV6JF/"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2020-8927 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8927"
+         }
+      ],
+      "title": "IO-Compress-Brotli vulnerability",
+      "tracking": {
+         "current_release_date": "2020-09-15T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-IO-Compress-Brotli-2020-8927-brotli",
+         "initial_release_date": "2020-09-15T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-09-15T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/==0.004_002",
+                  "product": {
+                     "name": "IO-Compress-Brotli equal =0.004_002",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "IO-Compress-Brotli"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2020-8927",
+         "cwe": {
+            "id": "CWE-130",
+            "name": "Improper Handling of Length Parameter Inconsistency"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "A buffer overflow exists in the Brotli library versions prior to 1.0.8 where an attacker controlling the input length of a \"one-shot\" decompression request to a script can trigger a crash, which happens when copying over chunks of data larger than 2 GiB. It is recommended to update your Brotli library to 1.0.8 or later. If one cannot update, we recommend to use the \"streaming\" API as opposed to the \"one-shot\" API, and impose chunk size limits.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.4,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

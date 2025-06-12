@@ -1,0 +1,170 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Multiple integer underflows in PluginPCX.cpp in FreeImage 3.17.0 and earlier allow remote attackers to cause a denial of service (heap memory corruption) via vectors related to the height and width of a window.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Alien-FreeImage-2015-0852-freeimage JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2015/cpansa-alien-freeimage-2015-0852-freeimage.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/kmx/alien-freeimage/issues/5",
+            "url": "https://github.com/kmx/alien-freeimage/issues/5"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.fedoraproject.org/pipermail/package-announce/2015-September/167766.html",
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-September/167766.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2015/08/28/1",
+            "url": "http://www.openwall.com/lists/oss-security/2015/08/28/1"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=797165",
+            "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=797165"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2015/dsa-3392",
+            "url": "http://www.debian.org/security/2015/dsa-3392"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172491.html",
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172491.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172583.html",
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-November/172583.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id/1034077",
+            "url": "http://www.securitytracker.com/id/1034077"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/168000.html",
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/168000.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/168023.html",
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/168023.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/201701-68",
+            "url": "https://security.gentoo.org/glsa/201701-68"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html",
+            "url": "https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2015-0852 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-0852"
+         }
+      ],
+      "title": "Alien-FreeImage vulnerability",
+      "tracking": {
+         "current_release_date": "2015-09-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Alien-FreeImage-2015-0852-freeimage",
+         "initial_release_date": "2015-09-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2015-09-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.000_1|<=1.001",
+                  "product": {
+                     "name": "Alien-FreeImage greater than or equal 1.000_1 and less than or equal 1.001",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Alien-FreeImage"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2015-0852",
+         "cwe": {
+            "id": "CWE-189",
+            "name": "Numeric Errors"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Multiple integer underflows in PluginPCX.cpp in FreeImage 3.17.0 and earlier allow remote attackers to cause a denial of service (heap memory corruption) via vectors related to the height and width of a window.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

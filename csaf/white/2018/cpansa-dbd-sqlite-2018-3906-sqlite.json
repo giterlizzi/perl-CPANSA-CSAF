@@ -1,0 +1,124 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "An exploitable stack-based buffer overflow vulnerability exists in the retrieval of a database field in video-core's HTTP server of Samsung SmartThings Hub. The video-core process insecurely extracts the shard.videoHostURL field from its SQLite database, leading to a buffer overflow on the stack. An attacker can send an HTTP request to trigger this vulnerability.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBD-SQLite-2018-3906-sqlite JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-dbd-sqlite-2018-3906-sqlite.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://talosintelligence.com/vulnerability_reports/TALOS-2018-0576",
+            "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2018-0576"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2018-3906 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-3906"
+         }
+      ],
+      "title": "DBD-SQLite vulnerability",
+      "tracking": {
+         "current_release_date": "2018-09-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-DBD-SQLite-2018-3906-sqlite",
+         "initial_release_date": "2018-09-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2018-09-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.71_07|<=1.72",
+                  "product": {
+                     "name": "DBD-SQLite greater than or equal 1.71_07 and less than or equal 1.72",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2018-3906",
+         "cwe": {
+            "id": "CWE-787",
+            "name": "Out-of-bounds Write"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "An exploitable stack-based buffer overflow vulnerability exists in the retrieval of a database field in video-core's HTTP server of Samsung SmartThings Hub. The video-core process insecurely extracts the shard.videoHostURL field from its SQLite database, leading to a buffer overflow on the stack. An attacker can send an HTTP request to trigger this vulnerability.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.2,
+                  "vectorString": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 8.2,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

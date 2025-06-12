@@ -1,0 +1,309 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "jQuery before 3.0.0 is vulnerable to Cross-site Scripting (XSS) attacks when a cross-domain Ajax request is performed without the dataType option, causing text/javascript responses to be executed.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Squatting-2015-9251-jquery JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-squatting-2015-9251-jquery.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://snyk.io/vuln/npm:jquery:20150627",
+            "url": "https://snyk.io/vuln/npm:jquery:20150627"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jquery/jquery/pull/2588/commits/c254d308a7d3f1eac4d0b42837804cfffcba4bb2",
+            "url": "https://github.com/jquery/jquery/pull/2588/commits/c254d308a7d3f1eac4d0b42837804cfffcba4bb2"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jquery/jquery/pull/2588",
+            "url": "https://github.com/jquery/jquery/pull/2588"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jquery/jquery/issues/2432",
+            "url": "https://github.com/jquery/jquery/issues/2432"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jquery/jquery/commit/f60729f3903d17917dc351f3ac87794de379b0cc",
+            "url": "https://github.com/jquery/jquery/commit/f60729f3903d17917dc351f3ac87794de379b0cc"
+         },
+         {
+            "category": "external",
+            "summary": "https://sw.aveva.com/hubfs/assets-2018/pdf/security-bulletin/SecurityBulletin_LFSec126.pdf",
+            "url": "https://sw.aveva.com/hubfs/assets-2018/pdf/security-bulletin/SecurityBulletin_LFSec126.pdf"
+         },
+         {
+            "category": "external",
+            "summary": "https://ics-cert.us-cert.gov/advisories/ICSA-18-212-04",
+            "url": "https://ics-cert.us-cert.gov/advisories/ICSA-18-212-04"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html",
+            "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/105658",
+            "url": "http://www.securityfocus.com/bid/105658"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html",
+            "url": "https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
+            "url": "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://seclists.org/bugtraq/2019/May/18",
+            "url": "https://seclists.org/bugtraq/2019/May/18"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+            "url": "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2019/May/13",
+            "url": "http://seclists.org/fulldisclosure/2019/May/13"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2019/May/11",
+            "url": "http://seclists.org/fulldisclosure/2019/May/11"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2019/May/10",
+            "url": "http://seclists.org/fulldisclosure/2019/May/10"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/153237/RetireJS-CORS-Issue-Script-Execution.html",
+            "url": "http://packetstormsecurity.com/files/153237/RetireJS-CORS-Issue-Script-Execution.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html",
+            "url": "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/54df3aeb4239b64b50b356f0ca6f986e3c4ca5b84c515dce077c7854@%3Cuser.flink.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/54df3aeb4239b64b50b356f0ca6f986e3c4ca5b84c515dce077c7854@%3Cuser.flink.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/10f0f3aefd51444d1198c65f44ffdf2d78ca3359423dbc1c168c9731@%3Cdev.flink.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/10f0f3aefd51444d1198c65f44ffdf2d78ca3359423dbc1c168c9731@%3Cdev.flink.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/17ff53f7999e74fbe3cc0ceb4e1c3b00b180b7c5afec8e978837bc49@%3Cuser.flink.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/17ff53f7999e74fbe3cc0ceb4e1c3b00b180b7c5afec8e978837bc49@%3Cuser.flink.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/52bafac05ad174000ea465fe275fd3cc7bd5c25535a7631c0bc9bfb2@%3Cuser.flink.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/52bafac05ad174000ea465fe275fd3cc7bd5c25535a7631c0bc9bfb2@%3Cuser.flink.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6@%3Ccommits.roller.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6@%3Ccommits.roller.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html",
+            "url": "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.tenable.com/security/tns-2019-08",
+            "url": "https://www.tenable.com/security/tns-2019-08"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpujan2020.html",
+            "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2020:0481",
+            "url": "https://access.redhat.com/errata/RHSA-2020:0481"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2020:0729",
+            "url": "https://access.redhat.com/errata/RHSA-2020:0729"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+            "url": "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuapr2020.html",
+            "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuoct2020.html",
+            "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44601",
+            "url": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44601"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20210108-0004/",
+            "url": "https://security.netapp.com/advisory/ntap-20210108-0004/"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2015-9251 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-9251"
+         }
+      ],
+      "title": "Squatting vulnerability",
+      "tracking": {
+         "current_release_date": "2018-01-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Squatting-2015-9251-jquery",
+         "initial_release_date": "2018-01-18T00:00:00",
+         "revision_history": [
+            {
+               "date": "2018-01-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.40|<=0.83",
+                  "product": {
+                     "name": "Squatting greater than or equal 0.40 and less than or equal 0.83",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Squatting"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2015-9251",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "jQuery before 3.0.0 is vulnerable to Cross-site Scripting (XSS) attacks when a cross-domain Ajax request is performed without the dataType option, causing text/javascript responses to be executed.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

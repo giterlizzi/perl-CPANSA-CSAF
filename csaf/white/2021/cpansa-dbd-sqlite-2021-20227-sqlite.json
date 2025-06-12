@@ -1,0 +1,159 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "A flaw was found in SQLite's SELECT query functionality (src/select.c). This flaw allows an attacker who is capable of running SQL queries locally on the SQLite database to cause a denial of service or possible code execution by triggering a use-after-free. The highest threat from this vulnerability is to system availability.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBD-SQLite-2021-20227-sqlite JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-dbd-sqlite-2021-20227-sqlite.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=1924886",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1924886"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.sqlite.org/releaselog/3_34_1.html",
+            "url": "https://www.sqlite.org/releaselog/3_34_1.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/202103-04",
+            "url": "https://security.gentoo.org/glsa/202103-04"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20210423-0010/",
+            "url": "https://security.netapp.com/advisory/ntap-20210423-0010/"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com//security-alerts/cpujul2021.html",
+            "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuoct2021.html",
+            "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/202210-40",
+            "url": "https://security.gentoo.org/glsa/202210-40"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2021-20227 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20227"
+         }
+      ],
+      "title": "DBD-SQLite vulnerability",
+      "tracking": {
+         "current_release_date": "2021-03-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-DBD-SQLite-2021-20227-sqlite",
+         "initial_release_date": "2021-03-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2021-03-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.71_07|<=1.72",
+                  "product": {
+                     "name": "DBD-SQLite greater than or equal 1.71_07 and less than or equal 1.72",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBD-SQLite"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2021-20227",
+         "cwe": {
+            "id": "CWE-416",
+            "name": "Use After Free"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "A flaw was found in SQLite's SELECT query functionality (src/select.c). This flaw allows an attacker who is capable of running SQL queries locally on the SQLite database to cause a denial of service or possible code execution by triggering a use-after-free. The highest threat from this vulnerability is to system availability.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 2.1,
+                  "vectorString": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

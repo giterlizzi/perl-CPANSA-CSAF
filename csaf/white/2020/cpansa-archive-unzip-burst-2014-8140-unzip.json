@@ -1,0 +1,144 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Heap-based buffer overflow in the test_compr_eb function in Info-ZIP UnZip 6.0 and earlier allows remote attackers to execute arbitrary code via a crafted zip file in the -t command argument to the unzip command.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Archive-Unzip-Burst-2014-8140-unzip JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-archive-unzip-burst-2014-8140-unzip.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Ticket/Display.html?id=143547",
+            "url": "https://rt.cpan.org/Ticket/Display.html?id=143547"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=1174851",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1174851"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id/1031433",
+            "url": "http://www.securitytracker.com/id/1031433"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ocert.org/advisories/ocert-2014-011.html",
+            "url": "http://www.ocert.org/advisories/ocert-2014-011.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2015:0700",
+            "url": "https://access.redhat.com/errata/RHSA-2015:0700"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2014-8140 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-8140"
+         }
+      ],
+      "title": "Archive-Unzip-Burst vulnerability",
+      "tracking": {
+         "current_release_date": "2020-01-31T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Archive-Unzip-Burst-2014-8140-unzip",
+         "initial_release_date": "2020-01-31T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-01-31T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.03|<=0.09",
+                  "product": {
+                     "name": "Archive-Unzip-Burst greater than or equal 0.03 and less than or equal 0.09",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Archive-Unzip-Burst"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2014-8140",
+         "cwe": {
+            "id": "CWE-787",
+            "name": "Out-of-bounds Write"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Heap-based buffer overflow in the test_compr_eb function in Info-ZIP UnZip 6.0 and earlier allows remote attackers to execute arbitrary code via a crafted zip file in the -t command argument to the unzip command.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.8,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

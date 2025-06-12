@@ -1,0 +1,140 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Off-by-one error in the Ins_MINDEX function in the TrueType bytecode interpreter in Ghostscript before 8.71 allows remote attackers to execute arbitrary code or cause a denial of service (heap memory corruption) via a malformed TrueType font in a document that trigger an integer overflow and a heap-based buffer overflow.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Win32-Printer-2009-3743-jquery JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-win32-printer-2009-3743-jquery.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.kb.cert.org/vuls/id/JALR-87YGN8",
+            "url": "http://www.kb.cert.org/vuls/id/JALR-87YGN8"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.kb.cert.org/vuls/id/644319",
+            "url": "http://www.kb.cert.org/vuls/id/644319"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id?1024785",
+            "url": "http://www.securitytracker.com/id?1024785"
+         },
+         {
+            "category": "external",
+            "summary": "https://rhn.redhat.com/errata/RHSA-2012-0095.html",
+            "url": "https://rhn.redhat.com/errata/RHSA-2012-0095.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-201412-17.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-201412-17.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/514892/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/514892/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2009-3743 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3743"
+         }
+      ],
+      "title": "Win32-Printer vulnerability",
+      "tracking": {
+         "current_release_date": "2010-08-26T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Win32-Printer-2009-3743-jquery",
+         "initial_release_date": "2010-08-26T00:00:00",
+         "revision_history": [
+            {
+               "date": "2010-08-26T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.9.0|<=0.9.1",
+                  "product": {
+                     "name": "Win32-Printer greater than or equal 0.9.0 and less than or equal 0.9.1",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Win32-Printer"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2009-3743",
+         "cwe": {
+            "id": "CWE-189",
+            "name": "Numeric Errors"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Off-by-one error in the Ins_MINDEX function in the TrueType bytecode interpreter in Ghostscript before 8.71 allows remote attackers to execute arbitrary code or cause a denial of service (heap memory corruption) via a malformed TrueType font in a document that trigger an integer overflow and a heap-based buffer overflow.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 9.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

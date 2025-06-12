@@ -1,0 +1,201 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Buffer overflow in the gzprintf function in zlib 1.1.4, when zlib is compiled without vsnprintf or when long inputs are truncated using vsnprintf, allows attackers to cause a denial of service or possibly execute arbitrary code.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Tk-2003-0107-zlib JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2003/cpansa-tk-2003-0107-zlib.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://online.securityfocus.com/archive/1/312869",
+            "url": "http://online.securityfocus.com/archive/1/312869"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.iss.net/security_center/static/11381.php",
+            "url": "http://www.iss.net/security_center/static/11381.php"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.apple.com/mhonarc/security-announce/msg00038.html",
+            "url": "http://lists.apple.com/mhonarc/security-announce/msg00038.html"
+         },
+         {
+            "category": "external",
+            "summary": "ftp://ftp.caldera.com/pub/security/OpenLinux/CSSA-2003-011.0.txt",
+            "url": "ftp://ftp.caldera.com/pub/security/OpenLinux/CSSA-2003-011.0.txt"
+         },
+         {
+            "category": "external",
+            "summary": "http://distro.conectiva.com/atualizacoes/?id=a&anuncio=000619",
+            "url": "http://distro.conectiva.com/atualizacoes/?id=a&anuncio=000619"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2003:033",
+            "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2003:033"
+         },
+         {
+            "category": "external",
+            "summary": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-004.txt.asc",
+            "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-004.txt.asc"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2003-079.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2003-079.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2003-081.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2003-081.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F57405",
+            "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F57405"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.kb.cert.org/vuls/id/142121",
+            "url": "http://www.kb.cert.org/vuls/id/142121"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/6913",
+            "url": "http://www.securityfocus.com/bid/6913"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.osvdb.org/6599",
+            "url": "http://www.osvdb.org/6599"
+         },
+         {
+            "category": "external",
+            "summary": "http://marc.info/?l=bugtraq&m=104620610427210&w=2",
+            "url": "http://marc.info/?l=bugtraq&m=104620610427210&w=2"
+         },
+         {
+            "category": "external",
+            "summary": "http://marc.info/?l=bugtraq&m=104887247624907&w=2",
+            "url": "http://marc.info/?l=bugtraq&m=104887247624907&w=2"
+         },
+         {
+            "category": "external",
+            "summary": "http://marc.info/?l=bugtraq&m=104610536129508&w=2",
+            "url": "http://marc.info/?l=bugtraq&m=104610536129508&w=2"
+         },
+         {
+            "category": "external",
+            "summary": "http://marc.info/?l=bugtraq&m=104610337726297&w=2",
+            "url": "http://marc.info/?l=bugtraq&m=104610337726297&w=2"
+         },
+         {
+            "category": "external",
+            "summary": "http://jvndb.jvn.jp/en/contents/2015/JVNDB-2015-000066.html",
+            "url": "http://jvndb.jvn.jp/en/contents/2015/JVNDB-2015-000066.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://jvn.jp/en/jp/JVN78689801/index.html",
+            "url": "http://jvn.jp/en/jp/JVN78689801/index.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2003-0107 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-0107"
+         }
+      ],
+      "title": "Tk vulnerability",
+      "tracking": {
+         "current_release_date": "2003-03-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Tk-2003-0107-zlib",
+         "initial_release_date": "2003-03-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2003-03-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=804.025|<=804.027",
+                  "product": {
+                     "name": "Tk greater than or equal 804.025 and less than or equal 804.027",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Tk"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2003-0107",
+         "notes": [
+            {
+               "category": "description",
+               "text": "Buffer overflow in the gzprintf function in zlib 1.1.4, when zlib is compiled without vsnprintf or when long inputs are truncated using vsnprintf, allows attackers to cause a denial of service or possibly execute arbitrary code.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

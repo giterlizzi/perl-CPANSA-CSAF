@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "String::Compare::ConstantTime for Perl through 0.321 is vulnerable to timing attacks that allow an attacker to guess the length of a secret string.  As stated in the documentation: \"If the lengths of the strings are different, because equals returns false right away the size of the secret string may be leaked (but not its contents).\"  This is similar to CVE-2020-36829",
+            "text": "String::Compare::ConstantTime for Perl through 0.321 is vulnerable to timing attacks that allow an attacker to guess the length of a secret string.  As stated in the documentation: \"If the lengths of the strings are different, because equals returns false right away the size of the secret string may be leaked (but not its contents).\"  This is similar toÂ CVE-2020-36829",
             "title": "Vulnerability Description"
          }
       ],

@@ -1,0 +1,144 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "In opencv calls that use libpng, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges required. User interaction is not required for exploitation. Product: AndroidVersions: Android-10Android ID: A-110986616",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-cppAdaptive2-2019-9423-libpng JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2019/cpansa-cppadaptive2-2019-9423-libpng.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://source.android.com/security/bulletin/android-10",
+            "url": "https://source.android.com/security/bulletin/android-10"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2019/10/25/17",
+            "url": "http://www.openwall.com/lists/oss-security/2019/10/25/17"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2019/10/27/1",
+            "url": "http://www.openwall.com/lists/oss-security/2019/10/27/1"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2019/11/07/1",
+            "url": "http://www.openwall.com/lists/oss-security/2019/11/07/1"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2020/12/05/1",
+            "url": "http://www.openwall.com/lists/oss-security/2020/12/05/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2019-9423 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-9423"
+         }
+      ],
+      "title": "cppAdaptive2 vulnerability",
+      "tracking": {
+         "current_release_date": "2019-09-27T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-cppAdaptive2-2019-9423-libpng",
+         "initial_release_date": "2019-09-27T00:00:00",
+         "revision_history": [
+            {
+               "date": "2019-09-27T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.01|<=3.0.3",
+                  "product": {
+                     "name": "cppAdaptive2 greater than or equal 0.01 and less than or equal 3.0.3",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "cppAdaptive2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2019-9423",
+         "cwe": {
+            "id": "CWE-787",
+            "name": "Out-of-bounds Write"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "In opencv calls that use libpng, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges required. User interaction is not required for exploitation. Product: AndroidVersions: Android-10Android ID: A-110986616",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.6,
+                  "vectorString": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.8,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
