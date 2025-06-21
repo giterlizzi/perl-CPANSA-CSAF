@@ -65,6 +65,34 @@
          },
          {
             "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-csrf-2025-40915.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Mojolicious-Plugin-CSRF-2025-40915",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-csrf-2025-40915.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-csrf-2025-40915.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-csrf-2025-40915.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-06-11T00:00:00",
+            "title": "Mojolicious-Plugin-CSRF vulnerability",
+            "updated": "2025-06-11T00:00:00"
+         },
+         {
+            "content": {
                "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-yaml-libyaml-2025-001.json",
                "type": "application/json"
             },
@@ -20512,6 +20540,6 @@
          }
       ],
       "title": "CPANSA CSAF feed (TLP:WHITE)",
-      "updated": "2025-06-15T17:16:38"
+      "updated": "2025-06-21T23:17:37"
    }
 }
