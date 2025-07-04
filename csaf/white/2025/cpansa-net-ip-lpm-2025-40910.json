@@ -1,0 +1,126 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::IP::LPM version 1.10 for Perl does not properly consider leading zero characters in IP CIDR address strings, which could allow attackers to bypass access control that is based on IP addresses.  Leading zeros are used to indicate octal numbers, which can confuse users who are intentionally using octal notation, as well as users who believe they are using decimal notation.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-IP-LPM-2025-40910 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-ip-lpm-2025-40910.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://blog.urth.org/2021/03/29/security-issues-in-perl-ip-address-distros/",
+            "url": "https://blog.urth.org/2021/03/29/security-issues-in-perl-ip-address-distros/"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TPODER/Net-IP-LPM-1.10/diff/TPODER/Net-IP-LPM-1.09/lib/Net/IP/LPM.pm",
+            "url": "https://metacpan.org/release/TPODER/Net-IP-LPM-1.10/diff/TPODER/Net-IP-LPM-1.09/lib/Net/IP/LPM.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/N/Net-IP-LPM/1.10/CVE-2025-40910-r1.patch",
+            "url": "https://security.metacpan.org/patches/N/Net-IP-LPM/1.10/CVE-2025-40910-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40910 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40910"
+         }
+      ],
+      "title": "Net-IP-LPM vulnerability",
+      "tracking": {
+         "current_release_date": "2025-06-27T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.25"
+            }
+         },
+         "id": "CPANSA-Net-IP-LPM-2025-40910",
+         "initial_release_date": "2025-06-27T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-06-27T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.10",
+                  "product": {
+                     "name": "Net-IP-LPM greater than or equal 1.10",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-IP-LPM"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40910",
+         "cwe": {
+            "id": "CWE-1287",
+            "name": "Improper Validation of Specified Type of Input"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::IP::LPM version 1.10 for Perl does not properly consider leading zero characters in IP CIDR address strings, which could allow attackers to bypass access control that is based on IP addresses.\n\nLeading zeros are used to indicate octal numbers, which can confuse users who are intentionally using octal notation, as well as users who believe they are using decimal notation.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

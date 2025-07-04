@@ -8,6 +8,7 @@
 2025/cpansa-perl-2024-56406.json
 2025/cpansa-net-xero-2024-56370.json
 2025/cpansa-net-oauth-2025-22376.json
+2025/cpansa-net-ip-lpm-2025-40910.json
 2025/cpansa-net-dropbox-api-2024-58036.json
 2025/cpansa-net-cidr-set-2025-40911.json
 2025/cpansa-mojolicious-plugin-csrf-2025-40915.json

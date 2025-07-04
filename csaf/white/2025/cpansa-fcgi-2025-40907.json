@@ -107,6 +107,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2025-40907",
+         "cwe": {
+            "id": "CWE-190",
+            "name": "Integer Overflow or Wraparound"
+         },
          "notes": [
             {
                "category": "description",
