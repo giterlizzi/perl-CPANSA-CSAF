@@ -9,6 +9,90 @@
       "entry": [
          {
             "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-dropbear-2025-40913.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Net-Dropbear-2025-40913",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-dropbear-2025-40913.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-dropbear-2025-40913.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-dropbear-2025-40913.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-07-16T00:00:00",
+            "title": "Net-Dropbear vulnerability",
+            "updated": "2025-07-16T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-digestmd5-2025-40919.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Authen-DigestMD5-2025-40919",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-digestmd5-2025-40919.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-digestmd5-2025-40919.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-digestmd5-2025-40919.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-07-16T00:00:00",
+            "title": "Authen-DigestMD5 vulnerability",
+            "updated": "2025-07-16T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-sasl-2025-40918.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Authen-SASL-2025-40918",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-sasl-2025-40918.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-sasl-2025-40918.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-authen-sasl-2025-40918.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-07-16T00:00:00",
+            "title": "Authen-SASL vulnerability",
+            "updated": "2025-07-16T00:00:00"
+         },
+         {
+            "content": {
                "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-net-ip-lpm-2025-40910.json",
                "type": "application/json"
             },
@@ -34,6 +118,34 @@
             "published": "2025-06-27T00:00:00",
             "title": "Net-IP-LPM vulnerability",
             "updated": "2025-06-27T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-captchapng-2025-40916.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Mojolicious-Plugin-CaptchaPNG-2025-40916",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-captchapng-2025-40916.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-captchapng-2025-40916.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-mojolicious-plugin-captchapng-2025-40916.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-06-16T00:00:00",
+            "title": "Mojolicious-Plugin-CaptchaPNG vulnerability",
+            "updated": "2025-06-16T00:00:00"
          },
          {
             "content": {
@@ -20568,6 +20680,6 @@
          }
       ],
       "title": "CPANSA CSAF feed (TLP:WHITE)",
-      "updated": "2025-08-07T00:44:44"
+      "updated": "2025-08-07T12:54:17"
    }
 }

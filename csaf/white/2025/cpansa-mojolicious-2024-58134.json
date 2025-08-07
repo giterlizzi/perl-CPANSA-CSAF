@@ -75,7 +75,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Mojolicious-2024-58134",
@@ -102,6 +102,14 @@
                      "name": "Mojolicious greater than or equal 0.999922",
                      "product_id": "CSAFPID-0001"
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=9.40",
+                  "product": {
+                     "name": "Mojolicious greater than or equal 9.40",
+                     "product_id": "CSAFPID-0002"
+                  }
                }
             ],
             "category": "product_name",
@@ -124,6 +132,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

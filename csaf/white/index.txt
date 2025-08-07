@@ -10,8 +10,10 @@
 2025/cpansa-net-oauth-2025-22376.json
 2025/cpansa-net-ip-lpm-2025-40910.json
 2025/cpansa-net-dropbox-api-2024-58036.json
+2025/cpansa-net-dropbear-2025-40913.json
 2025/cpansa-net-cidr-set-2025-40911.json
 2025/cpansa-mojolicious-plugin-csrf-2025-40915.json
+2025/cpansa-mojolicious-plugin-captchapng-2025-40916.json
 2025/cpansa-mojolicious-2024-58135.json
 2025/cpansa-mojolicious-2024-58134.json
 2025/cpansa-mite-2025-30672.json
@@ -28,6 +30,8 @@
 2025/cpansa-crypt-random-2025-1828.json
 2025/cpansa-crypt-cbc-2025-2814.json
 2025/cpansa-bson-xs-2025-40906.json
+2025/cpansa-authen-sasl-2025-40918.json
+2025/cpansa-authen-digestmd5-2025-40919.json
 2025/cpansa-amon2-auth-site-line-2024-57835.json
 2024/cpansa-spreadsheet-parsexlsx-2024-23525.json
 2024/cpansa-spreadsheet-parsexlsx-2024-22368.json
