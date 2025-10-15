@@ -1,0 +1,126 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Starch versions 0.14 and earlier generate session ids insecurely.  The default session id generator returns a SHA-1 hash seeded with a counter, the epoch time, the built-in rand function, the PID, and internal Perl reference addresses. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.  Predicable session ids could allow an attacker to gain access to systems.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Starch-2025-40925 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-starch-2025-40925.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/bluefeet/Starch/commit/5573449e64e0660f7ee209d1eab5881d4ccbee3b.patch",
+            "url": "https://github.com/bluefeet/Starch/commit/5573449e64e0660f7ee209d1eab5881d4ccbee3b.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/bluefeet/Starch/pull/5",
+            "url": "https://github.com/bluefeet/Starch/pull/5"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/dist/Starch/source/lib/Starch/Manager.pm",
+            "url": "https://metacpan.org/dist/Starch/source/lib/Starch/Manager.pm"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40925 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40925"
+         }
+      ],
+      "title": "Starch vulnerability",
+      "tracking": {
+         "current_release_date": "2025-09-20T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Starch-2025-40925",
+         "initial_release_date": "2025-09-20T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-09-20T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=0.14",
+                  "product": {
+                     "name": "Starch less than or equal 0.14",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Starch"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40925",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Starch versions 0.14 and earlier generate session ids insecurely.\n\nThe default session id generator returns a SHA-1 hash seeded with a counter, the epoch time, the built-in rand function, the PID, and internal Perl reference addresses. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.\n\nPredicable session ids could allow an attacker to gain access to systems.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

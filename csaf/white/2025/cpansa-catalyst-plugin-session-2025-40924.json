@@ -1,0 +1,137 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Catalyst::Plugin::Session before version 0.44 for Perl generates session ids insecurely.  The session id is generated from a (usually SHA-1) hash of a simple counter, the epoch time, the built-in rand function, the PID and the current Catalyst context. This information is of low entropy. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.  Predicable session ids could allow an attacker to gain access to systems.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Catalyst-Plugin-Session-2025-40924 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-catalyst-plugin-session-2025-40924.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-catalyst/Catalyst-Plugin-Session/commit/c0e2b4ab1e42ebce1008286db8c571b6ee98c22c.patch",
+            "url": "https://github.com/perl-catalyst/Catalyst-Plugin-Session/commit/c0e2b4ab1e42ebce1008286db8c571b6ee98c22c.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-catalyst/Catalyst-Plugin-Session/pull/5",
+            "url": "https://github.com/perl-catalyst/Catalyst-Plugin-Session/pull/5"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HAARG/Catalyst-Plugin-Session-0.43/source/lib/Catalyst/Plugin/Session.pm#L632",
+            "url": "https://metacpan.org/release/HAARG/Catalyst-Plugin-Session-0.43/source/lib/Catalyst/Plugin/Session.pm#L632"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40924 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40924"
+         }
+      ],
+      "title": "Catalyst-Plugin-Session vulnerability",
+      "tracking": {
+         "current_release_date": "2025-07-17T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Catalyst-Plugin-Session-2025-40924",
+         "initial_release_date": "2025-07-17T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-07-17T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.44",
+                  "product": {
+                     "name": "Catalyst-Plugin-Session less than 0.44",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.44",
+                  "product": {
+                     "name": "Catalyst-Plugin-Session greater than or equal 0.44",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Catalyst-Plugin-Session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40924",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Catalyst::Plugin::Session before version 0.44 for Perl generates session ids insecurely.\n\nThe session id is generated from a (usually SHA-1) hash of a simple counter, the epoch time, the built-in rand function, the PID and the current Catalyst context. This information is of low entropy. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.\n\nPredicable session ids could allow an attacker to gain access to systems.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

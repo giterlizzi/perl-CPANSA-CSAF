@@ -1,0 +1,112 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Archive::Unzip::Burst from 0.01 through 0.09 for Perl contains a bundled InfoZip library that is affected by several vulnerabilities.  The bundled library is affected by CVE-2014-8139, CVE-2014-8140 and CVE-2014-8141.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Archive-Unzip-Burst-2022-4976 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-archive-unzip-burst-2022-4976.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=143547",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=143547"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2022-4976 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4976"
+         }
+      ],
+      "title": "Archive-Unzip-Burst vulnerability",
+      "tracking": {
+         "current_release_date": "2025-06-12T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Archive-Unzip-Burst-2022-4976",
+         "initial_release_date": "2025-06-12T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-06-12T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.01",
+                  "product": {
+                     "name": "Archive-Unzip-Burst greater than or equal 0.01",
+                     "product_id": "CSAFPID-0001"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Archive-Unzip-Burst"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2022-4976",
+         "notes": [
+            {
+               "category": "description",
+               "text": "Archive::Unzip::Burst from 0.01 through 0.09 for Perl contains a bundled InfoZip library that is affected by several vulnerabilities.\n\nThe bundled library is affected by CVE-2014-8139, CVE-2014-8140 and CVE-2014-8141.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

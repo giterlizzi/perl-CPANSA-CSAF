@@ -1,0 +1,137 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Cpanel::JSON::XS before version 4.40 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Cpanel-JSON-XS-2025-40929 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-cpanel-json-xs-2025-40929.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/rurban/Cpanel-JSON-XS/commit/378236219eaa35742c3962ecbdee364903b0a1f2.patch",
+            "url": "https://github.com/rurban/Cpanel-JSON-XS/commit/378236219eaa35742c3962ecbdee364903b0a1f2.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.39/source/XS.xs#L713",
+            "url": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.39/source/XS.xs#L713"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.40/changes",
+            "url": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.40/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40929 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40929"
+         }
+      ],
+      "title": "Cpanel-JSON-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2025-09-08T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Cpanel-JSON-XS-2025-40929",
+         "initial_release_date": "2025-09-08T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-09-08T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<4.40",
+                  "product": {
+                     "name": "Cpanel-JSON-XS less than 4.40",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.40",
+                  "product": {
+                     "name": "Cpanel-JSON-XS greater than or equal 4.40",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Cpanel-JSON-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40929",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Cpanel::JSON::XS before version 4.40 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.6,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

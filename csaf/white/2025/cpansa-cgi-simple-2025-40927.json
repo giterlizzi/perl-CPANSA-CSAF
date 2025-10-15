@@ -1,0 +1,152 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "CGI::Simple versions before 1.282 for Perl has a HTTP response splitting flaw This vulnerability is a confirmed HTTP response splittingÂ flaw in CGI::SimpleÂ that allows HTTP response header injection, which can be used for reflected XSS or open redirect under certain conditions.  Although some validation exists, it can be bypassed using URL-encoded values, allowing an attacker to inject untrusted content into the response via query parameters.    As a result, an attacker can inject a line break (e.g. %0A) into the parameter value, causing the server to split the HTTP response and inject arbitrary headers or even an HTML/JavaScript body, leading to reflected cross-site scripting (XSS), open redirect or other attacks.  The issue documented in CVE-2010-4410 https://www.cve.org/CVERecord?id=CVE-2010-4410 is related but the fix was incomplete.  Impact  By injecting %0AÂ (newline) into a query string parameter, an attacker can:    *  Break the current HTTP header   *  Inject a new header or entire body   *  Deliver a script payload that is reflected in the serverâs response That can lead to the following attacks:    *  reflected XSS   *  open redirect   *  cache poisoning   *  header manipulation",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-CGI-Simple-2025-40927 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-cgi-simple-2025-40927.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2320",
+            "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2320"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc7230#section-3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc7230#section-3"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MANWAR/CGI-Simple-1.281/diff/MANWAR/CGI-Simple-1.282/lib/CGI/Simple.pm",
+            "url": "https://metacpan.org/release/MANWAR/CGI-Simple-1.281/diff/MANWAR/CGI-Simple-1.282/lib/CGI/Simple.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MANWAR/CGI-Simple-1.281/source/lib/CGI/Simple.pm#L1031-1035",
+            "url": "https://metacpan.org/release/MANWAR/CGI-Simple-1.281/source/lib/CGI/Simple.pm#L1031-1035"
+         },
+         {
+            "category": "external",
+            "summary": "https://owasp.org/www-community/attacks/HTTP_Response_Splitting",
+            "url": "https://owasp.org/www-community/attacks/HTTP_Response_Splitting"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.perl.org/Public/Bug/Display.html?id=21951",
+            "url": "https://rt.perl.org/Public/Bug/Display.html?id=21951"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40927 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40927"
+         }
+      ],
+      "title": "CGI-Simple vulnerability",
+      "tracking": {
+         "current_release_date": "2025-08-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-CGI-Simple-2025-40927",
+         "initial_release_date": "2025-08-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-08-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=1.282",
+                  "product": {
+                     "name": "CGI-Simple less than or equal 1.282",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.282",
+                  "product": {
+                     "name": "CGI-Simple greater than or equal 1.282",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "CGI-Simple"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40927",
+         "cwe": {
+            "id": "CWE-113",
+            "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "CGI::Simple versions before 1.282 for Perl has a HTTP response splitting flaw\nThis vulnerability is a confirmed HTTP response splitting flaw in CGI::Simple that allows HTTP response header injection, which can be used for reflected XSS or open redirect under certain conditions.\n\nAlthough some validation exists, it can be bypassed using URL-encoded values, allowing an attacker to inject untrusted content into the response via query parameters.\n\n\n\nAs a result, an attacker can inject a line break (e.g. %0A) into the parameter value, causing the server to split the HTTP response and inject arbitrary headers or even an HTML/JavaScript body, leading to reflected cross-site scripting (XSS), open redirect or other attacks.\n\nThe issue documented in CVE-2010-4410 https://www.cve.org/CVERecord?id=CVE-2010-4410 is related but the fix was incomplete.\n\nImpact\n\nBy injecting %0A (newline) into a query string parameter, an attacker can:\n\n  *  Break the current HTTP header\n  *  Inject a new header or entire body\n  *  Deliver a script payload that is reflected in the server’s response\nThat can lead to the following attacks:\n\n  *  reflected XSS\n  *  open redirect\n  *  cache poisoning\n  *  header manipulation",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.3,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,147 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "PerlSpeak through 2.01 allows attackers to execute arbitrary OS commands, as demonstrated by use of system and 2-argument open.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-PerlSpeak-2011-10007 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-perlspeak-2011-10007.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2020-10674",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-10674"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/source/JKAMPHAUS/PerlSpeak-2.01/Changes",
+            "url": "https://metacpan.org/source/JKAMPHAUS/PerlSpeak-2.01/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=132173",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=132173"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/gitpan/PerlSpeak",
+            "url": "https://github.com/gitpan/PerlSpeak"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2020-10674 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-10674"
+         }
+      ],
+      "title": "PerlSpeak vulnerability",
+      "tracking": {
+         "current_release_date": "2025-06-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-PerlSpeak-2011-10007",
+         "initial_release_date": "2025-06-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-06-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=2.01",
+                  "product": {
+                     "name": "PerlSpeak less than or equal 2.01",
+                     "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>2.01",
+                  "product": {
+                     "name": "PerlSpeak greater than 2.01",
+                     "product_id": "CSAFPID-0002"
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "PerlSpeak"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2020-10674",
+         "cwe": {
+            "id": "CWE-78",
+            "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "PerlSpeak through 2.01 allows attackers to execute arbitrary OS commands, as demonstrated by use of system and 2-argument open.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
