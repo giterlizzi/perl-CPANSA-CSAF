@@ -9,6 +9,34 @@
       "entry": [
          {
             "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-xml-sig-2025-40934.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-XML-Sig-2025-40934",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-xml-sig-2025-40934.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-xml-sig-2025-40934.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-xml-sig-2025-40934.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2025-11-26T00:00:00",
+            "title": "XML-Sig vulnerability",
+            "updated": "2025-11-26T00:00:00"
+         },
+         {
+            "content": {
                "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-crypt-randomencryption-2024-58040.json",
                "type": "application/json"
             },
@@ -21100,6 +21128,6 @@
          }
       ],
       "title": "CPANSA CSAF feed (TLP:WHITE)",
-      "updated": "2025-10-15T02:12:18"
+      "updated": "2025-12-26T19:33:11"
    }
 }
