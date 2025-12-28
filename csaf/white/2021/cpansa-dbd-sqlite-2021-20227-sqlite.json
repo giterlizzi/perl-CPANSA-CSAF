@@ -83,7 +83,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-DBD-SQLite-2021-20227-sqlite",

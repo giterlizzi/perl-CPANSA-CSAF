@@ -48,7 +48,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-WWW-ORCID-2020-23849-jsoneditor",

@@ -73,7 +73,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Git-XS-2018-12121-http-parser",

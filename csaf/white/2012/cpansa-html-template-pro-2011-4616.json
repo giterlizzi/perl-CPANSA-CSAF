@@ -85,7 +85,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-HTML-Template-Pro-2011-4616",

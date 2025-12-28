@@ -158,7 +158,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Compress-Raw-Zlib-2018-25032-zlib",

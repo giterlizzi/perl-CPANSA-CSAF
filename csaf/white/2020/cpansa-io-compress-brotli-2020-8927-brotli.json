@@ -113,7 +113,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-IO-Compress-Brotli-2020-8927-brotli",

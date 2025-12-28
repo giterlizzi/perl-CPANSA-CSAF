@@ -67,17 +67,17 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/<=20160302",
+                  "name": "vers:cpan/<20170521",
                   "product": {
-                     "name": "Perl-Tidy less than or equal 20160302",
+                     "name": "Perl-Tidy less than 20170521",
                      "product_id": "CSAFPID-0001"
                   }
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>20160302",
+                  "name": "vers:cpan/>=20170521",
                   "product": {
-                     "name": "Perl-Tidy greater than 20160302",
+                     "name": "Perl-Tidy greater than or equal 20170521",
                      "product_id": "CSAFPID-0002"
                   }
                }

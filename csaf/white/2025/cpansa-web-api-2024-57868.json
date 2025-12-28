@@ -65,7 +65,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Web-API-2024-57868",
@@ -111,8 +111,8 @@
       {
          "cve": "CVE-2024-57868",
          "cwe": {
-            "id": "CWE-338",
-            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+            "id": "CWE-331",
+            "name": "Insufficient Entropy"
          },
          "notes": [
             {

@@ -68,7 +68,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-File-Temp-2011-4116",
@@ -124,14 +124,14 @@
          "scores": [
             {
                "cvss_v2": {
-                  "baseScore": 5,
-                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                  "baseScore": 1.5,
+                  "vectorString": "AV:L/AC:M/Au:S/C:N/I:P/A:N",
                   "version": "2.0"
                },
                "cvss_v3": {
-                  "baseScore": 7.5,
-                  "baseSeverity": "HIGH",
-                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "baseScore": 3.3,
+                  "baseSeverity": "LOW",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
                   "version": "3.1"
                },
                "products": [

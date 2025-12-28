@@ -98,7 +98,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Resource-Pack-jQuery-2012-6708-jquery",

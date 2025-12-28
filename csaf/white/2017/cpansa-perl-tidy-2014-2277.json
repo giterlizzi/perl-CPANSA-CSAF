@@ -60,6 +60,11 @@
          },
          {
             "category": "external",
+            "summary": "https://github.com/perltidy/perltidy/issues/193",
+            "url": "https://github.com/perltidy/perltidy/issues/193"
+         },
+         {
+            "category": "external",
             "summary": "CVE-2014-2277 (NVD)",
             "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-2277"
          }
@@ -92,10 +97,18 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<20140328",
                   "product": {
-                     "name": "Perl-Tidy greater than 0",
+                     "name": "Perl-Tidy less than 20140328",
                      "product_id": "CSAFPID-0001"
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=20140328",
+                  "product": {
+                     "name": "Perl-Tidy greater than or equal 20140328",
+                     "product_id": "CSAFPID-0002"
                   }
                }
             ],
@@ -119,6 +132,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

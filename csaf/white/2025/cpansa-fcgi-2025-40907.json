@@ -70,7 +70,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-FCGI-2025-40907",
@@ -108,8 +108,8 @@
       {
          "cve": "CVE-2025-40907",
          "cwe": {
-            "id": "CWE-190",
-            "name": "Integer Overflow or Wraparound"
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
          },
          "notes": [
             {

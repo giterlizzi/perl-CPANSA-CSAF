@@ -58,7 +58,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Poe-Component-IRC-2010-3438",
@@ -85,6 +85,14 @@
                      "name": "POE-Component-IRC less than 6.32",
                      "product_id": "CSAFPID-0001"
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.32",
+                  "product": {
+                     "name": "POE-Component-IRC greater than or equal 6.32",
+                     "product_id": "CSAFPID-0002"
+                  }
                }
             ],
             "category": "product_name",
@@ -107,6 +115,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

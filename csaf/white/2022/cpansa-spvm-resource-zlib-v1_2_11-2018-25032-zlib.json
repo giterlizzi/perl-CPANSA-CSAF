@@ -158,7 +158,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-SPVM-Resource-Zlib-V1_2_11-2018-25032-zlib",

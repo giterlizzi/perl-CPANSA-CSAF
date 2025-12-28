@@ -83,7 +83,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-BSON-XS-2025-40906",
@@ -121,8 +121,8 @@
       {
          "cve": "CVE-2025-40906",
          "cwe": {
-            "id": "CWE-1104",
-            "name": "Use of Unmaintained Third Party Components"
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
          },
          "notes": [
             {

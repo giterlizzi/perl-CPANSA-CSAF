@@ -60,7 +60,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Crypt-CBC-2025-2814",
@@ -87,6 +87,14 @@
                      "name": "Crypt-CBC greater than or equal 1.21",
                      "product_id": "CSAFPID-0001"
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.07",
+                  "product": {
+                     "name": "Crypt-CBC greater than or equal 3.07",
+                     "product_id": "CSAFPID-0002"
+                  }
                }
             ],
             "category": "product_name",
@@ -98,8 +106,8 @@
       {
          "cve": "CVE-2025-2814",
          "cwe": {
-            "id": "CWE-338",
-            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+            "id": "CWE-329",
+            "name": "Generation of Predictable IV with CBC Mode"
          },
          "notes": [
             {
@@ -109,6 +117,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

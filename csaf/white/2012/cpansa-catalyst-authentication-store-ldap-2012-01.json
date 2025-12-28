@@ -43,7 +43,7 @@
          "generator": {
             "engine": {
                "name": "CSAF Perl Toolkit",
-               "version": "0.25"
+               "version": "0.26"
             }
          },
          "id": "CPANSA-Catalyst-Authentication-Store-LDAP-2012-01",

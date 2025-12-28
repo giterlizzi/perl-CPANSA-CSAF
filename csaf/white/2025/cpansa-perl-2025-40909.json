@@ -163,8 +163,8 @@
       {
          "cve": "CVE-2025-40909",
          "cwe": {
-            "id": "CWE-362",
-            "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+            "id": "CWE-426",
+            "name": "Untrusted Search Path"
          },
          "notes": [
             {
