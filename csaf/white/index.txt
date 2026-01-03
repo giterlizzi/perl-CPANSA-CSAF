@@ -1,3 +1,4 @@
+2025/cpansa-yaml-syck-2025-11683.json
 2025/cpansa-yaml-libyaml-2025-001.json
 2025/cpansa-xml-sig-2025-40934.json
 2025/cpansa-webservice-xero-2024-52322.json
