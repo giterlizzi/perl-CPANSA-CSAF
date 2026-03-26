@@ -1,0 +1,124 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache::Session::Generate::MD5 versions through 1.94 for Perl create insecure session id.  Apache::Session::Generate::MD5 generates session ids insecurely. The default session id generator returns a MD5 hash seeded with the built-in rand() function, the epoch time, and the PID. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage. Predicable session ids could allow an attacker to gain access to systems.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Apache-Session-2025-40931 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-2025-40931.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/dist/Apache-Session/source/lib/Apache/Session/Generate/MD5.pm#L27",
+            "url": "https://metacpan.org/dist/Apache-Session/source/lib/Apache/Session/Generate/MD5.pm#L27"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40931 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40931"
+         }
+      ],
+      "title": "Apache-Session vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Apache-Session-2025-40931",
+         "initial_release_date": "2026-03-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Apache-Session greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-Session"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Apache-Session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40931",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Apache::Session::Generate::MD5 versions through 1.94 for Perl create insecure session id.\n\nApache::Session::Generate::MD5 generates session ids insecurely. The default session id generator returns a MD5 hash seeded with the built-in rand() function, the epoch time, and the PID. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage. Predicable session ids could allow an attacker to gain access to systems.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

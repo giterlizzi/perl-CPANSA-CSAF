@@ -73,7 +73,10 @@
                   "name": "vers:cpan/==0.89",
                   "product": {
                      "name": "Git-Raw equal =0.89",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Git-Raw"
+                     }
                   }
                }
             ],

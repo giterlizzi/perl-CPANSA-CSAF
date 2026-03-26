@@ -95,7 +95,10 @@
                   "name": "vers:cpan/>=5.0|<=5.01",
                   "product": {
                      "name": "MT greater than or equal 5.0 and less than or equal 5.01",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
                   }
                }
             ],

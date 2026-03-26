@@ -80,7 +80,10 @@
                   "name": "vers:cpan/<0.44",
                   "product": {
                      "name": "Catalyst-Plugin-Session less than 0.44",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Session"
+                     }
                   }
                },
                {
@@ -88,7 +91,10 @@
                   "name": "vers:cpan/>=0.44",
                   "product": {
                      "name": "Catalyst-Plugin-Session greater than or equal 0.44",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Session"
+                     }
                   }
                }
             ],

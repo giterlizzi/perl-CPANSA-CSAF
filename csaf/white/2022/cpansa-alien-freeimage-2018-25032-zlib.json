@@ -183,7 +183,10 @@
                   "name": "vers:cpan/>=0.001|<=1.001",
                   "product": {
                      "name": "Alien-FreeImage greater than or equal 0.001 and less than or equal 1.001",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Alien-FreeImage"
+                     }
                   }
                }
             ],

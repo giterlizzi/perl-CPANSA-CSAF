@@ -85,7 +85,10 @@
                   "name": "vers:cpan/<0.013000",
                   "product": {
                      "name": "Mite less than 0.013000",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mite"
+                     }
                   }
                },
                {
@@ -93,7 +96,10 @@
                   "name": "vers:cpan/>=0.013000",
                   "product": {
                      "name": "Mite greater than or equal 0.013000",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mite"
+                     }
                   }
                }
             ],

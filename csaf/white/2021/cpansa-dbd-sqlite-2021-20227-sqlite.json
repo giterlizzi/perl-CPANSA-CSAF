@@ -108,7 +108,10 @@
                   "name": "vers:cpan/>=1.71_07|<=1.72",
                   "product": {
                      "name": "DBD-SQLite greater than or equal 1.71_07 and less than or equal 1.72",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-SQLite"
+                     }
                   }
                }
             ],

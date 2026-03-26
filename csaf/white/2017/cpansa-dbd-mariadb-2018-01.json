@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<1.00",
                   "product": {
                      "name": "DBD-MariaDB less than 1.00",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-MariaDB"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=1.00",
                   "product": {
                      "name": "DBD-MariaDB greater than or equal 1.00",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-MariaDB"
+                     }
                   }
                }
             ],

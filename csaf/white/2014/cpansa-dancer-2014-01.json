@@ -75,7 +75,10 @@
                   "name": "vers:cpan/<1.3114",
                   "product": {
                      "name": "Dancer less than 1.3114",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer"
+                     }
                   }
                },
                {
@@ -83,7 +86,10 @@
                   "name": "vers:cpan/>=1.3114",
                   "product": {
                      "name": "Dancer greater than or equal 1.3114",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer"
+                     }
                   }
                }
             ],

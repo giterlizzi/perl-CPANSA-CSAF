@@ -95,7 +95,10 @@
                   "name": "vers:cpan/<4.033",
                   "product": {
                      "name": "Cpanel-JSON-XS less than 4.033",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
                   }
                },
                {
@@ -103,7 +106,10 @@
                   "name": "vers:cpan/>=4.033",
                   "product": {
                      "name": "Cpanel-JSON-XS greater than or equal 4.033",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
                   }
                }
             ],

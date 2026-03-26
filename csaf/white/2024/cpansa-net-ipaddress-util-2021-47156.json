@@ -80,7 +80,10 @@
                   "name": "vers:cpan/<5.000",
                   "product": {
                      "name": "Net-IPAddress-Util less than 5.000",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IPAddress-Util"
+                     }
                   }
                },
                {
@@ -88,7 +91,10 @@
                   "name": "vers:cpan/>=5.000",
                   "product": {
                      "name": "Net-IPAddress-Util greater than or equal 5.000",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IPAddress-Util"
+                     }
                   }
                }
             ],

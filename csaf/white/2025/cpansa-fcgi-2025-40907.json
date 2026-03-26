@@ -95,7 +95,10 @@
                   "name": "vers:cpan/>=0.44",
                   "product": {
                      "name": "FCGI greater than or equal 0.44",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/FCGI"
+                     }
                   }
                }
             ],

@@ -1,0 +1,157 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "libsodium before ad3004e, in atypical use cases involving certain custom cryptography or untrusted data to crypto_core_ed25519_is_valid_point, mishandles checks for whether an elliptic curve point is valid because it sometimes allows points that aren't in the main cryptographic group.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-Sodium-XS-2025-69277-libsodium JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2025/cpansa-crypt-sodium-xs-2025-69277-libsodium.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://00f.net/2025/12/30/libsodium-vulnerability/",
+            "url": "https://00f.net/2025/12/30/libsodium-vulnerability/"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jedisct1/libsodium/commit/ad3004ec8731730e93fcfbbc824e67eadc1c1bae",
+            "url": "https://github.com/jedisct1/libsodium/commit/ad3004ec8731730e93fcfbbc824e67eadc1c1bae"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/pyca/pynacl/commit/96314884d88d1089ff5f336dba61d7abbcddbbf7",
+            "url": "https://github.com/pyca/pynacl/commit/96314884d88d1089ff5f336dba61d7abbcddbbf7"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/pyca/pynacl/commit/ecf41f55a3d8f1e10ce89c61c4b4d67f3f4467cf",
+            "url": "https://github.com/pyca/pynacl/commit/ecf41f55a3d8f1e10ce89c61c4b4d67f3f4467cf"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/pyca/pynacl/issues/920",
+            "url": "https://github.com/pyca/pynacl/issues/920"
+         },
+         {
+            "category": "external",
+            "summary": "https://ianix.com/pub/ed25519-deployment.html",
+            "url": "https://ianix.com/pub/ed25519-deployment.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2026/01/msg00004.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2026/01/msg00004.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://news.ycombinator.com/item?id=46435614",
+            "url": "https://news.ycombinator.com/item?id=46435614"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-69277 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69277"
+         }
+      ],
+      "title": "Crypt-Sodium-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2025-12-31T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Crypt-Sodium-XS-2025-69277-libsodium",
+         "initial_release_date": "2025-12-31T00:00:00",
+         "revision_history": [
+            {
+               "date": "2025-12-31T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.000018|<=0.000027",
+                  "product": {
+                     "name": "Crypt-Sodium-XS greater than or equal 0.000018 and less than or equal 0.000027",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-Sodium-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-Sodium-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-69277",
+         "cwe": {
+            "id": "CWE-184",
+            "name": "Incomplete List of Disallowed Inputs"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "libsodium before ad3004e, in atypical use cases involving certain custom cryptography or untrusted data to crypto_core_ed25519_is_valid_point, mishandles checks for whether an elliptic curve point is valid because it sometimes allows points that aren't in the main cryptographic group.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 4.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -75,7 +75,10 @@
                   "name": "vers:cpan/<4.04",
                   "product": {
                      "name": "JSON-XS less than 4.04",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JSON-XS"
+                     }
                   }
                },
                {
@@ -83,7 +86,10 @@
                   "name": "vers:cpan/>=4.04",
                   "product": {
                      "name": "JSON-XS greater than or equal 4.04",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JSON-XS"
+                     }
                   }
                }
             ],

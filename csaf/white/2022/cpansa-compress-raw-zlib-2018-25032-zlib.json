@@ -183,7 +183,10 @@
                   "name": "vers:cpan/>=2.075|<=2.101",
                   "product": {
                      "name": "Compress-Raw-Zlib greater than or equal 2.075 and less than or equal 2.101",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Compress-Raw-Zlib"
+                     }
                   }
                }
             ],

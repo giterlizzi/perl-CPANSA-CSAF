@@ -1,0 +1,147 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "libpng before 1.6.32 does not properly check the length of chunks against the user limit.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Tk-2017-12652-libpng JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2019/cpansa-tk-2017-12652-libpng.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/glennrp/libpng/blob/df7e9dae0c4aac63d55361e35709c864fa1b8363/ANNOUNCE",
+            "url": "https://github.com/glennrp/libpng/blob/df7e9dae0c4aac63d55361e35709c864fa1b8363/ANNOUNCE"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/109269",
+            "url": "http://www.securityfocus.com/bid/109269"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.f5.com/csp/article/K88124225",
+            "url": "https://support.f5.com/csp/article/K88124225"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.f5.com/csp/article/K88124225?utm_source=f5support&amp;utm_medium=RSS",
+            "url": "https://support.f5.com/csp/article/K88124225?utm_source=f5support&amp;utm_medium=RSS"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20220506-0003/",
+            "url": "https://security.netapp.com/advisory/ntap-20220506-0003/"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2017-12652 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-12652"
+         }
+      ],
+      "title": "Tk vulnerability",
+      "tracking": {
+         "current_release_date": "2019-07-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Tk-2017-12652-libpng",
+         "initial_release_date": "2019-07-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2019-07-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>804.024|<=804.027",
+                  "product": {
+                     "name": "Tk greater than 804.024 and less than or equal 804.027",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tk"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Tk"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2017-12652",
+         "cwe": {
+            "id": "CWE-20",
+            "name": "Improper Input Validation"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "libpng before 1.6.32 does not properly check the length of chunks against the user limit.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

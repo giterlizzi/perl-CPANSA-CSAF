@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.13",
                   "product": {
                      "name": "Otogiri less than 0.13",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Otogiri"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=0.13",
                   "product": {
                      "name": "Otogiri greater than or equal 0.13",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Otogiri"
+                     }
                   }
                }
             ],

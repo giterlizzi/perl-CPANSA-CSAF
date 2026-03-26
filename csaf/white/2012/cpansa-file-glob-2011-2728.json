@@ -100,7 +100,10 @@
                   "name": "vers:cpan/<1.13",
                   "product": {
                      "name": "perl less than 1.13",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
                   }
                },
                {
@@ -108,7 +111,10 @@
                   "name": "vers:cpan/>=1.13",
                   "product": {
                      "name": "perl greater than or equal 1.13",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
                   }
                }
             ],

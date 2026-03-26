@@ -105,7 +105,10 @@
                   "name": "vers:cpan/>=0.45|<0.47",
                   "product": {
                      "name": "Proc-ProcessTable greater than or equal 0.45 and less than 0.47",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Proc-ProcessTable"
+                     }
                   }
                },
                {
@@ -113,7 +116,10 @@
                   "name": "vers:cpan/>=0.47",
                   "product": {
                      "name": "Proc-ProcessTable greater than or equal 0.47",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Proc-ProcessTable"
+                     }
                   }
                }
             ],

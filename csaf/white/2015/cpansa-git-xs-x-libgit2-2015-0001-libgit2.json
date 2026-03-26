@@ -73,7 +73,10 @@
                   "name": "vers:cpan/>=0.01|<=0.02",
                   "product": {
                      "name": "Git-XS greater than or equal 0.01 and less than or equal 0.02",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Git-XS"
+                     }
                   }
                }
             ],

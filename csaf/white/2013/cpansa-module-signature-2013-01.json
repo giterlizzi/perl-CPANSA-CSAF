@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.72",
                   "product": {
                      "name": "Module-Signature less than 0.72",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Module-Signature"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=0.72",
                   "product": {
                      "name": "Module-Signature greater than or equal 0.72",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Module-Signature"
+                     }
                   }
                }
             ],

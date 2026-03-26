@@ -98,7 +98,10 @@
                   "name": "vers:cpan/>=1.053|<2.0.10",
                   "product": {
                      "name": "MarpaX-ESLIF greater than or equal 1.053 and less than 2.0.10",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MarpaX-ESLIF"
+                     }
                   }
                }
             ],

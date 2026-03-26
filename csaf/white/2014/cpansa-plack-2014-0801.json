@@ -65,7 +65,10 @@
                   "name": "vers:cpan/<1.0031",
                   "product": {
                      "name": "Plack less than 1.0031",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack"
+                     }
                   }
                },
                {
@@ -73,7 +76,10 @@
                   "name": "vers:cpan/>=1.0031",
                   "product": {
                      "name": "Plack greater than or equal 1.0031",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack"
+                     }
                   }
                }
             ],

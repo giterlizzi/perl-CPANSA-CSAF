@@ -78,7 +78,10 @@
                   "name": "vers:cpan/>=0.000030|<=0.000078",
                   "product": {
                      "name": "JavaScript-Duktape-XS greater than or equal 0.000030 and less than or equal 0.000078",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JavaScript-Duktape-XS"
+                     }
                   }
                }
             ],

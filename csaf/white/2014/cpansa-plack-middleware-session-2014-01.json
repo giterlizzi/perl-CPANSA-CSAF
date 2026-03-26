@@ -73,7 +73,10 @@
                   "name": "vers:cpan/<=0.21",
                   "product": {
                      "name": "Plack-Middleware-Session less than or equal 0.21",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Session"
+                     }
                   }
                },
                {
@@ -81,7 +84,10 @@
                   "name": "vers:cpan/>0.21",
                   "product": {
                      "name": "Plack-Middleware-Session greater than 0.21",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Session"
+                     }
                   }
                }
             ],

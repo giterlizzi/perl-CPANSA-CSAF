@@ -1,0 +1,132 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "jsoneditor is vulnerable to Inefficient Regular Expression Complexity",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-WWW-ORCID-2021-3822-jsoneditor JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-www-orcid-2021-3822-jsoneditor.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/josdejong/jsoneditor/commit/092e386cf49f2a1450625617da8e0137ed067c3e",
+            "url": "https://github.com/josdejong/jsoneditor/commit/092e386cf49f2a1450625617da8e0137ed067c3e"
+         },
+         {
+            "category": "external",
+            "summary": "https://huntr.dev/bounties/1e3ed803-b7ed-42f1-a4ea-c4c75da9de73",
+            "url": "https://huntr.dev/bounties/1e3ed803-b7ed-42f1-a4ea-c4c75da9de73"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2021-3822 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3822"
+         }
+      ],
+      "title": "WWW-ORCID vulnerability",
+      "tracking": {
+         "current_release_date": "2021-09-27T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-WWW-ORCID-2021-3822-jsoneditor",
+         "initial_release_date": "2021-09-27T00:00:00",
+         "revision_history": [
+            {
+               "date": "2021-09-27T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.02",
+                  "product": {
+                     "name": "WWW-ORCID greater than or equal 0.02",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/WWW-ORCID"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "WWW-ORCID"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2021-3822",
+         "cwe": {
+            "id": "CWE-1333",
+            "name": "Inefficient Regular Expression Complexity"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "jsoneditor is vulnerable to Inefficient Regular Expression Complexity",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

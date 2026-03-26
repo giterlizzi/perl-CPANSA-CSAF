@@ -1,0 +1,139 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HarfBuzz::Shaper versions before 0.032 for Perl contains a bundled library with a null pointer dereference vulnerability.Â   Versions before 0.032 contain HarfBuzz 8.4.0 or earlier bundled as hb_src.tar.gz in the source tarball, which is affected by CVE-2026-22693.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HarfBuzz-Shaper-2026-0943 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-harfbuzz-shaper-2026-0943.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=2429296",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2429296"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/JV/HarfBuzz-Shaper-0.032/changes",
+            "url": "https://metacpan.org/release/JV/HarfBuzz-Shaper-0.032/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-22693",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-22693"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-0943 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0943"
+         }
+      ],
+      "title": "HarfBuzz-Shaper vulnerability",
+      "tracking": {
+         "current_release_date": "2026-01-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HarfBuzz-Shaper-2026-0943",
+         "initial_release_date": "2026-01-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-01-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.032",
+                  "product": {
+                     "name": "HarfBuzz-Shaper less than 0.032",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HarfBuzz-Shaper"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.032",
+                  "product": {
+                     "name": "HarfBuzz-Shaper greater than or equal 0.032",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HarfBuzz-Shaper"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HarfBuzz-Shaper"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-0943",
+         "notes": [
+            {
+               "category": "description",
+               "text": "HarfBuzz::Shaper versions before 0.032 for Perl contains a bundled library with a null pointer dereference vulnerability. \n\nVersions before 0.032 contain HarfBuzz 8.4.0 or earlier bundled as hb_src.tar.gz in the source tarball, which is affected by CVE-2026-22693.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

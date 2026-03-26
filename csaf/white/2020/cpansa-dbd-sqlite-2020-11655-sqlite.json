@@ -138,7 +138,10 @@
                   "name": "vers:cpan/=1.65_02",
                   "product": {
                      "name": "DBD-SQLite equal 1.65_02",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-SQLite"
+                     }
                   }
                }
             ],

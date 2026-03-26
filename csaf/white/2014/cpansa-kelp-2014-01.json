@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.9001",
                   "product": {
                      "name": "Kelp less than 0.9001",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Kelp"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=0.9001",
                   "product": {
                      "name": "Kelp greater than or equal 0.9001",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Kelp"
+                     }
                   }
                }
             ],

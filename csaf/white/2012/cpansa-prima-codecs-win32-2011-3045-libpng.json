@@ -190,7 +190,10 @@
                   "name": "vers:cpan/>=1.00|<=1.01",
                   "product": {
                      "name": "Prima-codecs-win32 greater than or equal 1.00 and less than or equal 1.01",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Prima-codecs-win32"
+                     }
                   }
                }
             ],

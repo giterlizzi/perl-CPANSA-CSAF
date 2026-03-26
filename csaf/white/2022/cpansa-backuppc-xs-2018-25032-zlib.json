@@ -183,7 +183,10 @@
                   "name": "vers:cpan/>=0.50|<=0.62",
                   "product": {
                      "name": "BackupPC-XS greater than or equal 0.50 and less than or equal 0.62",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/BackupPC-XS"
+                     }
                   }
                }
             ],

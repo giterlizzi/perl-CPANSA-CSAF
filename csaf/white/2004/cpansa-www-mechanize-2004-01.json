@@ -65,7 +65,10 @@
                   "name": "vers:cpan/<1.05_03",
                   "product": {
                      "name": "WWW-Mechanize less than 1.05_03",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/WWW-Mechanize"
+                     }
                   }
                },
                {
@@ -73,7 +76,10 @@
                   "name": "vers:cpan/>=1.05_03",
                   "product": {
                      "name": "WWW-Mechanize greater than or equal 1.05_03",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/WWW-Mechanize"
+                     }
                   }
                }
             ],

@@ -68,7 +68,10 @@
                   "name": "vers:cpan/<1.013",
                   "product": {
                      "name": "Catalyst-Authentication-Store-LDAP less than 1.013",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Authentication-Store-LDAP"
+                     }
                   }
                },
                {
@@ -76,7 +79,10 @@
                   "name": "vers:cpan/>=1.013",
                   "product": {
                      "name": "Catalyst-Authentication-Store-LDAP greater than or equal 1.013",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Authentication-Store-LDAP"
+                     }
                   }
                }
             ],

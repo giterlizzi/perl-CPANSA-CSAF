@@ -258,7 +258,10 @@
                   "name": "vers:cpan/>=0.01|<=2.1.2",
                   "product": {
                      "name": "Ukigumo-Server greater than or equal 0.01 and less than or equal 2.1.2",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Ukigumo-Server"
+                     }
                   }
                }
             ],

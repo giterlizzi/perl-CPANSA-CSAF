@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<3.41",
                   "product": {
                      "name": "Devel-PPPort less than 3.41",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Devel-PPPort"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=3.41",
                   "product": {
                      "name": "Devel-PPPort greater than or equal 3.41",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Devel-PPPort"
+                     }
                   }
                }
             ],

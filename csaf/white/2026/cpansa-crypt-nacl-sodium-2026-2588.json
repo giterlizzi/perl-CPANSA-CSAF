@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Crypt::NaCl::Sodium versions through 2.001 for Perl has an integer overflow flaw on 32-bit systems.  Sodium.xs casts a STRLEN (size_t) to unsigned long long when passing a length pointer to libsodium functions.  On 32-bit systems size_t is typically 32-bits while an unsigned long long is at least 64-bits.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-NaCl-Sodium-2026-2588 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-nacl-sodium-2026-2588.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/crypt-nacl-sodium/commit/557388bdb4da416a56663cda0154b80cd524395c.patch",
+            "url": "https://github.com/cpan-authors/crypt-nacl-sodium/commit/557388bdb4da416a56663cda0154b80cd524395c.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/crypt-nacl-sodium/commit/8cf7f66ba922443e131c9deae1ee00fafe4f62e4.patch",
+            "url": "https://github.com/cpan-authors/crypt-nacl-sodium/commit/8cf7f66ba922443e131c9deae1ee00fafe4f62e4.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.001/source/Sodium.xs#L2119",
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.001/source/Sodium.xs#L2119"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-2588 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2588"
+         }
+      ],
+      "title": "Crypt-NaCl-Sodium vulnerability",
+      "tracking": {
+         "current_release_date": "2026-02-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Crypt-NaCl-Sodium-2026-2588",
+         "initial_release_date": "2026-02-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-02-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.002",
+                  "product": {
+                     "name": "Crypt-NaCl-Sodium less than 2.002",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-NaCl-Sodium"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.002",
+                  "product": {
+                     "name": "Crypt-NaCl-Sodium greater than or equal 2.002",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-NaCl-Sodium"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-NaCl-Sodium"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-2588",
+         "cwe": {
+            "id": "CWE-190",
+            "name": "Integer Overflow or Wraparound"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Crypt::NaCl::Sodium versions through 2.001 for Perl has an integer overflow flaw on 32-bit systems.\n\nSodium.xs casts a STRLEN (size_t) to unsigned long long when passing a length pointer to libsodium functions.  On 32-bit systems size_t is typically 32-bits while an unsigned long long is at least 64-bits.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

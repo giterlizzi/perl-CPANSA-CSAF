@@ -80,7 +80,10 @@
                   "name": "vers:cpan/<=0.007",
                   "product": {
                      "name": "Data-Entropy less than or equal 0.007",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Entropy"
+                     }
                   }
                },
                {
@@ -88,7 +91,10 @@
                   "name": "vers:cpan/>0.007",
                   "product": {
                      "name": "Data-Entropy greater than 0.007",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Entropy"
+                     }
                   }
                }
             ],

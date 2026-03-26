@@ -98,7 +98,10 @@
                   "name": "vers:cpan/==1.7.19.0",
                   "product": {
                      "name": "Alien-SVN equal =1.7.19.0",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Alien-SVN"
+                     }
                   }
                }
             ],

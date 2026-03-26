@@ -1,0 +1,152 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "ghostscript before version 9.21 is vulnerable to a heap based buffer overflow that was found in the ghostscript jbig2_decode_gray_scale_image function which is used to decode halftone segments in a JBIG2 image. A document (PostScript or PDF) with an embedded, specially crafted, jbig2 image could trigger a segmentation fault in ghostscript.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Win32-Printer-2016-9601-jquery JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-win32-printer-2016-9601-jquery.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2016-9601",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2016-9601"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugs.ghostscript.com/show_bug.cgi?id=697457",
+            "url": "https://bugs.ghostscript.com/show_bug.cgi?id=697457"
+         },
+         {
+            "category": "external",
+            "summary": "http://git.ghostscript.com/?p=jbig2dec.git;a=commit;h=e698d5c11d27212aa1098bc5b1673a3378563092",
+            "url": "http://git.ghostscript.com/?p=jbig2dec.git;a=commit;h=e698d5c11d27212aa1098bc5b1673a3378563092"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2017/dsa-3817",
+            "url": "https://www.debian.org/security/2017/dsa-3817"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/201706-24",
+            "url": "https://security.gentoo.org/glsa/201706-24"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/97095",
+            "url": "http://www.securityfocus.com/bid/97095"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2016-9601 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-9601"
+         }
+      ],
+      "title": "Win32-Printer vulnerability",
+      "tracking": {
+         "current_release_date": "2018-04-24T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Win32-Printer-2016-9601-jquery",
+         "initial_release_date": "2018-04-24T00:00:00",
+         "revision_history": [
+            {
+               "date": "2018-04-24T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.7.0|<0.9.0",
+                  "product": {
+                     "name": "Win32-Printer greater than or equal 0.7.0 and less than 0.9.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Win32-Printer"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Win32-Printer"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2016-9601",
+         "cwe": {
+            "id": "CWE-190",
+            "name": "Integer Overflow or Wraparound"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "ghostscript before version 9.21 is vulnerable to a heap based buffer overflow that was found in the ghostscript jbig2_decode_gray_scale_image function which is used to decode halftone segments in a JBIG2 image. A document (PostScript or PDF) with an embedded, specially crafted, jbig2 image could trigger a segmentation fault in ghostscript.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

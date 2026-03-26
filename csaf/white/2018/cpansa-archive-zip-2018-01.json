@@ -78,7 +78,10 @@
                   "name": "vers:cpan/<1.61",
                   "product": {
                      "name": "Archive-Zip less than 1.61",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Archive-Zip"
+                     }
                   }
                }
             ],

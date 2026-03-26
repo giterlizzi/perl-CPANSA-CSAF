@@ -100,7 +100,10 @@
                   "name": "vers:cpan/<1.51",
                   "product": {
                      "name": "MailTools less than 1.51",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MailTools"
+                     }
                   }
                },
                {
@@ -108,7 +111,10 @@
                   "name": "vers:cpan/>=1.51",
                   "product": {
                      "name": "MailTools greater than or equal 1.51",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MailTools"
+                     }
                   }
                }
             ],

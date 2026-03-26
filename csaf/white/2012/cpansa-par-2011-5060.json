@@ -85,7 +85,10 @@
                   "name": "vers:cpan/<1.003",
                   "product": {
                      "name": "PAR less than 1.003",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/PAR"
+                     }
                   }
                },
                {
@@ -93,7 +96,10 @@
                   "name": "vers:cpan/>=1.003",
                   "product": {
                      "name": "PAR greater than or equal 1.003",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/PAR"
+                     }
                   }
                }
             ],

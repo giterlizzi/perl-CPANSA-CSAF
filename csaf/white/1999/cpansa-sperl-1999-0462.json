@@ -70,7 +70,10 @@
                   "name": "vers:cpan/>=4.0|<5.6.0",
                   "product": {
                      "name": "perl greater than or equal 4.0 and less than 5.6.0",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
                   }
                }
             ],

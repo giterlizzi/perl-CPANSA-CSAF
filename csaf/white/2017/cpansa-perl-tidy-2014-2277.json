@@ -100,7 +100,10 @@
                   "name": "vers:cpan/<20140328",
                   "product": {
                      "name": "Perl-Tidy less than 20140328",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Perl-Tidy"
+                     }
                   }
                },
                {
@@ -108,7 +111,10 @@
                   "name": "vers:cpan/>=20140328",
                   "product": {
                      "name": "Perl-Tidy greater than or equal 20140328",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Perl-Tidy"
+                     }
                   }
                }
             ],

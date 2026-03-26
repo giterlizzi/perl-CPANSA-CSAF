@@ -1,0 +1,167 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "The Git Smart Protocol support in libgit2 before 0.24.6 and 0.25.x before 0.25.1 allows remote attackers to cause a denial of service (NULL pointer dereference) via an empty packet line.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Git-Raw-2016-10129-libgit2 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2017/cpansa-git-raw-2016-10129-libgit2.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://libgit2.github.com/security/",
+            "url": "https://libgit2.github.com/security/"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libgit2/libgit2/commit/84d30d569ada986f3eef527cbdb932643c2dd037",
+            "url": "https://github.com/libgit2/libgit2/commit/84d30d569ada986f3eef527cbdb932643c2dd037"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libgit2/libgit2/commit/2fdef641fd0dd2828bd948234ae86de75221a11a",
+            "url": "https://github.com/libgit2/libgit2/commit/2fdef641fd0dd2828bd948234ae86de75221a11a"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2017/01/11/6",
+            "url": "http://www.openwall.com/lists/oss-security/2017/01/11/6"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2017/01/10/5",
+            "url": "http://www.openwall.com/lists/oss-security/2017/01/10/5"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00072.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00072.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00036.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00036.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00030.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00030.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/95339",
+            "url": "http://www.securityfocus.com/bid/95339"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2016-10129 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10129"
+         }
+      ],
+      "title": "Git-Raw vulnerability",
+      "tracking": {
+         "current_release_date": "2017-03-24T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Git-Raw-2016-10129-libgit2",
+         "initial_release_date": "2017-03-24T00:00:00",
+         "revision_history": [
+            {
+               "date": "2017-03-24T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.61|<=0.74",
+                  "product": {
+                     "name": "Git-Raw greater than or equal 0.61 and less than or equal 0.74",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Git-Raw"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Git-Raw"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2016-10129",
+         "cwe": {
+            "id": "CWE-476",
+            "name": "NULL Pointer Dereference"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "The Git Smart Protocol support in libgit2 before 0.24.6 and 0.25.x before 0.25.1 allows remote attackers to cause a denial of service (NULL pointer dereference) via an empty packet line.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

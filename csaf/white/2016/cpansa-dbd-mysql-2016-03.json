@@ -70,7 +70,10 @@
                   "name": "vers:cpan/>=2.9003|<4.039",
                   "product": {
                      "name": "DBD-mysql greater than or equal 2.9003 and less than 4.039",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-mysql"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/<2.9003|>=4.039",
                   "product": {
                      "name": "DBD-mysql less than 2.9003 and greater than or equal 4.039",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-mysql"
+                     }
                   }
                }
             ],

@@ -75,7 +75,10 @@
                   "name": "vers:cpan/=8.32",
                   "product": {
                      "name": "Image-ExifTool equal 8.32",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Image-ExifTool"
+                     }
                   }
                },
                {
@@ -83,7 +86,10 @@
                   "name": "vers:cpan/>8",
                   "product": {
                      "name": "Image-ExifTool greater than 8",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Image-ExifTool"
+                     }
                   }
                }
             ],

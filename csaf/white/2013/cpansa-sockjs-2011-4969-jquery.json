@@ -135,7 +135,10 @@
                   "name": "vers:cpan/>=0.03|<=0.10",
                   "product": {
                      "name": "SockJS greater than or equal 0.03 and less than or equal 0.10",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/SockJS"
+                     }
                   }
                }
             ],

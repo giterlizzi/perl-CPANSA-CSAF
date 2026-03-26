@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<=0.321",
                   "product": {
                      "name": "String-Compare-ConstantTime less than or equal 0.321",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/String-Compare-ConstantTime"
+                     }
                   }
                }
             ],

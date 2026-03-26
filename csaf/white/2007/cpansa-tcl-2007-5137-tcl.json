@@ -165,7 +165,10 @@
                   "name": "vers:cpan/>=0.89|<=1.27",
                   "product": {
                      "name": "Tcl greater than or equal 0.89 and less than or equal 1.27",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tcl"
+                     }
                   }
                }
             ],

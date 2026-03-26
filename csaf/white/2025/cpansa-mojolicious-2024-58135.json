@@ -100,7 +100,10 @@
                   "name": "vers:cpan/>=7.28",
                   "product": {
                      "name": "Mojolicious greater than or equal 7.28",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mojolicious"
+                     }
                   }
                }
             ],

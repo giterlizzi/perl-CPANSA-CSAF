@@ -88,7 +88,10 @@
                   "name": "vers:cpan/<20240730",
                   "product": {
                      "name": "Mozilla-CA less than 20240730",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mozilla-CA"
+                     }
                   }
                },
                {
@@ -96,7 +99,10 @@
                   "name": "vers:cpan/>=20240730",
                   "product": {
                      "name": "Mozilla-CA greater than or equal 20240730",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mozilla-CA"
+                     }
                   }
                }
             ],

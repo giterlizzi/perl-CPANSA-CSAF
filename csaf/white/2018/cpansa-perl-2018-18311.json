@@ -218,7 +218,10 @@
                   "name": "vers:cpan/<5.26.3",
                   "product": {
                      "name": "perl less than 5.26.3",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
                   }
                },
                {
@@ -226,7 +229,10 @@
                   "name": "vers:cpan/==5.28.0",
                   "product": {
                      "name": "perl equal =5.28.0",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
                   }
                },
                {
@@ -234,7 +240,10 @@
                   "name": "vers:cpan/>=5.28.1",
                   "product": {
                      "name": "perl greater than or equal 5.28.1",
-                     "product_id": "CSAFPID-0003"
+                     "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
                   }
                }
             ],

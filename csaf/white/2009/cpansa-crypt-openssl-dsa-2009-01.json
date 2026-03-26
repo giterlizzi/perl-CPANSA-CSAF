@@ -80,7 +80,10 @@
                   "name": "vers:cpan/<0.14",
                   "product": {
                      "name": "Crypt-OpenSSL-DSA less than 0.14",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-OpenSSL-DSA"
+                     }
                   }
                },
                {
@@ -88,7 +91,10 @@
                   "name": "vers:cpan/>=0.14",
                   "product": {
                      "name": "Crypt-OpenSSL-DSA greater than or equal 0.14",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-OpenSSL-DSA"
+                     }
                   }
                }
             ],

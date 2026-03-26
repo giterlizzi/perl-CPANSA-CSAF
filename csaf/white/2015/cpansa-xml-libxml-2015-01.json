@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<2.0120",
                   "product": {
                      "name": "XML-LibXML less than 2.0120",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-LibXML"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=2.0120",
                   "product": {
                      "name": "XML-LibXML greater than or equal 2.0120",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-LibXML"
+                     }
                   }
                }
             ],

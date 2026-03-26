@@ -78,7 +78,10 @@
                   "name": "vers:cpan/<1.18.24",
                   "product": {
                      "name": "Dpkg less than 1.18.24",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dpkg"
+                     }
                   }
                },
                {
@@ -86,7 +89,10 @@
                   "name": "vers:cpan/>=1.18.24",
                   "product": {
                      "name": "Dpkg greater than or equal 1.18.24",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dpkg"
+                     }
                   }
                }
             ],

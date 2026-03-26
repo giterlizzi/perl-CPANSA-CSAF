@@ -1,0 +1,167 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Git before 1.8.5.6, 1.9.x before 1.9.5, 2.0.x before 2.0.5, 2.1.x before 2.1.4, and 2.2.x before 2.2.1 on Windows and OS X; Mercurial before 3.2.3 on Windows and OS X; Apple Xcode before 6.2 beta 3; mine all versions before 08-12-2014; libgit2 all versions up to 0.21.2; Egit all versions before 08-12-2014; and JGit all versions before 08-12-2014 allow remote Git servers to execute arbitrary commands via a tree containing a crafted .git/config file with (1) an ignorable Unicode codepoint, (2) a git~1/config representation, or (3) mixed case that is improperly handled on a case-insensitive filesystem.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Git-Raw-2014-9390-libgit2 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-git-raw-2014-9390-libgit2.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://news.ycombinator.com/item?id=8769667",
+            "url": "https://news.ycombinator.com/item?id=8769667"
+         },
+         {
+            "category": "external",
+            "summary": "http://git-blame.blogspot.com/2014/12/git-1856-195-205-214-and-221-and.html",
+            "url": "http://git-blame.blogspot.com/2014/12/git-1856-195-205-214-and-221-and.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/blog/1938-git-client-vulnerability-announced",
+            "url": "https://github.com/blog/1938-git-client-vulnerability-announced"
+         },
+         {
+            "category": "external",
+            "summary": "http://securitytracker.com/id?1031404",
+            "url": "http://securitytracker.com/id?1031404"
+         },
+         {
+            "category": "external",
+            "summary": "http://article.gmane.org/gmane.linux.kernel/1853266",
+            "url": "http://article.gmane.org/gmane.linux.kernel/1853266"
+         },
+         {
+            "category": "external",
+            "summary": "http://mercurial.selenic.com/wiki/WhatsNew",
+            "url": "http://mercurial.selenic.com/wiki/WhatsNew"
+         },
+         {
+            "category": "external",
+            "summary": "http://support.apple.com/kb/HT204147",
+            "url": "http://support.apple.com/kb/HT204147"
+         },
+         {
+            "category": "external",
+            "summary": "https://libgit2.org/security/",
+            "url": "https://libgit2.org/security/"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libgit2/libgit2/commit/928429c5c96a701bcbcafacb2421a82602b36915",
+            "url": "https://github.com/libgit2/libgit2/commit/928429c5c96a701bcbcafacb2421a82602b36915"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2014-9390 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-9390"
+         }
+      ],
+      "title": "Git-Raw vulnerability",
+      "tracking": {
+         "current_release_date": "2020-02-12T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Git-Raw-2014-9390-libgit2",
+         "initial_release_date": "2020-02-12T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-02-12T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.08|<=0.24",
+                  "product": {
+                     "name": "Git-Raw greater than or equal 0.08 and less than or equal 0.24",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Git-Raw"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Git-Raw"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2014-9390",
+         "cwe": {
+            "id": "CWE-20",
+            "name": "Improper Input Validation"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Git before 1.8.5.6, 1.9.x before 1.9.5, 2.0.x before 2.0.5, 2.1.x before 2.1.4, and 2.2.x before 2.2.1 on Windows and OS X; Mercurial before 3.2.3 on Windows and OS X; Apple Xcode before 6.2 beta 3; mine all versions before 08-12-2014; libgit2 all versions up to 0.21.2; Egit all versions before 08-12-2014; and JGit all versions before 08-12-2014 allow remote Git servers to execute arbitrary commands via a tree containing a crafted .git/config file with (1) an ignorable Unicode codepoint, (2) a git~1/config representation, or (3) mixed case that is improperly handled on a case-insensitive filesystem.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

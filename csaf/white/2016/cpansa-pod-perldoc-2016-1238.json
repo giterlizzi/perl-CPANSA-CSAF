@@ -143,7 +143,10 @@
                   "name": "vers:cpan/<3.26",
                   "product": {
                      "name": "Pod-Perldoc less than 3.26",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Pod-Perldoc"
+                     }
                   }
                },
                {
@@ -151,7 +154,10 @@
                   "name": "vers:cpan/>=3.26",
                   "product": {
                      "name": "Pod-Perldoc greater than or equal 3.26",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Pod-Perldoc"
+                     }
                   }
                }
             ],

@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<9999.26",
                   "product": {
                      "name": "File-Slurp less than 9999.26",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/File-Slurp"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=9999.26",
                   "product": {
                      "name": "File-Slurp greater than or equal 9999.26",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/File-Slurp"
+                     }
                   }
                }
             ],

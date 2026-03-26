@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<1.02",
                   "product": {
                      "name": "RT-Extension-MobileUI less than 1.02",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/RT-Extension-MobileUI"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=1.02",
                   "product": {
                      "name": "RT-Extension-MobileUI greater than or equal 1.02",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/RT-Extension-MobileUI"
+                     }
                   }
                }
             ],

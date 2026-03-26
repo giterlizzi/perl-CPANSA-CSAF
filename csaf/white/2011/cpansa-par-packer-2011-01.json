@@ -75,7 +75,10 @@
                   "name": "vers:cpan/<1.011",
                   "product": {
                      "name": "PAR-Packer less than 1.011",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/PAR-Packer"
+                     }
                   }
                },
                {
@@ -83,7 +86,10 @@
                   "name": "vers:cpan/>=1.011",
                   "product": {
                      "name": "PAR-Packer greater than or equal 1.011",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/PAR-Packer"
+                     }
                   }
                }
             ],

@@ -75,7 +75,10 @@
                   "name": "vers:cpan/2.0.13",
                   "product": {
                      "name": "Lemonldap-NG-Portal ",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
                   }
                }
             ],

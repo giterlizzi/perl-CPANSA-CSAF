@@ -325,7 +325,10 @@
                   "name": "vers:cpan/<5.10.0",
                   "product": {
                      "name": "perl less than 5.10.0",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
                   }
                }
             ],

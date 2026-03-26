@@ -220,7 +220,10 @@
                   "name": "vers:cpan/<0.53",
                   "product": {
                      "name": "YAML-LibYAML less than 0.53",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML-LibYAML"
+                     }
                   }
                },
                {
@@ -228,7 +231,10 @@
                   "name": "vers:cpan/>=0.54",
                   "product": {
                      "name": "YAML-LibYAML greater than or equal 0.54",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML-LibYAML"
+                     }
                   }
                }
             ],

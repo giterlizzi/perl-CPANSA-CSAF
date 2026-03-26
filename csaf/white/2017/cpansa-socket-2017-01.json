@@ -65,7 +65,10 @@
                   "name": "vers:cpan/<2.026",
                   "product": {
                      "name": "Socket less than 2.026",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Socket"
+                     }
                   }
                },
                {
@@ -73,7 +76,10 @@
                   "name": "vers:cpan/>=2.027",
                   "product": {
                      "name": "Socket greater than or equal 2.027",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Socket"
+                     }
                   }
                }
             ],

@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.90",
                   "product": {
                      "name": "IPC-Run less than 0.90",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IPC-Run"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/=0.90_01",
                   "product": {
                      "name": "IPC-Run equal 0.90_01",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IPC-Run"
+                     }
                   }
                },
                {
@@ -86,7 +92,10 @@
                   "name": "vers:cpan/=0.90_02",
                   "product": {
                      "name": "IPC-Run equal 0.90_02",
-                     "product_id": "CSAFPID-0003"
+                     "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IPC-Run"
+                     }
                   }
                },
                {
@@ -94,7 +103,10 @@
                   "name": "vers:cpan/>=0.90",
                   "product": {
                      "name": "IPC-Run greater than or equal 0.90",
-                     "product_id": "CSAFPID-0004"
+                     "product_id": "CSAFPID-0004",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IPC-Run"
+                     }
                   }
                }
             ],

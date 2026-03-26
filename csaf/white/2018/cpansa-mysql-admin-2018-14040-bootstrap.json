@@ -1,0 +1,217 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Prototype Pollution is a vulnerability affecting JavaScript. Prototype Pollution refers to the ability to inject properties into existing JavaScript language construct prototypes, such as objects. JavaScript allows all Object attributes to be altered, including their magical attributes such as _proto_, constructor and prototype. An attacker manipulates these attributes to overwrite, or pollute, a JavaScript application object prototype of the base object by injecting other values. Properties on the Object.prototype are then inherited by all the JavaScript objects through the prototype chain. When that happens, this leads to either denial of service by triggering JavaScript exceptions, or it tampers with the application source code to force the code path that the attacker injects, thereby leading to remote code execution.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-MySQL-Admin-2018-14040-bootstrap JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2018/cpansa-mysql-admin-2018-14040-bootstrap.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/twbs/bootstrap/pull/26630",
+            "url": "https://github.com/twbs/bootstrap/pull/26630"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/twbs/bootstrap/issues/26625",
+            "url": "https://github.com/twbs/bootstrap/issues/26625"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/twbs/bootstrap/issues/26423",
+            "url": "https://github.com/twbs/bootstrap/issues/26423"
+         },
+         {
+            "category": "external",
+            "summary": "https://blog.getbootstrap.com/2018/07/12/bootstrap-4-1-2/",
+            "url": "https://blog.getbootstrap.com/2018/07/12/bootstrap-4-1-2/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2018/08/msg00027.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2018/08/msg00027.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://seclists.org/bugtraq/2019/May/18",
+            "url": "https://seclists.org/bugtraq/2019/May/18"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+            "url": "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2019/May/13",
+            "url": "http://seclists.org/fulldisclosure/2019/May/13"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2019/May/11",
+            "url": "http://seclists.org/fulldisclosure/2019/May/11"
+         },
+         {
+            "category": "external",
+            "summary": "http://seclists.org/fulldisclosure/2019/May/10",
+            "url": "http://seclists.org/fulldisclosure/2019/May/10"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e@%3Cdev.superset.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/52e0e6b5df827ee7f1e68f7cc3babe61af3b2160f5d74a85469b7b0e@%3Cdev.superset.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+            "url": "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/r3dc0cac8d856bca02bd6997355d7ff83027dcfc82f8646a29b89b714@%3Cissues.hbase.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/r3dc0cac8d856bca02bd6997355d7ff83027dcfc82f8646a29b89b714@%3Cissues.hbase.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E",
+            "url": "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.tenable.com/security/tns-2021-14",
+            "url": "https://www.tenable.com/security/tns-2021-14"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2018-14040 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-14040"
+         }
+      ],
+      "title": "MySQL-Admin vulnerability",
+      "tracking": {
+         "current_release_date": "2018-07-13T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-MySQL-Admin-2018-14040-bootstrap",
+         "initial_release_date": "2018-07-13T00:00:00",
+         "revision_history": [
+            {
+               "date": "2018-07-13T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.14|<=1.18",
+                  "product": {
+                     "name": "MySQL-Admin greater than or equal 1.14 and less than or equal 1.18",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MySQL-Admin"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "MySQL-Admin"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2018-14040",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "In Bootstrap before 4.1.2, XSS is possible in the collapse data-parent attribute.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

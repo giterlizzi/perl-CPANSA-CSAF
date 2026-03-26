@@ -255,7 +255,10 @@
                   "name": "vers:cpan/>0",
                   "product": {
                      "name": "Tk greater than 0",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tk"
+                     }
                   }
                }
             ],

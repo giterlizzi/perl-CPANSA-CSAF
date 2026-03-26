@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<804.029",
                   "product": {
                      "name": "Tk less than 804.029",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tk"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=804.029",
                   "product": {
                      "name": "Tk greater than or equal 804.029",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tk"
+                     }
                   }
                }
             ],

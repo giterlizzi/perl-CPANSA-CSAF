@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.09995",
                   "product": {
                      "name": "Pinto less than 0.09995",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Pinto"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=0.09995",
                   "product": {
                      "name": "Pinto greater than or equal 0.09995",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Pinto"
+                     }
                   }
                }
             ],

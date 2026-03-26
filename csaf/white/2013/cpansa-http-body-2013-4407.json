@@ -83,7 +83,10 @@
                   "name": "vers:cpan/>=1.08|<1.23",
                   "product": {
                      "name": "HTTP-Body greater than or equal 1.08 and less than 1.23",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Body"
+                     }
                   }
                },
                {
@@ -91,7 +94,10 @@
                   "name": "vers:cpan/>=1.23",
                   "product": {
                      "name": "HTTP-Body greater than or equal 1.23",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Body"
+                     }
                   }
                }
             ],

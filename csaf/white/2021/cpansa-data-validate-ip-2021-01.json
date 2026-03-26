@@ -95,7 +95,10 @@
                   "name": "vers:cpan/<=0.29",
                   "product": {
                      "name": "Data-Validate-IP less than or equal 0.29",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Validate-IP"
+                     }
                   }
                },
                {
@@ -103,7 +106,10 @@
                   "name": "vers:cpan/>0.29",
                   "product": {
                      "name": "Data-Validate-IP greater than 0.29",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Validate-IP"
+                     }
                   }
                }
             ],

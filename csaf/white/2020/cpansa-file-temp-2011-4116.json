@@ -93,7 +93,10 @@
                   "name": "vers:cpan/>0",
                   "product": {
                      "name": "File-Temp greater than 0",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/File-Temp"
+                     }
                   }
                }
             ],

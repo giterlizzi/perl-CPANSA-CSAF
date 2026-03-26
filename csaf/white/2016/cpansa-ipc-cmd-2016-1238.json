@@ -143,7 +143,10 @@
                   "name": "vers:cpan/<0.96",
                   "product": {
                      "name": "IPC-Cmd less than 0.96",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IPC-Cmd"
+                     }
                   }
                },
                {
@@ -151,7 +154,10 @@
                   "name": "vers:cpan/>=0.96",
                   "product": {
                      "name": "IPC-Cmd greater than or equal 0.96",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IPC-Cmd"
+                     }
                   }
                }
             ],

@@ -65,7 +65,10 @@
                   "name": "vers:cpan/<2.01",
                   "product": {
                      "name": "Apache-SessionX less than 2.01",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-SessionX"
+                     }
                   }
                },
                {
@@ -73,7 +76,10 @@
                   "name": "vers:cpan/>=2.01",
                   "product": {
                      "name": "Apache-SessionX greater than or equal 2.01",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-SessionX"
+                     }
                   }
                }
             ],

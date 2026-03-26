@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<1.20",
                   "product": {
                      "name": "Cmd-Dwarf less than 1.20",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cmd-Dwarf"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=1.20",
                   "product": {
                      "name": "Cmd-Dwarf greater than or equal 1.20",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cmd-Dwarf"
+                     }
                   }
                }
             ],

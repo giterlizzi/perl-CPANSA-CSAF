@@ -65,7 +65,10 @@
                   "name": "vers:cpan/<1.20",
                   "product": {
                      "name": "Elive less than 1.20",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Elive"
+                     }
                   }
                },
                {
@@ -73,7 +76,10 @@
                   "name": "vers:cpan/>=1.20",
                   "product": {
                      "name": "Elive greater than or equal 1.20",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Elive"
+                     }
                   }
                }
             ],

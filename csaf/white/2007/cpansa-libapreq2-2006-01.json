@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<2.07",
                   "product": {
                      "name": "libapreq2 less than 2.07",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/libapreq2"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=2.07",
                   "product": {
                      "name": "libapreq2 greater than or equal 2.07",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/libapreq2"
+                     }
                   }
                }
             ],

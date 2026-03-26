@@ -73,7 +73,10 @@
                   "name": "vers:cpan/<0.55",
                   "product": {
                      "name": "SOAP-Lite less than 0.55",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/SOAP-Lite"
+                     }
                   }
                },
                {
@@ -81,7 +84,10 @@
                   "name": "vers:cpan/>=0.55",
                   "product": {
                      "name": "SOAP-Lite greater than or equal 0.55",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/SOAP-Lite"
+                     }
                   }
                }
             ],

@@ -135,7 +135,10 @@
                   "name": "vers:cpan/<3.63",
                   "product": {
                      "name": "CGI less than 3.63",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI"
+                     }
                   }
                },
                {
@@ -143,7 +146,10 @@
                   "name": "vers:cpan/>=3.63",
                   "product": {
                      "name": "CGI greater than or equal 3.63",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI"
+                     }
                   }
                }
             ],

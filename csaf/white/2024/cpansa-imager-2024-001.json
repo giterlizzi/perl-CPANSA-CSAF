@@ -78,7 +78,10 @@
                   "name": "vers:cpan/<=1.024",
                   "product": {
                      "name": "Imager less than or equal 1.024",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
                   }
                },
                {
@@ -86,7 +89,10 @@
                   "name": "vers:cpan/>1.024",
                   "product": {
                      "name": "Imager greater than 1.024",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
                   }
                }
             ],

@@ -73,7 +73,10 @@
                   "name": "vers:cpan/>=0.20|<=0.21",
                   "product": {
                      "name": "App-revealup greater than or equal 0.20 and less than or equal 0.21",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/App-revealup"
+                     }
                   }
                }
             ],

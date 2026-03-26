@@ -78,7 +78,10 @@
                   "name": "vers:cpan/>=0.08|<=0.10",
                   "product": {
                      "name": "Net-Dropbear greater than or equal 0.08 and less than or equal 0.10",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Dropbear"
+                     }
                   }
                }
             ],

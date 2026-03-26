@@ -135,7 +135,10 @@
                   "name": "vers:cpan/>=0.42_01|<=0.47",
                   "product": {
                      "name": "UR greater than or equal 0.42_01 and less than or equal 0.47",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/UR"
+                     }
                   }
                }
             ],

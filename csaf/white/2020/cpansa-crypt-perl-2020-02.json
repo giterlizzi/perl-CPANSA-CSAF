@@ -78,7 +78,10 @@
                   "name": "vers:cpan/<0.32",
                   "product": {
                      "name": "Crypt-Perl less than 0.32",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-Perl"
+                     }
                   }
                },
                {
@@ -86,7 +89,10 @@
                   "name": "vers:cpan/>=0.32",
                   "product": {
                      "name": "Crypt-Perl greater than or equal 0.32",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-Perl"
+                     }
                   }
                }
             ],

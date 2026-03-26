@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::NSCA::Client versions through 0.009002 for Perl uses a poor random number generator.  Version v0.003 switched to use Data::Rand::Obscure instead of Crypt::Random for generation of a random initialisation vectors.  Data::Rand::Obscure uses Perl's built-in rand() function, which is not suitable for cryptographic functions.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-NSCA-Client-2024-57854 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-nsca-client-2024-57854.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/DOUGDUDE/Net-NSCA-Client-0.009002/source/lib/Net/NSCA/Client/InitialPacket.pm#L119",
+            "url": "https://metacpan.org/release/DOUGDUDE/Net-NSCA-Client-0.009002/source/lib/Net/NSCA/Client/InitialPacket.pm#L119"
+         },
+         {
+            "category": "external",
+            "summary": "https://patch-diff.githubusercontent.com/raw/dougwilson/perl5-net-nsca-client/pull/2.patch",
+            "url": "https://patch-diff.githubusercontent.com/raw/dougwilson/perl5-net-nsca-client/pull/2.patch"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2024-57854 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57854"
+         }
+      ],
+      "title": "Net-NSCA-Client vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-NSCA-Client-2024-57854",
+         "initial_release_date": "2026-03-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Net-NSCA-Client greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-NSCA-Client"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.009002",
+                  "product": {
+                     "name": "Net-NSCA-Client greater than or equal 0.009002",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-NSCA-Client"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-NSCA-Client"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2024-57854",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::NSCA::Client versions through 0.009002 for Perl uses a poor random number generator.\n\nVersion v0.003 switched to use Data::Rand::Obscure instead of Crypt::Random for generation of a random initialisation vectors.\n\nData::Rand::Obscure uses Perl's built-in rand() function, which is not suitable for cryptographic functions.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

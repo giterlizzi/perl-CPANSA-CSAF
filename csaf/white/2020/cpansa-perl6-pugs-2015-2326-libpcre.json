@@ -1,0 +1,142 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "The pcre_compile2 function in PCRE before 8.37 allows context-dependent attackers to compile incorrect code and cause a denial of service (out-of-bounds read) via regular expression with a group containing both a forward referencing subroutine call and a recursive back reference, as demonstrated by \"((?+1)(\\1))/\".",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Perl6-Pugs-2015-2326-libpcre JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-perl6-pugs-2015-2326-libpcre.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugs.exim.org/show_bug.cgi?id=1592",
+            "url": "https://bugs.exim.org/show_bug.cgi?id=1592"
+         },
+         {
+            "category": "external",
+            "summary": "https://fortiguard.com/zeroday/FG-VD-15-016",
+            "url": "https://fortiguard.com/zeroday/FG-VD-15-016"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2015-05/msg00014.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2015-05/msg00014.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.pcre.org/original/changelog.txt",
+            "url": "https://www.pcre.org/original/changelog.txt"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2015-2326 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-2326"
+         }
+      ],
+      "title": "Perl6-Pugs vulnerability",
+      "tracking": {
+         "current_release_date": "2020-01-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Perl6-Pugs-2015-2326-libpcre",
+         "initial_release_date": "2020-01-14T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-01-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.0.12|<=6.2.9",
+                  "product": {
+                     "name": "Perl6-Pugs greater than or equal 6.0.12 and less than or equal 6.2.9",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Perl6-Pugs"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Perl6-Pugs"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2015-2326",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "The pcre_compile2 function in PCRE before 8.37 allows context-dependent attackers to compile incorrect code and cause a denial of service (out-of-bounds read) via regular expression with a group containing both a forward referencing subroutine call and a recursive back reference, as demonstrated by \"((?+1)(\\1))/\".",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -65,7 +65,10 @@
                   "name": "vers:cpan/<0.97",
                   "product": {
                      "name": "Apache-Wyrd less than 0.97",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-Wyrd"
+                     }
                   }
                },
                {
@@ -73,7 +76,10 @@
                   "name": "vers:cpan/>=0.97",
                   "product": {
                      "name": "Apache-Wyrd greater than or equal 0.97",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-Wyrd"
+                     }
                   }
                }
             ],

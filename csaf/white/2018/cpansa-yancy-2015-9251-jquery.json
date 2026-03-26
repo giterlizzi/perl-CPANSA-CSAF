@@ -258,7 +258,10 @@
                   "name": "vers:cpan/>=0.010|<=1.088",
                   "product": {
                      "name": "Yancy greater than or equal 0.010 and less than or equal 1.088",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Yancy"
+                     }
                   }
                }
             ],

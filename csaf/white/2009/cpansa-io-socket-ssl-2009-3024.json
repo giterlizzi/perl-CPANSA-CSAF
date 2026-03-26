@@ -105,7 +105,10 @@
                   "name": "vers:cpan/>=1.14",
                   "product": {
                      "name": "IO-Socket-SSL greater than or equal 1.14",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Socket-SSL"
+                     }
                   }
                },
                {
@@ -113,7 +116,10 @@
                   "name": "vers:cpan/<=1.25",
                   "product": {
                      "name": "IO-Socket-SSL less than or equal 1.25",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Socket-SSL"
+                     }
                   }
                },
                {
@@ -121,7 +127,10 @@
                   "name": "vers:cpan/>=1.26",
                   "product": {
                      "name": "IO-Socket-SSL greater than or equal 1.26",
-                     "product_id": "CSAFPID-0003"
+                     "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Socket-SSL"
+                     }
                   }
                }
             ],

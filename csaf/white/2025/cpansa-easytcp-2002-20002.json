@@ -83,7 +83,10 @@
                   "name": "vers:cpan/<0.15",
                   "product": {
                      "name": "EasyTCP less than 0.15",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/EasyTCP"
+                     }
                   }
                },
                {
@@ -91,7 +94,10 @@
                   "name": "vers:cpan/>=0.15",
                   "product": {
                      "name": "EasyTCP greater than or equal 0.15",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/EasyTCP"
+                     }
                   }
                }
             ],

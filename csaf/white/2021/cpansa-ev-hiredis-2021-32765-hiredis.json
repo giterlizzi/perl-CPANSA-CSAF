@@ -1,0 +1,147 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Hiredis is a minimalistic C client library for the Redis database. In affected versions Hiredis is vulnurable to integer overflow if provided maliciously crafted or corrupted `RESP` `mult-bulk` protocol data. When parsing `multi-bulk` (array-like) replies, hiredis fails to check if `count * sizeof(redisReply*)` can be represented in `SIZE_MAX`. If it can not, and the `calloc()` call doesn't itself make this check, it would result in a short allocation and subsequent buffer overflow. Users of hiredis who are unable to update may set the [maxelements](https://github.com/redis/hiredis#reader-max-array-elements) context option to a value small enough that no overflow is possible.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-EV-Hiredis-2021-32765-hiredis JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2021/cpansa-ev-hiredis-2021-32765-hiredis.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://wiki.sei.cmu.edu/confluence/display/c/MEM07-C.+Ensure+that+the+arguments+to+calloc%28%29%2C+when+multiplied%2C+do+not+wrap",
+            "url": "https://wiki.sei.cmu.edu/confluence/display/c/MEM07-C.+Ensure+that+the+arguments+to+calloc%28%29%2C+when+multiplied%2C+do+not+wrap"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/redis/hiredis/security/advisories/GHSA-hfm9-39pp-55p2",
+            "url": "https://github.com/redis/hiredis/security/advisories/GHSA-hfm9-39pp-55p2"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/redis/hiredis/commit/76a7b10005c70babee357a7d0f2becf28ec7ed1e",
+            "url": "https://github.com/redis/hiredis/commit/76a7b10005c70babee357a7d0f2becf28ec7ed1e"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2021/10/msg00007.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00007.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20211104-0003/",
+            "url": "https://security.netapp.com/advisory/ntap-20211104-0003/"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2021-32765 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32765"
+         }
+      ],
+      "title": "EV-Hiredis vulnerability",
+      "tracking": {
+         "current_release_date": "2021-10-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-EV-Hiredis-2021-32765-hiredis",
+         "initial_release_date": "2021-10-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2021-10-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.01|<=0.04",
+                  "product": {
+                     "name": "EV-Hiredis greater than or equal 0.01 and less than or equal 0.04",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/EV-Hiredis"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "EV-Hiredis"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2021-32765",
+         "cwe": {
+            "id": "CWE-190",
+            "name": "Integer Overflow or Wraparound"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Hiredis is a minimalistic C client library for the Redis database. In affected versions Hiredis is vulnurable to integer overflow if provided maliciously crafted or corrupted `RESP` `mult-bulk` protocol data. When parsing `multi-bulk` (array-like) replies, hiredis fails to check if `count * sizeof(redisReply*)` can be represented in `SIZE_MAX`. If it can not, and the `calloc()` call doesn't itself make this check, it would result in a short allocation and subsequent buffer overflow. Users of hiredis who are unable to update may set the [maxelements](https://github.com/redis/hiredis#reader-max-array-elements) context option to a value small enough that no overflow is possible.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.5,
+                  "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 8.8,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

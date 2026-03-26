@@ -93,7 +93,10 @@
                   "name": "vers:cpan/>=0.27|<=0.31",
                   "product": {
                      "name": "Redis-Fast greater than or equal 0.27 and less than or equal 0.31",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Redis-Fast"
+                     }
                   }
                }
             ],

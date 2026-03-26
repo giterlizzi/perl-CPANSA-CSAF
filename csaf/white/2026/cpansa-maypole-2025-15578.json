@@ -1,0 +1,119 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Maypole versions from 2.10 through 2.13 for Perl generates session ids insecurely. The session id is seeded with the system time (which is available from HTTP response headers), a call to the built-in rand() function, and the PID.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Maypole-2025-15578 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-maypole-2025-15578.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/dist/Maypole/source/lib/Maypole/Session.pm#L43",
+            "url": "https://metacpan.org/dist/Maypole/source/lib/Maypole/Session.pm#L43"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-15578 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15578"
+         }
+      ],
+      "title": "Maypole vulnerability",
+      "tracking": {
+         "current_release_date": "2026-02-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Maypole-2025-15578",
+         "initial_release_date": "2026-02-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-02-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.10",
+                  "product": {
+                     "name": "Maypole greater than or equal 2.10",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Maypole"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Maypole"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-15578",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Maypole versions from 2.10 through 2.13 for Perl generates session ids insecurely. The session id is seeded with the system time (which is available from HTTP response headers), a call to the built-in rand() function, and the PID.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

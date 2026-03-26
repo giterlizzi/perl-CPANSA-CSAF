@@ -100,7 +100,10 @@
                   "name": "vers:cpan/<1.18",
                   "product": {
                      "name": "Crypt-DSA less than 1.18",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-DSA"
+                     }
                   }
                }
             ],

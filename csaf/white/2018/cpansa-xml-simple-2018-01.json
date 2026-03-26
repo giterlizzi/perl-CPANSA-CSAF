@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<2.25",
                   "product": {
                      "name": "XML-Simple less than 2.25",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Simple"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=2.25",
                   "product": {
                      "name": "XML-Simple greater than or equal 2.25",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Simple"
+                     }
                   }
                }
             ],

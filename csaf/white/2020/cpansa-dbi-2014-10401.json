@@ -93,7 +93,10 @@
                   "name": "vers:cpan/<1.632",
                   "product": {
                      "name": "DBI less than 1.632",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
                   }
                },
                {
@@ -101,7 +104,10 @@
                   "name": "vers:cpan/>=1.644",
                   "product": {
                      "name": "DBI greater than or equal 1.644",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
                   }
                }
             ],

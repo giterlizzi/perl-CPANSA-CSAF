@@ -123,7 +123,10 @@
                   "name": "vers:cpan/==4.1.0.0",
                   "product": {
                      "name": "Alien-OTR equal =4.1.0.0",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Alien-OTR"
+                     }
                   }
                }
             ],

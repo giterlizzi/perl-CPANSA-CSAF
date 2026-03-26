@@ -143,7 +143,10 @@
                   "name": "vers:cpan/<2.070",
                   "product": {
                      "name": "IO-Compress less than 2.070",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Compress"
+                     }
                   }
                },
                {
@@ -151,7 +154,10 @@
                   "name": "vers:cpan/>=2.070",
                   "product": {
                      "name": "IO-Compress greater than or equal 2.070",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Compress"
+                     }
                   }
                }
             ],

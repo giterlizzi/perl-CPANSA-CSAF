@@ -153,7 +153,10 @@
                   "name": "vers:cpan/>=0|<=0.101_102",
                   "product": {
                      "name": "YATT-Lite greater than or equal 0 and less than or equal 0.101_102",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YATT-Lite"
+                     }
                   }
                }
             ],

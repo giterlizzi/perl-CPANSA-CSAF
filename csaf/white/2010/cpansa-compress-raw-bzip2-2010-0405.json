@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<2.031",
                   "product": {
                      "name": "Compress-Raw-Bzip2 less than 2.031",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Compress-Raw-Bzip2"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=2.031",
                   "product": {
                      "name": "Compress-Raw-Bzip2 greater than or equal 2.031",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Compress-Raw-Bzip2"
+                     }
                   }
                }
             ],

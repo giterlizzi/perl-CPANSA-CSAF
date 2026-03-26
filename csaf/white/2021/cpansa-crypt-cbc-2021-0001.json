@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<3.04",
                   "product": {
                      "name": "Crypt-CBC less than 3.04",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-CBC"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=3.04",
                   "product": {
                      "name": "Crypt-CBC greater than or equal 3.04",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-CBC"
+                     }
                   }
                }
             ],

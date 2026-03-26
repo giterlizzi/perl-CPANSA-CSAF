@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.009",
                   "product": {
                      "name": "LWP-Protocol-Net-Curl less than 0.009",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/LWP-Protocol-Net-Curl"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=0.009",
                   "product": {
                      "name": "LWP-Protocol-Net-Curl greater than or equal 0.009",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/LWP-Protocol-Net-Curl"
+                     }
                   }
                }
             ],

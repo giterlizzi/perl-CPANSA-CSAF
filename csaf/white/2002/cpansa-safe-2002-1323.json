@@ -150,7 +150,10 @@
                   "name": "vers:cpan/<=2.07",
                   "product": {
                      "name": "Safe less than or equal 2.07",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Safe"
+                     }
                   }
                },
                {
@@ -158,7 +161,10 @@
                   "name": "vers:cpan/>=2.08",
                   "product": {
                      "name": "Safe greater than or equal 2.08",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Safe"
+                     }
                   }
                }
             ],

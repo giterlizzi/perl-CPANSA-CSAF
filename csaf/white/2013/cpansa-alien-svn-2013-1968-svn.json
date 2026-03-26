@@ -1,0 +1,149 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Subversion before 1.6.23 and 1.7.x before 1.7.10 allows remote authenticated users to cause a denial of service (FSFS repository corruption) via a newline character in a file name.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Alien-SVN-2013-1968-svn JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2013/cpansa-alien-svn-2013-1968-svn.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2013-07/msg00015.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2013-07/msg00015.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://subversion.apache.org/security/CVE-2013-1968-advisory.txt",
+            "url": "https://subversion.apache.org/security/CVE-2013-1968-advisory.txt"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/USN-1893-1",
+            "url": "http://www.ubuntu.com/usn/USN-1893-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://mail-archives.apache.org/mod_mbox/subversion-announce/201305.mbox/%3CCADkdwvTxsMFeHgc8bK2V-2PrSrKoBffTi8%2BxbHA5tocrrewWew%40mail.gmail.com%3E",
+            "url": "http://mail-archives.apache.org/mod_mbox/subversion-announce/201305.mbox/%3CCADkdwvTxsMFeHgc8bK2V-2PrSrKoBffTi8%2BxbHA5tocrrewWew%40mail.gmail.com%3E"
+         },
+         {
+            "category": "external",
+            "summary": "http://mail-archives.apache.org/mod_mbox/subversion-announce/201305.mbox/%3CCADkdwvRK51pQsybfvsAzjxQJrmVpL0fEa1K4WGkUP9Tzz6KFDw%40mail.gmail.com%3E",
+            "url": "http://mail-archives.apache.org/mod_mbox/subversion-announce/201305.mbox/%3CCADkdwvRK51pQsybfvsAzjxQJrmVpL0fEa1K4WGkUP9Tzz6KFDw%40mail.gmail.com%3E"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2013/dsa-2703",
+            "url": "http://www.debian.org/security/2013/dsa-2703"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2014-0255.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2014-0255.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A18986",
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A18986"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2013-1968 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-1968"
+         }
+      ],
+      "title": "Alien-SVN vulnerability",
+      "tracking": {
+         "current_release_date": "2013-07-31T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Alien-SVN-2013-1968-svn",
+         "initial_release_date": "2013-07-31T00:00:00",
+         "revision_history": [
+            {
+               "date": "2013-07-31T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.7.3.0|<=1.7.3.1",
+                  "product": {
+                     "name": "Alien-SVN greater than or equal 1.7.3.0 and less than or equal 1.7.3.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Alien-SVN"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Alien-SVN"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2013-1968",
+         "notes": [
+            {
+               "category": "description",
+               "text": "Subversion before 1.6.23 and 1.7.x before 1.7.10 allows remote authenticated users to cause a denial of service (FSFS repository corruption) via a newline character in a file name.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 5.5,
+                  "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

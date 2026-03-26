@@ -80,7 +80,10 @@
                   "name": "vers:cpan/<0.050002",
                   "product": {
                      "name": "Sub-HandlesVia less than 0.050002",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Sub-HandlesVia"
+                     }
                   }
                },
                {
@@ -88,7 +91,10 @@
                   "name": "vers:cpan/>=0.050002",
                   "product": {
                      "name": "Sub-HandlesVia greater than or equal 0.050002",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Sub-HandlesVia"
+                     }
                   }
                }
             ],

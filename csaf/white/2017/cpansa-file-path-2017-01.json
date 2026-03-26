@@ -75,7 +75,10 @@
                   "name": "vers:cpan/<2.13",
                   "product": {
                      "name": "File-Path less than 2.13",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/File-Path"
+                     }
                   }
                },
                {
@@ -83,7 +86,10 @@
                   "name": "vers:cpan/>=2.13",
                   "product": {
                      "name": "File-Path greater than or equal 2.13",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/File-Path"
+                     }
                   }
                }
             ],

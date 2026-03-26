@@ -110,7 +110,10 @@
                   "name": "vers:cpan/<=0.34",
                   "product": {
                      "name": "File-Find-Rule less than or equal 0.34",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/File-Find-Rule"
+                     }
                   }
                },
                {
@@ -118,7 +121,10 @@
                   "name": "vers:cpan/>=0.35",
                   "product": {
                      "name": "File-Find-Rule greater than or equal 0.35",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/File-Find-Rule"
+                     }
                   }
                }
             ],

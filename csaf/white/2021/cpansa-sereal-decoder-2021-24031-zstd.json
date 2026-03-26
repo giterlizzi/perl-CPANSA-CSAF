@@ -83,7 +83,10 @@
                   "name": "vers:cpan/>=4.001_001|<4.009_002",
                   "product": {
                      "name": "Sereal-Decoder greater than or equal 4.001_001 and less than 4.009_002",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Sereal-Decoder"
+                     }
                   }
                }
             ],

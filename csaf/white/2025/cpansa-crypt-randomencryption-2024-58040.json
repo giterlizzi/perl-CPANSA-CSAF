@@ -80,7 +80,10 @@
                   "name": "vers:cpan/>=0.01",
                   "product": {
                      "name": "Crypt-RandomEncryption greater than or equal 0.01",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-RandomEncryption"
+                     }
                   }
                }
             ],

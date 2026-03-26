@@ -110,7 +110,10 @@
                   "name": "vers:cpan/<4.50_51",
                   "product": {
                      "name": "CGI-Application less than 4.50_51",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI-Application"
+                     }
                   }
                }
             ],

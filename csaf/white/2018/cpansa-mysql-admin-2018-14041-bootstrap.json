@@ -153,7 +153,10 @@
                   "name": "vers:cpan/>=1.14|<=1.18",
                   "product": {
                      "name": "MySQL-Admin greater than or equal 1.14 and less than or equal 1.18",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MySQL-Admin"
+                     }
                   }
                }
             ],

@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.999033",
                   "product": {
                      "name": "MojoMojo less than 0.999033",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MojoMojo"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=0.999033",
                   "product": {
                      "name": "MojoMojo greater than or equal 0.999033",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MojoMojo"
+                     }
                   }
                }
             ],

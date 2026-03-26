@@ -95,7 +95,10 @@
                   "name": "vers:cpan/<=1.282",
                   "product": {
                      "name": "CGI-Simple less than or equal 1.282",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI-Simple"
+                     }
                   }
                },
                {
@@ -103,7 +106,10 @@
                   "name": "vers:cpan/>=1.282",
                   "product": {
                      "name": "CGI-Simple greater than or equal 1.282",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI-Simple"
+                     }
                   }
                }
             ],

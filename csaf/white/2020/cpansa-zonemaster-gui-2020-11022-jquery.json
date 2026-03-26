@@ -273,7 +273,10 @@
                   "name": "vers:cpan/>=1.0.8|<=1.0.11",
                   "product": {
                      "name": "Zonemaster-GUI greater than or equal 1.0.8 and less than or equal 1.0.11",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Zonemaster-GUI"
+                     }
                   }
                }
             ],

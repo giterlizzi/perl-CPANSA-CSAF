@@ -1,0 +1,313 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Algorithmic complexity vulnerability in the regular expression parser in TCL before 8.4.17, as used in PostgreSQL 8.2 before 8.2.6, 8.1 before 8.1.11, 8.0 before 8.0.15, and 7.4 before 7.4.19, allows remote authenticated users to cause a denial of service (memory consumption) via a crafted \"complex\" regular expression with doubly-nested states.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Tk-2007-6067-tcl JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2008/cpansa-tk-2007-6067-tcl.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://sourceforge.net/tracker/index.php?func=detail&aid=1810264&group_id=10894&atid=110894",
+            "url": "http://sourceforge.net/tracker/index.php?func=detail&aid=1810264&group_id=10894&atid=110894"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.postgresql.org/about/news.905",
+            "url": "http://www.postgresql.org/about/news.905"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/27163",
+            "url": "http://www.securityfocus.com/bid/27163"
+         },
+         {
+            "category": "external",
+            "summary": "http://securitytracker.com/id?1019157",
+            "url": "http://securitytracker.com/id?1019157"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28359",
+            "url": "http://secunia.com/advisories/28359"
+         },
+         {
+            "category": "external",
+            "summary": "http://sourceforge.net/project/shownotes.php?release_id=565440&group_id=10894",
+            "url": "http://sourceforge.net/project/shownotes.php?release_id=565440&group_id=10894"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:004",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:004"
+         },
+         {
+            "category": "external",
+            "summary": "https://issues.rpath.com/browse/RPL-1768",
+            "url": "https://issues.rpath.com/browse/RPL-1768"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2008/dsa-1460",
+            "url": "http://www.debian.org/security/2008/dsa-1460"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2008/dsa-1463",
+            "url": "http://www.debian.org/security/2008/dsa-1463"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-January/msg00397.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-January/msg00397.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-January/msg00469.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-January/msg00469.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2008-0038.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0038.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-103197-1",
+            "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-103197-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28376",
+            "url": "http://secunia.com/advisories/28376"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28438",
+            "url": "http://secunia.com/advisories/28438"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28437",
+            "url": "http://secunia.com/advisories/28437"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28454",
+            "url": "http://secunia.com/advisories/28454"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28464",
+            "url": "http://secunia.com/advisories/28464"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28477",
+            "url": "http://secunia.com/advisories/28477"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28479",
+            "url": "http://secunia.com/advisories/28479"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28455",
+            "url": "http://secunia.com/advisories/28455"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200801-15.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200801-15.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28679",
+            "url": "http://secunia.com/advisories/28679"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2008-02/msg00000.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2008-02/msg00000.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28698",
+            "url": "http://secunia.com/advisories/28698"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2008-0040.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0040.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-200559-1",
+            "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-200559-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/29638",
+            "url": "http://secunia.com/advisories/29638"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2008/1071/references",
+            "url": "http://www.vupen.com/english/advisories/2008/1071/references"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2008/0109",
+            "url": "http://www.vupen.com/english/advisories/2008/0109"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2008/0061",
+            "url": "http://www.vupen.com/english/advisories/2008/0061"
+         },
+         {
+            "category": "external",
+            "summary": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01420154",
+            "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01420154"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2013-0122.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2013-0122.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705",
+            "url": "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10705"
+         },
+         {
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/39498",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/39498"
+         },
+         {
+            "category": "external",
+            "summary": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10235",
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10235"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/568-1/",
+            "url": "https://usn.ubuntu.com/568-1/"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/486407/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/486407/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/485864/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/485864/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2007-6067 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-6067"
+         }
+      ],
+      "title": "Tk vulnerability",
+      "tracking": {
+         "current_release_date": "2008-01-09T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Tk-2007-6067-tcl",
+         "initial_release_date": "2008-01-09T00:00:00",
+         "revision_history": [
+            {
+               "date": "2008-01-09T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Tk greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tk"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Tk"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2007-6067",
+         "cwe": {
+            "id": "CWE-189",
+            "name": "Numeric Errors"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Algorithmic complexity vulnerability in the regular expression parser in TCL before 8.4.17, as used in PostgreSQL 8.2 before 8.2.6, 8.1 before 8.1.11, 8.0 before 8.0.15, and 7.4 before 7.4.19, allows remote authenticated users to cause a denial of service (memory consumption) via a crafted \"complex\" regular expression with doubly-nested states.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

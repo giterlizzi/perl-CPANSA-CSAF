@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<2.6.17",
                   "product": {
                      "name": "MHonArc less than 2.6.17",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MHonArc"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=2.6.17",
                   "product": {
                      "name": "MHonArc greater than or equal 2.6.17",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MHonArc"
+                     }
                   }
                }
             ],

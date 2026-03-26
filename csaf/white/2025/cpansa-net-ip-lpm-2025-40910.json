@@ -80,7 +80,10 @@
                   "name": "vers:cpan/>=1.10",
                   "product": {
                      "name": "Net-IP-LPM greater than or equal 1.10",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IP-LPM"
+                     }
                   }
                }
             ],

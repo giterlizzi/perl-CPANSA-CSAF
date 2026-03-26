@@ -78,7 +78,10 @@
                   "name": "vers:cpan/<2.85",
                   "product": {
                      "name": "Encode less than 2.85",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Encode"
+                     }
                   }
                },
                {
@@ -86,7 +89,10 @@
                   "name": "vers:cpan/>=2.85",
                   "product": {
                      "name": "Encode greater than or equal 2.85",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Encode"
+                     }
                   }
                }
             ],

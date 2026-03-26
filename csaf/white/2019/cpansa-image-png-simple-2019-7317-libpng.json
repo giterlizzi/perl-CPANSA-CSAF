@@ -1,0 +1,332 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "png_image_free in png.c in libpng 1.6.x before 1.6.37 has a use-after-free because png_image_free_function is called under png_safe_execute.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Image-PNG-Simple-2019-7317-libpng JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2019/cpansa-image-png-simple-2019-7317-libpng.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/glennrp/libpng/issues/275",
+            "url": "https://github.com/glennrp/libpng/issues/275"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=12803",
+            "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=12803"
+         },
+         {
+            "category": "external",
+            "summary": "https://seclists.org/bugtraq/2019/Apr/30",
+            "url": "https://seclists.org/bugtraq/2019/Apr/30"
+         },
+         {
+            "category": "external",
+            "summary": "http://packetstormsecurity.com/files/152561/Slackware-Security-Advisory-libpng-Updates.html",
+            "url": "http://packetstormsecurity.com/files/152561/Slackware-Security-Advisory-libpng-Updates.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2019/dsa-4435",
+            "url": "https://www.debian.org/security/2019/dsa-4435"
+         },
+         {
+            "category": "external",
+            "summary": "https://seclists.org/bugtraq/2019/Apr/36",
+            "url": "https://seclists.org/bugtraq/2019/Apr/36"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/3962-1/",
+            "url": "https://usn.ubuntu.com/3962-1/"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/3991-1/",
+            "url": "https://usn.ubuntu.com/3991-1/"
+         },
+         {
+            "category": "external",
+            "summary": "https://seclists.org/bugtraq/2019/May/56",
+            "url": "https://seclists.org/bugtraq/2019/May/56"
+         },
+         {
+            "category": "external",
+            "summary": "https://seclists.org/bugtraq/2019/May/59",
+            "url": "https://seclists.org/bugtraq/2019/May/59"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2019/dsa-4448",
+            "url": "https://www.debian.org/security/2019/dsa-4448"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2019/05/msg00032.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2019/05/msg00032.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:1265",
+            "url": "https://access.redhat.com/errata/RHSA-2019:1265"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:1269",
+            "url": "https://access.redhat.com/errata/RHSA-2019:1269"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:1267",
+            "url": "https://access.redhat.com/errata/RHSA-2019:1267"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2019/dsa-4451",
+            "url": "https://www.debian.org/security/2019/dsa-4451"
+         },
+         {
+            "category": "external",
+            "summary": "https://seclists.org/bugtraq/2019/May/67",
+            "url": "https://seclists.org/bugtraq/2019/May/67"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2019/05/msg00038.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2019/05/msg00038.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/3997-1/",
+            "url": "https://usn.ubuntu.com/3997-1/"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00002.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00002.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:1310",
+            "url": "https://access.redhat.com/errata/RHSA-2019:1310"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:1309",
+            "url": "https://access.redhat.com/errata/RHSA-2019:1309"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:1308",
+            "url": "https://access.redhat.com/errata/RHSA-2019:1308"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00029.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00029.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00084.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00084.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/108098",
+            "url": "http://www.securityfocus.com/bid/108098"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.netapp.com/advisory/ntap-20190719-0005/",
+            "url": "https://security.netapp.com/advisory/ntap-20190719-0005/"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html",
+            "url": "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/4080-1/",
+            "url": "https://usn.ubuntu.com/4080-1/"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/4083-1/",
+            "url": "https://usn.ubuntu.com/4083-1/"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/201908-02",
+            "url": "https://security.gentoo.org/glsa/201908-02"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:2494",
+            "url": "https://access.redhat.com/errata/RHSA-2019:2494"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:2495",
+            "url": "https://access.redhat.com/errata/RHSA-2019:2495"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00044.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00044.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00038.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00038.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:2585",
+            "url": "https://access.redhat.com/errata/RHSA-2019:2585"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:2590",
+            "url": "https://access.redhat.com/errata/RHSA-2019:2590"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:2592",
+            "url": "https://access.redhat.com/errata/RHSA-2019:2592"
+         },
+         {
+            "category": "external",
+            "summary": "https://access.redhat.com/errata/RHSA-2019:2737",
+            "url": "https://access.redhat.com/errata/RHSA-2019:2737"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.hpe.com/hpsc/doc/public/display?docLocale=en_US&docId=emr_na-hpesbst03977en_us",
+            "url": "https://support.hpe.com/hpsc/doc/public/display?docLocale=en_US&docId=emr_na-hpesbst03977en_us"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.oracle.com/security-alerts/cpuoct2021.html",
+            "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2019-7317 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-7317"
+         }
+      ],
+      "title": "Image-PNG-Simple vulnerability",
+      "tracking": {
+         "current_release_date": "2019-02-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Image-PNG-Simple-2019-7317-libpng",
+         "initial_release_date": "2019-02-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2019-02-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.01|<=0.07",
+                  "product": {
+                     "name": "Image-PNG-Simple greater than or equal 0.01 and less than or equal 0.07",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Image-PNG-Simple"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Image-PNG-Simple"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2019-7317",
+         "cwe": {
+            "id": "CWE-416",
+            "name": "Use After Free"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "png_image_free in png.c in libpng 1.6.x before 1.6.37 has a use-after-free because png_image_free_function is called under png_safe_execute.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 2.6,
+                  "vectorString": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -135,7 +135,10 @@
                   "name": "vers:cpan/<2.0.0",
                   "product": {
                      "name": "DBD-Pg less than 2.0.0",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-Pg"
+                     }
                   }
                },
                {
@@ -143,7 +146,10 @@
                   "name": "vers:cpan/>=2.0.0",
                   "product": {
                      "name": "DBD-Pg greater than or equal 2.0.0",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-Pg"
+                     }
                   }
                }
             ],

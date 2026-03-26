@@ -1,0 +1,163 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Crypt::NaCl::Sodium versions through 2.002 for Perl has potential integer overflows.  bin2hex, encrypt, aes256gcm_encrypt_afternm and seal functions do not check that output size will be less than SIZE_MAX, which could lead to integer wraparound causing an undersized output buffer.  Encountering this issue is unlikely as the message length would need to be very large.  For bin2hex() the bin_len would have to be > SIZE_MAX / 2 For encrypt() the msg_len would need to be > SIZE_MAX - 16U For aes256gcm_encrypt_afternm() the msg_len would need to be > SIZE_MAX - 16U For seal() the enc_len would need to be > SIZE_MAX - 64U",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-NaCl-Sodium-2026-30909 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-nacl-sodium-2026-30909.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/crypt-nacl-sodium/pull/24.patch",
+            "url": "https://github.com/cpan-authors/crypt-nacl-sodium/pull/24.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L2116",
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L2116"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L2310",
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L2310"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L3304",
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L3304"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L942",
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.002/source/Sodium.xs#L942"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.003/source/Changes",
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-NaCl-Sodium-2.003/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/08/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/08/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-30909 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30909"
+         }
+      ],
+      "title": "Crypt-NaCl-Sodium vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-08T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Crypt-NaCl-Sodium-2026-30909",
+         "initial_release_date": "2026-03-08T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-08T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.003",
+                  "product": {
+                     "name": "Crypt-NaCl-Sodium less than 2.003",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-NaCl-Sodium"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.003",
+                  "product": {
+                     "name": "Crypt-NaCl-Sodium greater than or equal 2.003",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-NaCl-Sodium"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-NaCl-Sodium"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-30909",
+         "cwe": {
+            "id": "CWE-190",
+            "name": "Integer Overflow or Wraparound"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Crypt::NaCl::Sodium versions through 2.002 for Perl has potential integer overflows.\n\nbin2hex, encrypt, aes256gcm_encrypt_afternm and seal functions do not check that output size will be less than SIZE_MAX, which could lead to integer wraparound causing an undersized output buffer.\n\nEncountering this issue is unlikely as the message length would need to be very large.\n\nFor bin2hex() the bin_len would have to be > SIZE_MAX / 2 For encrypt() the msg_len would need to be > SIZE_MAX - 16U For aes256gcm_encrypt_afternm() the msg_len would need to be > SIZE_MAX - 16U For seal() the enc_len would need to be > SIZE_MAX - 64U",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

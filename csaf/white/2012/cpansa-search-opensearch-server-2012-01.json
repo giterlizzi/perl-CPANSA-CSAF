@@ -70,7 +70,10 @@
                   "name": "vers:cpan/<0.17",
                   "product": {
                      "name": "Search-OpenSearch-Server less than 0.17",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Search-OpenSearch-Server"
+                     }
                   }
                },
                {
@@ -78,7 +81,10 @@
                   "name": "vers:cpan/>=0.17",
                   "product": {
                      "name": "Search-OpenSearch-Server greater than or equal 0.17",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Search-OpenSearch-Server"
+                     }
                   }
                }
             ],

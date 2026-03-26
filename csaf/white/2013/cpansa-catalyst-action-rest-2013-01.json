@@ -65,7 +65,10 @@
                   "name": "vers:cpan/<1.12",
                   "product": {
                      "name": "Catalyst-Action-REST less than 1.12",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Action-REST"
+                     }
                   }
                },
                {
@@ -73,7 +76,10 @@
                   "name": "vers:cpan/>=1.12",
                   "product": {
                      "name": "Catalyst-Action-REST greater than or equal 1.12",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Action-REST"
+                     }
                   }
                }
             ],

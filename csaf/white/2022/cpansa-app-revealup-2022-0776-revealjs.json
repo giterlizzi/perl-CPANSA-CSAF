@@ -88,7 +88,10 @@
                   "name": "vers:cpan/==0.22",
                   "product": {
                      "name": "App-revealup equal =0.22",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/App-revealup"
+                     }
                   }
                }
             ],

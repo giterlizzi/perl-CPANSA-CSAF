@@ -143,7 +143,10 @@
                   "name": "vers:cpan/<0.66",
                   "product": {
                      "name": "Module-Load-Conditional less than 0.66",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Module-Load-Conditional"
+                     }
                   }
                },
                {
@@ -151,7 +154,10 @@
                   "name": "vers:cpan/>=0.66",
                   "product": {
                      "name": "Module-Load-Conditional greater than or equal 0.66",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Module-Load-Conditional"
+                     }
                   }
                }
             ],

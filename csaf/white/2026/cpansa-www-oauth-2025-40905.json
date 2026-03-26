@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "WWW::OAuth 1.000 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-WWW-OAuth-2025-40905 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-www-oauth-2025-40905.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/DBOOK/WWW-OAuth-1.000/source/lib/WWW/OAuth.pm#L86",
+            "url": "https://metacpan.org/release/DBOOK/WWW-OAuth-1.000/source/lib/WWW/OAuth.pm#L86"
+         },
+         {
+            "category": "external",
+            "summary": "https://perldoc.perl.org/functions/rand",
+            "url": "https://perldoc.perl.org/functions/rand"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/02/13/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/02/13/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-40905 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40905"
+         }
+      ],
+      "title": "WWW-OAuth vulnerability",
+      "tracking": {
+         "current_release_date": "2026-02-13T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-WWW-OAuth-2025-40905",
+         "initial_release_date": "2026-02-13T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-02-13T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=1.000",
+                  "product": {
+                     "name": "WWW-OAuth less than or equal 1.000",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/WWW-OAuth"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.001",
+                  "product": {
+                     "name": "WWW-OAuth greater than or equal 1.001",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/WWW-OAuth"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "WWW-OAuth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-40905",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "WWW::OAuth 1.000 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.3,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

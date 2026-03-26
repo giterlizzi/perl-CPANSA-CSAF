@@ -95,7 +95,10 @@
                   "name": "vers:cpan/<2.0000",
                   "product": {
                      "name": "Net-Netmask less than 2.0000",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Netmask"
+                     }
                   }
                },
                {
@@ -103,7 +106,10 @@
                   "name": "vers:cpan/>=2.0000",
                   "product": {
                      "name": "Net-Netmask greater than or equal 2.0000",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Netmask"
+                     }
                   }
                }
             ],

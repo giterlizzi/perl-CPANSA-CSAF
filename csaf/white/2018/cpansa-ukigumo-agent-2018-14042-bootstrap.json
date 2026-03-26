@@ -153,7 +153,10 @@
                   "name": "vers:cpan/>=0.0.7|<=0.1.8",
                   "product": {
                      "name": "Ukigumo-Agent greater than or equal 0.0.7 and less than or equal 0.1.8",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Ukigumo-Agent"
+                     }
                   }
                }
             ],

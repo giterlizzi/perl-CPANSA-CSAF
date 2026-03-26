@@ -85,7 +85,10 @@
                   "name": "vers:cpan/>=2.04|<=2.1900",
                   "product": {
                      "name": "Authen-SASL greater than or equal 2.04 and less than or equal 2.1900",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Authen-SASL"
+                     }
                   }
                },
                {
@@ -93,7 +96,10 @@
                   "name": "vers:cpan/>=2.1900",
                   "product": {
                      "name": "Authen-SASL greater than or equal 2.1900",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Authen-SASL"
+                     }
                   }
                }
             ],

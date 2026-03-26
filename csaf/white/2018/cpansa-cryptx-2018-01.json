@@ -75,7 +75,10 @@
                   "name": "vers:cpan/<0.062",
                   "product": {
                      "name": "CryptX less than 0.062",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CryptX"
+                     }
                   }
                },
                {
@@ -83,7 +86,10 @@
                   "name": "vers:cpan/>=0.062",
                   "product": {
                      "name": "CryptX greater than or equal 0.062",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CryptX"
+                     }
                   }
                }
             ],

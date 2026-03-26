@@ -1,0 +1,167 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Buffer overflow in the git_pkt_parse_line function in transports/smart_pkt.c in the Git Smart Protocol support in libgit2 before 0.24.6 and 0.25.x before 0.25.1 allows remote attackers to have unspecified impact via a crafted non-flush packet.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Git-Raw-2016-10128-libgit2 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2017/cpansa-git-raw-2016-10128-libgit2.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://libgit2.github.com/security/",
+            "url": "https://libgit2.github.com/security/"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libgit2/libgit2/commit/66e3774d279672ee51c3b54545a79d20d1ada834",
+            "url": "https://github.com/libgit2/libgit2/commit/66e3774d279672ee51c3b54545a79d20d1ada834"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libgit2/libgit2/commit/4ac39c76c0153d1ee6889a0984c39e97731684b2",
+            "url": "https://github.com/libgit2/libgit2/commit/4ac39c76c0153d1ee6889a0984c39e97731684b2"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2017/01/11/6",
+            "url": "http://www.openwall.com/lists/oss-security/2017/01/11/6"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2017/01/10/5",
+            "url": "http://www.openwall.com/lists/oss-security/2017/01/10/5"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00072.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00072.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00036.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00036.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00030.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2017-02/msg00030.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/95338",
+            "url": "http://www.securityfocus.com/bid/95338"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2016-10128 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10128"
+         }
+      ],
+      "title": "Git-Raw vulnerability",
+      "tracking": {
+         "current_release_date": "2017-03-24T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Git-Raw-2016-10128-libgit2",
+         "initial_release_date": "2017-03-24T00:00:00",
+         "revision_history": [
+            {
+               "date": "2017-03-24T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.61|<=0.74",
+                  "product": {
+                     "name": "Git-Raw greater than or equal 0.61 and less than or equal 0.74",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Git-Raw"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Git-Raw"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2016-10128",
+         "cwe": {
+            "id": "CWE-119",
+            "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Buffer overflow in the git_pkt_parse_line function in transports/smart_pkt.c in the Git Smart Protocol support in libgit2 before 0.24.6 and 0.25.x before 0.25.1 allows remote attackers to have unspecified impact via a crafted non-flush packet.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

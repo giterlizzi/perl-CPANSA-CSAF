@@ -105,7 +105,10 @@
                   "name": "vers:cpan/<=4.66",
                   "product": {
                      "name": "Data-FormValidator less than or equal 4.66",
-                     "product_id": "CSAFPID-0001"
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-FormValidator"
+                     }
                   }
                },
                {
@@ -113,7 +116,10 @@
                   "name": "vers:cpan/>4.66",
                   "product": {
                      "name": "Data-FormValidator greater than 4.66",
-                     "product_id": "CSAFPID-0002"
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-FormValidator"
+                     }
                   }
                }
             ],
