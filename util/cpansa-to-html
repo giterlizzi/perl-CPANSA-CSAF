@@ -137,7 +137,7 @@ $index_file->spew(
         
         <h4>OASIS CSAF 2.0 Standard</h4>
         <p>
-            CSAF is a standard for machine-readable security advisories developed by the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=csaf" target="_blank" rel="nofollow noopener">OASIS CSAF Technical Committee</a>). CSAF enables individuals and organizations to successfully disclose and consume security advisories in machine-readable format. The standard also specifies the distribution and discovery of CSAF documents. The CSAF Security Advisory files found in this repository were designed following the CSAF v2.0 standard published by (<a href="https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html" target="_blank" rel="nofollow noopener">OASIS Open</a>).
+            CSAF is a standard for machine-readable security advisories developed by the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=csaf" target="_blank" rel="nofollow noopener">OASIS CSAF Technical Committee</a>. CSAF enables individuals and organizations to successfully disclose and consume security advisories in machine-readable format. The standard also specifies the distribution and discovery of CSAF documents. The CSAF Security Advisory files found in this repository were designed following the CSAF v2.0 standard published by (<a href="https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html" target="_blank" rel="nofollow noopener">OASIS Open</a>).
         </p>
 
         <h4>CPANSA CSAF Feed</h4>
