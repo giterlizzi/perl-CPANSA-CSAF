@@ -5,6 +5,7 @@ use v5.34;
 use Carp;
 use CSAF::Util qw(tracking_id_to_well_filename);
 use CSAF;
+use Getopt::Long;
 use Log::Any::Adapter ('Stderr');
 use Mojo::File qw(curfile);
 use Mojo::Log;
@@ -14,10 +15,14 @@ use Net::NVD;
 use URI::PackageURL;
 use URI::VersionRange;
 
-my $CPANSA_URL
-    = q{https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/refs/heads/master/cpan-security-advisory.json};
+# TODO
+# In upcoming CSAF 2.1, are permitted multiple PURLs definition in single product_identification_helper
+# Get all CPAN ID for all affected version (use $vers->contains) and create a valid CPAN type PURL
 
+#<<<
+my $CPANSA_URL   = 'https://raw.githubusercontent.com/briandfoy/cpan-security-advisory/refs/heads/master/cpan-security-advisory.json';
 my $CSAF_BASEURL = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white';
+#>>>
 
 my @ERRORS = ();
 
@@ -29,11 +34,20 @@ my %COMPARATOR_DECODE = (
     '>=' => 'greater than or equal',
 );
 
+my %options = (force => 0);
+GetOptions(\%options, 'dist=s', 'force', 'cpansa=s') or Carp::croak 'Error in CLI arguments';
+
+my $output_directory = curfile->dirname->sibling('csaf/white');
+
 my $log = Mojo::Log->new;
 
 my $nvd = Net::NVD->new(api_key => $ENV{NVD_API_KEY});
 
 my $cpansa = cpan_security_advisories();
+
+unless (%{$cpansa}) {
+    Carp::croak 'CPANSA DB missing';
+}
 
 my $TOTAL = scalar(keys %{$cpansa->{dists}});
 
@@ -41,6 +55,8 @@ $log->info('CSAF version:',            $CSAF::VERSION);
 $log->info('URI::PackageURL version:', $URI::PackageURL::VERSION);
 $log->info('CPANSA release:',          $cpansa->{meta}->{date});
 $log->info('Distributions in CPANSA:', $TOTAL);
+
+my $index_file = $output_directory->child('index.txt');
 
 my $user_dist = shift;
 
@@ -50,7 +66,7 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
 
     $idx++;
 
-    if ($user_dist) {
+    if (my $user_dist = $options{dist}) {
         next DIST if ($dist !~ /^$user_dist$/i);
     }
 
@@ -64,17 +80,30 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
         my @fixed_packages    = ();
         my @references        = ();
 
-        my $advisory_id       = $advisory->{id};
+        my $advisory_id = $advisory->{id};
+        my $csaf_id     = tracking_id_to_well_filename($advisory_id);
+
+        next if (defined $options{cpansa} && $advisory_id ne $options{cpansa});
+
+        unless ($advisory->{reported}) {
+            push @ERRORS, {type => 'CSAF', message => 'Missing reported date', file => $csaf_id, id => $advisory_id};
+            next;
+        }
+
+        if ($options{force} == 0 && $index_file->slurp =~ /$csaf_id/) {
+            $log->debug("CSAF $csaf_id already processed... skip");
+            next;
+        }
+
+        my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d') };
+        my $csaf_url          = join '/', $CSAF_BASEURL, $published_date->year, $csaf_id;
         my $description       = trim($advisory->{description});
         my $severity          = $advisory->{severity};
-        my $distribution      = $dist;
+        my $title             = join ' ', $dist, 'vulnerability';
         my $author            = undef;
         my @cves              = @{$advisory->{cves}};
         my @affected_versions = ();
         my @fixed_versions    = ();
-        my $title             = join ' ', $distribution, 'vulnerability';
-        my $published_date    = eval { Time::Piece->strptime($advisory->{reported}, '%Y-%m-%d') };
-        my $csaf_url = join '/', $CSAF_BASEURL, $published_date->year, tracking_id_to_well_filename($advisory_id);
 
         if ($advisory->{affected_versions}) {
             if (ref($advisory->{affected_versions}) ne 'ARRAY') {
@@ -136,6 +165,8 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
             initial_release_date => $published_date,
         );
 
+        my $purl = URI::PackageURL->new(type => 'cpan', name => $dist, validation => 0);
+
         $tracking->revision_history->item(date => $published_date, summary => 'First release', number => '1');
 
         $csaf->document->references->item(url => $csaf_url, category => 'self', summary => "$advisory_id JSON");
@@ -147,7 +178,7 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
         if (@affected_versions || @fixed_versions) {
 
             my $branches         = $csaf->product_tree->branches;
-            my $product_item     = $branches->item(category => 'product_name', name => $distribution);
+            my $product_item     = $branches->item(category => 'product_name', name => $dist);
             my $product_branches = $product_item->branches;
 
             my $product_idx = 1;
@@ -165,7 +196,11 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
                 $product_branches->item(
                     category => 'product_version_range',
                     name     => $vers_range,
-                    product  => {product_id => $product_id, name => sprintf('%s %s', $distribution, $vers_to_name)}
+                    product  => {
+                        product_id                    => $product_id,
+                        name                          => sprintf('%s %s', $dist, $vers_to_name),
+                        product_identification_helper => {purl => $purl}
+                    }
                 );
 
             }
@@ -182,7 +217,11 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
                 $product_branches->item(
                     category => 'product_version_range',
                     name     => $vers_range,
-                    product  => {product_id => $product_id, name => sprintf('%s %s', $distribution, $vers_to_name)}
+                    product  => {
+                        product_id                    => $product_id,
+                        name                          => sprintf('%s %s', $dist, $vers_to_name),
+                        product_identification_helper => {purl => $purl}
+                    }
                 );
 
             }
@@ -203,7 +242,7 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
             my $cve_data = eval { $nvd->get($cve) };
 
             if ($@) {
-                push @ERRORS, {type => 'Error in Net::NVD', message => $@, file => $distribution, id => $advisory_id};
+                push @ERRORS, {type => 'Error in Net::NVD', message => $@, file => $dist, id => $advisory_id};
                 next;
             }
 
@@ -280,7 +319,7 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
         }
 
         eval {
-            my $writer = $csaf->writer(directory => curfile->dirname->sibling('csaf/white')->to_string);
+            my $writer = $csaf->writer(directory => $output_directory->to_string);
             $writer->write;
         };
 
@@ -329,16 +368,13 @@ sub vers_to_name {
 
 sub cpan_security_advisories {
 
-    $log->debug("Fetch CPANSA from $CPANSA_URL");
-
-    my $res = Mojo::UserAgent->new->get($CPANSA_URL)->res;
-
-    if (!$res->is_success) {
-        $log->error("Failed to fetch CPANSA. Fallback to CPANSA::DB");
-        require CPANSA::DB;
+    if (eval "require CPANSA::DB; 1") {
         return CPANSA::DB->db();
     }
 
+    $log->debug("Fetch CPANSA from $CPANSA_URL");
+
+    my $res = Mojo::UserAgent->new->get($CPANSA_URL)->res;
     return $res->json;
 
 }
