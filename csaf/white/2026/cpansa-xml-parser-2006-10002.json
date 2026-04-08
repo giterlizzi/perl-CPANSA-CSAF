@@ -1,0 +1,158 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "XML::Parser versions through 2.45 for Perl could overflow the pre-allocated buffer size cause a heap corruption (double free or corruption) and crashes.  A :utf8 PerlIO layer, parse_stream() in Expat.xs could overflow the XML input buffer because Perl's read() returns decoded characters while SvPV() gives back multi-byte UTF-8 bytes that can exceed the pre-allocated buffer size. This can cause heap corruption (double free or corruption) and crashes.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-XML-Parser-2006-10002 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-parser-2006-10002.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/XML-Parser/commit/56b0509dfc6b559cd7555ea81ee62e3622069255.patch",
+            "url": "https://github.com/cpan-authors/XML-Parser/commit/56b0509dfc6b559cd7555ea81ee62e3622069255.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/XML-Parser/issues/64",
+            "url": "https://github.com/cpan-authors/XML-Parser/issues/64"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TODDR/XML-Parser-2.46/changes",
+            "url": "https://metacpan.org/release/TODDR/XML-Parser-2.46/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Ticket/Display.html?id=19859",
+            "url": "https://rt.cpan.org/Ticket/Display.html?id=19859"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/19/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/19/1"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/22/3",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/22/3"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2006-10002 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-10002"
+         }
+      ],
+      "title": "XML-Parser vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-XML-Parser-2006-10002",
+         "initial_release_date": "2026-03-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=2.45",
+                  "product": {
+                     "name": "XML-Parser less than or equal 2.45",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Parser"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.48",
+                  "product": {
+                     "name": "XML-Parser greater than or equal 2.48",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Parser"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "XML-Parser"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2006-10002",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "XML::Parser versions through 2.45 for Perl could overflow the pre-allocated buffer size cause a heap corruption (double free or corruption) and crashes.\n\nA :utf8 PerlIO layer, parse_stream() in Expat.xs could overflow the XML input buffer because Perl's read() returns decoded characters while SvPV() gives back multi-byte UTF-8 bytes that can exceed the pre-allocated buffer size. This can cause heap corruption (double free or corruption) and crashes.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

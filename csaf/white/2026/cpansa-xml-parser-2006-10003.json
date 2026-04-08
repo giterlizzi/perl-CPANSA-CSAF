@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "XML::Parser versions through 2.47 for Perl has an off-by-one heap buffer overflow in st_serial_stack.  In the case (stackptr == stacksize - 1), the stack will NOT be expanded. Then the new value will be written at location (++stackptr), which equals stacksize and therefore falls just outside the allocated buffer.  The bug can be observed when parsing an XML file with very deep element nesting",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-XML-Parser-2006-10003 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-parser-2006-10003.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/XML-Parser/commit/3eb9cc95420fa0c3f76947c4708962546bf27cfd.patch",
+            "url": "https://github.com/cpan-authors/XML-Parser/commit/3eb9cc95420fa0c3f76947c4708962546bf27cfd.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/XML-Parser/issues/39",
+            "url": "https://github.com/cpan-authors/XML-Parser/issues/39"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Ticket/Display.html?id=19860",
+            "url": "https://rt.cpan.org/Ticket/Display.html?id=19860"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/19/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/19/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2006-10003 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-10003"
+         }
+      ],
+      "title": "XML-Parser vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-XML-Parser-2006-10003",
+         "initial_release_date": "2026-03-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=2.47",
+                  "product": {
+                     "name": "XML-Parser less than or equal 2.47",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Parser"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.48",
+                  "product": {
+                     "name": "XML-Parser greater than or equal 2.48",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Parser"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "XML-Parser"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2006-10003",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "XML::Parser versions through 2.47 for Perl has an off-by-one heap buffer overflow in st_serial_stack.\n\nIn the case (stackptr == stacksize - 1), the stack will NOT be expanded. Then the new value will be written at location (++stackptr), which equals stacksize and therefore falls just outside the allocated buffer.\n\nThe bug can be observed when parsing an XML file with very deep element nesting",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

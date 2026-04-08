@@ -1,4 +1,6 @@
 2026/cpansa-yaml-syck-2026-4177.json
+2026/cpansa-xml-parser-2006-10003.json
+2026/cpansa-xml-parser-2006-10002.json
 2026/cpansa-www-oauth-2025-40905.json
 2026/cpansa-unqlite-2026-3257.json
 2026/cpansa-smolder-2024-58041.json
