@@ -1,0 +1,52 @@
+name: Build CSAF
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build-csaf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+            perl-version: 5.36
+            distribution: 'default'
+
+      - name: Show Perl Version
+        run: perl -v
+
+      - name: Install Modules
+        run: |
+          cpanm -v
+          cpanm --installdeps --with-develop --notest .
+
+      - name: Build CPANSA
+        run: make build
+
+      - name: Build ROLIE
+        run: make rolie
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add csaf
+          git commit -s -m "Sync with CPANSA" || echo "No changes to commit"
+          git push
