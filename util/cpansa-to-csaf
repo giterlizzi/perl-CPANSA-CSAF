@@ -27,6 +27,7 @@ my $CSAF_BASEURL = 'https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSA
 my @ERRORS = ();
 
 my %COMPARATOR_DECODE = (
+    '==' => 'equal',
     '='  => 'equal',
     '<'  => 'less than',
     '<=' => 'less than or equal',
@@ -185,8 +186,9 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
 
             foreach my $affected_version (@affected_versions) {
 
-                my $vers_range
-                    = URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $affected_version)]);
+                my @affected_versions = map { $_ =~ s/^==//; $_ =~ s/^=//; $_ } split(',', $affected_version);
+
+                my $vers_range = URI::VersionRange->new(scheme => 'cpan', constraints => \@affected_versions);
 
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
                 my $vers_to_name = vers_to_name(split(',', $affected_version));
@@ -207,7 +209,9 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
 
             foreach my $fixed_version (@fixed_versions) {
 
-                my $vers_range = URI::VersionRange->new(scheme => 'cpan', constraints => [split(',', $fixed_version)]);
+                my @fixed_versions = map { $_ =~ s/^==//; $_ =~ s/^=//; $_ } split(',', $fixed_version);
+
+                my $vers_range = URI::VersionRange->new(scheme => 'cpan', constraints => \@fixed_versions);
 
                 my $product_id   = sprintf('CSAFPID-%04d', $product_idx++);
                 my $vers_to_name = vers_to_name(split(',', $fixed_version));
@@ -348,7 +352,7 @@ sub vers_to_name {
 
     foreach my $version (@_) {
 
-        if ($version =~ /^(>=|<=|=|<|>)(.*)/) {
+        if ($version =~ /^(>=|<=|==|=|<|>)(.*)/) {
 
             my $comparator = $1;
             my $version    = $2;
