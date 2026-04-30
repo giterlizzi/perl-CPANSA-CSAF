@@ -165,7 +165,7 @@ DIST: foreach my $dist (sort keys %{$cpansa->{dists}}) {
             initial_release_date => $published_date,
         );
 
-        my $purl = URI::PackageURL->new(type => 'cpan', name => $dist, validation => 0);
+        my $purl = URI::PackageURL->new(type => 'cpan', name => $dist, validate => 0);
 
         $tracking->revision_history->item(date => $published_date, summary => 'First release', number => '1');
 
