@@ -90,9 +90,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>804.024|<=804.027",
+                  "name": "vers:cpan/>804.027_500|<=804.036",
                   "product": {
-                     "name": "Tk greater than 804.024 and less than or equal 804.027",
+                     "name": "Tk greater than 804.027_500 and less than or equal 804.036",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Tk"

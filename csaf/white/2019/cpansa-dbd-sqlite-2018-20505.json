@@ -175,7 +175,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=1.59_02",
+                  "name": "vers:cpan/1.59_02",
                   "product": {
                      "name": "DBD-SQLite equal 1.59_02",
                      "product_id": "CSAFPID-0001",

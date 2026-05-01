@@ -87,7 +87,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=5.8.8.817",
+                  "name": "vers:cpan/5.8.8.817",
                   "product": {
                      "name": "ActivePerl equal 5.8.8.817",
                      "product_id": "CSAFPID-0001",

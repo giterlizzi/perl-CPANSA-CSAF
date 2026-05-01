@@ -3,7 +3,7 @@
       "aggregate_severity": {
          "text": "critical"
       },
-      "category": "csaf_informational_advisory",
+      "category": "csaf_security_advisory",
       "csaf_version": "2.0",
       "distribution": {
          "tlp": {
@@ -15,7 +15,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "HTTP::Session2 1.10 does not validate session id, this causes RCE depending on the session store you use.",
+            "text": "HTTP::Session2 1.09 does not validate session id, this causes RCE depending on the session store you use.",
             "title": "Vulnerability Description"
          }
       ],
@@ -40,6 +40,11 @@
             "category": "external",
             "summary": "https://github.com/tokuhirom/HTTP-Session2/commit/813838f6d08034b6a265a70e53b59b941b5d3e6d",
             "url": "https://github.com/tokuhirom/HTTP-Session2/commit/813838f6d08034b6a265a70e53b59b941b5d3e6d"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2018-25160 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25160"
          }
       ],
       "title": "HTTP-Session2 vulnerability",
@@ -95,5 +100,42 @@
             "name": "HTTP-Session2"
          }
       ]
-   }
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2018-25160",
+         "cwe": {
+            "id": "CWE-20",
+            "name": "Improper Input Validation"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Session2 versions through 1.09 for Perl does not validate the format of user provided session ids, enabling code injection or other impact depending on session backend.\n\nFor example, if an application uses memcached for session storage, then it may be possible for a remote attacker to inject memcached commands in the session id value.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
 }

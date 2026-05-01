@@ -120,9 +120,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.01|<=0.06",
+                  "name": "vers:cpan/>=0.07|<=0.12",
                   "product": {
-                     "name": "Nginx-Engine greater than or equal 0.01 and less than or equal 0.06",
+                     "name": "Nginx-Engine greater than or equal 0.07 and less than or equal 0.12",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Nginx-Engine"

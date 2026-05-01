@@ -82,7 +82,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=1.1.11",
+                  "name": "vers:cpan/1.1.11",
                   "product": {
                      "name": "MDK-Common equal 1.1.11",
                      "product_id": "CSAFPID-0001",
@@ -93,7 +93,7 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=1.1.24",
+                  "name": "vers:cpan/1.1.24",
                   "product": {
                      "name": "MDK-Common equal 1.1.24",
                      "product_id": "CSAFPID-0002",

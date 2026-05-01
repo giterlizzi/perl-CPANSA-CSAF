@@ -141,9 +141,9 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/==5.26.0",
+                  "name": "vers:cpan/5.26.0",
                   "product": {
-                     "name": "perl equal =5.26.0",
+                     "name": "perl equal 5.26.0",
                      "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/perl"

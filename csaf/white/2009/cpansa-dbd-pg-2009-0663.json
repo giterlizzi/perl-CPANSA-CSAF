@@ -122,7 +122,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=1.49",
+                  "name": "vers:cpan/1.49",
                   "product": {
                      "name": "DBD-Pg equal 1.49",
                      "product_id": "CSAFPID-0001",

@@ -105,9 +105,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.000018|<=0.000027",
+                  "name": "vers:cpan/>=0.000028|<=0.000041",
                   "product": {
-                     "name": "Crypt-Sodium-XS greater than or equal 0.000018 and less than or equal 0.000027",
+                     "name": "Crypt-Sodium-XS greater than or equal 0.000028 and less than or equal 0.000041",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Crypt-Sodium-XS"

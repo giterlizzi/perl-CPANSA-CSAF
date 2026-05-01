@@ -90,9 +90,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.9.2.1|<0.9.2.8|=0.9.2",
+                  "name": "vers:cpan/0.11.0",
                   "product": {
-                     "name": "Redis-hiredis equal =0.9.2 and greater than or equal 0.9.2.1 and less than 0.9.2.8",
+                     "name": "Redis-hiredis equal 0.11.0",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Redis-hiredis"

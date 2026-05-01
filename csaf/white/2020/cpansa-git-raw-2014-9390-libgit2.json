@@ -110,9 +110,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.08|<=0.24",
+                  "name": "vers:cpan/0.89",
                   "product": {
-                     "name": "Git-Raw greater than or equal 0.08 and less than or equal 0.24",
+                     "name": "Git-Raw equal 0.89",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Git-Raw"

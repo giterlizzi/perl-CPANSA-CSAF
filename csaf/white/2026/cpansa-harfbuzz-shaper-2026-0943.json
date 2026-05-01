@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "HarfBuzz::Shaper versions before 0.032 for Perl contains a bundled library with a null pointer dereference vulnerability.Â   Versions before 0.032 contain HarfBuzz 8.4.0 or earlier bundled as hb_src.tar.gz in the source tarball, which is affected by CVE-2026-22693.",
+            "text": "HarfBuzz::Shaper versions before 0.032 for Perl contains a bundled library with a null pointer dereference vulnerability.   Versions before 0.032 contain HarfBuzz 8.4.0 or earlier bundled as hb_src.tar.gz in the source tarball, which is affected by CVE-2026-22693.",
             "title": "Vulnerability Description"
          }
       ],
@@ -106,6 +106,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2026-0943",
+         "cwe": {
+            "id": "CWE-476",
+            "name": "NULL Pointer Dereference"
+         },
          "notes": [
             {
                "category": "description",

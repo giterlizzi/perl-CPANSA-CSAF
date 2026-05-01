@@ -83,9 +83,9 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/'>=0.065'",
+                  "name": "vers:cpan/>=0.065",
                   "product": {
-                     "name": "CryptX ",
+                     "name": "CryptX greater than or equal 0.065",
                      "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/CryptX"

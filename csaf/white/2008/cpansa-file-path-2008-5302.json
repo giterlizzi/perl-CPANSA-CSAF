@@ -172,7 +172,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=1.08",
+                  "name": "vers:cpan/1.08",
                   "product": {
                      "name": "File-Path equal 1.08",
                      "product_id": "CSAFPID-0001",
@@ -183,7 +183,7 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=2.07",
+                  "name": "vers:cpan/2.07",
                   "product": {
                      "name": "File-Path equal 2.07",
                      "product_id": "CSAFPID-0002",

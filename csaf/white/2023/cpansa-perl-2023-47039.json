@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Perl for Windows relies on the system path environment variable to find the shell (cmd.exe). When running an executable which uses Windows Perl interpreter, Perl attempts to find and execute cmd.exe within the operating system. However, due to path search order issues, Perl initially looks for cmd.exe in the current working directory.\nAn attacker with limited privileges can exploit this behavior by placing cmd.exe in locations with weak permissions, such as C:\\ProgramData. By doing so, when an administrator attempts to use this executable from these compromised locations, arbitrary code can be executed.",
+            "text": "Perl for Windows relies on the system path environment variable to find the shell (cmd.exe). When running an executable which uses Windows Perl interpreter, Perl attempts to find and execute cmd.exe within the operating system. However, due to path search order issues, Perl initially looks for cmd.exe in the current working directory.\n\nAn attacker with limited privileges can exploit this behavior by placing cmd.exe in locations with weak permissions, such as C:\\ProgramData. By doing so, when an administrator attempts to use this executable from these compromised locations, arbitrary code can be executed.",
             "title": "Vulnerability Description"
          }
       ],
@@ -114,10 +114,21 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/==5.38.0",
+                  "name": "vers:cpan/5.38.0",
                   "product": {
-                     "name": "perl equal =5.38.0",
+                     "name": "perl equal 5.38.0",
                      "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.38.1",
+                  "product": {
+                     "name": "perl greater than or equal 5.38.1",
+                     "product_id": "CSAFPID-0004",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/perl"
                      }
@@ -144,6 +155,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0004"
+            ],
             "known_affected": [
                "CSAFPID-0001",
                "CSAFPID-0002",

@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Crypt::Random Perl package 1.05 through 1.55 may use rand() function,Â which is notÂ cryptographically strong,Â for cryptographic functions.  If the Provider is not specified and /dev/urandom or an Entropy Gathering Daemon (egd) service is not availableÂ Crypt::Random will default to use the insecureÂ Crypt::Random::rand provider.  In particular, Windows versions of perl will encounter this issue by default.",
+            "text": "Crypt::Random Perl package 1.05 through 1.55 may use rand() function, which is not cryptographically strong, for cryptographic functions.  If the Provider is not specified and /dev/urandom or an Entropy Gathering Daemon (egd) service is not available Crypt::Random will default to use the insecure Crypt::Random::rand provider.  In particular, Windows versions of perl will encounter this issue by default.",
             "title": "Vulnerability Description"
          }
       ],

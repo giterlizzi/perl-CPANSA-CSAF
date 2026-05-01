@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Net::Dropbear versions through 0.16 for Perl contains a dependency that may be susceptible to an integer overflow.  Net::DropbearÂ embeds a version of the libtommath library that is susceptible to an integer overflow associated with CVE-2023-36328.",
+            "text": "Net::Dropbear versions through 0.16 for Perl contains a dependency that may be susceptible to an integer overflow.  Net::Dropbear embeds a version of the libtommath library that is susceptible to an integer overflow associated with CVE-2023-36328.",
             "title": "Vulnerability Description"
          }
       ],

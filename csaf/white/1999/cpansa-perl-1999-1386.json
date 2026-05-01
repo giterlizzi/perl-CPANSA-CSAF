@@ -85,6 +85,17 @@
                         "purl": "pkg:cpan/perl"
                      }
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>5.4.4",
+                  "product": {
+                     "name": "perl greater than 5.4.4",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
+                  }
                }
             ],
             "category": "product_name",
@@ -107,6 +118,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

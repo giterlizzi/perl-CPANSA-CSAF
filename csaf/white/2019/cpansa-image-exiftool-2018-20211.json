@@ -72,7 +72,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=8.32",
+                  "name": "vers:cpan/8.32",
                   "product": {
                      "name": "Image-ExifTool equal 8.32",
                      "product_id": "CSAFPID-0001",

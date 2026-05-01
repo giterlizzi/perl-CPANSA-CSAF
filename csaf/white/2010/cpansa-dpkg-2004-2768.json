@@ -87,7 +87,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=1.9.21",
+                  "name": "vers:cpan/1.9.21",
                   "product": {
                      "name": "Dpkg equal 1.9.21",
                      "product_id": "CSAFPID-0001",

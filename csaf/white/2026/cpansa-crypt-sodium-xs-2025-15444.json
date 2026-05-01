@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Crypt::Sodium::XS module versions prior toÂ 0.000042,Â for Perl, include a vulnerable version of libsodium  libsodium <= 1.0.20 or a version of libsodium released before December 30, 2025 contains a vulnerability documented as CVE-2025-69277Â  https://www.cve.org/CVERecord?id=CVE-2025-69277 .  The libsodium vulnerability states:  In atypical use cases involving certain custom cryptography or untrusted data to crypto_core_ed25519_is_valid_point, mishandles checks for whether an elliptic curve point is valid because it sometimes allows points that aren't in the main cryptographic group.  0.000042 includes a version ofÂ libsodium updated to 1.0.20-stable, released January 3, 2026, which includes a fix for the vulnerability.",
+            "text": "Crypt::Sodium::XS module versions prior to 0.000042, for Perl, include a vulnerable version of libsodium  libsodium <= 1.0.20 or a version of libsodium released before December 30, 2025 contains a vulnerability documented as CVE-2025-69277  https://www.cve.org/CVERecord?id=CVE-2025-69277 .  The libsodium vulnerability states:  In atypical use cases involving certain custom cryptography or untrusted data to crypto_core_ed25519_is_valid_point, mishandles checks for whether an elliptic curve point is valid because it sometimes allows points that aren't in the main cryptographic group.  0.000042 includes a version of libsodium updated to 1.0.20-stable, released January 3, 2026, which includes a fix for the vulnerability.",
             "title": "Vulnerability Description"
          }
       ],
@@ -106,6 +106,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2025-15444",
+         "cwe": {
+            "id": "CWE-347",
+            "name": "Improper Verification of Cryptographic Signature"
+         },
          "notes": [
             {
                "category": "description",

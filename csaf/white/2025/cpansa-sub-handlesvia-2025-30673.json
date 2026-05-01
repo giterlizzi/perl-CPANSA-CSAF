@@ -12,7 +12,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Sub::HandlesVia for Perl before 0.050002 allows untrusted code from the current working directory ('.') to be loaded similar to CVE-2016-1238.  If an attacker can place a malicious file in current working directory, it may beÂ loaded instead of the intended file, potentially leading to arbitraryÂ code execution.  Sub::HandlesVia uses Mite to produce the affected code section due toÂ CVE-2025-30672",
+            "text": "Sub::HandlesVia for Perl before 0.050002 allows untrusted code from the current working directory ('.') to be loaded similar to CVE-2016-1238.  If an attacker can place a malicious file in current working directory, it may be loaded instead of the intended file, potentially leading to arbitrary code execution.  Sub::HandlesVia uses Mite to produce the affected code section due to CVE-2025-30672",
             "title": "Vulnerability Description"
          }
       ],

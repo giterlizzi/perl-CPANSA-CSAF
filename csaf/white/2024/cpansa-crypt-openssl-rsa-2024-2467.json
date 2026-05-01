@@ -112,8 +112,8 @@
       {
          "cve": "CVE-2024-2467",
          "cwe": {
-            "id": "CWE-203",
-            "name": "Observable Discrepancy"
+            "id": "CWE-208",
+            "name": "Observable Timing Discrepancy"
          },
          "notes": [
             {

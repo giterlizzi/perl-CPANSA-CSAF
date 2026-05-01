@@ -135,9 +135,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/==0.004_002",
+                  "name": "vers:cpan/0.004_002",
                   "product": {
-                     "name": "IO-Compress-Brotli equal =0.004_002",
+                     "name": "IO-Compress-Brotli equal 0.004_002",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/IO-Compress-Brotli"

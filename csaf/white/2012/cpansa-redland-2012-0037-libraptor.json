@@ -217,9 +217,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/==1.0.13.1",
+                  "name": "vers:cpan/1.0.13.1",
                   "product": {
-                     "name": "Redland equal =1.0.13.1",
+                     "name": "Redland equal 1.0.13.1",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Redland"

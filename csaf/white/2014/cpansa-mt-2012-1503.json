@@ -92,7 +92,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=5.13",
+                  "name": "vers:cpan/5.13",
                   "product": {
                      "name": "MT equal 5.13",
                      "product_id": "CSAFPID-0001",

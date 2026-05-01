@@ -78,7 +78,7 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=0.90_01",
+                  "name": "vers:cpan/0.90_01",
                   "product": {
                      "name": "IPC-Run equal 0.90_01",
                      "product_id": "CSAFPID-0002",
@@ -89,7 +89,7 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/=0.90_02",
+                  "name": "vers:cpan/0.90_02",
                   "product": {
                      "name": "IPC-Run equal 0.90_02",
                      "product_id": "CSAFPID-0003",
