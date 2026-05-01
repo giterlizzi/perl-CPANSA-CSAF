@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Starman versions before 0.4018 for Perl allows HTTP Request Smuggling via Improper Header Precedence.  Starman incorrectly prioritizes \"Content-Length\" over \"Transfer-Encoding: chunked\" when both headers are present in an HTTP request. Per RFC 7230 3.3.3, Transfer-Encoding must take precedence.  An attacker could exploit this to smuggle malicious HTTP requests via a front-end reverse proxy.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Starman-2026-40560 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-starman-2026-40560.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.3"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/miyagawa/Starman/commit/ced205f0805027e9d9c0731f8c40b104220604ed.patch",
+            "url": "https://github.com/miyagawa/Starman/commit/ced205f0805027e9d9c0731f8c40b104220604ed.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MIYAGAWA/Starman-0.4018/changes",
+            "url": "https://metacpan.org/release/MIYAGAWA/Starman-0.4018/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/04/29/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/29/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-40560 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40560"
+         }
+      ],
+      "title": "Starman vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Starman-2026-40560",
+         "initial_release_date": "2026-04-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.4018",
+                  "product": {
+                     "name": "Starman less than 0.4018",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starman"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.4018",
+                  "product": {
+                     "name": "Starman greater than or equal 0.4018",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starman"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Starman"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-40560",
+         "cwe": {
+            "id": "CWE-444",
+            "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Starman versions before 0.4018 for Perl allows HTTP Request Smuggling via Improper Header Precedence.\n\nStarman incorrectly prioritizes \"Content-Length\" over \"Transfer-Encoding: chunked\" when both headers are present in an HTTP request. Per RFC 7230 3.3.3, Transfer-Encoding must take precedence.\n\nAn attacker could exploit this to smuggle malicious HTTP requests via a front-end reverse proxy.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

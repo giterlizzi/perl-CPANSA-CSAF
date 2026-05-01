@@ -1,0 +1,158 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Storable versions before 3.05 for Perl has a stack overflow.  The retrieve_hook function stored the length of the class name into a signed integer but in read operations treated the length as unsigned. This allowed an attacker to craft data that could trigger the overflow.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Storable-2017-20230 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-storable-2017-20230.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/Perl/perl5/commit/a258c17c6937f79529c8319a829310e09cdbd216.patch",
+            "url": "https://github.com/Perl/perl5/commit/a258c17c6937f79529c8319a829310e09cdbd216.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/Perl/perl5/issues/15831",
+            "url": "https://github.com/Perl/perl5/issues/15831"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RURBAN/Storable-3.05/changes",
+            "url": "https://metacpan.org/release/RURBAN/Storable-3.05/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.nntp.perl.org/group/perl.perl5.porters/2017/01/msg242533.html",
+            "url": "https://www.nntp.perl.org/group/perl.perl5.porters/2017/01/msg242533.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.nntp.perl.org/group/perl.perl5.porters/2017/01/msg242703.html",
+            "url": "https://www.nntp.perl.org/group/perl.perl5.porters/2017/01/msg242703.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/04/21/5",
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/21/5"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2017-20230 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20230"
+         }
+      ],
+      "title": "Storable vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Storable-2017-20230",
+         "initial_release_date": "2026-04-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<3.05",
+                  "product": {
+                     "name": "Storable less than 3.05",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Storable"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.05",
+                  "product": {
+                     "name": "Storable greater than or equal 3.05",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Storable"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Storable"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2017-20230",
+         "cwe": {
+            "id": "CWE-121",
+            "name": "Stack-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Storable versions before 3.05 for Perl has a stack overflow.\n\nThe retrieve_hook function stored the length of the class name into a signed integer but in read operations treated the length as unsigned. This allowed an attacker to craft data that could trigger the overflow.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 10.0,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

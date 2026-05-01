@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Text::Minify::XS versions from v0.3.0 before v0.7.8 for Perl have a heap overflow when processing some malformed UTF-8 characters.  The minify functions mishandled some malformed UTF-8 characters, leading to heap corruption.  Note that the minify_utf8 function is an alias for minify.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Text-Minify-XS-2026-7040 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-text-minify-xs-2026-7040.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Text-Minify-XS/security/advisories/GHSA-jqhf-vv4h-77h2",
+            "url": "https://github.com/robrwo/Text-Minify-XS/security/advisories/GHSA-jqhf-vv4h-77h2"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Text-Minify-XS-v0.7.8/changes",
+            "url": "https://metacpan.org/release/RRWO/Text-Minify-XS-v0.7.8/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/04/27/5",
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/27/5"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-7040 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7040"
+         }
+      ],
+      "title": "Text-Minify-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-27T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Text-Minify-XS-2026-7040",
+         "initial_release_date": "2026-04-27T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-27T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=v0.3.0|<v0.7.8",
+                  "product": {
+                     "name": "Text-Minify-XS greater than or equal v0.3.0 and less than v0.7.8",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Text-Minify-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=v0.7.8",
+                  "product": {
+                     "name": "Text-Minify-XS greater than or equal v0.7.8",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Text-Minify-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Text-Minify-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-7040",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Text::Minify::XS versions from v0.3.0 before v0.7.8 for Perl have a heap overflow when processing some malformed UTF-8 characters.\n\nThe minify functions mishandled some malformed UTF-8 characters, leading to heap corruption.\n\nNote that the minify_utf8 function is an alias for minify.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

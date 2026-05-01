@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Amon2::Plugin::Web::CSRFDefender versions from 7.00 through 7.03 for Perl generate an insecure session id.  The generate_session_id function will attempt to read bytes from the /dev/urandom device, but if that is unavailable then it generates bytes using SHA-1 hash seeded with the built-in rand() function, the PID, and the high resolution epoch time.  The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.  Amon2::Plugin::Web::CSRFDefender versions before 7.00 were part of Amon2, which was vulnerable to insecure session ids due to CVE-2025-15604.  Note that the author has deprecated this module.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Amon2-Plugin-Web-CSRFDefender-2026-5082 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-amon2-plugin-web-csrfdefender-2026-5082.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TOKUHIROM/Amon2-Plugin-Web-CSRFDefender-7.03/source/lib/Amon2/Plugin/Web/CSRFDefender/Random.pm",
+            "url": "https://metacpan.org/release/TOKUHIROM/Amon2-Plugin-Web-CSRFDefender-7.03/source/lib/Amon2/Plugin/Web/CSRFDefender/Random.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TOKUHIROM/Amon2-Plugin-Web-CSRFDefender-7.04/changes",
+            "url": "https://metacpan.org/release/TOKUHIROM/Amon2-Plugin-Web-CSRFDefender-7.04/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-15604",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-15604"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-5082 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5082"
+         }
+      ],
+      "title": "Amon2-Plugin-Web-CSRFDefender vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-08T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Amon2-Plugin-Web-CSRFDefender-2026-5082",
+         "initial_release_date": "2026-04-08T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-08T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=7.00|<=7.03",
+                  "product": {
+                     "name": "Amon2-Plugin-Web-CSRFDefender greater than or equal 7.00 and less than or equal 7.03",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Amon2-Plugin-Web-CSRFDefender"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=7.04",
+                  "product": {
+                     "name": "Amon2-Plugin-Web-CSRFDefender greater than or equal 7.04",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Amon2-Plugin-Web-CSRFDefender"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Amon2-Plugin-Web-CSRFDefender"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-5082",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Amon2::Plugin::Web::CSRFDefender versions from 7.00 through 7.03 for Perl generate an insecure session id.\n\nThe generate_session_id function will attempt to read bytes from the /dev/urandom device, but if that is unavailable then it generates bytes using SHA-1 hash seeded with the built-in rand() function, the PID, and the high resolution epoch time.  The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.\n\nAmon2::Plugin::Web::CSRFDefender versions before 7.00 were part of Amon2, which was vulnerable to insecure session ids due to CVE-2025-15604.\n\nNote that the author has deprecated this module.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
