@@ -1,0 +1,139 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::Dropbear versions before 0.14 for Perl contains a vulnerable version of libtomcrypt.  Net::Dropbear versions before 0.14 includes versions of Dropbear 2019.78 or earlier. These include versions of libtomcrypt v1.18.1 or earlier, which is affected by CVE-2016-6129 and CVE-2018-12437.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-Dropbear-2025-15638 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-dropbear-2025-15638.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ATRODO/Net-Dropbear-0.14/source/dropbear/libtomcrypt/changes",
+            "url": "https://metacpan.org/release/ATRODO/Net-Dropbear-0.14/source/dropbear/libtomcrypt/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2016-6129",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2016-6129"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2018-12437",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2018-12437"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-15638 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15638"
+         }
+      ],
+      "title": "Net-Dropbear vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-Dropbear-2025-15638",
+         "initial_release_date": "2026-04-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.14",
+                  "product": {
+                     "name": "Net-Dropbear less than 0.14",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Dropbear"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.14",
+                  "product": {
+                     "name": "Net-Dropbear greater than or equal 0.14",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Dropbear"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-Dropbear"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-15638",
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::Dropbear versions before 0.14 for Perl contains a vulnerable version of libtomcrypt.\n\nNet::Dropbear versions before 0.14 includes versions of Dropbear 2019.78 or earlier. These include versions of libtomcrypt v1.18.1 or earlier, which is affected by CVE-2016-6129 and CVE-2018-12437.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 10.0,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,153 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "CryptX versions before 0.088 for Perl do not reseed the Crypt::PK PRNG state after forking.  The Crypt::PK::RSA, Crypt::PK::DSA, Crypt::PK::DH, Crypt::PK::ECC, Crypt::PK::Ed25519 and Crypt::PK::X25519 modules seed a per-object PRNG state in their constructors and reuse it without fork detection. A Crypt::PK::* object created before `fork()` shares byte-identical PRNG state with every child process, and any randomized operation they perform can produce identical output, including key generation. Two ECDSA or DSA signatures from different processes are enough to recover the signing private key through nonce-reuse key recovery.  This affects preforking services such as the Starman web server, where a Crypt::PK::* object loaded at startup is inherited by every worker process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-CryptX-2026-41564 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-cryptx-2026-41564.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/DCIT/perl-CryptX/commit/9a1dd3e0c27d68e32450be5538b864c2b115ee15.patch",
+            "url": "https://github.com/DCIT/perl-CryptX/commit/9a1dd3e0c27d68e32450be5538b864c2b115ee15.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/DCIT/perl-CryptX/security/advisories/GHSA-24c2-gp6c-24c6",
+            "url": "https://github.com/DCIT/perl-CryptX/security/advisories/GHSA-24c2-gp6c-24c6"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MIK/CryptX-0.088",
+            "url": "https://metacpan.org/release/MIK/CryptX-0.088"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/04/23/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/23/2"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/DCIT/perl-CryptX/security/advisories/GHSA-24c2-gp6c-24c6",
+            "url": "https://github.com/DCIT/perl-CryptX/security/advisories/GHSA-24c2-gp6c-24c6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-41564 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41564"
+         }
+      ],
+      "title": "CryptX vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-CryptX-2026-41564",
+         "initial_release_date": "2026-04-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.088",
+                  "product": {
+                     "name": "CryptX less than 0.088",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CryptX"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.088",
+                  "product": {
+                     "name": "CryptX greater than or equal 0.088",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CryptX"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "CryptX"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-41564",
+         "cwe": {
+            "id": "CWE-335",
+            "name": "Incorrect Usage of Seeds in Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "CryptX versions before 0.088 for Perl do not reseed the Crypt::PK PRNG state after forking.\n\nThe Crypt::PK::RSA, Crypt::PK::DSA, Crypt::PK::DH, Crypt::PK::ECC, Crypt::PK::Ed25519 and Crypt::PK::X25519 modules seed a per-object PRNG state in their constructors and reuse it without fork detection. A Crypt::PK::* object created before `fork()` shares byte-identical PRNG state with every child process, and any randomized operation they perform can produce identical output, including key generation. Two ECDSA or DSA signatures from different processes are enough to recover the signing private key through nonce-reuse key recovery.\n\nThis affects preforking services such as the Starman web server, where a Crypt::PK::* object loaded at startup is inherited by every worker process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,129 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Plack::Middleware::XSendfile versions through 1.0053 for Perl can allow client-controlled path rewriting.  Plack::Middleware::XSendfile allows the variation setting (sendfile type) to be set by the client via the X-Sendfile-Type header, if it is not considered in the middleware constructor or the Plack environment.  A malicious client can set the X-Sendfile-Type header to \"X-Accel-Redirect\" to services running behind nginx reverse proxies, and then set the X-Accel-Mapping to map the path to an arbitrary file on the server.  Since 1.0053, Plack::Middleware::XSendfile is deprecated and will be removed from future releases of Plack.  This is similar to CVE-2025-61780 for Rack::Sendfile, although Plack::Middleware::XSendfile has some mitigations that disallow regular expressions to be used in the mapping, and only apply the mapping for the \"X-Accel-Redirect\" type.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Plack-2026-7381 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-2026-7381.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MIYAGAWA/Plack-1.0053/changes",
+            "url": "https://metacpan.org/release/MIYAGAWA/Plack-1.0053/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MIYAGAWA/Plack-1.0053/view/lib/Plack/Middleware/XSendfile.pm#DEPRECATION-NOTICE",
+            "url": "https://metacpan.org/release/MIYAGAWA/Plack-1.0053/view/lib/Plack/Middleware/XSendfile.pm#DEPRECATION-NOTICE"
+         },
+         {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61780",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61780"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-7381 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7381"
+         }
+      ],
+      "title": "Plack vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Plack-2026-7381",
+         "initial_release_date": "2026-04-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Plack greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Plack"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-7381",
+         "cwe": {
+            "id": "CWE-200",
+            "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Plack::Middleware::XSendfile versions through 1.0053 for Perl can allow client-controlled path rewriting.\n\nPlack::Middleware::XSendfile allows the variation setting (sendfile type) to be set by the client via the X-Sendfile-Type header, if it is not considered in the middleware constructor or the Plack environment.\n\nA malicious client can set the X-Sendfile-Type header to \"X-Accel-Redirect\" to services running behind nginx reverse proxies, and then set the X-Accel-Mapping to map the path to an arbitrary file on the server.\n\nSince 1.0053, Plack::Middleware::XSendfile is deprecated and will be removed from future releases of Plack.\n\nThis is similar to CVE-2025-61780 for Rack::Sendfile, although Plack::Middleware::XSendfile has some mitigations that disallow regular expressions to be used in the mapping, and only apply the mapping for the \"X-Accel-Redirect\" type.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

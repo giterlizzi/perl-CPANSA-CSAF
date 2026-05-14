@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Text::CSV_XS versions before 1.62 for Perl have a use-after-free when registered callbacks extend the Perl argument stack, which may enable type confusion or memory corruption.  The Parse, print, getline, and getline_all methods invoke registered callbacks (for example after_parse, before_print, or on_error) and cache the Perl argument stack pointer across the call. If a callback extends the argument stack enough to trigger a reallocation, the return value is written through the stale pointer into the freed buffer, and the caller reads the original $self argument as the return value instead.  Calling code that expects parsed data from getline_all receives the Text::CSV_XS object in its place, leading to logic errors or crashes. Text::CSV_XS objects used without any registered callbacks are not affected.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Text-CSV_XS-2026-7111 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-text-csv_xs-2026-7111.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/Text-CSV_XS/commit/c17f31a5f2bf36674748eb4b6e25672f0571a224.patch",
+            "url": "https://github.com/cpan-authors/Text-CSV_XS/commit/c17f31a5f2bf36674748eb4b6e25672f0571a224.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/Text-CSV_XS-1.62/changes",
+            "url": "https://metacpan.org/release/HMBRAND/Text-CSV_XS-1.62/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/04/29/17",
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/29/17"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-7111 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7111"
+         }
+      ],
+      "title": "Text-CSV_XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Text-CSV_XS-2026-7111",
+         "initial_release_date": "2026-04-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.62",
+                  "product": {
+                     "name": "Text-CSV_XS less than 1.62",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Text-CSV_XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.62",
+                  "product": {
+                     "name": "Text-CSV_XS greater than or equal 1.62",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Text-CSV_XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Text-CSV_XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-7111",
+         "cwe": {
+            "id": "CWE-416",
+            "name": "Use After Free"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Text::CSV_XS versions before 1.62 for Perl have a use-after-free when registered callbacks extend the Perl argument stack, which may enable type confusion or memory corruption.\n\nThe Parse, print, getline, and getline_all methods invoke registered callbacks (for example after_parse, before_print, or on_error) and cache the Perl argument stack pointer across the call. If a callback extends the argument stack enough to trigger a reallocation, the return value is written through the stale pointer into the freed buffer, and the caller reads the original $self argument as the return value instead.\n\nCalling code that expects parsed data from getline_all receives the Text::CSV_XS object in its place, leading to logic errors or crashes. Text::CSV_XS objects used without any registered callbacks are not affected.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.4,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,158 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache::API::Password versions through v0.5.2 for Perl can generate insecure random values for salts.  The _make_salt and _make_salt_bcrypt methods will attept to load Crypt::URandom and then Bytes::Random::Secure to generate random bytes for the salt.  If those modules are unavailable, it will simply return 16 bytes generated with Perl's built-in rand function.  The rand function is unsuitable for cryptographic use.  These salts are used for password hashing.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Apache2-API-2026-5088 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache2-api-2026-5088.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/pod/Crypt::URandom",
+            "url": "https://metacpan.org/pod/Crypt::URandom"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/JDEGUEST/Apache2-API-v0.5.2/view/lib/Apache2/API/Password.pod",
+            "url": "https://metacpan.org/release/JDEGUEST/Apache2-API-v0.5.2/view/lib/Apache2/API/Password.pod"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/JDEGUEST/Apache2-API-v0.5.3/changes",
+            "url": "https://metacpan.org/release/JDEGUEST/Apache2-API-v0.5.3/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/04/15/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/15/4"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/04/15/5",
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/15/5"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-5088 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5088"
+         }
+      ],
+      "title": "Apache2-API vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-15T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Apache2-API-2026-5088",
+         "initial_release_date": "2026-04-15T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-15T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=v0.5.2",
+                  "product": {
+                     "name": "Apache2-API less than or equal v0.5.2",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache2-API"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=v0.5.3",
+                  "product": {
+                     "name": "Apache2-API greater than or equal v0.5.3",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache2-API"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Apache2-API"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-5088",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Apache::API::Password versions through v0.5.2 for Perl can generate insecure random values for salts.\n\nThe _make_salt and _make_salt_bcrypt methods will attept to load Crypt::URandom and then Bytes::Random::Secure to generate random bytes for the salt.  If those modules are unavailable, it will simply return 16 bytes generated with Perl's built-in rand function.\n\nThe rand function is unsuitable for cryptographic use.\n\nThese salts are used for password hashing.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
