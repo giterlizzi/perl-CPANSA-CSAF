@@ -1,0 +1,134 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Business::OnlinePayment::StoredTransaction versions through 0.01 for Perl uses an insecure secret key.  Business::OnlinePayment::StoredTransaction generates a secret key by using a MD5 hash of a single call to the built-in rand function, which is unsuitable for cryptographic use.  This key is intended for encrypting credit card transaction data.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Business-OnlinePayment-StoredTransaction-2025-15618 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-business-onlinepayment-storedtransaction-2025-15618.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=>0",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=>0"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/dist/Business-OnlinePayment-StoredTransaction/source/lib/Business/OnlinePayment/StoredTransaction.pm#L64-75",
+            "url": "https://metacpan.org/dist/Business-OnlinePayment-StoredTransaction/source/lib/Business/OnlinePayment/StoredTransaction.pm#L64-75"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/B/Business-OnlinePayment-StoredTransaction/0.01/CVE-2025-15618-r1.patch",
+            "url": "https://security.metacpan.org/patches/B/Business-OnlinePayment-StoredTransaction/0.01/CVE-2025-15618-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/31/7",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/31/7"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-15618 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15618"
+         }
+      ],
+      "title": "Business-OnlinePayment-StoredTransaction vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-31T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Business-OnlinePayment-StoredTransaction-2025-15618",
+         "initial_release_date": "2026-03-31T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-31T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Business-OnlinePayment-StoredTransaction greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Business-OnlinePayment-StoredTransaction"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Business-OnlinePayment-StoredTransaction"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-15618",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Business::OnlinePayment::StoredTransaction versions through 0.01 for Perl uses an insecure secret key.\n\nBusiness::OnlinePayment::StoredTransaction generates a secret key by using a MD5 hash of a single call to the built-in rand function, which is unsuitable for cryptographic use.\n\nThis key is intended for encrypting credit card transaction data.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

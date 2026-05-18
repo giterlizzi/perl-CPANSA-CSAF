@@ -1,0 +1,124 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "GRID::Machine versions through 0.127 for Perl allows arbitrary code execution via unsafe deserialization.  GRID::Machine provides Remote Procedure Calls (RPC) over SSH for Perl. The client connects to remote hosts to execute code on them. A compromised or malicious remote host can execute arbitrary code back on the client through unsafe deserialization in the RPC protocol.  read_operation() in lib/GRID/Machine/Message.pm deserialises values from the remote side using eval()    $arg .= '$VAR1';   my $val = eval \"no strict; $arg\"; # line 40-41  $arg is raw bytes from the protocol pipe. A compromised remote host can embed arbitrary perl in the Dumper-formatted response:    $VAR1 = do { system(\"...\"); };  This executes on the client silently on every RPC call, as the return values remain correct.  This functionality is by design but the trust requirement for the remote host is not documented in the distribution.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-GRID-Machine-2026-4851 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-grid-machine-2026-4851.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2026/03/26/6",
+            "url": "https://www.openwall.com/lists/oss-security/2026/03/26/6"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/26/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/26/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-4851 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4851"
+         }
+      ],
+      "title": "GRID-Machine vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-GRID-Machine-2026-4851",
+         "initial_release_date": "2026-03-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "GRID-Machine greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/GRID-Machine"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "GRID-Machine"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-4851",
+         "cwe": {
+            "id": "CWE-95",
+            "name": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "GRID::Machine versions through 0.127 for Perl allows arbitrary code execution via unsafe deserialization.\n\nGRID::Machine provides Remote Procedure Calls (RPC) over SSH for Perl. The client connects to remote hosts to execute code on them. A compromised or malicious remote host can execute arbitrary code back on the client through unsafe deserialization in the RPC protocol.\n\nread_operation() in lib/GRID/Machine/Message.pm deserialises values from the remote side using eval()\n\n  $arg .= '$VAR1';\n  my $val = eval \"no strict; $arg\"; # line 40-41\n\n$arg is raw bytes from the protocol pipe. A compromised remote host can embed arbitrary perl in the Dumper-formatted response:\n\n  $VAR1 = do { system(\"...\"); };\n\nThis executes on the client silently on every RPC call, as the return values remain correct.\n\nThis functionality is by design but the trust requirement for the remote host is not documented in the distribution.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Starlet versions through 0.31 for Perl allows HTTP Request Smuggling via Improper Header Precedence.  Starlet incorrectly prioritizes \"Content-Length\" over \"Transfer-Encoding: chunked\" when both headers are present in an HTTP request. Per RFC 7230 3.3.3, Transfer-Encoding must take precedence.  An attacker could exploit this to smuggle malicious HTTP requests via a front-end reverse proxy.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Starlet-2026-40561 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-starlet-2026-40561.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.3"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/kazuho/Starlet/commit/a7d5dfd1862aafa43e5eaca0fdb6acf4cc15b2d0.patch",
+            "url": "https://github.com/kazuho/Starlet/commit/a7d5dfd1862aafa43e5eaca0fdb6acf4cc15b2d0.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/KAZUHO/Starlet-0.32/changes",
+            "url": "https://metacpan.org/release/KAZUHO/Starlet-0.32/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/03/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/03/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-40561 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40561"
+         }
+      ],
+      "title": "Starlet vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Starlet-2026-40561",
+         "initial_release_date": "2026-05-03T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.32",
+                  "product": {
+                     "name": "Starlet less than 0.32",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starlet"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.32",
+                  "product": {
+                     "name": "Starlet greater than or equal 0.32",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starlet"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Starlet"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-40561",
+         "cwe": {
+            "id": "CWE-444",
+            "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Starlet versions through 0.31 for Perl allows HTTP Request Smuggling via Improper Header Precedence.\n\nStarlet incorrectly prioritizes \"Content-Length\" over \"Transfer-Encoding: chunked\" when both headers are present in an HTTP request. Per RFC 7230 3.3.3, Transfer-Encoding must take precedence.\n\nAn attacker could exploit this to smuggle malicious HTTP requests via a front-end reverse proxy.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

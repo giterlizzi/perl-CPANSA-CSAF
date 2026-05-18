@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Plack::Middleware::Session::Cookie versions through 0.21 for Perl allows remote code execution.  Plack::Middleware::Session::Cookie versions through 0.21 has a security vulnerability where it allows an attacker to execute arbitrary code on the server during deserialization of the cookie data, when there is no secret used to sign the cookie.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Plack-Middleware-Session-2014-125112 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-session-2014-125112.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://gist.github.com/miyagawa/2b8764af908a0dacd43d",
+            "url": "https://gist.github.com/miyagawa/2b8764af908a0dacd43d"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MIYAGAWA/Plack-Middleware-Session-0.23-TRIAL/changes",
+            "url": "https://metacpan.org/release/MIYAGAWA/Plack-Middleware-Session-0.23-TRIAL/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/26/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/26/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2014-125112 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-125112"
+         }
+      ],
+      "title": "Plack-Middleware-Session vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-26T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Plack-Middleware-Session-2014-125112",
+         "initial_release_date": "2026-03-26T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-26T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.21",
+                  "product": {
+                     "name": "Plack-Middleware-Session less than 0.21",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Session"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.21",
+                  "product": {
+                     "name": "Plack-Middleware-Session greater than or equal 0.21",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Session"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Plack-Middleware-Session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2014-125112",
+         "cwe": {
+            "id": "CWE-565",
+            "name": "Reliance on Cookies without Validation and Integrity Checking"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Plack::Middleware::Session::Cookie versions through 0.21 for Perl allows remote code execution.\n\nPlack::Middleware::Session::Cookie versions through 0.21 has a security vulnerability where it allows an attacker to execute arbitrary code on the server during deserialization of the cookie data, when there is no secret used to sign the cookie.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

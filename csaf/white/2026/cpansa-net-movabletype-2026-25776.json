@@ -1,0 +1,129 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability which may allow an attacker to execute arbitrary Perl script.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-MovableType-2026-25776 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-movabletype-2026-25776.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://jvn.jp/en/jp/JVN66473735/",
+            "url": "https://jvn.jp/en/jp/JVN66473735/"
+         },
+         {
+            "category": "external",
+            "summary": "https://movabletype.org/news/2026/04/mt-907-released.html",
+            "url": "https://movabletype.org/news/2026/04/mt-907-released.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.sixapart.jp/movabletype/news/2026/04/08-1100.html",
+            "url": "https://www.sixapart.jp/movabletype/news/2026/04/08-1100.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-25776 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25776"
+         }
+      ],
+      "title": "MT vulnerability",
+      "tracking": {
+         "current_release_date": "2026-04-08T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-MovableType-2026-25776",
+         "initial_release_date": "2026-04-08T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-04-08T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "MT greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "MT"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-25776",
+         "cwe": {
+            "id": "CWE-94",
+            "name": "Improper Control of Generation of Code ('Code Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability which may allow an attacker to execute arbitrary Perl script.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
