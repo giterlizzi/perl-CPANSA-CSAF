@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Tiny versions before 0.093 for Perl do not validate CRLF in HTTP request lines or control field header values.  The unvalidated inputs are the method and URI in the request line, the URL host that becomes the `Host:` header, and HTTP/1.1 control data field values.  An attacker who controls one of these inputs, for example a user supplied URL passed to a webhook or URL fetch endpoint, can inject additional headers and smuggle requests to the upstream server.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTTP-Tiny-2026-7010 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-tiny-2026-7010.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/Perl-Toolchain-Gang/HTTP-Tiny/commit/d73c7651e82ace02693842df55928b6c3ae7c38d.patch",
+            "url": "https://github.com/Perl-Toolchain-Gang/HTTP-Tiny/commit/d73c7651e82ace02693842df55928b6c3ae7c38d.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HAARG/HTTP-Tiny-0.093-TRIAL/changes",
+            "url": "https://metacpan.org/release/HAARG/HTTP-Tiny-0.093-TRIAL/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/11/17",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/11/17"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-7010 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7010"
+         }
+      ],
+      "title": "HTTP-Tiny vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-11T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTTP-Tiny-2026-7010",
+         "initial_release_date": "2026-05-11T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-11T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.093",
+                  "product": {
+                     "name": "HTTP-Tiny less than 0.093",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Tiny"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.093",
+                  "product": {
+                     "name": "HTTP-Tiny greater than or equal 0.093",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Tiny"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTTP-Tiny"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-7010",
+         "cwe": {
+            "id": "CWE-113",
+            "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Tiny versions before 0.093 for Perl do not validate CRLF in HTTP request lines or control field header values.\n\nThe unvalidated inputs are the method and URI in the request line, the URL host that becomes the `Host:` header, and HTTP/1.1 control data field values.\n\nAn attacker who controls one of these inputs, for example a user supplied URL passed to a webhook or URL fetch endpoint, can inject additional headers and smuggle requests to the upstream server.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

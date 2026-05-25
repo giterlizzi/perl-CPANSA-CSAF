@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Trog::TOTP versions before 1.006 for Perl generate secrets using rand.  Secrets were generated using Perl's built-in rand function, which is predictable and unsuitable for security usage.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Trog-TOTP-2026-46474 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-trog-totp-2026-46474.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TEODESIAN/Trog-TOTP-1.006/changes",
+            "url": "https://metacpan.org/release/TEODESIAN/Trog-TOTP-1.006/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TEODESIAN/Trog-TOTP-1.006/diff/TEODESIAN/Trog-TOTP-1.005#lib/Trog/TOTP.pm",
+            "url": "https://metacpan.org/release/TEODESIAN/Trog-TOTP-1.006/diff/TEODESIAN/Trog-TOTP-1.005#lib/Trog/TOTP.pm"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/15/18",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/15/18"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-46474 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46474"
+         }
+      ],
+      "title": "Trog-TOTP vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-15T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Trog-TOTP-2026-46474",
+         "initial_release_date": "2026-05-15T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-15T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.006",
+                  "product": {
+                     "name": "Trog-TOTP less than 1.006",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Trog-TOTP"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.006",
+                  "product": {
+                     "name": "Trog-TOTP greater than or equal 1.006",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Trog-TOTP"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Trog-TOTP"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-46474",
+         "cwe": {
+            "id": "CWE-331",
+            "name": "Insufficient Entropy"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Trog::TOTP versions before 1.006 for Perl generate secrets using rand.\n\nSecrets were generated using Perl's built-in rand function, which is predictable and unsuitable for security usage.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,153 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache::Session::Generate::SHA256 versions before 1.3.19 for Perl create insecure session ids.  Apache::Session::Generate::SHA256 generated session ids insecurely. The default session id generator returns a SHA-256 hash of the built-in rand() function, the epoch time, and the PID, that is hashed again. These are predictable, low-entropy sources. Predicable session ids could allow an attacker to gain access to systems.  Note that version 1.3.19 has a fallback without warning to use insecure session generation method if the call to Crypt::URandom::urandom fails. However, this is unlikely as Crypt::URandom is a hardcoded requirement of the module.  This issue is similar to CVE-2025-40931 for Apache::Session::Generate::MD5.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Apache-Session-Browseable-2026-8503 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-browseable-2026-8503.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/LemonLDAPNG/Apache-Session-Browseable/commit/cc915cbbd266776eec3dd8bf4748b15fa827dbd0.patch",
+            "url": "https://github.com/LemonLDAPNG/Apache-Session-Browseable/commit/cc915cbbd266776eec3dd8bf4748b15fa827dbd0.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GUIMARD/Apache-Session-Browseable-1.3.19/changes",
+            "url": "https://metacpan.org/release/GUIMARD/Apache-Session-Browseable-1.3.19/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GUIMARD/Apache-Session-Browseable-1.3.19/diff/GUIMARD/Apache-Session-Browseable-1.3.18#lib/Apache/Session/Generate/SHA256.pm",
+            "url": "https://metacpan.org/release/GUIMARD/Apache-Session-Browseable-1.3.19/diff/GUIMARD/Apache-Session-Browseable-1.3.18#lib/Apache/Session/Generate/SHA256.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-40931",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-40931"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-40932",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-40932"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-8503 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8503"
+         }
+      ],
+      "title": "Apache-Session-Browseable vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-15T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Apache-Session-Browseable-2026-8503",
+         "initial_release_date": "2026-05-15T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-15T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.3.19",
+                  "product": {
+                     "name": "Apache-Session-Browseable less than 1.3.19",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-Session-Browseable"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.3.19",
+                  "product": {
+                     "name": "Apache-Session-Browseable greater than or equal 1.3.19",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-Session-Browseable"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Apache-Session-Browseable"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-8503",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Apache::Session::Generate::SHA256 versions before 1.3.19 for Perl create insecure session ids.\n\nApache::Session::Generate::SHA256 generated session ids insecurely. The default session id generator returns a SHA-256 hash of the built-in rand() function, the epoch time, and the PID, that is hashed again. These are predictable, low-entropy sources. Predicable session ids could allow an attacker to gain access to systems.\n\nNote that version 1.3.19 has a fallback without warning to use insecure session generation method if the call to Crypt::URandom::urandom fails. However, this is unlikely as Crypt::URandom is a hardcoded requirement of the module.\n\nThis issue is similar to CVE-2025-40931 for Apache::Session::Generate::MD5.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

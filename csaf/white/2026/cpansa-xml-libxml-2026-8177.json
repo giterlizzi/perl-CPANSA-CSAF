@@ -1,0 +1,139 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "XML::LibXML versions through 2.0210 for Perl read out-of-bounds heap memory when parsing XML node names containing truncated UTF-8 byte sequences.  A node name ending in the middle of a multi byte UTF-8 sequence causes the parser to read past the end of the input string into adjacent heap memory.  Any Perl process that passes attacker controlled strings to XML::LibXML's DOM node-name methods can reach this path on the default API. The likely consequence is a crash, causing denial of service.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-XML-LibXML-2026-8177 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-libxml-2026-8177.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/XML-LibXML/commit/15652bd905a6c9dda59a81b14d4766adbbae2ea8.patch",
+            "url": "https://github.com/cpan-authors/XML-LibXML/commit/15652bd905a6c9dda59a81b14d4766adbbae2ea8.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/XML-LibXML/issues/146",
+            "url": "https://github.com/cpan-authors/XML-LibXML/issues/146"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/XML-LibXML/pull/149",
+            "url": "https://github.com/cpan-authors/XML-LibXML/pull/149"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/10/8",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/10/8"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/11/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/11/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-8177 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8177"
+         }
+      ],
+      "title": "XML-LibXML vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-XML-LibXML-2026-8177",
+         "initial_release_date": "2026-05-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "XML-LibXML greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-LibXML"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "XML-LibXML"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-8177",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "XML::LibXML versions through 2.0210 for Perl read out-of-bounds heap memory when parsing XML node names containing truncated UTF-8 byte sequences.\n\nA node name ending in the middle of a multi byte UTF-8 sequence causes the parser to read past the end of the input string into adjacent heap memory.\n\nAny Perl process that passes attacker controlled strings to XML::LibXML's DOM node-name methods can reach this path on the default API. The likely consequence is a crash, causing denial of service.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

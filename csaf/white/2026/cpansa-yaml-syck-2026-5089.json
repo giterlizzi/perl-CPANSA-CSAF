@@ -1,0 +1,158 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "YAML::Syck versions before 1.38 for Perl  has an out-of-bounds read.  The base60 (sexagesimal) parsing code in perl_syck.h has a buffer underflow bug in both int#base60 and float#base60 handlers. When processing the leftmost segment of a colon-separated value (e.g., the 1 in 1:30:45), the inner while loop can decrement a pointer past the start of the string buffer:      while ( colon >= ptr && *colon != ':' )     {         colon--;     }     if ( *colon == ':' ) *colon = '\\0';  // colon may be ptr-1 here  When no colon is found (final/leftmost segment), colon becomes ptr-1, and the subsequent *colon dereference reads one byte before the allocated buffer.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-YAML-Syck-2026-5089 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-syck-2026-5089.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/YAML-Syck/commit/208a4d3bd1b5cdb4a791a6e3905bd6bd45e9d005.patch",
+            "url": "https://github.com/cpan-authors/YAML-Syck/commit/208a4d3bd1b5cdb4a791a6e3905bd6bd45e9d005.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/YAML-Syck/issues/132",
+            "url": "https://github.com/cpan-authors/YAML-Syck/issues/132"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/YAML-Syck/pull/133",
+            "url": "https://github.com/cpan-authors/YAML-Syck/pull/133"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TODDR/YAML-Syck-1.38/changes",
+            "url": "https://metacpan.org/release/TODDR/YAML-Syck-1.38/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/12/16",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/12/16"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/YAML-Syck/issues/132",
+            "url": "https://github.com/cpan-authors/YAML-Syck/issues/132"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-5089 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5089"
+         }
+      ],
+      "title": "YAML-Syck vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-12T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-YAML-Syck-2026-5089",
+         "initial_release_date": "2026-05-12T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-12T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.38",
+                  "product": {
+                     "name": "YAML-Syck less than 1.38",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML-Syck"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.38",
+                  "product": {
+                     "name": "YAML-Syck greater than or equal 1.38",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML-Syck"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "YAML-Syck"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-5089",
+         "cwe": {
+            "id": "CWE-124",
+            "name": "Buffer Underwrite ('Buffer Underflow')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "YAML::Syck versions before 1.38 for Perl  has an out-of-bounds read.\n\nThe base60 (sexagesimal) parsing code in perl_syck.h has a buffer underflow bug in both int#base60 and float#base60 handlers. When processing the leftmost segment of a colon-separated value (e.g., the 1 in 1:30:45), the inner while loop can decrement a pointer past the start of the string buffer:\n\n    while ( colon >= ptr && *colon != ':' )\n    {\n        colon--;\n    }\n    if ( *colon == ':' ) *colon = '\\0';  // colon may be ptr-1 here\n\nWhen no colon is found (final/leftmost segment), colon becomes ptr-1, and the subsequent *colon dereference reads one byte before the allocated buffer.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.3,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

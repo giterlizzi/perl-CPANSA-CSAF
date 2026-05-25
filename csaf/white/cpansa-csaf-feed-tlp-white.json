@@ -9,6 +9,846 @@
       "entry": [
          {
             "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-authen-totp-2026-46473.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Authen-TOTP-2026-46473",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-authen-totp-2026-46473.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-authen-totp-2026-46473.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-authen-totp-2026-46473.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-21T00:00:00",
+            "title": "Authen-TOTP vulnerability",
+            "updated": "2026-05-21T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-authentication-2026-5091.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Catalyst-Plugin-Authentication-2026-5091",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-authentication-2026-5091.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-authentication-2026-5091.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-authentication-2026-5091.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-21T00:00:00",
+            "title": "Catalyst-Plugin-Authentication vulnerability",
+            "updated": "2026-05-21T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47373.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Crypt-SaltedHash-2026-47373",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47373.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47373.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47373.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-20T00:00:00",
+            "title": "Crypt-SaltedHash vulnerability",
+            "updated": "2026-05-20T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47372.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Crypt-SaltedHash-2026-47372",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47372.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47372.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47372.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-20T00:00:00",
+            "title": "Crypt-SaltedHash vulnerability",
+            "updated": "2026-05-20T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-template-toolkit-2026-5090.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Template-Toolkit-2026-5090",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-template-toolkit-2026-5090.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-template-toolkit-2026-5090.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-template-toolkit-2026-5090.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-19T00:00:00",
+            "title": "Template-Toolkit vulnerability",
+            "updated": "2026-05-19T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-8788.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Net-Statsd-Lite-2026-8788",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-8788.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-8788.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-8788.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-18T00:00:00",
+            "title": "Net-Statsd-Lite vulnerability",
+            "updated": "2026-05-18T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-tiny-2026-46720.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Net-Statsd-Tiny-2026-46720",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-tiny-2026-46720.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-tiny-2026-46720.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-tiny-2026-46720.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-17T00:00:00",
+            "title": "Net-Statsd-Tiny vulnerability",
+            "updated": "2026-05-17T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8507.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Crypt-OpenSSL-PKCS12-2026-8507",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8507.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8507.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8507.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-17T00:00:00",
+            "title": "Crypt-OpenSSL-PKCS12 vulnerability",
+            "updated": "2026-05-17T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8721.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Crypt-OpenSSL-PKCS12-2026-8721",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8721.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8721.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8721.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-17T00:00:00",
+            "title": "Crypt-OpenSSL-PKCS12 vulnerability",
+            "updated": "2026-05-17T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-46719.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Net-Statsd-Lite-2026-46719",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-46719.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-46719.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-lite-2026-46719.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-16T00:00:00",
+            "title": "Net-Statsd-Lite vulnerability",
+            "updated": "2026-05-16T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-trog-totp-2026-46474.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Trog-TOTP-2026-46474",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-trog-totp-2026-46474.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-trog-totp-2026-46474.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-trog-totp-2026-46474.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-15T00:00:00",
+            "title": "Trog-TOTP vulnerability",
+            "updated": "2026-05-15T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-www-mechanize-cached-2026-8612.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-WWW-Mechanize-Cached-2026-8612",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-www-mechanize-cached-2026-8612.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-www-mechanize-cached-2026-8612.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-www-mechanize-cached-2026-8612.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-15T00:00:00",
+            "title": "WWW-Mechanize-Cached vulnerability",
+            "updated": "2026-05-15T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-8669.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Imager-2026-8669",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-8669.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-8669.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-8669.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-15T00:00:00",
+            "title": "Imager vulnerability",
+            "updated": "2026-05-15T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-file-gif-2026-8454.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Imager-File-GIF-2026-8454",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-file-gif-2026-8454.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-file-gif-2026-8454.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-file-gif-2026-8454.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-15T00:00:00",
+            "title": "Imager-File-GIF vulnerability",
+            "updated": "2026-05-15T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8700.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Crypt-DSA-2026-8700",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8700.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8700.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8700.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-15T00:00:00",
+            "title": "Crypt-DSA vulnerability",
+            "updated": "2026-05-15T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8704.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Crypt-DSA-2026-8704",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8704.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8704.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-dsa-2026-8704.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-15T00:00:00",
+            "title": "Crypt-DSA vulnerability",
+            "updated": "2026-05-15T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-browseable-2026-8503.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Apache-Session-Browseable-2026-8503",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-browseable-2026-8503.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-browseable-2026-8503.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-browseable-2026-8503.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-15T00:00:00",
+            "title": "Apache-Session-Browseable vulnerability",
+            "updated": "2026-05-15T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-argon2-2026-8463.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Crypt-Argon2-2026-8463",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-argon2-2026-8463.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-argon2-2026-8463.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-argon2-2026-8463.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-13T00:00:00",
+            "title": "Crypt-Argon2 vulnerability",
+            "updated": "2026-05-13T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-web-passwd-2026-8500.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Web-Passwd-2026-8500",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-web-passwd-2026-8500.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-web-passwd-2026-8500.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-web-passwd-2026-8500.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-13T00:00:00",
+            "title": "Web-Passwd vulnerability",
+            "updated": "2026-05-13T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-syck-2026-5089.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-YAML-Syck-2026-5089",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-syck-2026-5089.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-syck-2026-5089.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-syck-2026-5089.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-12T00:00:00",
+            "title": "YAML-Syck vulnerability",
+            "updated": "2026-05-12T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-libwww-perl-2026-8368.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-libwww-perl-2026-8368",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-libwww-perl-2026-8368.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-libwww-perl-2026-8368.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-libwww-perl-2026-8368.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-12T00:00:00",
+            "title": "libwww-perl vulnerability",
+            "updated": "2026-05-12T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-tiny-2026-7010.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-HTTP-Tiny-2026-7010",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-tiny-2026-7010.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-tiny-2026-7010.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-tiny-2026-7010.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-11T00:00:00",
+            "title": "HTTP-Tiny vulnerability",
+            "updated": "2026-05-11T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-alien-freeimage-2022-4988.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Alien-FreeImage-2022-4988",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-alien-freeimage-2022-4988.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-alien-freeimage-2022-4988.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-alien-freeimage-2022-4988.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-11T00:00:00",
+            "title": "Alien-FreeImage vulnerability",
+            "updated": "2026-05-11T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-amazon-credentials-2026-6146.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Amazon-Credentials-2026-6146",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-amazon-credentials-2026-6146.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-amazon-credentials-2026-6146.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-amazon-credentials-2026-6146.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-11T00:00:00",
+            "title": "Amazon-Credentials vulnerability",
+            "updated": "2026-05-11T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-webdyne-2026-5084.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-WebDyne-2026-5084",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-webdyne-2026-5084.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-webdyne-2026-5084.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-webdyne-2026-5084.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-11T00:00:00",
+            "title": "WebDyne vulnerability",
+            "updated": "2026-05-11T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-libxml-2026-8177.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-XML-LibXML-2026-8177",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-libxml-2026-8177.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-libxml-2026-8177.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-libxml-2026-8177.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-10T00:00:00",
+            "title": "XML-LibXML vulnerability",
+            "updated": "2026-05-10T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45191.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Net-CIDR-Lite-2026-45191",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45191.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45191.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45191.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-10T00:00:00",
+            "title": "Net-CIDR-Lite vulnerability",
+            "updated": "2026-05-10T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-statsd-2026-45179.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Plack-Middleware-Statsd-2026-45179",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-statsd-2026-45179.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-statsd-2026-45179.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-statsd-2026-45179.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-10T00:00:00",
+            "title": "Plack-Middleware-Statsd vulnerability",
+            "updated": "2026-05-10T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45190.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Net-CIDR-Lite-2026-45190",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45190.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45190.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45190.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-10T00:00:00",
+            "title": "Net-CIDR-Lite vulnerability",
+            "updated": "2026-05-10T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-statsd-2026-45180.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Catalyst-Plugin-Statsd-2026-45180",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-statsd-2026-45180.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-statsd-2026-45180.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-statsd-2026-45180.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-05-10T00:00:00",
+            "title": "Catalyst-Plugin-Statsd vulnerability",
+            "updated": "2026-05-10T00:00:00"
+         },
+         {
+            "content": {
                "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-passwdmd5-2026-6659.json",
                "type": "application/json"
             },
@@ -761,6 +1601,34 @@
             ],
             "published": "2026-03-29T00:00:00",
             "title": "perl vulnerability",
+            "updated": "2026-03-29T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-compress-raw-zlib-2026-4176.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Compress-Raw-Zlib-2026-4176",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-compress-raw-zlib-2026-4176.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-compress-raw-zlib-2026-4176.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-compress-raw-zlib-2026-4176.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-03-29T00:00:00",
+            "title": "Compress-Raw-Zlib vulnerability",
             "updated": "2026-03-29T00:00:00"
          },
          {
@@ -23732,6 +24600,6 @@
          }
       ],
       "title": "CPANSA CSAF feed (TLP:WHITE)",
-      "updated": "2026-05-24T02:47:38"
+      "updated": "2026-05-25T03:06:16"
    }
 }
