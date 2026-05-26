@@ -1,0 +1,124 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache::Session versions through 1.94 for Perl re-creates deleted sessions.  The session stores Apache::Session::Store::File and Apache::Session::Store::DB_File will create a session that does not exist.  This can lead to sessions being revived, potentially with data that was to be deleted.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Apache-Session-2013-10075 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-2013-10075.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=83525",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=83525"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/08/12",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/08/12"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2013-10075 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-10075"
+         }
+      ],
+      "title": "Apache-Session vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-08T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Apache-Session-2013-10075",
+         "initial_release_date": "2026-05-08T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-08T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Apache-Session greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-Session"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Apache-Session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2013-10075",
+         "cwe": {
+            "id": "CWE-672",
+            "name": "Operation on a Resource after Expiration or Release"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Apache::Session versions through 1.94 for Perl re-creates deleted sessions.\n\nThe session stores Apache::Session::Store::File and Apache::Session::Store::DB_File will create a session that does not exist.  This can lead to sessions being revived, potentially with data that was to be deleted.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

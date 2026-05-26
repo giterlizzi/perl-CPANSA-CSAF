@@ -1,0 +1,129 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache::Session::Generate::ModUniqueId versions from 1.54 through 1.94 for Perl session ids are insecure.  Apache::Session::Generate::ModUniqueId (added in version 1.54) uses the value of the UNIQUE_ID environment variable for the session id. The UNIQUE_ID variable is set by the Apache mod_unique_id plugin, which generates unique ids for the request. The id is based on the IPv4 address, the process id, the epoch time, a 16-bit counter and a thread index, with no obfuscation.  The server IP is often available to the public, and if not available, can be guessed from previous session ids being issued. The process ids may also be guessed from previous session ids. The timestamp is easily guessed (and leaked in the HTTP Date response header).  The purpose of mod_unique_id is to assign a unique id to requests so that events can be correlated in different logs. The id is not designed, nor is it suitable for security purposes.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Apache-Session-2026-5081 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-session-2026-5081.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://httpd.apache.org/docs/current/mod/mod_unique_id.html",
+            "url": "https://httpd.apache.org/docs/current/mod/mod_unique_id.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/pod/Apache::Session::Generate::Random",
+            "url": "https://metacpan.org/pod/Apache::Session::Generate::Random"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/06/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/06/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-5081 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5081"
+         }
+      ],
+      "title": "Apache-Session vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-06T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Apache-Session-2026-5081",
+         "initial_release_date": "2026-05-06T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-06T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.54",
+                  "product": {
+                     "name": "Apache-Session greater than or equal 1.54",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-Session"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Apache-Session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-5081",
+         "cwe": {
+            "id": "CWE-340",
+            "name": "Generation of Predictable Numbers or Identifiers"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Apache::Session::Generate::ModUniqueId versions from 1.54 through 1.94 for Perl session ids are insecure.\n\nApache::Session::Generate::ModUniqueId (added in version 1.54) uses the value of the UNIQUE_ID environment variable for the session id. The UNIQUE_ID variable is set by the Apache mod_unique_id plugin, which generates unique ids for the request. The id is based on the IPv4 address, the process id, the epoch time, a 16-bit counter and a thread index, with no obfuscation.\n\nThe server IP is often available to the public, and if not available, can be guessed from previous session ids being issued. The process ids may also be guessed from previous session ids. The timestamp is easily guessed (and leaked in the HTTP Date response header).\n\nThe purpose of mod_unique_id is to assign a unique id to requests so that events can be correlated in different logs. The id is not designed, nor is it suitable for security purposes.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

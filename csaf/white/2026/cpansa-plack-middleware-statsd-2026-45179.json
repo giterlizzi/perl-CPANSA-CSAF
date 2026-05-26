@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Plack::Middleware::Statsd versions before 0.9.0 for Perl may leak user IP addresses.  If the communication channel to the statsd daemon is not secured (for example, by sending UDP packets to a host on another network), then users' IP addresses may be leaked.  Since version 0.9.0, the IP address is no longer logged to statsd unless configured. When configured, an HMAC signature of the IP address is logged instead.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Plack-Middleware-Statsd-2026-45179 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-statsd-2026-45179.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Plack-Middleware-Statsd/security/advisories/GHSA-9gwm-665p-w2xx",
+            "url": "https://github.com/robrwo/Plack-Middleware-Statsd/security/advisories/GHSA-9gwm-665p-w2xx"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Plack-Middleware-Statsd-v0.9.0/changes",
+            "url": "https://metacpan.org/release/RRWO/Plack-Middleware-Statsd-v0.9.0/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/10/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/10/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-45179 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45179"
+         }
+      ],
+      "title": "Plack-Middleware-Statsd vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Plack-Middleware-Statsd-2026-45179",
+         "initial_release_date": "2026-05-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.9.0",
+                  "product": {
+                     "name": "Plack-Middleware-Statsd less than 0.9.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Statsd"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.9.0",
+                  "product": {
+                     "name": "Plack-Middleware-Statsd greater than or equal 0.9.0",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Statsd"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Plack-Middleware-Statsd"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-45179",
+         "cwe": {
+            "id": "CWE-319",
+            "name": "Cleartext Transmission of Sensitive Information"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Plack::Middleware::Statsd versions before 0.9.0 for Perl may leak user IP addresses.\n\nIf the communication channel to the statsd daemon is not secured (for example, by sending UDP packets to a host on another network), then users' IP addresses may be leaked.\n\nSince version 0.9.0, the IP address is no longer logged to statsd unless configured. When configured, an HMAC signature of the IP address is logged instead.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

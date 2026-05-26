@@ -1,0 +1,153 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Amon2 versions before 6.17 for Perl use an insecure random_string implementation for security functions.  In versions 6.06 through 6.16, the random_string function will attempt to read bytes from the /dev/urandom device, but if that is unavailable then it generates bytes by concatenating a SHA-1 hash seeded with the built-in rand() function, the PID, and the high resolution epoch time.  The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.  Before version 6.06, there was no fallback when /dev/urandom was not available.  Before version 6.04, the random_string function used the built-in rand() function to generate a mixed-case alphanumeric string.  This function may be used for generating session ids, generating secrets for signing or encrypting cookie session data and generating tokens used for Cross Site Request Forgery (CSRF) protection.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Amon2-2025-15604 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-amon2-2025-15604.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tokuhirom/Amon/pull/135",
+            "url": "https://github.com/tokuhirom/Amon/pull/135"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TOKUHIROM/Amon2-6.17/changes",
+            "url": "https://metacpan.org/release/TOKUHIROM/Amon2-6.17/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TOKUHIROM/Amon2-6.17/diff/TOKUHIROM/Amon2-6.16#lib/Amon2/Util.pm",
+            "url": "https://metacpan.org/release/TOKUHIROM/Amon2-6.17/diff/TOKUHIROM/Amon2-6.16#lib/Amon2/Util.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/03/28/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/28/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-15604 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15604"
+         }
+      ],
+      "title": "Amon2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-03-28T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Amon2-2025-15604",
+         "initial_release_date": "2026-03-28T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-03-28T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<6.18",
+                  "product": {
+                     "name": "Amon2 less than 6.18",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Amon2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.18",
+                  "product": {
+                     "name": "Amon2 greater than or equal 6.18",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Amon2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Amon2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-15604",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Amon2 versions before 6.17 for Perl use an insecure random_string implementation for security functions.\n\nIn versions 6.06 through 6.16, the random_string function will attempt to read bytes from the /dev/urandom device, but if that is unavailable then it generates bytes by concatenating a SHA-1 hash seeded with the built-in rand() function, the PID, and the high resolution epoch time.  The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.\n\nBefore version 6.06, there was no fallback when /dev/urandom was not available.\n\nBefore version 6.04, the random_string function used the built-in rand() function to generate a mixed-case alphanumeric string.\n\nThis function may be used for generating session ids, generating secrets for signing or encrypting cookie session data and generating tokens used for Cross Site Request Forgery (CSRF) protection.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

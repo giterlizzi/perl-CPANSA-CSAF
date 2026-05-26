@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::Statsd::Tiny versions before 0.3.8 for Perl allowed metric injections.  The metric names and set values were not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-Statsd-Tiny-2026-46720 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsd-tiny-2026-46720.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Net-Statsd-Tiny/commit/06f814f52fbcc0b2afddf7a2d6f8137fd3cede13.patch",
+            "url": "https://github.com/robrwo/Net-Statsd-Tiny/commit/06f814f52fbcc0b2afddf7a2d6f8137fd3cede13.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Net-Statsd-Tiny-v0.3.8/changes",
+            "url": "https://metacpan.org/release/RRWO/Net-Statsd-Tiny-v0.3.8/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-46719",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-46719"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-46720 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46720"
+         }
+      ],
+      "title": "Net-Statsd-Tiny vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-17T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-Statsd-Tiny-2026-46720",
+         "initial_release_date": "2026-05-17T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-17T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.3.8",
+                  "product": {
+                     "name": "Net-Statsd-Tiny less than 0.3.8",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Statsd-Tiny"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.3.8",
+                  "product": {
+                     "name": "Net-Statsd-Tiny greater than or equal 0.3.8",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Statsd-Tiny"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-Statsd-Tiny"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-46720",
+         "cwe": {
+            "id": "CWE-93",
+            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::Statsd::Tiny versions before 0.3.8 for Perl allowed metric injections.\n\nThe metric names and set values were not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.2,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

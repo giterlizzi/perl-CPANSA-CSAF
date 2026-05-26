@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Authen::TOTP versions before 0.1.1 for Perl generate secrets using rand.  Secrets were generated using Perl's built-in rand function, which is predictable and unsuitable for security usage.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Authen-TOTP-2026-46473 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-authen-totp-2026-46473.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tchatzi/Authen-TOTP/commit/d04f30cc6538d77fc6b6d550da450cf3017b8561.patch",
+            "url": "https://github.com/tchatzi/Authen-TOTP/commit/d04f30cc6538d77fc6b6d550da450cf3017b8561.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TCHATZI/Authen-TOTP-0.1.1/changes",
+            "url": "https://metacpan.org/release/TCHATZI/Authen-TOTP-0.1.1/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/21/15",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/21/15"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-46473 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46473"
+         }
+      ],
+      "title": "Authen-TOTP vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Authen-TOTP-2026-46473",
+         "initial_release_date": "2026-05-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.1.1",
+                  "product": {
+                     "name": "Authen-TOTP less than 0.1.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Authen-TOTP"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.1.1",
+                  "product": {
+                     "name": "Authen-TOTP greater than or equal 0.1.1",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Authen-TOTP"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Authen-TOTP"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-46473",
+         "cwe": {
+            "id": "CWE-331",
+            "name": "Insufficient Entropy"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Authen::TOTP versions before 0.1.1 for Perl generate secrets using rand.\n\nSecrets were generated using Perl's built-in rand function, which is predictable and unsuitable for security usage.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

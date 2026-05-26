@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Catalyst::Plugin::Statsd versions through 0.10.0 for Perl may leak session ids.  If the communication channel to the statsd daemon is not secured (for example, by sending UDP packets to a host on another network), then users' session ids may be leaked.  This may allow an attacker to use session ids as authentication tokens.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Catalyst-Plugin-Statsd-2026-45180 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-statsd-2026-45180.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/CatalystX-Statsd/security/advisories/GHSA-gjvr-hq83-fc38",
+            "url": "https://github.com/robrwo/CatalystX-Statsd/security/advisories/GHSA-gjvr-hq83-fc38"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Plack-Middleware-Statsd/security/advisories/GHSA-9gwm-665p-w2xx",
+            "url": "https://github.com/robrwo/Plack-Middleware-Statsd/security/advisories/GHSA-9gwm-665p-w2xx"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Catalyst-Plugin-Statsd-v0.10.0/changes",
+            "url": "https://metacpan.org/release/RRWO/Catalyst-Plugin-Statsd-v0.10.0/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-45179",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-45179"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-45180 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45180"
+         }
+      ],
+      "title": "Catalyst-Plugin-Statsd vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Catalyst-Plugin-Statsd-2026-45180",
+         "initial_release_date": "2026-05-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=0.10.0",
+                  "product": {
+                     "name": "Catalyst-Plugin-Statsd less than or equal 0.10.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Statsd"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.10.1",
+                  "product": {
+                     "name": "Catalyst-Plugin-Statsd greater than or equal 0.10.1",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Statsd"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Catalyst-Plugin-Statsd"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-45180",
+         "cwe": {
+            "id": "CWE-319",
+            "name": "Cleartext Transmission of Sensitive Information"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Catalyst::Plugin::Statsd versions through 0.10.0 for Perl may leak session ids.\n\nIf the communication channel to the statsd daemon is not secured (for example, by sending UDP packets to a host on another network), then users' session ids may be leaked.  This may allow an attacker to use session ids as authentication tokens.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

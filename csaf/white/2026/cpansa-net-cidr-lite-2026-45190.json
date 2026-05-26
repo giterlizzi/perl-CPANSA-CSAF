@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::CIDR::Lite versions before 0.24 for Perl does not properly validate IP address and CIDR mask inputs, which may allow IP ACL bypass.  Inputs containing a trailing newline or non-ASCII digit characters pass the validators but are then re-encoded by the parser to a different address than the input string spelled. find() and bin_find() can match or miss addresses as a result.  Example:    my $cidr = Net::CIDR::Lite->new();   $cidr->add(\"::1\\n/128\");   $cidr->find(\"::1a\");  # incorrectly returns true  See also CVE-2026-45191.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-CIDR-Lite-2026-45190 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-cidr-lite-2026-45190.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/stigtsp/Net-CIDR-Lite/commit/ca9542adec87110556601d7ce48381ea8d13e692.patch",
+            "url": "https://github.com/stigtsp/Net-CIDR-Lite/commit/ca9542adec87110556601d7ce48381ea8d13e692.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/STIGTSP/Net-CIDR-Lite-0.24/changes",
+            "url": "https://metacpan.org/release/STIGTSP/Net-CIDR-Lite-0.24/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-45191",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-45191"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-45190 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45190"
+         }
+      ],
+      "title": "Net-CIDR-Lite vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-CIDR-Lite-2026-45190",
+         "initial_release_date": "2026-05-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.24",
+                  "product": {
+                     "name": "Net-CIDR-Lite less than 0.24",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-CIDR-Lite"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.24",
+                  "product": {
+                     "name": "Net-CIDR-Lite greater than or equal 0.24",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-CIDR-Lite"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-CIDR-Lite"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-45190",
+         "cwe": {
+            "id": "CWE-1289",
+            "name": "Improper Validation of Unsafe Equivalence in Input"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::CIDR::Lite versions before 0.24 for Perl does not properly validate IP address and CIDR mask inputs, which may allow IP ACL bypass.\n\nInputs containing a trailing newline or non-ASCII digit characters pass the validators but are then re-encoded by the parser to a different address than the input string spelled. find() and bin_find() can match or miss addresses as a result.\n\nExample:\n\n  my $cidr = Net::CIDR::Lite->new();\n  $cidr->add(\"::1\\n/128\");\n  $cidr->find(\"::1a\");  # incorrectly returns true\n\nSee also CVE-2026-45191.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

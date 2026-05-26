@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Template::Plugin::HTML versions through 3.102 for Perl allows HTML and JavaScript to be injected.  The html_filter function did not escape single quotes. HTML attributes inside of single quotes could be have code injected.  For example, the variable \"var\" in      <a id='ref' title='[% var | html %]'>  would not be properly escaped. An attacker could insert some limited HTML and JavaScript, for example,      var = \" ' onclick='while (true) { alert(1) }'\"  Note that arbitrary HTML and JavaScript would be difficult to inject, because angle brackets, ampersands and double-quotes would still be escaped.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Template-Toolkit-2026-5090 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-template-toolkit-2026-5090.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/abw/Template2/issues/327",
+            "url": "https://github.com/abw/Template2/issues/327"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/abw/Template2/pull/337/changes/11c78a7a771d4af505efeb754a0b8775689c2eae",
+            "url": "https://github.com/abw/Template2/pull/337/changes/11c78a7a771d4af505efeb754a0b8775689c2eae"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/19/40",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/19/40"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-5090 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5090"
+         }
+      ],
+      "title": "Template-Toolkit vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Template-Toolkit-2026-5090",
+         "initial_release_date": "2026-05-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<3.103",
+                  "product": {
+                     "name": "Template-Toolkit less than 3.103",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Template-Toolkit"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.103",
+                  "product": {
+                     "name": "Template-Toolkit greater than or equal 3.103",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Template-Toolkit"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Template-Toolkit"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-5090",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Template::Plugin::HTML versions through 3.102 for Perl allows HTML and JavaScript to be injected.\n\nThe html_filter function did not escape single quotes. HTML attributes inside of single quotes could be have code injected.  For example, the variable \"var\" in\n\n    <a id='ref' title='[% var | html %]'>\n\nwould not be properly escaped. An attacker could insert some limited HTML and JavaScript, for example,\n\n    var = \" ' onclick='while (true) { alert(1) }'\"\n\nNote that arbitrary HTML and JavaScript would be difficult to inject, because angle brackets, ampersands and double-quotes would still be escaped.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

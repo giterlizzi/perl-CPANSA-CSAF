@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Crypt::SaltedHash versions through 0.09 for Perl generate insecure random values for salts.  These versions use the built-in rand function, which is predictable and unsuitable for cryptography.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-SaltedHash-2026-47372 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-saltedhash-2026-47372.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/perl-Crypt-SaltedHash/commit/9b68437d2cd420b819b3a795474c3870338d38d5.patch",
+            "url": "https://github.com/robrwo/perl-Crypt-SaltedHash/commit/9b68437d2cd420b819b3a795474c3870338d38d5.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Crypt-SaltedHash-0.10/changes",
+            "url": "https://metacpan.org/release/RRWO/Crypt-SaltedHash-0.10/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/20/22",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/20/22"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-47372 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47372"
+         }
+      ],
+      "title": "Crypt-SaltedHash vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-20T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Crypt-SaltedHash-2026-47372",
+         "initial_release_date": "2026-05-20T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-20T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.10",
+                  "product": {
+                     "name": "Crypt-SaltedHash less than 0.10",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-SaltedHash"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.10",
+                  "product": {
+                     "name": "Crypt-SaltedHash greater than or equal 0.10",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-SaltedHash"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-SaltedHash"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-47372",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Crypt::SaltedHash versions through 0.09 for Perl generate insecure random values for salts.\n\nThese versions use the built-in rand function, which is predictable and unsuitable for cryptography.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

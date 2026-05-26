@@ -1,0 +1,112 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Web::Passwd versions through 0.03 for Perl is vulnerable to RCE.  Web::Passwd is a small CGI application for managing htpasswd files using the htpasswd command.  The user parameter is not validated or escaped, and is used as the last argument on the command line, allowing for command injection.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Web-Passwd-2026-8500 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-web-passwd-2026-8500.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://httpd.apache.org/docs/current/programs/htpasswd.html",
+            "url": "https://httpd.apache.org/docs/current/programs/htpasswd.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EVANK/Web-Passwd-0.03",
+            "url": "https://metacpan.org/release/EVANK/Web-Passwd-0.03"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/13/8",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/13/8"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-8500 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8500"
+         }
+      ],
+      "title": "Web-Passwd vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-13T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Web-Passwd-2026-8500",
+         "initial_release_date": "2026-05-13T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-13T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Web-Passwd greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Web-Passwd"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Web-Passwd"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-8500",
+         "notes": [
+            {
+               "category": "description",
+               "text": null,
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

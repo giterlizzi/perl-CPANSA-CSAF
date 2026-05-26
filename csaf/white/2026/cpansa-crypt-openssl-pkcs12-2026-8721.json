@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.  Password parameters in PKCS12.xs are declared char *, which routes through Perl's default typemap to SvPV_nolen.  The Perl length is discarded.  The C code (or OpenSSL internally) calls strlen() on the buffer.  Any password byte at or after the first NULL is silently dropped. Binary / KDF-derived / HMAC-derived passwords lose entropy without any warnings.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-OpenSSL-PKCS12-2026-8721 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-pkcs12-2026-8721.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-PKCS12-1.95/view/Changes.md",
+            "url": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-PKCS12-1.95/view/Changes.md"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/17/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/17/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-8721 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8721"
+         }
+      ],
+      "title": "Crypt-OpenSSL-PKCS12 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-17T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Crypt-OpenSSL-PKCS12-2026-8721",
+         "initial_release_date": "2026-05-17T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-17T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<=1.94",
+                  "product": {
+                     "name": "Crypt-OpenSSL-PKCS12 less than or equal 1.94",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-OpenSSL-PKCS12"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.95",
+                  "product": {
+                     "name": "Crypt-OpenSSL-PKCS12 greater than or equal 1.95",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-OpenSSL-PKCS12"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-OpenSSL-PKCS12"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-8721",
+         "cwe": {
+            "id": "CWE-170",
+            "name": "Improper Null Termination"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.\n\nPassword parameters in PKCS12.xs are declared char *, which routes through Perl's default typemap to SvPV_nolen.  The Perl length is discarded.\n\nThe C code (or OpenSSL internally) calls strlen() on the buffer.  Any password byte at or after the first NULL is silently dropped. Binary / KDF-derived / HMAC-derived passwords lose entropy without any warnings.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
