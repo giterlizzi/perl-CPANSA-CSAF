@@ -50,3 +50,11 @@ jobs:
           git add csaf
           git commit -s -m "Sync with CPANSA" || echo "No changes to commit"
           git push
+
+      - name: Generate pages
+        env:
+          CSAF_DEBUG: true
+        run: make website
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
