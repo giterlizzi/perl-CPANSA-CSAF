@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "IO::Uncompress::Unzip versions before 2.215 for Perl propagate uncaught exception when parsing zip header with malformed DOS date.  _dosToUnixTime() decodes the local-file-header last-modification date field and calls Time::Local::timelocal() without an eval guard. A header whose date field decodes to an out-of-range month, day, or hour causes timelocal() to die.  The exception propagates out of IO::Uncompress::Unzip->new($file) where callers expect undef plus $UnzipError.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-IO-Compress-2025-15649 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-io-compress-2025-15649.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/pmqs/IO-Compress/commit/fd28c1d2374eee9811f6d0c5bddc0957abdf1da8.patch",
+            "url": "https://github.com/pmqs/IO-Compress/commit/fd28c1d2374eee9811f6d0c5bddc0957abdf1da8.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/pmqs/IO-Compress/issues/65",
+            "url": "https://github.com/pmqs/IO-Compress/issues/65"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PMQS/IO-Compress-2.215/changes",
+            "url": "https://metacpan.org/release/PMQS/IO-Compress-2.215/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/27/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/27/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-15649 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15649"
+         }
+      ],
+      "title": "IO-Compress vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-27T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-IO-Compress-2025-15649",
+         "initial_release_date": "2026-05-27T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-27T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.215",
+                  "product": {
+                     "name": "IO-Compress less than 2.215",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Compress"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.215",
+                  "product": {
+                     "name": "IO-Compress greater than or equal 2.215",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Compress"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "IO-Compress"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-15649",
+         "cwe": {
+            "id": "CWE-248",
+            "name": "Uncaught Exception"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "IO::Uncompress::Unzip versions before 2.215 for Perl propagate uncaught exception when parsing zip header with malformed DOS date.\n\n_dosToUnixTime() decodes the local-file-header last-modification date field and calls Time::Local::timelocal() without an eval guard. A header whose date field decodes to an out-of-range month, day, or hour causes timelocal() to die.\n\nThe exception propagates out of IO::Uncompress::Unzip->new($file) where callers expect undef plus $UnzipError.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

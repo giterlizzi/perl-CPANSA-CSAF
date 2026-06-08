@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTML::Entities versions before 3.84 for Perl read freed heap memory in _decode_entities.  The XS routine backing HTML::Entities::_decode_entities cached a pointer (repl) into the entity-value SV returned by hv_fetch on the entity2char hash. When the input SV was identical to a value SV in that hash, and that value contained its own key as an entity reference, a later call to grow_gap() reallocated the SV's PV buffer and freed the backing allocation that repl still pointed into. The subsequent copy loop read repl_len bytes from the freed allocation.  The read may disclose adjacent heap contents into the destination SV.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTML-Parser-2026-8829 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-html-parser-2026-8829.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/HTML-Parser/commit/6922552b0778c90a9587a3894e248be4d3a25e1c.patch",
+            "url": "https://github.com/libwww-perl/HTML-Parser/commit/6922552b0778c90a9587a3894e248be4d3a25e1c.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/HTML-Parser/pull/56",
+            "url": "https://github.com/libwww-perl/HTML-Parser/pull/56"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/06/04/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/04/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-8829 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8829"
+         }
+      ],
+      "title": "HTML-Parser vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTML-Parser-2026-8829",
+         "initial_release_date": "2026-06-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<3.84",
+                  "product": {
+                     "name": "HTML-Parser less than 3.84",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTML-Parser"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.84",
+                  "product": {
+                     "name": "HTML-Parser greater than or equal 3.84",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTML-Parser"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTML-Parser"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-8829",
+         "cwe": {
+            "id": "CWE-416",
+            "name": "Use After Free"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTML::Entities versions before 3.84 for Perl read freed heap memory in _decode_entities.\n\nThe XS routine backing HTML::Entities::_decode_entities cached a pointer (repl) into the entity-value SV returned by hv_fetch on the entity2char hash. When the input SV was identical to a value SV in that hash, and that value contained its own key as an entity reference, a later call to grow_gap() reallocated the SV's PV buffer and freed the backing allocation that repl still pointed into. The subsequent copy loop read repl_len bytes from the freed allocation.\n\nThe read may disclose adjacent heap contents into the destination SV.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

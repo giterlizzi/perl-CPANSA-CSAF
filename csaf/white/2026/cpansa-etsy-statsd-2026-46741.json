@@ -1,0 +1,124 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Etsy::StatsD versions through 1.002002 for Perl allow metric injections.  The metric names and values are not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.  Note that the git repository contains an unreleased version with the gauge and set methods that also do not check for potential metric injections.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Etsy-StatsD-2026-46741 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-etsy-statsd-2026-46741.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-46719",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-46719"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-46720",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-46720"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-46741 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46741"
+         }
+      ],
+      "title": "Etsy-StatsD vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Etsy-StatsD-2026-46741",
+         "initial_release_date": "2026-06-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Etsy-StatsD greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Etsy-StatsD"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Etsy-StatsD"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-46741",
+         "cwe": {
+            "id": "CWE-93",
+            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Etsy::StatsD versions through 1.002002 for Perl allow metric injections.\n\nThe metric names and values are not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.\n\nNote that the git repository contains an unreleased version with the gauge and set methods that also do not check for potential metric injections.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
