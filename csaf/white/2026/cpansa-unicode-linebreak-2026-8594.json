@@ -1,0 +1,134 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Text::LineFold versions through 2019.001 for Perl duplicate the output based on the number of special break characters.  Text::LineFold splits the input string by specific line break characters (such as VT, FF and others) into segments, but applies the break function to the entire string, not just the segment.  A side effect of this is that the full input can be duplicated for each segment.  Besides being incorrect, this can lead to unexpected resource consumption and possible denial of service.  Note that Text::LineFold is part of the Unicode-LineBreak distribution, which may have a higher version number than the module.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Unicode-LineBreak-2026-8594 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-unicode-linebreak-2026-8594.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/hatukanezumi/Unicode-LineBreak/pull/6",
+            "url": "https://github.com/hatukanezumi/Unicode-LineBreak/pull/6"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/NEZUMI/Unicode-LineBreak-2019.001/source/lib/Text/LineFold.pm#L407-415",
+            "url": "https://metacpan.org/release/NEZUMI/Unicode-LineBreak-2019.001/source/lib/Text/LineFold.pm#L407-415"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/U/Unicode-LineBreak/2019.001/CVE-2026-8594-r1.patch",
+            "url": "https://security.metacpan.org/patches/U/Unicode-LineBreak/2019.001/CVE-2026-8594-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/30/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/30/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-8594 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8594"
+         }
+      ],
+      "title": "Unicode-LineBreak vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Unicode-LineBreak-2026-8594",
+         "initial_release_date": "2026-05-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Unicode-LineBreak greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Unicode-LineBreak"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Unicode-LineBreak"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-8594",
+         "cwe": {
+            "id": "CWE-405",
+            "name": "Asymmetric Resource Consumption (Amplification)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Text::LineFold versions through 2019.001 for Perl duplicate the output based on the number of special break characters.\n\nText::LineFold splits the input string by specific line break characters (such as VT, FF and others) into segments, but applies the break function to the entire string, not just the segment.\n\nA side effect of this is that the full input can be duplicated for each segment.  Besides being incorrect, this can lead to unexpected resource consumption and possible denial of service.\n\nNote that Text::LineFold is part of the Unicode-LineBreak distribution, which may have a higher version number than the module.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.2,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

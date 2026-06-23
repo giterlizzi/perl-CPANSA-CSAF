@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Daemon versions before 6.17 for Perl allow OS command injection via send_file().  send_file() opens its string argument with Perl's 2-arg open(). The 2-arg form interprets magic prefixes: '| cmd' and 'cmd |' open a pipe to a subprocess, '> path' and '>> path' open the path for write or append.  Untrusted input passed to send_file() can run OS commands at the daemon process UID. The read-pipe form ('cmd |') also leaks subprocess stdout into the HTTP response body. The write-mode forms can create or truncate files at attacker chosen paths.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTTP-Daemon-2026-8450 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-daemon-2026-8450.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/HTTP-Daemon/commit/945d35141d94490f749640bd4390acd6a2193995.patch",
+            "url": "https://github.com/libwww-perl/HTTP-Daemon/commit/945d35141d94490f749640bd4390acd6a2193995.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/HTTP-Daemon/pull/89",
+            "url": "https://github.com/libwww-perl/HTTP-Daemon/pull/89"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/OALDERS/HTTP-Daemon-6.17/changes",
+            "url": "https://metacpan.org/release/OALDERS/HTTP-Daemon-6.17/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/27/5",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/27/5"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-8450 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8450"
+         }
+      ],
+      "title": "HTTP-Daemon vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-27T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTTP-Daemon-2026-8450",
+         "initial_release_date": "2026-05-27T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-27T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<6.17",
+                  "product": {
+                     "name": "HTTP-Daemon less than 6.17",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Daemon"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.17",
+                  "product": {
+                     "name": "HTTP-Daemon greater than or equal 6.17",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Daemon"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTTP-Daemon"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-8450",
+         "cwe": {
+            "id": "CWE-73",
+            "name": "External Control of File Name or Path"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Daemon versions before 6.17 for Perl allow OS command injection via send_file().\n\nsend_file() opens its string argument with Perl's 2-arg open(). The 2-arg form interprets magic prefixes: '| cmd' and 'cmd |' open a pipe to a subprocess, '> path' and '>> path' open the path for write or append.\n\nUntrusted input passed to send_file() can run OS commands at the daemon process UID. The read-pipe form ('cmd |') also leaks subprocess stdout into the HTTP response body. The write-mode forms can create or truncate files at attacker chosen paths.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

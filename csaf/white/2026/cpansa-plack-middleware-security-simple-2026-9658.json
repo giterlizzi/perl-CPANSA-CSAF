@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Plack::Middleware::Security::Common versions before 0.13.1 for Perl did not block header injections in request paths.  The header injection rule was ineffective at blocking header injections in the request paths unless they were double-encoded, for example,    GET /path\\r\\nHTTP/1.1\\r\\nHost: secret.example.com  Note that it is unclear whether request paths with CRLF followed by additional headers would be blocked by reverse proxies, or how they would be processed by Plack-based servers.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Plack-Middleware-Security-Simple-2026-9658 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-security-simple-2026-9658.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Plack-Middleware-Security-Simple-v0.13.1/changes",
+            "url": "https://metacpan.org/release/RRWO/Plack-Middleware-Security-Simple-v0.13.1/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/05/28/9",
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/28/9"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-9658 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9658"
+         }
+      ],
+      "title": "Plack-Middleware-Security-Simple vulnerability",
+      "tracking": {
+         "current_release_date": "2026-05-28T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Plack-Middleware-Security-Simple-2026-9658",
+         "initial_release_date": "2026-05-28T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-05-28T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.13.1",
+                  "product": {
+                     "name": "Plack-Middleware-Security-Simple less than 0.13.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Security-Simple"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.13.1",
+                  "product": {
+                     "name": "Plack-Middleware-Security-Simple greater than or equal 0.13.1",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-Security-Simple"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Plack-Middleware-Security-Simple"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-9658",
+         "cwe": {
+            "id": "CWE-113",
+            "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Plack::Middleware::Security::Common versions before 0.13.1 for Perl did not block header injections in request paths.\n\nThe header injection rule was ineffective at blocking header injections in the request paths unless they were double-encoded, for example,\n\n  GET /path\\r\\nHTTP/1.1\\r\\nHost: secret.example.com\n\nNote that it is unclear whether request paths with CRLF followed by additional headers would be blocked by reverse proxies, or how they would be processed by Plack-based servers.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.3,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
