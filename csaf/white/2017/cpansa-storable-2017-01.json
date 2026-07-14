@@ -30,13 +30,8 @@
          },
          {
             "category": "external",
-            "summary": "https://metacpan.org/changes/distribution/Storable",
-            "url": "https://metacpan.org/changes/distribution/Storable"
-         },
-         {
-            "category": "external",
-            "summary": "https://cxsecurity.com/issue/WLB-2007120031",
-            "url": "https://cxsecurity.com/issue/WLB-2007120031"
+            "summary": "https://metacpan.org/release/RURBAN/Storable-3.05/changes",
+            "url": "https://metacpan.org/release/RURBAN/Storable-3.05/changes"
          }
       ],
       "title": "Storable vulnerability",

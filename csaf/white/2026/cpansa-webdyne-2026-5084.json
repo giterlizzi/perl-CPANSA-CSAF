@@ -54,7 +54,7 @@
             "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5084"
          }
       ],
-      "title": "WebDyne vulnerability",
+      "title": "WebDyne-Session vulnerability",
       "tracking": {
          "current_release_date": "2026-05-11T00:00:00",
          "generator": {
@@ -84,16 +84,16 @@
                   "category": "product_version_range",
                   "name": "vers:cpan/>0",
                   "product": {
-                     "name": "WebDyne greater than 0",
+                     "name": "WebDyne-Session greater than 0",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
-                        "purl": "pkg:cpan/WebDyne"
+                        "purl": "pkg:cpan/WebDyne-Session"
                      }
                   }
                }
             ],
             "category": "product_name",
-            "name": "WebDyne"
+            "name": "WebDyne-Session"
          }
       ]
    },

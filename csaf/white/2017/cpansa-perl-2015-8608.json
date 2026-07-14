@@ -38,6 +38,11 @@
          },
          {
             "category": "external",
+            "summary": "https://github.com/Perl/perl5/issues/15067",
+            "url": "https://github.com/Perl/perl5/issues/15067"
+         },
+         {
+            "category": "external",
             "summary": "https://packetstormsecurity.com/files/136649/Perl-5.22-VDir-MapPathA-W-Out-Of-Bounds-Reads-Buffer-Over-Reads.html",
             "url": "https://packetstormsecurity.com/files/136649/Perl-5.22-VDir-MapPathA-W-Out-Of-Bounds-Reads-Buffer-Over-Reads.html"
          },
@@ -85,10 +90,21 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/<5.22.2",
+                  "name": "vers:cpan/>=5.005|<5.22.2",
                   "product": {
-                     "name": "perl less than 5.22.2",
+                     "name": "perl greater than or equal 5.005 and less than 5.22.2",
                      "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.23.0|<5.23.7",
+                  "product": {
+                     "name": "perl greater than or equal 5.23.0 and less than 5.23.7",
+                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/perl"
                      }
@@ -99,7 +115,7 @@
                   "name": "vers:cpan/>=5.22.2",
                   "product": {
                      "name": "perl greater than or equal 5.22.2",
-                     "product_id": "CSAFPID-0002",
+                     "product_id": "CSAFPID-0003",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/perl"
                      }
@@ -127,10 +143,11 @@
          ],
          "product_status": {
             "fixed": [
-               "CSAFPID-0002"
+               "CSAFPID-0003"
             ],
             "known_affected": [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002"
             ]
          },
          "scores": [
@@ -147,7 +164,8 @@
                   "version": "3.0"
                },
                "products": [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002"
                ]
             }
          ]

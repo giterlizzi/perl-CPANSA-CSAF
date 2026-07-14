@@ -102,21 +102,10 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=3.05",
+                  "name": "vers:cpan/>=3.05|<=3.11",
                   "product": {
-                     "name": "Encode greater than or equal 3.05",
+                     "name": "Encode greater than or equal 3.05 and less than or equal 3.11",
                      "product_id": "CSAFPID-0001",
-                     "product_identification_helper": {
-                        "purl": "pkg:cpan/Encode"
-                     }
-                  }
-               },
-               {
-                  "category": "product_version_range",
-                  "name": "vers:cpan/<=3.11",
-                  "product": {
-                     "name": "Encode less than or equal 3.11",
-                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Encode"
                      }
@@ -127,7 +116,7 @@
                   "name": "vers:cpan/>3.11",
                   "product": {
                      "name": "Encode greater than 3.11",
-                     "product_id": "CSAFPID-0003",
+                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Encode"
                      }
@@ -155,11 +144,10 @@
          ],
          "product_status": {
             "fixed": [
-               "CSAFPID-0003"
+               "CSAFPID-0002"
             ],
             "known_affected": [
-               "CSAFPID-0001",
-               "CSAFPID-0002"
+               "CSAFPID-0001"
             ]
          },
          "scores": [
@@ -176,8 +164,7 @@
                   "version": "3.1"
                },
                "products": [
-                  "CSAFPID-0001",
-                  "CSAFPID-0002"
+                  "CSAFPID-0001"
                ]
             }
          ]

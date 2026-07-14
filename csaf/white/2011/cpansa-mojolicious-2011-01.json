@@ -15,7 +15,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Mojolicious is vulnerable to cross-site scripting, caused by improper validation of user-supplied input by link_to helper. A remote attacker could exploit this vulnerability using a specially-crafted URL to execute script in a victim's Web browser within the security context of the hosting Web site, once the URL is clicked. An attacker could use this vulnerability to steal the victim's cookie-based authentication credentials.",
+            "text": "Cross-site scripting (XSS) vulnerability in the link_to helper in Mojolicious before 1.12 allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
             "title": "Vulnerability Description"
          }
       ],
@@ -45,6 +45,21 @@
             "category": "external",
             "summary": "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60",
             "url": "https://github.com/mojolicious/mojo/commit/f6801ef7be8c78092e38f870b19fae3da0899d60"
+         },
+         {
+            "category": "external",
+            "summary": "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes",
+            "url": "http://cpansearch.perl.org/src/KRAIH/Mojolicious-1.20/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/060122.html",
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/060122.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/47713",
+            "url": "http://www.securityfocus.com/bid/47713"
          },
          {
             "category": "external",
