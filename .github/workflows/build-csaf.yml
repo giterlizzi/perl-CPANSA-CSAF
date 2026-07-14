@@ -40,7 +40,7 @@ jobs:
           cpanm --installdeps --with-develop --notest .
 
       - name: Build CPANSA
-        run: make build
+        run: make rebuild
 
       - name: Build ROLIE
         run: make rolie
