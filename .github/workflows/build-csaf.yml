@@ -6,6 +6,11 @@ on:
       - main
       - develop
   workflow_dispatch:
+    inputs:
+      rebuild_all:
+        description: 'Rebuild all CPANSA'
+        type: boolean
+        default: false
   schedule:
     - cron: '0 0 * * *'
 
@@ -40,7 +45,14 @@ jobs:
           cpanm --installdeps --with-develop --notest .
 
       - name: Build CPANSA
-        run: make rebuild
+        env:
+          CSAF_DEBUG: true
+        run: |
+          if [[ "${{ inputs.rebuild_all }}" == "true" ]]; then
+            make rebuild
+          else
+            make build
+          fi
 
       - name: Build ROLIE
         run: make rolie
