@@ -11,8 +11,13 @@ on:
         description: 'Rebuild all CPANSA'
         type: boolean
         default: false
+      dist:
+        description: 'Specify Perl dist'
+        type: string
+        default: ''
   schedule:
     - cron: '0 0 * * *'
+    - cron: '0 3 * * 0'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -47,8 +52,9 @@ jobs:
       - name: Build CPANSA
         env:
           CSAF_DEBUG: true
+          DIST_NAME: ${{ inputs.dist }}
         run: |
-          if [[ "${{ inputs.rebuild_all }}" == "true" ]]; then
+          if [[ "${{ github.event.schedule }}" == "0 3 * * 0" || "${{ inputs.force_build }}" == "true" ]]; then
             make rebuild
           else
             make build
