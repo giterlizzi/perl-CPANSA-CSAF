@@ -53,8 +53,10 @@ jobs:
         env:
           CSAF_DEBUG: true
           DIST_NAME: ${{ inputs.dist }}
+          FORCE_REBUILD: ${{ inputs.rebuild_all }}
+          GH_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          if [[ "${{ github.event.schedule }}" == "0 3 * * 0" || "${{ inputs.force_build }}" == "true" ]]; then
+          if [[ "$GH_SCHEDULE" == "0 3 * * 0" || "$FORCE_REBUILD" == "true" ]]; then
             make rebuild DIST="$DIST_NAME"
           else
             make build DIST="$DIST_NAME"
