@@ -29,10 +29,10 @@ website: clean ## Build CPANSA-CSAF website
 	$(CP) util/templates/app.* _site
 
 build: ## Generate or update CSAF feeds
-	$(PERL) util/cpansa-to-csaf
+	$(PERL) util/cpansa-to-csaf $(if $(DIST),--dist $(DIST),)
 
 rebuild: ## Rebuild all CSAF feeds
-	$(PERL) util/cpansa-to-csaf --force
+	$(PERL) util/cpansa-to-csaf --force $(if $(DIST),--dist $(DIST),)
 
 rolie: ## Generate ROLIE feed
 	$(CSAF_ROLIE) -c util/rolie.yaml
