@@ -55,9 +55,9 @@ jobs:
           DIST_NAME: ${{ inputs.dist }}
         run: |
           if [[ "${{ github.event.schedule }}" == "0 3 * * 0" || "${{ inputs.force_build }}" == "true" ]]; then
-            make rebuild
+            make rebuild DIST="$DIST_NAME"
           else
-            make build
+            make build DIST="$DIST_NAME"
           fi
 
       - name: Build ROLIE
