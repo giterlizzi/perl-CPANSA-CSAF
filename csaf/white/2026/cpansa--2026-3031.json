@@ -1,0 +1,134 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Image::Epeg versions through 0.15 for Perl embeds an unsupported version of the Epeg library. Image::Epeg includes Epeg 0.9.0 that was last updated in 2004. Epeg is a fast JPEG thumbnail library that was once part of the Enlightenment Project.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA--2026-3031 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa--2026-3031.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://backpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Image-Epeg-0.15.readme",
+            "url": "https://backpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Image-Epeg-0.15.readme"
+         },
+         {
+            "category": "external",
+            "summary": "https://backpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Image-Epeg-0.15.tar.gz",
+            "url": "https://backpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Image-Epeg-0.15.tar.gz"
+         },
+         {
+            "category": "external",
+            "summary": "https://sourceforge.net/projects/enlightenment/files/OldFiles/epeg-0.9.0.tar.gz/download",
+            "url": "https://sourceforge.net/projects/enlightenment/files/OldFiles/epeg-0.9.0.tar.gz/download"
+         },
+         {
+            "category": "external",
+            "summary": "https://web.archive.org/web/20150919051913/https://metacpan.org/pod/Image::Epeg",
+            "url": "https://web.archive.org/web/20150919051913/https://metacpan.org/pod/Image::Epeg"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-3031 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3031"
+         }
+      ],
+      "title": "Image-Epeg vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA--2026-3031",
+         "initial_release_date": "2026-07-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Image-Epeg greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Image-Epeg"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Image-Epeg"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-3031",
+         "cwe": {
+            "id": "CWE-1104",
+            "name": "Use of Unmaintained Third Party Components"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Image::EPEG versions through 0.15 for Perl embeds an unsupported version of the Epeg library.\n\nImage::EPEG includes Epeg 0.9.0 that was last updated in 2004.\n\nEpeg is a fast JPEG thumbnail library that was once part of the Englightenment Project.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

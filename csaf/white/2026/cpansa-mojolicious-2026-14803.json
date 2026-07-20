@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Mojo::JSON versions before 9.47 for Perl allow memory exhaustion via unbounded recursion in the pure-Perl decoder.  The pure-Perl decode path (`_decode_value` dispatching to `_decode_array` and `_decode_object`) recurses with no depth limit, so a small deeply nested JSON document can consume excessive memory.  This path is the default when Cpanel::JSON::XS is not installed or `MOJO_NO_JSON_XS=1` is set; the Cpanel::JSON::XS fast path is not affected.  Any caller that decodes an untrusted JSON body, for example `Mojo::Message::json` reached through `$c->req->json`, can exhaust process memory and cause denial of service.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Mojolicious-2026-14803 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mojolicious-2026-14803.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/mojolicious/mojo/commit/cc38b0554275c4d84f6b8b49bcbbc1bec2068fe1.patch",
+            "url": "https://github.com/mojolicious/mojo/commit/cc38b0554275c4d84f6b8b49bcbbc1bec2068fe1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SRI/Mojolicious-9.47/changes",
+            "url": "https://metacpan.org/release/SRI/Mojolicious-9.47/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/06/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/06/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-14803 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14803"
+         }
+      ],
+      "title": "Mojolicious vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-06T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Mojolicious-2026-14803",
+         "initial_release_date": "2026-07-06T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-06T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<9.47",
+                  "product": {
+                     "name": "Mojolicious less than 9.47",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mojolicious"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=9.47",
+                  "product": {
+                     "name": "Mojolicious greater than or equal 9.47",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mojolicious"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Mojolicious"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-14803",
+         "cwe": {
+            "id": "CWE-674",
+            "name": "Uncontrolled Recursion"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Mojo::JSON versions before 9.47 for Perl allow memory exhaustion via unbounded recursion in the pure-Perl decoder.\n\nThe pure-Perl decode path (`_decode_value` dispatching to `_decode_array` and `_decode_object`) recurses with no depth limit, so a small deeply nested JSON document can consume excessive memory.\n\nThis path is the default when Cpanel::JSON::XS is not installed or `MOJO_NO_JSON_XS=1` is set; the Cpanel::JSON::XS fast path is not affected.\n\nAny caller that decodes an untrusted JSON body, for example `Mojo::Message::json` reached through `$c->req->json`, can exhaust process memory and cause denial of service.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

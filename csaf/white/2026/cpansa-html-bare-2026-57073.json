@@ -1,0 +1,134 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTML::Bare versions through 0.04 for Perl have an unbounded character lookahead.  The parserc_parse function attempts to check for multicharacter strings such as \"<![CDATA\" or element terminators such as \">\" without checking that the offsets are within the buffer.  Truncated strings such as \"<a/\" can trigger an out-of-bounds read.  Note that the latest version available on CPAN is version 0.02. Newer versions are available on the git repository.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTML-Bare-2026-57073 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-html-bare-2026-57073.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/nanoscopic/perl-HTML-Bare/pull/2",
+            "url": "https://github.com/nanoscopic/perl-HTML-Bare/pull/2"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/H/HTML-Bare/0.02/CVE-2026-57073-r1.patch",
+            "url": "https://security.metacpan.org/patches/H/HTML-Bare/0.02/CVE-2026-57073-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/H/HTML-Bare/0.04/CVE-2026-57073-r2.patch",
+            "url": "https://security.metacpan.org/patches/H/HTML-Bare/0.04/CVE-2026-57073-r2.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/16/3",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/16/3"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-57073 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57073"
+         }
+      ],
+      "title": "HTML-Bare vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTML-Bare-2026-57073",
+         "initial_release_date": "2026-07-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "HTML-Bare greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTML-Bare"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTML-Bare"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-57073",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTML::Bare versions through 0.04 for Perl have an unbounded character lookahead.\n\nThe parserc_parse function attempts to check for multicharacter strings such as \"<![CDATA\" or element terminators such as \">\" without checking that the offsets are within the buffer.\n\nTruncated strings such as \"<a/\" can trigger an out-of-bounds read.\n\nNote that the latest version available on CPAN is version 0.02. Newer versions are available on the git repository.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

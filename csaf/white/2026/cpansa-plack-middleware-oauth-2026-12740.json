@@ -1,0 +1,139 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Plack::Middleware::OAuth versions through 0.10 for Perl do not support the OAuth 2.0 state parameter.  RequestTokenV2 builds the provider authorization redirect without issuing a state value, and AccessTokenV2 exchanges the callback code and registers the resulting token into the session (register_session) without verifying that the callback corresponds to an authorization request this session initiated.  Any application that uses this middleware for OAuth 2.0 login is exposed to login cross-site request forgery: because the callback is not bound to the session that began the flow, an attacker who starts an authorization with their own provider account can deliver the resulting callback to a victim, causing the victim's session to complete the attacker's authorization and associating the attacker's provider identity and access token with that session. Where the application persists this as an account link, the attacker may retain access to the victim's account through their own provider credentials.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Plack-Middleware-OAuth-2026-12740 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-oauth-2026-12740.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc6749#section-10.12",
+            "url": "https://datatracker.ietf.org/doc/html/rfc6749#section-10.12"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/c9s/Plack-Middleware-OAuth/pull/13",
+            "url": "https://github.com/c9s/Plack-Middleware-OAuth/pull/13"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Ticket/Display.html?id=179874",
+            "url": "https://rt.cpan.org/Ticket/Display.html?id=179874"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/P/Plack-Middleware-OAuth/0.10/CVE-2026-12740-r1.patch",
+            "url": "https://security.metacpan.org/patches/P/Plack-Middleware-OAuth/0.10/CVE-2026-12740-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/04/10",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/04/10"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-12740 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12740"
+         }
+      ],
+      "title": "Plack-Middleware-OAuth vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Plack-Middleware-OAuth-2026-12740",
+         "initial_release_date": "2026-07-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Plack-Middleware-OAuth greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-OAuth"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Plack-Middleware-OAuth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-12740",
+         "cwe": {
+            "id": "CWE-352",
+            "name": "Cross-Site Request Forgery (CSRF)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Plack::Middleware::OAuth versions through 0.10 for Perl do not support the OAuth 2.0 state parameter.\n\nRequestTokenV2 builds the provider authorization redirect without issuing a state value, and AccessTokenV2 exchanges the callback code and registers the resulting token into the session (register_session) without verifying that the callback corresponds to an authorization request this session initiated.\n\nAny application that uses this middleware for OAuth 2.0 login is exposed to login cross-site request forgery: because the callback is not bound to the session that began the flow, an attacker who starts an authorization with their own provider account can deliver the resulting callback to a victim, causing the victim's session to complete the attacker's authorization and associating the attacker's provider identity and access token with that session. Where the application persists this as an account link, the attacker may retain access to the victim's account through their own provider credentials.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.1,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

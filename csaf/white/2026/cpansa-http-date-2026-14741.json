@@ -1,0 +1,135 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Date versions before 6.08 for Perl allow CPU exhaustion via polynomial regex backtracking in parse_date.  parse_date() matches the date string against a chain of alternative regexes, and str2time() delegates to it. Several of these patterns place unbounded quantifiers next to each other before a trailing `\\s*$` anchor. A valid date prefix followed by a long interior run of digits, letters, or whitespace and a single trailing byte that defeats the final match forces the engine to repartition the run, giving polynomial (about quadratic) backtracking. A header value of a few tens of kilobytes runs for tens of seconds of CPU.  HTTP::Date parses timestamps such as HTTP `Date`, `Expires`, and `Last-Modified` headers, which commonly originate from untrusted sources. Any caller that passes an untrusted date header to str2time() or parse_date() can be driven to consume unbounded CPU, a denial of service.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTTP-Date-2026-14741 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-date-2026-14741.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/HTTP-Date/commit/78c20952cdfbf11e03cf1199ad70f13298a84c5c.patch",
+            "url": "https://github.com/libwww-perl/HTTP-Date/commit/78c20952cdfbf11e03cf1199ad70f13298a84c5c.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/HTTP-Date/pull/33",
+            "url": "https://github.com/libwww-perl/HTTP-Date/pull/33"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/OALDERS/HTTP-Date-6.08/changes",
+            "url": "https://metacpan.org/release/OALDERS/HTTP-Date-6.08/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/17/10",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/17/10"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-14741 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14741"
+         }
+      ],
+      "title": "HTTP-Date vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-17T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTTP-Date-2026-14741",
+         "initial_release_date": "2026-07-17T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-17T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<6.08",
+                  "product": {
+                     "name": "HTTP-Date less than 6.08",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Date"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.08",
+                  "product": {
+                     "name": "HTTP-Date greater than or equal 6.08",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Date"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTTP-Date"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-14741",
+         "cwe": {
+            "id": "CWE-1333",
+            "name": "Inefficient Regular Expression Complexity"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Date versions before 6.08 for Perl allow CPU exhaustion via polynomial regex backtracking in parse_date.\n\nparse_date() matches the date string against a chain of alternative regexes, and str2time() delegates to it. Several of these patterns place unbounded quantifiers next to each other before a trailing `\\s*$` anchor. A valid date prefix followed by a long interior run of digits, letters, or whitespace and a single trailing byte that defeats the final match forces the engine to repartition the run, giving polynomial (about quadratic) backtracking. A header value of a few tens of kilobytes runs for tens of seconds of CPU.\n\nHTTP::Date parses timestamps such as HTTP `Date`, `Expires`, and `Last-Modified` headers, which commonly originate from untrusted sources. Any caller that passes an untrusted date header to str2time() or parse_date() can be driven to consume unbounded CPU, a denial of service.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

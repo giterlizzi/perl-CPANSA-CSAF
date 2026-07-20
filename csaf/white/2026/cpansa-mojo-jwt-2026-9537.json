@@ -1,0 +1,125 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Mojo::JWT versions before 1.02 for Perl verify HMAC signatures with a non-constant-time string comparison.  The decode() method compares the supplied signature to the recomputed HMAC with Perl's eq operator, which stops at the first differing byte, so the comparison time varies with the number of matching leading bytes.  A caller that decodes attacker supplied tokens leaks the expected signature through this timing variation, which can be aggregated over many requests to recover the signature and forge a token.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Mojo-JWT-2026-9537 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mojo-jwt-2026-9537.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/jberger/Mojo-JWT/commit/b8aefb846613e44b5b12bc170898ffd5b05094a2.patch",
+            "url": "https://github.com/jberger/Mojo-JWT/commit/b8aefb846613e44b5b12bc170898ffd5b05094a2.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/17/11",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/17/11"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-9537 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9537"
+         }
+      ],
+      "title": "Mojo-JWT vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-17T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Mojo-JWT-2026-9537",
+         "initial_release_date": "2026-07-17T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-17T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.02",
+                  "product": {
+                     "name": "Mojo-JWT less than 1.02",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mojo-JWT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.02",
+                  "product": {
+                     "name": "Mojo-JWT greater than or equal 1.02",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mojo-JWT"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Mojo-JWT"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-9537",
+         "cwe": {
+            "id": "CWE-208",
+            "name": "Observable Timing Discrepancy"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Mojo::JWT versions before 1.02 for Perl verify HMAC signatures with a non-constant-time string comparison.\n\nThe decode() method compares the supplied signature to the recomputed HMAC with Perl's eq operator, which stops at the first differing byte, so the comparison time varies with the number of matching leading bytes.\n\nA caller that decodes attacker supplied tokens leaks the expected signature through this timing variation, which can be aggregated over many requests to recover the signature and forge a token.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

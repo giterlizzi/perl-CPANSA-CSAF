@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "List::SomeUtils::XS versions before 0.59 for Perl have a heap buffer overflow in the pairwise function.  pairwise() collects the values returned by the block into a heap buffer sized to the longer input array, then grows the buffer before each copy with a single quadrupling (alloc <<= 2) instead of a loop. A block call that returns more than four times the current allocation in one invocation outgrows that one quadrupling, and the copy writes past the end of the buffer.  Any caller of pairwise() whose block returns, for a single pair, more than four times the longer input array's length writes past the buffer and corrupts the heap.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-List-SomeUtils-XS-2026-12844 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-list-someutils-xs-2026-12844.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/houseabsolute/List-SomeUtils-XS/commit/22549f78669b780d6aa338a2d2e49a3dedfffaa6.patch",
+            "url": "https://github.com/houseabsolute/List-SomeUtils-XS/commit/22549f78669b780d6aa338a2d2e49a3dedfffaa6.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/DROLSKY/List-SomeUtils-XS-0.59/changes",
+            "url": "https://metacpan.org/release/DROLSKY/List-SomeUtils-XS-0.59/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/06/25/11",
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/25/11"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-12844 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12844"
+         }
+      ],
+      "title": "List-SomeUtils-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-25T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-List-SomeUtils-XS-2026-12844",
+         "initial_release_date": "2026-06-25T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-25T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.59",
+                  "product": {
+                     "name": "List-SomeUtils-XS less than 0.59",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/List-SomeUtils-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.59",
+                  "product": {
+                     "name": "List-SomeUtils-XS greater than or equal 0.59",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/List-SomeUtils-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "List-SomeUtils-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-12844",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "List::SomeUtils::XS versions before 0.59 for Perl have a heap buffer overflow in the pairwise function.\n\npairwise() collects the values returned by the block into a heap buffer sized to the longer input array, then grows the buffer before each copy with a single quadrupling (alloc <<= 2) instead of a loop. A block call that returns more than four times the current allocation in one invocation outgrows that one quadrupling, and the copy writes past the end of the buffer.\n\nAny caller of pairwise() whose block returns, for a single pair, more than four times the longer input array's length writes past the buffer and corrupts the heap.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

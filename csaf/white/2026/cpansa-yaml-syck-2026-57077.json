@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "YAML::Syck versions before 1.47 for Perl allow an out-of-bounds read via an unbounded newline scan in newline_len.  In the bundled libsyck newline_len and is_newline dereference the scan pointer, and the following byte for a \"\\r\\n\" pair, with no NUL-terminator or bounds check. During block-scalar lexing at a document boundary the scan runs one byte past the heap lexer buffer. This is an incomplete fix of CVE-2025-11683, on a lexer path the earlier fix did not cover.  Any caller that runs Load or LoadFile on an untrusted document with a block scalar at a document boundary reaches the over-read.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-YAML-Syck-2026-57077 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-syck-2026-57077.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/toddr/YAML-Syck/commit/44c90a109ec3215ee7ce747bd11209835e123d8b.patch",
+            "url": "https://github.com/toddr/YAML-Syck/commit/44c90a109ec3215ee7ce747bd11209835e123d8b.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TODDR/YAML-Syck-1.47/changes",
+            "url": "https://metacpan.org/release/TODDR/YAML-Syck-1.47/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-11683",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-11683"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-57077 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57077"
+         }
+      ],
+      "title": "YAML-Syck vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-YAML-Syck-2026-57077",
+         "initial_release_date": "2026-07-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.47",
+                  "product": {
+                     "name": "YAML-Syck less than 1.47",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML-Syck"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.47",
+                  "product": {
+                     "name": "YAML-Syck greater than or equal 1.47",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML-Syck"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "YAML-Syck"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-57077",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "YAML::Syck versions before 1.47 for Perl allow an out-of-bounds read via an unbounded newline scan in newline_len.\n\nIn the bundled libsyck newline_len and is_newline dereference the scan pointer, and the following byte for a \"\\r\\n\" pair, with no NUL-terminator or bounds check. During block-scalar lexing at a document boundary the scan runs one byte past the heap lexer buffer. This is an incomplete fix of CVE-2025-11683, on a lexer path the earlier fix did not cover.\n\nAny caller that runs Load or LoadFile on an untrusted document with a block scalar at a document boundary reaches the over-read.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.7,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

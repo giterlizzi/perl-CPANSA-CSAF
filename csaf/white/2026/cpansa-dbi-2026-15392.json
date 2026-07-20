@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBD::File versions before 1.651 for Perl do not ensure the table file is not a symlink to an untrusted location.  The complete_table_name method builds the absolute table file path without checking whether the file is a symbolic link. A link inside the data directory can point to a table file at any path outside of the configured f_dir and f_dir_search directories.  Callers of file-based drivers can read or write files outside of the data directory.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBI-2026-15392 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dbi-2026-15392.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/commit/96d62dfe4528bf56fe13f413ed323d4252531728.patch",
+            "url": "https://github.com/perl5-dbi/dbi/commit/96d62dfe4528bf56fe13f413ed323d4252531728.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-mh3j-xwf4-jrqw",
+            "url": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-mh3j-xwf4-jrqw"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/DBI-1.651/changes",
+            "url": "https://metacpan.org/release/HMBRAND/DBI-1.651/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/14/15",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/14/15"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-15392 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15392"
+         }
+      ],
+      "title": "DBI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DBI-2026-15392",
+         "initial_release_date": "2026-07-14T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.651",
+                  "product": {
+                     "name": "DBI less than 1.651",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.651",
+                  "product": {
+                     "name": "DBI greater than or equal 1.651",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-15392",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBD::File versions before 1.651 for Perl do not ensure the table file is not a symlink to an untrusted location.\n\nThe complete_table_name method builds the absolute table file path without checking whether the file is a symbolic link. A link inside the data directory can point to a table file at any path outside of the configured f_dir and f_dir_search directories.\n\nCallers of file-based drivers can read or write files outside of the data directory.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.7,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

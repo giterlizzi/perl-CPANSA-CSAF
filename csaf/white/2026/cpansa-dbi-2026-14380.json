@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBI versions before 1.650 for Perl are vulnerable to code injection via caller-influenced Profile.  When a string is assigned to a DBI handle's Profile attribute, DBI splits it into path, package and arguments, and interpolates the package part in a string eval with no validation of the package name.  Any caller-influenced value that reaches the Profile attribute is therefore arbitrary Perl code execution, including calls to run system commands.  The Profile attribute can be set from three different sources that can carry untrusted data: the DBI_PROFILE environment variable, a direct attribute assignment, and a DSN driver-attribute clause dbi:Driver(Profile=>SPEC):db.  An attacker controlling any of those inputs runs arbitrary Perl in the host process. The strongest remote position is a network-exposed DBI::Gofer / DBI::ProxyServer whose per-request DSN reaches the Profile attribute, letting a client execute code on the broker host.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBI-2026-14380 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dbi-2026-14380.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/commit/b73d5d9901767fc1d16b6661ef08fbed4532e259.patch",
+            "url": "https://github.com/perl5-dbi/dbi/commit/b73d5d9901767fc1d16b6661ef08fbed4532e259.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-ch8w-hxc2-v557",
+            "url": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-ch8w-hxc2-v557"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/DBI-1.650/changes",
+            "url": "https://metacpan.org/release/HMBRAND/DBI-1.650/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/07/16",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/07/16"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-14380 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14380"
+         }
+      ],
+      "title": "DBI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DBI-2026-14380",
+         "initial_release_date": "2026-07-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.650",
+                  "product": {
+                     "name": "DBI less than 1.650",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.651",
+                  "product": {
+                     "name": "DBI greater than or equal 1.651",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-14380",
+         "cwe": {
+            "id": "CWE-95",
+            "name": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBI versions before 1.650 for Perl are vulnerable to code injection via caller-influenced Profile.\n\nWhen a string is assigned to a DBI handle's Profile attribute, DBI splits it into path, package and arguments, and interpolates the package part in a string eval with no validation of the package name.\n\nAny caller-influenced value that reaches the Profile attribute is therefore arbitrary Perl code execution, including calls to run system commands.\n\nThe Profile attribute can be set from three different sources that can carry untrusted data: the DBI_PROFILE environment variable, a direct attribute assignment, and a DSN driver-attribute clause dbi:Driver(Profile=>SPEC):db.\n\nAn attacker controlling any of those inputs runs arbitrary Perl in the host process. The strongest remote position is a network-exposed DBI::Gofer / DBI::ProxyServer whose per-request DSN reaches the Profile attribute, letting a client execute code on the broker host.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.8,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

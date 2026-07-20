@@ -1,0 +1,134 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Mojolicious::Sessions::Storable versions through 0.05 for Perl generate session ids insecurely.  The default session id generator returns a SHA-1 hash seeded with the built-in rand function, the epoch time, the heap address of an anonymous hash, and the PID.  These are predictable or low-entropy sources that are unsuitable for security purposes.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Mojolicious-Plugin-SessionStore-2026-9692 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mojolicious-plugin-sessionstore-2026-9692.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HAYAJO/Mojolicious-Plugin-SessionStore-0.05/source/lib/Mojolicious/Sessions/Storable.pm#L11-15",
+            "url": "https://metacpan.org/release/HAYAJO/Mojolicious-Plugin-SessionStore-0.05/source/lib/Mojolicious/Sessions/Storable.pm#L11-15"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/M/Mojolicious-Plugin-SessionStore/0.05/CVE-2026-9692-r1.patch",
+            "url": "https://security.metacpan.org/patches/M/Mojolicious-Plugin-SessionStore/0.05/CVE-2026-9692-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-40923",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-40923"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-9692 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9692"
+         }
+      ],
+      "title": "Mojolicious-Plugin-SessionStore vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Mojolicious-Plugin-SessionStore-2026-9692",
+         "initial_release_date": "2026-06-18T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Mojolicious-Plugin-SessionStore greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Mojolicious-Plugin-SessionStore"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Mojolicious-Plugin-SessionStore"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-9692",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Mojolicious::Sessions::Storable versions through 0.05 for Perl generate session ids insecurely.\n\nThe default session id generator returns a SHA-1 hash seeded with the built-in rand function, the epoch time, the heap address of an anonymous hash, and the PID.\n\nThese are predictable or low-entropy sources that are unsuitable for security purposes.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

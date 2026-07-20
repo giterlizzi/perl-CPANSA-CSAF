@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Dancer2::Plugin::Auth::OAuth::Provider versions before 0.23 for Perl do not support the OAuth 2.0 state parameter.  The authentication_url method builds the provider authorization redirect without issuing a state value, and the callback method exchanges the callback code and registers the resulting token into the session without verifying that the callback corresponds to an authorization request this session initiated.  Any application that uses this plugin for OAuth 2.0 login is exposed to login cross-site request forgery: because the callback is not bound to the session that began the flow, an attacker who starts an authorization with their own provider account can deliver the resulting callback to a victim, causing the victim's session to complete the attacker's authorization and associating the attacker's provider identity and access token with that session. Where the application persists this as an account link, the attacker may retain access to the victim's account through their own provider credentials.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Dancer2-Plugin-Auth-OAuth-2026-12746 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dancer2-plugin-auth-oauth-2026-12746.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc6749#section-10.12",
+            "url": "https://datatracker.ietf.org/doc/html/rfc6749#section-10.12"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/biafra/perl-Dancer2-Plugin-Auth-OAuth/commit/806420fc2abbe13bede4461475f2f3dcd7daf5f2.patch",
+            "url": "https://github.com/biafra/perl-Dancer2-Plugin-Auth-OAuth/commit/806420fc2abbe13bede4461475f2f3dcd7daf5f2.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BIAFRA/Dancer2-Plugin-Auth-OAuth-0.23/diff/BIAFRA/Dancer2-Plugin-Auth-OAuth-0.22",
+            "url": "https://metacpan.org/release/BIAFRA/Dancer2-Plugin-Auth-OAuth-0.23/diff/BIAFRA/Dancer2-Plugin-Auth-OAuth-0.22"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/04/9",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/04/9"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-12746 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12746"
+         }
+      ],
+      "title": "Dancer2-Plugin-Auth-OAuth vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Dancer2-Plugin-Auth-OAuth-2026-12746",
+         "initial_release_date": "2026-07-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.23",
+                  "product": {
+                     "name": "Dancer2-Plugin-Auth-OAuth less than 0.23",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2-Plugin-Auth-OAuth"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.23",
+                  "product": {
+                     "name": "Dancer2-Plugin-Auth-OAuth greater than or equal 0.23",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2-Plugin-Auth-OAuth"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Dancer2-Plugin-Auth-OAuth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-12746",
+         "cwe": {
+            "id": "CWE-352",
+            "name": "Cross-Site Request Forgery (CSRF)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Dancer2::Plugin::Auth::OAuth::Provider versions before 0.23 for Perl do not support the OAuth 2.0 state parameter.\n\nThe authentication_url method builds the provider authorization redirect without issuing a state value, and the callback method exchanges the callback code and registers the resulting token into the session without verifying that the callback corresponds to an authorization request this session initiated.\n\nAny application that uses this plugin for OAuth 2.0 login is exposed to login cross-site request forgery: because the callback is not bound to the session that began the flow, an attacker who starts an authorization with their own provider account can deliver the resulting callback to a victim, causing the victim's session to complete the attacker's authorization and associating the attacker's provider identity and access token with that session. Where the application persists this as an account link, the attacker may retain access to the victim's account through their own provider credentials.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.1,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "CSS::Minifier::XS versions before 0.14 for Perl have a memory leak when the entire document is minified away.  The minify function has a memory leak when processing a document containing only characters to be removed, such as comments and whitespace.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-CSS-Minifier-XS-2026-13593 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-css-minifier-xs-2026-13593.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GTERMARS/CSS-Minifier-XS-0.14/changes",
+            "url": "https://metacpan.org/release/GTERMARS/CSS-Minifier-XS-0.14/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/06/29/18",
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/29/18"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-13593 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13593"
+         }
+      ],
+      "title": "CSS-Minifier-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-CSS-Minifier-XS-2026-13593",
+         "initial_release_date": "2026-06-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.14",
+                  "product": {
+                     "name": "CSS-Minifier-XS less than 0.14",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CSS-Minifier-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.14",
+                  "product": {
+                     "name": "CSS-Minifier-XS greater than or equal 0.14",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CSS-Minifier-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "CSS-Minifier-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-13593",
+         "cwe": {
+            "id": "CWE-401",
+            "name": "Missing Release of Memory after Effective Lifetime"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "CSS::Minifier::XS versions before 0.14 for Perl have a memory leak when the entire document is minified away.\n\nThe minify function has a memory leak when processing a document containing only characters to be removed, such as comments and whitespace.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

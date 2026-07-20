@@ -1,0 +1,144 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::Statsite::Client versions through 1.1.0 for Perl allow metric injections.  Net::Statsite::Client is a client for the statsite protocol, which is a variant of statsd.  Newlines are not removed from metric names, allowing metric injections.  Values are not sanitised for newlines or other protocol control characters such as colons or pipes, allowing metric injections.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-Statsite-Client-2026-11373 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-statsite-client-2026-11373.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://armon.github.io/statsite",
+            "url": "http://armon.github.io/statsite"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/JASEI/Net-Statsite-Client-1.1.0/view/lib/Net/Statsite/Client.pm",
+            "url": "https://metacpan.org/release/JASEI/Net-Statsite-Client-1.1.0/view/lib/Net/Statsite/Client.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/N/Net-Statsite-Client/1.1.0/CVE-2026-11373-r1.patch",
+            "url": "https://security.metacpan.org/patches/N/Net-Statsite-Client/1.1.0/CVE-2026-11373-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-46719",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-46719"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-46720",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-46720"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-46739",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-46739"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-11373 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11373"
+         }
+      ],
+      "title": "Net-Statsite-Client vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-Statsite-Client-2026-11373",
+         "initial_release_date": "2026-06-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Net-Statsite-Client greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Statsite-Client"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-Statsite-Client"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-11373",
+         "cwe": {
+            "id": "CWE-93",
+            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::Statsite::Client versions through 1.1.0 for Perl allow metric injections.\n\nNet::Statsite::Client is a client for the statsite protocol, which is a variant of statsd.\n\nNewlines are not removed from metric names, allowing metric injections.\n\nValues are not sanitised for newlines or other protocol control characters such as colons or pipes, allowing metric injections.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

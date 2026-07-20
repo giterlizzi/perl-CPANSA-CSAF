@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "JavaScript::Minifier::XS versions before 0.16 for Perl leak memory on every call to minify(), allowing unbounded memory growth.  In JsMinify (XS.xs) the cleanup frees only the NodeSet structures and never the per-token contents buffers allocated in JsSetNodeContents; JsDiscardNode unlinks nodes without freeing their contents. Each token's contents buffer is therefore leaked on every call, and the two early returns taken when the node list is empty leak the whole NodeSet.  A long-lived process that minifies repeatedly, such as an asset pipeline or a server-side minifier endpoint, grows in memory without bound until it exhausts available memory and is killed, causing denial of service.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-JavaScript-Minifier-XS-2026-56018 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-javascript-minifier-xs-2026-56018.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/bleargh45/JavaScript-Minifier-XS/issues/10",
+            "url": "https://github.com/bleargh45/JavaScript-Minifier-XS/issues/10"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GTERMARS/JavaScript-Minifier-XS-0.16/changes",
+            "url": "https://metacpan.org/release/GTERMARS/JavaScript-Minifier-XS-0.16/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/06/29/17",
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/29/17"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-56018 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56018"
+         }
+      ],
+      "title": "JavaScript-Minifier-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-29T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-JavaScript-Minifier-XS-2026-56018",
+         "initial_release_date": "2026-06-29T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-29T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.16",
+                  "product": {
+                     "name": "JavaScript-Minifier-XS less than 0.16",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JavaScript-Minifier-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.16",
+                  "product": {
+                     "name": "JavaScript-Minifier-XS greater than or equal 0.16",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JavaScript-Minifier-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "JavaScript-Minifier-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-56018",
+         "cwe": {
+            "id": "CWE-400",
+            "name": "Uncontrolled Resource Consumption"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "JavaScript::Minifier::XS versions before 0.16 for Perl leak memory on every call to minify(), allowing unbounded memory growth.\n\nIn JsMinify (XS.xs) the cleanup frees only the NodeSet structures and never the per-token contents buffers allocated in JsSetNodeContents; JsDiscardNode unlinks nodes without freeing their contents. Each token's contents buffer is therefore leaked on every call, and the two early returns taken when the node list is empty leak the whole NodeSet.\n\nA long-lived process that minifies repeatedly, such as an asset pipeline or a server-side minifier endpoint, grows in memory without bound until it exhausts available memory and is killed, causing denial of service.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Module::Load versions before 0.22 for Perl allow arbitrary modules outside of @INC to be loaded.  Module names starting with \"::\" could be passed to the load function to specify arbitrary module paths.  Attackers able to influence module names passed to load could use that bug to execute arbitrary code.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Module-Load-2011-10043 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-module-load-2011-10043.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://blogs.perl.org/users/michael_g_schwern/2011/10/how-not-to-load-a-module-or-bad-interfaces-make-good-people-do-bad-things.html",
+            "url": "https://blogs.perl.org/users/michael_g_schwern/2011/10/how-not-to-load-a-module-or-bad-interfaces-make-good-people-do-bad-things.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BINGOS/Module-Load-0.22/changes",
+            "url": "https://metacpan.org/release/BINGOS/Module-Load-0.22/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BINGOS/Module-Load-0.22/diff/BINGOS/Module-Load-0.20/lib/Module/Load.pm",
+            "url": "https://metacpan.org/release/BINGOS/Module-Load-0.22/diff/BINGOS/Module-Load-0.20/lib/Module/Load.pm"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2011-10043 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-10043"
+         }
+      ],
+      "title": "Module-Load vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Module-Load-2011-10043",
+         "initial_release_date": "2026-07-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.22",
+                  "product": {
+                     "name": "Module-Load less than 0.22",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Module-Load"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.22",
+                  "product": {
+                     "name": "Module-Load greater than or equal 0.22",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Module-Load"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Module-Load"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2011-10043",
+         "cwe": {
+            "id": "CWE-145",
+            "name": "Improper Neutralization of Section Delimiters"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Module::Load versions before 0.22 for Perl allow arbitrary modules outside of @INC to be loaded.\n\nModule names starting with \"::\" could be passed to the load function to specify arbitrary module paths.\n\nAttackers able to influence module names passed to load could use that bug to execute arbitrary code.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

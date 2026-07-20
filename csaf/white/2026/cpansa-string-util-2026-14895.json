@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "String::Util versions before 1.36 for Perl are susceptible to a regular expression denial of service.  The trim and rtrim functions stripped trailing whitespace with s/\\s*$//u. Because \\s* matches greedily and the $ anchor fails whenever a non-whitespace character follows the whitespace, the regex engine retries the match at each offset of a long whitespace run, producing quadratic backtracking. The fix replaces \\s*$ with \\s+$.  Any caller that passes untrusted input to trim or rtrim can trigger CPU exhaustion with a string containing a long run of whitespace.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-String-Util-2026-14895 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-string-util-2026-14895.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/scottchiefbaker/String-Util/commit/f8150867aaeb8f57c59601aefb2193f2caed8745.patch",
+            "url": "https://github.com/scottchiefbaker/String-Util/commit/f8150867aaeb8f57c59601aefb2193f2caed8745.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/scottchiefbaker/String-Util/releases",
+            "url": "https://github.com/scottchiefbaker/String-Util/releases"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BAKERSCOT/String-Util-1.36/diff/BAKERSCOT/String-Util-1.35#lib/String/Util.pm",
+            "url": "https://metacpan.org/release/BAKERSCOT/String-Util-1.36/diff/BAKERSCOT/String-Util-1.35#lib/String/Util.pm"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/07/18",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/07/18"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-14895 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14895"
+         }
+      ],
+      "title": "String-Util vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-String-Util-2026-14895",
+         "initial_release_date": "2026-07-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.36",
+                  "product": {
+                     "name": "String-Util less than 1.36",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/String-Util"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.36",
+                  "product": {
+                     "name": "String-Util greater than or equal 1.36",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/String-Util"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "String-Util"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-14895",
+         "cwe": {
+            "id": "CWE-1333",
+            "name": "Inefficient Regular Expression Complexity"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "String::Util versions before 1.36 for Perl are susceptible to a regular expression denial of service.\n\nThe trim and rtrim functions stripped trailing whitespace with s/\\s*$//u. Because \\s* matches greedily and the $ anchor fails whenever a non-whitespace character follows the whitespace, the regex engine retries the match at each offset of a long whitespace run, producing quadratic backtracking. The fix replaces \\s*$ with \\s+$.\n\nAny caller that passes untrusted input to trim or rtrim can trigger CPU exhaustion with a string containing a long run of whitespace.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

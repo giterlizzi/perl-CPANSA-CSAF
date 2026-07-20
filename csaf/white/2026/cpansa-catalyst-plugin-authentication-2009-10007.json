@@ -1,0 +1,153 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Catalyst::Plugin::Authentication versions before 0.10_027 for Perl is susceptible to session fixation attacks.  Catalyst::Plugin::Authentication does not automatically change the session id after authentication. An attacker that obtains a session id cookie can use this to impersonate the victim.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Catalyst-Plugin-Authentication-2009-10007 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-authentication-2009-10007.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-catalyst/Catalyst-Plugin-Authentication/commit/b1385ea87a2491b64f33169222af19982d0acce3.patch",
+            "url": "https://github.com/perl-catalyst/Catalyst-Plugin-Authentication/commit/b1385ea87a2491b64f33169222af19982d0acce3.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/pod/Catalyst::Plugin::Session#change_session_id",
+            "url": "https://metacpan.org/pod/Catalyst::Plugin::Session#change_session_id"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/pod/Plack::Middleware::Session#change_id",
+            "url": "https://metacpan.org/pod/Plack::Middleware::Session#change_id"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ETHER/Catalyst-Plugin-Authentication-0.10_027/changes",
+            "url": "https://metacpan.org/release/ETHER/Catalyst-Plugin-Authentication-0.10_027/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/06/09/10",
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/09/10"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2009-10007 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-10007"
+         }
+      ],
+      "title": "Catalyst-Plugin-Authentication vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-09T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Catalyst-Plugin-Authentication-2009-10007",
+         "initial_release_date": "2026-06-09T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-09T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.10_027",
+                  "product": {
+                     "name": "Catalyst-Plugin-Authentication less than 0.10_027",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Authentication"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.10_027",
+                  "product": {
+                     "name": "Catalyst-Plugin-Authentication greater than or equal 0.10_027",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Authentication"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Catalyst-Plugin-Authentication"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2009-10007",
+         "cwe": {
+            "id": "CWE-384",
+            "name": "Session Fixation"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Catalyst::Plugin::Authentication versions before 0.10_027 for Perl is susceptible to session fixation attacks.\n\nCatalyst::Plugin::Authentication does not automatically change the session id after authentication. An attacker that obtains a session id cookie can use this to impersonate the victim.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

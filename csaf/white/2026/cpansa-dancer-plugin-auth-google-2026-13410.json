@@ -1,0 +1,134 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Dancer::Plugin::Auth::Google versions through 0.07 for Perl have TLS verification disabled.  The default user agent is initialised with SSL_verify_mode explicitly disabled.  An attacker with network man-in-the-middle (MITM) capability between the Dancer application and googleapis.com can intercept the OAuth2 token exchange and userinfo fetch, return a forged access_token and user profile, and be logged in to the Dancer application as any Google user.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Dancer-Plugin-Auth-Google-2026-13410 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dancer-plugin-auth-google-2026-13410.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/garu/Dancer-Plugin-Auth-Google/pull/5",
+            "url": "https://github.com/garu/Dancer-Plugin-Auth-Google/pull/5"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/pod/Furl#HTTPS-requests-claims-warnings!",
+            "url": "https://metacpan.org/pod/Furl#HTTPS-requests-claims-warnings!"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/D/Dancer-Plugin-Auth-Google/0.07/CVE-2026-13410-r1.patch",
+            "url": "https://security.metacpan.org/patches/D/Dancer-Plugin-Auth-Google/0.07/CVE-2026-13410-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/17/8",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/17/8"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-13410 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13410"
+         }
+      ],
+      "title": "Dancer-Plugin-Auth-Google vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-17T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Dancer-Plugin-Auth-Google-2026-13410",
+         "initial_release_date": "2026-07-17T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-17T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Dancer-Plugin-Auth-Google greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer-Plugin-Auth-Google"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Dancer-Plugin-Auth-Google"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-13410",
+         "cwe": {
+            "id": "CWE-295",
+            "name": "Improper Certificate Validation"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Dancer::Plugin::Auth::Google versions through 0.07 for Perl have TLS verification disabled.\n\nThe default user agent is initialised with SSL_verify_mode explicitly disabled.\n\nAn attacker with network man-in-the-middle (MITM) capability between the Dancer application and googleapis.com can intercept the OAuth2 token exchange and userinfo fetch, return a forged access_token and user profile, and be logged in to the Dancer application as any Google user.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.2,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

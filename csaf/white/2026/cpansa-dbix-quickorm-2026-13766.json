@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBIx::QuickORM versions before 0.000026 for Perl allow SQL injection via unquoted SQL identifiers.  The default SQL builder, a SQL::Abstract subclass, sets bindtype in its constructor but never quote_char, so SQL::Abstract emits identifiers verbatim. Caller-supplied identifiers (order_by, where-clause column keys, field and returning lists, upsert columns, and join aliases) reach the SQL string raw, while values are placeholder-bound and unaffected.  A caller that forwards untrusted input to an affected identifier position, such as a user-controlled order_by value, enables SQL injection: the row order can be made to depend on a sub-select over columns the query never selected, and the where and update identifier positions permit further data disclosure and tampering.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBIx-QuickORM-2026-13766 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dbix-quickorm-2026-13766.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/exodist/DBIx-QuickORM/commit/43d7684682050780f056f25e1879191fb0a3265e.patch",
+            "url": "https://github.com/exodist/DBIx-QuickORM/commit/43d7684682050780f056f25e1879191fb0a3265e.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EXODIST/DBIx-QuickORM-0.000026/changes",
+            "url": "https://metacpan.org/release/EXODIST/DBIx-QuickORM-0.000026/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/06/30/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/30/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-13766 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13766"
+         }
+      ],
+      "title": "DBIx-QuickORM vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DBIx-QuickORM-2026-13766",
+         "initial_release_date": "2026-06-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.000026",
+                  "product": {
+                     "name": "DBIx-QuickORM less than 0.000026",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBIx-QuickORM"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.000026",
+                  "product": {
+                     "name": "DBIx-QuickORM greater than or equal 0.000026",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBIx-QuickORM"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBIx-QuickORM"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-13766",
+         "cwe": {
+            "id": "CWE-89",
+            "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBIx::QuickORM versions before 0.000026 for Perl allow SQL injection via unquoted SQL identifiers.\n\nThe default SQL builder, a SQL::Abstract subclass, sets bindtype in its constructor but never quote_char, so SQL::Abstract emits identifiers verbatim. Caller-supplied identifiers (order_by, where-clause column keys, field and returning lists, upsert columns, and join aliases) reach the SQL string raw, while values are placeholder-bound and unaffected.\n\nA caller that forwards untrusted input to an affected identifier position, such as a user-controlled order_by value, enables SQL injection: the row order can be made to depend on a sub-select over columns the query never selected, and the where and update identifier positions permit further data disclosure and tampering.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

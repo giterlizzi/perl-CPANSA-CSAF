@@ -1,0 +1,119 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::BitTorrent versions through 2.0.1 for Perl allow remote memory exhaustion via deeply nested bencoded input.  bdecode recurses once per nested list or dictionary level with no depth cap, and each recursive call receives the remaining buffer by value while the list and dictionary branches capture the whole remainder, so every live recursion frame keeps its own copy of the shrinking buffer (O(N^2) bytes for an N-deep input). The decoder runs on every untrusted bencode source: .torrent files, BEP09 metadata fetched from peers, DHT messages, and tracker responses.  A bencoded input of roughly 150,000 nested lists (about 150 KB on the wire) drives multi-gigabyte peak memory, so one short message from any peer, or one crafted .torrent file or magnet link, terminates the client.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-BitTorrent-2026-57081 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-bittorrent-2026-57081.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/sanko/Net-BitTorrent.pm/security/advisories/GHSA-mv44-v82p-89xv",
+            "url": "https://github.com/sanko/Net-BitTorrent.pm/security/advisories/GHSA-mv44-v82p-89xv"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-57081 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57081"
+         }
+      ],
+      "title": "Net-BitTorrent vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-BitTorrent-2026-57081",
+         "initial_release_date": "2026-06-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Net-BitTorrent greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-BitTorrent"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-BitTorrent"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-57081",
+         "cwe": {
+            "id": "CWE-400",
+            "name": "Uncontrolled Resource Consumption"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::BitTorrent versions through 2.0.1 for Perl allow remote memory exhaustion via deeply nested bencoded input.\n\nbdecode recurses once per nested list or dictionary level with no depth cap, and each recursive call receives the remaining buffer by value while the list and dictionary branches capture the whole remainder, so every live recursion frame keeps its own copy of the shrinking buffer (O(N^2) bytes for an N-deep input). The decoder runs on every untrusted bencode source: .torrent files, BEP09 metadata fetched from peers, DHT messages, and tracker responses.\n\nA bencoded input of roughly 150,000 nested lists (about 150 KB on the wire) drives multi-gigabyte peak memory, so one short message from any peer, or one crafted .torrent file or magnet link, terminates the client.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

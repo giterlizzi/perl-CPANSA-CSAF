@@ -1,0 +1,124 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "GD::SecurityImage versions through 1.75 for Perl use rand to generate secrets.  The random method creates the challenge text used for the CAPTCHA by sampling characters from an array using Perl's built-in rand function, and generates a (by default) six-character string.  The built-in rand function is unsuitable for security applications because it is predictable and reversible.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-GD-SecurityImage-2026-13082 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-gd-securityimage-2026-13082.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/G/GD-SecurityImage/1.75/CVE-2026-13082-r1.patch",
+            "url": "https://security.metacpan.org/patches/G/GD-SecurityImage/1.75/CVE-2026-13082-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-40916",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-40916"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-13082 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13082"
+         }
+      ],
+      "title": "GD-SecurityImage vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-17T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-GD-SecurityImage-2026-13082",
+         "initial_release_date": "2026-07-17T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-17T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "GD-SecurityImage greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/GD-SecurityImage"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "GD-SecurityImage"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-13082",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "GD::SecurityImage versions through 1.75 for Perl use rand to generate secrets.\n\nThe random method creates the challenge text used for the CAPTCHA by sampling characters from an array using Perl's built-in rand function, and generates a (by default) six-character string.\n\nThe built-in rand function is unsuitable for security applications because it is predictable and reversible.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

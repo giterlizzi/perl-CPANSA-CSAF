@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Crypt::PBKDF2 versions before 0.261630 for Perl are vulnerable to timing attacks.  These versions use Perl's built-in eq comparison. Discrepancies in timing could be used to guess the underlying derived-key.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-PBKDF2-2017-20240 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-pbkdf2-2017-20240.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/arodland/Crypt-PBKDF2/pull/6",
+            "url": "https://github.com/arodland/Crypt-PBKDF2/pull/6"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ARODLAND/Crypt-PBKDF2-0.161520/source/lib/Crypt/PBKDF2.pm#L123-148",
+            "url": "https://metacpan.org/release/ARODLAND/Crypt-PBKDF2-0.161520/source/lib/Crypt/PBKDF2.pm#L123-148"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ARODLAND/Crypt-PBKDF2-0.261630/changes",
+            "url": "https://metacpan.org/release/ARODLAND/Crypt-PBKDF2-0.261630/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/06/12/3",
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/12/3"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2017-20240 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20240"
+         }
+      ],
+      "title": "Crypt-PBKDF2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-12T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Crypt-PBKDF2-2017-20240",
+         "initial_release_date": "2026-06-12T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-12T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.261630",
+                  "product": {
+                     "name": "Crypt-PBKDF2 less than 0.261630",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-PBKDF2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.261630",
+                  "product": {
+                     "name": "Crypt-PBKDF2 greater than or equal 0.261630",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-PBKDF2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-PBKDF2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2017-20240",
+         "cwe": {
+            "id": "CWE-208",
+            "name": "Observable Timing Discrepancy"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Crypt::PBKDF2 versions before 0.261630 for Perl are vulnerable to timing attacks.\n\nThese versions use Perl's built-in eq comparison. Discrepancies in timing could be used to guess the underlying derived-key.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.9,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

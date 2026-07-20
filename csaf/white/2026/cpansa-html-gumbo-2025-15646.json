@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTML::Gumbo versions before 0.19 for Perl disclose heap memory via type confusion.  Support for the <template> element was added to libgumbo 0.10.0 in 2015, but the walk_tree function in lib/HTML/Gumbo.xs was not updated to support it. The element was treated as a text-node, where strlen() over-reads the heap block that the pointer addresses.  Any caller that runs parse() with the default format => 'string', or with format => 'tree', on input containing a <template> element serializes the over-read bytes into the returned result, disclosing bounded heap contents. format => 'callback' reaches a croak on the unhandled node type and is unaffected.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTML-Gumbo-2025-15646 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-html-gumbo-2025-15646.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugs.debian.org/1104789",
+            "url": "https://bugs.debian.org/1104789"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/bestpractical/HTML-Gumbo/commit/15c0598909d4a64f47ef0a1abc5051f4e113c186.patch",
+            "url": "https://github.com/bestpractical/HTML-Gumbo/commit/15c0598909d4a64f47ef0a1abc5051f4e113c186.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BPS/HTML-Gumbo-0.19/changes",
+            "url": "https://metacpan.org/release/BPS/HTML-Gumbo-0.19/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/01/7",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/01/7"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2025-15646 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15646"
+         }
+      ],
+      "title": "HTML-Gumbo vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-01T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTML-Gumbo-2025-15646",
+         "initial_release_date": "2026-07-01T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-01T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.19",
+                  "product": {
+                     "name": "HTML-Gumbo less than 0.19",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTML-Gumbo"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.19",
+                  "product": {
+                     "name": "HTML-Gumbo greater than or equal 0.19",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTML-Gumbo"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTML-Gumbo"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2025-15646",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTML::Gumbo versions before 0.19 for Perl disclose heap memory via type confusion.\n\nSupport for the <template> element was added to libgumbo 0.10.0 in 2015, but the walk_tree function in lib/HTML/Gumbo.xs was not updated to support it. The element was treated as a text-node, where strlen() over-reads the heap block that the pointer addresses.\n\nAny caller that runs parse() with the default format => 'string', or with format => 'tree', on input containing a <template> element serializes the over-read bytes into the returned result, disclosing bounded heap contents. format => 'callback' reaches a croak on the unhandled node type and is unaffected.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Imager::File::JPEG versions before 1.003 for Perl leak heap memory when reading a JPEG with repeated APP13 markers in i_readjpeg_wiol.  i_readjpeg_wiol walks the marker list libjpeg returns and, for each APP13 marker, allocates a new buffer with *iptc_itext = mymalloc(...) and overwrites the previous pointer without freeing it. Only the final payload is later turned into a Perl scalar and freed, so a JPEG with N such markers leaks the first N-1 payloads on every read.  In a long-lived process, such as an upload or thumbnailing service, repeated reads accumulate these leaks and exhaust available memory, a denial of service.  The same handler ships bundled in the Imager distribution, where versions before 1.032 are affected and the fix ships in 1.032.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Imager-File-JPEG-2026-13708 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-file-jpeg-2026-13708.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/commit/9f1c485ca3ee15dc261549e11afb356866552c3a.patch",
+            "url": "https://github.com/tonycoz/imager/commit/9f1c485ca3ee15dc261549e11afb356866552c3a.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TONYC/Imager-File-JPEG-1.003/source/Changes",
+            "url": "https://metacpan.org/release/TONYC/Imager-File-JPEG-1.003/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/06/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/06/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-13708 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13708"
+         }
+      ],
+      "title": "Imager-File-JPEG vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-06T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Imager-File-JPEG-2026-13708",
+         "initial_release_date": "2026-07-06T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-06T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.003",
+                  "product": {
+                     "name": "Imager-File-JPEG less than 1.003",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager-File-JPEG"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.003",
+                  "product": {
+                     "name": "Imager-File-JPEG greater than or equal 1.003",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager-File-JPEG"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Imager-File-JPEG"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-13708",
+         "cwe": {
+            "id": "CWE-401",
+            "name": "Missing Release of Memory after Effective Lifetime"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Imager::File::JPEG versions before 1.003 for Perl leak heap memory when reading a JPEG with repeated APP13 markers in i_readjpeg_wiol.\n\ni_readjpeg_wiol walks the marker list libjpeg returns and, for each APP13 marker, allocates a new buffer with *iptc_itext = mymalloc(...) and overwrites the previous pointer without freeing it. Only the final payload is later turned into a Perl scalar and freed, so a JPEG with N such markers leaks the first N-1 payloads on every read.\n\nIn a long-lived process, such as an upload or thumbnailing service, repeated reads accumulate these leaks and exhaust available memory, a denial of service.\n\nThe same handler ships bundled in the Imager distribution, where versions before 1.032 are affected and the fix ships in 1.032.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

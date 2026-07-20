@@ -1,0 +1,129 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "App::Ack versions before 3.10.0 for Perl allow memory exhaustion via an unbounded context value in a project .ackrc.  ack searches up the directory hierarchy from the current directory for a project .ackrc and loads its options. The -B and -C context options accepted any positive integer, and ack sized the before-context buffer to that value, so a project .ackrc setting --before-context=100000000 made ack allocate a buffer of 100 million elements.  A project .ackrc committed to an untrusted repository can abort ack with an out-of-memory condition.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-ack-2026-49146 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-ack-2026-49146.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/beyondgrep/ack3/commit/45ff5fe77dbd96f7332f31943102291f878f30b8.patch",
+            "url": "https://github.com/beyondgrep/ack3/commit/45ff5fe77dbd96f7332f31943102291f878f30b8.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PETDANCE/ack-v3.10.0/source/Changes",
+            "url": "https://metacpan.org/release/PETDANCE/ack-v3.10.0/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/08/8",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/08/8"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-49146 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49146"
+         }
+      ],
+      "title": "ack vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-08T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-ack-2026-49146",
+         "initial_release_date": "2026-07-08T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-08T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "ack greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/ack"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "ack"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-49146",
+         "cwe": {
+            "id": "CWE-770",
+            "name": "Allocation of Resources Without Limits or Throttling"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "App::Ack versions before 3.10.0 for Perl allow memory exhaustion via an unbounded context value in a project .ackrc.\n\nack searches up the directory hierarchy from the current directory for a project .ackrc and loads its options. The -B and -C context options accepted any positive integer, and ack sized the before-context buffer to that value, so a project .ackrc setting --before-context=100000000 made ack allocate a buffer of 100 million elements.\n\nA project .ackrc committed to an untrusted repository can abort ack with an out-of-memory condition.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

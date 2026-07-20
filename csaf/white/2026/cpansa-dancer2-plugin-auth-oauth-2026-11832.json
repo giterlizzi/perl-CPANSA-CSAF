@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Dancer2::Plugin::Auth::OAuth versions before 0.22 for Perl default to a predictable nonce.  The default nonce was generated using an MD5 hash of the epoch time, which is predictable.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Dancer2-Plugin-Auth-OAuth-2026-11832 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dancer2-plugin-auth-oauth-2026-11832.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc5849#section-3.3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc5849#section-3.3"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc5849#section-4.9",
+            "url": "https://datatracker.ietf.org/doc/html/rfc5849#section-4.9"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/BIAFRA/Dancer2-Plugin-Auth-OAuth-0.22/changes",
+            "url": "https://metacpan.org/release/BIAFRA/Dancer2-Plugin-Auth-OAuth-0.22/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-22376",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-22376"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-11832 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11832"
+         }
+      ],
+      "title": "Dancer2-Plugin-Auth-OAuth vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-15T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Dancer2-Plugin-Auth-OAuth-2026-11832",
+         "initial_release_date": "2026-06-15T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-15T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.22",
+                  "product": {
+                     "name": "Dancer2-Plugin-Auth-OAuth less than 0.22",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2-Plugin-Auth-OAuth"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.22",
+                  "product": {
+                     "name": "Dancer2-Plugin-Auth-OAuth greater than or equal 0.22",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2-Plugin-Auth-OAuth"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Dancer2-Plugin-Auth-OAuth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-11832",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Dancer2::Plugin::Auth::OAuth versions before 0.22 for Perl default to a predictable nonce.\n\nThe default nonce was generated using an MD5 hash of the epoch time, which is predictable.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

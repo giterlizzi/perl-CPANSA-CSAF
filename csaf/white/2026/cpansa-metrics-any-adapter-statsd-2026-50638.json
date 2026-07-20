@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Metrics::Any::Adapter::DogStatsd versions before 0.04 for Perl does not protect against metric injections.  The statsd protocol (and extensions such as dogstatsd) allow mutiple metrics, separated by newlines, to be sent per packet.  Metrics::Any::Adapter::DogStatsd which extends Metrics::Any::Adapter::Statsd, which has a similar vulnerability.  In addition, the _tags function does not check tags for newlines or statsd control characters. The tags can be used for metric injections.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Metrics-Any-Adapter-Statsd-2026-50638 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-metrics-any-adapter-statsd-2026-50638.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PEVANS/Metrics-Any-Adapter-Statsd-0.04/changes",
+            "url": "https://metacpan.org/release/PEVANS/Metrics-Any-Adapter-Statsd-0.04/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-50637",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-50637"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-50639",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-50639"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-9270",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-9270"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-50638 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50638"
+         }
+      ],
+      "title": "Metrics-Any-Adapter-Statsd vulnerability",
+      "tracking": {
+         "current_release_date": "2026-06-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Metrics-Any-Adapter-Statsd-2026-50638",
+         "initial_release_date": "2026-06-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-06-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.04",
+                  "product": {
+                     "name": "Metrics-Any-Adapter-Statsd less than 0.04",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Metrics-Any-Adapter-Statsd"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.04",
+                  "product": {
+                     "name": "Metrics-Any-Adapter-Statsd greater than or equal 0.04",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Metrics-Any-Adapter-Statsd"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Metrics-Any-Adapter-Statsd"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-50638",
+         "cwe": {
+            "id": "CWE-93",
+            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Metrics::Any::Adapter::DogStatsd versions before 0.04 for Perl does not protect against metric injections.\n\nThe statsd protocol (and extensions such as dogstatsd) allow mutiple metrics, separated by newlines, to be sent per packet.\n\nMetrics::Any::Adapter::DogStatsd which extends Metrics::Any::Adapter::Statsd, which has a similar vulnerability.\n\nIn addition, the _tags function does not check tags for newlines or statsd control characters. The tags can be used for metric injections.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

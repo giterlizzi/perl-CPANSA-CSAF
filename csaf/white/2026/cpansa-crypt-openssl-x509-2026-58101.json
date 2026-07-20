@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Crypt::OpenSSL::X509 versions before 2.1.3 for Perl allow denial of service via NULL pointer dereference.  X509V3_EXT_d2i(ext) returns NULL when an extension's DER value fails to parse. basicC, ia5string, and auth_att dereference its result without a NULL check. keyid_data also dereferences akid->keyid, which is NULL for an empty AKI SEQUENCE (DER 30 00) even when the parse succeeds.  A caller invoking an affected helper on an extension from an untrusted certificate triggers a SIGSEGV that crashes the Perl process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Crypt-OpenSSL-X509-2026-58101 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-crypt-openssl-x509-2026-58101.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/dsully/perl-crypt-openssl-x509/commit/4c1e2370556097c253ae27abe9e1097ea377fbd2.patch",
+            "url": "https://github.com/dsully/perl-crypt-openssl-x509/commit/4c1e2370556097c253ae27abe9e1097ea377fbd2.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-X509-2.1.3/source/Changes.md",
+            "url": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-X509-2.1.3/source/Changes.md"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-58101 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58101"
+         }
+      ],
+      "title": "Crypt-OpenSSL-X509 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-13T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Crypt-OpenSSL-X509-2026-58101",
+         "initial_release_date": "2026-07-13T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-13T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.1.3",
+                  "product": {
+                     "name": "Crypt-OpenSSL-X509 less than 2.1.3",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-OpenSSL-X509"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.1.3",
+                  "product": {
+                     "name": "Crypt-OpenSSL-X509 greater than or equal 2.1.3",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-OpenSSL-X509"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Crypt-OpenSSL-X509"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-58101",
+         "cwe": {
+            "id": "CWE-476",
+            "name": "NULL Pointer Dereference"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Crypt::OpenSSL::X509 versions before 2.1.3 for Perl allow denial of service via NULL pointer dereference.\n\nX509V3_EXT_d2i(ext) returns NULL when an extension's DER value fails to parse. basicC, ia5string, and auth_att dereference its result without a NULL check. keyid_data also dereferences akid->keyid, which is NULL for an empty AKI SEQUENCE (DER 30 00) even when the parse succeeds.\n\nA caller invoking an affected helper on an extension from an untrusted certificate triggers a SIGSEGV that crashes the Perl process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

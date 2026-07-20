@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted <= and >= SQL operators on text.  DBI::SQL::Nano, DBI's built-in mini-SQL engine, evaluated WHERE predicates incorrectly in some cases. In the non-numeric string branch of the is_matched method, <= was evaluated using Perl's ge operator, and >= was evaluated using Perl's le operator.  SQL::Nano is the fallback query engine for DBI's file-backed drivers (DBD::File, DBD::DBM, CSV-style drivers) whenever SQL::Statement is not installed, and is forced whenever DBI_SQL_NANO=1. Queries over such tables use these predicates directly.  The impact depends on the context. Where an application relies on a WHERE clause to filter file-backed data for policy or authorization, an inverted <=/>= comparison silently returns the wrong rows.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBI-2026-15043 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dbi-2026-15043.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/commit/e9742ef85a75867cbd696860e3bf3e32b681f98d.patch",
+            "url": "https://github.com/perl5-dbi/dbi/commit/e9742ef85a75867cbd696860e3bf3e32b681f98d.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-mv45-ff6j-x9jp",
+            "url": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-mv45-ff6j-x9jp"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/DBI-1.651/changes",
+            "url": "https://metacpan.org/release/HMBRAND/DBI-1.651/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/14/9",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/14/9"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-15043 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15043"
+         }
+      ],
+      "title": "DBI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DBI-2026-15043",
+         "initial_release_date": "2026-07-14T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.42|<1.651",
+                  "product": {
+                     "name": "DBI greater than or equal 1.42 and less than 1.651",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.651",
+                  "product": {
+                     "name": "DBI greater than or equal 1.651",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-15043",
+         "cwe": {
+            "id": "CWE-480",
+            "name": "Use of Incorrect Operator"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted <= and >= SQL operators on text.\n\nDBI::SQL::Nano, DBI's built-in mini-SQL engine, evaluated WHERE predicates incorrectly in some cases. In the non-numeric string branch of the is_matched method, <= was evaluated using Perl's ge operator, and >= was evaluated using Perl's le operator.\n\nSQL::Nano is the fallback query engine for DBI's file-backed drivers (DBD::File, DBD::DBM, CSV-style drivers) whenever SQL::Statement is not installed, and is forced whenever DBI_SQL_NANO=1. Queries over such tables use these predicates directly.\n\nThe impact depends on the context. Where an application relies on a WHERE clause to filter file-backed data for policy or authorization, an inverted <=/>= comparison silently returns the wrong rows.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

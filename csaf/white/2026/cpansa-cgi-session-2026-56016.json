@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "CGI::Session::ID::md5 versions before 4.49 for Perl generate predictable session ids from low-entropy sources.  The generate_id method builds the session id from a MD5 digest of the process id, the epoch time, and the built-in rand() function. All three are predictable, low-entropy sources: the PID is drawn from a small range, the epoch time can be guessed or read from the HTTP Date header, and Perl's rand() is unsuitable for security purposes because it is predictable and reversible.  An attacker who predicts a session id can impersonate the corresponding session and bypass authentication.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-CGI-Session-2026-56016 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-cgi-session-2026-56016.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MARKSTOS/CGI-Session-4.49/changes",
+            "url": "https://metacpan.org/release/MARKSTOS/CGI-Session-4.49/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MARKSTOS/CGI-Session-4.49/source/lib/CGI/Session/ID/md5.pm",
+            "url": "https://metacpan.org/release/MARKSTOS/CGI-Session-4.49/source/lib/CGI/Session/ID/md5.pm"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/01/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/01/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-56016 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56016"
+         }
+      ],
+      "title": "CGI-Session vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-01T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-CGI-Session-2026-56016",
+         "initial_release_date": "2026-07-01T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-01T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<4.49",
+                  "product": {
+                     "name": "CGI-Session less than 4.49",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI-Session"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.49",
+                  "product": {
+                     "name": "CGI-Session greater than or equal 4.49",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI-Session"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "CGI-Session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-56016",
+         "cwe": {
+            "id": "CWE-338",
+            "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "CGI::Session::ID::md5 versions before 4.49 for Perl generate predictable session ids from low-entropy sources.\n\nThe generate_id method builds the session id from a MD5 digest of the process id, the epoch time, and the built-in rand() function. All three are predictable, low-entropy sources: the PID is drawn from a small range, the epoch time can be guessed or read from the HTTP Date header, and Perl's rand() is unsuitable for security purposes because it is predictable and reversible.\n\nAn attacker who predicts a session id can impersonate the corresponding session and bypass authentication.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.9,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
