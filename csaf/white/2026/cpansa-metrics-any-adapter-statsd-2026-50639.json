@@ -111,14 +111,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2026-50639",
-         "cwe": {
-            "id": "CWE-93",
-            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
-         },
          "notes": [
             {
                "category": "description",
-               "text": "Metrics::Any::Adapter::SignalFx versions before 0.04 for Perl does not protect against metric injections.\n\nThe statsd protocol (and extensions such as dogstatsd) allow mutiple metrics, separated by newlines, to be sent per packet.\n\nMetrics::Any::Adapter::SignalFx which extends Metrics::Any::Adapter::Statsd, which has a similar vulnerability.\n\nIn addition, the _labels function does not check tags labels newlines or statsd control characters. The labels can be used for metric injections.",
+               "text": null,
                "title": "Vulnerability Description"
             }
          ],
@@ -129,20 +125,7 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         },
-         "scores": [
-            {
-               "cvss_v3": {
-                  "baseScore": 6.5,
-                  "baseSeverity": "MEDIUM",
-                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
-                  "version": "3.1"
-               },
-               "products": [
-                  "CSAFPID-0001"
-               ]
-            }
-         ]
+         }
       }
    ]
 }
