@@ -104,14 +104,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2021-20809",
-         "cwe": {
-            "id": "CWE-79",
-            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
-         },
          "notes": [
             {
                "category": "description",
-               "text": "Cross-site scripting vulnerability in Create screens of Entry, Page, and Content Type of Movable Type (Movable Type 7 r.4903 and earlier (Movable Type 7 Series), Movable Type 6.8.0 and earlier (Movable Type 6 Series), Movable Type Advanced 7 r.4903 and earlier (Movable Type Advanced 7 Series), Movable Type Premium 1.44 and earlier, and Movable Type Premium Advanced 1.44 and earlier) allows remote attackers to inject arbitrary script or HTML via unspecified vectors.",
+               "text": null,
                "title": "Vulnerability Description"
             }
          ],
@@ -120,26 +116,7 @@
                "CSAFPID-0001",
                "CSAFPID-0002"
             ]
-         },
-         "scores": [
-            {
-               "cvss_v2": {
-                  "baseScore": 4.3,
-                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
-                  "version": "2.0"
-               },
-               "cvss_v3": {
-                  "baseScore": 6.1,
-                  "baseSeverity": "MEDIUM",
-                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
-                  "version": "3.1"
-               },
-               "products": [
-                  "CSAFPID-0001",
-                  "CSAFPID-0002"
-               ]
-            }
-         ]
+         }
       }
    ]
 }
