@@ -1,0 +1,178 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache Subversion 1.0.0 through 1.7.x before 1.7.17 and 1.8.x before 1.8.10 uses an MD5 hash of the URL and authentication realm to store cached credentials, which makes it easier for remote servers to obtain the credentials via a crafted authentication realm.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Alien-SVN-2014-3528-svn JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2014/cpansa-alien-svn-2014-3528-svn.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://subversion.apache.org/security/CVE-2014-3528-advisory.txt",
+            "url": "http://subversion.apache.org/security/CVE-2014-3528-advisory.txt"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/USN-2316-1",
+            "url": "http://www.ubuntu.com/usn/USN-2316-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/60722",
+            "url": "http://secunia.com/advisories/60722"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2014-08/msg00038.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2014-08/msg00038.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.apple.com/archives/security-announce/2015/Mar/msg00003.html",
+            "url": "http://lists.apple.com/archives/security-announce/2015/Mar/msg00003.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.apple.com/HT204427",
+            "url": "https://support.apple.com/HT204427"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-0166.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-0166.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-0165.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-0165.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+            "url": "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/68995",
+            "url": "http://www.securityfocus.com/bid/68995"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/59584",
+            "url": "http://secunia.com/advisories/59584"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/59432",
+            "url": "http://secunia.com/advisories/59432"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/201610-05",
+            "url": "https://security.gentoo.org/glsa/201610-05"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2014-3528 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-3528"
+         }
+      ],
+      "title": "Alien-SVN vulnerability",
+      "tracking": {
+         "current_release_date": "2014-08-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Alien-SVN-2014-3528-svn",
+         "initial_release_date": "2014-08-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2014-08-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.4.5.0|<=1.4.5.3",
+                  "product": {
+                     "name": "Alien-SVN greater than or equal 1.4.5.0 and less than or equal 1.4.5.3",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Alien-SVN"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Alien-SVN"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2014-3528",
+         "cwe": {
+            "id": "CWE-255",
+            "name": "Credentials Management Errors"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Apache Subversion 1.0.0 through 1.7.x before 1.7.17 and 1.8.x before 1.8.10 uses an MD5 hash of the URL and authentication realm to store cached credentials, which makes it easier for remote servers to obtain the credentials via a crafted authentication realm.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.0,
+                  "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

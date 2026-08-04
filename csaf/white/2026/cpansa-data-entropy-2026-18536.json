@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Data::Entropy versions before 0.010 for Perl read remote entropy sources over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg and Data::Entropy::RawSource::RandomnumbersInfo remote sources are accessed over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg integrity check trivially matches any non-empty byte string.\n\nAny on-path attacker, such as open WiFi, a compromised ISP, captive portal, or a hostile egress proxy substitutes the response and thereby chooses the bytes returned by rand_bits and rand_int for every application that selected one of these sources via with_entropy_source. The _checkbuf method response is equally attacker-controlled, so the retry/sleep behaviour is steerable too.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Data-Entropy-2026-18536 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-data-entropy-2026-18536.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Data-Entropy/security/advisories/GHSA-845w-rcqw-jwvv",
+            "url": "https://github.com/robrwo/Data-Entropy/security/advisories/GHSA-845w-rcqw-jwvv"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Data-Entropy-0.008/view/lib/Data/Entropy.pm#STATUS",
+            "url": "https://metacpan.org/release/RRWO/Data-Entropy-0.008/view/lib/Data/Entropy.pm#STATUS"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Data-Entropy-0.010/changes",
+            "url": "https://metacpan.org/release/RRWO/Data-Entropy-0.010/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-18536 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18536"
+         }
+      ],
+      "title": "Data-Entropy vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-01T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Data-Entropy-2026-18536",
+         "initial_release_date": "2026-08-01T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-01T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.010",
+                  "product": {
+                     "name": "Data-Entropy less than 0.010",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Entropy"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.010",
+                  "product": {
+                     "name": "Data-Entropy greater than or equal 0.010",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Entropy"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Data-Entropy"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-18536",
+         "cwe": {
+            "id": "CWE-319",
+            "name": "Cleartext Transmission of Sensitive Information"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Data::Entropy versions before 0.010 for Perl read remote entropy sources over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg and Data::Entropy::RawSource::RandomnumbersInfo remote sources are accessed over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg integrity check trivially matches any non-empty byte string.\n\nAny on-path attacker, such as open WiFi, a compromised ISP, captive portal, or a hostile egress proxy substitutes the response and thereby chooses the bytes returned by rand_bits and rand_int for every application that selected one of these sources via with_entropy_source. The _checkbuf method response is equally attacker-controlled, so the retry/sleep behaviour is steerable too.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

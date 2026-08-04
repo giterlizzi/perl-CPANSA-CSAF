@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Data::DisjointSet::Shared versions before 0.02 for Perl allow out-of-bounds reads and writes via an unvalidated parent index in dsu_find.\n\nThe attach-time validator dsu_validate_header checks the header scalars and region layout against the file size, but does not validate the array contents it then trusts. dsu_find walks and path-compresses parent[x] with x a raw file-stored index never bounded against the node count, so both the read and the compression write-back land out of bounds.\n\nA local peer that can write the backing file can leave the header valid while poisoning the parent array, so the next find or union both reads and writes through an out-of-bounds parent index, corrupting memory or crashing the process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Data-DisjointSet-Shared-2026-59147 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-data-disjointset-shared-2026-59147.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EGOR/Data-DisjointSet-Shared-0.02/changes",
+            "url": "https://metacpan.org/release/EGOR/Data-DisjointSet-Shared-0.02/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EGOR/Data-DisjointSet-Shared-0.02/diff/EGOR/Data-DisjointSet-Shared-0.01#dsu.h",
+            "url": "https://metacpan.org/release/EGOR/Data-DisjointSet-Shared-0.02/diff/EGOR/Data-DisjointSet-Shared-0.01#dsu.h"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-59147 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59147"
+         }
+      ],
+      "title": "Data-DisjointSet-Shared vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Data-DisjointSet-Shared-2026-59147",
+         "initial_release_date": "2026-07-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.02",
+                  "product": {
+                     "name": "Data-DisjointSet-Shared less than 0.02",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-DisjointSet-Shared"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.02",
+                  "product": {
+                     "name": "Data-DisjointSet-Shared greater than or equal 0.02",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-DisjointSet-Shared"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Data-DisjointSet-Shared"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-59147",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Data::DisjointSet::Shared versions before 0.02 for Perl allow out-of-bounds reads and writes via an unvalidated parent index in dsu_find.\n\nThe attach-time validator dsu_validate_header checks the header scalars and region layout against the file size, but does not validate the array contents it then trusts. dsu_find walks and path-compresses parent[x] with x a raw file-stored index never bounded against the node count, so both the read and the compression write-back land out of bounds.\n\nA local peer that can write the backing file can leave the header valid while poisoning the parent array, so the next find or union both reads and writes through an out-of-bounds parent index, corrupting memory or crashing the process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

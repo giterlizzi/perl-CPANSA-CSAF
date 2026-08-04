@@ -1,0 +1,168 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "The svn_repos_trace_node_locations function in Apache Subversion before 1.7.21 and 1.8.x before 1.8.14, when path-based authorization is used, allows remote authenticated users to obtain sensitive path information by reading the history of a node that has been moved from a hidden path.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Alien-SVN-2015-3187-svn JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2015/cpansa-alien-svn-2015-3187-svn.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securitytracker.com/id/1033215",
+            "url": "http://www.securitytracker.com/id/1033215"
+         },
+         {
+            "category": "external",
+            "summary": "http://subversion.apache.org/security/CVE-2015-3187-advisory.txt",
+            "url": "http://subversion.apache.org/security/CVE-2015-3187-advisory.txt"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2015/dsa-3331",
+            "url": "http://www.debian.org/security/2015/dsa-3331"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-updates/2015-08/msg00022.html",
+            "url": "http://lists.opensuse.org/opensuse-updates/2015-08/msg00022.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-1633.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-1633.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://support.apple.com/HT206172",
+            "url": "https://support.apple.com/HT206172"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.apple.com/archives/security-announce/2016/Mar/msg00003.html",
+            "url": "http://lists.apple.com/archives/security-announce/2016/Mar/msg00003.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/76273",
+            "url": "http://www.securityfocus.com/bid/76273"
+         },
+         {
+            "category": "external",
+            "summary": "http://rhn.redhat.com/errata/RHSA-2015-1742.html",
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-1742.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/USN-2721-1",
+            "url": "http://www.ubuntu.com/usn/USN-2721-1"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/201610-05",
+            "url": "https://security.gentoo.org/glsa/201610-05"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2015-3187 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3187"
+         }
+      ],
+      "title": "Alien-SVN vulnerability",
+      "tracking": {
+         "current_release_date": "2015-08-12T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Alien-SVN-2015-3187-svn",
+         "initial_release_date": "2015-08-12T00:00:00",
+         "revision_history": [
+            {
+               "date": "2015-08-12T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.7.17.0|<=1.7.17.1",
+                  "product": {
+                     "name": "Alien-SVN greater than or equal 1.7.17.0 and less than or equal 1.7.17.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Alien-SVN"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Alien-SVN"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2015-3187",
+         "cwe": {
+            "id": "CWE-200",
+            "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "The svn_repos_trace_node_locations function in Apache Subversion before 1.7.21 and 1.8.x before 1.8.14, when path-based authorization is used, allows remote authenticated users to obtain sensitive path information by reading the history of a node that has been moved from a hidden path.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.0,
+                  "vectorString": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

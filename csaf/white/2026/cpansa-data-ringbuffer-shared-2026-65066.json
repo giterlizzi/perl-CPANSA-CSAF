@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "low"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Data::RingBuffer::Shared versions before 0.04 for Perl create a world-readable mmap backing file and open it without O_EXCL or O_NOFOLLOW.\n\nThe segment is created in ring.h with open(path, O_RDWR|O_CREAT, 0666). The mode is 0666, so under the default umask 022 the file is created mode 0644 (world-readable). O_NOFOLLOW is absent, so a symlink planted at the path is followed, and O_EXCL is absent, so the open silently uses a pre-planted file instead of failing.\n\nA \"Shared\" segment naturally lives in a shared directory such as /tmp or /dev/shm, where any local user can read the IPC payloads stored in the world-readable segment, and a pre-planted file or symlink at the path lets a local attacker win a pre-creation race or redirect the open.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Data-RingBuffer-Shared-2026-65066 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-data-ringbuffer-shared-2026-65066.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EGOR/Data-RingBuffer-Shared-0.04/changes",
+            "url": "https://metacpan.org/release/EGOR/Data-RingBuffer-Shared-0.04/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EGOR/Data-RingBuffer-Shared-0.04/diff/EGOR/Data-RingBuffer-Shared-0.03#ring.h",
+            "url": "https://metacpan.org/release/EGOR/Data-RingBuffer-Shared-0.04/diff/EGOR/Data-RingBuffer-Shared-0.03#ring.h"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-65066 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65066"
+         }
+      ],
+      "title": "Data-RingBuffer-Shared vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Data-RingBuffer-Shared-2026-65066",
+         "initial_release_date": "2026-07-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.04",
+                  "product": {
+                     "name": "Data-RingBuffer-Shared less than 0.04",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-RingBuffer-Shared"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.04",
+                  "product": {
+                     "name": "Data-RingBuffer-Shared greater than or equal 0.04",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-RingBuffer-Shared"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Data-RingBuffer-Shared"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-65066",
+         "cwe": {
+            "id": "CWE-59",
+            "name": "Improper Link Resolution Before File Access ('Link Following')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Data::RingBuffer::Shared versions before 0.04 for Perl create a world-readable mmap backing file and open it without O_EXCL or O_NOFOLLOW.\n\nThe segment is created in ring.h with open(path, O_RDWR|O_CREAT, 0666). The mode is 0666, so under the default umask 022 the file is created mode 0644 (world-readable). O_NOFOLLOW is absent, so a symlink planted at the path is followed, and O_EXCL is absent, so the open silently uses a pre-planted file instead of failing.\n\nA \"Shared\" segment naturally lives in a shared directory such as /tmp or /dev/shm, where any local user can read the IPC payloads stored in the world-readable segment, and a pre-planted file or symlink at the path lets a local attacker win a pre-creation race or redirect the open.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 3.8,
+                  "baseSeverity": "LOW",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

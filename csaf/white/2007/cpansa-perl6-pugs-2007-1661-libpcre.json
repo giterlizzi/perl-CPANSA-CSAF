@@ -1,0 +1,329 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Perl-Compatible Regular Expression (PCRE) library before 7.3 backtracks too far when matching certain input bytes against some regex patterns in non-UTF-8 mode, which allows context-dependent attackers to obtain sensitive information or cause a denial of service (crash), as demonstrated by the \"\\X?\\d\" and \"\\P{L}?\\d\" patterns.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Perl6-Pugs-2007-1661-libpcre JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2007/cpansa-perl6-pugs-2007-1661-libpcre.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.pcre.org/changelog.txt",
+            "url": "http://www.pcre.org/changelog.txt"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2007/dsa-1399",
+            "url": "http://www.debian.org/security/2007/dsa-1399"
+         },
+         {
+            "category": "external",
+            "summary": "http://mail.gnome.org/archives/gtk-devel-list/2007-November/msg00022.html",
+            "url": "http://mail.gnome.org/archives/gtk-devel-list/2007-November/msg00022.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://issues.rpath.com/browse/RPL-1738",
+            "url": "https://issues.rpath.com/browse/RPL-1738"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200711-30.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200711-30.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:211",
+            "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:211"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.novell.com/linux/security/advisories/2007_62_pcre.html",
+            "url": "http://www.novell.com/linux/security/advisories/2007_62_pcre.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/26346",
+            "url": "http://www.securityfocus.com/bid/26346"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27538",
+            "url": "http://secunia.com/advisories/27538"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27543",
+            "url": "http://secunia.com/advisories/27543"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27554",
+            "url": "http://secunia.com/advisories/27554"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27741",
+            "url": "http://secunia.com/advisories/27741"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27773",
+            "url": "http://secunia.com/advisories/27773"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/27697",
+            "url": "http://secunia.com/advisories/27697"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.apple.com/archives/security-announce/2007/Dec/msg00002.html",
+            "url": "http://lists.apple.com/archives/security-announce/2007/Dec/msg00002.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.us-cert.gov/cas/techalerts/TA07-352A.html",
+            "url": "http://www.us-cert.gov/cas/techalerts/TA07-352A.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28136",
+            "url": "http://secunia.com/advisories/28136"
+         },
+         {
+            "category": "external",
+            "summary": "http://bugs.gentoo.org/show_bug.cgi?id=198976",
+            "url": "http://bugs.gentoo.org/show_bug.cgi?id=198976"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200801-02.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200801-02.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28406",
+            "url": "http://secunia.com/advisories/28406"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28414",
+            "url": "http://secunia.com/advisories/28414"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200801-18.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200801-18.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200801-19.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200801-19.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28714",
+            "url": "http://secunia.com/advisories/28714"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28720",
+            "url": "http://secunia.com/advisories/28720"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-March/msg00181.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-March/msg00181.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/29267",
+            "url": "http://secunia.com/advisories/29267"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.apple.com/archives/security-announce/2008/Mar/msg00001.html",
+            "url": "http://lists.apple.com/archives/security-announce/2008/Mar/msg00001.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/29420",
+            "url": "http://secunia.com/advisories/29420"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-200805-11.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-200805-11.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30155",
+            "url": "http://secunia.com/advisories/30155"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30219",
+            "url": "http://secunia.com/advisories/30219"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30106",
+            "url": "http://secunia.com/advisories/30106"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2008/dsa-1570",
+            "url": "http://www.debian.org/security/2008/dsa-1570"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2007/4238",
+            "url": "http://www.vupen.com/english/advisories/2007/4238"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2007/3790",
+            "url": "http://www.vupen.com/english/advisories/2007/3790"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2007/3725",
+            "url": "http://www.vupen.com/english/advisories/2007/3725"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2008/0924/references",
+            "url": "http://www.vupen.com/english/advisories/2008/0924/references"
+         },
+         {
+            "category": "external",
+            "summary": "http://docs.info.apple.com/article.html?artnum=307562",
+            "url": "http://docs.info.apple.com/article.html?artnum=307562"
+         },
+         {
+            "category": "external",
+            "summary": "http://docs.info.apple.com/article.html?artnum=307179",
+            "url": "http://docs.info.apple.com/article.html?artnum=307179"
+         },
+         {
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/38274",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/38274"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/547-1/",
+            "url": "https://usn.ubuntu.com/547-1/"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/483579/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/483579/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/483357/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/483357/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2007-1661 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1661"
+         }
+      ],
+      "title": "Perl6-Pugs vulnerability",
+      "tracking": {
+         "current_release_date": "2007-11-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Perl6-Pugs-2007-1661-libpcre",
+         "initial_release_date": "2007-11-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2007-11-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.0.12|<=6.2.9",
+                  "product": {
+                     "name": "Perl6-Pugs greater than or equal 6.0.12 and less than or equal 6.2.9",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Perl6-Pugs"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Perl6-Pugs"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2007-1661",
+         "notes": [
+            {
+               "category": "description",
+               "text": "Perl-Compatible Regular Expression (PCRE) library before 7.3 backtracks too far when matching certain input bytes against some regex patterns in non-UTF-8 mode, which allows context-dependent attackers to obtain sensitive information or cause a denial of service (crash), as demonstrated by the \"\\X?\\d\" and \"\\P{L}?\\d\" patterns.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.4,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

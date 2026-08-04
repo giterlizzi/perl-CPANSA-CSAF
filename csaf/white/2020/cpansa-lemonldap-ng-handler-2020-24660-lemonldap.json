@@ -1,0 +1,147 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "An issue was discovered in LemonLDAP::NG through 2.0.8, when NGINX is used. An attacker may bypass URL-based access control to protected Virtual Hosts by submitting a non-normalized URI. This also affects versions before 0.5.2 of the \"Lemonldap::NG handler for Node.js\" package.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Lemonldap-NG-Handler-2020-24660-lemonldap JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2020/cpansa-lemonldap-ng-handler-2020-24660-lemonldap.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/2290",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/2290"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.debian.org/security/2020/dsa-4762",
+            "url": "https://www.debian.org/security/2020/dsa-4762"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/LemonLDAPNG/node-lemonldap-ng-handler/releases/tag/0.5.2",
+            "url": "https://github.com/LemonLDAPNG/node-lemonldap-ng-handler/releases/tag/0.5.2"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/LemonLDAPNG/node-lemonldap-ng-handler/security/advisories/GHSA-x44x-r84w-8v67",
+            "url": "https://github.com/LemonLDAPNG/node-lemonldap-ng-handler/security/advisories/GHSA-x44x-r84w-8v67"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/blob/master/changelog",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/blob/master/changelog"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2020-24660 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-24660"
+         }
+      ],
+      "title": "Lemonldap-NG-Handler vulnerability",
+      "tracking": {
+         "current_release_date": "2020-09-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Lemonldap-NG-Handler-2020-24660-lemonldap",
+         "initial_release_date": "2020-09-14T00:00:00",
+         "revision_history": [
+            {
+               "date": "2020-09-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/0.63",
+                  "product": {
+                     "name": "Lemonldap-NG-Handler ",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Handler"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Lemonldap-NG-Handler"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2020-24660",
+         "cwe": {
+            "id": "CWE-425",
+            "name": "Direct Request ('Forced Browsing')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "An issue was discovered in LemonLDAP::NG through 2.0.8, when NGINX is used. An attacker may bypass URL-based access control to protected Virtual Hosts by submitting a non-normalized URI. This also affects versions before 0.5.2 of the \"Lemonldap::NG handler for Node.js\" package.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 7.5,
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

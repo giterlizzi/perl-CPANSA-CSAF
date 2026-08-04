@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Data::Intern::Shared versions before 0.02 for Perl allow an out-of-bounds read via unvalidated slot, reverse and arena indices in si_idx_find.\n\nThe attach-time validator si_validate_header is thorough about the header and layout (magic, version, section offsets, total_size, count and arena_used) but does not validate the three arrays it then trusts. Every lookup in si_idx_find walks a triple indirection read straight from the mmap'd segment, arena[reverse[slots[i].id]], with no bound on slots[i].id against count, on the reverse[id] arena offset against arena_used, or on the arena record's length prefix.\n\nA local peer that can write the backing file can leave the header valid while poisoning a slot id, a reverse offset or an arena length prefix, so an id_of, intern or string lookup dereferences the chain out of bounds; because string() returns a file-controlled length of bytes from the arena, adjacent process memory can be disclosed.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Data-Intern-Shared-2026-59145 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-data-intern-shared-2026-59145.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EGOR/Data-Intern-Shared-0.02/changes",
+            "url": "https://metacpan.org/release/EGOR/Data-Intern-Shared-0.02/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EGOR/Data-Intern-Shared-0.02/diff/EGOR/Data-Intern-Shared-0.01#intern.h",
+            "url": "https://metacpan.org/release/EGOR/Data-Intern-Shared-0.02/diff/EGOR/Data-Intern-Shared-0.01#intern.h"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-59145 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59145"
+         }
+      ],
+      "title": "Data-Intern-Shared vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Data-Intern-Shared-2026-59145",
+         "initial_release_date": "2026-07-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.02",
+                  "product": {
+                     "name": "Data-Intern-Shared less than 0.02",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Intern-Shared"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.02",
+                  "product": {
+                     "name": "Data-Intern-Shared greater than or equal 0.02",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Data-Intern-Shared"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Data-Intern-Shared"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-59145",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Data::Intern::Shared versions before 0.02 for Perl allow an out-of-bounds read via unvalidated slot, reverse and arena indices in si_idx_find.\n\nThe attach-time validator si_validate_header is thorough about the header and layout (magic, version, section offsets, total_size, count and arena_used) but does not validate the three arrays it then trusts. Every lookup in si_idx_find walks a triple indirection read straight from the mmap'd segment, arena[reverse[slots[i].id]], with no bound on slots[i].id against count, on the reverse[id] arena offset against arena_used, or on the arena record's length prefix.\n\nA local peer that can write the backing file can leave the header valid while poisoning a slot id, a reverse offset or an arena length prefix, so an id_of, intern or string lookup dereferences the chain out of bounds; because string() returns a file-controlled length of bytes from the arena, adjacent process memory can be disclosed.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

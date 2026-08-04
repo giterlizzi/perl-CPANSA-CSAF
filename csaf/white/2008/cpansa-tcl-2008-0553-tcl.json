@@ -1,0 +1,333 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Stack-based buffer overflow in the ReadImage function in tkImgGIF.c in Tk (Tcl/Tk) before 8.5.1 allows remote attackers to execute arbitrary code via a crafted GIF image, a similar issue to CVE-2006-4484.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Tcl-2008-0553-tcl JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2008/cpansa-tcl-2008-0553-tcl.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://sourceforge.net/project/shownotes.php?release_id=573933&group_id=10894",
+            "url": "http://sourceforge.net/project/shownotes.php?release_id=573933&group_id=10894"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/27655",
+            "url": "http://www.securityfocus.com/bid/27655"
+         },
+         {
+            "category": "external",
+            "summary": "http://securitytracker.com/id?1019309",
+            "url": "http://securitytracker.com/id?1019309"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28784",
+            "url": "http://secunia.com/advisories/28784"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=431518",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=431518"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00193.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00193.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00132.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00132.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00115.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00115.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00205.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-February/msg00205.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:041",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:041"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28807",
+            "url": "http://secunia.com/advisories/28807"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28848",
+            "url": "http://secunia.com/advisories/28848"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2008/dsa-1490",
+            "url": "http://www.debian.org/security/2008/dsa-1490"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2008/dsa-1491",
+            "url": "http://www.debian.org/security/2008/dsa-1491"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28857",
+            "url": "http://secunia.com/advisories/28857"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28867",
+            "url": "http://secunia.com/advisories/28867"
+         },
+         {
+            "category": "external",
+            "summary": "http://wiki.rpath.com/Advisories:rPSA-2008-0054",
+            "url": "http://wiki.rpath.com/Advisories:rPSA-2008-0054"
+         },
+         {
+            "category": "external",
+            "summary": "https://issues.rpath.com/browse/RPL-2215",
+            "url": "https://issues.rpath.com/browse/RPL-2215"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/28954",
+            "url": "http://secunia.com/advisories/28954"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2008-0135.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0135.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2008-0134.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0134.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2008-0136.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0136.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/29069",
+            "url": "http://secunia.com/advisories/29069"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/29070",
+            "url": "http://secunia.com/advisories/29070"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2008-04/msg00005.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2008-04/msg00005.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/29622",
+            "url": "http://secunia.com/advisories/29622"
+         },
+         {
+            "category": "external",
+            "summary": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-237465-1",
+            "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-237465-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30129",
+            "url": "http://secunia.com/advisories/30129"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vmware.com/security/advisories/VMSA-2008-0009.html",
+            "url": "http://www.vmware.com/security/advisories/VMSA-2008-0009.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30535",
+            "url": "http://secunia.com/advisories/30535"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30717",
+            "url": "http://secunia.com/advisories/30717"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30783",
+            "url": "http://secunia.com/advisories/30783"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.novell.com/linux/security/advisories/2008_13_sr.html",
+            "url": "http://www.novell.com/linux/security/advisories/2008_13_sr.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2008/dsa-1598",
+            "url": "http://www.debian.org/security/2008/dsa-1598"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2008-May/msg00116.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-May/msg00116.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/30188",
+            "url": "http://secunia.com/advisories/30188"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2008/0430",
+            "url": "http://www.vupen.com/english/advisories/2008/0430"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2008/1744",
+            "url": "http://www.vupen.com/english/advisories/2008/1744"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2008/1456/references",
+            "url": "http://www.vupen.com/english/advisories/2008/1456/references"
+         },
+         {
+            "category": "external",
+            "summary": "http://ubuntu.com/usn/usn-664-1",
+            "url": "http://ubuntu.com/usn/usn-664-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/32608",
+            "url": "http://secunia.com/advisories/32608"
+         },
+         {
+            "category": "external",
+            "summary": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10098",
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10098"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/493080/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/493080/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/488069/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/488069/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2008-0553 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0553"
+         }
+      ],
+      "title": "Tcl vulnerability",
+      "tracking": {
+         "current_release_date": "2008-02-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Tcl-2008-0553-tcl",
+         "initial_release_date": "2008-02-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2008-02-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.89|<=1.27",
+                  "product": {
+                     "name": "Tcl greater than or equal 0.89 and less than or equal 1.27",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tcl"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Tcl"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2008-0553",
+         "cwe": {
+            "id": "CWE-119",
+            "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Stack-based buffer overflow in the ReadImage function in tkImgGIF.c in Tk (Tcl/Tk) before 8.5.1 allows remote attackers to execute arbitrary code via a crafted GIF image, a similar issue to CVE-2006-4484.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 6.8,
+                  "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

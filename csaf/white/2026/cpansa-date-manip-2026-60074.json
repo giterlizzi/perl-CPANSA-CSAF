@@ -1,0 +1,137 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Date::Manip versions through 6.99 for Perl return corrupted dates via non-ASCII decimal digits that pass the numeric range tests in check.\n\nThe parse regexes capture year, month and day with the `\\d` shorthand, which on a character string matches the whole Unicode decimal digit property `\\p{Nd}` and not just `[0-9]`. Date::Manip::Base::check then validates the captured fields with numeric comparisons alone (`$y<1 || $y>9999`, `$m<1 || $m>12`, `$d<1 || $d>$days`), and _parse_check stores the numified fields (`$y+0`). Perl truncates a string at the first character that is not an ASCII digit, so a field whose leading characters are ASCII digits numifies to an in-range prefix and satisfies every test: a year field of three ASCII digits followed by U+0664 ARABIC-INDIC DIGIT FOUR numifies to 202, giving the year 0202, and one non-ASCII digit in the month or day field shifts those fields the same way. The hour, minute and second fields match explicit ASCII character classes (`0?[0-9]`, `[0-5][0-9]`) and do not shift, though a non-ASCII digit in a fractional hour or minute field truncates the fraction.\n\nAny caller that passes an untrusted character string to ParseDate() or Date::Manip::Date->parse() can get back a date that differs from the string it parsed, with no parse error. Where the parsed date gates logic such as an expiry check or a retention window, the shift goes unnoticed.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Date-Manip-2026-60074 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-date-manip-2026-60074.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SBECK/Date-Manip-6.99/source/lib/Date/Manip/Base.pm#L602-614",
+            "url": "https://metacpan.org/release/SBECK/Date-Manip-6.99/source/lib/Date/Manip/Base.pm#L602-614"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SBECK/Date-Manip-6.99/source/lib/Date/Manip/Date.pm#L1536-1539",
+            "url": "https://metacpan.org/release/SBECK/Date-Manip-6.99/source/lib/Date/Manip/Date.pm#L1536-1539"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/D/Date-Manip/6.99/CVE-2026-60074-r1.patch",
+            "url": "https://security.metacpan.org/patches/D/Date-Manip/6.99/CVE-2026-60074-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/07/30/19",
+            "url": "http://www.openwall.com/lists/oss-security/2026/07/30/19"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-60074 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60074"
+         }
+      ],
+      "title": "Date-Manip vulnerability",
+      "tracking": {
+         "current_release_date": "2026-07-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Date-Manip-2026-60074",
+         "initial_release_date": "2026-07-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-07-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Date-Manip greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Date-Manip"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Date-Manip"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-60074",
+         "cwe": {
+            "id": "CWE-1289",
+            "name": "Improper Validation of Unsafe Equivalence in Input"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Date::Manip versions through 6.99 for Perl return corrupted dates via non-ASCII decimal digits that pass the numeric range tests in check.\n\nThe parse regexes capture year, month and day with the `\\d` shorthand, which on a character string matches the whole Unicode decimal digit property `\\p{Nd}` and not just `[0-9]`. Date::Manip::Base::check then validates the captured fields with numeric comparisons alone (`$y<1 || $y>9999`, `$m<1 || $m>12`, `$d<1 || $d>$days`), and _parse_check stores the numified fields (`$y+0`). Perl truncates a string at the first character that is not an ASCII digit, so a field whose leading characters are ASCII digits numifies to an in-range prefix and satisfies every test: a year field of three ASCII digits followed by U+0664 ARABIC-INDIC DIGIT FOUR numifies to 202, giving the year 0202, and one non-ASCII digit in the month or day field shifts those fields the same way. The hour, minute and second fields match explicit ASCII character classes (`0?[0-9]`, `[0-5][0-9]`) and do not shift, though a non-ASCII digit in a fractional hour or minute field truncates the fraction.\n\nAny caller that passes an untrusted character string to ParseDate() or Date::Manip::Date->parse() can get back a date that differs from the string it parsed, with no parse error. Where the parsed date gates logic such as an expiry check or a retention window, the shift goes unnoticed.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
