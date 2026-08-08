@@ -4,6 +4,9 @@
 2026/cpansa-yaml-syck-2026-5089.json
 2026/cpansa-yaml-syck-2026-4177.json
 2026/cpansa-yaml-syck-2026-13713.json
+2026/cpansa-xml-sig-2026-9487.json
+2026/cpansa-xml-sig-2026-9390.json
+2026/cpansa-xml-sig-2026-18568.json
 2026/cpansa-xml-parser-2006-10003.json
 2026/cpansa-xml-parser-2006-10002.json
 2026/cpansa-xml-libxml-2026-8177.json
@@ -49,6 +52,9 @@
 2026/cpansa-net-statsd-lite-2026-8788.json
 2026/cpansa-net-statsd-lite-2026-46719.json
 2026/cpansa-net-statsd-2026-46739.json
+2026/cpansa-net-saml2-2026-18108.json
+2026/cpansa-net-saml2-2026-18092.json
+2026/cpansa-net-saml2-2026-18089.json
 2026/cpansa-net-nsca-client-2024-57854.json
 2026/cpansa-net-movabletype-2026-25776.json
 2026/cpansa-net-ip-lpm-2026-56015.json
@@ -78,6 +84,10 @@
 2026/cpansa-metrics-any-adapter-statsd-2026-50638.json
 2026/cpansa-metrics-any-adapter-statsd-2026-50637.json
 2026/cpansa-maypole-2025-15578.json
+2026/cpansa-lucy-2026-61486.json
+2026/cpansa-lucy-2026-61485.json
+2026/cpansa-lucy-2026-61484.json
+2026/cpansa-lucy-2026-61483.json
 2026/cpansa-list-someutils-xs-2026-12844.json
 2026/cpansa-libwww-perl-2026-8368.json
 2026/cpansa-javascript-minifier-xs-2026-56018.json
@@ -104,6 +114,8 @@
 2026/cpansa-html-bare-2026-13397.json
 2026/cpansa-harfbuzz-shaper-2026-0943.json
 2026/cpansa-grid-machine-2026-4851.json
+2026/cpansa-google-auth-2026-66902.json
+2026/cpansa-google-auth-2026-66901.json
 2026/cpansa-gd-securityimage-2026-13082.json
 2026/cpansa-gd-2026-11526.json
 2026/cpansa-gazelle-2026-40562.json

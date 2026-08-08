@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Google::Auth versions before 0.06 for Perl run a command named in an external_account credentials JSON via an ungated system call.\n\nThe Pluggable subclass reads credential_source.executable.command from the credentials JSON and runs it as `system($command)`, a single argument call that passes the whole string to /bin/sh -c. The executable's environment_variables map from the same JSON is copied into %ENV first. No opt-in gate guards the call. make_creds selects the Pluggable subclass whenever credential_source.executable is present, so the path is reached from the standard Application Default Credentials flow, including a \"type\": \"external_account\" configuration read from the file named by GOOGLE_APPLICATION_CREDENTIALS. Configurations without credential_source.executable do not select this subclass and do not reach the call.\n\nAny caller that builds credentials from a configuration it does not fully control runs the embedded command with the privileges of the application process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Google-Auth-2026-66902 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-google-auth-2026-66902.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/GoogleCloudPlatform/google-auth-library-perl/commit/c95c77e70bec94f17e239d88050f843ea1cade95.patch",
+            "url": "https://github.com/GoogleCloudPlatform/google-auth-library-perl/commit/c95c77e70bec94f17e239d88050f843ea1cade95.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/CJCOLLIER/Google-Auth-0.06/diff/CJCOLLIER/Google-Auth-0.05",
+            "url": "https://metacpan.org/release/CJCOLLIER/Google-Auth-0.06/diff/CJCOLLIER/Google-Auth-0.05"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/04/35",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/04/35"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-66902 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66902"
+         }
+      ],
+      "title": "Google-Auth vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Google-Auth-2026-66902",
+         "initial_release_date": "2026-08-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.06",
+                  "product": {
+                     "name": "Google-Auth less than 0.06",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Google-Auth"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.06",
+                  "product": {
+                     "name": "Google-Auth greater than or equal 0.06",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Google-Auth"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Google-Auth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-66902",
+         "cwe": {
+            "id": "CWE-78",
+            "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Google::Auth versions before 0.06 for Perl run a command named in an external_account credentials JSON via an ungated system call.\n\nThe Pluggable subclass reads credential_source.executable.command from the credentials JSON and runs it as `system($command)`, a single argument call that passes the whole string to /bin/sh -c. The executable's environment_variables map from the same JSON is copied into %ENV first. No opt-in gate guards the call. make_creds selects the Pluggable subclass whenever credential_source.executable is present, so the path is reached from the standard Application Default Credentials flow, including a \"type\": \"external_account\" configuration read from the file named by GOOGLE_APPLICATION_CREDENTIALS. Configurations without credential_source.executable do not select this subclass and do not reach the call.\n\nAny caller that builds credentials from a configuration it does not fully control runs the embedded command with the privileges of the application process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::SAML2 versions before 0.86 for Perl allow SAML authentication bypass via XML signature wrapping because new_from_xml reads assertion identity with document-wide XPath instead of the signed subtree.\n\nnew_from_xml reads the NameID, attribute values, SessionIndex, audience and other identity fields with document-wide XPath, such as //saml:Assertion/saml:AttributeStatement/saml:Attribute and //saml:Subject/saml:NameID, which select the first matching element in document order rather than the element covered by the verified signature. handle_response confirms that a signature is present and, when a cacert is configured, that it chains to the CA, but XML::Sig verifies only the element named by the signature's Reference URI, so unsigned sibling assertions in the same document are not covered. An attacker who holds any one IdP-signed assertion can add an unsigned attacker-authored assertion earlier in document order; the signature still verifies and the document-order XPath returns the attacker's NameID and attributes.\n\nAny caller that passes an untrusted Response to new_from_xml can accept identity fields from an assertion the IdP never signed, even when a cacert trust anchor is configured, so a party holding one valid IdP-signed assertion can authenticate as an arbitrary user.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-SAML2-2026-18092 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-saml2-2026-18092.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-net-saml2/perl-Net-SAML2/commit/201fead7f42b83f40c84bf4a311a25b09acd18f9.patch",
+            "url": "https://github.com/perl-net-saml2/perl-Net-SAML2/commit/201fead7f42b83f40c84bf4a311a25b09acd18f9.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/Net-SAML2-0.86/changes",
+            "url": "https://metacpan.org/release/TIMLEGGE/Net-SAML2-0.86/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-18092 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18092"
+         }
+      ],
+      "title": "Net-SAML2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-SAML2-2026-18092",
+         "initial_release_date": "2026-08-03T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.86",
+                  "product": {
+                     "name": "Net-SAML2 less than 0.86",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-SAML2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.86",
+                  "product": {
+                     "name": "Net-SAML2 greater than or equal 0.86",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-SAML2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-SAML2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-18092",
+         "cwe": {
+            "id": "CWE-347",
+            "name": "Improper Verification of Cryptographic Signature"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::SAML2 versions before 0.86 for Perl allow SAML authentication bypass via XML signature wrapping because new_from_xml reads assertion identity with document-wide XPath instead of the signed subtree.\n\nnew_from_xml reads the NameID, attribute values, SessionIndex, audience and other identity fields with document-wide XPath, such as //saml:Assertion/saml:AttributeStatement/saml:Attribute and //saml:Subject/saml:NameID, which select the first matching element in document order rather than the element covered by the verified signature. handle_response confirms that a signature is present and, when a cacert is configured, that it chains to the CA, but XML::Sig verifies only the element named by the signature's Reference URI, so unsigned sibling assertions in the same document are not covered. An attacker who holds any one IdP-signed assertion can add an unsigned attacker-authored assertion earlier in document order; the signature still verifies and the document-order XPath returns the attacker's NameID and attributes.\n\nAny caller that passes an untrusted Response to new_from_xml can accept identity fields from an assertion the IdP never signed, even when a cacert trust anchor is configured, so a party holding one valid IdP-signed assertion can authenticate as an arbitrary user.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.1,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

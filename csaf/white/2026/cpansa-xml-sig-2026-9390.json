@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "XML::Sig versions before 0.71 for Perl allow XPath injection in ID lookup.\n\nverify() and _get_signed_xml() in lib/XML/Sig.pm build XPath expressions by concatenating the SignedInfo/Reference/@URI value read from the document being verified. The value is neither escaped nor checked against the NCName grammar that XML requires of an ID, so a URI containing a single quote closes the string literal in the generated expression and appends arbitrary XPath operators.\n\nA crafted URI can make the lookup match elements the reference does not name, or every element in the document, so which node is selected for digest verification is decided by the injected expression rather than by the reference.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-XML-Sig-2026-9390 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-sig-2026-9390.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-net-saml2/perl-XML-Sig/commit/69ad2b421118fadd33d57f50b110b8d161e8fef5.patch",
+            "url": "https://github.com/perl-net-saml2/perl-XML-Sig/commit/69ad2b421118fadd33d57f50b110b8d161e8fef5.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-net-saml2/perl-XML-Sig/commit/a85aad21aa767ac1c158bbfc19447683941ab376.patch",
+            "url": "https://github.com/perl-net-saml2/perl-XML-Sig/commit/a85aad21aa767ac1c158bbfc19447683941ab376.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/XML-Sig-0.71/changes",
+            "url": "https://metacpan.org/release/TIMLEGGE/XML-Sig-0.71/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-9390 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9390"
+         }
+      ],
+      "title": "XML-Sig vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-XML-Sig-2026-9390",
+         "initial_release_date": "2026-08-03T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.71",
+                  "product": {
+                     "name": "XML-Sig less than 0.71",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Sig"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.71",
+                  "product": {
+                     "name": "XML-Sig greater than or equal 0.71",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Sig"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "XML-Sig"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-9390",
+         "cwe": {
+            "id": "CWE-643",
+            "name": "Improper Neutralization of Data within XPath Expressions ('XPath Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "XML::Sig versions before 0.71 for Perl allow XPath injection in ID lookup.\n\nverify() and _get_signed_xml() in lib/XML/Sig.pm build XPath expressions by concatenating the SignedInfo/Reference/@URI value read from the document being verified. The value is neither escaped nor checked against the NCName grammar that XML requires of an ID, so a URI containing a single quote closes the string literal in the generated expression and appends arbitrary XPath operators.\n\nA crafted URI can make the lookup match elements the reference does not name, or every element in the document, so which node is selected for digest verification is decided by the injected expression rather than by the reference.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

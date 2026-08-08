@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "XML::Sig versions before 0.71 for Perl allow signature wrapping via duplicate ID.\n\n_get_signed_xml() in lib/XML/Sig.pm, called from verify(), resolves the SignedInfo Reference/@URI to a node with the XPath expression \"//*[@ID='$id']\" and returns the first node of the resulting node set. A document in which two elements share that ID value is accepted: the digest and signature are checked against whichever element comes first in document order, and the duplicate is not detected.\n\nSuch a document verifies successfully while an application that resolves the same ID independently can read the second, attacker supplied element; in a SAML2 context this places the contents of an Assertion under attacker control.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-XML-Sig-2026-9487 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-xml-sig-2026-9487.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-net-saml2/perl-XML-Sig/commit/4976bde5245df69b8e02c6ae061acbd4891cd7f9.patch",
+            "url": "https://github.com/perl-net-saml2/perl-XML-Sig/commit/4976bde5245df69b8e02c6ae061acbd4891cd7f9.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TIMLEGGE/XML-Sig-0.71/source/Changes",
+            "url": "https://metacpan.org/release/TIMLEGGE/XML-Sig-0.71/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-9487 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9487"
+         }
+      ],
+      "title": "XML-Sig vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-XML-Sig-2026-9487",
+         "initial_release_date": "2026-08-03T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.71",
+                  "product": {
+                     "name": "XML-Sig less than 0.71",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Sig"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.71",
+                  "product": {
+                     "name": "XML-Sig greater than or equal 0.71",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/XML-Sig"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "XML-Sig"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-9487",
+         "cwe": {
+            "id": "CWE-347",
+            "name": "Improper Verification of Cryptographic Signature"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "XML::Sig versions before 0.71 for Perl allow signature wrapping via duplicate ID.\n\n_get_signed_xml() in lib/XML/Sig.pm, called from verify(), resolves the SignedInfo Reference/@URI to a node with the XPath expression \"//*[@ID='$id']\" and returns the first node of the resulting node set. A document in which two elements share that ID value is accepted: the digest and signature are checked against whichever element comes first in document order, and the duplicate is not detected.\n\nSuch a document verifies successfully while an application that resolves the same ID independently can read the second, attacker supplied element; in a SAML2 context this places the contents of an Assertion under attacker control.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

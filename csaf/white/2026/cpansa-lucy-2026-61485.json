@@ -1,0 +1,132 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache Lucy: Freezer/InStream deserialization bomb - unbounded allocation reading an index ** UNSUPPORTED WHEN ASSIGNED ** Uncontrolled Recursion vulnerability in Apache Lucy. This issue affects Apache Lucy: all versions. As this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Lucy-2026-61485 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-lucy-2026-61485.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-61485",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61485"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread/4q9rfscp3tkjr3kt7lsg97szhmydl23s",
+            "url": "https://lists.apache.org/thread/4q9rfscp3tkjr3kt7lsg97szhmydl23s"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/05/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/05/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-61485 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61485"
+         }
+      ],
+      "title": "Lucy vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Lucy-2026-61485",
+         "initial_release_date": "2026-08-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Lucy greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lucy"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Lucy"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-61485",
+         "cwe": {
+            "id": "CWE-789",
+            "name": "Memory Allocation with Excessive Size Value"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "** UNSUPPORTED WHEN ASSIGNED ** Memory Allocation with Excessive Size Value vulnerability in Apache Lucy.\n\nThis issue affects Apache Lucy: all versions.\n\nAs this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
