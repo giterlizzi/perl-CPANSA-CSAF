@@ -75,9 +75,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.001|<=0.011",
+                  "name": "vers:cpan/>=1.000_1",
                   "product": {
-                     "name": "Alien-FreeImage greater than or equal 0.001 and less than or equal 0.011",
+                     "name": "Alien-FreeImage greater than or equal 1.000_1",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Alien-FreeImage"

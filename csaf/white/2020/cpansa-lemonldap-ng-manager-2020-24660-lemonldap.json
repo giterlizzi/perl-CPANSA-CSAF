@@ -90,7 +90,7 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/0.03",
+                  "name": "vers:cpan/2.0.8",
                   "product": {
                      "name": "Lemonldap-NG-Manager ",
                      "product_id": "CSAFPID-0001",

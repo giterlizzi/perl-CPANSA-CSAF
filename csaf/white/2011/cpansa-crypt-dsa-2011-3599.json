@@ -105,6 +105,17 @@
                         "purl": "pkg:cpan/Crypt-DSA"
                      }
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.18",
+                  "product": {
+                     "name": "Crypt-DSA greater than or equal 1.18",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Crypt-DSA"
+                     }
+                  }
                }
             ],
             "category": "product_name",
@@ -127,6 +138,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

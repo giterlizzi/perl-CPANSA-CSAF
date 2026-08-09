@@ -130,6 +130,17 @@
                         "purl": "pkg:cpan/DBD-Pg"
                      }
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.49|>1.49",
+                  "product": {
+                     "name": "DBD-Pg less than 1.49 and greater than 1.49",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-Pg"
+                     }
+                  }
                }
             ],
             "category": "product_name",
@@ -152,6 +163,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

@@ -125,6 +125,17 @@
                         "purl": "pkg:cpan/Config-IniFiles"
                      }
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>2.71",
+                  "product": {
+                     "name": "Config-IniFiles greater than 2.71",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Config-IniFiles"
+                     }
+                  }
                }
             ],
             "category": "product_name",
@@ -143,6 +154,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

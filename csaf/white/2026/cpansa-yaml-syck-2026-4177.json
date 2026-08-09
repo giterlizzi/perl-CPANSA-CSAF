@@ -77,10 +77,21 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<1.37",
                   "product": {
-                     "name": "YAML-Syck greater than 0",
+                     "name": "YAML-Syck less than 1.37",
                      "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML-Syck"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.37",
+                  "product": {
+                     "name": "YAML-Syck greater than or equal 1.37",
+                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/YAML-Syck"
                      }
@@ -107,6 +118,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

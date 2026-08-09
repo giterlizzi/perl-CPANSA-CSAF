@@ -120,9 +120,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=1.6.2.0|<=1.6.2.1",
+                  "name": "vers:cpan/1.6.5.0",
                   "product": {
-                     "name": "Alien-GCrypt greater than or equal 1.6.2.0 and less than or equal 1.6.2.1",
+                     "name": "Alien-GCrypt equal 1.6.5.0",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Alien-GCrypt"

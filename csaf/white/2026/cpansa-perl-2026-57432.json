@@ -77,9 +77,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/<5.44.0",
+                  "name": "vers:cpan/>0|<5.40.5",
                   "product": {
-                     "name": "perl less than 5.44.0",
+                     "name": "perl greater than 0 and less than 5.40.5",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/perl"
@@ -88,10 +88,54 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=5.44.0",
+                  "name": "vers:cpan/>=5.41.0|<5.42.3",
                   "product": {
-                     "name": "perl greater than or equal 5.44.0",
+                     "name": "perl greater than or equal 5.41.0 and less than 5.42.3",
                      "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.43.0|<5.43.11",
+                  "product": {
+                     "name": "perl greater than or equal 5.43.0 and less than 5.43.11",
+                     "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.40.5|<5.42.0",
+                  "product": {
+                     "name": "perl greater than or equal 5.40.5 and less than 5.42.0",
+                     "product_id": "CSAFPID-0004",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.42.3|<5.43.0",
+                  "product": {
+                     "name": "perl greater than or equal 5.42.3 and less than 5.43.0",
+                     "product_id": "CSAFPID-0005",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/perl"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.43.11",
+                  "product": {
+                     "name": "perl greater than or equal 5.43.11",
+                     "product_id": "CSAFPID-0006",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/perl"
                      }
@@ -119,10 +163,14 @@
          ],
          "product_status": {
             "fixed": [
-               "CSAFPID-0002"
+               "CSAFPID-0004",
+               "CSAFPID-0005",
+               "CSAFPID-0006"
             ],
             "known_affected": [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002",
+               "CSAFPID-0003"
             ]
          },
          "scores": [
@@ -134,7 +182,9 @@
                   "version": "3.1"
                },
                "products": [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002",
+                  "CSAFPID-0003"
                ]
             }
          ]
