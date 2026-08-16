@@ -104,10 +104,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2026-65065",
+         "cwe": {
+            "id": "CWE-59",
+            "name": "Improper Link Resolution Before File Access ('Link Following')"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "Data::RoaringBitmap::Shared versions before 0.02 for Perl create a world-readable mmap backing file and open it without O_EXCL or O_NOFOLLOW.\n\nThe segment is created in roaring.h with open(path, O_RDWR|O_CREAT, 0666). The mode is 0666, so under the default umask 022 the file is created mode 0644 (world-readable). O_NOFOLLOW is absent, so a symlink planted at the path is followed, and O_EXCL is absent, so the open silently uses a pre-planted file instead of failing.\n\nA \"Shared\" segment naturally lives in a shared directory such as /tmp or /dev/shm, where any local user can read the IPC payloads stored in the world-readable segment, and a pre-planted file or symlink at the path lets a local attacker win a pre-creation race or redirect the open.",
                "title": "Vulnerability Description"
             }
          ],
@@ -118,7 +122,20 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }

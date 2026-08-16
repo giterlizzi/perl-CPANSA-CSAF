@@ -72,9 +72,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.27|<=0.67",
+                  "name": "vers:cpan/>=0.27|<0.68",
                   "product": {
-                     "name": "XML-Sig greater than or equal 0.27 and less than or equal 0.67",
+                     "name": "XML-Sig greater than or equal 0.27 and less than 0.68",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/XML-Sig"

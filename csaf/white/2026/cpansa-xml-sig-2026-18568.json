@@ -80,9 +80,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>=0.29",
+                  "name": "vers:cpan/>=0.29|<0.72",
                   "product": {
-                     "name": "XML-Sig greater than or equal 0.29",
+                     "name": "XML-Sig greater than or equal 0.29 and less than 0.72",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/XML-Sig"
@@ -91,9 +91,9 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/<0.72",
+                  "name": "vers:cpan/>=0.72",
                   "product": {
-                     "name": "XML-Sig less than 0.72",
+                     "name": "XML-Sig greater than or equal 0.72",
                      "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/XML-Sig"
