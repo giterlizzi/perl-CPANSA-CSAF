@@ -1,0 +1,137 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Form::Processor::Field::HtmlArea versions from 0.06 through 1.162360 for Perl allow attacker selected method dispatch and resource exhaustion via an HTML::Tidy diagnostic that validate passes to add_error as a Locale::Maketext template.\n\nvalidate runs HTML::Tidy over the submitted markup and passes each resulting message to add_error as its first argument, which add_error hands to the language handle as the Locale::Maketext message key. The default handle's lexicon sets `_AUTO`, so a message that is not a lexicon entry is compiled as a bracket notation template instead of being looked up. Tidy diagnostics quote the offending attribute name or value, so a bracket group in the submitted markup reaches the template position, where the first token of the group names a method called on the language handle and the remaining tokens are its arguments. A group such as `[0]` makes the compile croak, and neither the field nor the handle catches it, so the exception leaves validate. `[sprintf,%2000000000d,7]` reaches CORE::sprintf with an attacker chosen field width.\n\nOne submission of crafted markup to an HtmlArea field throws an unhandled exception out of form validation or allocates an arbitrary amount of memory, and an application whose language handle subclass defines side effecting public methods makes those callable with attacker chosen arguments. The other field types pass fixed templates with the submitted value in an argument slot, where it stays inert, and are unaffected.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Form-Processor-2026-13051 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-form-processor-2026-13051.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HANK/Form-Processor-1.162360/source/lib/Form/Processor/Field.pm#L163",
+            "url": "https://metacpan.org/release/HANK/Form-Processor-1.162360/source/lib/Form/Processor/Field.pm#L163"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HANK/Form-Processor-1.162360/source/lib/Form/Processor/Field/HtmlArea.pm#L28-31",
+            "url": "https://metacpan.org/release/HANK/Form-Processor-1.162360/source/lib/Form/Processor/Field/HtmlArea.pm#L28-31"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/F/Form-Processor/1.162360/CVE-2026-13051-r1.patch",
+            "url": "https://security.metacpan.org/patches/F/Form-Processor/1.162360/CVE-2026-13051-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2012-6329",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2012-6329"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-13051 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13051"
+         }
+      ],
+      "title": "Form-Processor vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-13T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Form-Processor-2026-13051",
+         "initial_release_date": "2026-08-13T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-13T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.06",
+                  "product": {
+                     "name": "Form-Processor greater than or equal 0.06",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Form-Processor"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Form-Processor"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-13051",
+         "cwe": {
+            "id": "CWE-470",
+            "name": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Form::Processor::Field::HtmlArea versions from 0.06 through 1.162360 for Perl allow attacker selected method dispatch and resource exhaustion via an HTML::Tidy diagnostic that validate passes to add_error as a Locale::Maketext template.\n\nvalidate runs HTML::Tidy over the submitted markup and passes each resulting message to add_error as its first argument, which add_error hands to the language handle as the Locale::Maketext message key. The default handle's lexicon sets `_AUTO`, so a message that is not a lexicon entry is compiled as a bracket notation template instead of being looked up. Tidy diagnostics quote the offending attribute name or value, so a bracket group in the submitted markup reaches the template position, where the first token of the group names a method called on the language handle and the remaining tokens are its arguments. A group such as `[0]` makes the compile croak, and neither the field nor the handle catches it, so the exception leaves validate. `[sprintf,%2000000000d,7]` reaches CORE::sprintf with an attacker chosen field width.\n\nOne submission of crafted markup to an HtmlArea field throws an unhandled exception out of form validation or allocates an arbitrary amount of memory, and an application whose language handle subclass defines side effecting public methods makes those callable with attacker chosen arguments. The other field types pass fixed templates with the submitted value in an argument slot, where it stays inert, and are unaffected.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -44,7 +44,11 @@
 2026/cpansa-perl-2026-8376.json
 2026/cpansa-perl-2026-57432.json
 2026/cpansa-perl-2026-4176.json
+2026/cpansa-perl-2026-19487.json
+2026/cpansa-perl-2026-15534.json
 2026/cpansa-perl-2026-13221.json
+2026/cpansa-pdf-webkit-2026-17431.json
+2026/cpansa-pdf-webkit-2026-16770.json
 2026/cpansa-pagi-middleware-session-store-cookie-2026-5087.json
 2026/cpansa-oidc-lite-2026-13089.json
 2026/cpansa-net-statsite-client-2026-11373.json
@@ -64,6 +68,7 @@
 2026/cpansa-net-cidr-set-2026-49942.json
 2026/cpansa-net-cidr-set-2026-49941.json
 2026/cpansa-net-cidr-set-2026-49940.json
+2026/cpansa-net-cidr-set-2026-19566.json
 2026/cpansa-net-cidr-lite-2026-45191.json
 2026/cpansa-net-cidr-lite-2026-45190.json
 2026/cpansa-net-cidr-lite-2026-40199.json
@@ -99,6 +104,7 @@
 2026/cpansa-imager-file-jpeg-2026-13708.json
 2026/cpansa-imager-file-gif-2026-8454.json
 2026/cpansa-imager-2026-8669.json
+2026/cpansa-imager-2026-19082.json
 2026/cpansa-imager-2026-14454.json
 2026/cpansa-imager-2026-13705.json
 2026/cpansa-image-webp-2026-58586.json
@@ -110,6 +116,7 @@
 2026/cpansa-http-daemon-2026-8450.json
 2026/cpansa-html-parser-2026-8829.json
 2026/cpansa-html-gumbo-2025-15646.json
+2026/cpansa-html-formhandler-2022-4993.json
 2026/cpansa-html-bare-2026-57073.json
 2026/cpansa-html-bare-2026-13397.json
 2026/cpansa-harfbuzz-shaper-2026-0943.json
@@ -119,9 +126,13 @@
 2026/cpansa-gd-securityimage-2026-13082.json
 2026/cpansa-gd-2026-11526.json
 2026/cpansa-gazelle-2026-40562.json
+2026/cpansa-form-processor-2026-13051.json
+2026/cpansa-file-rotate-simple-2026-17435.json
 2026/cpansa-etsy-statsd-2026-46741.json
 2026/cpansa-dbix-quickorm-2026-13766.json
 2026/cpansa-dbi-2026-9698.json
+2026/cpansa-dbi-2026-73194.json
+2026/cpansa-dbi-2026-73193.json
 2026/cpansa-dbi-2026-60082.json
 2026/cpansa-dbi-2026-60081.json
 2026/cpansa-dbi-2026-15392.json
@@ -148,6 +159,7 @@
 2026/cpansa-data-radixtree-shared-2026-59141.json
 2026/cpansa-data-pubsub-shared-2026-64617.json
 2026/cpansa-data-ndarray-shared-2026-64616.json
+2026/cpansa-data-muform-2026-13048.json
 2026/cpansa-data-intern-shared-2026-65067.json
 2026/cpansa-data-intern-shared-2026-59145.json
 2026/cpansa-data-hashmap-shared-2026-65064.json
@@ -160,6 +172,7 @@
 2026/cpansa-data-buffer-shared-2026-64613.json
 2026/cpansa-dancer2-plugin-auth-oauth-2026-12746.json
 2026/cpansa-dancer2-plugin-auth-oauth-2026-11832.json
+2026/cpansa-dancer2-plugin-auth-extensible-2026-15689.json
 2026/cpansa-dancer2-2026-13577.json
 2026/cpansa-dancer-plugin-auth-google-2026-13410.json
 2026/cpansa-dancer-2026-5080.json
@@ -186,6 +199,7 @@
 2026/cpansa-crypt-openssl-pkcs12-2026-9265.json
 2026/cpansa-crypt-openssl-pkcs12-2026-8721.json
 2026/cpansa-crypt-openssl-pkcs12-2026-8507.json
+2026/cpansa-crypt-openssl-pkcs12-2026-17510.json
 2026/cpansa-crypt-nacl-sodium-2026-30909.json
 2026/cpansa-crypt-nacl-sodium-2026-2588.json
 2026/cpansa-crypt-dsa-2026-8704.json

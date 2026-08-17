@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Imager versions from 0.45_02 before 1.034 for Perl may expose adjacent heap bytes via strlen() over-read from zero-count ASCII EXIF entries in copy_string_tags.\n\ncopy_string_tags() computes an ASCII EXIF tag's length as `entry->size - 1` to strip the trailing NUL. A zero-count ASCII entry sets `entry->size` to 0, and the derived length reaches i_tags_add() as -1, which is interpreted as a request to call strlen(), scanning past the entry to the next NUL and copying those bytes into the tag. JPEG reaches this path via im_decode_exif(), as does the separate Imager::File::WEBP distribution, which is fixed by upgrading Imager.\n\nAny caller of Imager->read() on an attacker-supplied image with such an entry may receive an exif_* tag holding adjacent heap bytes instead of an empty string.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Imager-2026-19082 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-19082.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/commit/24bde0427a113264d53f45a9c29ae756d84c82fe.patch",
+            "url": "https://github.com/tonycoz/imager/commit/24bde0427a113264d53f45a9c29ae756d84c82fe.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/security/advisories/GHSA-hx46-55wp-hv6m",
+            "url": "https://github.com/tonycoz/imager/security/advisories/GHSA-hx46-55wp-hv6m"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TONYC/Imager-1.034/changes",
+            "url": "https://metacpan.org/release/TONYC/Imager-1.034/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/07/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/07/6"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/security/advisories/GHSA-hx46-55wp-hv6m",
+            "url": "https://github.com/tonycoz/imager/security/advisories/GHSA-hx46-55wp-hv6m"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-19082 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19082"
+         }
+      ],
+      "title": "Imager vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Imager-2026-19082",
+         "initial_release_date": "2026-08-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0.45_02",
+                  "product": {
+                     "name": "Imager greater than 0.45_02",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.034",
+                  "product": {
+                     "name": "Imager less than 1.034",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Imager"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-19082",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Imager versions from 0.45_02 before 1.034 for Perl may expose adjacent heap bytes via strlen() over-read from zero-count ASCII EXIF entries in copy_string_tags.\n\ncopy_string_tags() computes an ASCII EXIF tag's length as `entry->size - 1` to strip the trailing NUL. A zero-count ASCII entry sets `entry->size` to 0, and the derived length reaches i_tags_add() as -1, which is interpreted as a request to call strlen(), scanning past the entry to the next NUL and copying those bytes into the tag. JPEG reaches this path via im_decode_exif(), as does the separate Imager::File::WEBP distribution, which is fixed by upgrading Imager.\n\nAny caller of Imager->read() on an attacker-supplied image with such an entry may receive an exif_* tag holding adjacent heap bytes instead of an empty string.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

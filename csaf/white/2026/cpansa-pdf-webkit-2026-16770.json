@@ -1,0 +1,137 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "PDF::WebKit versions through 1.2 for Perl allow argument injection into wkhtmltopdf via meta tags in the source document.\n\nFor an HTML string or file source, the constructor collects every <meta name=\"pdf-webkit-KEY\" content=\"VALUE\"> element in the document head through _pdf_webkit_meta_tags and turns each one into a wkhtmltopdf command line option. KEY is normalized to an option name matching --[a-z0-9-]+ but is not checked against an allow list, VALUE is passed through unchanged as the argument that follows it, and a VALUE of \"yes\" emits the option as a bare flag. BUILD merges the meta derived options last, so they also override the module defaults and the options passed to new. Switches such as --enable-local-file-access and --cookie-jar are reachable this way. The renderer is executed with an argument list rather than a shell command, so this is argument injection and not shell injection.\n\nAny caller that renders untrusted HTML lets the document choose the renderer's options and override those set by the application, including options that read local files into the resulting PDF or write to a chosen path. A URL source is not scanned, and the scan is skipped when XML::LibXML, a recommended dependency, is not installed.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-PDF-WebKit-2026-16770 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-pdf-webkit-2026-16770.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/kingpong/perl-PDF-WebKit/issues/9",
+            "url": "https://github.com/kingpong/perl-PDF-WebKit/issues/9"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/P/PDF-WebKit/1.2/CVE-2026-16770-r1.patch",
+            "url": "https://security.metacpan.org/patches/P/PDF-WebKit/1.2/CVE-2026-16770-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://wkhtmltopdf.org/status.html",
+            "url": "https://wkhtmltopdf.org/status.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/13/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/13/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-16770 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16770"
+         }
+      ],
+      "title": "PDF-WebKit vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-13T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-PDF-WebKit-2026-16770",
+         "initial_release_date": "2026-08-13T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-13T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "PDF-WebKit greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/PDF-WebKit"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "PDF-WebKit"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-16770",
+         "cwe": {
+            "id": "CWE-88",
+            "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "PDF::WebKit versions through 1.2 for Perl allow argument injection into wkhtmltopdf via meta tags in the source document.\n\nFor an HTML string or file source, the constructor collects every <meta name=\"pdf-webkit-KEY\" content=\"VALUE\"> element in the document head through _pdf_webkit_meta_tags and turns each one into a wkhtmltopdf command line option. KEY is normalized to an option name matching --[a-z0-9-]+ but is not checked against an allow list, VALUE is passed through unchanged as the argument that follows it, and a VALUE of \"yes\" emits the option as a bare flag. BUILD merges the meta derived options last, so they also override the module defaults and the options passed to new. Switches such as --enable-local-file-access and --cookie-jar are reachable this way. The renderer is executed with an argument list rather than a shell command, so this is argument injection and not shell injection.\n\nAny caller that renders untrusted HTML lets the document choose the renderer's options and override those set by the application, including options that read local files into the resulting PDF or write to a chosen path. A URL source is not scanned, and the scan is skipped when XML::LibXML, a recommended dependency, is not installed.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
