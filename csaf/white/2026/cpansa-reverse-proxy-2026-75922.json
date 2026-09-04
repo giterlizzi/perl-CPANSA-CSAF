@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Reverse::Proxy versions before 0.04 for Perl allow HTTP request smuggling via a percent-decoded PATH_INFO written unencoded to the upstream request line.\n\nPSGI hands PATH_INFO to an application percent-decoded, so a %XX sequence in the client URL has become a raw byte by the time the proxy sees it. The proxy appends that byte string to the upstream base URL, and for an Upgrade tunnel writes it into a request line it serializes itself, re-encoding nothing in either path. The HTTP client that sends the resulting URL does not validate the target either. A path containing %0d%0a therefore arrives at the upstream as a CRLF that ends the request line, and a decoded space, '?' or '#' truncates it the same way.\n\nEverything the client writes after the CRLF is read by the upstream as a second request. On the buffered path it arrives on a keep-alive connection the proxy pools and reuses for other clients. Its method, path and headers are all chosen by the client, and the upstream attributes it to the proxy, so it reaches upstream paths that the proxy's own routing does not expose.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Reverse-Proxy-2026-75922 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-reverse-proxy-2026-75922.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.03/source/Proxy.xs#L386-399",
+            "url": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.03/source/Proxy.xs#L386-399"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.03/source/Proxy.xs#L654-666",
+            "url": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.03/source/Proxy.xs#L654-666"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.04/changes",
+            "url": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.04/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.04/source/Proxy.xs#L400-426",
+            "url": "https://metacpan.org/release/LNATION/Reverse-Proxy-0.04/source/Proxy.xs#L400-426"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/23/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/23/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-75922 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75922"
+         }
+      ],
+      "title": "Reverse-Proxy vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Reverse-Proxy-2026-75922",
+         "initial_release_date": "2026-08-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.04",
+                  "product": {
+                     "name": "Reverse-Proxy less than 0.04",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Reverse-Proxy"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.04",
+                  "product": {
+                     "name": "Reverse-Proxy greater than or equal 0.04",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Reverse-Proxy"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Reverse-Proxy"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-75922",
+         "cwe": {
+            "id": "CWE-93",
+            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Reverse::Proxy versions before 0.04 for Perl allow HTTP request smuggling via a percent-decoded PATH_INFO written unencoded to the upstream request line.\n\nPSGI hands PATH_INFO to an application percent-decoded, so a %XX sequence in the client URL has become a raw byte by the time the proxy sees it. The proxy appends that byte string to the upstream base URL, and for an Upgrade tunnel writes it into a request line it serializes itself, re-encoding nothing in either path. The HTTP client that sends the resulting URL does not validate the target either. A path containing %0d%0a therefore arrives at the upstream as a CRLF that ends the request line, and a decoded space, '?' or '#' truncates it the same way.\n\nEverything the client writes after the CRLF is read by the upstream as a second request. On the buffered path it arrives on a keep-alive connection the proxy pools and reuses for other clients. Its method, path and headers are all chosen by the client, and the upstream attributes it to the proxy, so it reaches upstream paths that the proxy's own routing does not expose.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

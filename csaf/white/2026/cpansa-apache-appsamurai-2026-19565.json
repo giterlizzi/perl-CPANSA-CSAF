@@ -1,0 +1,132 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "low"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey.\n\nCreateSessionAuthKey runs five rounds of SHA-256, each over a fresh Time::HiRes reading formatted to six decimal places, the running digest, and the process id. CreateSession calls it with an empty key source on every login, and the optional Keysource directive is the only route to the other branch. The result is 64 hex characters. The microsecond field of the first reading takes one of a million values, the later readings follow it within microseconds, and the process id is drawn from a small range.\n\nThe key is returned to the browser as the session cookie, and is combined with the configured server key to compute the session id and to encrypt the stored session data. An attacker who knows the second in which a session was created and the process id of the worker that created it can enumerate candidate keys and recover the victim's cookie, bypassing authentication for the protected resources. Each candidate has to be tried against the server, which validates the cookie with a key the attacker does not hold.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Apache-AppSamurai-2026-19565 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-apache-appsamurai-2026-19565.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PAULDOOM/Apache-AppSamurai-1.01/source/lib/Apache/AppSamurai.pm#L1446-1533",
+            "url": "https://metacpan.org/release/PAULDOOM/Apache-AppSamurai-1.01/source/lib/Apache/AppSamurai.pm#L1446-1533"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PAULDOOM/Apache-AppSamurai-1.01/source/lib/Apache/AppSamurai/Util.pm#L106-135",
+            "url": "https://metacpan.org/release/PAULDOOM/Apache-AppSamurai-1.01/source/lib/Apache/AppSamurai/Util.pm#L106-135"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/23/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/23/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-19565 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19565"
+         }
+      ],
+      "title": "Apache-AppSamurai vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Apache-AppSamurai-2026-19565",
+         "initial_release_date": "2026-08-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Apache-AppSamurai greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Apache-AppSamurai"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Apache-AppSamurai"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-19565",
+         "cwe": {
+            "id": "CWE-341",
+            "name": "Predictable from Observable State"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey.\n\nCreateSessionAuthKey runs five rounds of SHA-256, each over a fresh Time::HiRes reading formatted to six decimal places, the running digest, and the process id. CreateSession calls it with an empty key source on every login, and the optional Keysource directive is the only route to the other branch. The result is 64 hex characters. The microsecond field of the first reading takes one of a million values, the later readings follow it within microseconds, and the process id is drawn from a small range.\n\nThe key is returned to the browser as the session cookie, and is combined with the configured server key to compute the session id and to encrypt the stored session data. An attacker who knows the second in which a session was created and the process id of the worker that created it can enumerate candidate keys and recover the victim's cookie, bypassing authentication for the protected resources. Each candidate has to be tried against the server, which validates the cookie with a key the attacker does not hold.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 3.7,
+                  "baseSeverity": "LOW",
+                  "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

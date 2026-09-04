@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Tie::Hash::Regex versions before 2.0.0 for Perl will throw an exception on unparseable lookup keys.\n\nThe FETCH, EXISTS and DELETE methods throw an exception when on malformed regular expressions.\n\nEach method falls back to a regex match when the key is not already stored in the hash, compiling the caller's key with a bare qr// and no eval guard. A key that is not a valid regular expression pattern, such as a single unmatched bracket, dies.\n\nAn application that looks up externally supplied strings in a tied hash will die on an invalid key.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Tie-Hash-Regex-2026-77781 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-tie-hash-regex-2026-77781.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/davorg-cpan/tie-hash-regex/commit/4239732cb76233543e2ded8ff5e0f238af152e0c.patch",
+            "url": "https://github.com/davorg-cpan/tie-hash-regex/commit/4239732cb76233543e2ded8ff5e0f238af152e0c.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/DAVECROSS/Tie-Hash-Regex-2.0.0/source/Changes",
+            "url": "https://metacpan.org/release/DAVECROSS/Tie-Hash-Regex-2.0.0/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/22/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/22/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-77781 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77781"
+         }
+      ],
+      "title": "Tie-Hash-Regex vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Tie-Hash-Regex-2026-77781",
+         "initial_release_date": "2026-08-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.0.0",
+                  "product": {
+                     "name": "Tie-Hash-Regex less than 2.0.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tie-Hash-Regex"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.0.0",
+                  "product": {
+                     "name": "Tie-Hash-Regex greater than or equal 2.0.0",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Tie-Hash-Regex"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Tie-Hash-Regex"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-77781",
+         "cwe": {
+            "id": "CWE-248",
+            "name": "Uncaught Exception"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Tie::Hash::Regex versions before 2.0.0 for Perl will throw an exception on unparseable lookup keys.\n\nThe FETCH, EXISTS and DELETE methods throw an exception when on malformed regular expressions.\n\nEach method falls back to a regex match when the key is not already stored in the hash, compiling the caller's key with a bare qr// and no eval guard. A key that is not a valid regular expression pattern, such as a single unmatched bracket, dies.\n\nAn application that looks up externally supplied strings in a tied hash will die on an invalid key.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify.\n\nEach of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as soon as the two strings differ. The time taken to reject a signature varies with the length of the matching prefix. RSA-SHA1 is not affected, as it verifies through the RSA key object rather than by comparing strings.\n\nA client that can submit messages and time the replies may recover a valid signature one byte at a time rather than searching the whole signature space. Under PLAINTEXT the value compared against is the signature key itself, so the search recovers consumer_secret and token_secret.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-OAuth-2026-75589 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-oauth-2026-75589.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/vurtdev/Net-OAuth/commit/a1a16b58add85668ef4fcda642a486ceed098eba.patch",
+            "url": "https://github.com/vurtdev/Net-OAuth/commit/a1a16b58add85668ef4fcda642a486ceed098eba.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/vurtdev/Net-OAuth/security/advisories/GHSA-g8xr-69p3-gw56",
+            "url": "https://github.com/vurtdev/Net-OAuth/security/advisories/GHSA-g8xr-69p3-gw56"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Net-OAuth-0.33/changes",
+            "url": "https://metacpan.org/release/RRWO/Net-OAuth-0.33/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/19/3",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/19/3"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-75589 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75589"
+         }
+      ],
+      "title": "Net-OAuth vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-OAuth-2026-75589",
+         "initial_release_date": "2026-08-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.33",
+                  "product": {
+                     "name": "Net-OAuth less than 0.33",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-OAuth"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.33",
+                  "product": {
+                     "name": "Net-OAuth greater than or equal 0.33",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-OAuth"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-OAuth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-75589",
+         "cwe": {
+            "id": "CWE-208",
+            "name": "Observable Timing Discrepancy"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify.\n\nEach of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as soon as the two strings differ. The time taken to reject a signature varies with the length of the matching prefix. RSA-SHA1 is not affected, as it verifies through the RSA key object rather than by comparing strings.\n\nA client that can submit messages and time the replies may recover a valid signature one byte at a time rather than searching the whole signature space. Under PLAINTEXT the value compared against is the signature key itself, so the search recovers consumer_secret and token_secret.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

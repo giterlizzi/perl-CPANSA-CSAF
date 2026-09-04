@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Punk::OAuth2::Server versions through 0.03 for Perl issue access tokens outside a client's registered scopes and grant types because no authorization path reads them.\n\nPunk::OAuth2::Server::Store registers scopes and grant_types per client and documents both as client registration. token dispatches on the grant_type in the request body, so a client registered for authorization_code alone can ask for client_credentials, and that arm passes the requested scope straight to the minter, which signs it into the at+jwt access token. authorize copies the query scope into the authorization code record without comparing it against the registration, leaving the optional consent hook as the only check between an arbitrary scope and the issued code. redirect_uris on the same client row is read and enforced.\n\nA registered client can obtain a correctly signed token carrying any scope it names, and a resource server running Punk::OAuth2::Checker accepts that token and honours the scope. A client registered without a secret authenticates on its client_id alone, so anyone who knows that identifier can request one.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Punk-OAuth2-2026-75866 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-punk-oauth2-2026-75866.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc6749#section-3.3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc6749#section-3.3"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc6749#section-5.2",
+            "url": "https://datatracker.ietf.org/doc/html/rfc6749#section-5.2"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-OAuth2-0.03/view/lib/Punk/OAuth2/Server/Store.pm",
+            "url": "https://metacpan.org/release/LNATION/Punk-OAuth2-0.03/view/lib/Punk/OAuth2/Server/Store.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-OAuth2-0.04/changes",
+            "url": "https://metacpan.org/release/LNATION/Punk-OAuth2-0.04/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/22/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/22/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-75866 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75866"
+         }
+      ],
+      "title": "Punk-OAuth2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Punk-OAuth2-2026-75866",
+         "initial_release_date": "2026-08-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.04",
+                  "product": {
+                     "name": "Punk-OAuth2 less than 0.04",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Punk-OAuth2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.04",
+                  "product": {
+                     "name": "Punk-OAuth2 greater than or equal 0.04",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Punk-OAuth2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Punk-OAuth2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-75866",
+         "cwe": {
+            "id": "CWE-862",
+            "name": "Missing Authorization"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Punk::OAuth2::Server versions through 0.03 for Perl issue access tokens outside a client's registered scopes and grant types because no authorization path reads them.\n\nPunk::OAuth2::Server::Store registers scopes and grant_types per client and documents both as client registration. token dispatches on the grant_type in the request body, so a client registered for authorization_code alone can ask for client_credentials, and that arm passes the requested scope straight to the minter, which signs it into the at+jwt access token. authorize copies the query scope into the authorization code record without comparing it against the registration, leaving the optional consent hook as the only check between an arbitrary scope and the issued code. redirect_uris on the same client row is read and enforced.\n\nA registered client can obtain a correctly signed token carrying any scope it names, and a resource server running Punk::OAuth2::Checker accepts that token and honours the scope. A client registered without a secret authenticates on its client_id alone, so anyone who knows that identifier can request one.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

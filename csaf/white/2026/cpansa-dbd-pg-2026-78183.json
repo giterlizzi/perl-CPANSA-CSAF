@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float.\n\nquote_float() allocates the length of the string + 1, which is the size of the bare numeric symbol plus NULL.  But for special literals NaN, Inf, +Inf, -Inf, Infinity, +Infinity, -Infinity it emits the literal surrounded by quotes plus NULL, which is length + 3 bytes. Every recognised literal (case-insensitive) overflows by 2 bytes, a single quote and a NULL.\n\nThis can be reached by the $dbh->quote method, for example\n\n    $dbh->quote( \"Infinity\", DBI::SQL_NUMERIC ).\n\nThis regression was introduced in 3.21.0 by the quote.c rewrite.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBD-Pg-2026-78183 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dbd-pg-2026-78183.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/bucardo/dbdpg/commit/6d6f47ed2403cda55c82b1bad56e388ba7390065.patch",
+            "url": "https://github.com/bucardo/dbdpg/commit/6d6f47ed2403cda55c82b1bad56e388ba7390065.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/bucardo/dbdpg/commit/adacf1de872326a465e13f9e4281a674ebcd227e",
+            "url": "https://github.com/bucardo/dbdpg/commit/adacf1de872326a465e13f9e4281a674ebcd227e"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/bucardo/dbdpg/security/advisories/GHSA-785p-fw3v-r822",
+            "url": "https://github.com/bucardo/dbdpg/security/advisories/GHSA-785p-fw3v-r822"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TURNSTEP/DBD-Pg-3.21.1/source/Changes",
+            "url": "https://metacpan.org/release/TURNSTEP/DBD-Pg-3.21.1/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/23/5",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/23/5"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-78183 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78183"
+         }
+      ],
+      "title": "DBD-Pg vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DBD-Pg-2026-78183",
+         "initial_release_date": "2026-08-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<3.21.1",
+                  "product": {
+                     "name": "DBD-Pg less than 3.21.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-Pg"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.21.1",
+                  "product": {
+                     "name": "DBD-Pg greater than or equal 3.21.1",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBD-Pg"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBD-Pg"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-78183",
+         "cwe": {
+            "id": "CWE-787",
+            "name": "Out-of-bounds Write"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float.\n\nquote_float() allocates the length of the string + 1, which is the size of the bare numeric symbol plus NULL.  But for special literals NaN, Inf, +Inf, -Inf, Infinity, +Infinity, -Infinity it emits the literal surrounded by quotes plus NULL, which is length + 3 bytes. Every recognised literal (case-insensitive) overflows by 2 bytes, a single quote and a NULL.\n\nThis can be reached by the $dbh->quote method, for example\n\n    $dbh->quote( \"Infinity\", DBI::SQL_NUMERIC ).\n\nThis regression was introduced in 3.21.0 by the quote.c rewrite.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

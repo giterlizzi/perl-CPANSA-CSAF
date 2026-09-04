@@ -20,6 +20,7 @@
 2026/cpansa-unicode-linebreak-2026-8594.json
 2026/cpansa-trog-totp-2026-46474.json
 2026/cpansa-toml-xs-2026-16634.json
+2026/cpansa-tie-hash-regex-2026-77781.json
 2026/cpansa-text-minify-xs-2026-7040.json
 2026/cpansa-text-csv_xs-2026-7111.json
 2026/cpansa-template-toolkit-2026-5090.json
@@ -33,6 +34,12 @@
 2026/cpansa-smolder-2024-58041.json
 2026/cpansa-sereal-encoder-2024-14031.json
 2026/cpansa-sereal-decoder-2024-14030.json
+2026/cpansa-reverse-proxy-2026-75922.json
+2026/cpansa-punk-totp-2026-78655.json
+2026/cpansa-punk-totp-2026-78619.json
+2026/cpansa-punk-oauth2-2026-75866.json
+2026/cpansa-punk-oauth2-2026-75628.json
+2026/cpansa-punk-2026-75870.json
 2026/cpansa-protocol-http2-2026-10725.json
 2026/cpansa-plack-middleware-statsd-2026-45179.json
 2026/cpansa-plack-middleware-session-simple-2025-40926.json
@@ -59,6 +66,10 @@
 2026/cpansa-net-saml2-2026-18108.json
 2026/cpansa-net-saml2-2026-18092.json
 2026/cpansa-net-saml2-2026-18089.json
+2026/cpansa-net-oauth-2026-75589.json
+2026/cpansa-net-oauth-2026-72889.json
+2026/cpansa-net-oauth-2026-72888.json
+2026/cpansa-net-oauth-2026-72887.json
 2026/cpansa-net-nsca-client-2024-57854.json
 2026/cpansa-net-movabletype-2026-25776.json
 2026/cpansa-net-ip-lpm-2026-56015.json
@@ -95,6 +106,7 @@
 2026/cpansa-lucy-2026-61483.json
 2026/cpansa-list-someutils-xs-2026-12844.json
 2026/cpansa-libwww-perl-2026-8368.json
+2026/cpansa-lemonldap-ng-portal-2026-19349.json
 2026/cpansa-javascript-minifier-xs-2026-56018.json
 2026/cpansa-javascript-minifier-xs-2026-56017.json
 2026/cpansa-io-compress-2026-48962.json
@@ -141,6 +153,7 @@
 2026/cpansa-dbi-2026-14739.json
 2026/cpansa-dbi-2026-14380.json
 2026/cpansa-dbi-2026-10879.json
+2026/cpansa-dbd-pg-2026-78183.json
 2026/cpansa-date-manip-2026-60075.json
 2026/cpansa-date-manip-2026-60074.json
 2026/cpansa-datadog-dogstatsd-2026-9270.json
@@ -216,6 +229,7 @@
 2026/cpansa-cgi-session-2026-56016.json
 2026/cpansa-catalyst-view-wkhtmltopdf-2026-16766.json
 2026/cpansa-catalyst-plugin-statsd-2026-45180.json
+2026/cpansa-catalyst-plugin-static-simple-2026-15743.json
 2026/cpansa-catalyst-plugin-authentication-2026-5091.json
 2026/cpansa-catalyst-plugin-authentication-2009-10007.json
 2026/cpansa-bytes-random-secure-tiny-2026-11702.json
@@ -230,6 +244,7 @@
 2026/cpansa-apache-session-2026-5081.json
 2026/cpansa-apache-session-2025-40931.json
 2026/cpansa-apache-session-2013-10075.json
+2026/cpansa-apache-appsamurai-2026-19565.json
 2026/cpansa-amon2-plugin-web-csrfdefender-2026-5082.json
 2026/cpansa-amon2-2025-15604.json
 2026/cpansa-amazon-credentials-2026-6146.json

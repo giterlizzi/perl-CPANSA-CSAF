@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Punk::Plugin::TOTP versions before 0.05 for Perl allow the second-factor attempt limit to be reset by replaying an earlier session cookie because the challenge route counts failures in the session.\n\nThe POST handler on challenge_path keeps the failure count as tries inside the totp_pending record in the session, raising it on each rejected code and deleting the pending record once it reaches attempts, five by default. Punk::Session carries the session in a signed cookie unless the application declares a store, and keeps no server-side record, so an earlier value of the same session stays valid until the expiry stamped inside it. A client that saves the cookie before its failed attempts and presents it again gets the pending record back with its counter, and the limit never fires. The replayed record is accepted while its own expiry, pending_ttl seconds from the challenge and 300 by default, has not passed.\n\nSessions declared with a store are not affected: the pending record and its counter then live server-side.\n\nThe attempt limit does not bound guessing of the second factor, which is left to the per-address rate limit the plugin registers on the same path, 30 requests per 60 seconds.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Punk-TOTP-2026-78655 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-punk-totp-2026-78655.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-0.32/view/lib/Punk/Session.pm",
+            "url": "https://metacpan.org/release/LNATION/Punk-0.32/view/lib/Punk/Session.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/source/include/ptotp/ptotp_plugin.h",
+            "url": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/source/include/ptotp/ptotp_plugin.h"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/view/lib/Punk/Plugin/TOTP.pm",
+            "url": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/view/lib/Punk/Plugin/TOTP.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-TOTP-0.05/source/Changes",
+            "url": "https://metacpan.org/release/LNATION/Punk-TOTP-0.05/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/25/7",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/25/7"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-78655 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78655"
+         }
+      ],
+      "title": "Punk-TOTP vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-25T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Punk-TOTP-2026-78655",
+         "initial_release_date": "2026-08-25T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-25T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.05",
+                  "product": {
+                     "name": "Punk-TOTP less than 0.05",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Punk-TOTP"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.05",
+                  "product": {
+                     "name": "Punk-TOTP greater than or equal 0.05",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Punk-TOTP"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Punk-TOTP"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-78655",
+         "cwe": {
+            "id": "CWE-307",
+            "name": "Improper Restriction of Excessive Authentication Attempts"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Punk::Plugin::TOTP versions before 0.05 for Perl allow the second-factor attempt limit to be reset by replaying an earlier session cookie because the challenge route counts failures in the session.\n\nThe POST handler on challenge_path keeps the failure count as tries inside the totp_pending record in the session, raising it on each rejected code and deleting the pending record once it reaches attempts, five by default. Punk::Session carries the session in a signed cookie unless the application declares a store, and keeps no server-side record, so an earlier value of the same session stays valid until the expiry stamped inside it. A client that saves the cookie before its failed attempts and presents it again gets the pending record back with its counter, and the limit never fires. The replayed record is accepted while its own expiry, pending_ttl seconds from the challenge and 300 by default, has not passed.\n\nSessions declared with a store are not affected: the pending record and its counter then live server-side.\n\nThe attempt limit does not bound guessing of the second factor, which is left to the per-address rate limit the plugin registers on the same path, 30 requests per 60 seconds.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

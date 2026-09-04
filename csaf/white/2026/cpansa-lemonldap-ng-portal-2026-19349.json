@@ -1,0 +1,201 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Lemonldap::NG::Portal versions from 2.0.0 before 2.16.9, from 2.17.0 before 2.21.5, from 2.22.0 before 2.23.3 for Perl allow authentication bypass via an OAuth2 state parameter stored as an SSO session in the GitHub and LinkedIn backends.\n\nBefore redirecting to the identity provider, extractFormInfo() creates the state session with the positional call `getApacheSession( undef, 1, 0, 'GitHubState' )`. getApacheSession() takes a session id followed by a named argument hash, so the trailing arguments become that hash, `kind` defaults to SSO, and the state is written to the global session storage as a regular SSO session. Its identifier is handed to the unauthenticated visitor as the state parameter of the redirection URL.\n\nAny visitor who reaches the GitHub or LinkedIn endpoint can replay that identifier as a session cookie and obtain a valid SSO session without authenticating. The session holds neither _user nor authenticationLevel, which the shipped bootstrap configuration accepts because it grants virtual hosts a \"default => accept\" access rule; deployments whose rules test the user or require an authentication level are less exposed. Only configurations with the GitHub or LinkedIn authentication module enabled are affected.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Lemonldap-NG-Portal-2026-19349 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-lemonldap-ng-portal-2026-19349.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.16.9",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.16.9"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.21.5",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.21.5"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.23.3",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.23.3"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/16/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/16/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-19349 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19349"
+         }
+      ],
+      "title": "Lemonldap-NG-Portal vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Lemonldap-NG-Portal-2026-19349",
+         "initial_release_date": "2026-08-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.0.0|<2.16.9",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.0.0 and less than 2.16.9",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.17.0|<2.21.5",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.17.0 and less than 2.21.5",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.22.0|<2.23.3",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.22.0 and less than 2.23.3",
+                     "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.16.9|<2.17.0",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.16.9 and less than 2.17.0",
+                     "product_id": "CSAFPID-0004",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.21.5|<2.22.0",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.21.5 and less than 2.22.0",
+                     "product_id": "CSAFPID-0005",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.23.3",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.23.3",
+                     "product_id": "CSAFPID-0006",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Lemonldap-NG-Portal"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-19349",
+         "cwe": {
+            "id": "CWE-305",
+            "name": "Authentication Bypass by Primary Weakness"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Lemonldap::NG::Portal versions from 2.0.0 before 2.16.9, from 2.17.0 before 2.21.5, from 2.22.0 before 2.23.3 for Perl allow authentication bypass via an OAuth2 state parameter stored as an SSO session in the GitHub and LinkedIn backends.\n\nBefore redirecting to the identity provider, extractFormInfo() creates the state session with the positional call `getApacheSession( undef, 1, 0, 'GitHubState' )`. getApacheSession() takes a session id followed by a named argument hash, so the trailing arguments become that hash, `kind` defaults to SSO, and the state is written to the global session storage as a regular SSO session. Its identifier is handed to the unauthenticated visitor as the state parameter of the redirection URL.\n\nAny visitor who reaches the GitHub or LinkedIn endpoint can replay that identifier as a session cookie and obtain a valid SSO session without authenticating. The session holds neither _user nor authenticationLevel, which the shipped bootstrap configuration accepts because it grants virtual hosts a \"default => accept\" access rule; deployments whose rules test the user or require an authentication level are less exposed. Only configurations with the GitHub or LinkedIn authentication module enabled are affected.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0004",
+               "CSAFPID-0005",
+               "CSAFPID-0006"
+            ],
+            "known_affected": [
+               "CSAFPID-0001",
+               "CSAFPID-0002",
+               "CSAFPID-0003"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001",
+                  "CSAFPID-0002",
+                  "CSAFPID-0003"
+               ]
+            }
+         ]
+      }
+   ]
+}

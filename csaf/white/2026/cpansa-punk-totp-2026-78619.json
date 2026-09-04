@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Punk::Plugin::TOTP versions before 0.05 for Perl accept another account's recovery code at the two-factor challenge because totp_use_recovery compares user identifiers numerically.\n\nThe helper searches the recovery model for the submitted code's digest alone, across every user's rows, so the ownership test that follows is the only thing binding a code to the account it was issued to. That test compares the row's user_id with the challenged user's id through Perl's integer coercion, and an identifier with no leading digits coerces to zero, so any two of them compare equal. User models keyed on a username, an email address or a UUID hit that case, and a numeric key compares as intended.\n\nThe challenge route feeds a submitted value to the helper once TOTP verification fails, so an attacker who knows a victim's password and holds a recovery code of their own passes the victim's second factor.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Punk-TOTP-2026-78619 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-punk-totp-2026-78619.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/source/include/ptotp/ptotp_plugin.h#L801-827",
+            "url": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/source/include/ptotp/ptotp_plugin.h#L801-827"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/view/lib/Punk/Plugin/TOTP.pm",
+            "url": "https://metacpan.org/release/LNATION/Punk-TOTP-0.04/view/lib/Punk/Plugin/TOTP.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LNATION/Punk-TOTP-0.05/source/Changes",
+            "url": "https://metacpan.org/release/LNATION/Punk-TOTP-0.05/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/25/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/25/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-78619 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78619"
+         }
+      ],
+      "title": "Punk-TOTP vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-25T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Punk-TOTP-2026-78619",
+         "initial_release_date": "2026-08-25T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-25T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.05",
+                  "product": {
+                     "name": "Punk-TOTP less than 0.05",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Punk-TOTP"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.05",
+                  "product": {
+                     "name": "Punk-TOTP greater than or equal 0.05",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Punk-TOTP"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Punk-TOTP"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-78619",
+         "cwe": {
+            "id": "CWE-305",
+            "name": "Authentication Bypass by Primary Weakness"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Punk::Plugin::TOTP versions before 0.05 for Perl accept another account's recovery code at the two-factor challenge because totp_use_recovery compares user identifiers numerically.\n\nThe helper searches the recovery model for the submitted code's digest alone, across every user's rows, so the ownership test that follows is the only thing binding a code to the account it was issued to. That test compares the row's user_id with the challenged user's id through Perl's integer coercion, and an identifier with no leading digits coerces to zero, so any two of them compare equal. User models keyed on a username, an email address or a UUID hit that case, and a numeric key compares as intended.\n\nThe challenge route feeds a submitted value to the helper once TOTP verification fails, so an attacker who knows a victim's password and holds a recovery code of their own passes the victim's second factor.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

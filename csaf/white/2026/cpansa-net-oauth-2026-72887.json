@@ -1,0 +1,161 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::OAuth::Client versions before 0.32 for Perl allow the service provider to silently downgrade OAuth 1.0a to OAuth 1.0 in get_request_token.\n\nPassing a callback to the constructor selects OAuth 1.0a. get_request_token then revokes that choice when the request token response omits oauth_callback_confirmed, with no exception, no warning and no option to require 1.0a. The access token request is built from the OAuth 1.0 message class, which has no verifier parameter, so oauth_verifier is dropped from the request even when get_access_token was passed one.\n\noauth_verifier is the binding that OAuth 1.0a added between the authorization step and the token exchange. An application that asked for 1.0a and gets 1.0 is open to OAuth 1.0 session fixation, where an attacker obtains a request token, has the victim authorize it, and then completes the exchange themselves, linking the victim's provider account to a session the attacker controls. No attacker action sets up the downgrade: a provider that does not confirm the callback is enough.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-OAuth-2026-72887 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-oauth-2026-72887.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc5849#section-2.1",
+            "url": "https://datatracker.ietf.org/doc/html/rfc5849#section-2.1"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc5849#section-2.3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc5849#section-2.3"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/vurtdev/Net-OAuth/commit/fd505dac1988723ed96721657663f2e4ac731644.patch",
+            "url": "https://github.com/vurtdev/Net-OAuth/commit/fd505dac1988723ed96721657663f2e4ac731644.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/vurtdev/Net-OAuth/security/advisories/GHSA-jh72-4qq2-8j6g",
+            "url": "https://github.com/vurtdev/Net-OAuth/security/advisories/GHSA-jh72-4qq2-8j6g"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Net-OAuth-0.32/changes",
+            "url": "https://metacpan.org/release/RRWO/Net-OAuth-0.32/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/16/3",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/16/3"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-72887 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72887"
+         }
+      ],
+      "title": "Net-OAuth vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-OAuth-2026-72887",
+         "initial_release_date": "2026-08-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.32",
+                  "product": {
+                     "name": "Net-OAuth less than 0.32",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-OAuth"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.32",
+                  "product": {
+                     "name": "Net-OAuth greater than or equal 0.32",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-OAuth"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-OAuth"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-72887",
+         "cwe": {
+            "id": "CWE-757",
+            "name": "Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::OAuth::Client versions before 0.32 for Perl allow the service provider to silently downgrade OAuth 1.0a to OAuth 1.0 in get_request_token.\n\nPassing a callback to the constructor selects OAuth 1.0a. get_request_token then revokes that choice when the request token response omits oauth_callback_confirmed, with no exception, no warning and no option to require 1.0a. The access token request is built from the OAuth 1.0 message class, which has no verifier parameter, so oauth_verifier is dropped from the request even when get_access_token was passed one.\n\noauth_verifier is the binding that OAuth 1.0a added between the authorization step and the token exchange. An application that asked for 1.0a and gets 1.0 is open to OAuth 1.0 session fixation, where an attacker obtains a request token, has the victim authorize it, and then completes the exchange themselves, linking the victim's provider account to a session the attacker controls. No attacker action sets up the downgrade: a provider that does not confirm the callback is enough.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
