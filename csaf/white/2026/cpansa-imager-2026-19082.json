@@ -90,9 +90,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0.45_02",
+                  "name": "vers:cpan/>0.45_02|<1.034",
                   "product": {
-                     "name": "Imager greater than 0.45_02",
+                     "name": "Imager greater than 0.45_02 and less than 1.034",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Imager"
@@ -101,9 +101,9 @@
                },
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/<1.034",
+                  "name": "vers:cpan/>=1.034",
                   "product": {
-                     "name": "Imager less than 1.034",
+                     "name": "Imager greater than or equal 1.034",
                      "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Imager"

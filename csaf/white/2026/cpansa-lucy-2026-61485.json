@@ -98,14 +98,10 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2026-61485",
-         "cwe": {
-            "id": "CWE-789",
-            "name": "Memory Allocation with Excessive Size Value"
-         },
          "notes": [
             {
                "category": "description",
-               "text": "** UNSUPPORTED WHEN ASSIGNED ** Memory Allocation with Excessive Size Value vulnerability in Apache Lucy.\n\nThis issue affects Apache Lucy: all versions.\n\nAs this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+               "text": "Rejected reason: this attack requires control over the search index, which is considered fully trusted by Lucy.",
                "title": "Vulnerability Description"
             }
          ],
@@ -113,20 +109,7 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         },
-         "scores": [
-            {
-               "cvss_v3": {
-                  "baseScore": 7.5,
-                  "baseSeverity": "HIGH",
-                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-                  "version": "3.1"
-               },
-               "products": [
-                  "CSAFPID-0001"
-               ]
-            }
-         ]
+         }
       }
    ]
 }
