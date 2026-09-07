@@ -34,6 +34,7 @@
 2026/cpansa-smolder-2024-58041.json
 2026/cpansa-sereal-encoder-2024-14031.json
 2026/cpansa-sereal-decoder-2024-14030.json
+2026/cpansa-robots-validate-2026-82309.json
 2026/cpansa-reverse-proxy-2026-75922.json
 2026/cpansa-punk-totp-2026-78655.json
 2026/cpansa-punk-totp-2026-78619.json
@@ -74,6 +75,7 @@
 2026/cpansa-net-movabletype-2026-25776.json
 2026/cpansa-net-ip-lpm-2026-56015.json
 2026/cpansa-net-dropbear-2025-15638.json
+2026/cpansa-net-dns-2026-81928.json
 2026/cpansa-net-dns-2026-64194.json
 2026/cpansa-net-dns-2026-64193.json
 2026/cpansa-net-cidr-set-2026-49942.json
@@ -129,6 +131,7 @@
 2026/cpansa-html-parser-2026-8829.json
 2026/cpansa-html-gumbo-2025-15646.json
 2026/cpansa-html-formhandler-2022-4993.json
+2026/cpansa-html-formfu-2026-19873.json
 2026/cpansa-html-bare-2026-57073.json
 2026/cpansa-html-bare-2026-13397.json
 2026/cpansa-harfbuzz-shaper-2026-0943.json
@@ -255,6 +258,7 @@
 2026/cpansa--2026-8796.json
 2026/cpansa--2026-5083.json
 2026/cpansa--2026-3031.json
+2026/cpansa--2026-19953.json
 2025/cpansa-yaml-syck-2025-11683.json
 2025/cpansa-yaml-libyaml-2025-001.json
 2025/cpansa-xml-sig-2025-40934.json

@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "URI versions before 5.36 for Perl encode non-NFC host names to non-standard punycode labels via missing normalization in nameprep.\n\nnameprep lowercases each host label but performs no Unicode normalization. IDNA requires a label to be normalized to Form C before it is encoded (RFC 5891), so a label that is not already in NFC is encoded to a different A-label than its normalized form. A label built from the precomposed Devanagari sequence U+0958 U+093E encodes to xn--72b5c without normalization but to xn--11b2fg after NFC normalization, and xn--72b5c does not round-trip back to the original label.\n\nAny caller that reads host() from a URI built from untrusted input and uses it for a security decision (an allow or deny list, an SSRF filter, deduplication, a cache key) sees the non-standard label, while a client that fetches the same URL resolves the NFC form, so the check and the fetch can disagree about the host.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA--2026-19953 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa--2026-19953.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/URI/commit/956619a9e94f86d8d2c529b4e06a3674c54a73e7.patch",
+            "url": "https://github.com/libwww-perl/URI/commit/956619a9e94f86d8d2c529b4e06a3674c54a73e7.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/URI/pull/191",
+            "url": "https://github.com/libwww-perl/URI/pull/191"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/OALDERS/URI-5.36/changes",
+            "url": "https://metacpan.org/release/OALDERS/URI-5.36/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.rfc-editor.org/rfc/rfc5891#section-5.2",
+            "url": "https://www.rfc-editor.org/rfc/rfc5891#section-5.2"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/08/31/14",
+            "url": "http://www.openwall.com/lists/oss-security/2026/08/31/14"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-19953 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19953"
+         }
+      ],
+      "title": "URI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-08-31T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA--2026-19953",
+         "initial_release_date": "2026-08-31T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-08-31T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<5.36",
+                  "product": {
+                     "name": "URI less than 5.36",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/URI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.36",
+                  "product": {
+                     "name": "URI greater than or equal 5.36",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/URI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "URI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-19953",
+         "cwe": {
+            "id": "CWE-1289",
+            "name": "Improper Validation of Unsafe Equivalence in Input"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "URI versions before 5.36 for Perl encode non-NFC host names to non-standard punycode labels via missing normalization in nameprep.\n\nnameprep lowercases each host label but performs no Unicode normalization. IDNA requires a label to be normalized to Form C before it is encoded (RFC 5891), so a label that is not already in NFC is encoded to a different A-label than its normalized form. A label built from the precomposed Devanagari sequence U+0958 U+093E encodes to xn--72b5c without normalization but to xn--11b2fg after NFC normalization, and xn--72b5c does not round-trip back to the original label.\n\nAny caller that reads host() from a URI built from untrusted input and uses it for a security decision (an allow or deny list, an SSRF filter, deduplication, a cache key) sees the non-standard label, while a client that fetches the same URL resolves the NFC form, so the check and the fetch can disagree about the host.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
