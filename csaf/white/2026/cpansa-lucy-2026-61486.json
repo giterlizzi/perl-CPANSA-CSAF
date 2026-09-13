@@ -80,10 +80,21 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<0.8.0",
                   "product": {
-                     "name": "Lucy greater than 0",
+                     "name": "Lucy less than 0.8.0",
                      "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lucy"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.8.0",
+                  "product": {
+                     "name": "Lucy greater than or equal 0.8.0",
+                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Lucy"
                      }
@@ -110,6 +121,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

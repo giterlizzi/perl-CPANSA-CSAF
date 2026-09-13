@@ -80,9 +80,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<0",
                   "product": {
-                     "name": "Lucy greater than 0",
+                     "name": "Lucy less than 0",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Lucy"
