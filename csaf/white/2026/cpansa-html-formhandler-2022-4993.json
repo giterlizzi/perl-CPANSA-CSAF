@@ -33,8 +33,18 @@
          },
          {
             "category": "external",
+            "summary": "https://github.com/gshank/html-formhandler/commit/fb1439a142d0557e2c5c726688c2788eea07145d",
+            "url": "https://github.com/gshank/html-formhandler/commit/fb1439a142d0557e2c5c726688c2788eea07145d"
+         },
+         {
+            "category": "external",
             "summary": "https://github.com/gshank/html-formhandler/pull/159",
             "url": "https://github.com/gshank/html-formhandler/pull/159"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ABRAXXA/HTML-FormHandler-0.410000/changes",
+            "url": "https://metacpan.org/release/ABRAXXA/HTML-FormHandler-0.410000/changes"
          },
          {
             "category": "external",
@@ -95,10 +105,21 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<0.410000",
                   "product": {
-                     "name": "HTML-FormHandler greater than 0",
+                     "name": "HTML-FormHandler less than 0.410000",
                      "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTML-FormHandler"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.410000",
+                  "product": {
+                     "name": "HTML-FormHandler greater than or equal 0.410000",
+                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/HTML-FormHandler"
                      }
@@ -125,6 +146,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]
