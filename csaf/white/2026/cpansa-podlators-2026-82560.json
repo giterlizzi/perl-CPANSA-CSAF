@@ -1,0 +1,135 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhaustion formatting a POD document whose =over nesting drives the margin to the output width.\n\nEach =over adds its indent to the margin, which wrap() subtracts from the output width to get the space available for text. When that space reaches zero, the line-splitting substitution matches the empty string, and the loop consumes no input while appending the margin padding on every pass.\n\nFormatting an attacker-supplied POD document never returns, and the output grows until memory is exhausted.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-podlators-2026-82560 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-podlators-2026-82560.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/rra/podlators/commit/70510174f69eb54aa6d617bde4e1402cd9b7c61f.patch",
+            "url": "https://github.com/rra/podlators/commit/70510174f69eb54aa6d617bde4e1402cd9b7c61f.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRA/podlators-v6.1.0/source/lib/Pod/Text.pm#L245-261",
+            "url": "https://metacpan.org/release/RRA/podlators-v6.1.0/source/lib/Pod/Text.pm#L245-261"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRA/podlators-v6.1.1/changes",
+            "url": "https://metacpan.org/release/RRA/podlators-v6.1.1/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/19/6",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/19/6"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-82560 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82560"
+         }
+      ],
+      "title": "podlators vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-podlators-2026-82560",
+         "initial_release_date": "2026-09-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<6.1.1",
+                  "product": {
+                     "name": "podlators less than 6.1.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/podlators"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=6.1.1",
+                  "product": {
+                     "name": "podlators greater than or equal 6.1.1",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/podlators"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "podlators"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-82560",
+         "cwe": {
+            "id": "CWE-835",
+            "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhaustion formatting a POD document whose =over nesting drives the margin to the output width.\n\nEach =over adds its indent to the margin, which wrap() subtracts from the output width to get the space available for text. When that space reaches zero, the line-splitting substitution matches the empty string, and the loop consumes no input while appending the margin padding on every pass.\n\nFormatting an attacker-supplied POD document never returns, and the output grows until memory is exhausted.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

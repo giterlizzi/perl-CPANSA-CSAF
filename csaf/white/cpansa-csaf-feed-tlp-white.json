@@ -9,6 +9,90 @@
       "entry": [
          {
             "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-podlators-2026-82560.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-podlators-2026-82560",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-podlators-2026-82560.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-podlators-2026-82560.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-podlators-2026-82560.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-09-19T00:00:00",
+            "title": "podlators vulnerability",
+            "updated": "2026-09-19T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86423.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-ImageMagick-2026-86423",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86423.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86423.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86423.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-09-07T00:00:00",
+            "title": "ImageMagick vulnerability",
+            "updated": "2026-09-07T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86425.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-ImageMagick-2026-86425",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86425.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86425.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imagemagick-2026-86425.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-09-07T00:00:00",
+            "title": "ImageMagick vulnerability",
+            "updated": "2026-09-07T00:00:00"
+         },
+         {
+            "content": {
                "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-robots-validate-2026-82309.json",
                "type": "application/json"
             },
@@ -30844,6 +30928,6 @@
          }
       ],
       "title": "CPANSA CSAF feed (TLP:WHITE)",
-      "updated": "2026-09-20T12:57:49"
+      "updated": "2026-09-21T02:57:41"
    }
 }

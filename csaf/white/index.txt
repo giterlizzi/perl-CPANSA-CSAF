@@ -42,6 +42,7 @@
 2026/cpansa-punk-oauth2-2026-75628.json
 2026/cpansa-punk-2026-75870.json
 2026/cpansa-protocol-http2-2026-10725.json
+2026/cpansa-podlators-2026-82560.json
 2026/cpansa-plack-middleware-statsd-2026-45179.json
 2026/cpansa-plack-middleware-session-simple-2025-40926.json
 2026/cpansa-plack-middleware-session-2014-125112.json
@@ -121,6 +122,8 @@
 2026/cpansa-imager-2026-19082.json
 2026/cpansa-imager-2026-14454.json
 2026/cpansa-imager-2026-13705.json
+2026/cpansa-imagemagick-2026-86425.json
+2026/cpansa-imagemagick-2026-86423.json
 2026/cpansa-image-webp-2026-58586.json
 2026/cpansa-http-tiny-2026-7017.json
 2026/cpansa-http-tiny-2026-7010.json
