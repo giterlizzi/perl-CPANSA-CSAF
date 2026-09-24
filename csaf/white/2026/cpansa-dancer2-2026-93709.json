@@ -1,0 +1,153 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Dancer2 versions before 2.2.0 for Perl serve a layout as a page when an equivalent spelling of its path misses the guard in the AutoPage handler.\n\nThe handler compares the request path against the layout directory name as text, while the lookup that follows canonicalises it. A doubled slash, a dot segment, a percent-encoded slash, or a different capitalisation on a case-insensitive filesystem therefore misses the guard.\n\nThe handler is off by default, enabled with auto_page. The layout wrapping every page is already public, so this discloses one of the application's other layouts.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Dancer2-2026-93709 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dancer2-2026-93709.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/PerlDancer/Dancer2/commit/293fce08812b0928f34ab2d7b9357450707c3630.patch",
+            "url": "https://github.com/PerlDancer/Dancer2/commit/293fce08812b0928f34ab2d7b9357450707c3630.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/PerlDancer/Dancer2/commit/753b385350a54acb8d4b686723890205268634a8.patch",
+            "url": "https://github.com/PerlDancer/Dancer2/commit/753b385350a54acb8d4b686723890205268634a8.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/PerlDancer/Dancer2/issues/1823",
+            "url": "https://github.com/PerlDancer/Dancer2/issues/1823"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/CROMEDOME/Dancer2-2.2.0/changes",
+            "url": "https://metacpan.org/release/CROMEDOME/Dancer2-2.2.0/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/22/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/22/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-93709 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93709"
+         }
+      ],
+      "title": "Dancer2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Dancer2-2026-93709",
+         "initial_release_date": "2026-09-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.2.0",
+                  "product": {
+                     "name": "Dancer2 less than 2.2.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.2.0",
+                  "product": {
+                     "name": "Dancer2 greater than or equal 2.2.0",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Dancer2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-93709",
+         "cwe": {
+            "id": "CWE-41",
+            "name": "Improper Resolution of Path Equivalence"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Dancer2 versions before 2.2.0 for Perl serve a layout as a page when an equivalent spelling of its path misses the guard in the AutoPage handler.\n\nThe handler compares the request path against the layout directory name as text, while the lookup that follows canonicalises it. A doubled slash, a dot segment, a percent-encoded slash, or a different capitalisation on a case-insensitive filesystem therefore misses the guard.\n\nThe handler is off by default, enabled with auto_page. The layout wrapping every page is already public, so this discloses one of the application's other layouts.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.3,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

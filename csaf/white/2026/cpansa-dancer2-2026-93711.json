@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Dancer2 versions before 2.2.0 for Perl do not strip CR and LF from response header names in headers_to_array.\n\nThe routine removes CR and LF from each header value but not from the name. A name carrying them therefore reaches the PSGI server intact. A server that does not validate keys writes it to the wire, so the bytes after the CRLF arrive as their own header line.\n\nThe application has to derive the header name from request data, not just the value.\n\nAn attacker who controls that data adds their own headers and splits the response.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Dancer2-2026-93711 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dancer2-2026-93711.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/PerlDancer/Dancer2/commit/ff89ac12af7b8899812a79e9924dfea7a5d9833b.patch",
+            "url": "https://github.com/PerlDancer/Dancer2/commit/ff89ac12af7b8899812a79e9924dfea7a5d9833b.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/PerlDancer/Dancer2/issues/1822",
+            "url": "https://github.com/PerlDancer/Dancer2/issues/1822"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/CROMEDOME/Dancer2-2.2.0/changes",
+            "url": "https://metacpan.org/release/CROMEDOME/Dancer2-2.2.0/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/22/3",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/22/3"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-93711 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93711"
+         }
+      ],
+      "title": "Dancer2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Dancer2-2026-93711",
+         "initial_release_date": "2026-09-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.2.0",
+                  "product": {
+                     "name": "Dancer2 less than 2.2.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.2.0",
+                  "product": {
+                     "name": "Dancer2 greater than or equal 2.2.0",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Dancer2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-93711",
+         "cwe": {
+            "id": "CWE-113",
+            "name": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Dancer2 versions before 2.2.0 for Perl do not strip CR and LF from response header names in headers_to_array.\n\nThe routine removes CR and LF from each header value but not from the name. A name carrying them therefore reaches the PSGI server intact. A server that does not validate keys writes it to the wire, so the bytes after the CRLF arrive as their own header line.\n\nThe application has to derive the header name from request data, not just the value.\n\nAn attacker who controls that data adds their own headers and splits the response.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

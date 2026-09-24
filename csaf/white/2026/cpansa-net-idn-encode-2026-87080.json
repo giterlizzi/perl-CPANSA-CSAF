@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::IDN::Punycode::PP versions before 2.590 for Perl decode a truncated label to a name containing a character it never encoded in decode_punycode.\n\nThe pure-Perl decoder reads one digit at a time with four-argument substr and tests the result with defined to detect the end of the input. substr on an exhausted string returns the empty string rather than undef, so decoding continues past the end. The empty string converts to a digit value below the range, reducing the accumulator, and the decoder derives one extra code point and its position from it. The result is deterministic. The XS backend rejects the same label.\n\nNet::IDN::Punycode uses this backend wherever the XS does not build.\n\nThe two backends disagree about what such a label means, so a sender can pick a label that one installation resolves to a name and another rejects.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-IDN-Encode-2026-87080 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-idn-encode-2026-87080.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Net-IDN-Encode/commit/48436c7ad2c4d4c6398110e11133754fc476a783.patch",
+            "url": "https://github.com/robrwo/Net-IDN-Encode/commit/48436c7ad2c4d4c6398110e11133754fc476a783.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PJCJ/Net-IDN-Encode-2.590-TRIAL/changes",
+            "url": "https://metacpan.org/release/PJCJ/Net-IDN-Encode-2.590-TRIAL/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/22/15",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/22/15"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-87080 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87080"
+         }
+      ],
+      "title": "Net-IDN-Encode vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-IDN-Encode-2026-87080",
+         "initial_release_date": "2026-09-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.590",
+                  "product": {
+                     "name": "Net-IDN-Encode less than 2.590",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IDN-Encode"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.590",
+                  "product": {
+                     "name": "Net-IDN-Encode greater than or equal 2.590",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IDN-Encode"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-IDN-Encode"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-87080",
+         "cwe": {
+            "id": "CWE-1286",
+            "name": "Improper Validation of Syntactic Correctness of Input"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::IDN::Punycode::PP versions before 2.590 for Perl decode a truncated label to a name containing a character it never encoded in decode_punycode.\n\nThe pure-Perl decoder reads one digit at a time with four-argument substr and tests the result with defined to detect the end of the input. substr on an exhausted string returns the empty string rather than undef, so decoding continues past the end. The empty string converts to a digit value below the range, reducing the accumulator, and the decoder derives one extra code point and its position from it. The result is deterministic. The XS backend rejects the same label.\n\nNet::IDN::Punycode uses this backend wherever the XS does not build.\n\nThe two backends disagree about what such a label means, so a sender can pick a label that one installation resolves to a name and another rejects.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

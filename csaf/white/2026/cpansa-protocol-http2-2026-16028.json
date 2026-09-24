@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Protocol::HTTP2 versions before 1.14 for Perl allow memory exhaustion via closed streams that stream_state never removes from the connection stream table.\n\nWhen a stream reaches the CLOSED state, stream_state returns the concurrency slot and clears most of the stream's keys, but the entry itself stays in the connection stream table and nothing in the distribution removes it. Stream identifiers increase monotonically, so a peer can open and close streams on one connection indefinitely, each close leaving a residual entry that is retained for the life of the connection.\n\nSETTINGS_MAX_CONCURRENT_STREAMS does not bound this. That setting caps how many streams are live at once and is enforced, while the growth is made of streams the cap has already released, so it accumulates with concurrency never exceeding one. The client keeps the same table and grows the same way against a hostile server.\n\nMeasured against a server built on this module, roughly 920 bytes are retained per closed stream for about 19 bytes on the wire, so 100,000 sequential streams on one connection grow server resident memory by about 88 MiB. The streams are ordinary requests that the application accepts and completes.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Protocol-HTTP2-2026-16028 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-protocol-http2-2026-16028.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/vlet/p5-Protocol-HTTP2/commit/27a488a34d74fd16f123e5e6186d4f677faa246f.patch",
+            "url": "https://github.com/vlet/p5-Protocol-HTTP2/commit/27a488a34d74fd16f123e5e6186d4f677faa246f.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/CRUX/Protocol-HTTP2-1.13/source/lib/Protocol/HTTP2/Stream.pm#L113-126",
+            "url": "https://metacpan.org/release/CRUX/Protocol-HTTP2-1.13/source/lib/Protocol/HTTP2/Stream.pm#L113-126"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/CRUX/Protocol-HTTP2-1.14/changes",
+            "url": "https://metacpan.org/release/CRUX/Protocol-HTTP2-1.14/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/07/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/07/2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-16028 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16028"
+         }
+      ],
+      "title": "Protocol-HTTP2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-07T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Protocol-HTTP2-2026-16028",
+         "initial_release_date": "2026-09-07T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-07T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.14",
+                  "product": {
+                     "name": "Protocol-HTTP2 less than 1.14",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Protocol-HTTP2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.14",
+                  "product": {
+                     "name": "Protocol-HTTP2 greater than or equal 1.14",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Protocol-HTTP2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Protocol-HTTP2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-16028",
+         "cwe": {
+            "id": "CWE-401",
+            "name": "Missing Release of Memory after Effective Lifetime"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Protocol::HTTP2 versions before 1.14 for Perl allow memory exhaustion via closed streams that stream_state never removes from the connection stream table.\n\nWhen a stream reaches the CLOSED state, stream_state returns the concurrency slot and clears most of the stream's keys, but the entry itself stays in the connection stream table and nothing in the distribution removes it. Stream identifiers increase monotonically, so a peer can open and close streams on one connection indefinitely, each close leaving a residual entry that is retained for the life of the connection.\n\nSETTINGS_MAX_CONCURRENT_STREAMS does not bound this. That setting caps how many streams are live at once and is enforced, while the growth is made of streams the cap has already released, so it accumulates with concurrency never exceeding one. The client keeps the same table and grows the same way against a hostile server.\n\nMeasured against a server built on this module, roughly 920 bytes are retained per closed stream for about 19 bytes on the wire, so 100,000 sequential streams on one connection grow server resident memory by about 88 MiB. The streams are ordinary requests that the application accepts and completes.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

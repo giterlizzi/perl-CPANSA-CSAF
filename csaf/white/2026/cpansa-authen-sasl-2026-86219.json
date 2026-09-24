@@ -1,0 +1,161 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step.\n\nserver_start generates a fresh nonce and sends it in the challenge, and nothing later compares that value against the nonce the client returns. server_step derives the expected digest from the client's own parameters, so a response verifies whenever its digest matches the nonce it carries. The count table it also checks is keyed on the client-supplied nonce and starts empty in each new server object, so a captured first response, carrying `nc=00000001`, passes that too. RFC 2831 defines the nonce in the response as the value the server sent in the preceding challenge.\n\nAn attacker who observes one successful `qop=auth` exchange can replay the captured response against a later session for the same service, host, realm and user, and authenticate as that user without knowing the password.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Authen-SASL-2026-86219 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-authen-sasl-2026-86219.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc2831#section-2.1.2",
+            "url": "https://datatracker.ietf.org/doc/html/rfc2831#section-2.1.2"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-authen-sasl/perl-authen-sasl/commit/94337367030612842924f697cead29964a96448d.patch",
+            "url": "https://github.com/perl-authen-sasl/perl-authen-sasl/commit/94337367030612842924f697cead29964a96448d.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EHUELS/Authen-SASL-2.2000/source/lib/Authen/SASL/Perl/DIGEST_MD5.pm#L203-222",
+            "url": "https://metacpan.org/release/EHUELS/Authen-SASL-2.2000/source/lib/Authen/SASL/Perl/DIGEST_MD5.pm#L203-222"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EHUELS/Authen-SASL-2.2000/source/lib/Authen/SASL/Perl/DIGEST_MD5.pm#L410-414",
+            "url": "https://metacpan.org/release/EHUELS/Authen-SASL-2.2000/source/lib/Authen/SASL/Perl/DIGEST_MD5.pm#L410-414"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/EHUELS/Authen-SASL-2.2100/changes",
+            "url": "https://metacpan.org/release/EHUELS/Authen-SASL-2.2100/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-40918",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-40918"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-86219 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86219"
+         }
+      ],
+      "title": "Authen-SASL vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-06T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Authen-SASL-2026-86219",
+         "initial_release_date": "2026-09-06T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-06T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.2100",
+                  "product": {
+                     "name": "Authen-SASL less than 2.2100",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Authen-SASL"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.2100",
+                  "product": {
+                     "name": "Authen-SASL greater than or equal 2.2100",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Authen-SASL"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Authen-SASL"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-86219",
+         "cwe": {
+            "id": "CWE-294",
+            "name": "Authentication Bypass by Capture-replay"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step.\n\nserver_start generates a fresh nonce and sends it in the challenge, and nothing later compares that value against the nonce the client returns. server_step derives the expected digest from the client's own parameters, so a response verifies whenever its digest matches the nonce it carries. The count table it also checks is keyed on the client-supplied nonce and starts empty in each new server object, so a captured first response, carrying `nc=00000001`, passes that too. RFC 2831 defines the nonce in the response as the value the server sent in the preceding challenge.\n\nAn attacker who observes one successful `qop=auth` exchange can replay the captured response against a later session for the same service, host, realm and user, and authenticate as that user without knowing the password.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "MojoX::Authentication versions before 0.006 for Perl allow SAML authentication bypass because parse_assertion builds Net::SAML2::Binding::POST without a trust anchor.\n\nparse_assertion in MojoX::Authentication::Model::SAML2 calls Net::SAML2::Binding::POST->new with no cacert, cert_text or anchors argument, then passes the returned XML to Net::SAML2::Protocol::Assertion->new_from_xml with the IdP signing certificate as cacert. In Net::SAML2 before 0.86 that certificate guards only encrypted assertions, so the signature on an unencrypted assertion is checked against the certificate the response itself carries.\n\nAn attacker starts a SAML login, then posts a response signed with a certificate of their own. The audience, InResponseTo and timestamp checks that follow are all satisfiable by the attacker, so the response authenticates any NameID it carries.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-MojoX-Authentication-2026-86304 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mojox-authentication-2026-86304.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/POLETTIX/MojoX-Authentication-0.004/source/lib/MojoX/Authentication/Model/SAML2.pm#L188",
+            "url": "https://metacpan.org/release/POLETTIX/MojoX-Authentication-0.004/source/lib/MojoX/Authentication/Model/SAML2.pm#L188"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/POLETTIX/MojoX-Authentication-0.006/source/Changes",
+            "url": "https://metacpan.org/release/POLETTIX/MojoX-Authentication-0.006/source/Changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-18089",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-18089"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-86304 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86304"
+         }
+      ],
+      "title": "MojoX-Authentication vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-06T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-MojoX-Authentication-2026-86304",
+         "initial_release_date": "2026-09-06T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-06T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.006",
+                  "product": {
+                     "name": "MojoX-Authentication less than 0.006",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MojoX-Authentication"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.006",
+                  "product": {
+                     "name": "MojoX-Authentication greater than or equal 0.006",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MojoX-Authentication"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "MojoX-Authentication"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-86304",
+         "cwe": {
+            "id": "CWE-347",
+            "name": "Improper Verification of Cryptographic Signature"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "MojoX::Authentication versions before 0.006 for Perl allow SAML authentication bypass because parse_assertion builds Net::SAML2::Binding::POST without a trust anchor.\n\nparse_assertion in MojoX::Authentication::Model::SAML2 calls Net::SAML2::Binding::POST->new with no cacert, cert_text or anchors argument, then passes the returned XML to Net::SAML2::Protocol::Assertion->new_from_xml with the IdP signing certificate as cacert. In Net::SAML2 before 0.86 that certificate guards only encrypted assertions, so the signature on an unencrypted assertion is checked against the certificate the response itself carries.\n\nAn attacker starts a SAML login, then posts a response signed with a certificate of their own. The audience, InResponseTo and timestamp checks that follow are all satisfiable by the attacker, so the response authenticates any NameID it carries.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

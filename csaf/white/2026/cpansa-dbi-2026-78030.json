@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM.\n\nDBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as a literal filename and does not consult @INC, so the attribute chooses the file that Perl loads and runs.\n\nThe MLDBM::Serializer:: prefix that DBD::DBM prepends to dbm_mldbm is not a boundary: only the :: separators are rewritten to /, so a value containing / traverses out of the serializer directory. The value is also assigned to $MLDBM::Serializer, which MLDBM requires the same way when it ties the table.\n\nA caller that lets an untrusted party influence either attribute, for example through a DSN fragment or a parameter that selects a storage backend, runs the file-scope code of whatever module the value names.\n\nFor example,\n\n    my $dsn = \"dbi:DBM:f_dir=/var/db;dbm_type=../../Untrusted.pm\"\n    my $dbh = DBI->connect( $dsn );\n\nNote that DBD::Gofer forwards connect attributes to the server side, and DBI::ProxyServer checks only that a DSN starts with a driver prefix.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBI-2026-78030 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dbi-2026-78030.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/commit/315c6ce703b8b3cbe9188062d9ec80730293554a.patch",
+            "url": "https://github.com/perl5-dbi/dbi/commit/315c6ce703b8b3cbe9188062d9ec80730293554a.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-wqmw-wqwx-3fr7",
+            "url": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-wqmw-wqwx-3fr7"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/DBI-1.653/changes",
+            "url": "https://metacpan.org/release/HMBRAND/DBI-1.653/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/19/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/19/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-78030 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78030"
+         }
+      ],
+      "title": "DBI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DBI-2026-78030",
+         "initial_release_date": "2026-09-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.653",
+                  "product": {
+                     "name": "DBI less than 1.653",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.653",
+                  "product": {
+                     "name": "DBI greater than or equal 1.653",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-78030",
+         "cwe": {
+            "id": "CWE-470",
+            "name": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM.\n\nDBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as a literal filename and does not consult @INC, so the attribute chooses the file that Perl loads and runs.\n\nThe MLDBM::Serializer:: prefix that DBD::DBM prepends to dbm_mldbm is not a boundary: only the :: separators are rewritten to /, so a value containing / traverses out of the serializer directory. The value is also assigned to $MLDBM::Serializer, which MLDBM requires the same way when it ties the table.\n\nA caller that lets an untrusted party influence either attribute, for example through a DSN fragment or a parameter that selects a storage backend, runs the file-scope code of whatever module the value names.\n\nFor example,\n\n    my $dsn = \"dbi:DBM:f_dir=/var/db;dbm_type=../../Untrusted.pm\"\n    my $dbh = DBI->connect( $dsn );\n\nNote that DBD::Gofer forwards connect attributes to the server side, and DBI::ProxyServer checks only that a DSN starts with a driver prefix.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

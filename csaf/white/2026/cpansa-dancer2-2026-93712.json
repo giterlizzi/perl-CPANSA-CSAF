@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Dancer2 versions from 2.1.0 before 2.2.0 for Perl serve files from outside public_dir via relative path segments in the File route handler.\n\nThe handler joins the request path onto public_dir without collapsing relative segments, and checks only that the result is a readable regular file. A request for `/../outside.txt` escapes public_dir, and percent-encoding the dots reaches the same file.\n\nThe handler is off by default. An application is affected once it names File in route_handlers and sets static_handler to 0, which otherwise refuses a dot segment before the route runs.\n\nAny file the worker process can read is served to an unauthenticated request, including the application's config.yml above public_dir.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Dancer2-2026-93712 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dancer2-2026-93712.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/PerlDancer/Dancer2/commit/2446a09ffb83fef71cc75c327bd6e4b1f007b885.patch",
+            "url": "https://github.com/PerlDancer/Dancer2/commit/2446a09ffb83fef71cc75c327bd6e4b1f007b885.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/PerlDancer/Dancer2/security/advisories/GHSA-6xw8-v24c-m783",
+            "url": "https://github.com/PerlDancer/Dancer2/security/advisories/GHSA-6xw8-v24c-m783"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/CROMEDOME/Dancer2-2.2.0/changes",
+            "url": "https://metacpan.org/release/CROMEDOME/Dancer2-2.2.0/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/22/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/22/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-93712 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93712"
+         }
+      ],
+      "title": "Dancer2 vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Dancer2-2026-93712",
+         "initial_release_date": "2026-09-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.1.0|<2.2.0",
+                  "product": {
+                     "name": "Dancer2 greater than or equal 2.1.0 and less than 2.2.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.2.0",
+                  "product": {
+                     "name": "Dancer2 greater than or equal 2.2.0",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Dancer2"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-93712",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Dancer2 versions from 2.1.0 before 2.2.0 for Perl serve files from outside public_dir via relative path segments in the File route handler.\n\nThe handler joins the request path onto public_dir without collapsing relative segments, and checks only that the result is a readable regular file. A request for `/../outside.txt` escapes public_dir, and percent-encoding the dots reaches the same file.\n\nThe handler is off by default. An application is affected once it names File in route_handlers and sets static_handler to 0, which otherwise refuses a dot segment before the route runs.\n\nAny file the worker process can read is served to an unauthenticated request, including the application's config.yml above public_dir.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

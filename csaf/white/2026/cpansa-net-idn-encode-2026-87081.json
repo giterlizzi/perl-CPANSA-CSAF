@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::IDN::UTS46 versions before 2.590 for Perl allow CPU exhaustion via quadratic punycode encoding of an overlong label before the length check in to_ascii.\n\nto_ascii punycode encodes each label and only then applies the 63-byte DNS limit. encode_punycode in both backends follows the sample implementation in RFC 3492, whose outer loop runs once per distinct non-ASCII code point and scans the whole input each round, so a label of distinct non-ASCII characters costs the square of its length before the limit rejects it. Every ASCII conversion in the distribution, including domain_to_ascii and email_to_ascii, goes through to_ascii.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-IDN-Encode-2026-87081 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-idn-encode-2026-87081.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Net-IDN-Encode/commit/5ac3315131264670efcd3a29857b651506dfee8e.patch",
+            "url": "https://github.com/robrwo/Net-IDN-Encode/commit/5ac3315131264670efcd3a29857b651506dfee8e.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Net-IDN-Encode/commit/ea34f812d7dc67f3b211f4d92e74c6a7e24d764a.patch",
+            "url": "https://github.com/robrwo/Net-IDN-Encode/commit/ea34f812d7dc67f3b211f4d92e74c6a7e24d764a.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PJCJ/Net-IDN-Encode-2.590-TRIAL/changes",
+            "url": "https://metacpan.org/release/PJCJ/Net-IDN-Encode-2.590-TRIAL/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/22/16",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/22/16"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-87081 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87081"
+         }
+      ],
+      "title": "Net-IDN-Encode vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-IDN-Encode-2026-87081",
+         "initial_release_date": "2026-09-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.590",
+                  "product": {
+                     "name": "Net-IDN-Encode less than 2.590",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IDN-Encode"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.590",
+                  "product": {
+                     "name": "Net-IDN-Encode greater than or equal 2.590",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IDN-Encode"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-IDN-Encode"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-87081",
+         "cwe": {
+            "id": "CWE-407",
+            "name": "Inefficient Algorithmic Complexity"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::IDN::UTS46 versions before 2.590 for Perl allow CPU exhaustion via quadratic punycode encoding of an overlong label before the length check in to_ascii.\n\nto_ascii punycode encodes each label and only then applies the 63-byte DNS limit. encode_punycode in both backends follows the sample implementation in RFC 3492, whose outer loop runs once per distinct non-ASCII code point and scans the whole input each round, so a label of distinct non-ASCII characters costs the square of its length before the limit rejects it. Every ASCII conversion in the distribution, including domain_to_ascii and email_to_ascii, goes through to_ascii.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

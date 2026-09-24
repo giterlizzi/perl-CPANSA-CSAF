@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Imager versions before 1.036 for Perl exit the process reading a TGA with a colour map length of 32768 or more in tga_palette_read.\n\nThe reader unpacks the two-byte colour map length into a signed short, so a length of 32768 or more becomes negative. tga_palette_read() casts that value to size_t and asks mymalloc() for a size near SIZE_MAX. The allocation fails and Imager's allocator calls exit(3).\n\nReading an attacker-supplied file through Imager->read() triggers an uncatchable exit.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Imager-2026-93019 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-93019.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/commit/74ed50e0625f9f51054e595bb4a8da92c1e0d571.patch",
+            "url": "https://github.com/tonycoz/imager/commit/74ed50e0625f9f51054e595bb4a8da92c1e0d571.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/security/advisories/GHSA-p4vw-rc54-p2c2",
+            "url": "https://github.com/tonycoz/imager/security/advisories/GHSA-p4vw-rc54-p2c2"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TONYC/Imager-1.036/changes",
+            "url": "https://metacpan.org/release/TONYC/Imager-1.036/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/18/9",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/18/9"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/security/advisories/GHSA-p4vw-rc54-p2c2",
+            "url": "https://github.com/tonycoz/imager/security/advisories/GHSA-p4vw-rc54-p2c2"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-93019 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93019"
+         }
+      ],
+      "title": "Imager vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Imager-2026-93019",
+         "initial_release_date": "2026-09-18T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.036",
+                  "product": {
+                     "name": "Imager less than 1.036",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.036",
+                  "product": {
+                     "name": "Imager greater than or equal 1.036",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Imager"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-93019",
+         "cwe": {
+            "id": "CWE-196",
+            "name": "Unsigned to Signed Conversion Error"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Imager versions before 1.036 for Perl exit the process reading a TGA with a colour map length of 32768 or more in tga_palette_read.\n\nThe reader unpacks the two-byte colour map length into a signed short, so a length of 32768 or more becomes negative. tga_palette_read() casts that value to size_t and asks mymalloc() for a size near SIZE_MAX. The allocation fails and Imager's allocator calls exit(3).\n\nReading an attacker-supplied file through Imager->read() triggers an uncatchable exit.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

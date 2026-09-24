@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::IDN::Punycode versions before 2.301 for Perl allow a heap buffer overflow via unchecked writes past the output buffer in encode_punycode.\n\nThe XS backend builds the encoded label in the string buffer of the scalar it returns, sized from the input length. The loop that emits the digits of each code point checks for room before every write, but the write of the last digit of each round and the write of the terminating NUL do not, so an input whose encoded form fills the buffer writes past its end.\n\nOnly the XS backend is affected.\n\nEncoding an attacker-supplied string corrupts the heap.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-IDN-Encode-2016-15059 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-idn-encode-2016-15059.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Net-IDN-Encode/commit/9a3ba07f15d22c0347eefee9625b012cbc803657.patch",
+            "url": "https://github.com/robrwo/Net-IDN-Encode/commit/9a3ba07f15d22c0347eefee9625b012cbc803657.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/CFAERBER/Net-IDN-Encode-2.301/changes",
+            "url": "https://metacpan.org/release/CFAERBER/Net-IDN-Encode-2.301/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Ticket/Display.html?id=118924",
+            "url": "https://rt.cpan.org/Ticket/Display.html?id=118924"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/22/10",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/22/10"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2016-15059 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-15059"
+         }
+      ],
+      "title": "Net-IDN-Encode vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-IDN-Encode-2016-15059",
+         "initial_release_date": "2026-09-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.301",
+                  "product": {
+                     "name": "Net-IDN-Encode less than 2.301",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IDN-Encode"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.301",
+                  "product": {
+                     "name": "Net-IDN-Encode greater than or equal 2.301",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IDN-Encode"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-IDN-Encode"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2016-15059",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::IDN::Punycode versions before 2.301 for Perl allow a heap buffer overflow via unchecked writes past the output buffer in encode_punycode.\n\nThe XS backend builds the encoded label in the string buffer of the scalar it returns, sized from the input length. The loop that emits the digits of each code point checks for room before every write, but the write of the last digit of each round and the write of the terminating NUL do not, so an input whose encoded form fills the buffer writes past its end.\n\nOnly the XS backend is affected.\n\nEncoding an attacker-supplied string corrupts the heap.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,148 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Imager versions before 1.036 for Perl disclose uninitialised heap memory reading a paletted image with pixel indexes past its colour map in i_gpix_p and i_glin_p.\n\nThe palette is allocated uninitialised, and only the entries a reader adds count as populated. The TGA reader stores pixel indexes without checking them against the colour map. i_gpix_p() rejects only an index greater than the count, so an index equal to it reads the first unpopulated entry, and getpixel() returns it.\n\ni_glin_p() skips any index at or beyond the count without writing that pixel to the caller's buffer. The palette-to-RGB conversion reads each row through an uninitialised buffer, so those pixels of the converted image hold prior heap contents.\n\nReading an attacker-supplied image through Imager->read() and then fetching its pixels or converting it to RGB discloses process heap memory.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Imager-2026-93018 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-93018.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/commit/dcf0a52e2732399d42ab44d98af6934658d068ee.patch",
+            "url": "https://github.com/tonycoz/imager/commit/dcf0a52e2732399d42ab44d98af6934658d068ee.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/security/advisories/GHSA-j7v7-cm4g-vrgf",
+            "url": "https://github.com/tonycoz/imager/security/advisories/GHSA-j7v7-cm4g-vrgf"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TONYC/Imager-1.036/changes",
+            "url": "https://metacpan.org/release/TONYC/Imager-1.036/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/18/8",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/18/8"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-93018 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93018"
+         }
+      ],
+      "title": "Imager vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Imager-2026-93018",
+         "initial_release_date": "2026-09-18T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.036",
+                  "product": {
+                     "name": "Imager less than 1.036",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.036",
+                  "product": {
+                     "name": "Imager greater than or equal 1.036",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Imager"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-93018",
+         "cwe": {
+            "id": "CWE-193",
+            "name": "Off-by-one Error"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Imager versions before 1.036 for Perl disclose uninitialised heap memory reading a paletted image with pixel indexes past its colour map in i_gpix_p and i_glin_p.\n\nThe palette is allocated uninitialised, and only the entries a reader adds count as populated. The TGA reader stores pixel indexes without checking them against the colour map. i_gpix_p() rejects only an index greater than the count, so an index equal to it reads the first unpopulated entry, and getpixel() returns it.\n\ni_glin_p() skips any index at or beyond the count without writing that pixel to the caller's buffer. The palette-to-RGB conversion reads each row through an uninitialised buffer, so those pixels of the converted image hold prior heap contents.\n\nReading an attacker-supplied image through Imager->read() and then fetching its pixels or converting it to RGB discloses process heap memory.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

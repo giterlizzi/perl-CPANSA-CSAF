@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Email::Sender::Transport::Sendmail versions before 2.602 for Perl allow arbitrary command execution on Windows sending a message whose envelope address reaches the shell in _sendmail_pipe.\n\nOn MSWin32 the envelope sender and every recipient go into a single command string, which open() passes to a shell. Every other platform gets the list form, which runs sendmail directly. When the caller supplies no envelope, Email::Sender::Simple takes the recipients from the To and Cc headers and the sender from the From header.\n\nAn attacker who controls one of those header addresses runs commands as the sending process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Email-Sender-2026-93012 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-email-sender-2026-93012.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/rjbs/Email-Sender/commit/9a587bc9ff4edae13239190c2651da2c76b1e72c.patch",
+            "url": "https://github.com/rjbs/Email-Sender/commit/9a587bc9ff4edae13239190c2651da2c76b1e72c.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RJBS/Email-Sender-2.602/changes",
+            "url": "https://metacpan.org/release/RJBS/Email-Sender-2.602/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/21/8",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/21/8"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-93012 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93012"
+         }
+      ],
+      "title": "Email-Sender vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Email-Sender-2026-93012",
+         "initial_release_date": "2026-09-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.602",
+                  "product": {
+                     "name": "Email-Sender less than 2.602",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Email-Sender"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.602",
+                  "product": {
+                     "name": "Email-Sender greater than or equal 2.602",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Email-Sender"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Email-Sender"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-93012",
+         "cwe": {
+            "id": "CWE-78",
+            "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Email::Sender::Transport::Sendmail versions before 2.602 for Perl allow arbitrary command execution on Windows sending a message whose envelope address reaches the shell in _sendmail_pipe.\n\nOn MSWin32 the envelope sender and every recipient go into a single command string, which open() passes to a shell. Every other platform gets the list form, which runs sendmail directly. When the caller supplies no envelope, Email::Sender::Simple takes the recipients from the To and Cc headers and the sender from the From header.\n\nAn attacker who controls one of those header addresses runs commands as the sending process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
