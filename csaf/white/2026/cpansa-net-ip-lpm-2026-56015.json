@@ -77,10 +77,21 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<1.11",
                   "product": {
-                     "name": "Net-IP-LPM greater than 0",
+                     "name": "Net-IP-LPM less than 1.11",
                      "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-IP-LPM"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.11",
+                  "product": {
+                     "name": "Net-IP-LPM greater than or equal 1.11",
+                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Net-IP-LPM"
                      }
@@ -107,6 +118,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

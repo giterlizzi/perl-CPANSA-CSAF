@@ -87,10 +87,21 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/<0.712",
                   "product": {
-                     "name": "Dancer2-Plugin-Auth-Extensible greater than 0",
+                     "name": "Dancer2-Plugin-Auth-Extensible less than 0.712",
                      "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Dancer2-Plugin-Auth-Extensible"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.712",
+                  "product": {
+                     "name": "Dancer2-Plugin-Auth-Extensible greater than or equal 0.712",
+                     "product_id": "CSAFPID-0002",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Dancer2-Plugin-Auth-Extensible"
                      }
@@ -117,6 +128,9 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
             "known_affected": [
                "CSAFPID-0001"
             ]

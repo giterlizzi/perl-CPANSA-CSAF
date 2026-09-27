@@ -82,9 +82,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/>0|<1.042",
                   "product": {
-                     "name": "WebDyne-Session greater than 0",
+                     "name": "WebDyne-Session greater than 0 and less than 1.042",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/WebDyne-Session"

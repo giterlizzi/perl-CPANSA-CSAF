@@ -105,6 +105,39 @@
                         "purl": "pkg:cpan/MT"
                      }
                   }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>6.3.9|<6.5.0",
+                  "product": {
+                     "name": "MT greater than 6.3.9 and less than 6.5.0",
+                     "product_id": "CSAFPID-0004",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>6.5.1|<7",
+                  "product": {
+                     "name": "MT greater than 6.5.1 and less than 7",
+                     "product_id": "CSAFPID-0005",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=7.1.3",
+                  "product": {
+                     "name": "MT greater than or equal 7.1.3",
+                     "product_id": "CSAFPID-0006",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
                }
             ],
             "category": "product_name",
@@ -127,6 +160,11 @@
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0004",
+               "CSAFPID-0005",
+               "CSAFPID-0006"
+            ],
             "known_affected": [
                "CSAFPID-0001",
                "CSAFPID-0002",

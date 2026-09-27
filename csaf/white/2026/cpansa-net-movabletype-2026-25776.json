@@ -1,5 +1,8 @@
 {
    "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
       "category": "csaf_security_advisory",
       "csaf_version": "2.0",
       "distribution": {
@@ -12,7 +15,7 @@
       "notes": [
          {
             "category": "description",
-            "text": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability which may allow an attacker to execute arbitrary Perl script.",
+            "text": "Movable Type provided by Six Apart Ltd. contains an SQL Injection vulnerability which may allow an attacker to execute an arbitrary SQL statement.",
             "title": "Vulnerability Description"
          }
       ],
@@ -45,8 +48,8 @@
          },
          {
             "category": "external",
-            "summary": "CVE-2026-25776 (NVD)",
-            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25776"
+            "summary": "CVE-2026-33088 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33088"
          }
       ],
       "title": "MT vulnerability",
@@ -77,10 +80,65 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/>0",
+                  "name": "vers:cpan/>=8.0.2|<8.0.10",
                   "product": {
-                     "name": "MT greater than 0",
+                     "name": "MT greater than or equal 8.0.2 and less than 8.0.10",
                      "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=8.8.0|<8.8.3",
+                  "product": {
+                     "name": "MT greater than or equal 8.8.0 and less than 8.8.3",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=9.0.1|<9.0.7",
+                  "product": {
+                     "name": "MT greater than or equal 9.0.1 and less than 9.0.7",
+                     "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=8.0.10|<8.1",
+                  "product": {
+                     "name": "MT greater than or equal 8.0.10 and less than 8.1",
+                     "product_id": "CSAFPID-0004",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=8.8.3|<9",
+                  "product": {
+                     "name": "MT greater than or equal 8.8.3 and less than 9",
+                     "product_id": "CSAFPID-0005",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/MT"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=9.0.7",
+                  "product": {
+                     "name": "MT greater than or equal 9.0.7",
+                     "product_id": "CSAFPID-0006",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/MT"
                      }
@@ -94,21 +152,28 @@
    },
    "vulnerabilities": [
       {
-         "cve": "CVE-2026-25776",
+         "cve": "CVE-2026-33088",
          "cwe": {
-            "id": "CWE-94",
-            "name": "Improper Control of Generation of Code ('Code Injection')"
+            "id": "CWE-89",
+            "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
          },
          "notes": [
             {
                "category": "description",
-               "text": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability which may allow an attacker to execute arbitrary Perl script.",
+               "text": "Movable Type provided by Six Apart Ltd. contains an SQL Injection vulnerability which may allow an attacker to execute an arbitrary SQL statement.",
                "title": "Vulnerability Description"
             }
          ],
          "product_status": {
+            "fixed": [
+               "CSAFPID-0004",
+               "CSAFPID-0005",
+               "CSAFPID-0006"
+            ],
             "known_affected": [
-               "CSAFPID-0001"
+               "CSAFPID-0001",
+               "CSAFPID-0002",
+               "CSAFPID-0003"
             ]
          },
          "scores": [
@@ -116,11 +181,13 @@
                "cvss_v3": {
                   "baseScore": 9.8,
                   "baseSeverity": "CRITICAL",
-                  "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-                  "version": "3.0"
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
                },
                "products": [
-                  "CSAFPID-0001"
+                  "CSAFPID-0001",
+                  "CSAFPID-0002",
+                  "CSAFPID-0003"
                ]
             }
          ]
