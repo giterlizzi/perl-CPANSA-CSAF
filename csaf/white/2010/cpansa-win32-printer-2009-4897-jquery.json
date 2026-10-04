@@ -1,0 +1,163 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Buffer overflow in gs/psi/iscan.c in Ghostscript 8.64 and earlier allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted PDF document containing a long name.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Win32-Printer-2009-4897-jquery JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2010/cpansa-win32-printer-2009-4897-jquery.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/41593",
+            "url": "http://www.securityfocus.com/bid/41593"
+         },
+         {
+            "category": "external",
+            "summary": "http://bugs.ghostscript.com/show_bug.cgi?id=690523",
+            "url": "http://bugs.ghostscript.com/show_bug.cgi?id=690523"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=613792",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=613792"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/USN-961-1",
+            "url": "http://www.ubuntu.com/usn/USN-961-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/40580",
+            "url": "http://secunia.com/advisories/40580"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.osvdb.org/66277",
+            "url": "http://www.osvdb.org/66277"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:134",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:134"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:135",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:135"
+         },
+         {
+            "category": "external",
+            "summary": "http://security.gentoo.org/glsa/glsa-201412-17.xml",
+            "url": "http://security.gentoo.org/glsa/glsa-201412-17.xml"
+         },
+         {
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/60380",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/60380"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2009-4897 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4897"
+         }
+      ],
+      "title": "Win32-Printer vulnerability",
+      "tracking": {
+         "current_release_date": "2010-07-22T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Win32-Printer-2009-4897-jquery",
+         "initial_release_date": "2010-07-22T00:00:00",
+         "revision_history": [
+            {
+               "date": "2010-07-22T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.7.0|<0.9.0",
+                  "product": {
+                     "name": "Win32-Printer greater than or equal 0.7.0 and less than 0.9.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Win32-Printer"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Win32-Printer"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2009-4897",
+         "cwe": {
+            "id": "CWE-119",
+            "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Buffer overflow in gs/psi/iscan.c in Ghostscript 8.64 and earlier allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted PDF document containing a long name.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 9.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

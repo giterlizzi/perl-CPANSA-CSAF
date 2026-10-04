@@ -1,0 +1,216 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Lemonldap::NG::Handler versions from 2.0.0 before 2.16.10, from 2.17.0 before 2.21.6, from 2.22.0 before 2.23.4 for Perl allow an equivalent spelling of a path to bypass the locationRules that restrict it.\n\nThe handler matches each vhost's locationRules regular expressions against REQUEST_URI, the raw request line, while the web server routes on the path it has already percent-decoded and normalized. A request that percent-encodes a character of the path, inserts dot segments, or doubles a slash therefore reaches the protected resource under a URI that no rule regexp matches, and the vhost's default rule decides access. Deny rules, identity and group conditions, and unprotect and skip rules are bypassed alike.\n\nOnly a vhost whose default rule is more permissive than its other rules is affected. An authenticated user then reaches any URL a locationRules regexp was meant to restrict, but gains no more than that default rule already grants.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Lemonldap-NG-Handler-2026-95811 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-lemonldap-ng-handler-2026-95811.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/3723",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/3723"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.16.10",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.16.10"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.21.6",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.21.6"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.23.4",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.23.4"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2020-24660",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2020-24660"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.debian.org/debian-lts-announce/2026/09/msg00032.html",
+            "url": "https://lists.debian.org/debian-lts-announce/2026/09/msg00032.html"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/work_items/3723",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/work_items/3723"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-95811 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95811"
+         }
+      ],
+      "title": "Lemonldap-NG-Handler vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-25T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Lemonldap-NG-Handler-2026-95811",
+         "initial_release_date": "2026-09-25T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-25T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.0.0|<2.16.10",
+                  "product": {
+                     "name": "Lemonldap-NG-Handler greater than or equal 2.0.0 and less than 2.16.10",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Handler"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.17.0|<2.21.6",
+                  "product": {
+                     "name": "Lemonldap-NG-Handler greater than or equal 2.17.0 and less than 2.21.6",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Handler"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.22.0|<2.23.4",
+                  "product": {
+                     "name": "Lemonldap-NG-Handler greater than or equal 2.22.0 and less than 2.23.4",
+                     "product_id": "CSAFPID-0003",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Handler"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.16.10|<2.17.0",
+                  "product": {
+                     "name": "Lemonldap-NG-Handler greater than or equal 2.16.10 and less than 2.17.0",
+                     "product_id": "CSAFPID-0004",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Handler"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.21.6|<2.22.0",
+                  "product": {
+                     "name": "Lemonldap-NG-Handler greater than or equal 2.21.6 and less than 2.22.0",
+                     "product_id": "CSAFPID-0005",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Handler"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.23.4",
+                  "product": {
+                     "name": "Lemonldap-NG-Handler greater than or equal 2.23.4",
+                     "product_id": "CSAFPID-0006",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Handler"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Lemonldap-NG-Handler"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-95811",
+         "cwe": {
+            "id": "CWE-180",
+            "name": "Incorrect Behavior Order: Validate Before Canonicalize"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Lemonldap::NG::Handler versions from 2.0.0 before 2.16.10, from 2.17.0 before 2.21.6, from 2.22.0 before 2.23.4 for Perl allow an equivalent spelling of a path to bypass the locationRules that restrict it.\n\nThe handler matches each vhost's locationRules regular expressions against REQUEST_URI, the raw request line, while the web server routes on the path it has already percent-decoded and normalized. A request that percent-encodes a character of the path, inserts dot segments, or doubles a slash therefore reaches the protected resource under a URI that no rule regexp matches, and the vhost's default rule decides access. Deny rules, identity and group conditions, and unprotect and skip rules are bypassed alike.\n\nOnly a vhost whose default rule is more permissive than its other rules is affected. An authenticated user then reaches any URL a locationRules regexp was meant to restrict, but gains no more than that default rule already grants.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0004",
+               "CSAFPID-0005",
+               "CSAFPID-0006"
+            ],
+            "known_affected": [
+               "CSAFPID-0001",
+               "CSAFPID-0002",
+               "CSAFPID-0003"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001",
+                  "CSAFPID-0002",
+                  "CSAFPID-0003"
+               ]
+            }
+         ]
+      }
+   ]
+}

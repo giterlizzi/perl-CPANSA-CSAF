@@ -1,0 +1,126 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Algorithm::AhoCorasick::XS versions through 0.04 for Perl read the haystack string length before the scalar is stringified.\n\nThe matches, first_match and match_details methods use the T_STD_STRING typemap to translate Perl scalars (SVs) into strings via the std::string constructor, using the SvPV macro to stringify the haystack input, and the SvCUR macro to determine the length of the SV.\n\nWhen the input SVs are references, integers (IVs) or floats (NVs), the SvCUR macro will return an invalid length if it is run before the input is stringified, leading to an out-of-bounds read which can abort the process.\n\nNote that the evaluation order of arguments to std::string is unspecified. Depending on the compiler, SvCUR may be run first and lead to an abort that cannot be caught within Perl.\n\nThis can be triggered when the haystack is a numeric value, for example,\n\n    my $ac = Algorithm::AhoCorasick::XS->new( [ \"11\", \"22\" ] );\n    $ac->matches( 211 );\n\nThis can occur when the haystack is the result of reading data from decoded JSON or a numeric database column. It can also be triggered when using a blessed object as a haystack.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Algorithm-AhoCorasick-XS-2026-80490 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-algorithm-ahocorasick-xs-2026-80490.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/richardjharris/Algorithm-AhoCorasick-XS/pull/1",
+            "url": "https://github.com/richardjharris/Algorithm-AhoCorasick-XS/pull/1"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RJH/Algorithm-AhoCorasick-XS-0.04/source/typemap#L14",
+            "url": "https://metacpan.org/release/RJH/Algorithm-AhoCorasick-XS-0.04/source/typemap#L14"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Ticket/Display.html?id=181560",
+            "url": "https://rt.cpan.org/Ticket/Display.html?id=181560"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/A/Algorithm-AhoCorasick-XS/0.04/CVE-2026-80490-r1.patch",
+            "url": "https://security.metacpan.org/patches/A/Algorithm-AhoCorasick-XS/0.04/CVE-2026-80490-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/30/15",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/30/15"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-80490 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80490"
+         }
+      ],
+      "title": "Algorithm-AhoCorasick-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Algorithm-AhoCorasick-XS-2026-80490",
+         "initial_release_date": "2026-09-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Algorithm-AhoCorasick-XS greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Algorithm-AhoCorasick-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Algorithm-AhoCorasick-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-80490",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Algorithm::AhoCorasick::XS versions through 0.04 for Perl read the haystack string length before the scalar is stringified.\n\nThe matches, first_match and match_details methods use the T_STD_STRING typemap to translate Perl scalars (SVs) into strings via the std::string constructor, using the SvPV macro to stringify the haystack input, and the SvCUR macro to determine the length of the SV.\n\nWhen the input SVs are references, integers (IVs) or floats (NVs), the SvCUR macro will return an invalid length if it is run before the input is stringified, leading to an out-of-bounds read which can abort the process.\n\nNote that the evaluation order of arguments to std::string is unspecified. Depending on the compiler, SvCUR may be run first and lead to an abort that cannot be caught within Perl.\n\nThis can be triggered when the haystack is a numeric value, for example,\n\n    my $ac = Algorithm::AhoCorasick::XS->new( [ \"11\", \"22\" ] );\n    $ac->matches( 211 );\n\nThis can occur when the haystack is the result of reading data from decoded JSON or a numeric database column. It can also be triggered when using a blessed object as a haystack.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

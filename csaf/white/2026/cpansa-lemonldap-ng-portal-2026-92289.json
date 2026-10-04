@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Lemonldap::NG::Portal versions from 2.23.0 before 2.23.4 for Perl allow a PKCE bypass for public Relying Parties in \"PKCE or secret\" mode because checkEndPointAuthenticationCredentials does not verify the client secret.\n\nWith oidcRPMetaDataOptionsRequirePKCE set to 2, the authorization endpoint issues a code even when the request carries no code_challenge, and token() admits the exchange as long as a challenge was stored or an authentication method was returned for the caller. checkEndPointAuthenticationCredentials() skips the secret comparison for a Relying Party marked public and still returns the method deduced from the request, so any Basic or form credential satisfies the secret branch. validatePKCEChallenge() then passes, because neither a challenge nor a verifier is present.\n\nAn attacker who intercepts an authorization code issued to a public Relying Party can exchange it for the user's access, ID and refresh tokens by replaying the client_id with an arbitrary secret, which is the attack PKCE prevents. Dynamic client registration creates every Relying Party in this mode.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Lemonldap-NG-Portal-2026-92289 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-lemonldap-ng-portal-2026-92289.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.23.4",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/releases/v2.23.4"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/work_items/3719",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/work_items/3719"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/25/2",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/25/2"
+         },
+         {
+            "category": "external",
+            "summary": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/work_items/3719",
+            "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/work_items/3719"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-92289 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92289"
+         }
+      ],
+      "title": "Lemonldap-NG-Portal vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-25T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Lemonldap-NG-Portal-2026-92289",
+         "initial_release_date": "2026-09-25T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-25T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.23.0|<2.23.4",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.23.0 and less than 2.23.4",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.23.4",
+                  "product": {
+                     "name": "Lemonldap-NG-Portal greater than or equal 2.23.4",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Lemonldap-NG-Portal"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Lemonldap-NG-Portal"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-92289",
+         "cwe": {
+            "id": "CWE-1390",
+            "name": "Weak Authentication"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Lemonldap::NG::Portal versions from 2.23.0 before 2.23.4 for Perl allow a PKCE bypass for public Relying Parties in \"PKCE or secret\" mode because checkEndPointAuthenticationCredentials does not verify the client secret.\n\nWith oidcRPMetaDataOptionsRequirePKCE set to 2, the authorization endpoint issues a code even when the request carries no code_challenge, and token() admits the exchange as long as a challenge was stored or an authentication method was returned for the caller. checkEndPointAuthenticationCredentials() skips the secret comparison for a Relying Party marked public and still returns the method deduced from the request, so any Basic or form credential satisfies the secret branch. validatePKCEChallenge() then passes, because neither a challenge nor a verifier is present.\n\nAn attacker who intercepts an authorization code issued to a public Relying Party can exchange it for the user's access, ID and refresh tokens by replaying the client_id with an arbitrary secret, which is the attack PKCE prevents. Dynamic client registration creates every Relying Party in this mode.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

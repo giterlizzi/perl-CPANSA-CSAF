@@ -1,0 +1,179 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "An integer overflow in the component hb-ot-shape-fallback.cc of Harfbuzz v4.3.0 allows attackers to cause a Denial of Service (DoS) via unspecified vectors.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HarfBuzz-Shaper-2022-33068-harfbuzz JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2022/cpansa-harfbuzz-shaper-2022-33068-harfbuzz.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/harfbuzz/harfbuzz/commit/62e803b36173fd096d7ad460dd1d1db9be542593",
+            "url": "https://github.com/harfbuzz/harfbuzz/commit/62e803b36173fd096d7ad460dd1d1db9be542593"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/harfbuzz/harfbuzz/issues/3557",
+            "url": "https://github.com/harfbuzz/harfbuzz/issues/3557"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FQBJ24W6TXLSAQWCFW7IBGUMX4AJI3S4/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FQBJ24W6TXLSAQWCFW7IBGUMX4AJI3S4/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QQMEXOVDL3T2UXKBCON7JSOCE646G7HG/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QQMEXOVDL3T2UXKBCON7JSOCE646G7HG/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/W56WTC5IY4EIUHVUIHMCXA3BSBZLSZCI/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/W56WTC5IY4EIUHVUIHMCXA3BSBZLSZCI/"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/202209-11",
+            "url": "https://security.gentoo.org/glsa/202209-11"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/harfbuzz/harfbuzz/commit/62e803b36173fd096d7ad460dd1d1db9be542593",
+            "url": "https://github.com/harfbuzz/harfbuzz/commit/62e803b36173fd096d7ad460dd1d1db9be542593"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/harfbuzz/harfbuzz/issues/3557",
+            "url": "https://github.com/harfbuzz/harfbuzz/issues/3557"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FQBJ24W6TXLSAQWCFW7IBGUMX4AJI3S4/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FQBJ24W6TXLSAQWCFW7IBGUMX4AJI3S4/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QQMEXOVDL3T2UXKBCON7JSOCE646G7HG/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QQMEXOVDL3T2UXKBCON7JSOCE646G7HG/"
+         },
+         {
+            "category": "external",
+            "summary": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/W56WTC5IY4EIUHVUIHMCXA3BSBZLSZCI/",
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/W56WTC5IY4EIUHVUIHMCXA3BSBZLSZCI/"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.gentoo.org/glsa/202209-11",
+            "url": "https://security.gentoo.org/glsa/202209-11"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2022-33068 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-33068"
+         }
+      ],
+      "title": "HarfBuzz-Shaper vulnerability",
+      "tracking": {
+         "current_release_date": "2022-06-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HarfBuzz-Shaper-2022-33068-harfbuzz",
+         "initial_release_date": "2022-06-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2022-06-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0.017.1|<0.018.1",
+                  "product": {
+                     "name": "HarfBuzz-Shaper greater than 0.017.1 and less than 0.018.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HarfBuzz-Shaper"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HarfBuzz-Shaper"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2022-33068",
+         "cwe": {
+            "id": "CWE-190",
+            "name": "Integer Overflow or Wraparound"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "An integer overflow in the component hb-ot-shape-fallback.cc of Harfbuzz v4.3.0 allows attackers to cause a Denial of Service (DoS) via unspecified vectors.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 4.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                  "version": "2.0"
+               },
+               "cvss_v3": {
+                  "baseScore": 5.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

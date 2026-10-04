@@ -1,0 +1,313 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Multiple integer overflows in icc.c in the International Color Consortium (ICC) Format library (aka icclib), as used in Ghostscript 8.64 and earlier and Argyll Color Management System (CMS) 1.0.3 and earlier, allow context-dependent attackers to cause a denial of service (heap-based buffer overflow and application crash) or possibly execute arbitrary code by using a device file for a translation request that operates on a crafted image file and targets a certain \"native color space,\" related to an ICC profile in a (1) PostScript or (2) PDF file with embedded images.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Win32-Printer-2009-0583-jquery JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2009/cpansa-win32-printer-2009-0583-jquery.json"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34393",
+            "url": "http://secunia.com/advisories/34393"
+         },
+         {
+            "category": "external",
+            "summary": "https://bugzilla.redhat.com/show_bug.cgi?id=487742",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=487742"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.redhat.com/support/errata/RHSA-2009-0345.html",
+            "url": "http://www.redhat.com/support/errata/RHSA-2009-0345.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://wiki.rpath.com/wiki/Advisories:rPSA-2009-0050",
+            "url": "http://wiki.rpath.com/wiki/Advisories:rPSA-2009-0050"
+         },
+         {
+            "category": "external",
+            "summary": "http://securitytracker.com/id?1021868",
+            "url": "http://securitytracker.com/id?1021868"
+         },
+         {
+            "category": "external",
+            "summary": "https://issues.rpath.com/browse/RPL-2991",
+            "url": "https://issues.rpath.com/browse/RPL-2991"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2009/0776",
+            "url": "http://www.vupen.com/english/advisories/2009/0776"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00770.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00770.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34373",
+            "url": "http://secunia.com/advisories/34373"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34398",
+            "url": "http://secunia.com/advisories/34398"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.debian.org/security/2009/dsa-1746",
+            "url": "http://www.debian.org/security/2009/dsa-1746"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00772.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00772.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2009/0777",
+            "url": "http://www.vupen.com/english/advisories/2009/0777"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34381",
+            "url": "http://secunia.com/advisories/34381"
+         },
+         {
+            "category": "external",
+            "summary": "http://bugs.gentoo.org/show_bug.cgi?id=261087",
+            "url": "http://bugs.gentoo.org/show_bug.cgi?id=261087"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.auscert.org.au/render.html?it=10666",
+            "url": "http://www.auscert.org.au/render.html?it=10666"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/bid/34184",
+            "url": "http://www.securityfocus.com/bid/34184"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.gentoo.org/security/en/glsa/glsa-200903-37.xml",
+            "url": "http://www.gentoo.org/security/en/glsa/glsa-200903-37.xml"
+         },
+         {
+            "category": "external",
+            "summary": "http://support.avaya.com/elmodocs2/security/ASA-2009-098.htm",
+            "url": "http://support.avaya.com/elmodocs2/security/ASA-2009-098.htm"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34437",
+            "url": "http://secunia.com/advisories/34437"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2009/0816",
+            "url": "http://www.vupen.com/english/advisories/2009/0816"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.ubuntu.com/usn/USN-743-1",
+            "url": "http://www.ubuntu.com/usn/USN-743-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://lists.opensuse.org/opensuse-security-announce/2009-03/msg00004.html",
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2009-03/msg00004.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34418",
+            "url": "http://secunia.com/advisories/34418"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34266",
+            "url": "http://secunia.com/advisories/34266"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00916.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00916.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34469",
+            "url": "http://secunia.com/advisories/34469"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00887.html",
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00887.html"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34443",
+            "url": "http://secunia.com/advisories/34443"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/34729",
+            "url": "http://secunia.com/advisories/34729"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:095",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:095"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:096",
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:096"
+         },
+         {
+            "category": "external",
+            "summary": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-262288-1",
+            "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-262288-1"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.vupen.com/english/advisories/2009/1708",
+            "url": "http://www.vupen.com/english/advisories/2009/1708"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/35569",
+            "url": "http://secunia.com/advisories/35569"
+         },
+         {
+            "category": "external",
+            "summary": "http://secunia.com/advisories/35559",
+            "url": "http://secunia.com/advisories/35559"
+         },
+         {
+            "category": "external",
+            "summary": "https://exchange.xforce.ibmcloud.com/vulnerabilities/49329",
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/49329"
+         },
+         {
+            "category": "external",
+            "summary": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10795",
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10795"
+         },
+         {
+            "category": "external",
+            "summary": "https://usn.ubuntu.com/757-1/",
+            "url": "https://usn.ubuntu.com/757-1/"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.securityfocus.com/archive/1/501994/100/0/threaded",
+            "url": "http://www.securityfocus.com/archive/1/501994/100/0/threaded"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2009-0583 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-0583"
+         }
+      ],
+      "title": "Win32-Printer vulnerability",
+      "tracking": {
+         "current_release_date": "2009-03-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Win32-Printer-2009-0583-jquery",
+         "initial_release_date": "2009-03-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2009-03-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.7.0|<0.9.0",
+                  "product": {
+                     "name": "Win32-Printer greater than or equal 0.7.0 and less than 0.9.0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Win32-Printer"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Win32-Printer"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2009-0583",
+         "cwe": {
+            "id": "CWE-119",
+            "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Multiple integer overflows in icc.c in the International Color Consortium (ICC) Format library (aka icclib), as used in Ghostscript 8.64 and earlier and Argyll Color Management System (CMS) 1.0.3 and earlier, allow context-dependent attackers to cause a denial of service (heap-based buffer overflow and application crash) or possibly execute arbitrary code by using a device file for a translation request that operates on a crafted image file and targets a certain \"native color space,\" related to an ICC profile in a (1) PostScript or (2) PDF file with embedded images.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v2": {
+                  "baseScore": 9.3,
+                  "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                  "version": "2.0"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

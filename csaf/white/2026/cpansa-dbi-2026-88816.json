@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DBI versions before 1.654 for Perl incorrectly treat numeric values as strings in FetchHashKeyName.\n\nfetchrow_hashref uses the string pointer of the FetchHashKeyName attribute as the key name without stringifying it first. When FetchHashKeyName has been set to an integer (IV) or floating-point (NV) value, that pointer is invalid, so reading the key name triggers a segmentation fault.\n\nThis can be triggered with the following code:\n\n   my $dbh = DBI->connect( \"dbi:ExampleP:\", \"\", \"\",\n       { RaiseError => 0, PrintError => 0 } );\n   $dbh->{FetchHashKeyName} = 42;\n\n   my $sth = $dbh->prepare(\"select mode, size, name from .\");\n   $sth->execute;\n   $sth->fetchrow_hashref;",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DBI-2026-88816 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-dbi-2026-88816.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/commit/70962570212dc60a5428098cf2a0462ad5945851.patch",
+            "url": "https://github.com/perl5-dbi/dbi/commit/70962570212dc60a5428098cf2a0462ad5945851.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-f4qx-mr9m-q2hq",
+            "url": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-f4qx-mr9m-q2hq"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/DBI-1.654/changes",
+            "url": "https://metacpan.org/release/HMBRAND/DBI-1.654/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/09/28/13",
+            "url": "http://www.openwall.com/lists/oss-security/2026/09/28/13"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-f4qx-mr9m-q2hq",
+            "url": "https://github.com/perl5-dbi/dbi/security/advisories/GHSA-f4qx-mr9m-q2hq"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-88816 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88816"
+         }
+      ],
+      "title": "DBI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-09-28T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DBI-2026-88816",
+         "initial_release_date": "2026-09-28T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-09-28T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.654",
+                  "product": {
+                     "name": "DBI less than 1.654",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.654",
+                  "product": {
+                     "name": "DBI greater than or equal 1.654",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DBI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DBI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-88816",
+         "cwe": {
+            "id": "CWE-843",
+            "name": "Access of Resource Using Incompatible Type ('Type Confusion')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DBI versions before 1.654 for Perl incorrectly treat numeric values as strings in FetchHashKeyName.\n\nfetchrow_hashref uses the string pointer of the FetchHashKeyName attribute as the key name without stringifying it first. When FetchHashKeyName has been set to an integer (IV) or floating-point (NV) value, that pointer is invalid, so reading the key name triggers a segmentation fault.\n\nThis can be triggered with the following code:\n\n   my $dbh = DBI->connect( \"dbi:ExampleP:\", \"\", \"\",\n       { RaiseError => 0, PrintError => 0 } );\n   $dbh->{FetchHashKeyName} = 42;\n\n   my $sth = $dbh->prepare(\"select mode, size, name from .\");\n   $sth->execute;\n   $sth->fetchrow_hashref;",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
