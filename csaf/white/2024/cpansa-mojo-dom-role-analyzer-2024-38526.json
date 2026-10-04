@@ -1,5 +1,8 @@
 {
    "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
       "category": "csaf_security_advisory",
       "csaf_version": "2.0",
       "distribution": {
@@ -92,9 +95,9 @@
             "branches": [
                {
                   "category": "product_version_range",
-                  "name": "vers:cpan/<=0.015",
+                  "name": "vers:cpan/>=0.15",
                   "product": {
-                     "name": "Mojo-DOM-Role-Analyzer less than or equal 0.015",
+                     "name": "Mojo-DOM-Role-Analyzer greater than or equal 0.15",
                      "product_id": "CSAFPID-0001",
                      "product_identification_helper": {
                         "purl": "pkg:cpan/Mojo-DOM-Role-Analyzer"

@@ -95,10 +95,14 @@
    "vulnerabilities": [
       {
          "cve": "CVE-2021-47155",
+         "cwe": {
+            "id": "CWE-284",
+            "name": "Improper Access Control"
+         },
          "notes": [
             {
                "category": "description",
-               "text": null,
+               "text": "The Net::IPV4Addr module 0.10 for Perl does not properly consider extraneous zero characters in an IP address string, which (in some situations) allows attackers to bypass access control that is based on IP addresses.",
                "title": "Vulnerability Description"
             }
          ],
@@ -106,7 +110,20 @@
             "known_affected": [
                "CSAFPID-0001"
             ]
-         }
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
       }
    ]
 }
