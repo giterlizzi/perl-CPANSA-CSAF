@@ -1,0 +1,130 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "ExtUtils::Typemaps::STL::Vector versions before 1.05 for Perl allocate a 32 GiB array on an empty list.\n\nThe OUTPUT typemaps call av_extend( av, len-1 ). On an empty list, this undeflows, and av_extend will allocate an array with 2^32 slots, leading to memory exhaustion.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-ExtUtils-Typemaps-Default-2013-10076 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2013-10076.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tsee/extutils-typemap-default/commit/0eb696b75afcfedbf87a72e11d44d98110863934.patch",
+            "url": "https://github.com/tsee/extutils-typemap-default/commit/0eb696b75afcfedbf87a72e11d44d98110863934.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SMUELLER/ExtUtils-Typemaps-Default-1.05/changes",
+            "url": "https://metacpan.org/release/SMUELLER/ExtUtils-Typemaps-Default-1.05/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://rt.cpan.org/Public/Bug/Display.html?id=91213",
+            "url": "https://rt.cpan.org/Public/Bug/Display.html?id=91213"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2013-10076 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-10076"
+         }
+      ],
+      "title": "ExtUtils-Typemaps-Default vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-ExtUtils-Typemaps-Default-2013-10076",
+         "initial_release_date": "2026-10-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.05",
+                  "product": {
+                     "name": "ExtUtils-Typemaps-Default less than 1.05",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/ExtUtils-Typemaps-Default"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.05",
+                  "product": {
+                     "name": "ExtUtils-Typemaps-Default greater than or equal 1.05",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/ExtUtils-Typemaps-Default"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "ExtUtils-Typemaps-Default"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2013-10076",
+         "cwe": {
+            "id": "CWE-191",
+            "name": "Integer Underflow (Wrap or Wraparound)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "ExtUtils::Typemaps::STL::Vector versions before 1.05 for Perl allocate a 32 GiB array on an empty list.\n\nThe OUTPUT typemaps call av_extend( av, len-1 ). On an empty list, this undeflows, and av_extend will allocate an array with 2^32 slots, leading to memory exhaustion.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

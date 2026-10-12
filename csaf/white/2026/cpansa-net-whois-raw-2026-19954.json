@@ -1,0 +1,166 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "medium"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::Whois::Raw versions before 2.99044 for Perl ship a pwhois command-line tool that queries WHOIS for the wrong domain for unicode domain names.\n\npwhois encodes each non-ASCII label directly using Net::IDN::Punycode and prepends xn--. Apart from lowercasing ASCII and Cyrillic letters, it skips the IDNA mapping and normalization steps, so a label with other uppercase letters, or not in NFC, encodes to a different A-label than its IDNA form. For example, a label of U+00C9 followed by \"cole\" encodes to \"xn--cole-pka\" rather than \"xn--cole-9oa\".\n\nThe Net::Whois::Raw library modules are not affected.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-Whois-Raw-2026-19954 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-whois-raw-2026-19954.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/regru/Net-Whois-Raw/issues/34",
+            "url": "https://github.com/regru/Net-Whois-Raw/issues/34"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/regru/Net-Whois-Raw/pull/35",
+            "url": "https://github.com/regru/Net-Whois-Raw/pull/35"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/NALOBIN/Net-Whois-Raw-2.99044/changes",
+            "url": "https://metacpan.org/release/NALOBIN/Net-Whois-Raw-2.99044/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/PJCJ/Net-IDN-Encode-2.590-TRIAL/view/lib/Net/IDN/Punycode.pm#WARNING",
+            "url": "https://metacpan.org/release/PJCJ/Net-IDN-Encode-2.590-TRIAL/view/lib/Net/IDN/Punycode.pm#WARNING"
+         },
+         {
+            "category": "external",
+            "summary": "https://security.metacpan.org/patches/N/Net-Whois-Raw/2.99043/CVE-2026-19954-r1.patch",
+            "url": "https://security.metacpan.org/patches/N/Net-Whois-Raw/2.99043/CVE-2026-19954-r1.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.rfc-editor.org/rfc/rfc5891#section-5.2",
+            "url": "https://www.rfc-editor.org/rfc/rfc5891#section-5.2"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/05/9",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/05/9"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-19954 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19954"
+         }
+      ],
+      "title": "Net-Whois-Raw vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-Whois-Raw-2026-19954",
+         "initial_release_date": "2026-10-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.99044",
+                  "product": {
+                     "name": "Net-Whois-Raw less than 2.99044",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Whois-Raw"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.99044",
+                  "product": {
+                     "name": "Net-Whois-Raw greater than or equal 2.99044",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-Whois-Raw"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-Whois-Raw"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-19954",
+         "cwe": {
+            "id": "CWE-176",
+            "name": "Improper Handling of Unicode Encoding"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::Whois::Raw versions before 2.99044 for Perl ship a pwhois command-line tool that queries WHOIS for the wrong domain for unicode domain names.\n\npwhois encodes each non-ASCII label directly using Net::IDN::Punycode and prepends xn--. Apart from lowercasing ASCII and Cyrillic letters, it skips the IDNA mapping and normalization steps, so a label with other uppercase letters, or not in NFC, encodes to a different A-label than its IDNA form. For example, a label of U+00C9 followed by \"cole\" encodes to \"xn--cole-pka\" rather than \"xn--cole-9oa\".\n\nThe Net::Whois::Raw library modules are not affected.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.4,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

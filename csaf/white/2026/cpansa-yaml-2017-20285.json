@@ -1,0 +1,156 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "YAML versions before 1.30 for Perl allow a loaded document to trigger the DESTROY method of arbitrary classes.\n\nA perl/hash:Class tag blesses a hash into the class it names. The document supplies the object's fields, and Perl calls DESTROY when it goes out of scope.\n\nWhat DESTROY does depends on the classes the process has loaded. With File::Temp::Dir from core Perl, it can delete a directory tree the document names.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-YAML-2017-20285 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2017-20285.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-pm/commit/471314bbdcbd62077eea32755929122aa8bd00a3.patch",
+            "url": "https://github.com/ingydotnet/yaml-pm/commit/471314bbdcbd62077eea32755929122aa8bd00a3.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-pm/commit/7736f38bd02e4f9f77d5468721e3be3d7b34a8ec.patch",
+            "url": "https://github.com/ingydotnet/yaml-pm/commit/7736f38bd02e4f9f77d5468721e3be3d7b34a8ec.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-pm/issues/176",
+            "url": "https://github.com/ingydotnet/yaml-pm/issues/176"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TINITA/YAML-1.30/changes",
+            "url": "https://metacpan.org/release/TINITA/YAML-1.30/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/05/8",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/05/8"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2017-20285 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20285"
+         }
+      ],
+      "title": "YAML vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-YAML-2017-20285",
+         "initial_release_date": "2026-10-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.30",
+                  "product": {
+                     "name": "YAML less than 1.30",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.30",
+                  "product": {
+                     "name": "YAML greater than or equal 1.30",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "YAML"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2017-20285",
+         "cwe": {
+            "id": "CWE-470",
+            "name": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "YAML versions before 1.30 for Perl allow a loaded document to trigger the DESTROY method of arbitrary classes.\n\nA perl/hash:Class tag blesses a hash into the class it names. The document supplies the object's fields, and Perl calls DESTROY when it goes out of scope.\n\nWhat DESTROY does depends on the classes the process has loaded. With File::Temp::Dir from core Perl, it can delete a directory tree the document names.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.1,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

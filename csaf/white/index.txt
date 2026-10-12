@@ -4,6 +4,8 @@
 2026/cpansa-yaml-syck-2026-5089.json
 2026/cpansa-yaml-syck-2026-4177.json
 2026/cpansa-yaml-syck-2026-13713.json
+2026/cpansa-yaml-2019-25777.json
+2026/cpansa-yaml-2017-20285.json
 2026/cpansa-xs-parse-keyword-2026-85644.json
 2026/cpansa-xml-sig-2026-9487.json
 2026/cpansa-xml-sig-2026-9390.json
@@ -42,6 +44,7 @@
 2026/cpansa-punk-oauth2-2026-75866.json
 2026/cpansa-punk-oauth2-2026-75628.json
 2026/cpansa-punk-2026-75870.json
+2026/cpansa-punk-2026-104380.json
 2026/cpansa-protocol-http2-2026-16028.json
 2026/cpansa-protocol-http2-2026-10725.json
 2026/cpansa-podlators-2026-82560.json
@@ -62,6 +65,7 @@
 2026/cpansa-pdf-webkit-2026-16770.json
 2026/cpansa-pagi-middleware-session-store-cookie-2026-5087.json
 2026/cpansa-oidc-lite-2026-13089.json
+2026/cpansa-net-whois-raw-2026-19954.json
 2026/cpansa-net-statsite-client-2026-11373.json
 2026/cpansa-net-statsd-tiny-2026-46720.json
 2026/cpansa-net-statsd-lite-2026-8788.json
@@ -103,6 +107,7 @@
 2026/cpansa-net-bittorrent-2026-57080.json
 2026/cpansa-net-bittorrent-2026-57079.json
 2026/cpansa-net-async-statsd-2026-8722.json
+2026/cpansa-mt-2026-96408.json
 2026/cpansa-mojox-authentication-2026-86304.json
 2026/cpansa-mojolicious-plugin-web-auth-2026-9733.json
 2026/cpansa-mojolicious-plugin-statsd-2026-46740.json
@@ -174,6 +179,9 @@
 2026/cpansa-gazelle-2026-40562.json
 2026/cpansa-form-processor-2026-13051.json
 2026/cpansa-file-rotate-simple-2026-17435.json
+2026/cpansa-extutils-typemaps-default-2026-107794.json
+2026/cpansa-extutils-typemaps-default-2026-107373.json
+2026/cpansa-extutils-typemaps-default-2013-10076.json
 2026/cpansa-etsy-statsd-2026-46741.json
 2026/cpansa-email-sender-2026-93012.json
 2026/cpansa-dbix-quickorm-2026-13766.json

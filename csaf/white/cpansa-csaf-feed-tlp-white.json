@@ -9,6 +9,230 @@
       "entry": [
          {
             "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107794.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-ExtUtils-Typemaps-Default-2026-107794",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107794.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107794.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107794.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-10T00:00:00",
+            "title": "ExtUtils-Typemaps-Default vulnerability",
+            "updated": "2026-10-10T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2013-10076.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-ExtUtils-Typemaps-Default-2013-10076",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2013-10076.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2013-10076.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2013-10076.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-10T00:00:00",
+            "title": "ExtUtils-Typemaps-Default vulnerability",
+            "updated": "2026-10-10T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107373.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-ExtUtils-Typemaps-Default-2026-107373",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107373.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107373.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-extutils-typemaps-default-2026-107373.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-10T00:00:00",
+            "title": "ExtUtils-Typemaps-Default vulnerability",
+            "updated": "2026-10-10T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mt-2026-96408.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-MT-2026-96408",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mt-2026-96408.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mt-2026-96408.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-mt-2026-96408.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-07T00:00:00",
+            "title": "MT vulnerability",
+            "updated": "2026-10-07T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-punk-2026-104380.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Punk-2026-104380",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-punk-2026-104380.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-punk-2026-104380.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-punk-2026-104380.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-06T00:00:00",
+            "title": "Punk vulnerability",
+            "updated": "2026-10-06T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2019-25777.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-YAML-2019-25777",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2019-25777.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2019-25777.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2019-25777.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-05T00:00:00",
+            "title": "YAML vulnerability",
+            "updated": "2026-10-05T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2017-20285.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-YAML-2017-20285",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2017-20285.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2017-20285.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2017-20285.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-05T00:00:00",
+            "title": "YAML vulnerability",
+            "updated": "2026-10-05T00:00:00"
+         },
+         {
+            "content": {
+               "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-whois-raw-2026-19954.json",
+               "type": "application/json"
+            },
+            "format": {
+               "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+               "version": "2.0"
+            },
+            "id": "CPANSA-Net-Whois-Raw-2026-19954",
+            "link": [
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-whois-raw-2026-19954.json",
+                  "rel": "self"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-whois-raw-2026-19954.json.sha256",
+                  "rel": "hash"
+               },
+               {
+                  "href": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-whois-raw-2026-19954.json.sha512",
+                  "rel": "hash"
+               }
+            ],
+            "published": "2026-10-05T00:00:00",
+            "title": "Net-Whois-Raw vulnerability",
+            "updated": "2026-10-05T00:00:00"
+         },
+         {
+            "content": {
                "src": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-2026-102504.json",
                "type": "application/json"
             },
@@ -32552,6 +32776,6 @@
          }
       ],
       "title": "CPANSA CSAF feed (TLP:WHITE)",
-      "updated": "2026-10-11T14:16:30"
+      "updated": "2026-10-12T03:57:06"
    }
 }

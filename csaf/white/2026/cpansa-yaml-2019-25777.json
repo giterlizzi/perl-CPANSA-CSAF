@@ -1,0 +1,151 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "YAML versions before 1.27_001 for Perl allow a loaded perl/glob document to replace any package variable, which can lead to arbitrary code execution.\n\nA perl/glob document names a package and a symbol, and supplies the value assigned to it. Nothing restricts the name, so the target can be @INC or YAML's own load options.\n\nA perl/glob document that sets $YAML::LoadCode or $YAML::UseCode turns on code loading, which is off by default, for every later Load() in the process. A perl/code document is then passed to a string eval, so an attacker who supplies two documents to separate Load() calls in one process can execute arbitrary Perl code.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-YAML-2019-25777 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-yaml-2019-25777.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-pm/commit/bace96b5e6661d521c7c515c94a09e081c911fce.patch",
+            "url": "https://github.com/ingydotnet/yaml-pm/commit/bace96b5e6661d521c7c515c94a09e081c911fce.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/ingydotnet/yaml-pm/issues/212",
+            "url": "https://github.com/ingydotnet/yaml-pm/issues/212"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TINITA/YAML-1.28/changes",
+            "url": "https://metacpan.org/release/TINITA/YAML-1.28/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/05/7",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/05/7"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2019-25777 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25777"
+         }
+      ],
+      "title": "YAML vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-05T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-YAML-2019-25777",
+         "initial_release_date": "2026-10-05T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-05T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.28",
+                  "product": {
+                     "name": "YAML less than 1.28",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.28",
+                  "product": {
+                     "name": "YAML greater than or equal 1.28",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/YAML"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "YAML"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2019-25777",
+         "cwe": {
+            "id": "CWE-502",
+            "name": "Deserialization of Untrusted Data"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "YAML versions before 1.27_001 for Perl allow a loaded perl/glob document to replace any package variable, which can lead to arbitrary code execution.\n\nA perl/glob document names a package and a symbol, and supplies the value assigned to it. Nothing restricts the name, so the target can be @INC or YAML's own load options.\n\nA perl/glob document that sets $YAML::LoadCode or $YAML::UseCode turns on code loading, which is off by default, for every later Load() in the process. A perl/code document is then passed to a string eval, so an attacker who supplies two documents to separate Load() calls in one process can execute arbitrary Perl code.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.3,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
