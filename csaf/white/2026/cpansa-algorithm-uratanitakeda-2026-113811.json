@@ -1,0 +1,135 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Algorithm::UrataniTakeda versions from 0.1.5 before 0.1.7 for Perl allow memory exhaustion via a never-cleared failure shift cache in search.\n\nThe failure shift is cached for each pair of trie state and text character in a field of the matcher object, and nothing clears it. A character not seen before at a given state adds an entry that lasts for the life of the matcher.\n\nAn attacker who can submit text with many distinct characters to a long-lived matcher can grow its memory with each search.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Algorithm-UrataniTakeda-2026-113811 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-algorithm-uratanitakeda-2026-113811.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/perl-Algorithm-UrataniTakeda/commit/79897ef86a5a9bb6bc381718fe977c8150bc3d5b.patch",
+            "url": "https://github.com/robrwo/perl-Algorithm-UrataniTakeda/commit/79897ef86a5a9bb6bc381718fe977c8150bc3d5b.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/perl-Algorithm-UrataniTakeda/security/advisories/GHSA-9vcx-647w-pr3h",
+            "url": "https://github.com/robrwo/perl-Algorithm-UrataniTakeda/security/advisories/GHSA-9vcx-647w-pr3h"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Algorithm-UrataniTakeda-v0.1.7/changes",
+            "url": "https://metacpan.org/release/RRWO/Algorithm-UrataniTakeda-v0.1.7/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/21/27",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/21/27"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-113811 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113811"
+         }
+      ],
+      "title": "Algorithm-UrataniTakeda vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Algorithm-UrataniTakeda-2026-113811",
+         "initial_release_date": "2026-10-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0.1.5|<0.1.7",
+                  "product": {
+                     "name": "Algorithm-UrataniTakeda greater than 0.1.5 and less than 0.1.7",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Algorithm-UrataniTakeda"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.1.7",
+                  "product": {
+                     "name": "Algorithm-UrataniTakeda greater than or equal 0.1.7",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Algorithm-UrataniTakeda"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Algorithm-UrataniTakeda"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-113811",
+         "cwe": {
+            "id": "CWE-770",
+            "name": "Allocation of Resources Without Limits or Throttling"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Algorithm::UrataniTakeda versions from 0.1.5 before 0.1.7 for Perl allow memory exhaustion via a never-cleared failure shift cache in search.\n\nThe failure shift is cached for each pair of trie state and text character in a field of the matcher object, and nothing clears it. A character not seen before at a given state adds an entry that lasts for the life of the matcher.\n\nAn attacker who can submit text with many distinct characters to a long-lived matcher can grow its memory with each search.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

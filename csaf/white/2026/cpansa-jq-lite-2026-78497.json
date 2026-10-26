@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "JQ::Lite versions before 2.51 for Perl execute Perl code embedded in a query's regular expression by compiling it with string eval.\n\nThe pattern given to test(), match(), or the match and =~ conditions of select() is placed in a `qr'...'` literal and compiled as source text, so a `(?{ ... })` code block in it runs without `use re 'eval'`. Single quotes in the pattern are escaped, but a code block runs in place and needs none.\n\nAn attacker who supplies a query, or text that an application inserts into the pattern of one, can execute arbitrary Perl code in the calling process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-JQ-Lite-2026-78497 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-jq-lite-2026-78497.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/kawamurashingo/JQ-Lite/commit/c461721ae3d5a90d6d94dbb234c1b8dfee5c1769.patch",
+            "url": "https://github.com/kawamurashingo/JQ-Lite/commit/c461721ae3d5a90d6d94dbb234c1b8dfee5c1769.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SHINGO/JQ-Lite-2.51/changes",
+            "url": "https://metacpan.org/release/SHINGO/JQ-Lite-2.51/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/18/3",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/18/3"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-78497 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78497"
+         }
+      ],
+      "title": "JQ-Lite vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-JQ-Lite-2026-78497",
+         "initial_release_date": "2026-10-18T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.51",
+                  "product": {
+                     "name": "JQ-Lite less than 2.51",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JQ-Lite"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.51",
+                  "product": {
+                     "name": "JQ-Lite greater than or equal 2.51",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JQ-Lite"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "JQ-Lite"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-78497",
+         "cwe": {
+            "id": "CWE-95",
+            "name": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "JQ::Lite versions before 2.51 for Perl execute Perl code embedded in a query's regular expression by compiling it with string eval.\n\nThe pattern given to test(), match(), or the match and =~ conditions of select() is placed in a `qr'...'` literal and compiled as source text, so a `(?{ ... })` code block in it runs without `use re 'eval'`. Single quotes in the pattern are escaped, but a code block runs in place and needs none.\n\nAn attacker who supplies a query, or text that an application inserts into the pattern of one, can execute arbitrary Perl code in the calling process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.4,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse.\n\nWhen the input to parse ends in a separator and a lone CR, the parser treats the end of the input as the next character and stores the end-of-file marker in the field as the byte 0xFF. With binary set, parse(\"a,\\r\") returns the fields \"a\" and \"\\xFF\". On UTF-8 flagged input the last field is a UTF-8 flagged string holding that lone byte, which is malformed UTF-8. The same input with a non-empty last field is rejected as an error.\n\nA CRLF file read line by line and chomped ends this way when its last column is empty, so the application receives a byte that is not in its input.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Text-CSV_XS-2026-110759 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-text-csv_xs-2026-110759.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/cpan-authors/Text-CSV_XS/commit/7627f1a2bb8ffe4e81d9847318a060822043f7f3.patch",
+            "url": "https://github.com/cpan-authors/Text-CSV_XS/commit/7627f1a2bb8ffe4e81d9847318a060822043f7f3.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/HMBRAND/Text-CSV_XS-1.65/changes",
+            "url": "https://metacpan.org/release/HMBRAND/Text-CSV_XS-1.65/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-110759 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110759"
+         }
+      ],
+      "title": "Text-CSV_XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-16T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Text-CSV_XS-2026-110759",
+         "initial_release_date": "2026-10-16T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-16T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.65",
+                  "product": {
+                     "name": "Text-CSV_XS less than 1.65",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Text-CSV_XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.65",
+                  "product": {
+                     "name": "Text-CSV_XS greater than or equal 1.65",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Text-CSV_XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Text-CSV_XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-110759",
+         "cwe": {
+            "id": "CWE-1286",
+            "name": "Improper Validation of Syntactic Correctness of Input"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Text::CSV_XS versions before 1.65 for Perl return a 0xFF byte that is not in the input for an empty last field followed by a lone CR in parse.\n\nWhen the input to parse ends in a separator and a lone CR, the parser treats the end of the input as the next character and stores the end-of-file marker in the field as the byte 0xFF. With binary set, parse(\"a,\\r\") returns the fields \"a\" and \"\\xFF\". On UTF-8 flagged input the last field is a UTF-8 flagged string holding that lone byte, which is malformed UTF-8. The same input with a non-empty last field is rejected as an error.\n\nA CRLF file read line by line and chomped ends this way when its last column is empty, so the application receives a byte that is not in its input.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

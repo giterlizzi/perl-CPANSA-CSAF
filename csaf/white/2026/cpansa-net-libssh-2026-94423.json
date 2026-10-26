@@ -1,0 +1,130 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Net::LibSSH versions before 0.004 for Perl authenticate to an unverified server because connect never checks the host key against known_hosts.\n\nconnect reports success as soon as ssh_connect returns SSH_OK. libssh leaves the known-hosts check to the application, and this binding never makes it, so the strict_hostkeycheck and knownhosts options are set on the session and then decide nothing.\n\nPassword, agent and public-key authentication, channel and SFTP operations all run on a session whose peer was never identified, so an attacker who can redirect the connection receives the password when password authentication is used, and commands and data sent over the session.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Net-LibSSH-2026-94423 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-net-libssh-2026-94423.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/Getty/p5-net-libssh/commit/29f509aacddb4b282ac9eb716d5ab326686d09a4.patch",
+            "url": "https://github.com/Getty/p5-net-libssh/commit/29f509aacddb4b282ac9eb716d5ab326686d09a4.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GETTY/Net-LibSSH-0.004/changes",
+            "url": "https://metacpan.org/release/GETTY/Net-LibSSH-0.004/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/21/29",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/21/29"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-94423 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94423"
+         }
+      ],
+      "title": "Net-LibSSH vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Net-LibSSH-2026-94423",
+         "initial_release_date": "2026-10-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.004",
+                  "product": {
+                     "name": "Net-LibSSH less than 0.004",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-LibSSH"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.004",
+                  "product": {
+                     "name": "Net-LibSSH greater than or equal 0.004",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Net-LibSSH"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Net-LibSSH"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-94423",
+         "cwe": {
+            "id": "CWE-322",
+            "name": "Key Exchange without Entity Authentication"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Net::LibSSH versions before 0.004 for Perl authenticate to an unverified server because connect never checks the host key against known_hosts.\n\nconnect reports success as soon as ssh_connect returns SSH_OK. libssh leaves the known-hosts check to the application, and this binding never makes it, so the strict_hostkeycheck and knownhosts options are set on the session and then decide nothing.\n\nPassword, agent and public-key authentication, channel and SFTP operations all run on a session whose peer was never identified, so an attacker who can redirect the connection receives the password when password authentication is used, and commands and data sent over the session.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

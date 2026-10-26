@@ -1,0 +1,130 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Headers::ActionPack versions before 0.10 for Perl allow CPU exhaustion via Accept-Language ranges matched as regular expressions.\n\n_language_match interpolates each Accept-Language range into the pattern `/^$range\\-/i` without escaping it, so regular expression syntax in the header reaches the regex engine. A 12-byte range such as `(a?|b?){26}z` backtracks for seconds, and each increment of the quantifier doubles the time. An invalid range such as `(` fails to compile.\n\nA remote attacker can exhaust CPU, or make choose_language die, in any application that passes an untrusted Accept-Language header to it.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTTP-Headers-ActionPack-2026-113877 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-headers-actionpack-2026-113877.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/perl-HTTP-Headers-ActionPack/commit/77f0deb23f3de872c2e64befd72750e0f0f4bec9.patch",
+            "url": "https://github.com/robrwo/perl-HTTP-Headers-ActionPack/commit/77f0deb23f3de872c2e64befd72750e0f0f4bec9.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/HTTP-Headers-ActionPack-0.10/changes",
+            "url": "https://metacpan.org/release/RRWO/HTTP-Headers-ActionPack-0.10/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/23/27",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/23/27"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-113877 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113877"
+         }
+      ],
+      "title": "HTTP-Headers-ActionPack vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-23T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTTP-Headers-ActionPack-2026-113877",
+         "initial_release_date": "2026-10-23T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-23T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.10",
+                  "product": {
+                     "name": "HTTP-Headers-ActionPack less than 0.10",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Headers-ActionPack"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.10",
+                  "product": {
+                     "name": "HTTP-Headers-ActionPack greater than or equal 0.10",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Headers-ActionPack"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTTP-Headers-ActionPack"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-113877",
+         "cwe": {
+            "id": "CWE-624",
+            "name": "Executable Regular Expression Error"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Headers::ActionPack versions before 0.10 for Perl allow CPU exhaustion via Accept-Language ranges matched as regular expressions.\n\n_language_match interpolates each Accept-Language range into the pattern `/^$range\\-/i` without escaping it, so regular expression syntax in the header reaches the regex engine. A 12-byte range such as `(a?|b?){26}z` backtracks for seconds, and each increment of the quantifier doubles the time. An invalid range such as `(` fails to compile.\n\nA remote attacker can exhaust CPU, or make choose_language die, in any application that passes an untrusted Accept-Language header to it.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

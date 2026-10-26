@@ -1,0 +1,111 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Rex versions through 1.16.1 for Perl accept an unknown SSH host key for remote rsync transfers because sync hardcodes StrictHostKeyChecking=no.\n\nEvery remote branch of sync builds its ssh command with that option, for password authentication, for private-key authentication and for the fallback. The ssh options a caller sets through set_openssh_opt reach the OpenSSH transport but not this command, so there is no configuration that restores host key checking for the transfer.\n\nAn attacker who can redirect the connection before the real host key is known presents their own and the transfer proceeds: under password authentication sync sends the connection password to that server, an upload writes the selected local files to it, and a download writes what it returns to the local destination.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Rex-2026-94140 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-rex-2026-94140.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/FERKI/Rex-1.16.1/source/lib/Rex/Commands/Rsync.pm",
+            "url": "https://metacpan.org/release/FERKI/Rex-1.16.1/source/lib/Rex/Commands/Rsync.pm"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/21/28",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/21/28"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-94140 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94140"
+         }
+      ],
+      "title": "Rex vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Rex-2026-94140",
+         "initial_release_date": "2026-10-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Rex greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Rex"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Rex"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-94140",
+         "cwe": {
+            "id": "CWE-322",
+            "name": "Key Exchange without Entity Authentication"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Rex versions through 1.16.1 for Perl accept an unknown SSH host key for remote rsync transfers because sync hardcodes StrictHostKeyChecking=no.\n\nEvery remote branch of sync builds its ssh command with that option, for password authentication, for private-key authentication and for the fallback. The ssh options a caller sets through set_openssh_opt reach the OpenSSH transport but not this command, so there is no configuration that restores host key checking for the transfer.\n\nAn attacker who can redirect the connection before the real host key is known presents their own and the transfer proceeds: under password authentication sync sends the connection password to that server, an upload writes the selected local files to it, and a download writes what it returns to the local destination.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

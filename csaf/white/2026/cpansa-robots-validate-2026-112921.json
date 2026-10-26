@@ -1,0 +1,135 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Robots::Validate versions from 0.4.3 before 0.4.10 for Perl report clients as imposter robots when User-Agent matcher state carries over from a previous request.\n\nEach Robots::Validate object holds one pure-Perl Aho-Corasick search machine and feeds every User-Agent into it without resetting its state. A User-Agent that ends part-way through a robot name leaves the machine mid-match, so the next User-Agent checked by the same object can complete that name. That client's address is then checked against the robot's DNS rule, which it fails.\n\nA remote client can use this to make a site that blocks bad robots block other visitors where the prefix User-Agent string is a suffix of a robot being validated.\n\nNote that deployments with Algorithm::AhoCorasick::XS are also affected, since it was unused due to a different bug.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Robots-Validate-2026-112921 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-robots-validate-2026-112921.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/robrwo/Robots-Validate/commit/776a1456e6605492b7582ed25d3d5006ef384402.patch",
+            "url": "https://github.com/robrwo/Robots-Validate/commit/776a1456e6605492b7582ed25d3d5006ef384402.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Robots-Validate-v0.4.10/changes",
+            "url": "https://metacpan.org/release/RRWO/Robots-Validate-v0.4.10/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RRWO/Robots-Validate-v0.4.11/changes",
+            "url": "https://metacpan.org/release/RRWO/Robots-Validate-v0.4.11/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/21/30",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/21/30"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-112921 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112921"
+         }
+      ],
+      "title": "Robots-Validate vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-21T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Robots-Validate-2026-112921",
+         "initial_release_date": "2026-10-21T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-21T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0.4.2|<0.4.10",
+                  "product": {
+                     "name": "Robots-Validate greater than 0.4.2 and less than 0.4.10",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Robots-Validate"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.4.10",
+                  "product": {
+                     "name": "Robots-Validate greater than or equal 0.4.10",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Robots-Validate"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Robots-Validate"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-112921",
+         "cwe": {
+            "id": "CWE-488",
+            "name": "Exposure of Data Element to Wrong Session"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Robots::Validate versions from 0.4.3 before 0.4.10 for Perl report clients as imposter robots when User-Agent matcher state carries over from a previous request.\n\nEach Robots::Validate object holds one pure-Perl Aho-Corasick search machine and feeds every User-Agent into it without resetting its state. A User-Agent that ends part-way through a robot name leaves the machine mid-match, so the next User-Agent checked by the same object can complete that name. That client's address is then checked against the robot's DNS rule, which it fails.\n\nA remote client can use this to make a site that blocks bad robots block other visitors where the prefix User-Agent string is a suffix of a robot being validated.\n\nNote that deployments with Algorithm::AhoCorasick::XS are also affected, since it was unused due to a different bug.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

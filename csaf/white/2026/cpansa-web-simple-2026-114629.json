@@ -1,0 +1,130 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Web::Simple versions before 0.035 for Perl allocate a buffer sized by the Content-Length header for urlencoded body parameters.\n\nWeb::Dispatch::ParamParser::get_unpacked_body_from reads an application/x-www-form-urlencoded body using a single read call, with no cap and the return value ignored. Perl's read grows the buffer to the requested length before reading, so the declared Content-Length determines the allocation.\n\nAn attacker can trigger this through any route whose dispatch specification has a % body-parameter match, such as sub (POST + %name=), sending a Content-Length far larger than the body actually sent. No authentication is involved.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Web-Simple-2026-114629 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-web-simple-2026-114629.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/p5sagit/Web-Simple/commit/7e02c4f6204a2898938d357e6efe6dc2679af695.patch",
+            "url": "https://github.com/p5sagit/Web-Simple/commit/7e02c4f6204a2898938d357e6efe6dc2679af695.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ETHER/Web-Simple-0.035/changes",
+            "url": "https://metacpan.org/release/ETHER/Web-Simple-0.035/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/24/4",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/24/4"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-114629 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114629"
+         }
+      ],
+      "title": "Web-Simple vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-24T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Web-Simple-2026-114629",
+         "initial_release_date": "2026-10-24T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-24T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.035",
+                  "product": {
+                     "name": "Web-Simple less than 0.035",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Web-Simple"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.035",
+                  "product": {
+                     "name": "Web-Simple greater than or equal 0.035",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Web-Simple"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Web-Simple"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-114629",
+         "cwe": {
+            "id": "CWE-789",
+            "name": "Memory Allocation with Excessive Size Value"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Web::Simple versions before 0.035 for Perl allocate a buffer sized by the Content-Length header for urlencoded body parameters.\n\nWeb::Dispatch::ParamParser::get_unpacked_body_from reads an application/x-www-form-urlencoded body using a single read call, with no cap and the return value ignored. Perl's read grows the buffer to the requested length before reading, so the declared Content-Length determines the allocation.\n\nAn attacker can trigger this through any route whose dispatch specification has a % body-parameter match, such as sub (POST + %name=), sending a Content-Length far larger than the body actually sent. No authentication is involved.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

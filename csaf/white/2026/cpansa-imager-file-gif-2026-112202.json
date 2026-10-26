@@ -1,0 +1,140 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Imager::File::GIF versions before 1.006 for Perl allow out-of-bounds reads when consolidating GIF images.\n\nWith `gif_consolidate => 1`, palette indices from the image are used without checking the colour table's bounds. The i_readgif_low routine reads beyond the heap allocation and copies the bytes into output pixels. The default GIF reader is not affected.\n\nThe same code ships bundled in the Imager distribution.\n\nAn attacker supplying a crafted GIF can disclose adjacent heap memory through the decoded output and may crash the process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Imager-File-GIF-2026-112202 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-imager-file-gif-2026-112202.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/commit/dec96f12b3d8a7fd94e86264953a5e4919dd6036.patch",
+            "url": "https://github.com/tonycoz/imager/commit/dec96f12b3d8a7fd94e86264953a5e4919dd6036.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tonycoz/imager/security/advisories/GHSA-v4hp-5h6w-9897",
+            "url": "https://github.com/tonycoz/imager/security/advisories/GHSA-v4hp-5h6w-9897"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TONYC/Imager-1.040/changes",
+            "url": "https://metacpan.org/release/TONYC/Imager-1.040/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TONYC/Imager-File-GIF-1.006/changes",
+            "url": "https://metacpan.org/release/TONYC/Imager-File-GIF-1.006/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/21/1",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/21/1"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-112202 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112202"
+         }
+      ],
+      "title": "Imager-File-GIF vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-20T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Imager-File-GIF-2026-112202",
+         "initial_release_date": "2026-10-20T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-20T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.006",
+                  "product": {
+                     "name": "Imager-File-GIF less than 1.006",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager-File-GIF"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.006",
+                  "product": {
+                     "name": "Imager-File-GIF greater than or equal 1.006",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Imager-File-GIF"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Imager-File-GIF"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-112202",
+         "cwe": {
+            "id": "CWE-125",
+            "name": "Out-of-bounds Read"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Imager::File::GIF versions before 1.006 for Perl allow out-of-bounds reads when consolidating GIF images.\n\nWith `gif_consolidate => 1`, palette indices from the image are used without checking the colour table's bounds. The i_readgif_low routine reads beyond the heap allocation and copies the bytes into output pixels. The default GIF reader is not affected.\n\nThe same code ships bundled in the Imager distribution.\n\nAn attacker supplying a crafted GIF can disclose adjacent heap memory through the decoded output and may crash the process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}
