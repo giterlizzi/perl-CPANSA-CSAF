@@ -1,0 +1,125 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Starlet versions before 0.33 for Perl allow a request declaring a large Content-Length to kill a worker by exhausting memory.\n\nThe request body is read in a loop that asks sysread for all of the remaining declared length at once. Perl grows the read buffer to that size before any data arrives, so a length larger than available memory makes the worker exit with an uncatchable out of memory error before the application is called.\n\nA remote attacker can force a worker restart with each request of a few bytes.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Starlet-2026-115865 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-starlet-2026-115865.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/kazuho/Starlet/commit/598947ac620fd31b390335c683d79fa244770782.patch",
+            "url": "https://github.com/kazuho/Starlet/commit/598947ac620fd31b390335c683d79fa244770782.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/KAZUHO/Starlet-0.33/changes",
+            "url": "https://metacpan.org/release/KAZUHO/Starlet-0.33/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-115865 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115865"
+         }
+      ],
+      "title": "Starlet vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Starlet-2026-115865",
+         "initial_release_date": "2026-10-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.33",
+                  "product": {
+                     "name": "Starlet less than 0.33",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starlet"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.33",
+                  "product": {
+                     "name": "Starlet greater than or equal 0.33",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starlet"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Starlet"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-115865",
+         "cwe": {
+            "id": "CWE-789",
+            "name": "Memory Allocation with Excessive Size Value"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Starlet versions before 0.33 for Perl allow a request declaring a large Content-Length to kill a worker by exhausting memory.\n\nThe request body is read in a loop that asks sysread for all of the remaining declared length at once. Perl grows the read buffer to that size before any data arrives, so a length larger than available memory makes the worker exit with an uncatchable out of memory error before the application is called.\n\nA remote attacker can force a worker restart with each request of a few bytes.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

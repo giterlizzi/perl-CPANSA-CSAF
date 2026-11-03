@@ -1,0 +1,120 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Business::GoCardless versions before 1.01 for Perl accept forged webhooks when a configured webhook secret is undef or empty.\n\nsignature_valid uses each configured secret as the HMAC key, and nothing rejects undef or an empty string, both of which Digest::SHA treats as an empty key. A secret read from an unset environment variable, or an empty entry in a list of rotated secrets, is used as is.\n\nA remote attacker can sign a forged webhook with an empty key and have it accepted as sent by GoCardless.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Business-GoCardless-2026-119037 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-business-gocardless-2026-119037.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LEEJO/Business-GoCardless-1.01/changes",
+            "url": "https://metacpan.org/release/LEEJO/Business-GoCardless-1.01/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-119037 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119037"
+         }
+      ],
+      "title": "Business-GoCardless vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Business-GoCardless-2026-119037",
+         "initial_release_date": "2026-10-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.01",
+                  "product": {
+                     "name": "Business-GoCardless less than 1.01",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Business-GoCardless"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.01",
+                  "product": {
+                     "name": "Business-GoCardless greater than or equal 1.01",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Business-GoCardless"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Business-GoCardless"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-119037",
+         "cwe": {
+            "id": "CWE-347",
+            "name": "Improper Verification of Cryptographic Signature"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Business::GoCardless versions before 1.01 for Perl accept forged webhooks when a configured webhook secret is undef or empty.\n\nsignature_valid uses each configured secret as the HMAC key, and nothing rejects undef or an empty string, both of which Digest::SHA treats as an empty key. A secret read from an unset environment variable, or an empty entry in a list of rotated secrets, is used as is.\n\nA remote attacker can sign a forged webhook with an empty key and have it accepted as sent by GoCardless.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

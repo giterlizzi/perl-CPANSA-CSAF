@@ -1,0 +1,125 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "DateTime::Lite versions before 0.8.1 for Perl allow CPU exhaustion via a per-day loop when adding seconds.\n\n_normalize_leap_seconds crosses day boundaries one day at a time, so add(seconds => $n) on an object with a non-floating time zone takes about |$n|/86400 iterations, and nothing limits $n. The XS implementation and the pure-Perl fallback both have the loop.\n\nAn attacker who controls the number of seconds added can keep the process busy for as long as they choose.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-DateTime-Lite-2026-87768 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-datetime-lite-2026-87768.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/JDEGUEST/DateTime-Lite-v0.8.1/changes",
+            "url": "https://metacpan.org/release/JDEGUEST/DateTime-Lite-v0.8.1/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/30/10",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/30/10"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-87768 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87768"
+         }
+      ],
+      "title": "DateTime-Lite vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-DateTime-Lite-2026-87768",
+         "initial_release_date": "2026-10-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.8.1",
+                  "product": {
+                     "name": "DateTime-Lite less than 0.8.1",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DateTime-Lite"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.8.1",
+                  "product": {
+                     "name": "DateTime-Lite greater than or equal 0.8.1",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/DateTime-Lite"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "DateTime-Lite"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-87768",
+         "cwe": {
+            "id": "CWE-407",
+            "name": "Inefficient Algorithmic Complexity"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "DateTime::Lite versions before 0.8.1 for Perl allow CPU exhaustion via a per-day loop when adding seconds.\n\n_normalize_leap_seconds crosses day boundaries one day at a time, so add(seconds => $n) on an object with a non-floating time zone takes about |$n|/86400 iterations, and nothing limits $n. The XS implementation and the pure-Perl fallback both have the loop.\n\nAn attacker who controls the number of seconds added can keep the process busy for as long as they choose.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

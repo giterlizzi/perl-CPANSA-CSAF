@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Cpanel::JSON::XS versions from 3.0202 before 4.80 for Perl leak memory and retain overloaded objects when encoding values as strings in encode_stringify.\n\nencode_stringify writes a value in its string form under allow_stringify, under convert_blessed for objects without TO_JSON, and under allow_bignum. For an array or hash object with a \"\" overload, and from 4.20 a scalar object, it takes an extra reference that is never released, so the object and everything it references are never freed. From 4.10 it also never frees its copy of the string.\n\nRepeatedly encoding data that contains such values grows process memory without bound.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Cpanel-JSON-XS-2026-110684 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-cpanel-json-xs-2026-110684.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/rurban/Cpanel-JSON-XS/commit/5b15916b5e7841e447664ace51fb50c12d1e0f39.patch",
+            "url": "https://github.com/rurban/Cpanel-JSON-XS/commit/5b15916b5e7841e447664ace51fb50c12d1e0f39.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.80/changes",
+            "url": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.80/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-110684 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110684"
+         }
+      ],
+      "title": "Cpanel-JSON-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Cpanel-JSON-XS-2026-110684",
+         "initial_release_date": "2026-10-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.0202|<4.80",
+                  "product": {
+                     "name": "Cpanel-JSON-XS greater than or equal 3.0202 and less than 4.80",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.80",
+                  "product": {
+                     "name": "Cpanel-JSON-XS greater than or equal 4.80",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Cpanel-JSON-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-110684",
+         "cwe": {
+            "id": "CWE-401",
+            "name": "Missing Release of Memory after Effective Lifetime"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Cpanel::JSON::XS versions from 3.0202 before 4.80 for Perl leak memory and retain overloaded objects when encoding values as strings in encode_stringify.\n\nencode_stringify writes a value in its string form under allow_stringify, under convert_blessed for objects without TO_JSON, and under allow_bignum. For an array or hash object with a \"\" overload, and from 4.20 a scalar object, it takes an extra reference that is never released, so the object and everything it references are never freed. From 4.10 it also never frees its copy of the string.\n\nRepeatedly encoding data that contains such values grows process memory without bound.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.1,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

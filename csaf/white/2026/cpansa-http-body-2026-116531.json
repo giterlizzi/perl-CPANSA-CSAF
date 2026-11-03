@@ -1,0 +1,125 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Body versions before 1.23_01 for Perl lose track of chunk boundaries in chunked request bodies when a read ends inside a chunk.\n\nIn chunked mode, used when no content length is given, add() treats a chunk as complete once the buffer is as long as the chunk's declared size, but the buffer still holds the chunk-size line. When a read ends in the last bytes of a chunk, add() takes the chunk short and parses the leftover data as the next chunk-size line.\n\nA remote attacker can make a chunked body never complete, hanging a server that reads until the body is done, and may make it complete early, leaving the remaining bytes to be read as the next request.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTTP-Body-2026-116531 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-body-2026-116531.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/libwww-perl/HTTP-Body/commit/5869dde9fe6d13f189a435b6583fd63fcc18677a.patch",
+            "url": "https://github.com/libwww-perl/HTTP-Body/commit/5869dde9fe6d13f189a435b6583fd63fcc18677a.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GETTY/HTTP-Body-1.24/changes",
+            "url": "https://metacpan.org/release/GETTY/HTTP-Body-1.24/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-116531 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116531"
+         }
+      ],
+      "title": "HTTP-Body vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-28T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTTP-Body-2026-116531",
+         "initial_release_date": "2026-10-28T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-28T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.23_01",
+                  "product": {
+                     "name": "HTTP-Body less than 1.23_01",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Body"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.23_01",
+                  "product": {
+                     "name": "HTTP-Body greater than or equal 1.23_01",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Body"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTTP-Body"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-116531",
+         "cwe": {
+            "id": "CWE-130",
+            "name": "Improper Handling of Length Parameter Inconsistency"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Body versions before 1.23_01 for Perl lose track of chunk boundaries in chunked request bodies when a read ends inside a chunk.\n\nIn chunked mode, used when no content length is given, add() treats a chunk as complete once the buffer is as long as the chunk's declared size, but the buffer still holds the chunk-size line. When a read ends in the last bytes of a chunk, add() takes the chunk short and parses the leftover data as the next chunk-size line.\n\nA remote attacker can make a chunked body never complete, hanging a server that reads until the body is done, and may make it complete early, leaving the remaining bytes to be read as the next request.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

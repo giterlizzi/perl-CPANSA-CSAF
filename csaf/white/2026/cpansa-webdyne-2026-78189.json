@@ -1,0 +1,120 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "WebDyne versions from 3.007 before 3.022 for Perl execute .psp files outside the document root via path traversal in the PSGI API route fallback.\n\nWhen a request matches no file, the PSGI handler retries it as an API route through api_filename. That keeps .. segments in the request path and only checks that the joined path starts with the document root, which a request for /../private passes.\n\nA remote attacker can run the embedded Perl in any .psp file the server can read, such as one uploaded to a directory outside the document root.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-WebDyne-2026-78189 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-webdyne-2026-78189.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ASPEER/WebDyne-3.022/changes",
+            "url": "https://metacpan.org/release/ASPEER/WebDyne-3.022/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-78189 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78189"
+         }
+      ],
+      "title": "WebDyne vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-31T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-WebDyne-2026-78189",
+         "initial_release_date": "2026-10-31T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-31T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.007|<3.022",
+                  "product": {
+                     "name": "WebDyne greater than or equal 3.007 and less than 3.022",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/WebDyne"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.022",
+                  "product": {
+                     "name": "WebDyne greater than or equal 3.022",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/WebDyne"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "WebDyne"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-78189",
+         "cwe": {
+            "id": "CWE-22",
+            "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "WebDyne versions from 3.007 before 3.022 for Perl execute .psp files outside the document root via path traversal in the PSGI API route fallback.\n\nWhen a request matches no file, the PSGI handler retries it as an API route through api_filename. That keeps .. segments in the request path and only checks that the joined path starts with the document root, which a request for /../private passes.\n\nA remote attacker can run the embedded Perl in any .psp file the server can read, such as one uploaded to a directory outside the document root.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

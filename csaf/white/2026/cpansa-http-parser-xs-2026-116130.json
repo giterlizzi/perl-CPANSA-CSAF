@@ -1,0 +1,130 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Parser::XS versions before 0.18 for Perl truncate PATH_INFO at an encoded NUL byte in parse_http_request.\n\nThe XS parser URL-decodes the request path and measures the result with strlen(), so PATH_INFO ends at the first byte decoded from %00. The pure-Perl backend is not affected.\n\nA remote attacker can send a path that a proxy or filter checks in full while the application routes on a shorter one.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-HTTP-Parser-XS-2026-116130 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-parser-xs-2026-116130.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/kazuho/p5-http-parser-xs/commit/f388b9d7994722b01edd03d57de7d2fb819e1aae.patch",
+            "url": "https://github.com/kazuho/p5-http-parser-xs/commit/f388b9d7994722b01edd03d57de7d2fb819e1aae.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/KAZUHO/HTTP-Parser-XS-0.18/changes",
+            "url": "https://metacpan.org/release/KAZUHO/HTTP-Parser-XS-0.18/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/10/30/12",
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/30/12"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-116130 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116130"
+         }
+      ],
+      "title": "HTTP-Parser-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-HTTP-Parser-XS-2026-116130",
+         "initial_release_date": "2026-10-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.18",
+                  "product": {
+                     "name": "HTTP-Parser-XS less than 0.18",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Parser-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.18",
+                  "product": {
+                     "name": "HTTP-Parser-XS greater than or equal 0.18",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/HTTP-Parser-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "HTTP-Parser-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-116130",
+         "cwe": {
+            "id": "CWE-626",
+            "name": "Null Byte Interaction Error (Poison Null Byte)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Parser::XS versions before 0.18 for Perl truncate PATH_INFO at an encoded NUL byte in parse_http_request.\n\nThe XS parser URL-decodes the request path and measures the result with strlen(), so PATH_INFO ends at the first byte decoded from %00. The pure-Perl backend is not affected.\n\nA remote attacker can send a path that a proxy or filter checks in full while the application routes on a shorter one.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Starman versions before 0.4019 for Perl allow a stalled request body to hold a worker indefinitely, as read_timeout covers only the headers.\n\nContent-Length and chunked request bodies are read with blocking reads and no deadline. A client that sends complete headers and then stalls or trickles the body keeps the worker waiting until it disconnects.\n\nA remote attacker can take every worker with a few such connections, five with the default worker count, so the server stops answering requests.\n\nVersion 0.4019 applies read_timeout to each wait for body data and adds a body_timeout limit, 300 seconds by default, on the total time to read a body.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Starman-2026-115817 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-starman-2026-115817.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/miyagawa/Starman/commit/89dffd3bdc9baa1cbe1b48a43615586ba2588558.patch",
+            "url": "https://github.com/miyagawa/Starman/commit/89dffd3bdc9baa1cbe1b48a43615586ba2588558.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/miyagawa/Starman/commit/a30533c03051502d6b67cd48b3a95a61e129691b.patch",
+            "url": "https://github.com/miyagawa/Starman/commit/a30533c03051502d6b67cd48b3a95a61e129691b.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MIYAGAWA/Starman-0.4019/changes",
+            "url": "https://metacpan.org/release/MIYAGAWA/Starman-0.4019/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-115817 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115817"
+         }
+      ],
+      "title": "Starman vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-25T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Starman-2026-115817",
+         "initial_release_date": "2026-10-25T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-25T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.4019",
+                  "product": {
+                     "name": "Starman less than 0.4019",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starman"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.4019",
+                  "product": {
+                     "name": "Starman greater than or equal 0.4019",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Starman"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Starman"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-115817",
+         "cwe": {
+            "id": "CWE-770",
+            "name": "Allocation of Resources Without Limits or Throttling"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Starman versions before 0.4019 for Perl allow a stalled request body to hold a worker indefinitely, as read_timeout covers only the headers.\n\nContent-Length and chunked request bodies are read with blocking reads and no deadline. A client that sends complete headers and then stalls or trickles the body keeps the worker waiting until it disconnects.\n\nA remote attacker can take every worker with a few such connections, five with the default worker count, so the server stops answering requests.\n\nVersion 0.4019 applies read_timeout to each wait for body data and adds a body_timeout limit, 300 seconds by default, on the total time to read a body.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

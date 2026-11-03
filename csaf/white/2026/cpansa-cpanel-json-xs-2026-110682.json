@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Cpanel::JSON::XS versions from 4.42 before 4.80 for Perl let input chunking change the decoded value of top-level numbers in incr_parse.\n\nallow_nonref is enabled by default and incr_parse inherits it. A top-level number, true, false or null has no closing delimiter, so the incremental parser decodes whatever has arrived. The bytes 12 decode as one value when read together, but as 1 and then 2 when split across two reads.\n\nA peer that can influence read boundaries can change how many messages a stream consumer decodes and what values they carry.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Cpanel-JSON-XS-2026-110682 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-cpanel-json-xs-2026-110682.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/rurban/Cpanel-JSON-XS/commit/f632d6690d82c14cd2d76d648805325201c52b83.patch",
+            "url": "https://github.com/rurban/Cpanel-JSON-XS/commit/f632d6690d82c14cd2d76d648805325201c52b83.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.80/changes",
+            "url": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.80/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-110682 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110682"
+         }
+      ],
+      "title": "Cpanel-JSON-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Cpanel-JSON-XS-2026-110682",
+         "initial_release_date": "2026-10-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.42|<4.80",
+                  "product": {
+                     "name": "Cpanel-JSON-XS greater than or equal 4.42 and less than 4.80",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.80",
+                  "product": {
+                     "name": "Cpanel-JSON-XS greater than or equal 4.80",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Cpanel-JSON-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-110682",
+         "cwe": {
+            "id": "CWE-436",
+            "name": "Interpretation Conflict"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Cpanel::JSON::XS versions from 4.42 before 4.80 for Perl let input chunking change the decoded value of top-level numbers in incr_parse.\n\nallow_nonref is enabled by default and incr_parse inherits it. A top-level number, true, false or null has no closing delimiter, so the incremental parser decodes whatever has arrived. The bytes 12 decode as one value when read together, but as 1 and then 2 when split across two reads.\n\nA peer that can influence read boundaries can change how many messages a stream consumer decodes and what values they carry.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

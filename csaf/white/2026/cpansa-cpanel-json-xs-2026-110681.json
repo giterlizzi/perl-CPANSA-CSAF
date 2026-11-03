@@ -1,0 +1,141 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Cpanel::JSON::XS versions before 4.80 for Perl use the parent interpreter's scalars from a parser object cloned into a new ithread.\n\nA parser object holds its callbacks and its incremental parse buffer as raw scalar pointers. When a thread is created, these are copied into the new interpreter unchanged, so the child's parser uses, and later frees, scalars that belong to the parent and may already have been freed there.\n\nA parser created before a thread starts and used inside it can call freed callbacks, corrupt reference counts and crash the process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Cpanel-JSON-XS-2026-110681 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-cpanel-json-xs-2026-110681.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/rurban/Cpanel-JSON-XS/commit/c53eefbaa59c344abd4c71762118da04280987e8.patch",
+            "url": "https://github.com/rurban/Cpanel-JSON-XS/commit/c53eefbaa59c344abd4c71762118da04280987e8.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.80/changes",
+            "url": "https://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.80/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-110681 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110681"
+         }
+      ],
+      "title": "Cpanel-JSON-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-19T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Cpanel-JSON-XS-2026-110681",
+         "initial_release_date": "2026-10-19T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-19T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<4.80",
+                  "product": {
+                     "name": "Cpanel-JSON-XS less than 4.80",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.80",
+                  "product": {
+                     "name": "Cpanel-JSON-XS greater than or equal 4.80",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Cpanel-JSON-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Cpanel-JSON-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-110681",
+         "cwe": {
+            "id": "CWE-416",
+            "name": "Use After Free"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Cpanel::JSON::XS versions before 4.80 for Perl use the parent interpreter's scalars from a parser object cloned into a new ithread.\n\nA parser object holds its callbacks and its incremental parse buffer as raw scalar pointers. When a thread is created, these are copied into the new interpreter unchanged, so the child's parser uses, and later frees, scalars that belong to the parent and may already have been freed there.\n\nA parser created before a thread starts and used inside it can call freed callbacks, corrupt reference counts and crash the process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 8.1,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

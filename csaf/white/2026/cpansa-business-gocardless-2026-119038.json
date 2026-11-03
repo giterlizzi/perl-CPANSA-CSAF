@@ -1,0 +1,120 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Business::GoCardless versions before 1.01 for Perl complete redirect flows without checking the session token, letting a leaked redirect flow ID create payments against another customer's mandate.\n\nconfirm_resource takes no session token from the caller. It reads the redirect flow back from the GoCardless API and completes it with the token from that response, so the check that the flow is completed by the session that started it always passes. It then creates the requested payment or subscription against the flow's mandate. Since version 1.00, a flow that already has a mandate is returned as confirmed without being completed again, so the same ID creates a new payment on every call.\n\nA remote attacker who obtains another customer's redirect flow ID can create payments or subscriptions against that customer's mandate.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Business-GoCardless-2026-119038 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-business-gocardless-2026-119038.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LEEJO/Business-GoCardless-1.01/changes",
+            "url": "https://metacpan.org/release/LEEJO/Business-GoCardless-1.01/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-119038 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119038"
+         }
+      ],
+      "title": "Business-GoCardless vulnerability",
+      "tracking": {
+         "current_release_date": "2026-10-30T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Business-GoCardless-2026-119038",
+         "initial_release_date": "2026-10-30T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-10-30T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<1.01",
+                  "product": {
+                     "name": "Business-GoCardless less than 1.01",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Business-GoCardless"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.01",
+                  "product": {
+                     "name": "Business-GoCardless greater than or equal 1.01",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Business-GoCardless"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Business-GoCardless"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-119038",
+         "cwe": {
+            "id": "CWE-639",
+            "name": "Authorization Bypass Through User-Controlled Key"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Business::GoCardless versions before 1.01 for Perl complete redirect flows without checking the session token, letting a leaked redirect flow ID create payments against another customer's mandate.\n\nconfirm_resource takes no session token from the caller. It reads the redirect flow back from the GoCardless API and completes it with the token from that response, so the check that the flow is completed by the session that started it always passes. It then creates the requested payment or subscription against the flow's mandate. Since version 1.00, a flow that already has a mandate is returned as confirmed without being completed again, so the same ID creates a new payment on every call.\n\nA remote attacker who obtains another customer's redirect flow ID can create payments or subscriptions against that customer's mandate.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}

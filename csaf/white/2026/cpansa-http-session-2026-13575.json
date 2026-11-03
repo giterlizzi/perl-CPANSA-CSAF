@@ -1,0 +1,130 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Session versions before 0.54 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::CHI.\n\nThe session id from the client's cookie reaches the CHI cache unchanged. The sibling HTTP::Session::Store::Memcached rejects ids that contain control characters, but the CHI store has no such check, and CHI does not escape keys for its memcached drivers.\n\nWith a memcached driver, a CR and LF in the session id end the cache command early, and the server reads the bytes after them as further commands.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-http-session-2026-13575 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-session-2026-13575.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tokuhirom/http-session/commit/58288cbf941da6d2aad4ff5c0c79e523d9e583b4.patch",
+            "url": "https://github.com/tokuhirom/http-session/commit/58288cbf941da6d2aad4ff5c0c79e523d9e583b4.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/KTAT/http-session-0.53/source/lib/HTTP/Session/Store/CHI.pm",
+            "url": "https://metacpan.org/release/KTAT/http-session-0.53/source/lib/HTTP/Session/Store/CHI.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TOKUHIROM/http-session-0.54/changes",
+            "url": "https://metacpan.org/release/TOKUHIROM/http-session-0.54/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-13575 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13575"
+         }
+      ],
+      "title": "http-session vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-01T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-http-session-2026-13575",
+         "initial_release_date": "2026-11-01T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-01T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.54",
+                  "product": {
+                     "name": "http-session less than 0.54",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/http-session"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.54",
+                  "product": {
+                     "name": "http-session greater than or equal 0.54",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/http-session"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "http-session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-13575",
+         "cwe": {
+            "id": "CWE-93",
+            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Session versions before 0.54 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::CHI.\n\nThe session id from the client's cookie reaches the CHI cache unchanged. The sibling HTTP::Session::Store::Memcached rejects ids that contain control characters, but the CHI store has no such check, and CHI does not escape keys for its memcached drivers.\n\nWith a memcached driver, a CR and LF in the session id end the cache command early, and the server reads the bytes after them as further commands.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         }
+      }
+   ]
+}
