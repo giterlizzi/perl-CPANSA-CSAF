@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Catalyst::Plugin::Authentication versions before 0.10029 for Perl allow timing attacks on stored passwords via eq comparisons in the legacy password verifier.\n\nCVE-2026-5091 was fixed in the realm-based verifier. The legacy verifier, used by the deprecated login method, compares clear-text passwords, crypt hashes and base64 digests with eq, so the comparison time depends on how many leading bytes match.\n\nA remote attacker can use response-time differences to guess the stored password or hash.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Catalyst-Plugin-Authentication-2026-74846 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-catalyst-plugin-authentication-2026-74846.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/perl-catalyst/Catalyst-Plugin-Authentication/commit/ba4435f1fa6b641e6c8793c88b5433afa83ceafa.patch",
+            "url": "https://github.com/perl-catalyst/Catalyst-Plugin-Authentication/commit/ba4435f1fa6b641e6c8793c88b5433afa83ceafa.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ETHER/Catalyst-Plugin-Authentication-0.10029/changes",
+            "url": "https://metacpan.org/release/ETHER/Catalyst-Plugin-Authentication-0.10029/changes"
+         },
+         {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-5091",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-5091"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-74846 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74846"
+         }
+      ],
+      "title": "Catalyst-Plugin-Authentication vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-03T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Catalyst-Plugin-Authentication-2026-74846",
+         "initial_release_date": "2026-11-03T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-03T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.10029",
+                  "product": {
+                     "name": "Catalyst-Plugin-Authentication less than 0.10029",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Authentication"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.10029",
+                  "product": {
+                     "name": "Catalyst-Plugin-Authentication greater than or equal 0.10029",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Catalyst-Plugin-Authentication"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Catalyst-Plugin-Authentication"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-74846",
+         "cwe": {
+            "id": "CWE-208",
+            "name": "Observable Timing Discrepancy"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Catalyst::Plugin::Authentication versions before 0.10029 for Perl allow timing attacks on stored passwords via eq comparisons in the legacy password verifier.\n\nCVE-2026-5091 was fixed in the realm-based verifier. The legacy verifier, used by the deprecated login method, compares clear-text passwords, crypt hashes and base64 digests with eq, so the comparison time depends on how many leading bytes match.\n\nA remote attacker can use response-time differences to guess the stored password or hash.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

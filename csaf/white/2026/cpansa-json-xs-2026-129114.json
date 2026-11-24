@@ -1,0 +1,133 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "JSON::XS versions from 3.04 before 4.05 for Perl write one byte past a heap buffer when appending a one-byte chunk in incr_parse.\n\nThe incremental buffer grows to one and a half times the length it must hold, with no room reserved for the terminating NUL. For an empty buffer and a one-byte chunk that request is one byte, which a buffer whose front was removed by earlier decodes can already have, so nothing is reallocated and the NUL lands one byte past the allocation.\n\nA peer streaming data to an incr_parse consumer, choosing how the input is split into reads, can cause a one-byte heap out-of-bounds write.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-JSON-XS-2026-129114 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-json-xs-2026-129114.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/MLEHMANN/JSON-XS-4.05/changes",
+            "url": "https://metacpan.org/release/MLEHMANN/JSON-XS-4.05/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-129114 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129114"
+         }
+      ],
+      "title": "JSON-XS vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-JSON-XS-2026-129114",
+         "initial_release_date": "2026-11-14T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=3.0|<4.05",
+                  "product": {
+                     "name": "JSON-XS greater than or equal 3.0 and less than 4.05",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JSON-XS"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=4.05",
+                  "product": {
+                     "name": "JSON-XS greater than or equal 4.05",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/JSON-XS"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "JSON-XS"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-129114",
+         "cwe": {
+            "id": "CWE-122",
+            "name": "Heap-based Buffer Overflow"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "JSON::XS versions from 3.04 before 4.05 for Perl write one byte past a heap buffer when appending a one-byte chunk in incr_parse.\n\nThe incremental buffer grows to one and a half times the length it must hold, with no room reserved for the terminating NUL. For an empty buffer and a one-byte chunk that request is one byte, which a buffer whose front was removed by earlier decodes can already have, so nothing is reallocated and the NUL lands one byte past the allocation.\n\nA peer streaming data to an incr_parse consumer, choosing how the input is split into reads, can cause a one-byte heap out-of-bounds write.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

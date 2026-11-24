@@ -1,0 +1,127 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl let an on-path attacker choose the installed public suffix list because update_self_from_url fetches it over cleartext HTTP with no integrity check.\n\nCalled with no argument, as the module's documentation shows, the updater fetches the list from the `http://` address in the URL constant and checks only that the request succeeded, with no signature or digest over the response. The lines that come back are written into the module's own source file as the built-in list.\n\nAn attacker on the network path when the updater runs chooses the suffix boundary the module reports to every caller on the host, and that answer persists in the installed module until it is reinstalled. Dropping one rule makes the hostname check in IO::Socket::SSL accept a wildcard certificate that spans the whole public suffix that rule named.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-IO-Socket-SSL-2026-129891 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-io-socket-ssl-2026-129891.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/noxxi/p5-io-socket-ssl/commit/6e756466cd7005bcdb2e0e18eb140f33a2355c78.patch",
+            "url": "https://github.com/noxxi/p5-io-socket-ssl/commit/6e756466cd7005bcdb2e0e18eb140f33a2355c78.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SULLR/IO-Socket-SSL-2.099/source/lib/IO/Socket/SSL/PublicSuffix.pm",
+            "url": "https://metacpan.org/release/SULLR/IO-Socket-SSL-2.099/source/lib/IO/Socket/SSL/PublicSuffix.pm"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-129891 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129891"
+         }
+      ],
+      "title": "IO-Socket-SSL vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-18T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-IO-Socket-SSL-2026-129891",
+         "initial_release_date": "2026-11-18T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-18T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "IO-Socket-SSL greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/IO-Socket-SSL"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "IO-Socket-SSL"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-129891",
+         "cwe": {
+            "id": "CWE-494",
+            "name": "Download of Code Without Integrity Check"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl let an on-path attacker choose the installed public suffix list because update_self_from_url fetches it over cleartext HTTP with no integrity check.\n\nCalled with no argument, as the module's documentation shows, the updater fetches the list from the `http://` address in the URL constant and checks only that the request succeeded, with no signature or digest over the response. The lines that come back are written into the module's own source file as the built-in list.\n\nAn attacker on the network path when the updater runs chooses the suffix boundary the module reports to every caller on the host, and that answer persists in the installed module until it is reinstalled. Dropping one rule makes the hostname check in IO::Socket::SSL accept a wildcard certificate that spans the whole public suffix that rule named.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

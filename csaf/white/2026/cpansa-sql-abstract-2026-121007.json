@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "SQL::Abstract versions from 1.90_01 before 2.000001_04 for Perl allow SQL injection via the where values of a nested statement in an identifier position.\n\nA nested statement such as { -select => ... } in a position where plain scalars are identifiers treats its own plain scalars as identifiers too. These positions are the select list, ORDER BY, GROUP BY, RETURNING, and with the ExtraClauses plugin FROM (-as) and JOIN (to). The values of the statement's where, having and set clauses, and the rows of a -values, go into the SQL text instead of the bind list, unescaped unless quote_char is set. Subselects in a WHERE condition are not affected.\n\nAn application that passes untrusted input as a where value of such a nested statement, expecting it to be bound, allows SQL injection.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-SQL-Abstract-2026-121007 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-sql-abstract-2026-121007.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/dbsrgits/sql-abstract/commit/79fc34e874b4edb441154eccddb04c57d5c1c90e.patch",
+            "url": "https://github.com/dbsrgits/sql-abstract/commit/79fc34e874b4edb441154eccddb04c57d5c1c90e.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GETTY/SQL-Abstract-2.000001_04/changes",
+            "url": "https://metacpan.org/release/GETTY/SQL-Abstract-2.000001_04/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-121007 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121007"
+         }
+      ],
+      "title": "SQL-Abstract vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-SQL-Abstract-2026-121007",
+         "initial_release_date": "2026-11-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=1.90_01|<2.000001_04",
+                  "product": {
+                     "name": "SQL-Abstract greater than or equal 1.90_01 and less than 2.000001_04",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/SQL-Abstract"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.000001_04",
+                  "product": {
+                     "name": "SQL-Abstract greater than or equal 2.000001_04",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/SQL-Abstract"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "SQL-Abstract"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-121007",
+         "cwe": {
+            "id": "CWE-89",
+            "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "SQL::Abstract versions from 1.90_01 before 2.000001_04 for Perl allow SQL injection via the where values of a nested statement in an identifier position.\n\nA nested statement such as { -select => ... } in a position where plain scalars are identifiers treats its own plain scalars as identifiers too. These positions are the select list, ORDER BY, GROUP BY, RETURNING, and with the ExtraClauses plugin FROM (-as) and JOIN (to). The values of the statement's where, having and set clauses, and the rows of a -values, go into the SQL text instead of the bind list, unescaped unless quote_char is set. Subselects in a WHERE condition are not affected.\n\nAn application that passes untrusted input as a where value of such a nested statement, expecting it to be bound, allows SQL injection.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.3,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

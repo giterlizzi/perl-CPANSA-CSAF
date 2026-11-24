@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "CGI versions before 5.00 for Perl allow open redirects via HTML entity decoding of the URL after application validation in redirect.\n\nredirect decodes HTML entities in its URL before writing the Location header, so a URL the application has already validated can change meaning. For example, /&#47;evil.example/ becomes //evil.example/ and sends the user to another host.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-CGI-2026-120638 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-cgi-2026-120638.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/leejo/CGI.pm/commit/7733c2753f4f240012097507cda2b6e87ae46db4.patch",
+            "url": "https://github.com/leejo/CGI.pm/commit/7733c2753f4f240012097507cda2b6e87ae46db4.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LEEJO/CGI-4.72/source/lib/CGI.pm",
+            "url": "https://metacpan.org/release/LEEJO/CGI-4.72/source/lib/CGI.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LEEJO/CGI-5.00/changes",
+            "url": "https://metacpan.org/release/LEEJO/CGI-5.00/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-120638 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120638"
+         }
+      ],
+      "title": "CGI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-CGI-2026-120638",
+         "initial_release_date": "2026-11-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<5.02",
+                  "product": {
+                     "name": "CGI less than 5.02",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.02",
+                  "product": {
+                     "name": "CGI greater than or equal 5.02",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "CGI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-120638",
+         "cwe": {
+            "id": "CWE-180",
+            "name": "Incorrect Behavior Order: Validate Before Canonicalize"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "CGI versions before 5.00 for Perl allow open redirects via HTML entity decoding of the URL after application validation in redirect.\n\nredirect decodes HTML entities in its URL before writing the Location header, so a URL the application has already validated can change meaning. For example, /&#47;evil.example/ becomes //evil.example/ and sends the user to another host.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

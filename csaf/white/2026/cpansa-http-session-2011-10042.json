@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "HTTP::Session versions before 0.43 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::Memcached.\n\nThe session id from the client's cookie reaches memcached unchanged as the cache key.\n\nA CR and LF in the session id end the cache command early, and the server reads the bytes after them as further commands.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-http-session-2011-10042 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-http-session-2011-10042.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tokuhirom/http-session/commit/039345db9bc9311868019fde67b89c355114a3d3.patch",
+            "url": "https://github.com/tokuhirom/http-session/commit/039345db9bc9311868019fde67b89c355114a3d3.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/TOKUHIROM/HTTP-Session-0.42/changes",
+            "url": "https://metacpan.org/release/TOKUHIROM/HTTP-Session-0.42/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/11/14/10",
+            "url": "http://www.openwall.com/lists/oss-security/2026/11/14/10"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2011-10042 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-10042"
+         }
+      ],
+      "title": "http-session vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-14T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-http-session-2011-10042",
+         "initial_release_date": "2026-11-14T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-14T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.43",
+                  "product": {
+                     "name": "http-session less than 0.43",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/http-session"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.43",
+                  "product": {
+                     "name": "http-session greater than or equal 0.43",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/http-session"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "http-session"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2011-10042",
+         "cwe": {
+            "id": "CWE-93",
+            "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "HTTP::Session versions before 0.43 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::Memcached.\n\nThe session id from the client's cookie reaches memcached unchanged as the cache key.\n\nA CR and LF in the session id end the cache command early, and the server reads the bytes after them as further commands.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 9.8,
+                  "baseSeverity": "CRITICAL",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

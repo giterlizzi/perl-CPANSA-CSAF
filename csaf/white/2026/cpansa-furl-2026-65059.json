@@ -1,0 +1,132 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Furl versions through 3.15 for Perl allow memory exhaustion via unbounded decompression of HTTP responses.\n\nFurl inflates a response body sent with a gzip, x-gzip or deflate Content-Encoding and appends the output to the response string with no size limit. It does this whether or not the request asked for compression, and no option caps the decompressed size. Responses read with write_file or write_code are streamed rather than held in memory.\n\nA malicious server, or an attacker on a plain HTTP connection, can send a small compressed response that expands to exhaust the client's memory and end the process.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Furl-2026-65059 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-furl-2026-65059.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/tokuhirom/Furl/pull/139",
+            "url": "https://github.com/tokuhirom/Furl/pull/139"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/SYOHEX/Furl-3.15/source/lib/Furl/ZlibStream.pm",
+            "url": "https://metacpan.org/release/SYOHEX/Furl-3.15/source/lib/Furl/ZlibStream.pm"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/11/02/5",
+            "url": "http://www.openwall.com/lists/oss-security/2026/11/02/5"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-65059 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65059"
+         }
+      ],
+      "title": "Furl vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-02T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Furl-2026-65059",
+         "initial_release_date": "2026-11-02T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-02T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>0",
+                  "product": {
+                     "name": "Furl greater than 0",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Furl"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Furl"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-65059",
+         "cwe": {
+            "id": "CWE-409",
+            "name": "Improper Handling of Highly Compressed Data (Data Amplification)"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Furl versions before 3.16 for Perl allow memory exhaustion via unbounded decompression of HTTP responses.\n\nFurl inflates a response body sent with a gzip, x-gzip or deflate Content-Encoding and appends the output to the response string with no size limit. It does this whether or not the request asked for compression, and no option caps the decompressed size. Responses read with write_file or write_code are streamed rather than held in memory.\n\nA malicious server, or an attacker on a plain HTTP connection, can send a small compressed response that expands to exhaust the client's memory and end the process.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

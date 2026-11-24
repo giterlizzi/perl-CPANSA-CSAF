@@ -1,0 +1,158 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "CGI versions before 5.00 for Perl allow memory, CPU and disk exhaustion via missing or unenforced request size, parameter and upload limits.\n\n$CGI::POST_MAX defaults to no limit, and when set is not enforced for chunked multipart bodies or for the boundary line of a multipart body without a boundary= parameter. Bodies saved as PUTDATA, POSTDATA or PATCHDATA uploads are read into memory in one go, and nothing limits the number of parameters or uploads.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA--2026-120650 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa--2026-120650.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/leejo/CGI.pm/commit/17b838dc14d2b82ae6c7e76f66ec2c3f3b08038b.patch",
+            "url": "https://github.com/leejo/CGI.pm/commit/17b838dc14d2b82ae6c7e76f66ec2c3f3b08038b.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/leejo/CGI.pm/commit/277baeb74fde7bce975a7bd0a1f98dcf1b9b2050.patch",
+            "url": "https://github.com/leejo/CGI.pm/commit/277baeb74fde7bce975a7bd0a1f98dcf1b9b2050.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/leejo/CGI.pm/commit/8940a74e53a41563f72813b45f99cceaaa4c92e8.patch",
+            "url": "https://github.com/leejo/CGI.pm/commit/8940a74e53a41563f72813b45f99cceaaa4c92e8.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/leejo/CGI.pm/commit/f3febefe63fe3881d8c3ae10fa83ca8ec950b959.patch",
+            "url": "https://github.com/leejo/CGI.pm/commit/f3febefe63fe3881d8c3ae10fa83ca8ec950b959.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LEEJO/CGI-4.72/source/lib/CGI.pm",
+            "url": "https://metacpan.org/release/LEEJO/CGI-4.72/source/lib/CGI.pm"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/LEEJO/CGI-5.00/changes",
+            "url": "https://metacpan.org/release/LEEJO/CGI-5.00/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-120650 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120650"
+         }
+      ],
+      "title": "CGI vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA--2026-120650",
+         "initial_release_date": "2026-11-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<5.02",
+                  "product": {
+                     "name": "CGI less than 5.02",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=5.02",
+                  "product": {
+                     "name": "CGI greater than or equal 5.02",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/CGI"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "CGI"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-120650",
+         "cwe": {
+            "id": "CWE-770",
+            "name": "Allocation of Resources Without Limits or Throttling"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "CGI versions before 5.00 for Perl allow memory, CPU and disk exhaustion via missing or unenforced request size, parameter and upload limits.\n\n$CGI::POST_MAX defaults to no limit, and when set is not enforced for chunked multipart bodies or for the boundary line of a multipart body without a boundary= parameter. Bodies saved as PUTDATA, POSTDATA or PATCHDATA uploads are read into memory in one go, and nothing limits the number of parameters or uploads.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.5,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

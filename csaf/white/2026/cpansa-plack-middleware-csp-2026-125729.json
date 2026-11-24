@@ -1,0 +1,143 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Plack::Middleware::CSP versions before 0.03 for Perl send the Content Security Policy under the wrong header name, so browsers never enforce it.\n\nThe call method sets the policy in a response header named \"content-security-protocol\" instead of \"Content-Security-Policy\". Browsers ignore that header.\n\nAny cross-site scripting flaw in the wrapped application can run scripts the policy was meant to block.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Plack-Middleware-CSP-2026-125729 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-plack-middleware-csp-2026-125729.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/pangyre/Plack-Middleware-CSP/issues/1",
+            "url": "https://github.com/pangyre/Plack-Middleware-CSP/issues/1"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/ASHLEY/Plack-Middleware-CSP-0.03/source/CHANGES",
+            "url": "https://metacpan.org/release/ASHLEY/Plack-Middleware-CSP-0.03/source/CHANGES"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/11/10/16",
+            "url": "http://www.openwall.com/lists/oss-security/2026/11/10/16"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-125729 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125729"
+         }
+      ],
+      "title": "Plack-Middleware-CSP vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-10T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Plack-Middleware-CSP-2026-125729",
+         "initial_release_date": "2026-11-10T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-10T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.03",
+                  "product": {
+                     "name": "Plack-Middleware-CSP less than 0.03",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-CSP"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.03",
+                  "product": {
+                     "name": "Plack-Middleware-CSP greater than or equal 0.03",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Plack-Middleware-CSP"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Plack-Middleware-CSP"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-125729",
+         "cwe": {
+            "id": "CWE-684",
+            "name": "Incorrect Provision of Specified Functionality"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Plack::Middleware::CSP versions before 0.03 for Perl send the Content Security Policy under the wrong header name, so browsers never enforce it.\n\nThe call method sets the policy in a response header named \"content-security-protocol\" instead of \"Content-Security-Policy\". Browsers ignore that header.\n\nAny cross-site scripting flaw in the wrapped application can run scripts the policy was meant to block.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 6.1,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

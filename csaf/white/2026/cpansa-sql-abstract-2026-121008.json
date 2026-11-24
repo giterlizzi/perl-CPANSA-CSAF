@@ -1,0 +1,138 @@
+{
+   "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "SQL::Abstract::Tree versions before 2.000001_04 for Perl allow cross-site scripting via unescaped SQL text and bind values in the html profile.\n\nThe html profile wraps keywords and placeholders in span elements and breaks lines with br elements, so its output is meant to go into a page as is. The format method does not HTML-escape the SQL text or the bind values it fills in around that markup.\n\nAn application that renders SQL formatted with the html profile, such as in a debug panel or query log, allows an attacker who controls a bind value or part of the SQL text to embed JavaScript in the page.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-SQL-Abstract-2026-121008 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-sql-abstract-2026-121008.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/dbsrgits/sql-abstract/commit/85a75fcde3e09da5181dee07a4eccba76ad94305.patch",
+            "url": "https://github.com/dbsrgits/sql-abstract/commit/85a75fcde3e09da5181dee07a4eccba76ad94305.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/GETTY/SQL-Abstract-2.000001_04/changes",
+            "url": "https://metacpan.org/release/GETTY/SQL-Abstract-2.000001_04/changes"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-121008 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121008"
+         }
+      ],
+      "title": "SQL-Abstract vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-04T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-SQL-Abstract-2026-121008",
+         "initial_release_date": "2026-11-04T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-04T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<2.000001_04",
+                  "product": {
+                     "name": "SQL-Abstract less than 2.000001_04",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/SQL-Abstract"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=2.000001_04",
+                  "product": {
+                     "name": "SQL-Abstract greater than or equal 2.000001_04",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/SQL-Abstract"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "SQL-Abstract"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-121008",
+         "cwe": {
+            "id": "CWE-79",
+            "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "SQL::Abstract::Tree versions before 2.000001_04 for Perl allow cross-site scripting via unescaped SQL text and bind values in the html profile.\n\nThe html profile wraps keywords and placeholders in span elements and breaks lines with br elements, so its output is meant to go into a page as is. The format method does not HTML-escape the SQL text or the bind values it fills in around that markup.\n\nAn application that renders SQL formatted with the html profile, such as in a debug panel or query log, allows an attacker who controls a bind value or part of the SQL text to embed JavaScript in the page.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 5.4,
+                  "baseSeverity": "MEDIUM",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,146 @@
+{
+   "document": {
+      "aggregate_severity": {
+         "text": "high"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+         "tlp": {
+            "label": "WHITE",
+            "url": "https://www.first.org/tlp/"
+         }
+      },
+      "lang": "en",
+      "notes": [
+         {
+            "category": "description",
+            "text": "Monoceros versions before 0.30 for Perl allow a request declaring a large Content-Length to kill a worker by exhausting memory.\n\nThe request body is read in a loop that asks sysread for all of the remaining declared length at once. Perl grows the read buffer to that size before any data arrives, so a length larger than available memory makes the worker exit with an uncatchable out of memory error before the application is called.\n\nA remote attacker can force a worker restart with each request of a few bytes.",
+            "title": "Vulnerability Description"
+         }
+      ],
+      "publisher": {
+         "category": "other",
+         "contact_details": "gdt@cpan.org",
+         "name": "giterlizzi",
+         "namespace": "https://github.com/giterlizzi/"
+      },
+      "references": [
+         {
+            "category": "self",
+            "summary": "CPANSA-Monoceros-2026-115864 JSON",
+            "url": "https://raw.githubusercontent.com/giterlizzi/perl-CPANSA-CSAF/develop/csaf/white/2026/cpansa-monoceros-2026-115864.json"
+         },
+         {
+            "category": "external",
+            "summary": "https://github.com/kazeburo/Monoceros/commit/897a4a9624329fc0a4b2352d387bdac6d37848e2.patch",
+            "url": "https://github.com/kazeburo/Monoceros/commit/897a4a9624329fc0a4b2352d387bdac6d37848e2.patch"
+         },
+         {
+            "category": "external",
+            "summary": "https://metacpan.org/release/KAZEBURO/Monoceros-0.30/changes",
+            "url": "https://metacpan.org/release/KAZEBURO/Monoceros-0.30/changes"
+         },
+         {
+            "category": "external",
+            "summary": "http://www.openwall.com/lists/oss-security/2026/11/09/32",
+            "url": "http://www.openwall.com/lists/oss-security/2026/11/09/32"
+         },
+         {
+            "category": "external",
+            "summary": "CVE-2026-115864 (NVD)",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115864"
+         }
+      ],
+      "title": "Monoceros vulnerability",
+      "tracking": {
+         "current_release_date": "2026-11-09T00:00:00",
+         "generator": {
+            "engine": {
+               "name": "CSAF Perl Toolkit",
+               "version": "0.26"
+            }
+         },
+         "id": "CPANSA-Monoceros-2026-115864",
+         "initial_release_date": "2026-11-09T00:00:00",
+         "revision_history": [
+            {
+               "date": "2026-11-09T00:00:00",
+               "number": "1",
+               "summary": "First release"
+            }
+         ],
+         "status": "final",
+         "version": "1"
+      }
+   },
+   "product_tree": {
+      "branches": [
+         {
+            "branches": [
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/<0.30",
+                  "product": {
+                     "name": "Monoceros less than 0.30",
+                     "product_id": "CSAFPID-0001",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Monoceros"
+                     }
+                  }
+               },
+               {
+                  "category": "product_version_range",
+                  "name": "vers:cpan/>=0.30",
+                  "product": {
+                     "name": "Monoceros greater than or equal 0.30",
+                     "product_id": "CSAFPID-0002",
+                     "product_identification_helper": {
+                        "purl": "pkg:cpan/Monoceros"
+                     }
+                  }
+               }
+            ],
+            "category": "product_name",
+            "name": "Monoceros"
+         }
+      ]
+   },
+   "vulnerabilities": [
+      {
+         "cve": "CVE-2026-115864",
+         "cwe": {
+            "id": "CWE-789",
+            "name": "Memory Allocation with Excessive Size Value"
+         },
+         "notes": [
+            {
+               "category": "description",
+               "text": "Monoceros versions before 0.30 for Perl allow a request declaring a large Content-Length to kill a worker by exhausting memory.\n\nThe request body is read in a loop that asks sysread for all of the remaining declared length at once. Perl grows the read buffer to that size before any data arrives, so a length larger than available memory makes the worker exit with an uncatchable out of memory error before the application is called.\n\nA remote attacker can force a worker restart with each request of a few bytes.",
+               "title": "Vulnerability Description"
+            }
+         ],
+         "product_status": {
+            "fixed": [
+               "CSAFPID-0002"
+            ],
+            "known_affected": [
+               "CSAFPID-0001"
+            ]
+         },
+         "scores": [
+            {
+               "cvss_v3": {
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "version": "3.1"
+               },
+               "products": [
+                  "CSAFPID-0001"
+               ]
+            }
+         ]
+      }
+   ]
+}
